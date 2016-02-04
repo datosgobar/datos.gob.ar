@@ -1,0 +1,24 @@
+<div id="footer" class="container-fluid">
+    <div id="footer-spacer" class="col-xs-12 col-md-8 col-md-offset-2">
+        <div class="footer-section logo col-xs-12 col-md-5">
+            <a href="{{ h.url('home') }}"><img src="/img/logo_ministerio_footer.svg" class="logo-ministerio"></a>
+        </div>
+        <div class="footer-section links-internos col-xs-12 col-md-3">
+            <!-- TODO: agregar rutas para specs, contacto y terminos y condiciones -->
+            <a href=""><p>ESPECIFICACIONES</p></a>
+            <a href=""><p>CONTACTO</p></a>
+            <a href="{{ h.url_for(controller='home', action='about') }}"><p>ACERCA DEL SITIO</p></a>
+            <a href=""><p>TERMINOS Y CONDICIONES</p></a>
+        </div>
+        <div class="footer-section links-externos col-xs-12 col-md-4">
+            <p>
+                <a href="http://twitter.com"><i class="icon-twitter"></i></a>
+                <a href="http://facebook.com"><i class="icon-facebook"></i></a>
+                <a href="http://github.com"><i class="icon-github-alt"></i></a>
+            </p>
+            <p>
+                DESARROLLADO CON <a href="http://ckan.org/"><img class="ckan-logo" src="/img/ckan_logo.png"></a>
+            </p>
+        </div>
+    </div>
+</div>

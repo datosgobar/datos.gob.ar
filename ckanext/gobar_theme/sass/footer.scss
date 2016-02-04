@@ -1,0 +1,44 @@
+@import 'utils/globals';
+@import 'utils/mixins';
+
+#footer {
+  padding: 0;
+  @include box-shadow(0 -2px 4px 0 rgba(220, 220, 220, 0.5));
+  #footer-spacer {
+    padding: 0;
+    .footer-section {
+      height: 200px;
+      color: $dark-blue;
+      font-size: 14px;
+      font-weight: 500;
+      &.logo {
+        .logo-ministerio {
+          height: 60px;
+          margin: 60px 0 80px 0;
+        }
+      }
+      &.links-internos {
+        padding-top: 50px;
+        p {
+          margin: 0 0 5px 0;
+        }
+      }
+      &.links-externos {
+        padding-top: 50px;
+        p {
+          text-align: right;
+          i {
+            font-size: 28px;
+            margin-left: 20px;
+          }
+          .ckan-logo {
+            height: 16px;
+            vertical-align: baseline;
+            margin-left: 6px;
+          }
+        }
+
+      }
+    }
+  }
+}

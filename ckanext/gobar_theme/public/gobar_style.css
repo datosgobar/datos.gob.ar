@@ -66,4 +66,36 @@ a, a:hover {
       color: white;
       margin-left: 1em; }
 
+#footer {
+  padding: 0;
+  -o-box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5);
+  -moz-box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5);
+  -webkit-box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5);
+  box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5); }
+  #footer #footer-spacer {
+    padding: 0; }
+    #footer #footer-spacer .footer-section {
+      height: 200px;
+      color: #0072bc;
+      font-size: 14px;
+      font-weight: 500; }
+      #footer #footer-spacer .footer-section.logo .logo-ministerio {
+        height: 60px;
+        margin: 60px 0 80px 0; }
+      #footer #footer-spacer .footer-section.links-internos {
+        padding-top: 50px; }
+        #footer #footer-spacer .footer-section.links-internos p {
+          margin: 0 0 5px 0; }
+      #footer #footer-spacer .footer-section.links-externos {
+        padding-top: 50px; }
+        #footer #footer-spacer .footer-section.links-externos p {
+          text-align: right; }
+          #footer #footer-spacer .footer-section.links-externos p i {
+            font-size: 28px;
+            margin-left: 20px; }
+          #footer #footer-spacer .footer-section.links-externos p .ckan-logo {
+            height: 16px;
+            vertical-align: baseline;
+            margin-left: 6px; }
+
 /*# sourceMappingURL=gobar_style.css.map */
