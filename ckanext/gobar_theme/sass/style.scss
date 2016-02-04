@@ -1,0 +1,42 @@
+// Para compilar correr (parado en esta carpeta):
+// sass style.scss:../public/gobar_style.css
+// Para compilar y quedar escuchando cambios a los archivos (para desarrollo) correr:
+// sass --watch style.scss:../public/gobar_style.css
+@import 'fonts';
+
+body {
+  background: #fff;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 400;
+}
+
+a, a:hover {
+  text-decoration: none !important;
+}
+
+$dark-blue: #0072bc;
+$header-height: 50px;
+
+#header {
+  height: $header-height;
+  background: $dark-blue;
+  $font-size: 20px;
+  font-size: $font-size;
+  line-height: $header-height / $font-size;
+  text-align: right;
+  padding: 0;
+  #header-spacing {
+    $padding: 20px;
+    padding: 0 $padding;
+    .logo-ministerio {
+      height: $header-height;
+      position: absolute;
+      top: 0;
+      left: $padding;
+    }
+    a {
+      color: white;
+      margin-left: 1em;
+    }
+  }
+}

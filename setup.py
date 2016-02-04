@@ -47,7 +47,6 @@ setup(
         'Programming Language :: Python :: 2.7',
     ],
 
-
     # What does your project relate to?
     keywords='''CKAN Argentina theme''',
 
@@ -80,8 +79,8 @@ setup(
     entry_points='''
         [ckan.plugins]
         gobar_theme=ckanext.gobar_theme.plugin:Gobar_ThemePlugin
-	[babel.extractors]
-	ckan = ckan.lib.extract:extract_ckan
+        [babel.extractors]
+        ckan = ckan.lib.extract:extract_ckan
     ''',
 
     # If you are changing from the default layout of your extension, you may

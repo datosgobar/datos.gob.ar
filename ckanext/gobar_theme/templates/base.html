@@ -1,0 +1,7 @@
+{% ckan_extends %}
+
+{%- block styles %}
+  {{ super() }}
+  {% resource 'gobar_theme/bootstrap_style.css' %}
+  <link rel="stylesheet" href="/gobar_style.css">
+{% endblock %}
