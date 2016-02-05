@@ -20,6 +20,7 @@
 
     .searcher {
       position: relative;
+      padding: 0;
 
       $font-size: 24px;
       $padding: 10px;
@@ -65,7 +66,10 @@
   }
 
   #stats {
-    text-align: right;
+    text-align:center;
+    @media(min-width: 992px) {
+      text-align: right;
+    }
     padding-top: 20px;
 
     .stat {

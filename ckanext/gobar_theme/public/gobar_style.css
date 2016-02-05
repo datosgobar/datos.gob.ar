@@ -116,7 +116,8 @@ a, a:hover {
   #title #title-and-search .description {
     margin-bottom: 30px; }
   #title #title-and-search .searcher {
-    position: relative; }
+    position: relative;
+    padding: 0; }
     #title #title-and-search .searcher form {
       padding: 0;
       border: none; }
@@ -155,8 +156,11 @@ a, a:hover {
           color: #C7EAFB;
           font-size: 24px; }
   #title #stats {
-    text-align: right;
+    text-align: center;
     padding-top: 20px; }
+    @media (min-width: 992px) {
+      #title #stats {
+        text-align: right; } }
     #title #stats .stat {
       font-size: 90px;
       margin: 0;
