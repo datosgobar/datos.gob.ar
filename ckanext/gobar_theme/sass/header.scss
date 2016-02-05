@@ -1,4 +1,5 @@
 @import 'utils/globals';
+@import 'utils/mixins';
 
 $header-height: 50px;
 
@@ -10,15 +11,21 @@ $header-height: 50px;
   line-height: $header-height / $font-size;
   text-align: right;
   padding: 0;
+  @include box-shadow(0 0 12px 0 rgba(0, 0, 0, 0.5));
+  position: relative;
+  z-index: 2;
+
   #header-spacing {
     $padding: 20px;
     padding: 0 $padding;
+
     .logo-ministerio {
       height: $header-height;
       position: absolute;
       top: 0;
       left: $padding;
     }
+
     a {
       color: white;
       margin-left: 1em;

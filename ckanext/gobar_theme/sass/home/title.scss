@@ -1,0 +1,86 @@
+@import '../bourbon/bourbon';
+@import '../utils/globals';
+@import '../utils/mixins';
+
+#title {
+  padding: 20px 0;
+  margin-bottom: 600px;
+  color: white;
+  @include linear-gradient(to right, $blue, $dark-blue);
+
+  #title-and-search {
+
+    h1 {
+      font-weight: 400;
+    }
+
+    .description {
+      margin-bottom: 30px;
+    }
+
+    .searcher {
+      position: relative;
+
+      $font-size: 24px;
+      $padding: 10px;
+      $line-height: 1.2;
+
+      form {
+        padding: 0;
+        border: none;
+
+        input[type="text"] {
+          background: transparent;
+          border: none;
+          width: 100%;
+          color: white;
+          @include box-shadow(none);
+          @include border-bottom-radius(0);
+          border-bottom: solid 1px white;
+
+          padding: $padding;
+          font-size: $font-size;
+          line-height: $line-height;
+          height: $padding + $font-size * $line-height;
+
+          @include placeholder {
+            color: white;
+          }
+        }
+
+        button {
+          background: none;
+          border: none;
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: $padding + $font-size * $line-height;
+          i {
+            color: $light-blue;
+            font-size: $font-size;
+          }
+        }
+      }
+    }
+  }
+
+  #stats {
+    text-align: right;
+    padding-top: 20px;
+
+    .stat {
+      font-size: 90px;
+      margin: 0;
+      line-height: 0.8;
+      font-weight: 300;
+    }
+
+    .stats-legend {
+      font-size: 20px;
+
+      &.datasets {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
