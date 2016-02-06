@@ -111,18 +111,20 @@ a, a:hover {
   background-color: #00B9F1;
   background-image: -webkit-linear-gradient(left, #00B9F1, #0072bc);
   background-image: linear-gradient(to right,#00B9F1, #0072bc); }
-  #title #title-and-search h1 {
+  #title #title-container h1 {
     font-size: 50px;
     font-weight: 400; }
-  #title #title-and-search .description {
+  #title #title-container .description {
     margin-bottom: 30px; }
-  #title #title-and-search .searcher {
-    position: relative;
+  #title #searcher {
+    position: absolute;
+    bottom: 0;
+    left: 25px;
     padding: 0; }
-    #title #title-and-search .searcher form {
+    #title #searcher form {
       padding: 0;
       border: none; }
-      #title #title-and-search .searcher form input[type="text"] {
+      #title #searcher form input[type="text"] {
         background: transparent;
         border: none;
         width: 100%;
@@ -138,31 +140,33 @@ a, a:hover {
         font-size: 24px;
         line-height: 1.2;
         height: 38.8px; }
-        #title #title-and-search .searcher form input[type="text"]::-webkit-input-placeholder {
+        #title #searcher form input[type="text"]::-webkit-input-placeholder {
           color: white; }
-        #title #title-and-search .searcher form input[type="text"]::-moz-placeholder {
+        #title #searcher form input[type="text"]::-moz-placeholder {
           color: white; }
-        #title #title-and-search .searcher form input[type="text"]:-moz-placeholder {
+        #title #searcher form input[type="text"]:-moz-placeholder {
           color: white; }
-        #title #title-and-search .searcher form input[type="text"]:-ms-input-placeholder {
+        #title #searcher form input[type="text"]:-ms-input-placeholder {
           color: white; }
-      #title #title-and-search .searcher form button {
+      #title #searcher form button {
         background: none;
         border: none;
         position: absolute;
         top: 0;
         right: 0;
         height: 38.8px; }
-        #title #title-and-search .searcher form button i {
+        #title #searcher form button i {
           color: #C7EAFB;
           font-size: 24px; }
   #title #stats {
     text-align: center;
+    margin-bottom: 40px;
     padding-top: 20px;
     padding-right: 0; }
     @media (min-width: 992px) {
       #title #stats {
-        text-align: right; } }
+        text-align: right;
+        margin-bottom: 0; } }
     #title #stats > div {
       padding-right: 0; }
     #title #stats .stat {
