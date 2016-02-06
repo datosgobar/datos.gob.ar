@@ -1,8 +1,8 @@
 @import 'utils/globals';
 @import 'utils/mixins';
 
-#about, #specs {
-  #about-text, #specs-text {
+#about, #specs, #terms, #contact {
+  #about-text, #specs-text, #terms-text, #contact-text {
     padding: 30px 50px;
     @include box-shadow(0 -2px 4px 0 rgba(150, 150, 150, 0.5));
     color: $grey;
@@ -24,4 +24,8 @@
       font-weight: 500;
     }
   }
+}
+
+#contact-text {
+  height: 600px;
 }
