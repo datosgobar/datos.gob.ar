@@ -222,7 +222,7 @@ a, a:hover {
             display: table-cell;
             vertical-align: middle; }
 
-#about #about-text {
+#about #about-text, #about #specs-text, #specs #about-text, #specs #specs-text {
   padding: 30px 50px;
   -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
   -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
@@ -230,17 +230,17 @@ a, a:hover {
   box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
   color: #58595B;
   font-size: 16px; }
-  #about #about-text h1 {
+  #about #about-text h1, #about #specs-text h1, #specs #about-text h1, #specs #specs-text h1 {
     margin: 20px 0;
     font-weight: 400;
     font-size: 40px; }
-  #about #about-text h2 {
+  #about #about-text h2, #about #specs-text h2, #specs #about-text h2, #specs #specs-text h2 {
     font-weight: 400;
     font-size: 25px; }
-  #about #about-text h3 {
+  #about #about-text h3, #about #specs-text h3, #specs #about-text h3, #specs #specs-text h3 {
     color: #0072bc;
     font-size: 20px; }
-  #about #about-text strong {
+  #about #about-text strong, #about #specs-text strong, #specs #about-text strong, #specs #specs-text strong {
     font-weight: 500; }
 
 /*# sourceMappingURL=gobar_style.css.map */

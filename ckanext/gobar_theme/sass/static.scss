@@ -1,8 +1,8 @@
 @import 'utils/globals';
 @import 'utils/mixins';
 
-#about {
-  #about-text {
+#about, #specs {
+  #about-text, #specs-text {
     padding: 30px 50px;
     @include box-shadow(0 -2px 4px 0 rgba(150, 150, 150, 0.5));
     color: $grey;

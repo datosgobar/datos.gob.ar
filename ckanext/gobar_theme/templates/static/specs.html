@@ -1,0 +1,236 @@
+{% extends "gobar_page.html" %}
+
+{% block subtitle %}
+    Especificaciones -
+{% endblock %}
+
+{% block content %}
+    <div id="specs" class="container-fluid">
+        <div id="specs-text" class="col-xs-12 col-md-10 col-md-offset-1">
+            <h1>Especificaciones Técnicas</h1>
+
+            <h3>Introducción a la Versión 2 del Catálogo</h3>
+
+            <p>La versión 2.0 de data.buenosaires.gob.ar supone para el Gobierno de la Ciudad de Buenos Aires una
+                oportunidad de revisar los criterios con que se han organizado los datos del catalogo hasta el
+                momento.</p>
+
+            <p>En base a la experiencia acumulada en la primera etapa de la iniciativa, se han incluido una serie de
+                cambios tanto en la forma en que se organizan los datos como su denominación y formatos. A continuación
+                se detallan los criterios empleados.</p>
+
+            <p>CKAN es software libre distribuido bajo la licencia “GNU Affero General Public License”
+                http://www.gnu.org/licenses/</p>
+
+            <h3>Plataforma</h3>
+
+            <p>El catálogo de datos utiliza CKAN (http://ckan.org/) en su versión 2.0 como plataforma.</p>
+
+            <p>CKAN es una herramienta desarrollada por la Open Knowledge Foundation (http://okfn.org/) y actualmente se
+                encuentra entre las plataformas más populares siendo utilizada, entre otros, por el Gobierno Británico,
+                de Brasil, Chile y ciudades como Londres, Berlin o Helsinki.</p>
+
+            <p>CKAN permite tanto la organización de los conjuntos de datos y recursos como el acceso programático a
+                estos datos aplicando estándares aprobados internacionalmente.</p>
+
+            <p>A partir de su versión 1.8 CKAN permite la integración de una herramienta denominada Recline.js
+                (http://okfnlabs.org/recline/), también desarrollada por la Open Knowledge Foundation. Recline permite
+                la visualización de los distintos recursos de modo intuitivo, acercando la experiencia a una mayor
+                cantidad de usuarios.</p>
+
+            <p>La implementación de CKAN para nuestro catálogo de datos carece de una funcionalidad explicada con mayor
+                detalle en el siguiente link: Legacy Mode</p>
+
+            <h3>Conjuntos de Datos</h3>
+
+            <p>Los “conjuntos de datos” (también denominados “datasets”) son la pieza principal en todo el catálogo de
+                datos. Los conjuntos de datos agrupan uno o más recursos de datos así como la documentación que les da
+                contexto.</p>
+
+            <h3>Criterios de Agrupamiento</h3>
+
+            <p>Para pertenecer a un mismo conjunto de datos, los recursos deben:</p>
+
+            <ul>
+                <li>Versar sobre un mismo tema y</li>
+                <li>tener la misma de estructura o encontrarse relacionados entre sí de tal modo que adquieran valor al
+                    utilizarlos en conjunto.
+                </li>
+            </ul>
+
+            <p>Asimismo, un conjunto de datos puede contener recursos documentales que sin proveer datos permiten su
+                interpretación y enriquecen el análisis, así como recursos alternativos en una variedad de formatos que
+                permitan la reutilización con un mayor número de herramientas.</p>
+
+            <h3>Recursos</h3>
+
+            <p>Los recursos son la pieza de información más pequeña del catálogo.</p>
+
+            <h3>Formato de los recursos</h3>
+
+            <p>Si bien pueden existir casos en los que por cuestiones técnicas u operativas esto no sea posible, en el
+                catálogo se prefiere la publicación de los datos en los siguiente formatos:</p>
+
+            <ul>
+                <li><strong>Tablas:</strong> Comma Separated Value (csv), utilizando “comas” (,) como delimitador y
+                    “comillas dobles” (“) para indicar campos de texto.
+                </li>
+                <li><strong>Información Geográfica:</strong> en el caso de información geográfica se utilizará también
+                    csv pero incorporando un campo WKT (http://www.opengeospatial.org/standards/ct) o los campos
+                    Longitud y Latitud (WGS84)
+                </li>
+                <li><strong>Encoding:</strong> en todos los casos la codificación de caracteres (character encoding)
+                    será UTF8, según los estándares propuestos por la IETF http://tools.ietf.org/html/rfc3629
+                </li>
+                <li><strong>Fechas:</strong> se preferirá la utilización de las fechas en el siguiente formato:
+                    YYYY-MM-DD HH:MM:SS. En caso de que no corresponda ingresar datos de tiempo basta con completar con
+                    ceros. Ej. 2002-12-25 00:00:00.
+                </li>
+                <li><strong>Documentos:</strong> para los documentos se utilizarán los formatos PDF, TXT o MD.</li>
+                <li><strong>Denominación de los campos:</strong> se utilizarán mayúsculas para nombrar los campos.</li>
+                <li><strong>Archivos comprimidos:</strong> se preferirá la compresión en zip de los archivos.</li>
+            </ul>
+
+            <h3>Grandes Archivos</h3>
+
+            <p>En el caso de archivos grandes que dificulten su manipulación, se incorporará -además del original- un
+                fraccionamiento de los mismos siguiendo los siguientes criterios:</p>
+            <ul>
+                <li>por períodos, en caso de tratarse de información temporal (Ej.: años, semestres, trimestres, meses,
+                    semanas, días),
+                </li>
+                <li>por zonas, en caso de tratarse de información geográfica (Ej.: comunas, barrios, secciones,
+                    manzanas),
+                </li>
+                <li>en caso de no prevalecer ningún otro criterio se lo hará por cantidad de registros.</li>
+            </ul>
+
+            <h3>Formatos alternativos</h3>
+
+            <p>Además de los archivos con el formato detallado anteriormente, en algunos casos se procederá a brindar
+                formatos alternativos atentos a ampliar la variedad de aplicaciones con que puedan ser manipulados, por
+                ejemplo, shapefiles o geojson en el caso de información geográfica.</p>
+
+            <h3>Documentación Anexa</h3>
+
+            <p>Cada uno de los recursos cargados estará acompañado por un recurso denominado “Documentación Anexa-Nombre
+                del Recurso de Origen” (Ej.: Documentación Anexa-Estaciones Saludables). Este documento describe el tipo
+                de información que se publica, el proceso por el cual se obtiene, la campos del recurso y cualquier
+                información extra que facilite su correcta interpretación, procesamiento y lectura.</p>
+
+            <h3>Metadata</h3>
+
+            <p>Para facilitar la navegación en el sitio y la búsqueda de conjuntos de datos se utiliza los estándares de
+                metadata propuestos por defecto en CKAN (dublin core http://dublincore.org/ y dcat
+                http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/)</p>
+
+            <h3>Dataset</h3>
+
+            <ul>
+                <li><strong>Título:</strong> descriptivo y único. Lo suficientemente abstracto como para abarcar la
+                    multiplicidad de recursos. No incluye referencia a fechas ni lugares.
+                </li>
+                <li><strong>Descripción:</strong> una descripción amplia de los temas que aborda el conjunto de datos.
+                </li>
+                <li><strong>Tags:</strong> etiquetas que colaboran en la búsqueda de los usuarios. Los tags escritos, en
+                    singular y respetando la existencia de tags anteriores.
+                </li>
+                <li><strong>Organización:</strong> área del gobierno responsable del mantenimiento del dato.</li>
+                <li><strong>Autor:</strong> unidad que genera la información. Estructura jerárquica separada por
+                    guiones. Ej: Ministerio de Cultura- SS Patrimonio Cultural- DG del Libro, Bibliotecas y Promoción de
+                    la Lectura
+                </li>
+                <li><strong>Responsable:</strong> En algunos casos puede que el responsable de publicar y mantener la
+                    información actualizada no responda a la misma unidad que el generador de la información; en dicho
+                    caso se detalla al igual que se lo hizo con el autor. En caso de que coincidan, se repite la
+                    información.
+                </li>
+                <li><strong>Email del Responsable:</strong> dirección de correo para la recepción de consultas.</li>
+                <li><strong>Frecuencia de actualización:</strong> frecuencia de actualización acordada con el área que
+                    produce/mantiene el conjunto de datos.
+                </li>
+                <li><strong>Grupo:</strong> área/s temáticas/s predefinida a la que el conjunto de datos pertenece.</li>
+            </ul>
+
+            <h3>Recurso</h3>
+
+            <ul>
+                <li><strong>Nombre del Recurso:</strong> nombre simple y descriptivo.</li>
+                <li><strong>Descripción:</strong> descripción simple de la información contenida en el recurso. No más
+                    de una línea.
+                </li>
+                <li><strong>Formato:</strong> formato del archivo.</li>
+            </ul>
+
+            <h3>API</h3>
+
+            <p>CKAN provee acceso a los datos y a la metadata por medio de una API.</p>
+
+            <p>La documentación puede encontrarse en el siguiente link: http://docs.ckan.org/en/latest/api.html</p>
+
+            <h3>Glosario</h3>
+
+            <ul>
+                <li><strong>Datos abiertos (open data):</strong> datos públicos completos, primarios, oportunos,
+                    accesibles, procesables, no discriminatorios, de uso libre y con formatos no restringidos.
+                </li>
+                <li><strong>Recurso:</strong> archivos con datos o documentación de contexto.</li>
+                <li><strong>Conjunto de Datos (Dataset):</strong> Agrupamiento de recursos que tratan sobre un mismo
+                    tema y/o tienen una misma estructura.
+                </li>
+                <li><strong>Codificación de caracteres (encoding):</strong> estándares por los cuales un sistema
+                    informático reproduce un carácter al lenguaje natural.
+                </li>
+                <li><strong>API (Interfaz de Programación de Aplicaciones):</strong> es una interfaz de comunicación
+                    entre componentes software.
+                </li>
+                <li><strong>Aplicación:</strong> programa compilado y escrito en cualquier lenguaje de programación que
+                    suele resultar una solución informática para la automatización de ciertas tareas.
+                </li>
+                <li><strong>Catálogo de datos:</strong> herramienta que reúne, ordena y categoriza datasets de diverso
+                    tipo para facilitar su descubrimiento y localización.
+                </li>
+                <li><strong>Metadatos:</strong> datos y/o documentos que describen otros datos en términos de contexto,
+                    contenido o, en general, cualquier aspecto que se considere necesario para ampliar la
+                    conceptualización del dato descrito.
+                </li>
+                <li><strong>Software Libre:</strong> software que una vez obtenido puede ser usado, copiado, estudiado,
+                    modificado,y redistribuido libremente.
+                </li>
+                <li><strong>Licencia Abierta (de contenido abierto):</strong> es toda aquella formalización por escrito
+                    -por parte del titular, originario o no, de los derechos de propiedad intelectual de una determinada
+                    información- que recoja necesariamente la cesión explícita en exclusiva de los derechos
+                    patrimoniales de reproducción, distribución y comunicación pública de dicha información, incluyendo
+                    la puesta a disposición interactiva.
+                </li>
+            </ul>
+
+            <h3>Normativa</h3>
+
+            <p>Existen un gran conjunto de leyes, normas y jurisprudencia que otorgan marco a la iniciativa de datos
+                abiertos en el contexto del Gobierno de la Ciudad Autónoma, tanto en materia del Derecho de Acceso a la
+                Información como en materia de Protección de Datos Personales.</p>
+
+            <p>Entre ella se destaca la Ley N° 104 de Acceso a la Información Pública, cuyo objetivo es garantizar el
+                derecho de toda persona a solicitar y recibir información de manera que la misma sea completa, veraz,
+                adecuada y oportuna (documentos escritos, fotografías, grabaciones, soporte magnético o digital, etc)
+                relativa a los actos o a la actividad administrativa de los poderes ejecutivo, legislativo y judicial,
+                sin que exista la necesidad de indicar los motivos y la finalidad de dicha solicitud de información.</p>
+
+            <p>Asimismo, la Ley N° 1845 sobre Protección de Datos Personales faculta a los ciudadanos a decidir cuáles
+                de esos datos personales quieren brindar a terceros, ya sea el Estado o un particular; o bien, cuáles
+                datos pueden esos terceros obtener, permitiendo asimismo que se sepa quién posee sus datos personales y
+                por qué motivo, pudiendo oponerse a esa posesión o uso. Esta última ley intenta proteger ciertos
+                aspectos de la personalidad que formen un perfil determinado de una persona. Frente a esa posibilidad
+                surge el derecho de sus titulares de exigir que esos datos permanezcan en el ámbito de su
+                privacidad.</p>
+
+            <h3>Links Útiles</h3>
+
+            <p>Plataforma de Datos. http://ckan.org/</p>
+
+            <p>Open Knowledge Foundation: http://okfn.org/</p>
+        </div>
+    </div>
+
+{% endblock %}
