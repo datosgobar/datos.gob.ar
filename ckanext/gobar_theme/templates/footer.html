@@ -4,11 +4,10 @@
             <a href="{{ h.url('home') }}"><img src="/img/logo_ministerio_footer.svg" class="logo-ministerio"></a>
         </div>
         <div class="footer-section links-internos col-xs-3">
-            <!-- TODO: agregar rutas para specs, contacto y terminos y condiciones -->
-            <a href=""><p>ESPECIFICACIONES</p></a>
-            <a href=""><p>CONTACTO</p></a>
-            <a href="{{ h.url_for(controller='home', action='about') }}"><p>ACERCA DEL SITIO</p></a>
-            <a href=""><p>TERMINOS Y CONDICIONES</p></a>
+            <a href="{{ h.url('gobar_especificaciones') }}"><p>ESPECIFICACIONES</p></a>
+            <a href="{{ h.url('gobar_contacto') }}"><p>CONTACTO</p></a>
+            <a href="{{ h.url('gobar_acerca_de') }}"><p>ACERCA DEL SITIO</p></a>
+            <a href="{{ h.url('gobar_terminos') }}"><p>TERMINOS Y CONDICIONES</p></a>
         </div>
         <div class="footer-section links-externos col-xs-4">
             <p>
