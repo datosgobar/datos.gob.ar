@@ -1,0 +1,59 @@
+@import '../utils/globals';
+@import '../utils/mixins';
+@import '../bourbon/bourbon';
+
+.featured-groups {
+  padding: 50px 0;
+  text-align: center;
+
+  .group-container {
+    margin-bottom: 15px;
+    padding: 0 5px;
+    float: none;
+    display: inline-block;
+    .group {
+      border: solid 0 transparent;
+      overflow: hidden;
+      @include border-radius(4px);
+      @include box-shadow(0 0 5px 0 rgba(100, 100, 100, 0.5));
+
+      .group-text {
+        border-bottom: solid 5px $dark-blue;
+        $vertical-padding: 15px;
+        $horizontal-padding: 10px;
+        padding: $vertical-padding $horizontal-padding;
+        position: relative;
+        $img-size: 50px;
+        overflow: hidden;
+
+        img {
+          position: absolute;
+          width: $img-size;
+          height: $img-size;
+          top: 50%;
+          left: $horizontal-padding;
+          margin-top: -$img-size/2;
+        }
+
+        .group-table {
+          padding-left: $img-size + 10px;
+          overflow: hidden;
+          display: table;
+          text-align: left;
+          $font-size: 14px;
+          $line-height: 1.2;
+          $lines: 3;
+          font-size: $font-size;
+          line-height: $line-height;
+          height: $lines * $font-size * $line-height;
+
+          .group-cell {
+            display: table-cell;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -43,7 +43,8 @@
 body {
   background: #fff;
   font-family: 'Roboto', sans-serif !important;
-  font-weight: 400; }
+  font-weight: 400;
+  padding: 0; }
 
 a, a:hover {
   text-decoration: none !important; }
@@ -106,12 +107,12 @@ a, a:hover {
 
 #title {
   padding: 20px 0;
-  margin-bottom: 600px;
   color: white;
   background-color: #00B9F1;
   background-image: -webkit-linear-gradient(left, #00B9F1, #0072bc);
   background-image: linear-gradient(to right,#00B9F1, #0072bc); }
   #title #title-and-search h1 {
+    font-size: 50px;
     font-weight: 400; }
   #title #title-and-search .description {
     margin-bottom: 30px; }
@@ -157,10 +158,13 @@ a, a:hover {
           font-size: 24px; }
   #title #stats {
     text-align: center;
-    padding-top: 20px; }
+    padding-top: 20px;
+    padding-right: 0; }
     @media (min-width: 992px) {
       #title #stats {
         text-align: right; } }
+    #title #stats > div {
+      padding-right: 0; }
     #title #stats .stat {
       font-size: 90px;
       margin: 0;
@@ -170,5 +174,48 @@ a, a:hover {
       font-size: 20px; }
       #title #stats .stats-legend.datasets {
         margin-bottom: 40px; }
+
+.featured-groups {
+  padding: 50px 0;
+  text-align: center; }
+  .featured-groups .group-container {
+    margin-bottom: 15px;
+    padding: 0 5px;
+    float: none;
+    display: inline-block; }
+    .featured-groups .group-container .group {
+      border: solid 0 transparent;
+      overflow: hidden;
+      -o-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      -o-box-shadow: 0 0 5px 0 rgba(100, 100, 100, 0.5);
+      -moz-box-shadow: 0 0 5px 0 rgba(100, 100, 100, 0.5);
+      -webkit-box-shadow: 0 0 5px 0 rgba(100, 100, 100, 0.5);
+      box-shadow: 0 0 5px 0 rgba(100, 100, 100, 0.5); }
+      .featured-groups .group-container .group .group-text {
+        border-bottom: solid 5px #0072bc;
+        padding: 15px 10px;
+        position: relative;
+        overflow: hidden; }
+        .featured-groups .group-container .group .group-text img {
+          position: absolute;
+          width: 50px;
+          height: 50px;
+          top: 50%;
+          left: 10px;
+          margin-top: -25px; }
+        .featured-groups .group-container .group .group-text .group-table {
+          padding-left: 60px;
+          overflow: hidden;
+          display: table;
+          text-align: left;
+          font-size: 14px;
+          line-height: 1.2;
+          height: 50.4px; }
+          .featured-groups .group-container .group .group-text .group-table .group-cell {
+            display: table-cell;
+            vertical-align: middle; }
 
 /*# sourceMappingURL=gobar_style.css.map */

@@ -1,0 +1,18 @@
+<div class="featured-groups container-fluid">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+        {% for group in c.groups %}<div class="group-container col-xs-12 col-sm-4 col-lg-2">
+                <a href="{{ h.url_for(controller='group', action='read', id=group.name) }}">
+                    <div class="group">
+                        <div class="group-text">
+                            <img src="{{ group.image_display_url }}">
+                            <div class="group-table">
+                                <div class="group-cell">
+                                    {{ group.display_name }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>{% endfor %}
+    </div>
+</div>

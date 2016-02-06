@@ -4,13 +4,13 @@
 
 #title {
   padding: 20px 0;
-  margin-bottom: 600px;
   color: white;
   @include linear-gradient(to right, $blue, $dark-blue);
 
   #title-and-search {
 
     h1 {
+      font-size: 50px;
       font-weight: 400;
     }
 
@@ -71,6 +71,11 @@
       text-align: right;
     }
     padding-top: 20px;
+    padding-right: 0;
+
+    & > div {
+      padding-right: 0;
+    }
 
     .stat {
       font-size: 90px;
