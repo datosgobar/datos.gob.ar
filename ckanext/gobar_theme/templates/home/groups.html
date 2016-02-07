@@ -1,6 +1,6 @@
 <div class="featured-groups container-fluid">
     <div class="col-xs-12 col-md-10 col-md-offset-1">
-        {% for group in c.groups %}<div class="group-container col-xs-12 col-sm-4 col-lg-2">
+        {% for group in c.groups %}<div class="group-container col-xs-12 col-sm-4 col-lg-2 invisible">
                 <a href="{{ h.url_for(controller='group', action='read', id=group.name) }}">
                     <div class="group">
                         <div class="group-text">
@@ -16,3 +16,5 @@
             </div>{% endfor %}
     </div>
 </div>
+
+{% resource 'gobar_js/home/groups.js' %}
