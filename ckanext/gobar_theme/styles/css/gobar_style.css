@@ -186,7 +186,22 @@ a, a:hover {
     margin-bottom: 15px;
     padding: 0 5px;
     float: none;
-    display: inline-block; }
+    display: inline-block;
+    opacity: 1;
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-delay: 0;
+    -moz-transition-delay: 0;
+    transition-delay: 0;
+    -webkit-transition-property: opacity;
+    -moz-transition-property: opacity;
+    transition-property: opacity;
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    transition-timing-function: linear; }
+    .featured-groups .group-container.invisible {
+      opacity: 0; }
     .featured-groups .group-container .group {
       border: solid 0 transparent;
       overflow: hidden;

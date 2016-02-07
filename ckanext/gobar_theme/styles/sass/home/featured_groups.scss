@@ -11,6 +11,17 @@
     padding: 0 5px;
     float: none;
     display: inline-block;
+    opacity: 1;
+
+    @include transition-duration(1s);
+    @include transition-delay(0);
+    @include transition-property(opacity);
+    @include transition-timing-function(linear);
+
+    &.invisible {
+      opacity: 0;
+    }
+
     .group {
       border: solid 0 transparent;
       overflow: hidden;

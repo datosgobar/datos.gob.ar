@@ -21,5 +21,6 @@
     {% if g.tracking_enabled %}
       {% resource 'base/tracking.js' %}
     {% endif %}
-  {{ super() }}
+    {% resource 'gobar_js/libs/bootstrap_scripts.js' %}
+    {{ super() }}
 {% endblock -%}
