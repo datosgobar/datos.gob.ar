@@ -1,0 +1,16 @@
+{% extends "gobar_page.html" %}
+
+{% block subtitle %}{{ gettext('Error %(error_code)s', error_code=c.code[0]) }}{% endblock %}
+
+{% block content %}
+    <div id="error" class="container-fluid">
+        <div id="error-text" class="col-xs-12 col-md-10 col-md-offset-1">
+            <div id="error-code">
+                {{ c.code[0] }}
+            </div>
+            <div id="error-description">
+                Ups, ha ocurrido un error
+            </div>
+        </div>
+    </div>
+{% endblock %}
