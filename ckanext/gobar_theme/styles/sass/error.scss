@@ -11,10 +11,9 @@
     text-align: center;
     #error-code {
       padding: 50px 0;
-      font-size: 100px;
       font-weight: 300;
       line-height: 0;
-      $width: 100% / 17;
+      $width: 100% / 32;
       .circle-container, .separator {
         position: relative;
         display: inline-block;
@@ -33,8 +32,8 @@
             width: 100%;
             height: 100%;
             background: $dark-blue;
-            @include border-radius(5px);
-            @include transition-duration(100ms);
+            @include border-radius(15%);
+            @include transition-duration(800ms);
             @include transition-property(opacity);
             @include transition-delay(0);
             @include transition-timing-function(linear);

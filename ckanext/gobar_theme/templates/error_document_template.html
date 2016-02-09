@@ -7,9 +7,9 @@
         <div id="error-text" class="col-xs-12 col-md-10 col-md-offset-1">
             <div id="error-code" class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2"
                  data-error="{{ c.code[0] }}">
-                {%- for row in range(6) -%}
-                    {%- for col in range(17) -%}
-                        {%- if col == 5 or col == 11 -%}
+                {%- for row in range(12) -%}
+                    {%- for col in range(32) -%}
+                        {%- if col == 10 or col == 21 -%}
                             <div class="circle separator" data-col="{{ col }}" data-row="{{ row }}"></div>
                         {%- else -%}
                             <div class="circle circle-container" data-col="{{ col }}" data-row="{{ row }}">
