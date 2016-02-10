@@ -4,11 +4,7 @@
 
 #login-container {
   #login {
-    padding: 30px 50px;
-    @include box-shadow(0 -2px 4px 0 rgba(150, 150, 150, 0.5));
-    color: $grey;
-    font-size: 16px;
-
+    @include base-container();
     h1 {
       margin: 20px 0;
       font-weight: 400;

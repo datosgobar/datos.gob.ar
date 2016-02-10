@@ -1,3 +1,5 @@
+@import 'globals';
+
 @mixin box-shadow($shadow) {
   -o-box-shadow: $shadow;
   -moz-box-shadow: $shadow;
@@ -9,4 +11,10 @@
   -moz-border-radius: $radius;
   -webkit-border-radius: $radius;
   border-radius: $radius;
+}
+@mixin base-container() {
+  padding: 30px 50px;
+  @include box-shadow(0 -2px 4px 0 rgba(150, 150, 150, 0.5));
+  color: $grey;
+  font-size: 16px;
 }
