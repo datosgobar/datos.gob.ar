@@ -110,7 +110,12 @@ a, a:hover {
   color: white;
   background-color: #00B9F1;
   background-image: -webkit-linear-gradient(left, #00B9F1, #0072bc);
-  background-image: linear-gradient(to right,#00B9F1, #0072bc); }
+  background-image: linear-gradient(to right,#00B9F1, #0072bc);
+  background-image: url("/img/title-background.svg");
+  background-image: url("/img/title-background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
   #title #title-container h1 {
     font-size: 50px;
     font-weight: 400; }

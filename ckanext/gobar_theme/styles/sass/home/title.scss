@@ -6,6 +6,10 @@
   padding: 20px 0;
   color: white;
   @include linear-gradient(to right, $blue, $dark-blue);
+  @include background-image(url('/img/title-background.svg'));
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   #title-container {
 
