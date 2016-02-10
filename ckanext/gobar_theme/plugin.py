@@ -27,4 +27,10 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
         routing_map.connect('gobar_especificaciones', '/especificaciones', controller=gobar_home_controller, action='specs')
         routing_map.connect('gobar_contacto', '/contacto', controller=gobar_home_controller, action='contact')
 
+        routing_map.redirect('/dashboard', '/')
+        routing_map.redirect('/dashboard/datasets', '/')
+        routing_map.redirect('/dashboard/groups', '/')
+        routing_map.redirect('/dashboard/organizations', '/')
+        routing_map.redirect('/dashboard/{url:.*?}', '/dashboard')
+
         return routing_map

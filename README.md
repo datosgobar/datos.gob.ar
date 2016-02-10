@@ -12,3 +12,10 @@ Y agregar al archivo de configuracion de ckan (development.ini o production.ini)
 ```
 ckan.plugins = (otros plugins) gobar_theme
 ```
+
+## Configuracion
+Dentro del archivo de configuracion de ckan (development.ini o production.ini)
+```
+ckan.auth.create_user_via_api = false
+ckan.auth.create_user_via_web = false
+```
