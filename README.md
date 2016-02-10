@@ -18,4 +18,5 @@ Dentro del archivo de configuracion de ckan (development.ini o production.ini)
 ```
 ckan.auth.create_user_via_api = false
 ckan.auth.create_user_via_web = false
+ckan.locale_default = es
 ```

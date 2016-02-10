@@ -1,0 +1,11 @@
+@import '../utils/mixins';
+
+.organization-container {
+  .organization {
+    @include base-container();
+    .add-organization {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/* Extiende ../home/title */
+
+#title.organization-title {
+  padding-bottom: 40px;
+  #title-container {
+    .description {
+      margin: 0;
+    }
+  }
+  #stats {
+    .stats-legend {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{% extends "gobar_page.html" %}
+
+{% block content %}
+
+    {% snippet "organization/title.html" %}
+
+    <div class="organization-container container-fluid">
+        <div class="organization col-xs-12 col-md-10 col-md-offset-1">
+            {% if h.check_access('organization_create') %}
+                <div class="add-organization">
+                    {% link_for _('Add Organization'), controller='organization', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
+                </div>
+            {% endif %}
+
+            {% if c.page.items %}
+                <ul>
+                    {% set organizations = c.page.items %}
+                    {% for organization in organizations %}
+                        <li>
+                            <a href="{{ h.url_for(organization.type ~ '_read', action='read', id=organization.name) }}">{{ organization.display_name }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+
+            {% endif %}
+
+        </div>
+    </div>
+{% endblock %}
