@@ -1,4 +1,5 @@
 from ckan.controllers.home import HomeController
+from ckan.controllers.organization import OrganizationController
 from ckan.common import c
 import ckan.logic as logic
 import ckan.model as model
@@ -33,3 +34,9 @@ class GobArHomeController(HomeController):
 
     def contact(self):
         return base.render('static/contact.html')
+
+
+class GobArOrganizationController(OrganizationController):
+
+    def index(self):
+        return base.render('organization/index.html')
