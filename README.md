@@ -13,6 +13,10 @@ Y agregar al archivo de configuracion de ckan (development.ini o production.ini)
 ckan.plugins = (otros plugins) gobar_theme
 ```
 
+## Dependencias
+
+Instalar plugin de jerarquia para organizaciones [[link]](https://github.com/datagovuk/ckanext-hierarchy) (seguir instrucciones del repo)
+
 ## Configuracion
 Dentro del archivo de configuracion de ckan (development.ini o production.ini)
 ```

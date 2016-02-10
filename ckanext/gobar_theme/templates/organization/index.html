@@ -11,18 +11,17 @@
                     {% link_for _('Add Organization'), controller='organization', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
                 </div>
             {% endif %}
-
-            {% if c.page.items %}
-                <ul>
-                    {% set organizations = c.page.items %}
-                    {% for organization in organizations %}
-                        <li>
-                            <a href="{{ h.url_for(organization.type ~ '_read', action='read', id=organization.name) }}">{{ organization.display_name }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-
-            {% endif %}
+            <ul>
+                {% set organizations_tree = h.get_action('group_tree', {'type': 'organization'}) %}
+                {% for node in organizations_tree recursive %}
+                    <li id="node_{{ node.name }}">
+                        {% link_for node.title, controller='organization', action='read', id=node.name %}
+                        {% if node.children %}
+                            <ul> {{ loop(node.children) }} </ul>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
 
         </div>
     </div>
