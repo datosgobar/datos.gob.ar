@@ -1,0 +1,45 @@
+@import '../utils/globals';
+@import '../utils/mixins';
+@import '../bourbon/bourbon';
+
+#login-container {
+  #login {
+    padding: 30px 50px;
+    @include box-shadow(0 -2px 4px 0 rgba(150, 150, 150, 0.5));
+    color: $grey;
+    font-size: 16px;
+
+    h1 {
+      margin: 20px 0;
+      font-weight: 400;
+      font-size: 40px;
+    }
+
+    form {
+      $font-size: 16px;
+      $line-height: 1.2;
+      $padding: 5px;
+      label {
+        font-weight: 400;
+        width: 50%;
+        padding: $padding 20px $padding 0;
+        font-size: $font-size;
+        line-height: $line-height;
+      }
+      .controls {
+        margin-left: 50%;
+        input[type="text"], input[type="password"] {
+          width: 100%;
+          font-size: $font-size;
+          line-height: $line-height;
+          padding: $padding;
+          height: $font-size * $line-height + 2*$padding;
+        }
+        input[type="checkbox"] {
+          @include transform(scale(1.3));
+        }
+      }
+
+    }
+  }
+}

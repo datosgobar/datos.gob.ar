@@ -312,4 +312,37 @@ a, a:hover {
         #error #error-text #error-code .circle-container .circle-gutter .circle-background.different {
           opacity: 0.75; }
 
+#login-container #login {
+  padding: 30px 50px;
+  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  color: #58595B;
+  font-size: 16px; }
+  #login-container #login h1 {
+    margin: 20px 0;
+    font-weight: 400;
+    font-size: 40px; }
+  #login-container #login form label {
+    font-weight: 400;
+    width: 50%;
+    padding: 5px 20px 5px 0;
+    font-size: 16px;
+    line-height: 1.2; }
+  #login-container #login form .controls {
+    margin-left: 50%; }
+    #login-container #login form .controls input[type="text"], #login-container #login form .controls input[type="password"] {
+      width: 100%;
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 5px;
+      height: 29.2px; }
+    #login-container #login form .controls input[type="checkbox"] {
+      -webkit-transform: scale(1.3);
+      -moz-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      -o-transform: scale(1.3);
+      transform: scale(1.3); }
+
 /*# sourceMappingURL=gobar_style.css.map */
