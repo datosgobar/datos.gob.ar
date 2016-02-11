@@ -1,4 +1,5 @@
 @import '../../utils/globals';
+@import '../../bourbon/bourbon';
 
 .filters-container {
   background: #fafafa;
@@ -26,6 +27,7 @@
         padding: 5px ($side-padding + 10px);
         text-align: center;
         margin: 0;
+        background: transparent;
         .arrow-up, .arrow-down {
           width: 12px;
           height: 12px;
@@ -64,6 +66,11 @@
         li {
           padding: 5px ($side-padding + 10px);
           position: relative;
+          background: transparent;
+          @include transition-delay(0);
+          @include transition-property(background);
+          @include transition-timing-function(linear);
+          @include transition-duration(150ms);
           &:hover {
             background: $light-grey;
           }

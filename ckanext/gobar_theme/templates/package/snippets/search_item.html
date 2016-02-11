@@ -1,0 +1,26 @@
+{% set truncate_maintainer = 150 %}
+{% set truncate_description = 250 %}
+{% set title = package.title or package.name %}
+{% set notes = h.markdown_extract(package.notes, extract_length=truncate) %}
+
+<a href="{{ h.url_for(controller='package', action='read', id=package.name) }}" class="dataset-item">
+    <div class="dataset-container">
+        <div class="dataset-border container-fluid">
+            <div class="dataset-content col-xs-9">
+                <h3 class="dataset-title">{{ title }}</h3>
+
+                <div class="dataset-maintainer">{{ package.maintainer }}</div>
+                <div class="dataset-notes">{{ notes|urlize }}</div>
+            </div>
+            <div class="dataset-groups-and-resources col-xs-3">
+                <div class="dataset-groups"></div>
+                <div class="dataset-resources">
+                    {% for resource in h.dict_list_reduce(package.resources, 'format') %}
+                        {{ resource }}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</a>

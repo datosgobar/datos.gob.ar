@@ -1,0 +1,50 @@
+@import '../../bourbon/bourbon';
+@import '../../utils/mixins';
+
+.dataset-list {
+  .dataset-item {
+    .dataset-container {
+      padding: 0;
+      border: solid 0 transparent;
+      @include border-radius(4px);
+      @include box-shadow(0 0px 4px 0 rgba(150, 150, 150, 0.5));
+      margin-bottom: 15px;
+      overflow: hidden;
+
+      .dataset-border {
+        border-right: solid 8px $light-grey;
+        @include transition-delay(0);
+        @include transition-duration(200ms);
+        @include transition-timing-function(ease-in);
+        @include transition-property(border);
+
+        .dataset-title {
+          color: $dark-blue;
+          margin: 20px 0 0 0;
+        }
+
+        .dataset-maintainer {
+          color: $light-grey;
+          $font-size: 14px;
+          font-size: $font-size;
+          $line-height: 1.2;
+          line-height: $line-height;
+          min-height: 2*$font-size*$line-height;
+          font-weight: 500;
+        }
+
+        .dataset-notes {
+          color: $grey;
+          margin: 0 0 30px 0;
+        }
+      }
+    }
+
+    &:hover {
+      color: inherit;
+      .dataset-border {
+        border-right-color: $dark-blue;
+      }
+    }
+  }
+}
