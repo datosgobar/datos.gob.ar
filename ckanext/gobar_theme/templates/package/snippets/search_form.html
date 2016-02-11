@@ -38,14 +38,11 @@
 
 </form>
 
-{% if show_empty and count == 0 %}
-    {% trans %}
-        <p class="extra">Please try another search.</p>
-    {% endtrans %}
-{% endif %}
-
 {% if error %}
-    {% trans %}
-        <p><strong>There was an error while searching.</strong> Please try again.</p>
-    {% endtrans %}
+    <p class="search-error"><strong>Ha ocurrido un error con la busqueda.</strong></p>
+    <p>Por favor trate de vuelta y si el problema persiste <a href="{{ h.url('gobar_contacto') }}">contactenos</a>.</p>
+{% else %}
+    {% if count == 0 %}
+        <p class="extra">No se encontraron resultados</p>
+    {% endif %}
 {% endif %}

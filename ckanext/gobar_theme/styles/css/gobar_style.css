@@ -435,6 +435,8 @@ a, a:hover {
       box-sizing: border-box; }
     #search-results .search-and-order .order select {
       max-width: 50%; }
+#search-results .search-error strong {
+  font-weight: 500; }
 
 .filters-container {
   background: #fafafa;
