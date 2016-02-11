@@ -6,8 +6,8 @@
 
     <div class="package-container container-fluid">
         <div class="package-search col-xs-12 col-md-10 col-md-offset-1">
-            <ul>
-            </ul>
+            {% snippet "package/snippets/search_filters.html" %}
+            {% snippet "package/snippets/search_results.html" %}
         </div>
     </div>
 {% endblock %}
