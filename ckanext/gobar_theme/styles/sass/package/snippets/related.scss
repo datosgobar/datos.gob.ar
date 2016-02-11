@@ -1,0 +1,10 @@
+@import '../../utils/globals';
+
+#pkg-related {
+  h2.related-title {
+    color: $grey;
+    border-bottom: solid 1px $light-grey;
+    margin-top: 58px;
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,11 @@
+@import '../../utils/globals';
+
+#pkg-secondary-info {
+  background: #fafafa;
+  h2.secondary-info-title {
+    color: $dark-blue;
+    margin-top: 58px;
+    font-size: 22px;
+    border-bottom: solid 1px $light-grey;
+  }
+}

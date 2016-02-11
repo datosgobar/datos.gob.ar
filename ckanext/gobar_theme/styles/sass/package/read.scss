@@ -1,0 +1,12 @@
+@import '../utils/mixins';
+
+.package-container {
+  .package {
+    @include base-container();
+    padding: 0;
+    @import 'snippets/main_info';
+    @import 'snippets/secondary_info';
+    @import 'snippets/recent_activity';
+    @import 'snippets/related';
+  }
+}

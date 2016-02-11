@@ -75,6 +75,7 @@ a, a:hover {
 
 #footer {
   padding: 0;
+  position: relative;
   -o-box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5);
   -moz-box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5);
   -webkit-box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5);
@@ -377,5 +378,53 @@ a, a:hover {
     margin: 0; }
   #title.package-title #stats .stats-legend {
     margin: 0; }
+
+.package-container .package {
+  padding: 30px 50px;
+  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  color: #58595B;
+  font-size: 16px;
+  padding: 0; }
+  .package-container .package #pkg-main-info {
+    padding: 30px 10px 50px 30px; }
+    .package-container .package #pkg-main-info h1.pkg-title {
+      margin: 0;
+      color: #0072bc;
+      font-size: 30px; }
+    .package-container .package #pkg-main-info p.pkg-maintainer {
+      color: #D1D3D4;
+      font-size: 14px; }
+    .package-container .package #pkg-main-info p.pkg-notes {
+      margin-bottom: 50px; }
+    .package-container .package #pkg-main-info h2.pkg-resources-title {
+      color: #58595B;
+      border-bottom: solid 1px #D1D3D4;
+      font-size: 22px; }
+    .package-container .package #pkg-main-info .contact {
+      width: 15px;
+      height: 15px; }
+  .package-container .package #pkg-secondary-info {
+    background: #fafafa; }
+    .package-container .package #pkg-secondary-info h2.secondary-info-title {
+      color: #0072bc;
+      margin-top: 58px;
+      font-size: 22px;
+      border-bottom: solid 1px #D1D3D4; }
+  .package-container .package #pkg-recent-activity {
+    background: #fafafa; }
+    .package-container .package #pkg-recent-activity h2.recent-activity-title {
+      color: #0072bc;
+      margin-top: 58px;
+      font-size: 22px;
+      border-bottom: solid 1px #D1D3D4;
+      margin-bottom: 300px; }
+  .package-container .package #pkg-related h2.related-title {
+    color: #58595B;
+    border-bottom: solid 1px #D1D3D4;
+    margin-top: 58px;
+    font-size: 22px; }
 
 /*# sourceMappingURL=gobar_style.css.map */

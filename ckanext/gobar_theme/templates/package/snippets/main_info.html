@@ -1,0 +1,28 @@
+<div id="pkg-main-info" class="col-xs-12 col-md-8">
+    <h1 class="pkg-title">{{ pkg.title }}</h1>
+
+    <p class="pkg-maintainer">
+        {{ pkg.maintainer }}
+        {% if pkg.maintainer_email %}
+            <a href="mailto:{{ pkg.maintainer_email }}">
+                (mail)
+            </a>
+        {% endif %}
+    </p>
+
+    <p class="pkg-notes">{{ pkg.notes }}</p>
+
+    <h2 class="pkg-resources-title">Recursos disponibles</h2>
+
+    <div class="pkg-resources">
+    <ul>
+        {% for resource in pkg.resources %}
+            <li>
+                <a href="{{ resource.url }}">{{ resource.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    </div>
+
+</div>

@@ -1,0 +1,25 @@
+<div id="pkg-secondary-info" class="col-xs-12 col-md-4">
+    <h2 class="secondary-info-title">Información adicional</h2>
+
+    <h3>Responsable</h3>
+
+    <p>{{ pkg.maintainer }}</p>
+
+    <h3>Grupos</h3>
+    <ul>
+        {% for group in pkg.groups %}
+        {% endfor %}
+    </ul>
+    <h3>Tags</h3>
+    <ul>
+        {% for tag in pkg.tags %}
+            <li>{{ tag.name }}</li>
+        {% endfor %}
+    </ul>
+    <h3>Fecha de publicación</h3>
+    <p>{{ pkg.metadata_created }}</p>
+    <h3>Fecha de actualización</h3>
+    <p>{{ pkg.metadata_modified }}</p>
+    <h3>Frecuencia</h3>
+    <p>{{ pkg.extras[0].value }}</p>
+</div>

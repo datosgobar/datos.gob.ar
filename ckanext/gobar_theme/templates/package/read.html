@@ -1,0 +1,14 @@
+{% extends "gobar_page.html" %}
+
+{% set pkg = c.pkg_dict or pkg_dict %}
+
+{% block content %}
+    <div class="package-container container-fluid">
+        <div class="package col-xs-12 col-md-10 col-md-offset-1">
+            {% snippet "package/snippets/main_info.html", pkg=pkg %}
+            {% snippet "package/snippets/secondary_info.html", pkg=pkg %}
+            {% snippet "package/snippets/related.html", pkg=pkg %}
+            {% snippet "package/snippets/recent_activity.html", pkg=pkg %}
+        </div>
+    </div>
+{% endblock %}

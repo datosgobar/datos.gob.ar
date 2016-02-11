@@ -1,0 +1,12 @@
+@import '../../utils/globals';
+
+#pkg-recent-activity {
+  background: #fafafa;
+  h2.recent-activity-title {
+    color: $dark-blue;
+    margin-top: 58px;
+    font-size: 22px;
+    border-bottom: solid 1px $light-grey;
+    margin-bottom: 300px;
+  }
+}
