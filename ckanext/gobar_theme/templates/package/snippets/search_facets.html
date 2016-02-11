@@ -1,0 +1,77 @@
+{#
+Construct a facet module populated with links to filtered results.
+
+name
+  The field name identifying the facet field, eg. "tags"
+
+title
+  The title of the facet, eg. "Tags", or "Tag Cloud"
+
+label_function
+  Renders the human-readable label for each facet value.
+  If defined, this should be a callable that accepts a `facet_item`.
+  eg. lambda facet_item: facet_item.display_name.upper()
+  By default it displays the facet item's display name, which should
+  usually be good enough
+
+if_empty
+  A string, which if defined, and the list of possible facet items is empty,
+  is displayed in lieu of an empty list.
+
+count_label
+  A callable which accepts an integer, and returns a string.  This controls
+  how a facet-item's count is displayed.
+
+extras
+  Extra info passed into the add/remove params to make the url
+
+alternative_url
+  URL to use when building the necessary URLs, instead of the default
+  ones returned by url_for. Useful eg for dataset types.
+
+#}
+
+{% with items = h.get_facet_items_dict(name) %}
+    <div class="search-filter">
+        <h2 class="filter-title">{{ title }}</h2>
+        {% if items %}
+            <ul class="filter-values">
+                {% for item in items %}
+                    {% set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) %}
+                    {% set count = count_label(item['count']) if count_label else ('(%d)' % item['count']) %}
+                    <a href="{{ href }}">
+                        <li class="filter-value {% if item.active %} active{% endif %}">
+                            <span>{{ item.display_name }} {{ count }}</span>
+                            <img class="close-filter" src="/img/close-filter.svg">
+                        </li>
+                    </a>
+                {% endfor %}
+            </ul>
+
+            {% if h.get_param_int('_%s_limit' % name) %}
+                {% if h.has_more_facets(name) %}
+                    <a href="{{ h.remove_url_param('_%s_limit' % name, replace=0, extras=extras, alternative_url=alternative_url) }}"
+                       class="filter-show-more">
+                        <p>
+                            {{ h.snippet('svg/flecha_abajo.svg') }}
+                            Mostrar mas
+                            {{ h.snippet('svg/flecha_abajo.svg') }}
+                        </p>
+                    </a>
+                {% endif %}
+            {% else %}
+                <a href="{{ h.remove_url_param('_%s_limit' % name, extras=extras, alternative_url=alternative_url) }}"
+                   class="filter-show-less">
+                    <p>
+                        {{ h.snippet('svg/flecha_arriba.svg') }}
+                        Mostrar menos
+                        {{ h.snippet('svg/flecha_arriba.svg') }}
+                    </p>
+                </a>
+            {% endif %}
+        {% else %}
+            <p class="filter-empty">{{ _('There are no {facet_type} that match this search').format(facet_type=title) }}</p>
+        {% endif %}
+        <hr>
+    </div>
+{% endwith %}

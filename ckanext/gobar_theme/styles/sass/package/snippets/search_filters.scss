@@ -1,0 +1,91 @@
+@import '../../utils/globals';
+
+.filters-container {
+  background: #fafafa;
+  border-right: solid 1px $light-grey;
+  padding: 30px 0;
+
+  .search-filter {
+    $side-padding: 15px;
+
+    h2.filter-title {
+      font-size: 20px;
+      font-weight: 500;
+      padding: 0 $side-padding;
+    }
+
+    p.filter-empty {
+      color: $light-grey;
+      font-size: 16px;
+      padding: 0 ($side-padding + 10px);
+    }
+
+    a.filter-show-less, a.filter-show-more {
+      color: $light-grey;
+      p {
+        padding: 5px ($side-padding + 10px);
+        text-align: center;
+        margin: 0;
+        .arrow-up, .arrow-down {
+          width: 12px;
+          height: 12px;
+        }
+      }
+      &:hover {
+        color: $grey;
+        p {
+          background: $light-grey;
+          .arrow-up, .arrow-down {
+            path {
+              fill: $grey;
+            }
+          }
+        }
+      }
+    }
+
+    hr {
+      margin: 20px;
+      border: none;
+      border-top: solid 1px $light-grey;
+    }
+
+    a.filter-show-more + hr, a.filter-less-more + hr {
+      margin: 0;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+
+      a {
+        color: inherit;
+
+        li {
+          padding: 5px ($side-padding + 10px);
+          position: relative;
+          &:hover {
+            background: $light-grey;
+          }
+          .close-filter {
+            display: none;
+          }
+          &.active {
+            background: $light-blue;
+            border-left: solid 5px $dark-blue;
+            padding-left: $side-padding + 5px;
+            .close-filter {
+              display: inline-block;
+              position: absolute;
+              right: 5px;
+              top: 50%;
+              margin-top: -10px;
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

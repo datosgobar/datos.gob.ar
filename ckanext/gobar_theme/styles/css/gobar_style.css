@@ -436,6 +436,64 @@ a, a:hover {
     #search-results .search-and-order .order select {
       max-width: 50%; }
 
+.filters-container {
+  background: #fafafa;
+  border-right: solid 1px #D1D3D4;
+  padding: 30px 0; }
+  .filters-container .search-filter h2.filter-title {
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 15px; }
+  .filters-container .search-filter p.filter-empty {
+    color: #D1D3D4;
+    font-size: 16px;
+    padding: 0 25px; }
+  .filters-container .search-filter a.filter-show-less, .filters-container .search-filter a.filter-show-more {
+    color: #D1D3D4; }
+    .filters-container .search-filter a.filter-show-less p, .filters-container .search-filter a.filter-show-more p {
+      padding: 5px 25px;
+      text-align: center;
+      margin: 0; }
+      .filters-container .search-filter a.filter-show-less p .arrow-up, .filters-container .search-filter a.filter-show-less p .arrow-down, .filters-container .search-filter a.filter-show-more p .arrow-up, .filters-container .search-filter a.filter-show-more p .arrow-down {
+        width: 12px;
+        height: 12px; }
+    .filters-container .search-filter a.filter-show-less:hover, .filters-container .search-filter a.filter-show-more:hover {
+      color: #58595B; }
+      .filters-container .search-filter a.filter-show-less:hover p, .filters-container .search-filter a.filter-show-more:hover p {
+        background: #D1D3D4; }
+        .filters-container .search-filter a.filter-show-less:hover p .arrow-up path, .filters-container .search-filter a.filter-show-less:hover p .arrow-down path, .filters-container .search-filter a.filter-show-more:hover p .arrow-up path, .filters-container .search-filter a.filter-show-more:hover p .arrow-down path {
+          fill: #58595B; }
+  .filters-container .search-filter hr {
+    margin: 20px;
+    border: none;
+    border-top: solid 1px #D1D3D4; }
+  .filters-container .search-filter a.filter-show-more + hr, .filters-container .search-filter a.filter-less-more + hr {
+    margin: 0; }
+  .filters-container .search-filter ul {
+    list-style: none;
+    margin: 0; }
+    .filters-container .search-filter ul a {
+      color: inherit; }
+      .filters-container .search-filter ul a li {
+        padding: 5px 25px;
+        position: relative; }
+        .filters-container .search-filter ul a li:hover {
+          background: #D1D3D4; }
+        .filters-container .search-filter ul a li .close-filter {
+          display: none; }
+        .filters-container .search-filter ul a li.active {
+          background: #C7EAFB;
+          border-left: solid 5px #0072bc;
+          padding-left: 20px; }
+          .filters-container .search-filter ul a li.active .close-filter {
+            display: inline-block;
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            margin-top: -10px;
+            width: 20px;
+            height: 20px; }
+
 /* Extiende ../home/title */
 #title.package-title {
   padding-bottom: 40px; }
