@@ -1,0 +1,11 @@
+@import '../utils/mixins';
+
+.package-container {
+  .package-search {
+    @include base-container();
+    padding: 0;
+  }
+}
+
+@import 'snippets/search_results';
+@import 'snippets/search_filters';

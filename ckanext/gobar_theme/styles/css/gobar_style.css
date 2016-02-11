@@ -371,6 +371,71 @@ a, a:hover {
   #title.organization-title #stats .stats-legend {
     margin: 0; }
 
+.package-container .package-search {
+  padding: 30px 50px;
+  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  color: #58595B;
+  font-size: 16px;
+  padding: 0; }
+
+#search-results .add-dataset {
+  text-align: right;
+  margin-top: 20px; }
+#search-results .search-and-order {
+  padding: 0;
+  border: none;
+  margin-top: 20px; }
+  #search-results .search-and-order .searcher {
+    padding: 0; }
+    #search-results .search-and-order .searcher input {
+      background: transparent;
+      border: none;
+      width: 100%;
+      -o-box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom: solid 1px #D1D3D4;
+      padding: 10px;
+      font-size: 16px;
+      line-height: 1.2;
+      height: 29.2px; }
+      #search-results .search-and-order .searcher input::-webkit-input-placeholder {
+        color: #58595B; }
+      #search-results .search-and-order .searcher input::-moz-placeholder {
+        color: #58595B; }
+      #search-results .search-and-order .searcher input:-moz-placeholder {
+        color: #58595B; }
+      #search-results .search-and-order .searcher input:-ms-input-placeholder {
+        color: #58595B; }
+    #search-results .search-and-order .searcher button {
+      background: none;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 29.2px; }
+      #search-results .search-and-order .searcher button i {
+        color: #58595B;
+        font-size: 16px; }
+  #search-results .search-and-order .order {
+    text-align: right; }
+    #search-results .search-and-order .order label {
+      font-weight: 500;
+      font-size: 16px;
+      padding-right: 5px;
+      max-width: 50%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box; }
+    #search-results .search-and-order .order select {
+      max-width: 50%; }
+
 /* Extiende ../home/title */
 #title.package-title {
   padding-bottom: 40px; }

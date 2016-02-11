@@ -1,0 +1,71 @@
+@import '../../bourbon/bourbon';
+@import '../../utils/mixins';
+
+#search-results {
+
+  .add-dataset {
+    text-align: right;
+    margin-top: 20px;
+  }
+
+  .search-and-order {
+    padding: 0;
+    border: none;
+    margin-top: 20px;
+    .searcher {
+      padding: 0;
+
+      $font-size: 16px;
+      $padding: 10px;
+      $line-height: 1.2;
+
+      input {
+        background: transparent;
+        border: none;
+        width: 100%;
+        @include box-shadow(none);
+        @include border-bottom-radius(0);
+        border-bottom: solid 1px $light-grey;
+        padding: $padding;
+        font-size: $font-size;
+        line-height: $line-height;
+        height: $padding + $font-size * $line-height;
+
+        @include placeholder {
+          color: $grey;
+        }
+
+      }
+
+      button {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: $padding + $font-size * $line-height;
+
+        i {
+          color: $grey;
+          font-size: $font-size;
+        }
+      }
+    }
+
+    .order {
+      text-align: right;
+      label {
+        font-weight: 500;
+        font-size: 16px;
+        padding-right: 5px;
+        max-width: 50%;
+        @include box-sizing(border-box);
+      }
+      select {
+        max-width: 50%;
+      }
+    }
+
+  }
+
+}

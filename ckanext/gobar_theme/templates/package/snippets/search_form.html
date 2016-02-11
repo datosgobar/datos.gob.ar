@@ -1,0 +1,51 @@
+{% import 'macros/form.html' as form %}
+
+{% set placeholder = placeholder if placeholder else _('Search datasets...') %}
+{% set sorting = [
+      (_('Name Ascending'), 'title_string asc'),
+      (_('Name Descending'), 'title_string desc'),
+      (_('Last Modified'), 'metadata_modified desc') ] %}
+{% set search_class = search_class if search_class else 'search-giant' %}
+{% set no_bottom_border = no_bottom_border if no_bottom_border else false %}
+{% set form_id = form_id if form_id else false %}
+
+<form {% if form_id %}id="{{ form_id }}" {% endif %} class="search-form container-fluid search-and-order"
+      method="get" data-module="select-switch">
+    <div class="searcher col-xs-6">
+        <input type="text" class="search" name="q" value="" autocomplete="off"
+               placeholder="Buscar dataset">
+        <button type="submit" value="search">
+            <i class="icon-search"></i>
+        </button>
+    </div>
+
+    {% if fields -%}
+        <span>{{ form.hidden_from_list(fields=fields) }}</span>
+    {%- endif %}
+
+    <div class="order col-xs-6">
+        <label for="field-order-by">{{ _('Order by') }}</label>
+        <select id="field-order-by" name="sort">
+            {% for label, value in sorting %}
+                {% if label and value %}
+                    <option value="{{ value }}"{% if sorting_selected == value %}
+                            selected="selected"{% endif %}>{{ label }}</option>
+                {% endif %}
+            {% endfor %}
+        </select>
+        <button class="btn js-hide" type="submit">{{ _('Go') }}</button>
+    </div>
+
+</form>
+
+{% if show_empty and count == 0 %}
+    {% trans %}
+        <p class="extra">Please try another search.</p>
+    {% endtrans %}
+{% endif %}
+
+{% if error %}
+    {% trans %}
+        <p><strong>There was an error while searching.</strong> Please try again.</p>
+    {% endtrans %}
+{% endif %}
