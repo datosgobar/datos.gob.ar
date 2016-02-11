@@ -370,4 +370,12 @@ a, a:hover {
   #title.organization-title #stats .stats-legend {
     margin: 0; }
 
+/* Extiende ../home/title */
+#title.package-title {
+  padding-bottom: 40px; }
+  #title.package-title #title-container .description {
+    margin: 0; }
+  #title.package-title #stats .stats-legend {
+    margin: 0; }
+
 /*# sourceMappingURL=gobar_style.css.map */

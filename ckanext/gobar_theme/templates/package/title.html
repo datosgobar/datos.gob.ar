@@ -1,0 +1,19 @@
+{% set stats = h.get_site_statistics() %}
+
+<div id="title" class="package-title container-fluid">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <div id="title-container" class="col-xs-12 col-md-6">
+            <h1>Datos</h1>
+
+            <p class="description">Portal de datos abiertos del Gobierno de la República Argentina.
+                Acá encontrarás información pública, herramientas y recursos.</p>
+        </div>
+        <div id="stats" class="col-xs-12 col-md-4 col-md-offset-2">
+            <div class="col-xs-6 col-md-12">
+                <p class="stat">{{ "%03d" % stats.dataset_count }}</p>
+
+                <p class="stats-legend datasets">DATASETS</p>
+            </div>
+        </div>
+    </div>
+</div>
