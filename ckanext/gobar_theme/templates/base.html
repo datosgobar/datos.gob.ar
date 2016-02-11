@@ -1,11 +1,15 @@
 {% ckan_extends %}
 
 {%- block styles %}
-  {{ super() }}
-  {% resource 'gobar_css/bootstrap_style.css' %}
-  {% resource 'gobar_css/gobar_style.css' %}
+    {{ super() }}
+    {% resource 'gobar_css/bootstrap_style.css' %}
+    {% resource 'gobar_css/gobar_style.css' %}
 {% endblock %}
 
 {%- block title -%}
-  {%- block subtitle %}{% endblock -%} Datos Argentina
+    {%- block subtitle %}{% endblock -%} Datos Argentina
 {%- endblock -%}
+
+{% block links -%}
+    <link rel="shortcut icon" href="/favicon.ico"/>
+{% endblock -%}
