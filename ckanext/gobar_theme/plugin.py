@@ -1,14 +1,13 @@
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 from ckan.plugins import implements, IRoutes
+import ckanext.gobar_theme.helpers as gobar_helpers
 
 
 class Gobar_ThemePlugin(plugins.SingletonPlugin):
-    plugins.implements(plugins.IConfigurer)
-
-    # IConfigurer
-
+    implements(plugins.IConfigurer)
     implements(IRoutes, inherit=True)
+    implements(plugins.ITemplateHelpers)
 
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
@@ -49,3 +48,8 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
         routing_map.redirect('/organization/bulk_process/{id}', '/organizaciones/{id}')
 
         return routing_map
+
+    def get_helpers(self):
+        return {
+            'organization_tree': gobar_helpers.organization_tree
+        }

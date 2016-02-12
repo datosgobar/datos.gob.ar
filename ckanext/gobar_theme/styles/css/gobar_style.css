@@ -362,6 +362,31 @@ a, a:hover {
   .organization-container .organization .add-organization {
     text-align: right;
     margin-bottom: 20px; }
+  .organization-container .organization .organization-list {
+    padding: 0;
+    margin: 0;
+    font-size: 16px; }
+    .organization-container .organization .organization-list .organization-list-title {
+      font-weight: 500;
+      padding: 5px;
+      border-bottom: solid 1px #D1D3D4; }
+      .organization-container .organization .organization-list .organization-list-title .count-title {
+        float: right; }
+    .organization-container .organization .organization-list .organization-item {
+      border-bottom: solid 1px #D1D3D4; }
+      .organization-container .organization .organization-list .organization-item p {
+        padding: 5px;
+        margin: 0; }
+        .organization-container .organization .organization-list .organization-item p.top-organization {
+          color: #0072bc;
+          font-weight: 500;
+          font-size: 18px; }
+      .organization-container .organization .organization-list .organization-item .organization-count {
+        float: right;
+        font-weight: 500;
+        margin-right: 10px; }
+      .organization-container .organization .organization-list .organization-item:hover {
+        background: #D1D3D4; }
 
 /* Extiende ../home/title */
 #title.organization-title {

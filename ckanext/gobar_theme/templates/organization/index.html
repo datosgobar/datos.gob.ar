@@ -11,20 +11,39 @@
                     {% link_for _('Add Organization'), controller='organization', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
                 </div>
             {% endif %}
-            <ul>
-                {% set organizations_tree = h.get_action('group_tree', {'type': 'organization'}) %}
-                {% set dataset_url = h.url_for(controller='package', action='search') %}
-                {% for node in organizations_tree recursive %}
-                    <li id="node_{{ node.name }}">
-                        <!-- TODO: solo linkear las organizaciones que tienen datasets -->
-                        <a href="{{ h.add_url_param(new_params={'organization': node.name}, alternative_url=dataset_url) }}">{{ node.title }}</a>
-                        {% if node.children %}
-                            <ul> {{ loop(node.children) }} </ul>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
 
+            <div class="organization-list">
+                <div class="organization-list-title">
+                    <span>Denominación</span>
+                    <span class="count-title">Cantidad de datasets encontrados</span>
+                </div>
+
+                {% set organizations_tree = h.organization_tree() %}
+                {% set dataset_url = h.url_for(controller='package', action='search') %}
+
+                {% for organization in organizations_tree recursive %}
+                    <div class="organization-item">
+
+                        {% if organization.package_count > 0 %}
+                            <a href="{{ h.add_url_param(new_params={'organization': organization.name}, alternative_url=dataset_url) }}">
+                        {% endif %}
+
+                        <p style="padding-left:{{ 5 + organization.depth * 30 }}px"
+                           class="{{ 'top-organization' if organization.depth == 0 else '' }}">
+                            {{ organization.display_name }}
+                                    <span class="organization-count">
+                                        {{ organization.display_count }}
+                                    </span>
+                        </p>
+                        {% if organization.package_count > 0 %}
+                            </a>
+                        {% endif %}
+                    </div>
+                    {% if organization.children %}
+                        {{ loop(organization.children) }}
+                    {% endif %}
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}

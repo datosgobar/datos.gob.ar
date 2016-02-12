@@ -1,4 +1,5 @@
 @import '../utils/mixins';
+@import '../utils/globals';
 
 .organization-container {
   .organization {
@@ -6,6 +7,40 @@
     .add-organization {
       text-align: right;
       margin-bottom: 20px;
+    }
+
+    .organization-list {
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+      .organization-list-title {
+        font-weight: 500;
+        padding: 5px;
+        border-bottom: solid 1px $light-grey;
+        .count-title {
+          float: right;
+        }
+      }
+      .organization-item {
+        border-bottom: solid 1px $light-grey;
+        p {
+          padding: 5px;
+          margin: 0;
+          &.top-organization {
+            color: $dark-blue;
+            font-weight: 500;
+            font-size: 18px;
+          }
+        }
+        .organization-count {
+          float: right;
+          font-weight: 500;
+          margin-right: 10px;
+        }
+        &:hover {
+          background: $light-grey;
+        }
+      }
     }
   }
 }
