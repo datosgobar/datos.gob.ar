@@ -31,9 +31,14 @@
                         <p style="padding-left:{{ 5 + organization.depth * 30 }}px"
                            class="{{ 'top-organization' if organization.depth == 0 else '' }}">
                             {{ organization.display_name }}
-                                    <span class="organization-count">
-                                        {{ organization.display_count }}
-                                    </span>
+                            {% if h.check_access('organization_update', {'id': organization.name}) %}
+                                <a href="{{ h.url_for(controller='organization', action='edit', id=organization.name) }}">
+                                    {% snippet "svg/edit.svg" %}
+                                </a>
+                            {% endif %}
+                            <span class="organization-count">
+                                {{ organization.display_count }}
+                            </span>
                         </p>
                         {% if organization.package_count > 0 %}
                             </a>

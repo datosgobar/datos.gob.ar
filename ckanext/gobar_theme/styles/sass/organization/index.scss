@@ -26,6 +26,14 @@
         p {
           padding: 5px;
           margin: 0;
+          svg {
+            width: 1em;
+            height: 1em;
+            path {
+              fill: $light-grey;
+            }
+
+          }
           &.top-organization {
             color: $dark-blue;
             font-weight: 500;
@@ -39,6 +47,11 @@
         }
         &:hover {
           background: $light-grey;
+          svg {
+            path {
+              fill: $grey;
+            }
+          }
         }
       }
     }

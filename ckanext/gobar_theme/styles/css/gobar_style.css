@@ -377,6 +377,11 @@ a, a:hover {
       .organization-container .organization .organization-list .organization-item p {
         padding: 5px;
         margin: 0; }
+        .organization-container .organization .organization-list .organization-item p svg {
+          width: 1em;
+          height: 1em; }
+          .organization-container .organization .organization-list .organization-item p svg path {
+            fill: #D1D3D4; }
         .organization-container .organization .organization-list .organization-item p.top-organization {
           color: #0072bc;
           font-weight: 500;
@@ -387,6 +392,8 @@ a, a:hover {
         margin-right: 10px; }
       .organization-container .organization .organization-list .organization-item:hover {
         background: #D1D3D4; }
+        .organization-container .organization .organization-list .organization-item:hover svg path {
+          fill: #58595B; }
 
 /* Extiende ../home/title */
 #title.organization-title {
