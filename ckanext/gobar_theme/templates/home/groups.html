@@ -6,6 +6,8 @@
             </div>
         {%- endif -%}
 
+        {% set dataset_url = h.url_for(controller='package', action='search') %}
+
         {%- for group in c.groups -%}
             <div class="group-container col-xs-12 col-sm-4 col-lg-2 invisible">
                 {% if h.check_access('group_update', {'id': c.group_dict.id}) %}
@@ -15,18 +17,24 @@
                         </div>
                     </a>
                 {% endif %}
-                <a href="{{ h.url_for(controller='group', action='read', id=group.name) }}">
-                    <div class="group">
-                        <div class="group-text">
-                            <img src="{{ group.image_display_url }}">
-                            <div class="group-table">
-                                <div class="group-cell">
-                                    {{ group.display_name }}
-                                </div>
+                {% set group_class = 'active' if group.package_count > 0 else 'inactive' %}
+                {% if group.package_count > 0 %}
+                    <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
+                {% endif %}
+                <div class="group {{ group_class }}">
+                    <div class="group-text">
+                        <img src="{{ group.image_display_url }}">
+
+                        <div class="group-table">
+                            <div class="group-cell">
+                                {{ group.display_name }}
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
+                {% if group.package_count > 0 %}
+                    </a>
+                {% endif %}
             </div>{%- endfor -%}
     </div>
 </div>

@@ -72,6 +72,13 @@
           }
         }
       }
+
+      &.inactive {
+        color: $light-grey;
+        .group-text {
+          border-bottom-color: $light-grey;
+        }
+      }
     }
 
     $edit-size: 20px;

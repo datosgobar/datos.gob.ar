@@ -248,6 +248,10 @@ a, a:hover {
           .featured-groups .group-container .group .group-text .group-table .group-cell {
             display: table-cell;
             vertical-align: middle; }
+      .featured-groups .group-container .group.inactive {
+        color: #D1D3D4; }
+        .featured-groups .group-container .group.inactive .group-text {
+          border-bottom-color: #D1D3D4; }
     .featured-groups .group-container .edit-container {
       position: absolute;
       z-index: 1;
