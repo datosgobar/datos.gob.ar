@@ -1,8 +1,8 @@
 @import 'utils/globals';
 @import 'utils/mixins';
 
-#about, #specs, #terms, #contact {
-  #about-text, #specs-text, #terms-text, #contact-text {
+#about, #specs, #terms {
+  #about-text, #specs-text, #terms-text {
     @include base-container();
     h1 {
       margin: 20px 0;
@@ -21,8 +21,4 @@
       font-weight: 500;
     }
   }
-}
-
-#contact-text {
-  height: 600px;
 }

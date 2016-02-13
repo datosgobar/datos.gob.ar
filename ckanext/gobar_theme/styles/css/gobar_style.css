@@ -246,7 +246,7 @@ a, a:hover {
             display: table-cell;
             vertical-align: middle; }
 
-#about #about-text, #about #specs-text, #about #terms-text, #about #contact-text, #specs #about-text, #specs #specs-text, #specs #terms-text, #specs #contact-text, #terms #about-text, #terms #specs-text, #terms #terms-text, #terms #contact-text, #contact #about-text, #contact #specs-text, #contact #terms-text, #contact #contact-text {
+#about #about-text, #about #specs-text, #about #terms-text, #specs #about-text, #specs #specs-text, #specs #terms-text, #terms #about-text, #terms #specs-text, #terms #terms-text {
   padding: 30px 50px;
   -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
   -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
@@ -254,21 +254,18 @@ a, a:hover {
   box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
   color: #58595B;
   font-size: 16px; }
-  #about #about-text h1, #about #specs-text h1, #about #terms-text h1, #about #contact-text h1, #specs #about-text h1, #specs #specs-text h1, #specs #terms-text h1, #specs #contact-text h1, #terms #about-text h1, #terms #specs-text h1, #terms #terms-text h1, #terms #contact-text h1, #contact #about-text h1, #contact #specs-text h1, #contact #terms-text h1, #contact #contact-text h1 {
+  #about #about-text h1, #about #specs-text h1, #about #terms-text h1, #specs #about-text h1, #specs #specs-text h1, #specs #terms-text h1, #terms #about-text h1, #terms #specs-text h1, #terms #terms-text h1 {
     margin: 20px 0;
     font-weight: 400;
     font-size: 40px; }
-  #about #about-text h2, #about #specs-text h2, #about #terms-text h2, #about #contact-text h2, #specs #about-text h2, #specs #specs-text h2, #specs #terms-text h2, #specs #contact-text h2, #terms #about-text h2, #terms #specs-text h2, #terms #terms-text h2, #terms #contact-text h2, #contact #about-text h2, #contact #specs-text h2, #contact #terms-text h2, #contact #contact-text h2 {
+  #about #about-text h2, #about #specs-text h2, #about #terms-text h2, #specs #about-text h2, #specs #specs-text h2, #specs #terms-text h2, #terms #about-text h2, #terms #specs-text h2, #terms #terms-text h2 {
     font-weight: 400;
     font-size: 25px; }
-  #about #about-text h3, #about #specs-text h3, #about #terms-text h3, #about #contact-text h3, #specs #about-text h3, #specs #specs-text h3, #specs #terms-text h3, #specs #contact-text h3, #terms #about-text h3, #terms #specs-text h3, #terms #terms-text h3, #terms #contact-text h3, #contact #about-text h3, #contact #specs-text h3, #contact #terms-text h3, #contact #contact-text h3 {
+  #about #about-text h3, #about #specs-text h3, #about #terms-text h3, #specs #about-text h3, #specs #specs-text h3, #specs #terms-text h3, #terms #about-text h3, #terms #specs-text h3, #terms #terms-text h3 {
     color: #0072bc;
     font-size: 20px; }
-  #about #about-text strong, #about #specs-text strong, #about #terms-text strong, #about #contact-text strong, #specs #about-text strong, #specs #specs-text strong, #specs #terms-text strong, #specs #contact-text strong, #terms #about-text strong, #terms #specs-text strong, #terms #terms-text strong, #terms #contact-text strong, #contact #about-text strong, #contact #specs-text strong, #contact #terms-text strong, #contact #contact-text strong {
+  #about #about-text strong, #about #specs-text strong, #about #terms-text strong, #specs #about-text strong, #specs #specs-text strong, #specs #terms-text strong, #terms #about-text strong, #terms #specs-text strong, #terms #terms-text strong {
     font-weight: 500; }
-
-#contact-text {
-  height: 600px; }
 
 #error #error-text {
   padding: 30px 50px;

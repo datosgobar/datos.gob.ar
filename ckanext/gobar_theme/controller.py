@@ -32,9 +32,6 @@ class GobArHomeController(HomeController):
     def specs(self):
         return base.render('static/specs.html')
 
-    def contact(self):
-        return base.render('static/contact.html')
-
 
 class GobArOrganizationController(OrganizationController):
 
