@@ -642,6 +642,8 @@ a, a:hover {
       margin: 0;
       color: #0072bc;
       font-size: 30px; }
+    .package-container .package #pkg-main-info .edit-button {
+      float: right; }
     .package-container .package #pkg-main-info p.pkg-maintainer {
       color: #D1D3D4;
       font-size: 14px; }
