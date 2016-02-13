@@ -1,6 +1,13 @@
 <div class="featured-groups container-fluid">
     <div class="col-xs-12 col-md-10 col-md-offset-1">
-        {% for group in c.groups %}<div class="group-container col-xs-12 col-sm-4 col-lg-2 invisible">
+        {%- if h.check_access('group_create') -%}
+            <div class="col-xs-12 create-group">
+                {% link_for _('Add Group'), controller='group', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
+            </div>
+        {%- endif -%}
+
+        {%- for group in c.groups -%}
+            <div class="group-container col-xs-12 col-sm-4 col-lg-2 invisible">
                 <a href="{{ h.url_for(controller='group', action='read', id=group.name) }}">
                     <div class="group">
                         <div class="group-text">
@@ -13,7 +20,7 @@
                         </div>
                     </div>
                 </a>
-            </div>{% endfor %}
+            </div>{%- endfor -%}
     </div>
 </div>
 
