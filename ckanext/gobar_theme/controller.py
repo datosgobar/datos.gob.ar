@@ -17,7 +17,7 @@ class GobArHomeController(HomeController):
         data_dict_page_results = {
             'all_fields': True,
             'type': 'group',
-            'limit': 100,
+            'limit': None,
             'offset': 0,
         }
         c.groups = logic.get_action('group_list')(context, data_dict_page_results)

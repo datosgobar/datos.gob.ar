@@ -27,3 +27,26 @@ def organization_tree():
     for organization in organizations:
         organization['display_count'] = _count_total(organization)
     return organizations
+
+
+def get_faceted_groups():
+    data_dict_page_results = {
+        'all_fields': True,
+        'type': 'group',
+        'limit': None,
+        'offset': 0,
+    }
+    groups = logic.get_action('group_list')({}, data_dict_page_results)
+    facets = ckan_helpers.get_facet_items_dict('groups')
+    facets_by_name = {}
+    for facet in facets:
+        facets_by_name[facet['name']] = facet
+    for group in groups:
+        group_name = group['name']
+        if group_name in facets_by_name:
+            group['facet_active'] = facets_by_name[group['name']]['active']
+            group['facet_count'] = facets_by_name[group['name']]['count']
+        else:
+            group['facet_active'] = False
+            group['facet_count'] = 0
+    return groups
