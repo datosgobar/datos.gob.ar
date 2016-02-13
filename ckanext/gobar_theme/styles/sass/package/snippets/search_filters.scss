@@ -94,5 +94,53 @@
         }
       }
     }
+
+    .group-images {
+      padding: 0 25px;
+      .group-image-container {
+        width: 16.666666%;
+        display: inline-block;
+        padding: 4px;
+        text-align: center;
+        svg {
+          max-width: 50px;
+          path {
+            opacity: 0.7;
+            fill: $light-grey;
+          }
+        }
+        &.available {
+          svg {
+            path {
+              opacity: 1;
+              fill: $grey;
+            }
+          }
+          &:hover {
+            svg {
+              path {
+                fill: $dark-blue;
+              }
+            }
+          }
+        }
+        &.active {
+          svg {
+            path {
+              opacity: 1;
+              fill: $dark-blue;
+            }
+          }
+          &:hover {
+            svg {
+              path {
+                fill: $grey;
+              }
+            }
+          }
+        }
+      }
+    }
+
   }
 }

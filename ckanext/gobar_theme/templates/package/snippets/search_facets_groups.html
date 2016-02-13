@@ -1,0 +1,29 @@
+{% with items = h.get_faceted_groups() %}
+    <div class="search-filter">
+        <h2 class="filter-title">{{ title }}</h2>
+
+        <div class="group-images invisible">
+            {%- for item in items -%}
+                {%- set href = h.remove_url_param(name, item.name, extras=extras, alternative_url=alternative_url) if item.facet_active else h.add_url_param(new_params={name: item.name}, extras=extras, alternative_url=alternative_url) -%}
+                {%- set count = count_label(item['facet_count']) if count_label else ('(%d)' % item['facet_count']) -%}
+                {%- set available = item.facet_count > 0 -%}
+
+                <div class="group-image-container {{ 'available' if available else '' }} {{ 'active' if item.facet_active else '' }}">
+                    {%- if available -%}
+                        <a href="{{ href }}">
+                    {%- endif -%}
+
+                        <img src="{{ item.image_display_url }}" title="{{ item.display_name }} {{ count }}" data-replace="svg">
+
+                    {%- if available -%}
+                        </a>
+                    {%- endif -%}
+                </div>
+            {%- endfor -%}
+        </div>
+
+        <hr>
+    </div>
+{% endwith %}
+
+{% resource 'gobar_js/package/replace_groups.js' %}

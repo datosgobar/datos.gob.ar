@@ -578,6 +578,28 @@ a, a:hover {
             margin-top: -10px;
             width: 20px;
             height: 20px; }
+  .filters-container .search-filter .group-images {
+    padding: 0 25px; }
+    .filters-container .search-filter .group-images .group-image-container {
+      width: 16.666666%;
+      display: inline-block;
+      padding: 4px;
+      text-align: center; }
+      .filters-container .search-filter .group-images .group-image-container svg {
+        max-width: 50px; }
+        .filters-container .search-filter .group-images .group-image-container svg path {
+          opacity: 0.7;
+          fill: #D1D3D4; }
+      .filters-container .search-filter .group-images .group-image-container.available svg path {
+        opacity: 1;
+        fill: #58595B; }
+      .filters-container .search-filter .group-images .group-image-container.available:hover svg path {
+        fill: #0072bc; }
+      .filters-container .search-filter .group-images .group-image-container.active svg path {
+        opacity: 1;
+        fill: #0072bc; }
+      .filters-container .search-filter .group-images .group-image-container.active:hover svg path {
+        fill: #58595B; }
 
 .dataset-list .dataset-item .dataset-container {
   padding: 0;
@@ -622,8 +644,9 @@ a, a:hover {
       text-align: right;
       padding: 15px; }
       .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-groups img.group-image {
-        width: 50px;
-        height: 50px; }
+        width: 30px;
+        height: 30px;
+        margin: 0 0 5px 5px; }
       .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label {
         display: inline-block;
         width: 4em;
