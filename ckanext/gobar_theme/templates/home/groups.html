@@ -8,6 +8,13 @@
 
         {%- for group in c.groups -%}
             <div class="group-container col-xs-12 col-sm-4 col-lg-2 invisible">
+                {% if h.check_access('group_update', {'id': c.group_dict.id}) %}
+                    <a href="{{ h.url_for(controller='group', action='edit', id=group.name) }}">
+                        <div class="edit-container">
+                            {% snippet "svg/edit.svg" %}
+                        </div>
+                    </a>
+                {% endif %}
                 <a href="{{ h.url_for(controller='group', action='read', id=group.name) }}">
                     <div class="group">
                         <div class="group-text">

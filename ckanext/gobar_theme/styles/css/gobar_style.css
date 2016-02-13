@@ -190,9 +190,9 @@ a, a:hover {
   text-align: center; }
   .featured-groups .create-group {
     text-align: right;
-    margin-bottom: 20px; }
+    margin-bottom: 35px; }
   .featured-groups .group-container {
-    margin-bottom: 15px;
+    margin-bottom: 35px;
     padding: 0 5px;
     float: none;
     display: inline-block;
@@ -212,6 +212,9 @@ a, a:hover {
     .featured-groups .group-container.invisible {
       opacity: 0; }
     .featured-groups .group-container .group {
+      position: relative;
+      background: white;
+      z-index: 2;
       border: solid 0 transparent;
       overflow: hidden;
       -o-border-radius: 4px;
@@ -245,6 +248,36 @@ a, a:hover {
           .featured-groups .group-container .group .group-text .group-table .group-cell {
             display: table-cell;
             vertical-align: middle; }
+    .featured-groups .group-container .edit-container {
+      position: absolute;
+      z-index: 1;
+      top: -5px;
+      right: 10px;
+      overflow: hidden;
+      padding: 4px;
+      background: #D1D3D4;
+      -o-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      -webkit-transition-delay: 0;
+      -moz-transition-delay: 0;
+      transition-delay: 0;
+      -webkit-transition-duration: 200ms;
+      -moz-transition-duration: 200ms;
+      transition-duration: 200ms;
+      -webkit-transition-timing-function: ease-in;
+      -moz-transition-timing-function: ease-in;
+      transition-timing-function: ease-in;
+      -webkit-transition-property: top;
+      -moz-transition-property: top;
+      transition-property: top; }
+      .featured-groups .group-container .edit-container .edit-svg {
+        height: 20px;
+        width: 20px;
+        fill: white; }
+    .featured-groups .group-container:hover .edit-container {
+      top: -28px; }
 
 #about #about-text, #about #specs-text, #about #terms-text, #specs #about-text, #specs #specs-text, #specs #terms-text, #terms #about-text, #terms #specs-text, #terms #terms-text {
   padding: 30px 50px;
