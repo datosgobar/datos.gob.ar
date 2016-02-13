@@ -16,7 +16,7 @@
                 <div class="dataset-groups"></div>
                 <div class="dataset-resources">
                     {% for resource in h.dict_list_reduce(package.resources, 'format') %}
-                        {{ resource }}
+                        <span class="label" data-format="{{ resource.lower() }}">{{ resource }}</span>
                     {% endfor %}
                 </div>
             </div>

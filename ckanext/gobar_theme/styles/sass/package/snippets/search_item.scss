@@ -18,24 +18,39 @@
         @include transition-timing-function(ease-in);
         @include transition-property(border);
 
-        .dataset-title {
-          color: $dark-blue;
-          margin: 20px 0 0 0;
+        .dataset-content {
+
+          .dataset-title {
+            color: $dark-blue;
+            margin: 20px 0 0 0;
+          }
+
+          .dataset-maintainer {
+            color: $light-grey;
+            $font-size: 14px;
+            font-size: $font-size;
+            $line-height: 1.2;
+            line-height: $line-height;
+            min-height: 2*$font-size*$line-height;
+            font-weight: 500;
+          }
+
+          .dataset-notes {
+            color: $grey;
+            margin: 0 0 30px 0;
+          }
         }
 
-        .dataset-maintainer {
-          color: $light-grey;
-          $font-size: 14px;
-          font-size: $font-size;
-          $line-height: 1.2;
-          line-height: $line-height;
-          min-height: 2*$font-size*$line-height;
-          font-weight: 500;
-        }
+        .dataset-groups-and-resources {
+          .dataset-resources {
+            text-align: right;
 
-        .dataset-notes {
-          color: $grey;
-          margin: 0 0 30px 0;
+            .label {
+              display: inline-block;
+              width: 4em;
+              margin: 0 0 5px 5px;
+            }
+          }
         }
       }
     }
