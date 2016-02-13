@@ -13,7 +13,11 @@
                 <div class="dataset-notes">{{ notes|urlize }}</div>
             </div>
             <div class="dataset-groups-and-resources col-xs-3">
-                <div class="dataset-groups"></div>
+                <div class="dataset-groups">
+                    {% for group in package.groups %}
+                        <img src="{{ group.image_display_url }}" title="{{ group.title }}" class="group-image">
+                    {% endfor %}
+                </div>
                 <div class="dataset-resources">
                     {% for resource in h.dict_list_reduce(package.resources, 'format') %}
                         <span class="label" data-format="{{ resource.lower() }}">{{ resource }}</span>
