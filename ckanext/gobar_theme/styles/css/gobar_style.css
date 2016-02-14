@@ -673,26 +673,39 @@ a, a:hover {
   color: #58595B;
   font-size: 16px;
   padding: 0; }
-  .package-container .package #pkg-main-info {
-    padding: 30px 10px 50px 30px; }
-    .package-container .package #pkg-main-info h1.pkg-title {
-      margin: 0;
-      color: #0072bc;
-      font-size: 30px; }
-    .package-container .package #pkg-main-info .edit-button {
-      float: right; }
-    .package-container .package #pkg-main-info p.pkg-maintainer {
-      color: #D1D3D4;
-      font-size: 14px; }
-    .package-container .package #pkg-main-info p.pkg-notes {
-      margin-bottom: 50px; }
-    .package-container .package #pkg-main-info h2.pkg-resources-title {
-      color: #58595B;
-      border-bottom: solid 1px #D1D3D4;
-      font-size: 22px; }
-    .package-container .package #pkg-main-info .contact {
-      width: 15px;
-      height: 15px; }
+  .package-container .package .row {
+    overflow: hidden;
+    margin: 0; }
+  .package-container .package #pkg-main-info,
+  .package-container .package #pkg-secondary-info,
+  .package-container .package #pkg-recent-activity,
+  .package-container .package #pkg-related {
+    margin-bottom: -99999px;
+    padding-bottom: 99999px; }
+  .package-container .package #pkg-main-info h1.pkg-title {
+    margin: 50px 0 0 0;
+    color: #0072bc;
+    font-size: 30px; }
+  .package-container .package #pkg-main-info .edit-button {
+    float: right;
+    margin-top: 20px; }
+  .package-container .package #pkg-main-info p.pkg-maintainer {
+    color: #D1D3D4;
+    font-size: 14px; }
+    .package-container .package #pkg-main-info p.pkg-maintainer svg {
+      width: 1em;
+      fill: #D1D3D4; }
+      .package-container .package #pkg-main-info p.pkg-maintainer svg:hover {
+        fill: #0072bc; }
+  .package-container .package #pkg-main-info p.pkg-notes {
+    margin-bottom: 50px; }
+  .package-container .package #pkg-main-info h2.pkg-resources-title {
+    color: #58595B;
+    border-bottom: solid 1px #D1D3D4;
+    font-size: 22px; }
+  .package-container .package #pkg-main-info .contact {
+    width: 15px;
+    height: 15px; }
   .package-container .package #pkg-secondary-info {
     background: #fafafa; }
     .package-container .package #pkg-secondary-info h2.secondary-info-title {
@@ -700,6 +713,23 @@ a, a:hover {
       margin-top: 58px;
       font-size: 22px;
       border-bottom: solid 1px #D1D3D4; }
+    .package-container .package #pkg-secondary-info #info-container .title {
+      font-weight: 500;
+      margin-bottom: 10px;
+      padding-right: 0; }
+    .package-container .package #pkg-secondary-info #info-container .value {
+      margin-bottom: 10px; }
+      .package-container .package #pkg-secondary-info #info-container .value p.pkg-maintainer svg {
+        width: 1em;
+        fill: #D1D3D4; }
+        .package-container .package #pkg-secondary-info #info-container .value p.pkg-maintainer svg:hover {
+          fill: #0072bc; }
+      .package-container .package #pkg-secondary-info #info-container .value img.group-image {
+        width: 30px;
+        height: 30px;
+        margin: 0 0 5px 5px; }
+      .package-container .package #pkg-secondary-info #info-container .value p.pkg-tag {
+        margin: 0 0 5px 0; }
   .package-container .package #pkg-recent-activity {
     background: #fafafa; }
     .package-container .package #pkg-recent-activity h2.recent-activity-title {

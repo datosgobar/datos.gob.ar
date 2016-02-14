@@ -8,4 +8,32 @@
     font-size: 22px;
     border-bottom: solid 1px $light-grey;
   }
+
+  #info-container {
+    .title {
+      font-weight: 500;
+      margin-bottom: 10px;
+      padding-right: 0;
+    }
+    .value {
+      margin-bottom: 10px;
+      p.pkg-maintainer {
+        svg {
+          width: 1em;
+          fill: $light-grey;
+          &:hover {
+            fill: $dark-blue;
+          }
+        }
+      }
+      img.group-image {
+        width: 30px;
+        height: 30px;
+        margin: 0 0 5px 5px;
+      }
+      p.pkg-tag {
+        margin: 0 0 5px 0;
+      }
+    }
+  }
 }

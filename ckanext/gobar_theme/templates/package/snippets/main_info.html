@@ -8,7 +8,7 @@
         {{ pkg.maintainer }}
         {% if pkg.maintainer_email %}
             <a href="mailto:{{ pkg.maintainer_email }}">
-                (mail)
+                {% snippet "svg/mail.svg" %}
             </a>
         {% endif %}
     </p>
@@ -18,13 +18,21 @@
     <h2 class="pkg-resources-title">Recursos disponibles</h2>
 
     <div class="pkg-resources">
-        <ul>
-            {% for resource in pkg.resources %}
-                <li>
-                    <a href="{{ resource.url }}">{{ resource.name }}</a>
-                </li>
-            {% endfor %}
-        </ul>
+        {% for resource in pkg.resources %}
+            <div class="pkg-container">
+                <div class="package-info">
+                    <a href="{{ resource.url }}">
+                        <h3>{{ resource.name }}</h3>
+                        <p>{{ resource.description }}</p>
+                        <p>{{ resource.format }}</p>
+                    </a>
+                </div>
+                <div class="pkg-actions">
+
+                </div>
+            </div>
+
+        {% endfor %}
 
     </div>
 

@@ -1,23 +1,76 @@
 <div id="pkg-secondary-info" class="col-xs-12 col-md-4">
     <h2 class="secondary-info-title">Información adicional</h2>
 
-    <h3>Responsable</h3>
+    <div id="info-container">
 
-    <p>{{ pkg.maintainer }}</p>
+        <div class="row">
+            <div class="col-xs-12 col-md-4 title">
+                Responsable
+            </div>
+            <div class="col-xs-12 col-md-8 value">
+                <p class="pkg-maintainer">
+                    {{ pkg.maintainer }}
+                    {% if pkg.maintainer_email %}
+                        <a href="mailto:{{ pkg.maintainer_email }}">
+                            {% snippet "svg/mail.svg" %}
+                        </a>
+                    {% endif %}
+                </p>
+            </div>
+        </div>
 
-    <h3>Grupos</h3>
-    <ul>
-        {% for group in pkg.groups %}
-        {% endfor %}
-    </ul>
-    <h3>Tags</h3>
-    <ul>
-        {% for tag in pkg.tags %}
-            <li>{{ tag.name }}</li>
-        {% endfor %}
-    </ul>
-    <h3>Fecha de publicación</h3>
-    <p>{{ pkg.metadata_created }}</p>
-    <h3>Fecha de actualización</h3>
-    <p>{{ pkg.metadata_modified }}</p>
+        <div class="row">
+            <div class="col-xs-12 col-md-4 title">
+                Grupos
+            </div>
+            <div class="col-xs-12 col-md-8 value">
+                {% for group in pkg.groups %}
+                    <img src="{{ group.image_display_url }}" title="{{ group.title }}" class="group-image">
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-4 title">
+                Tags
+            </div>
+            <div class="col-xs-12 col-md-8 value">
+                {% for tag in pkg.tags %}
+                    <p class="pkg-tag">{{ tag.name }}</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-4 title">
+                Fecha de publicación
+            </div>
+            <div class="col-xs-12 col-md-8 value">
+                {{ h.render_datetime(pkg.metadata_created) }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12 col-md-4 title">
+                Fecha de actualización
+            </div>
+            <div class="col-xs-12 col-md-8 value">
+                {{ h.render_datetime(pkg.metadata_modified) }}
+            </div>
+        </div>
+
+        {% if pkg.extras %}
+            {% for extra in pkg.extras %}
+                <div class="row">
+                    <div class="col-xs-12 col-md-4 title">
+                        {{ extra.key }}
+                    </div>
+                    <div class="col-xs-12 col-md-8 value">
+                        <p>{{ extra.value }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+    </div>
 </div>

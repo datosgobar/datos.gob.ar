@@ -1,18 +1,25 @@
 @import '../../utils/globals';
 
 #pkg-main-info {
-  padding: 30px 10px 50px 30px;
   h1.pkg-title {
-    margin: 0;
+    margin: 50px 0 0 0;
     color: $dark-blue;
     font-size: 30px;
   }
   .edit-button {
     float: right;
+    margin-top: 20px;
   }
   p.pkg-maintainer {
     color: $light-grey;
     font-size: 14px;
+    svg {
+      width: 1em;
+      fill: $light-grey;
+      &:hover {
+        fill: $dark-blue;
+      }
+    }
   }
   p.pkg-notes {
     margin-bottom: 50px;
