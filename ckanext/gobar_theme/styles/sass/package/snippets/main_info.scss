@@ -1,36 +1,121 @@
 @import '../../utils/globals';
 
-#pkg-main-info {
-  h1.pkg-title {
-    margin: 50px 0 0 0;
-    color: $dark-blue;
-    font-size: 30px;
-  }
-  .edit-button {
-    float: right;
-    margin-top: 20px;
-  }
-  p.pkg-maintainer {
-    color: $light-grey;
-    font-size: 14px;
+@mixin formatColor($format, $color) {
+  &[data-format=#{$format}],
+  &[data-format*=#{$format}] {
     svg {
-      width: 1em;
-      fill: $light-grey;
-      &:hover {
-        fill: $dark-blue;
+      path {
+        fill: $color;
       }
     }
   }
-  p.pkg-notes {
-    margin-bottom: 50px;
+}
+
+@mixin formatColors() {
+  /* Del archivo de datasets de ckan */
+  @include formatColor(html, #55a1ce);
+  @include formatColor(json, #ef7100);
+  @include formatColor(xml, #ef7100);
+  @include formatColor(text, #74cbec);
+  @include formatColor(csv, #dfb100);
+  @include formatColor(xls, #2db55d);
+  @include formatColor(zip, #686868);
+  @include formatColor(api, #ec96be);
+  @include formatColor(pdf, #e0051e);
+  @include formatColor(zip, #686868);
+  @include formatColor(rdf, #0b4498);
+  @include formatColor(nquad, #0b4498);
+  @include formatColor(ntriples, #0b4498);
+  @include formatColor(turtle, #0b4498);
+}
+
+#pkg-main-info {
+  #pkg-title-and-desc {
+    h1.pkg-title {
+      margin: 50px 0 0 0;
+      color: $dark-blue;
+      font-size: 30px;
+    }
+    .edit-button {
+      float: right;
+      margin-top: 20px;
+    }
+    p.pkg-maintainer {
+      color: $light-grey;
+      font-size: 14px;
+      svg {
+        width: 1em;
+        fill: $light-grey;
+        &:hover {
+          fill: $dark-blue;
+        }
+      }
+    }
+    p.pkg-notes {
+      margin-bottom: 50px;
+    }
+    h2.pkg-resources-title {
+      color: $grey;
+      border-bottom: solid 1px $light-grey;
+      font-size: 22px;
+    }
+    .contact {
+      width: 15px;
+      height: 15px;
+    }
   }
-  h2.pkg-resources-title {
-    color: $grey;
+  #pkg-resources {
+    padding-bottom: 20px;
     border-bottom: solid 1px $light-grey;
-    font-size: 22px;
-  }
-  .contact {
-    width: 15px;
-    height: 15px;
+    .pkg-container {
+      .package-info {
+        .pkg-file-img {
+          position: relative;
+          display: inline-block;
+          float: left;
+          $width: 40px;
+          width: $width;
+          $height: $width*1.26;
+          height: $height;
+          margin: 0 10px 10px 0;
+          @include formatColors();
+          p {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: $height;
+            $vcenter-offset: 4px;
+            line-height: $height + $vcenter-offset;
+            $font-size: 12px;
+            font-size: $font-size;
+            margin: 0;
+            text-align: center;
+            color: white;
+            font-weight: 500;
+          }
+        }
+      }
+      .pkg-actions {
+        display: inline-block;
+        float: right;
+        margin: 0 10px;
+        svg {
+          width: 50px;
+          height: 50px;
+          padding: 10px;
+          path {
+            fill: $light-grey;
+          }
+        }
+        a:hover {
+          svg {
+            path {
+              fill: $dark-blue;
+            }
+          }
+        }
+      }
+    }
   }
 }

@@ -1,35 +1,45 @@
 <div id="pkg-main-info" class="col-xs-12 col-md-8">
-    {% if h.check_access('package_update', {'id':pkg.id }) %}
-        {% link_for _('Edit'), controller='package', action='edit', id=pkg.name, class_='btn btn-primary edit-button', icon='wrench' %}
-    {% endif %}
-    <h1 class="pkg-title">{{ pkg.title }}</h1>
-
-    <p class="pkg-maintainer">
-        {{ pkg.maintainer }}
-        {% if pkg.maintainer_email %}
-            <a href="mailto:{{ pkg.maintainer_email }}">
-                {% snippet "svg/mail.svg" %}
-            </a>
+    <div id="pkg-title-and-desc">
+        {% if h.check_access('package_update', {'id':pkg.id }) %}
+            {% link_for _('Edit'), controller='package', action='edit', id=pkg.name, class_='btn btn-primary edit-button', icon='wrench' %}
         {% endif %}
-    </p>
+        <h1 class="pkg-title">{{ pkg.title }}</h1>
 
-    <p class="pkg-notes">{{ pkg.notes }}</p>
+        <p class="pkg-maintainer">
+            {{ pkg.maintainer }}
+            {% if pkg.maintainer_email %}
+                <a href="mailto:{{ pkg.maintainer_email }}">
+                    {% snippet "svg/mail.svg" %}
+                </a>
+            {% endif %}
+        </p>
 
-    <h2 class="pkg-resources-title">Recursos disponibles</h2>
+        <p class="pkg-notes">{{ pkg.notes }}</p>
 
-    <div class="pkg-resources">
+        <h2 class="pkg-resources-title">Recursos disponibles</h2>
+    </div>
+
+    <div id="pkg-resources">
         {% for resource in pkg.resources %}
             <div class="pkg-container">
-                <div class="package-info">
+                <div class="pkg-actions">
+                    <a href="#">
+                        {% snippet "svg/info.svg" %}
+                    </a>
                     <a href="{{ resource.url }}">
-                        <h3>{{ resource.name }}</h3>
-                        <p>{{ resource.description }}</p>
-                        <p>{{ resource.format }}</p>
+                        {% snippet "svg/descargar.svg" %}
                     </a>
                 </div>
-                <div class="pkg-actions">
+                <div class="package-info">
+                    <div class="pkg-file-img" data-format="{{ resource.format.lower() }}">
+                        {% snippet "svg/archivo.svg" %}
+                        <p>{{ resource.format }}</p>
+                    </div>
+                    <h3>{{ resource.name }}</h3>
 
+                    <p>{{ resource.description }}</p>
                 </div>
+
             </div>
 
         {% endfor %}

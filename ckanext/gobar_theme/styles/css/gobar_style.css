@@ -682,30 +682,93 @@ a, a:hover {
   .package-container .package #pkg-related {
     margin-bottom: -99999px;
     padding-bottom: 99999px; }
-  .package-container .package #pkg-main-info h1.pkg-title {
+  .package-container .package #pkg-main-info #pkg-title-and-desc h1.pkg-title {
     margin: 50px 0 0 0;
     color: #0072bc;
     font-size: 30px; }
-  .package-container .package #pkg-main-info .edit-button {
+  .package-container .package #pkg-main-info #pkg-title-and-desc .edit-button {
     float: right;
     margin-top: 20px; }
-  .package-container .package #pkg-main-info p.pkg-maintainer {
+  .package-container .package #pkg-main-info #pkg-title-and-desc p.pkg-maintainer {
     color: #D1D3D4;
     font-size: 14px; }
-    .package-container .package #pkg-main-info p.pkg-maintainer svg {
+    .package-container .package #pkg-main-info #pkg-title-and-desc p.pkg-maintainer svg {
       width: 1em;
       fill: #D1D3D4; }
-      .package-container .package #pkg-main-info p.pkg-maintainer svg:hover {
+      .package-container .package #pkg-main-info #pkg-title-and-desc p.pkg-maintainer svg:hover {
         fill: #0072bc; }
-  .package-container .package #pkg-main-info p.pkg-notes {
+  .package-container .package #pkg-main-info #pkg-title-and-desc p.pkg-notes {
     margin-bottom: 50px; }
-  .package-container .package #pkg-main-info h2.pkg-resources-title {
+  .package-container .package #pkg-main-info #pkg-title-and-desc h2.pkg-resources-title {
     color: #58595B;
     border-bottom: solid 1px #D1D3D4;
     font-size: 22px; }
-  .package-container .package #pkg-main-info .contact {
+  .package-container .package #pkg-main-info #pkg-title-and-desc .contact {
     width: 15px;
     height: 15px; }
+  .package-container .package #pkg-main-info #pkg-resources {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #D1D3D4; }
+    .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img {
+      position: relative;
+      display: inline-block;
+      float: left;
+      width: 40px;
+      height: 50.4px;
+      margin: 0 10px 10px 0;
+      /* Del archivo de datasets de ckan */ }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=html] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=html] svg path {
+        fill: #55a1ce; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=json] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=json] svg path {
+        fill: #ef7100; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=xml] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=xml] svg path {
+        fill: #ef7100; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=text] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=text] svg path {
+        fill: #74cbec; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=csv] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=csv] svg path {
+        fill: #dfb100; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=xls] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=xls] svg path {
+        fill: #2db55d; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=zip] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=zip] svg path {
+        fill: #686868; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=api] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=api] svg path {
+        fill: #ec96be; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=pdf] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=pdf] svg path {
+        fill: #e0051e; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=zip] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=zip] svg path {
+        fill: #686868; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=rdf] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=rdf] svg path {
+        fill: #0b4498; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=nquad] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=nquad] svg path {
+        fill: #0b4498; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=ntriples] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=ntriples] svg path {
+        fill: #0b4498; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=turtle] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=turtle] svg path {
+        fill: #0b4498; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img p {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50.4px;
+        line-height: 54.4px;
+        font-size: 12px;
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-weight: 500; }
+    .package-container .package #pkg-main-info #pkg-resources .pkg-container .pkg-actions {
+      display: inline-block;
+      float: right;
+      margin: 0 10px; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .pkg-actions svg {
+        width: 50px;
+        height: 50px;
+        padding: 10px; }
+        .package-container .package #pkg-main-info #pkg-resources .pkg-container .pkg-actions svg path {
+          fill: #D1D3D4; }
+      .package-container .package #pkg-main-info #pkg-resources .pkg-container .pkg-actions a:hover svg path {
+        fill: #0072bc; }
   .package-container .package #pkg-secondary-info {
     background: #fafafa; }
     .package-container .package #pkg-secondary-info h2.secondary-info-title {
@@ -716,9 +779,10 @@ a, a:hover {
     .package-container .package #pkg-secondary-info #info-container .title {
       font-weight: 500;
       margin-bottom: 10px;
-      padding-right: 0; }
+      padding: 0; }
     .package-container .package #pkg-secondary-info #info-container .value {
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      padding: 0; }
       .package-container .package #pkg-secondary-info #info-container .value p.pkg-maintainer svg {
         width: 1em;
         fill: #D1D3D4; }
