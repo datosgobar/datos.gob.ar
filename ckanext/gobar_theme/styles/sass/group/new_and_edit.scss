@@ -1,0 +1,15 @@
+@import '../utils/globals';
+@import '../utils/mixins';
+@import '../bourbon/bourbon';
+
+#edit-group-container, #new-group-container {
+  #edit-group, #new-group {
+    @include base-container();
+    h1 {
+      margin: 20px 0;
+      font-weight: 400;
+      font-size: 40px;
+    }
+    @include base-form();
+  }
+}
