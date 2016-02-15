@@ -11,31 +11,17 @@
       font-size: 40px;
     }
 
+    @include base-form();
     form {
-      $font-size: 16px;
-      $line-height: 1.2;
-      $padding: 5px;
       label {
-        font-weight: 400;
         width: 50%;
-        padding: $padding 20px $padding 0;
-        font-size: $font-size;
-        line-height: $line-height;
+        padding: 5px 20px 5px 0;
+        font-size: 16px;
+        line-height: 1.2;
       }
       .controls {
         margin-left: 50%;
-        input[type="text"], input[type="password"] {
-          width: 100%;
-          font-size: $font-size;
-          line-height: $line-height;
-          padding: $padding;
-          height: $font-size * $line-height + 2*$padding;
-        }
-        input[type="checkbox"] {
-          @include transform(scale(1.3));
-        }
       }
-
     }
   }
 }

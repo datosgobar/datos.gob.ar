@@ -367,26 +367,47 @@ a, a:hover {
     margin: 20px 0;
     font-weight: 400;
     font-size: 40px; }
+  #login-container #login form {
+    padding: 20px 50px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+    -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+    -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+    box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
+    #login-container #login form label {
+      display: block;
+      text-align: left;
+      font-weight: 400;
+      padding: 5px 20px 5px 0;
+      font-size: 16px;
+      line-height: 1.2; }
+    #login-container #login form input[type="text"], #login-container #login form input[type="password"] {
+      width: 100%;
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 5px;
+      height: 29.2px; }
+    #login-container #login form input[type="checkbox"] {
+      -webkit-transform: scale(1.3);
+      -moz-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      -o-transform: scale(1.3);
+      transform: scale(1.3); }
+    #login-container #login form .controls {
+      display: block;
+      margin: 0; }
+    #login-container #login form .control-custom {
+      display: none; }
   #login-container #login form label {
-    font-weight: 400;
     width: 50%;
     padding: 5px 20px 5px 0;
     font-size: 16px;
     line-height: 1.2; }
   #login-container #login form .controls {
     margin-left: 50%; }
-    #login-container #login form .controls input[type="text"], #login-container #login form .controls input[type="password"] {
-      width: 100%;
-      font-size: 16px;
-      line-height: 1.2;
-      padding: 5px;
-      height: 29.2px; }
-    #login-container #login form .controls input[type="checkbox"] {
-      -webkit-transform: scale(1.3);
-      -moz-transform: scale(1.3);
-      -ms-transform: scale(1.3);
-      -o-transform: scale(1.3);
-      transform: scale(1.3); }
 
 .organization-container .organization {
   padding: 30px 50px;
