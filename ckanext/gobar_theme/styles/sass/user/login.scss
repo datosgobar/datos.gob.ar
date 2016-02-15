@@ -5,12 +5,6 @@
 #login-container {
   #login {
     @include base-container();
-    h1 {
-      margin: 20px 0;
-      font-weight: 400;
-      font-size: 40px;
-    }
-
     @include base-form();
     form {
       label {

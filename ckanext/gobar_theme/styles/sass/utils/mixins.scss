@@ -23,6 +23,11 @@
 }
 
 @mixin base-form($font-size: 16px, $line-height: 1.2, $input-padding: 5px) {
+  h1 {
+    margin: 20px 0;
+    font-weight: 400;
+    font-size: 40px;
+  }
   form {
     padding: 20px 50px;
     @include border-radius(4px);

@@ -461,6 +461,55 @@ a, a:hover {
   #title.organization-title #stats .stats-legend {
     margin: 0; }
 
+#edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
+  padding: 30px 50px;
+  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  color: #58595B;
+  font-size: 16px; }
+  #edit-organization-container #edit-organization h1, #edit-organization-container #new-organization h1, #new-organization-container #edit-organization h1, #new-organization-container #new-organization h1 {
+    margin: 20px 0;
+    font-weight: 400;
+    font-size: 40px; }
+  #edit-organization-container #edit-organization form, #edit-organization-container #new-organization form, #new-organization-container #edit-organization form, #new-organization-container #new-organization form {
+    padding: 20px 50px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+    -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+    -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+    box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
+    #edit-organization-container #edit-organization form label, #edit-organization-container #new-organization form label, #new-organization-container #edit-organization form label, #new-organization-container #new-organization form label {
+      display: block;
+      text-align: left;
+      font-weight: 400;
+      padding: 5px 20px 5px 0;
+      font-size: 16px;
+      line-height: 1.2; }
+    #edit-organization-container #edit-organization form input[type="text"], #edit-organization-container #edit-organization form input[type="password"], #edit-organization-container #new-organization form input[type="text"], #edit-organization-container #new-organization form input[type="password"], #new-organization-container #edit-organization form input[type="text"], #new-organization-container #edit-organization form input[type="password"], #new-organization-container #new-organization form input[type="text"], #new-organization-container #new-organization form input[type="password"] {
+      width: 100%;
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 5px;
+      height: 29.2px; }
+    #edit-organization-container #edit-organization form input[type="checkbox"], #edit-organization-container #new-organization form input[type="checkbox"], #new-organization-container #edit-organization form input[type="checkbox"], #new-organization-container #new-organization form input[type="checkbox"] {
+      -webkit-transform: scale(1.3);
+      -moz-transform: scale(1.3);
+      -ms-transform: scale(1.3);
+      -o-transform: scale(1.3);
+      transform: scale(1.3); }
+    #edit-organization-container #edit-organization form .controls, #edit-organization-container #new-organization form .controls, #new-organization-container #edit-organization form .controls, #new-organization-container #new-organization form .controls {
+      display: block;
+      margin: 0; }
+    #edit-organization-container #edit-organization form .control-custom, #edit-organization-container #new-organization form .control-custom, #new-organization-container #edit-organization form .control-custom, #new-organization-container #new-organization form .control-custom {
+      display: none; }
+  #edit-organization-container #edit-organization form .image-upload, #edit-organization-container #new-organization form .image-upload, #new-organization-container #edit-organization form .image-upload, #new-organization-container #new-organization form .image-upload {
+    display: none; }
+
 .package-container .package-search {
   padding: 30px 50px;
   -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
