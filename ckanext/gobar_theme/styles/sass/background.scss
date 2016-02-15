@@ -1,0 +1,114 @@
+@import 'bourbon/bourbon';
+
+@include keyframes(rotateClockwise) {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@include keyframes(rotateCounterClockwise) {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+$size: 700px;
+svg#background {
+  position: absolute;
+  width: $size;
+  height: $size;
+  right: 5%;
+  top: 50%;
+  margin-top: -$size/2;
+}
+
+svg#background {
+  g {
+    @include transform-origin(50% 50%);
+    @include animation-delay(0);
+    @include animation-iteration-count(infinite);
+    @include animation-timing-function(linear);
+  }
+  path {
+    fill:#00B9F1;
+  }
+  circle {
+    fill: none;
+  }
+}
+
+svg#background g#uno {
+    opacity: 0.2;
+    animation-duration: 120s;
+    animation-name: rotateCounterClockwise; }
+svg#background g#dos {
+    opacity: 1;
+    animation-duration: 240s;
+    animation-name: rotateClockwise; }
+svg#background g#tres {
+    opacity: 0.6;
+    animation-duration: 240s;
+    animation-name: rotateClockwise; }
+svg#background g#cuatro {
+    opacity: 0.2;
+    animation-duration: 120s;
+    animation-name: rotateCounterClockwise; }
+svg#background g#cinco {
+    opacity: 1;
+    animation-duration: 480s;
+    animation-name: rotateClockwise; }
+svg#background g#seis {
+    opacity: 0.2;
+    animation-duration: 480s;
+    animation-name: rotateCounterClockwise; }
+svg#background g#siete {
+    opacity: 0.2;
+    animation-duration: 240s;
+    animation-name: rotateCounterClockwise; }
+svg#background g#ocho {
+    opacity: 0.4;
+    animation-duration: 480s;
+    animation-name: rotateCounterClockwise; }
+svg#background g#nuevea {
+    opacity: 0.2;
+    animation-duration: 480s;
+    animation-name: rotateCounterClockwise; }
+svg#background g#nueveb {
+    opacity: 0.2;
+    animation-duration: 480s;
+    animation-name: rotateClockwise; }
+svg#background g#trece {
+    opacity: 0.4;
+    animation-duration: 480s;
+    animation-name: rotateClockwise; }
+svg#background g#once {
+    opacity: 0.2;
+    animation-duration: 480s;
+    animation-name: rotateClockwise; }
+svg#background g#doce {
+    opacity: 0.2;
+    animation-duration: 480s;
+    animation-name: rotateClockwise; }
+svg#background g#catorce {
+    opacity: 0.2;
+    animation-duration: 240s;
+    animation-name: rotateClockwise; }
+svg#background g#quince {
+    opacity: 0.2;
+    animation-duration: 480s;
+    animation-name: rotateClockwise; }
+svg#background g#diez {
+    opacity: 0.1;
+    animation-duration: 940s;
+    animation-name: rotateCounterClockwise; }
+svg#background g#dieciseis {
+    opacity: 0.1;
+    animation-duration: 940s;
+    animation-name: rotateCounterClockwise; }
