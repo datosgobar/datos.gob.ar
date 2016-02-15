@@ -872,7 +872,8 @@ a, a:hover {
       #pkg-main-info #pkg-resources .pkg-container .pkg-actions a:hover svg path {
         fill: #0072bc; }
     #pkg-main-info #pkg-resources .pkg-container .package-info {
-      padding: 0 110px 0 50px; }
+      padding: 0 110px 0 50px;
+      color: #58595B; }
       #pkg-main-info #pkg-resources .pkg-container .package-info h3 {
         margin: 30px 0 0 0; }
 
