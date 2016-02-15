@@ -907,12 +907,6 @@ a, a:hover {
     border-bottom: solid 1px #D1D3D4;
     margin-bottom: 300px; }
 
-#pkg-related h2.related-title {
-  color: #58595B;
-  border-bottom: solid 1px #D1D3D4;
-  margin-top: 58px;
-  font-size: 22px; }
-
 #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
   padding: 30px 50px;
   -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
