@@ -59,3 +59,51 @@
     }
   }
 }
+
+@mixin svgFormatColor($format, $color) {
+  &[data-format=#{$format}],
+  &[data-format*=#{$format}] {
+    svg {
+      path {
+        fill: #{$color};
+      }
+    }
+  }
+}
+
+@mixin labelFormatColor($format, $color) {
+  &[data-format=#{$format}],
+  &[data-format*=#{$format}] {
+    background-color: #{$color};
+  }
+}
+
+$colors: (
+  ("html", "#8e24aa"),
+  ("json", "#ef7100"),
+  ("xml", "#ef7100"),
+  ("text", "#74cbec"),
+  ("csv", "#fdd835"),
+  ("xls", "#2db55d"),
+  ("zip", "#ffb300"),
+  ("api", "#ec96be"),
+  ("pdf", "#e53935"),
+  ("zip", "#686868"),
+  ("rdf", "#0b4498"),
+  ("nquad", "#0b4498"),
+  ("ntriples", "#0b4498"),
+  ("turtle", "#0b4498"),
+  ("shp", "#1e88e5")
+);
+
+@mixin svgFormatColors() {
+  @each $format, $color in $colors {
+    @include svgFormatColor($format, $color);
+  }
+}
+
+@mixin labelsFormatColors() {
+  @each $format, $color in $colors {
+    @include labelFormatColor($format, $color);
+  }
+}

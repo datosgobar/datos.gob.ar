@@ -5,10 +5,10 @@
         {% endif %}
         <h1 class="pkg-title">{{ pkg.title }}</h1>
 
-        <p class="pkg-maintainer">
-            {{ pkg.maintainer }}
-            {% if pkg.maintainer_email %}
-                <a href="mailto:{{ pkg.maintainer_email }}">
+        <p class="pkg-author">
+            {{ pkg.author }}
+            {% if pkg.author_email %}
+                <a href="mailto:{{ pkg.author_email }}">
                     {% snippet "svg/mail.svg" %}
                 </a>
             {% endif %}
@@ -33,7 +33,7 @@
                 <div class="package-info">
                     <div class="pkg-file-img" data-format="{{ resource.format.lower() }}">
                         {% snippet "svg/archivo.svg" %}
-                        <p>{{ resource.format }}</p>
+                        <p>{{ resource.format.lower() }}</p>
                     </div>
                     <h3>{{ resource.name }}</h3>
 

@@ -658,18 +658,15 @@ a, a:hover {
       .filters-container .search-filter .group-images .group-image-container svg {
         max-width: 50px; }
         .filters-container .search-filter .group-images .group-image-container svg path {
-          opacity: 0.7;
-          fill: #D1D3D4; }
+          fill: #eaeced; }
       .filters-container .search-filter .group-images .group-image-container.available svg path {
-        opacity: 1;
-        fill: #58595B; }
+        fill: #D1D3D4; }
       .filters-container .search-filter .group-images .group-image-container.available:hover svg path {
         fill: #0072bc; }
       .filters-container .search-filter .group-images .group-image-container.active svg path {
-        opacity: 1;
         fill: #0072bc; }
       .filters-container .search-filter .group-images .group-image-container.active:hover svg path {
-        fill: #58595B; }
+        fill: #D1D3D4; }
 
 .dataset-list .dataset-item .dataset-container {
   padding: 0;
@@ -701,7 +698,7 @@ a, a:hover {
     .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-title {
       color: #0072bc;
       margin: 20px 0 0 0; }
-    .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-maintainer {
+    .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-author {
       color: #D1D3D4;
       font-size: 14px;
       line-height: 1.2;
@@ -719,8 +716,39 @@ a, a:hover {
         margin: 0 0 5px 5px; }
       .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label {
         display: inline-block;
-        width: 4em;
+        width: 3.5em;
+        font-weight: 500;
         margin: 0 0 5px 5px; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=html], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=html] {
+          background-color: #8e24aa; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=json], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=json] {
+          background-color: #ef7100; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=xml], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=xml] {
+          background-color: #ef7100; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=text], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=text] {
+          background-color: #74cbec; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=csv], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=csv] {
+          background-color: #fdd835; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=xls], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=xls] {
+          background-color: #2db55d; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=zip], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=zip] {
+          background-color: #ffb300; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=api], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=api] {
+          background-color: #ec96be; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=pdf], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=pdf] {
+          background-color: #e53935; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=zip], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=zip] {
+          background-color: #686868; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=rdf], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=rdf] {
+          background-color: #0b4498; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=nquad], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=nquad] {
+          background-color: #0b4498; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=ntriples], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=ntriples] {
+          background-color: #0b4498; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=turtle], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=turtle] {
+          background-color: #0b4498; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=shp], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=shp] {
+          background-color: #1e88e5; }
 .dataset-list .dataset-item:hover {
   color: inherit; }
   .dataset-list .dataset-item:hover .dataset-border {
@@ -752,131 +780,138 @@ a, a:hover {
   .package-container .package #pkg-related {
     margin-bottom: -99999px;
     padding-bottom: 99999px; }
-  .package-container .package #pkg-main-info #pkg-title-and-desc h1.pkg-title {
-    margin: 50px 0 0 0;
-    color: #0072bc;
-    font-size: 30px; }
-  .package-container .package #pkg-main-info #pkg-title-and-desc .edit-button {
+
+#pkg-main-info #pkg-title-and-desc h1.pkg-title {
+  margin: 50px 0 0 0;
+  color: #0072bc;
+  font-size: 30px; }
+#pkg-main-info #pkg-title-and-desc .edit-button {
+  float: right;
+  margin-top: 20px; }
+#pkg-main-info #pkg-title-and-desc p.pkg-author {
+  color: #D1D3D4;
+  font-size: 14px; }
+  #pkg-main-info #pkg-title-and-desc p.pkg-author svg {
+    width: 1em;
+    fill: #D1D3D4; }
+    #pkg-main-info #pkg-title-and-desc p.pkg-author svg:hover {
+      fill: #0072bc; }
+#pkg-main-info #pkg-title-and-desc p.pkg-notes {
+  margin-bottom: 50px; }
+#pkg-main-info #pkg-title-and-desc h2.pkg-resources-title {
+  color: #58595B;
+  border-bottom: solid 1px #D1D3D4;
+  font-size: 22px; }
+#pkg-main-info #pkg-title-and-desc .contact {
+  width: 15px;
+  height: 15px; }
+#pkg-main-info #pkg-resources {
+  padding-bottom: 20px;
+  border-bottom: solid 1px #D1D3D4; }
+  #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img {
+    position: relative;
+    display: inline-block;
+    float: left;
+    width: 40px;
+    height: 50.4px;
+    margin: 0 10px 10px 0; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=html] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=html] svg path {
+      fill: #8e24aa; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=json] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=json] svg path {
+      fill: #ef7100; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=xml] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=xml] svg path {
+      fill: #ef7100; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=text] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=text] svg path {
+      fill: #74cbec; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=csv] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=csv] svg path {
+      fill: #fdd835; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=xls] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=xls] svg path {
+      fill: #2db55d; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=zip] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=zip] svg path {
+      fill: #ffb300; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=api] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=api] svg path {
+      fill: #ec96be; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=pdf] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=pdf] svg path {
+      fill: #e53935; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=zip] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=zip] svg path {
+      fill: #686868; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=rdf] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=rdf] svg path {
+      fill: #0b4498; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=nquad] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=nquad] svg path {
+      fill: #0b4498; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=ntriples] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=ntriples] svg path {
+      fill: #0b4498; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=turtle] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=turtle] svg path {
+      fill: #0b4498; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=shp] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=shp] svg path {
+      fill: #1e88e5; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img p {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50.4px;
+      line-height: 54.4px;
+      font-size: 12px;
+      margin: 0;
+      text-align: center;
+      color: white;
+      font-weight: 500; }
+  #pkg-main-info #pkg-resources .pkg-container .package-info h3 {
+    margin: 30px 0 0 0; }
+  #pkg-main-info #pkg-resources .pkg-container .pkg-actions {
+    display: inline-block;
     float: right;
-    margin-top: 20px; }
-  .package-container .package #pkg-main-info #pkg-title-and-desc p.pkg-maintainer {
-    color: #D1D3D4;
-    font-size: 14px; }
-    .package-container .package #pkg-main-info #pkg-title-and-desc p.pkg-maintainer svg {
+    margin: 0 10px; }
+    #pkg-main-info #pkg-resources .pkg-container .pkg-actions svg {
+      width: 50px;
+      height: 50px;
+      padding: 10px; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-actions svg path {
+        fill: #D1D3D4; }
+    #pkg-main-info #pkg-resources .pkg-container .pkg-actions a:hover svg path {
+      fill: #0072bc; }
+
+#pkg-secondary-info {
+  background: #fafafa; }
+  #pkg-secondary-info h2.secondary-info-title {
+    color: #0072bc;
+    margin-top: 58px;
+    font-size: 22px;
+    border-bottom: solid 1px #D1D3D4; }
+  #pkg-secondary-info #info-container .title {
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding: 0; }
+  #pkg-secondary-info #info-container .value {
+    margin-bottom: 10px;
+    padding: 0; }
+    #pkg-secondary-info #info-container .value p.pkg-maintainer svg {
       width: 1em;
       fill: #D1D3D4; }
-      .package-container .package #pkg-main-info #pkg-title-and-desc p.pkg-maintainer svg:hover {
+      #pkg-secondary-info #info-container .value p.pkg-maintainer svg:hover {
         fill: #0072bc; }
-  .package-container .package #pkg-main-info #pkg-title-and-desc p.pkg-notes {
-    margin-bottom: 50px; }
-  .package-container .package #pkg-main-info #pkg-title-and-desc h2.pkg-resources-title {
-    color: #58595B;
-    border-bottom: solid 1px #D1D3D4;
-    font-size: 22px; }
-  .package-container .package #pkg-main-info #pkg-title-and-desc .contact {
-    width: 15px;
-    height: 15px; }
-  .package-container .package #pkg-main-info #pkg-resources {
-    padding-bottom: 20px;
-    border-bottom: solid 1px #D1D3D4; }
-    .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img {
-      position: relative;
-      display: inline-block;
-      float: left;
-      width: 40px;
-      height: 50.4px;
-      margin: 0 10px 10px 0;
-      /* Del archivo de datasets de ckan */ }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=html] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=html] svg path {
-        fill: #55a1ce; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=json] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=json] svg path {
-        fill: #ef7100; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=xml] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=xml] svg path {
-        fill: #ef7100; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=text] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=text] svg path {
-        fill: #74cbec; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=csv] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=csv] svg path {
-        fill: #dfb100; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=xls] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=xls] svg path {
-        fill: #2db55d; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=zip] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=zip] svg path {
-        fill: #686868; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=api] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=api] svg path {
-        fill: #ec96be; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=pdf] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=pdf] svg path {
-        fill: #e0051e; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=zip] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=zip] svg path {
-        fill: #686868; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=rdf] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=rdf] svg path {
-        fill: #0b4498; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=nquad] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=nquad] svg path {
-        fill: #0b4498; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=ntriples] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=ntriples] svg path {
-        fill: #0b4498; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=turtle] svg path, .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=turtle] svg path {
-        fill: #0b4498; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img p {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50.4px;
-        line-height: 54.4px;
-        font-size: 12px;
-        margin: 0;
-        text-align: center;
-        color: white;
-        font-weight: 500; }
-    .package-container .package #pkg-main-info #pkg-resources .pkg-container .pkg-actions {
-      display: inline-block;
-      float: right;
-      margin: 0 10px; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .pkg-actions svg {
-        width: 50px;
-        height: 50px;
-        padding: 10px; }
-        .package-container .package #pkg-main-info #pkg-resources .pkg-container .pkg-actions svg path {
-          fill: #D1D3D4; }
-      .package-container .package #pkg-main-info #pkg-resources .pkg-container .pkg-actions a:hover svg path {
-        fill: #0072bc; }
-  .package-container .package #pkg-secondary-info {
-    background: #fafafa; }
-    .package-container .package #pkg-secondary-info h2.secondary-info-title {
-      color: #0072bc;
-      margin-top: 58px;
-      font-size: 22px;
-      border-bottom: solid 1px #D1D3D4; }
-    .package-container .package #pkg-secondary-info #info-container .title {
-      font-weight: 500;
-      margin-bottom: 10px;
-      padding: 0; }
-    .package-container .package #pkg-secondary-info #info-container .value {
-      margin-bottom: 10px;
-      padding: 0; }
-      .package-container .package #pkg-secondary-info #info-container .value p.pkg-maintainer svg {
-        width: 1em;
-        fill: #D1D3D4; }
-        .package-container .package #pkg-secondary-info #info-container .value p.pkg-maintainer svg:hover {
-          fill: #0072bc; }
-      .package-container .package #pkg-secondary-info #info-container .value img.group-image {
-        width: 30px;
-        height: 30px;
-        margin: 0 0 5px 5px; }
-      .package-container .package #pkg-secondary-info #info-container .value p.pkg-tag {
-        margin: 0 0 5px 0; }
-  .package-container .package #pkg-recent-activity {
-    background: #fafafa; }
-    .package-container .package #pkg-recent-activity h2.recent-activity-title {
-      color: #0072bc;
-      margin-top: 58px;
-      font-size: 22px;
-      border-bottom: solid 1px #D1D3D4;
-      margin-bottom: 300px; }
-  .package-container .package #pkg-related h2.related-title {
-    color: #58595B;
-    border-bottom: solid 1px #D1D3D4;
+    #pkg-secondary-info #info-container .value img.group-image {
+      width: 30px;
+      height: 30px;
+      margin: 0 0 5px 5px; }
+    #pkg-secondary-info #info-container .value p.pkg-tag {
+      margin: 0 0 5px 0; }
+
+#pkg-recent-activity {
+  background: #fafafa; }
+  #pkg-recent-activity h2.recent-activity-title {
+    color: #0072bc;
     margin-top: 58px;
-    font-size: 22px; }
+    font-size: 22px;
+    border-bottom: solid 1px #D1D3D4;
+    margin-bottom: 300px; }
+
+#pkg-related h2.related-title {
+  color: #58595B;
+  border-bottom: solid 1px #D1D3D4;
+  margin-top: 58px;
+  font-size: 22px; }
 
 #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
   padding: 30px 50px;

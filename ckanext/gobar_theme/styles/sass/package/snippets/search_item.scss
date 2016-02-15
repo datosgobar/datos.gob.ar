@@ -25,7 +25,7 @@
             margin: 20px 0 0 0;
           }
 
-          .dataset-maintainer {
+          .dataset-author {
             color: $light-grey;
             $font-size: 14px;
             font-size: $font-size;
@@ -56,8 +56,10 @@
           .dataset-resources {
             .label {
               display: inline-block;
-              width: 4em;
+              width: 3.5em;
+              font-weight: 500;
               margin: 0 0 5px 5px;
+              @include labelsFormatColors();
             }
           }
         }

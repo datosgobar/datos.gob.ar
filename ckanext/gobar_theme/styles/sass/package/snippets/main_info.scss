@@ -1,33 +1,5 @@
 @import '../../utils/globals';
-
-@mixin formatColor($format, $color) {
-  &[data-format=#{$format}],
-  &[data-format*=#{$format}] {
-    svg {
-      path {
-        fill: $color;
-      }
-    }
-  }
-}
-
-@mixin formatColors() {
-  /* Del archivo de datasets de ckan */
-  @include formatColor(html, #55a1ce);
-  @include formatColor(json, #ef7100);
-  @include formatColor(xml, #ef7100);
-  @include formatColor(text, #74cbec);
-  @include formatColor(csv, #dfb100);
-  @include formatColor(xls, #2db55d);
-  @include formatColor(zip, #686868);
-  @include formatColor(api, #ec96be);
-  @include formatColor(pdf, #e0051e);
-  @include formatColor(zip, #686868);
-  @include formatColor(rdf, #0b4498);
-  @include formatColor(nquad, #0b4498);
-  @include formatColor(ntriples, #0b4498);
-  @include formatColor(turtle, #0b4498);
-}
+@import '../../utils/mixins';
 
 #pkg-main-info {
   #pkg-title-and-desc {
@@ -40,7 +12,7 @@
       float: right;
       margin-top: 20px;
     }
-    p.pkg-maintainer {
+    p.pkg-author {
       color: $light-grey;
       font-size: 14px;
       svg {
@@ -78,7 +50,7 @@
           $height: $width*1.26;
           height: $height;
           margin: 0 10px 10px 0;
-          @include formatColors();
+          @include svgFormatColors();
           p {
             position: absolute;
             top: 0;
@@ -94,6 +66,9 @@
             color: white;
             font-weight: 500;
           }
+        }
+        h3 {
+          margin: 30px 0 0 0;
         }
       }
       .pkg-actions {
