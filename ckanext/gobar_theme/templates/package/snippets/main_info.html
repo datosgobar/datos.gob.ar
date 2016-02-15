@@ -31,15 +31,15 @@
                     </a>
                 </div>
                 <div class="package-info">
-                    <div class="pkg-file-img" data-format="{{ resource.format.lower() }}">
-                        {% snippet "svg/archivo.svg" %}
-                        <p>{{ resource.format.lower() }}</p>
-                    </div>
+
                     <h3>{{ resource.name }}</h3>
 
                     <p>{{ resource.description }}</p>
                 </div>
-
+                <div class="pkg-file-img" data-format="{{ resource.format.lower() }}">
+                    {% snippet "svg/archivo.svg" %}
+                    <p>{{ resource.format.lower() }}</p>
+                </div>
             </div>
 
         {% endfor %}

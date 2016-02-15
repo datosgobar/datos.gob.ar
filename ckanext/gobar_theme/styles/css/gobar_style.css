@@ -808,69 +808,72 @@ a, a:hover {
 #pkg-main-info #pkg-resources {
   padding-bottom: 20px;
   border-bottom: solid 1px #D1D3D4; }
-  #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img {
-    position: relative;
-    display: inline-block;
-    float: left;
-    width: 40px;
-    height: 50.4px;
-    margin: 0 10px 10px 0; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=html] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=html] svg path {
-      fill: #8e24aa; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=json] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=json] svg path {
-      fill: #ef7100; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=xml] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=xml] svg path {
-      fill: #ef7100; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=text] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=text] svg path {
-      fill: #74cbec; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=csv] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=csv] svg path {
-      fill: #fdd835; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=xls] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=xls] svg path {
-      fill: #2db55d; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=zip] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=zip] svg path {
-      fill: #ffb300; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=api] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=api] svg path {
-      fill: #ec96be; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=pdf] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=pdf] svg path {
-      fill: #e53935; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=zip] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=zip] svg path {
-      fill: #686868; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=rdf] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=rdf] svg path {
-      fill: #0b4498; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=nquad] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=nquad] svg path {
-      fill: #0b4498; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=ntriples] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=ntriples] svg path {
-      fill: #0b4498; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=turtle] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=turtle] svg path {
-      fill: #0b4498; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format=shp] svg path, #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img[data-format*=shp] svg path {
-      fill: #1e88e5; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info .pkg-file-img p {
+  #pkg-main-info #pkg-resources .pkg-container {
+    position: relative; }
+    #pkg-main-info #pkg-resources .pkg-container .pkg-file-img {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+      width: 40px;
       height: 50.4px;
-      line-height: 54.4px;
-      font-size: 12px;
-      margin: 0;
-      text-align: center;
-      color: white;
-      font-weight: 500; }
-  #pkg-main-info #pkg-resources .pkg-container .package-info h3 {
-    margin: 30px 0 0 0; }
-  #pkg-main-info #pkg-resources .pkg-container .pkg-actions {
-    display: inline-block;
-    float: right;
-    margin: 0 10px; }
-    #pkg-main-info #pkg-resources .pkg-container .pkg-actions svg {
-      width: 50px;
-      height: 50px;
-      padding: 10px; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-actions svg path {
-        fill: #D1D3D4; }
-    #pkg-main-info #pkg-resources .pkg-container .pkg-actions a:hover svg path {
-      fill: #0072bc; }
+      top: 0;
+      left: 0; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=html] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=html] svg path {
+        fill: #8e24aa; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=json] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=json] svg path {
+        fill: #ef7100; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=xml] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=xml] svg path {
+        fill: #ef7100; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=text] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=text] svg path {
+        fill: #74cbec; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=csv] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=csv] svg path {
+        fill: #fdd835; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=xls] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=xls] svg path {
+        fill: #2db55d; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=zip] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=zip] svg path {
+        fill: #ffb300; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=api] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=api] svg path {
+        fill: #ec96be; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=pdf] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=pdf] svg path {
+        fill: #e53935; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=zip] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=zip] svg path {
+        fill: #686868; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=rdf] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=rdf] svg path {
+        fill: #0b4498; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=nquad] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=nquad] svg path {
+        fill: #0b4498; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=ntriples] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=ntriples] svg path {
+        fill: #0b4498; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=turtle] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=turtle] svg path {
+        fill: #0b4498; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=shp] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=shp] svg path {
+        fill: #1e88e5; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img p {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50.4px;
+        line-height: 54.4px;
+        font-size: 12px;
+        margin: 0;
+        text-align: center;
+        color: white;
+        font-weight: 500; }
+    #pkg-main-info #pkg-resources .pkg-container .pkg-actions {
+      display: inline-block;
+      float: right;
+      margin: 0 10px; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-actions svg {
+        width: 50px;
+        height: 50px;
+        padding: 10px; }
+        #pkg-main-info #pkg-resources .pkg-container .pkg-actions svg path {
+          fill: #D1D3D4; }
+      #pkg-main-info #pkg-resources .pkg-container .pkg-actions a:hover svg path {
+        fill: #0072bc; }
+    #pkg-main-info #pkg-resources .pkg-container .package-info {
+      padding: 0 110px 0 50px; }
+      #pkg-main-info #pkg-resources .pkg-container .package-info h3 {
+        margin: 30px 0 0 0; }
 
 #pkg-secondary-info {
   background: #fafafa; }

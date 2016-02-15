@@ -40,44 +40,40 @@
     padding-bottom: 20px;
     border-bottom: solid 1px $light-grey;
     .pkg-container {
-      .package-info {
-        .pkg-file-img {
-          position: relative;
-          display: inline-block;
-          float: left;
-          $width: 40px;
-          width: $width;
-          $height: $width*1.26;
+      position: relative;
+      $file-img-width: 40px;
+      .pkg-file-img {
+        position: absolute;
+        width: $file-img-width;
+        $height: $file-img-width*1.26;
+        height: $height;
+        top: 0;
+        left: 0;
+        @include svgFormatColors();
+        p {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
           height: $height;
-          margin: 0 10px 10px 0;
-          @include svgFormatColors();
-          p {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: $height;
-            $vcenter-offset: 4px;
-            line-height: $height + $vcenter-offset;
-            $font-size: 12px;
-            font-size: $font-size;
-            margin: 0;
-            text-align: center;
-            color: white;
-            font-weight: 500;
-          }
-        }
-        h3 {
-          margin: 30px 0 0 0;
+          $vcenter-offset: 4px;
+          line-height: $height + $vcenter-offset;
+          $font-size: 12px;
+          font-size: $font-size;
+          margin: 0;
+          text-align: center;
+          color: white;
+          font-weight: 500;
         }
       }
+      $right-img-size: 50px;
       .pkg-actions {
         display: inline-block;
         float: right;
         margin: 0 10px;
         svg {
-          width: 50px;
-          height: 50px;
+          width: $right-img-size;
+          height: $right-img-size;
           padding: 10px;
           path {
             fill: $light-grey;
@@ -89,6 +85,12 @@
               fill: $dark-blue;
             }
           }
+        }
+      }
+      .package-info {
+        padding: 0 (2*$right-img-size + 10px) 0 ($file-img-width + 10px);
+        h3 {
+          margin: 30px 0 0 0;
         }
       }
     }
