@@ -188,9 +188,6 @@ a, a:hover {
 .featured-groups {
   padding: 50px 0;
   text-align: center; }
-  .featured-groups .create-group {
-    text-align: right;
-    margin-bottom: 35px; }
   .featured-groups .group-container {
     margin-bottom: 35px;
     padding: 0 5px;
@@ -282,6 +279,10 @@ a, a:hover {
         fill: white; }
     .featured-groups .group-container:hover .edit-container {
       top: -28px; }
+
+#home-create-buttons {
+  margin-top: 15px;
+  text-align: right; }
 
 #about #about-text, #about #specs-text, #about #terms-text, #specs #about-text, #specs #specs-text, #specs #terms-text, #terms #about-text, #terms #specs-text, #terms #terms-text {
   padding: 30px 50px;

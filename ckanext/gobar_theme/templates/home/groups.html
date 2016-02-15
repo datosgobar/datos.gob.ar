@@ -1,11 +1,5 @@
 <div class="featured-groups container-fluid">
     <div class="col-xs-12 col-md-10 col-md-offset-1">
-        {%- if h.check_access('group_create') -%}
-            <div class="col-xs-12 create-group">
-                {% link_for _('Add Group'), controller='group', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
-            </div>
-        {%- endif -%}
-
         {% set dataset_url = h.url_for(controller='package', action='search') %}
 
         {%- for group in c.groups -%}
