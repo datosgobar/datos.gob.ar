@@ -1029,10 +1029,9 @@ svg#background {
   background: #fafafa; }
   #pkg-recent-activity h2.recent-activity-title {
     color: #0072bc;
-    margin-top: 58px;
+    margin: 58px 0 0 0;
     font-size: 22px;
-    border-bottom: solid 1px #D1D3D4;
-    margin-bottom: 300px; }
+    border-bottom: solid 1px #D1D3D4; }
 
 #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
   padding: 30px 50px;
@@ -1266,5 +1265,15 @@ svg#background {
       margin: 0; }
     #edit-group-container #edit-group form .control-custom, #edit-group-container #new-group form .control-custom, #new-group-container #edit-group form .control-custom, #new-group-container #new-group form .control-custom {
       display: none; }
+
+ul.activity {
+  background: none;
+  margin-bottom: 30px; }
+  ul.activity li.item {
+    padding: 0 0 5px 0;
+    border-bottom: solid 1px #eaeced;
+    margin: 0 0 5px 0; }
+    ul.activity li.item p {
+      margin: 5px; }
 
 /*# sourceMappingURL=gobar_style.css.map */
