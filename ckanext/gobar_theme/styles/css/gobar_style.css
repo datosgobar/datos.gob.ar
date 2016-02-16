@@ -138,116 +138,165 @@ a, a:hover {
     transform: rotate(360deg); } }
 svg#background {
   position: absolute;
-  width: 700px;
-  height: 700px;
+  width: 50%;
   right: 5%;
   top: 50%;
-  margin-top: -350px; }
-
-svg#background g {
-  -webkit-transform-origin: 50% 50%;
-  -moz-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  -o-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
-  -webkit-animation-delay: 0;
-  -moz-animation-delay: 0;
-  animation-delay: 0;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  animation-timing-function: linear; }
-svg#background path {
-  fill: #00B9F1; }
-svg#background circle {
-  fill: none; }
-
-svg#background g#uno {
-  opacity: 0.2;
-  animation-duration: 120s;
-  animation-name: rotateCounterClockwise; }
-
-svg#background g#dos {
-  opacity: 1;
-  animation-duration: 240s;
-  animation-name: rotateClockwise; }
-
-svg#background g#tres {
-  opacity: 0.6;
-  animation-duration: 240s;
-  animation-name: rotateClockwise; }
-
-svg#background g#cuatro {
-  opacity: 0.2;
-  animation-duration: 120s;
-  animation-name: rotateCounterClockwise; }
-
-svg#background g#cinco {
-  opacity: 1;
-  animation-duration: 480s;
-  animation-name: rotateClockwise; }
-
-svg#background g#seis {
-  opacity: 0.2;
-  animation-duration: 480s;
-  animation-name: rotateCounterClockwise; }
-
-svg#background g#siete {
-  opacity: 0.2;
-  animation-duration: 240s;
-  animation-name: rotateCounterClockwise; }
-
-svg#background g#ocho {
-  opacity: 0.4;
-  animation-duration: 480s;
-  animation-name: rotateCounterClockwise; }
-
-svg#background g#nuevea {
-  opacity: 0.2;
-  animation-duration: 480s;
-  animation-name: rotateCounterClockwise; }
-
-svg#background g#nueveb {
-  opacity: 0.2;
-  animation-duration: 480s;
-  animation-name: rotateClockwise; }
-
-svg#background g#trece {
-  opacity: 0.4;
-  animation-duration: 480s;
-  animation-name: rotateClockwise; }
-
-svg#background g#once {
-  opacity: 0.2;
-  animation-duration: 480s;
-  animation-name: rotateClockwise; }
-
-svg#background g#doce {
-  opacity: 0.2;
-  animation-duration: 480s;
-  animation-name: rotateClockwise; }
-
-svg#background g#catorce {
-  opacity: 0.2;
-  animation-duration: 240s;
-  animation-name: rotateClockwise; }
-
-svg#background g#quince {
-  opacity: 0.2;
-  animation-duration: 480s;
-  animation-name: rotateClockwise; }
-
-svg#background g#diez {
-  opacity: 0.1;
-  animation-duration: 940s;
-  animation-name: rotateCounterClockwise; }
-
-svg#background g#dieciseis {
-  opacity: 0.1;
-  animation-duration: 940s;
-  animation-name: rotateCounterClockwise; }
+  margin-top: -25%; }
+  svg#background path {
+    fill: #00B9F1; }
+  svg#background circle {
+    fill: none; }
+  svg#background g {
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-animation-delay: 0;
+    -moz-animation-delay: 0;
+    animation-delay: 0;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    animation-timing-function: linear; }
+    svg#background g#uno {
+      opacity: 0.2;
+      -webkit-animation-duration: 120s;
+      -moz-animation-duration: 120s;
+      animation-duration: 120s;
+      -webkit-animation-name: rotateCounterClockwise;
+      -moz-animation-name: rotateCounterClockwise;
+      animation-name: rotateCounterClockwise; }
+    svg#background g#dos {
+      opacity: 1;
+      -webkit-animation-duration: 240s;
+      -moz-animation-duration: 240s;
+      animation-duration: 240s;
+      -webkit-animation-name: rotateClockwise;
+      -moz-animation-name: rotateClockwise;
+      animation-name: rotateClockwise; }
+    svg#background g#tres {
+      opacity: 0.6;
+      -webkit-animation-duration: 240s;
+      -moz-animation-duration: 240s;
+      animation-duration: 240s;
+      -webkit-animation-name: rotateClockwise;
+      -moz-animation-name: rotateClockwise;
+      animation-name: rotateClockwise; }
+    svg#background g#cuatro {
+      opacity: 0.2;
+      -webkit-animation-duration: 120s;
+      -moz-animation-duration: 120s;
+      animation-duration: 120s;
+      -webkit-animation-name: rotateCounterClockwise;
+      -moz-animation-name: rotateCounterClockwise;
+      animation-name: rotateCounterClockwise; }
+    svg#background g#cinco {
+      opacity: 1;
+      -webkit-animation-duration: 480s;
+      -moz-animation-duration: 480s;
+      animation-duration: 480s;
+      -webkit-animation-name: rotateClockwise;
+      -moz-animation-name: rotateClockwise;
+      animation-name: rotateClockwise; }
+    svg#background g#seis {
+      opacity: 0.2;
+      -webkit-animation-duration: 480s;
+      -moz-animation-duration: 480s;
+      animation-duration: 480s;
+      -webkit-animation-name: rotateCounterClockwise;
+      -moz-animation-name: rotateCounterClockwise;
+      animation-name: rotateCounterClockwise; }
+    svg#background g#siete {
+      opacity: 0.2;
+      -webkit-animation-duration: 240s;
+      -moz-animation-duration: 240s;
+      animation-duration: 240s;
+      -webkit-animation-name: rotateCounterClockwise;
+      -moz-animation-name: rotateCounterClockwise;
+      animation-name: rotateCounterClockwise; }
+    svg#background g#ocho {
+      opacity: 0.4;
+      -webkit-animation-duration: 480s;
+      -moz-animation-duration: 480s;
+      animation-duration: 480s;
+      -webkit-animation-name: rotateCounterClockwise;
+      -moz-animation-name: rotateCounterClockwise;
+      animation-name: rotateCounterClockwise; }
+    svg#background g#nuevea {
+      opacity: 0.2;
+      -webkit-animation-duration: 480s;
+      -moz-animation-duration: 480s;
+      animation-duration: 480s;
+      -webkit-animation-name: rotateCounterClockwise;
+      -moz-animation-name: rotateCounterClockwise;
+      animation-name: rotateCounterClockwise; }
+    svg#background g#nueveb {
+      opacity: 0.2;
+      -webkit-animation-duration: 480s;
+      -moz-animation-duration: 480s;
+      animation-duration: 480s;
+      -webkit-animation-name: rotateClockwise;
+      -moz-animation-name: rotateClockwise;
+      animation-name: rotateClockwise; }
+    svg#background g#trece {
+      opacity: 0.4;
+      -webkit-animation-duration: 480s;
+      -moz-animation-duration: 480s;
+      animation-duration: 480s;
+      -webkit-animation-name: rotateClockwise;
+      -moz-animation-name: rotateClockwise;
+      animation-name: rotateClockwise; }
+    svg#background g#once {
+      opacity: 0.2;
+      -webkit-animation-duration: 480s;
+      -moz-animation-duration: 480s;
+      animation-duration: 480s;
+      -webkit-animation-name: rotateClockwise;
+      -moz-animation-name: rotateClockwise;
+      animation-name: rotateClockwise; }
+    svg#background g#doce {
+      opacity: 0.2;
+      -webkit-animation-duration: 480s;
+      -moz-animation-duration: 480s;
+      animation-duration: 480s;
+      -webkit-animation-name: rotateClockwise;
+      -moz-animation-name: rotateClockwise;
+      animation-name: rotateClockwise; }
+    svg#background g#catorce {
+      opacity: 0.2;
+      -webkit-animation-duration: 240s;
+      -moz-animation-duration: 240s;
+      animation-duration: 240s;
+      -webkit-animation-name: rotateClockwise;
+      -moz-animation-name: rotateClockwise;
+      animation-name: rotateClockwise; }
+    svg#background g#quince {
+      opacity: 0.2;
+      -webkit-animation-duration: 480s;
+      -moz-animation-duration: 480s;
+      animation-duration: 480s;
+      -webkit-animation-name: rotateClockwise;
+      -moz-animation-name: rotateClockwise;
+      animation-name: rotateClockwise; }
+    svg#background g#diez {
+      opacity: 0.1;
+      -webkit-animation-duration: 940s;
+      -moz-animation-duration: 940s;
+      animation-duration: 940s;
+      -webkit-animation-name: rotateCounterClockwise;
+      -moz-animation-name: rotateCounterClockwise;
+      animation-name: rotateCounterClockwise; }
+    svg#background g#dieciseis {
+      opacity: 0.1;
+      -webkit-animation-duration: 940s;
+      -moz-animation-duration: 940s;
+      animation-duration: 940s;
+      -webkit-animation-name: rotateCounterClockwise;
+      -moz-animation-name: rotateCounterClockwise;
+      animation-name: rotateCounterClockwise; }
 
 #about #about-text, #about #specs-text, #about #terms-text, #specs #about-text, #specs #specs-text, #specs #terms-text, #terms #about-text, #terms #specs-text, #terms #terms-text {
   padding: 30px 50px;
