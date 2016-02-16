@@ -6,6 +6,10 @@
   padding: 50px 0;
   text-align: center;
 
+  a:hover {
+    color: $dark-blue;
+  }
+
   .group-container {
     margin-bottom: 35px;
     padding: 0 5px;
@@ -29,24 +33,27 @@
       border: solid 0 transparent;
       overflow: hidden;
       @include border-radius(4px);
-      @include box-shadow(0 0 5px 0 rgba(100, 100, 100, 0.5));
+      @include box-shadow(0 0 3px 0 rgba(100, 100, 100, 0.4));
 
       .group-text {
         border-bottom: solid 5px $dark-blue;
-        $vertical-padding: 15px;
+        $vertical-padding: 10px;
         $horizontal-padding: 10px;
         padding: $vertical-padding $horizontal-padding;
         position: relative;
-        $img-size: 50px;
+        $img-size: 35px;
         overflow: hidden;
 
-        img {
+        svg, img {
           position: absolute;
           width: $img-size;
           height: $img-size;
           top: 50%;
           left: $horizontal-padding;
           margin-top: -$img-size/2;
+          path {
+            fill: $light-grey;
+          }
         }
 
         .group-table {
@@ -54,7 +61,7 @@
           overflow: hidden;
           display: table;
           text-align: left;
-          $font-size: 14px;
+          $font-size: 13px;
           $line-height: 1.2;
           $lines: 3;
           font-size: $font-size;
@@ -74,6 +81,15 @@
           border-bottom-color: $light-grey;
         }
       }
+
+      &.active:hover {
+        svg {
+          path {
+            fill: $dark-blue !important;
+          }
+        }
+      }
+
     }
 
     $edit-size: 20px;
