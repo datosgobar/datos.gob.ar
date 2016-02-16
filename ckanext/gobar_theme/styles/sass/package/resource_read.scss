@@ -1,0 +1,60 @@
+@import '../utils/globals';
+@import '../utils/mixins';
+
+.resource-container {
+  .resource{
+    @include base-container();
+
+    .title {
+      $top-space: 20px;
+      $download-size: 50px;
+      padding-right: $download-size + 10px;
+      h1 {
+        color: $dark-blue;
+        margin: $top-space 0 0 0;
+      }
+      svg {
+        width: $download-size;
+        position: absolute;
+        top: $top-space;
+        right: 0;
+        fill: $light-grey;
+        &:hover {
+          fill: $dark-blue;
+        }
+      }
+    }
+
+    .resource-alternative-packages {
+      h2 {
+        font-size: 22px;
+        border-bottom: solid 1px $light-grey;
+        margin-bottom: 0;
+      }
+    }
+
+    .resource-additional-info {
+      h2 {
+        font-size: 22px;
+        border-bottom: solid 1px $light-grey;
+        color: $dark-blue;
+        margin-bottom: 0;
+      }
+      .resource-additional {
+        border-bottom: solid 1px $light-grey;
+        padding: 15px 5px;
+        .key {
+          padding: 0;
+          font-weight: 500;
+        }
+        .value {
+          padding: 0;
+          span.label {
+            @include labelsFormatColors();
+          }
+        }
+      }
+    }
+  }
+}
+

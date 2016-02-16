@@ -37,10 +37,10 @@ svg#background {
     @include animation-iteration-count(infinite);
     @include animation-timing-function(linear);
 
-    $super-slow-speed: 940s;
-    $slow-speed: 480s;
-    $medium-speed: 240s;
-    $fast-speed: 120s;
+    $super-slow-speed: 910s;
+    $slow-speed: 450s;
+    $medium-speed: 210s;
+    $fast-speed: 90s;
 
     &#uno {
       opacity: 0.2;

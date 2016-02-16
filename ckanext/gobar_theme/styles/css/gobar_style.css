@@ -163,137 +163,137 @@ svg#background {
     animation-timing-function: linear; }
     svg#background g#uno {
       opacity: 0.2;
-      -webkit-animation-duration: 120s;
-      -moz-animation-duration: 120s;
-      animation-duration: 120s;
+      -webkit-animation-duration: 90s;
+      -moz-animation-duration: 90s;
+      animation-duration: 90s;
       -webkit-animation-name: rotateCounterClockwise;
       -moz-animation-name: rotateCounterClockwise;
       animation-name: rotateCounterClockwise; }
     svg#background g#dos {
       opacity: 1;
-      -webkit-animation-duration: 240s;
-      -moz-animation-duration: 240s;
-      animation-duration: 240s;
+      -webkit-animation-duration: 210s;
+      -moz-animation-duration: 210s;
+      animation-duration: 210s;
       -webkit-animation-name: rotateClockwise;
       -moz-animation-name: rotateClockwise;
       animation-name: rotateClockwise; }
     svg#background g#tres {
       opacity: 0.6;
-      -webkit-animation-duration: 240s;
-      -moz-animation-duration: 240s;
-      animation-duration: 240s;
+      -webkit-animation-duration: 210s;
+      -moz-animation-duration: 210s;
+      animation-duration: 210s;
       -webkit-animation-name: rotateClockwise;
       -moz-animation-name: rotateClockwise;
       animation-name: rotateClockwise; }
     svg#background g#cuatro {
       opacity: 0.2;
-      -webkit-animation-duration: 120s;
-      -moz-animation-duration: 120s;
-      animation-duration: 120s;
+      -webkit-animation-duration: 90s;
+      -moz-animation-duration: 90s;
+      animation-duration: 90s;
       -webkit-animation-name: rotateCounterClockwise;
       -moz-animation-name: rotateCounterClockwise;
       animation-name: rotateCounterClockwise; }
     svg#background g#cinco {
       opacity: 1;
-      -webkit-animation-duration: 480s;
-      -moz-animation-duration: 480s;
-      animation-duration: 480s;
+      -webkit-animation-duration: 450s;
+      -moz-animation-duration: 450s;
+      animation-duration: 450s;
       -webkit-animation-name: rotateClockwise;
       -moz-animation-name: rotateClockwise;
       animation-name: rotateClockwise; }
     svg#background g#seis {
       opacity: 0.2;
-      -webkit-animation-duration: 480s;
-      -moz-animation-duration: 480s;
-      animation-duration: 480s;
+      -webkit-animation-duration: 450s;
+      -moz-animation-duration: 450s;
+      animation-duration: 450s;
       -webkit-animation-name: rotateCounterClockwise;
       -moz-animation-name: rotateCounterClockwise;
       animation-name: rotateCounterClockwise; }
     svg#background g#siete {
       opacity: 0.2;
-      -webkit-animation-duration: 240s;
-      -moz-animation-duration: 240s;
-      animation-duration: 240s;
+      -webkit-animation-duration: 210s;
+      -moz-animation-duration: 210s;
+      animation-duration: 210s;
       -webkit-animation-name: rotateCounterClockwise;
       -moz-animation-name: rotateCounterClockwise;
       animation-name: rotateCounterClockwise; }
     svg#background g#ocho {
       opacity: 0.4;
-      -webkit-animation-duration: 480s;
-      -moz-animation-duration: 480s;
-      animation-duration: 480s;
+      -webkit-animation-duration: 450s;
+      -moz-animation-duration: 450s;
+      animation-duration: 450s;
       -webkit-animation-name: rotateCounterClockwise;
       -moz-animation-name: rotateCounterClockwise;
       animation-name: rotateCounterClockwise; }
     svg#background g#nuevea {
       opacity: 0.2;
-      -webkit-animation-duration: 480s;
-      -moz-animation-duration: 480s;
-      animation-duration: 480s;
+      -webkit-animation-duration: 450s;
+      -moz-animation-duration: 450s;
+      animation-duration: 450s;
       -webkit-animation-name: rotateCounterClockwise;
       -moz-animation-name: rotateCounterClockwise;
       animation-name: rotateCounterClockwise; }
     svg#background g#nueveb {
       opacity: 0.2;
-      -webkit-animation-duration: 480s;
-      -moz-animation-duration: 480s;
-      animation-duration: 480s;
+      -webkit-animation-duration: 450s;
+      -moz-animation-duration: 450s;
+      animation-duration: 450s;
       -webkit-animation-name: rotateClockwise;
       -moz-animation-name: rotateClockwise;
       animation-name: rotateClockwise; }
     svg#background g#trece {
       opacity: 0.4;
-      -webkit-animation-duration: 480s;
-      -moz-animation-duration: 480s;
-      animation-duration: 480s;
+      -webkit-animation-duration: 450s;
+      -moz-animation-duration: 450s;
+      animation-duration: 450s;
       -webkit-animation-name: rotateClockwise;
       -moz-animation-name: rotateClockwise;
       animation-name: rotateClockwise; }
     svg#background g#once {
       opacity: 0.2;
-      -webkit-animation-duration: 480s;
-      -moz-animation-duration: 480s;
-      animation-duration: 480s;
+      -webkit-animation-duration: 450s;
+      -moz-animation-duration: 450s;
+      animation-duration: 450s;
       -webkit-animation-name: rotateClockwise;
       -moz-animation-name: rotateClockwise;
       animation-name: rotateClockwise; }
     svg#background g#doce {
       opacity: 0.2;
-      -webkit-animation-duration: 480s;
-      -moz-animation-duration: 480s;
-      animation-duration: 480s;
+      -webkit-animation-duration: 450s;
+      -moz-animation-duration: 450s;
+      animation-duration: 450s;
       -webkit-animation-name: rotateClockwise;
       -moz-animation-name: rotateClockwise;
       animation-name: rotateClockwise; }
     svg#background g#catorce {
       opacity: 0.2;
-      -webkit-animation-duration: 240s;
-      -moz-animation-duration: 240s;
-      animation-duration: 240s;
+      -webkit-animation-duration: 210s;
+      -moz-animation-duration: 210s;
+      animation-duration: 210s;
       -webkit-animation-name: rotateClockwise;
       -moz-animation-name: rotateClockwise;
       animation-name: rotateClockwise; }
     svg#background g#quince {
       opacity: 0.2;
-      -webkit-animation-duration: 480s;
-      -moz-animation-duration: 480s;
-      animation-duration: 480s;
+      -webkit-animation-duration: 450s;
+      -moz-animation-duration: 450s;
+      animation-duration: 450s;
       -webkit-animation-name: rotateClockwise;
       -moz-animation-name: rotateClockwise;
       animation-name: rotateClockwise; }
     svg#background g#diez {
       opacity: 0.1;
-      -webkit-animation-duration: 940s;
-      -moz-animation-duration: 940s;
-      animation-duration: 940s;
+      -webkit-animation-duration: 910s;
+      -moz-animation-duration: 910s;
+      animation-duration: 910s;
       -webkit-animation-name: rotateCounterClockwise;
       -moz-animation-name: rotateCounterClockwise;
       animation-name: rotateCounterClockwise; }
     svg#background g#dieciseis {
       opacity: 0.1;
-      -webkit-animation-duration: 940s;
-      -moz-animation-duration: 940s;
-      animation-duration: 940s;
+      -webkit-animation-duration: 910s;
+      -moz-animation-duration: 910s;
+      animation-duration: 910s;
       -webkit-animation-name: rotateCounterClockwise;
       -moz-animation-name: rotateCounterClockwise;
       animation-name: rotateCounterClockwise; }
@@ -998,73 +998,6 @@ svg#background {
 #pkg-main-info #pkg-resources {
   padding-bottom: 20px;
   border-bottom: solid 1px #D1D3D4; }
-  #pkg-main-info #pkg-resources .pkg-container {
-    position: relative; }
-    #pkg-main-info #pkg-resources .pkg-container .pkg-file-img {
-      position: absolute;
-      width: 40px;
-      height: 50.4px;
-      top: 0;
-      left: 0; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=html] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=html] svg path {
-        fill: #8e24aa; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=json] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=json] svg path {
-        fill: #ef7100; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=xml] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=xml] svg path {
-        fill: #ef7100; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=text] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=text] svg path {
-        fill: #74cbec; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=csv] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=csv] svg path {
-        fill: #fdd835; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=xls] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=xls] svg path {
-        fill: #2db55d; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=zip] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=zip] svg path {
-        fill: #ffb300; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=api] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=api] svg path {
-        fill: #ec96be; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=pdf] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=pdf] svg path {
-        fill: #e53935; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=zip] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=zip] svg path {
-        fill: #686868; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=rdf] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=rdf] svg path {
-        fill: #0b4498; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=nquad] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=nquad] svg path {
-        fill: #0b4498; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=ntriples] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=ntriples] svg path {
-        fill: #0b4498; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=turtle] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=turtle] svg path {
-        fill: #0b4498; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format=shp] svg path, #pkg-main-info #pkg-resources .pkg-container .pkg-file-img[data-format*=shp] svg path {
-        fill: #1e88e5; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-file-img p {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 50.4px;
-        line-height: 54.4px;
-        font-size: 12px;
-        margin: 0;
-        text-align: center;
-        color: white;
-        font-weight: 500; }
-    #pkg-main-info #pkg-resources .pkg-container .pkg-actions {
-      display: inline-block;
-      float: right;
-      margin: 0 10px; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-actions svg {
-        width: 50px;
-        height: 50px;
-        padding: 10px; }
-        #pkg-main-info #pkg-resources .pkg-container .pkg-actions svg path {
-          fill: #D1D3D4; }
-      #pkg-main-info #pkg-resources .pkg-container .pkg-actions a:hover svg path {
-        fill: #0072bc; }
-    #pkg-main-info #pkg-resources .pkg-container .package-info {
-      padding: 0 110px 0 50px;
-      color: #58595B; }
-      #pkg-main-info #pkg-resources .pkg-container .package-info h3 {
-        margin: 30px 0 0 0; }
 
 #pkg-secondary-info {
   background: #fafafa; }
@@ -1149,6 +1082,143 @@ svg#background {
       display: none; }
   #edit-package-container #edit-package form ol, #edit-package-container #new-package form ol, #new-package-container #edit-package form ol, #new-package-container #new-package form ol {
     margin: 0 0 10px 0; }
+
+.resource-container .resource {
+  padding: 30px 50px;
+  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  color: #58595B;
+  font-size: 16px; }
+  .resource-container .resource .title {
+    padding-right: 60px; }
+    .resource-container .resource .title h1 {
+      color: #0072bc;
+      margin: 20px 0 0 0; }
+    .resource-container .resource .title svg {
+      width: 50px;
+      position: absolute;
+      top: 20px;
+      right: 0;
+      fill: #D1D3D4; }
+      .resource-container .resource .title svg:hover {
+        fill: #0072bc; }
+  .resource-container .resource .resource-alternative-packages h2 {
+    font-size: 22px;
+    border-bottom: solid 1px #D1D3D4;
+    margin-bottom: 0; }
+  .resource-container .resource .resource-additional-info h2 {
+    font-size: 22px;
+    border-bottom: solid 1px #D1D3D4;
+    color: #0072bc;
+    margin-bottom: 0; }
+  .resource-container .resource .resource-additional-info .resource-additional {
+    border-bottom: solid 1px #D1D3D4;
+    padding: 15px 5px; }
+    .resource-container .resource .resource-additional-info .resource-additional .key {
+      padding: 0;
+      font-weight: 500; }
+    .resource-container .resource .resource-additional-info .resource-additional .value {
+      padding: 0; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=html], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=html] {
+        background-color: #8e24aa; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=json], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=json] {
+        background-color: #ef7100; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xml], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xml] {
+        background-color: #ef7100; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=text], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=text] {
+        background-color: #74cbec; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=csv], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=csv] {
+        background-color: #fdd835; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xls], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xls] {
+        background-color: #2db55d; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=zip], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=zip] {
+        background-color: #ffb300; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=api], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=api] {
+        background-color: #ec96be; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=pdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=pdf] {
+        background-color: #e53935; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=zip], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=zip] {
+        background-color: #686868; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=rdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=rdf] {
+        background-color: #0b4498; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=nquad], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=nquad] {
+        background-color: #0b4498; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=ntriples], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=ntriples] {
+        background-color: #0b4498; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=turtle], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=turtle] {
+        background-color: #0b4498; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=shp], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=shp] {
+        background-color: #1e88e5; }
+
+.pkg-container {
+  position: relative; }
+  .pkg-container .pkg-file-img {
+    position: absolute;
+    width: 40px;
+    height: 50.4px;
+    top: 0;
+    left: 0; }
+    .pkg-container .pkg-file-img[data-format=html] svg path, .pkg-container .pkg-file-img[data-format*=html] svg path {
+      fill: #8e24aa; }
+    .pkg-container .pkg-file-img[data-format=json] svg path, .pkg-container .pkg-file-img[data-format*=json] svg path {
+      fill: #ef7100; }
+    .pkg-container .pkg-file-img[data-format=xml] svg path, .pkg-container .pkg-file-img[data-format*=xml] svg path {
+      fill: #ef7100; }
+    .pkg-container .pkg-file-img[data-format=text] svg path, .pkg-container .pkg-file-img[data-format*=text] svg path {
+      fill: #74cbec; }
+    .pkg-container .pkg-file-img[data-format=csv] svg path, .pkg-container .pkg-file-img[data-format*=csv] svg path {
+      fill: #fdd835; }
+    .pkg-container .pkg-file-img[data-format=xls] svg path, .pkg-container .pkg-file-img[data-format*=xls] svg path {
+      fill: #2db55d; }
+    .pkg-container .pkg-file-img[data-format=zip] svg path, .pkg-container .pkg-file-img[data-format*=zip] svg path {
+      fill: #ffb300; }
+    .pkg-container .pkg-file-img[data-format=api] svg path, .pkg-container .pkg-file-img[data-format*=api] svg path {
+      fill: #ec96be; }
+    .pkg-container .pkg-file-img[data-format=pdf] svg path, .pkg-container .pkg-file-img[data-format*=pdf] svg path {
+      fill: #e53935; }
+    .pkg-container .pkg-file-img[data-format=zip] svg path, .pkg-container .pkg-file-img[data-format*=zip] svg path {
+      fill: #686868; }
+    .pkg-container .pkg-file-img[data-format=rdf] svg path, .pkg-container .pkg-file-img[data-format*=rdf] svg path {
+      fill: #0b4498; }
+    .pkg-container .pkg-file-img[data-format=nquad] svg path, .pkg-container .pkg-file-img[data-format*=nquad] svg path {
+      fill: #0b4498; }
+    .pkg-container .pkg-file-img[data-format=ntriples] svg path, .pkg-container .pkg-file-img[data-format*=ntriples] svg path {
+      fill: #0b4498; }
+    .pkg-container .pkg-file-img[data-format=turtle] svg path, .pkg-container .pkg-file-img[data-format*=turtle] svg path {
+      fill: #0b4498; }
+    .pkg-container .pkg-file-img[data-format=shp] svg path, .pkg-container .pkg-file-img[data-format*=shp] svg path {
+      fill: #1e88e5; }
+    .pkg-container .pkg-file-img p {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50.4px;
+      line-height: 54.4px;
+      font-size: 12px;
+      margin: 0;
+      text-align: center;
+      color: white;
+      font-weight: 500; }
+  .pkg-container .pkg-actions {
+    display: inline-block;
+    float: right;
+    margin: 0 10px; }
+    .pkg-container .pkg-actions svg {
+      width: 50px;
+      height: 50px;
+      padding: 10px; }
+      .pkg-container .pkg-actions svg path {
+        fill: #D1D3D4; }
+    .pkg-container .pkg-actions a:hover svg path {
+      fill: #0072bc; }
+  .pkg-container .package-info {
+    padding: 0 110px 0 50px;
+    color: #58595B; }
+    .pkg-container .package-info h3 {
+      margin: 30px 0 0 0; }
 
 #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
   padding: 30px 50px;
