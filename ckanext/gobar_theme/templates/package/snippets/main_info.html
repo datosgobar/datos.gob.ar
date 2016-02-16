@@ -21,31 +21,7 @@
 
     <div id="pkg-resources">
         {% for resource in pkg.resources %}
-            {% set resource_url = h.url_for(controller='package', action='resource_read', id=pkg.name, resource_id=resource.id) %}
-            <div class="pkg-container">
-                <div class="pkg-actions">
-                    <a href="{{ resource_url }}">
-                        {% snippet "svg/info.svg" %}
-                    </a>
-                    <a href="{{ resource.url }}">
-                        {% snippet "svg/descargar.svg" %}
-                    </a>
-                </div>
-                <a href="{{ resource_url }}">
-                    <div class="package-info">
-
-                        <h3>{{ resource.name }}</h3>
-
-                        <p>{{ resource.description }}</p>
-                    </div>
-
-                    <div class="pkg-file-img" data-format="{{ resource.format.lower() }}">
-                        {% snippet "svg/archivo.svg" %}
-                        <p>{{ resource.format.lower() }}</p>
-                    </div>
-                </a>
-            </div>
-
+            {% snippet "package/snippets/resource_item.html", pkg=pkg, resource=resource %}
         {% endfor %}
 
     </div>
