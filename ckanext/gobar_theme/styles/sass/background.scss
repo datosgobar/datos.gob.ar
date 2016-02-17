@@ -18,114 +18,124 @@
   }
 }
 
-svg#background {
+div#background-container {
   position: absolute;
   width: 50%;
+  padding-top: 50%;
   right: 5%;
   top: 50%;
   margin-top: -25%;
 
-  path {
-    fill: #00B9F1;
-  }
-  circle {
-    fill: none;
-  }
-  g {
-    @include animation-delay(0s);
-    @include animation-iteration-count(infinite);
-    @include animation-timing-function(linear);
+  svg#background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
 
-    $super-slow-speed: 910s;
-    $slow-speed: 450s;
-    $medium-speed: 210s;
-    $fast-speed: 90s;
+    path {
+      fill: #00B9F1;
+    }
+    circle {
+      fill: none;
+    }
+    g {
+      @include animation-delay(0s);
+      @include animation-iteration-count(infinite);
+      @include animation-timing-function(linear);
 
-    &#uno {
-      opacity: 0.2;
-      @include animation-duration($fast-speed);
-      @include animation-name(rotateCounterClockwise);
+      $super-slow-speed: 910s;
+      $slow-speed: 450s;
+      $medium-speed: 210s;
+      $fast-speed: 90s;
+
+      &#uno {
+        opacity: 0.2;
+        @include animation-duration($fast-speed);
+        @include animation-name(rotateCounterClockwise);
+      }
+      &#dos {
+        opacity: 1;
+        @include animation-duration($medium-speed);
+        @include animation-name(rotateClockwise);
+      }
+      &#tres {
+        opacity: 0.6;
+        @include animation-duration($medium-speed);
+        @include animation-name(rotateClockwise);
+      }
+      &#cuatro {
+        opacity: 0.2;
+        @include animation-duration($fast-speed);
+        @include animation-name(rotateCounterClockwise);
+      }
+      &#cinco {
+        opacity: 1;
+        @include animation-duration($slow-speed);
+        @include animation-name(rotateClockwise);
+      }
+      &#seis {
+        opacity: 0.2;
+        @include animation-duration($slow-speed);
+        @include animation-name(rotateCounterClockwise);
+      }
+      &#siete {
+        opacity: 0.2;
+        @include animation-duration($medium-speed);
+        @include animation-name(rotateCounterClockwise);
+      }
+      &#ocho {
+        opacity: 0.4;
+        @include animation-duration($slow-speed);
+        @include animation-name(rotateCounterClockwise);
+      }
+      &#nuevea {
+        opacity: 0.2;
+        @include animation-duration($slow-speed);
+        @include animation-name(rotateCounterClockwise);
+      }
+      &#nueveb {
+        opacity: 0.2;
+        @include animation-duration($slow-speed);
+        @include animation-name(rotateClockwise);
+      }
+      &#trece {
+        opacity: 0.4;
+        @include animation-duration($slow-speed);
+        @include animation-name(rotateClockwise);
+      }
+      &#once {
+        opacity: 0.2;
+        @include animation-duration($slow-speed);
+        @include animation-name(rotateClockwise);
+      }
+      &#doce {
+        opacity: 0.2;
+        @include animation-duration($slow-speed);
+        @include animation-name(rotateClockwise);
+      }
+      &#catorce {
+        opacity: 0.2;
+        @include animation-duration($medium-speed);
+        @include animation-name(rotateClockwise);
+      }
+      &#quince {
+        opacity: 0.2;
+        @include animation-duration($slow-speed);
+        @include animation-name(rotateClockwise);
+      }
+      &#diez {
+        opacity: 0.1;
+        @include animation-duration($super-slow-speed);
+        @include animation-name(rotateCounterClockwise);
+      }
+      &#dieciseis {
+        opacity: 0.1;
+        @include animation-duration($super-slow-speed);
+        @include animation-name(rotateCounterClockwise);
+      }
     }
-    &#dos {
-      opacity: 1;
-      @include animation-duration($medium-speed);
-      @include animation-name(rotateClockwise);
-    }
-    &#tres {
-      opacity: 0.6;
-      @include animation-duration($medium-speed);
-      @include animation-name(rotateClockwise);
-    }
-    &#cuatro {
-      opacity: 0.2;
-      @include animation-duration($fast-speed);
-      @include animation-name(rotateCounterClockwise);
-    }
-    &#cinco {
-      opacity: 1;
-      @include animation-duration($slow-speed);
-      @include animation-name(rotateClockwise);
-    }
-    &#seis {
-      opacity: 0.2;
-      @include animation-duration($slow-speed);
-      @include animation-name(rotateCounterClockwise);
-    }
-    &#siete {
-      opacity: 0.2;
-      @include animation-duration($medium-speed);
-      @include animation-name(rotateCounterClockwise);
-    }
-    &#ocho {
-      opacity: 0.4;
-      @include animation-duration($slow-speed);
-      @include animation-name(rotateCounterClockwise);
-    }
-    &#nuevea {
-      opacity: 0.2;
-      @include animation-duration($slow-speed);
-      @include animation-name(rotateCounterClockwise);
-    }
-    &#nueveb {
-      opacity: 0.2;
-      @include animation-duration($slow-speed);
-      @include animation-name(rotateClockwise);
-    }
-    &#trece {
-      opacity: 0.4;
-      @include animation-duration($slow-speed);
-      @include animation-name(rotateClockwise);
-    }
-    &#once {
-      opacity: 0.2;
-      @include animation-duration($slow-speed);
-      @include animation-name(rotateClockwise);
-    }
-    &#doce {
-      opacity: 0.2;
-      @include animation-duration($slow-speed);
-      @include animation-name(rotateClockwise);
-    }
-    &#catorce {
-      opacity: 0.2;
-      @include animation-duration($medium-speed);
-      @include animation-name(rotateClockwise);
-    }
-    &#quince {
-      opacity: 0.2;
-      @include animation-duration($slow-speed);
-      @include animation-name(rotateClockwise);
-    }
-    &#diez {
-      opacity: 0.1;
-      @include animation-duration($super-slow-speed);
-      @include animation-name(rotateCounterClockwise);
-    }
-    &#dieciseis {
-      opacity: 0.1;
-      @include animation-duration($super-slow-speed);
-      @include animation-name(rotateCounterClockwise);
-    }
+
   }
 
 }
