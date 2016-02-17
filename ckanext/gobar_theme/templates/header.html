@@ -2,6 +2,6 @@
     <div id="header-spacing" class="col-xs-12 col-md-10 col-md-offset-1">
         <a href="{{ h.url('home') }}"><img src="/img/logo_ministerio.svg" class="logo-ministerio"></a>
         <a href="{{ h.url_for(controller='package', action='search') }}">DATOS</a>
-        <a href="{{ h.url('organizaciones') }}">ORGANIZACIONES</a>
+        <a href="{{ h.url_for(controller='organization', action='index') }}">ORGANIZACIONES</a>
     </div>
 </div>

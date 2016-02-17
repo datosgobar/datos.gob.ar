@@ -36,13 +36,23 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
 
         # Organizaciones
         organizations_controller = 'ckanext.gobar_theme.controller:GobArOrganizationController'
-        routing_map.connect('/organization', '/organizaciones', controller=organizations_controller, action='index')
+        routing_map.connect('/organization', controller=organizations_controller, action='index')
+        routing_map.redirect('/organization/list', '/organization')
+        routing_map.connect('/organization/new', action='new', controller='organization')
+        routing_map.redirect('/organization/{id}', '/organization/list')
+        routing_map.redirect('/organization/activity/{id}/{offset}', '/organization/list')
+        routing_map.redirect('/organization/about/{id}', '/organization/list')
+        routing_map.redirect('/organization/members/{id}', '/organization/list')
+        routing_map.redirect('/organization/bulk_process/{id}', '/organization/list')
 
         # Grupos
         routing_map.redirect('/group', '/')
         routing_map.redirect('/group/list', '/')
         routing_map.connect('group_new', '/group/new', action='new', controller='group')
-        routing_map.redirect('/group/{id}', '/')
+        routing_map.redirect('/group/{id}', '/group/list')
+        routing_map.redirect('/group/about/{id}', '/group/list')
+        routing_map.redirect('/group/members/{id}', '/group/list')
+        routing_map.redirect('/group/activity/{id}/{offset}', '/group/list')
 
         return routing_map
 
