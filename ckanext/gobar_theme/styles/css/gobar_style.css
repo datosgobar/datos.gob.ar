@@ -1125,6 +1125,9 @@ svg#background {
       height: 29.2px; }
   #edit-package-container #edit-package form ol, #edit-package-container #new-package form ol, #new-package-container #edit-package form ol, #new-package-container #new-package form ol {
     margin: 0 0 10px 0; }
+  #edit-package-container #edit-package .edit-resources-button, #edit-package-container #new-package .edit-resources-button, #new-package-container #edit-package .edit-resources-button, #new-package-container #new-package .edit-resources-button {
+    float: right;
+    margin: 20px 0; }
 
 .resource-container .resource {
   padding: 30px 50px;
