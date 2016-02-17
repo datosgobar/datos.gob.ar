@@ -50,12 +50,20 @@
     input[type="checkbox"] {
       @include transform(scale(1.3));
     }
-    .controls {
-      display: block;
-      margin: 0;
-    }
     .control-custom {
       display: none;
+    }
+    .control-group {
+      &.error {
+        .input-prepend {
+          .add-on {
+            font-size: $font-size;
+            line-height: $line-height;
+            padding: $input-padding;
+            height: $font-size * $line-height + 2*$input-padding;
+          }
+        }
+      }
     }
   }
 }
@@ -79,21 +87,21 @@
 }
 
 $colors: (
-  ("html", "#8e24aa"),
-  ("json", "#ef7100"),
-  ("xml", "#ef7100"),
-  ("text", "#74cbec"),
-  ("csv", "#fdd835"),
-  ("xls", "#2db55d"),
-  ("zip", "#ffb300"),
-  ("api", "#ec96be"),
-  ("pdf", "#e53935"),
-  ("zip", "#686868"),
-  ("rdf", "#0b4498"),
-  ("nquad", "#0b4498"),
-  ("ntriples", "#0b4498"),
-  ("turtle", "#0b4498"),
-  ("shp", "#1e88e5")
+                ("html", "#8e24aa"),
+                ("json", "#ef7100"),
+                ("xml", "#ef7100"),
+                ("text", "#74cbec"),
+                ("csv", "#fdd835"),
+                ("xls", "#2db55d"),
+                ("zip", "#ffb300"),
+                ("api", "#ec96be"),
+                ("pdf", "#e53935"),
+                ("zip", "#686868"),
+                ("rdf", "#0b4498"),
+                ("nquad", "#0b4498"),
+                ("ntriples", "#0b4498"),
+                ("turtle", "#0b4498"),
+                ("shp", "#1e88e5")
 );
 
 @mixin svgFormatColors() {

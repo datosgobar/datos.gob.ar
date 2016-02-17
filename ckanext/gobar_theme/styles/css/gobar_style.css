@@ -370,6 +370,17 @@ svg#background {
         #error #error-text #error-code .circle-container .circle-gutter .circle-background.different {
           opacity: 0.75; }
 
+.modal-open .modal {
+  width: 50%;
+  max-height: 80%;
+  position: fixed;
+  top: 10% !important;
+  bottom: inherit;
+  left: 25%;
+  right: inherit;
+  margin: 0 !important;
+  padding: 0 !important; }
+
 #title {
   padding: 20px 0;
   color: white;
@@ -592,11 +603,13 @@ svg#background {
       -ms-transform: scale(1.3);
       -o-transform: scale(1.3);
       transform: scale(1.3); }
-    #login-container #login form .controls {
-      display: block;
-      margin: 0; }
     #login-container #login form .control-custom {
       display: none; }
+    #login-container #login form .control-group.error .input-prepend .add-on {
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 5px;
+      height: 29.2px; }
   #login-container #login form label {
     width: 50%;
     padding: 5px 20px 5px 0;
@@ -698,11 +711,13 @@ svg#background {
       -ms-transform: scale(1.3);
       -o-transform: scale(1.3);
       transform: scale(1.3); }
-    #edit-organization-container #edit-organization form .controls, #edit-organization-container #new-organization form .controls, #new-organization-container #edit-organization form .controls, #new-organization-container #new-organization form .controls {
-      display: block;
-      margin: 0; }
     #edit-organization-container #edit-organization form .control-custom, #edit-organization-container #new-organization form .control-custom, #new-organization-container #edit-organization form .control-custom, #new-organization-container #new-organization form .control-custom {
       display: none; }
+    #edit-organization-container #edit-organization form .control-group.error .input-prepend .add-on, #edit-organization-container #new-organization form .control-group.error .input-prepend .add-on, #new-organization-container #edit-organization form .control-group.error .input-prepend .add-on, #new-organization-container #new-organization form .control-group.error .input-prepend .add-on {
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 5px;
+      height: 29.2px; }
   #edit-organization-container #edit-organization form .image-upload, #edit-organization-container #new-organization form .image-upload, #new-organization-container #edit-organization form .image-upload, #new-organization-container #new-organization form .image-upload {
     display: none; }
 
@@ -1080,11 +1095,13 @@ svg#background {
       -ms-transform: scale(1.3);
       -o-transform: scale(1.3);
       transform: scale(1.3); }
-    #edit-package-container #edit-package form .controls, #edit-package-container #new-package form .controls, #new-package-container #edit-package form .controls, #new-package-container #new-package form .controls {
-      display: block;
-      margin: 0; }
     #edit-package-container #edit-package form .control-custom, #edit-package-container #new-package form .control-custom, #new-package-container #edit-package form .control-custom, #new-package-container #new-package form .control-custom {
       display: none; }
+    #edit-package-container #edit-package form .control-group.error .input-prepend .add-on, #edit-package-container #new-package form .control-group.error .input-prepend .add-on, #new-package-container #edit-package form .control-group.error .input-prepend .add-on, #new-package-container #new-package form .control-group.error .input-prepend .add-on {
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 5px;
+      height: 29.2px; }
   #edit-package-container #edit-package form ol, #edit-package-container #new-package form ol, #new-package-container #edit-package form ol, #new-package-container #new-package form ol {
     margin: 0 0 10px 0; }
 
@@ -1266,11 +1283,13 @@ svg#background {
       -ms-transform: scale(1.3);
       -o-transform: scale(1.3);
       transform: scale(1.3); }
-    #edit-group-container #edit-group form .controls, #edit-group-container #new-group form .controls, #new-group-container #edit-group form .controls, #new-group-container #new-group form .controls {
-      display: block;
-      margin: 0; }
     #edit-group-container #edit-group form .control-custom, #edit-group-container #new-group form .control-custom, #new-group-container #edit-group form .control-custom, #new-group-container #new-group form .control-custom {
       display: none; }
+    #edit-group-container #edit-group form .control-group.error .input-prepend .add-on, #edit-group-container #new-group form .control-group.error .input-prepend .add-on, #new-group-container #edit-group form .control-group.error .input-prepend .add-on, #new-group-container #new-group form .control-group.error .input-prepend .add-on {
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 5px;
+      height: 29.2px; }
 
 ul.activity {
   background: none;

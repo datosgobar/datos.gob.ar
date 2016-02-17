@@ -1,0 +1,14 @@
+.modal-open {
+  .modal {
+    width: 50%;
+    max-height: 80%;
+    position: fixed;
+    top: 10% !important;
+    bottom: inherit;
+    left: 25%;
+    right: inherit;
+    margin: 0 !important;
+    padding: 0 !important;
+
+  }
+}
