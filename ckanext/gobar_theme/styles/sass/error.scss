@@ -32,7 +32,7 @@
             @include border-radius(15%);
             @include transition-duration(800ms);
             @include transition-property(opacity);
-            @include transition-delay(0);
+            @include transition-delay(0s);
             @include transition-timing-function(linear);
             opacity: 0;
             &.visible {

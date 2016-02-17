@@ -33,7 +33,7 @@ svg#background {
   }
   g {
     @include transform-origin(50% 50%);
-    @include animation-delay(0);
+    @include animation-delay(0s);
     @include animation-iteration-count(infinite);
     @include animation-timing-function(linear);
 

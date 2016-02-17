@@ -18,7 +18,7 @@
     opacity: 1;
 
     @include transition-duration(1s);
-    @include transition-delay(0);
+    @include transition-delay(0s);
     @include transition-property(opacity);
     @include transition-timing-function(linear);
 
@@ -103,7 +103,7 @@
       padding: $edit-padding;
       background: $light-grey;
       @include border-radius(4px);
-      @include transition-delay(0);
+      @include transition-delay(0s);
       @include transition-duration(200ms);
       @include transition-timing-function(ease-in);
       @include transition-property(top);
