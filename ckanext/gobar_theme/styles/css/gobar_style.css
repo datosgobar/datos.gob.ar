@@ -108,34 +108,50 @@ a, a:hover {
 
 @-webkit-keyframes rotateClockwise {
   from {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg); }
   to {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(360deg); } }
 @-moz-keyframes rotateClockwise {
   from {
-    transform: rotate(0deg); }
+    -moz-transform: rotate(0deg); }
   to {
-    transform: rotate(360deg); } }
+    -moz-transform: rotate(360deg); } }
 @keyframes rotateClockwise {
   from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     transform: rotate(0deg); }
   to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     transform: rotate(360deg); } }
 @-webkit-keyframes rotateCounterClockwise {
   from {
-    transform: rotate(0deg); }
+    -webkit-transform: rotate(0deg); }
   to {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(-360deg); } }
 @-moz-keyframes rotateCounterClockwise {
   from {
-    transform: rotate(0deg); }
+    -moz-transform: rotate(0deg); }
   to {
-    transform: rotate(360deg); } }
+    -moz-transform: rotate(-360deg); } }
 @keyframes rotateCounterClockwise {
   from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
     transform: rotate(0deg); }
   to {
-    transform: rotate(360deg); } }
+    -webkit-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -ms-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg); } }
 svg#background {
   position: absolute;
   width: 50%;
@@ -147,11 +163,6 @@ svg#background {
   svg#background circle {
     fill: none; }
   svg#background g {
-    -webkit-transform-origin: 50% 50%;
-    -moz-transform-origin: 50% 50%;
-    -ms-transform-origin: 50% 50%;
-    -o-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
     -webkit-animation-delay: 0s;
     -moz-animation-delay: 0s;
     animation-delay: 0s;
