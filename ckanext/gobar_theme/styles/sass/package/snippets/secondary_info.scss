@@ -21,6 +21,7 @@
       p.pkg-maintainer {
         svg {
           width: 1em;
+          height: 1em;
           fill: $light-grey;
           &:hover {
             fill: $dark-blue;
@@ -33,6 +34,12 @@
         margin: 0 0 5px 5px;
       }
       p.pkg-tag {
+        a {
+          color: $grey;
+          &:hover {
+            color: $dark-blue;
+          }
+        }
         margin: 0 0 5px 0;
       }
     }

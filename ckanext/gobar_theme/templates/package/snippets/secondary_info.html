@@ -19,6 +19,8 @@
             </div>
         </div>
 
+        {% set dataset_url = h.url_for(controller='package', action='search') %}
+
         <div class="row">
             <div class="col-xs-12 col-md-4 title">
                 Grupos
@@ -36,7 +38,11 @@
             </div>
             <div class="col-xs-12 col-md-8 value">
                 {% for tag in pkg.tags %}
-                    <p class="pkg-tag">{{ tag.name }}</p>
+                    <p class="pkg-tag">
+                        <a href="{{ h.add_url_param(new_params={'tags': tag.name}, alternative_url=dataset_url) }}">
+                            {{ tag.name }}
+                        </a>
+                    </p>
                 {% endfor %}
             </div>
         </div>

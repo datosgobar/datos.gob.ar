@@ -887,7 +887,8 @@ svg#background {
       padding: 4px;
       text-align: center; }
       .filters-container .search-filter .group-images .group-image-container svg {
-        max-width: 50px; }
+        max-width: 50px;
+        max-height: 50px; }
         .filters-container .search-filter .group-images .group-image-container svg path {
           fill: #eaeced; }
       .filters-container .search-filter .group-images .group-image-container.available svg path {
@@ -1025,6 +1026,7 @@ svg#background {
   font-size: 14px; }
   #pkg-main-info #pkg-title-and-desc p.pkg-author svg {
     width: 1em;
+    height: 1em;
     fill: #D1D3D4; }
     #pkg-main-info #pkg-title-and-desc p.pkg-author svg:hover {
       fill: #0072bc; }
@@ -1057,6 +1059,7 @@ svg#background {
     padding: 0; }
     #pkg-secondary-info #info-container .value p.pkg-maintainer svg {
       width: 1em;
+      height: 1em;
       fill: #D1D3D4; }
       #pkg-secondary-info #info-container .value p.pkg-maintainer svg:hover {
         fill: #0072bc; }
@@ -1066,6 +1069,10 @@ svg#background {
       margin: 0 0 5px 5px; }
     #pkg-secondary-info #info-container .value p.pkg-tag {
       margin: 0 0 5px 0; }
+      #pkg-secondary-info #info-container .value p.pkg-tag a {
+        color: #58595B; }
+        #pkg-secondary-info #info-container .value p.pkg-tag a:hover {
+          color: #0072bc; }
 
 #pkg-recent-activity {
   background: #fafafa; }
