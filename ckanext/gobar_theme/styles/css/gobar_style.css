@@ -940,7 +940,8 @@ svg#background {
         display: inline-block;
         width: 3.5em;
         font-weight: 500;
-        margin: 0 0 5px 5px; }
+        margin: 0 0 5px 5px;
+        background-color: #0072bc; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=html], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=html] {
           background-color: #8e24aa; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=json], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=json] {
@@ -1154,36 +1155,38 @@ svg#background {
       font-weight: 500; }
     .resource-container .resource .resource-additional-info .resource-additional .value {
       padding: 0; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=html], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=html] {
-        background-color: #8e24aa; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=json], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=json] {
-        background-color: #ef7100; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xml], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xml] {
-        background-color: #ef7100; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=text], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=text] {
-        background-color: #74cbec; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=csv], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=csv] {
-        background-color: #fdd835; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xls], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xls] {
-        background-color: #2db55d; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=zip], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=zip] {
-        background-color: #ffb300; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=api], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=api] {
-        background-color: #ec96be; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=pdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=pdf] {
-        background-color: #e53935; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=zip], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=zip] {
-        background-color: #686868; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=rdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=rdf] {
-        background-color: #0b4498; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=nquad], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=nquad] {
-        background-color: #0b4498; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=ntriples], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=ntriples] {
-        background-color: #0b4498; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=turtle], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=turtle] {
-        background-color: #0b4498; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=shp], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=shp] {
-        background-color: #1e88e5; }
+      .resource-container .resource .resource-additional-info .resource-additional .value span.label {
+        background-color: #0072bc; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=html], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=html] {
+          background-color: #8e24aa; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=json], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=json] {
+          background-color: #ef7100; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xml], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xml] {
+          background-color: #ef7100; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=text], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=text] {
+          background-color: #74cbec; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=csv], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=csv] {
+          background-color: #fdd835; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xls], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xls] {
+          background-color: #2db55d; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=zip], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=zip] {
+          background-color: #ffb300; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=api], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=api] {
+          background-color: #ec96be; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=pdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=pdf] {
+          background-color: #e53935; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=zip], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=zip] {
+          background-color: #686868; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=rdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=rdf] {
+          background-color: #0b4498; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=nquad], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=nquad] {
+          background-color: #0b4498; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=ntriples], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=ntriples] {
+          background-color: #0b4498; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=turtle], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=turtle] {
+          background-color: #0b4498; }
+        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=shp], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=shp] {
+          background-color: #1e88e5; }
 
 .pkg-container {
   position: relative; }
@@ -1193,6 +1196,8 @@ svg#background {
     height: 50.4px;
     top: 0;
     left: 0; }
+    .pkg-container .pkg-file-img svg path {
+      fill: #0072bc; }
     .pkg-container .pkg-file-img[data-format=html] svg path, .pkg-container .pkg-file-img[data-format*=html] svg path {
       fill: #8e24aa; }
     .pkg-container .pkg-file-img[data-format=json] svg path, .pkg-container .pkg-file-img[data-format*=json] svg path {

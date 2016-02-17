@@ -103,14 +103,21 @@ $colors: (
                 ("turtle", "#0b4498"),
                 ("shp", "#1e88e5")
 );
+$default-color: $dark-blue;
 
 @mixin svgFormatColors() {
+  svg {
+    path {
+      fill: #{$default-color};
+    }
+  }
   @each $format, $color in $colors {
     @include svgFormatColor($format, $color);
   }
 }
 
 @mixin labelsFormatColors() {
+  background-color: #{$default-color};
   @each $format, $color in $colors {
     @include labelFormatColor($format, $color);
   }

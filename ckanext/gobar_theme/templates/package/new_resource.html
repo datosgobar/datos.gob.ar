@@ -1,0 +1,11 @@
+{% extends "gobar_page.html" %}
+
+{% block content %}
+    <div id="new-package-container" class="container-fluid">
+        <div id="new-package" class="col-xs-12 col-md-10 col-md-offset-1">
+            <h1>Crear dataset</h1>
+            {% set logged_in = true if c.userobj else false %}
+            {% snippet resource_form_snippet, data=data, errors=errors, error_summary=error_summary, include_metadata=false, pkg_name=pkg_name, stage=stage, allow_upload=g.ofs_impl and logged_in, dataset_type=dataset_type %}
+        </div>
+    </div>
+{% endblock %}
