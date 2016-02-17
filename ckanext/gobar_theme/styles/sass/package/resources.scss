@@ -1,0 +1,18 @@
+@import '../utils/globals';
+@import '../utils/mixins';
+
+#edit-resources-container {
+  #edit-resources {
+    @include base-container();
+    .action-buttons {
+      margin: 20px 0;
+      .edit-dataset-button, .add-resource {
+        margin: 0 10px 0 0;
+      }
+      .btn {
+        border-color: $light-grey;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,29 @@
+{% extends "gobar_page.html" %}
+
+{% set has_reorder = c.pkg_dict and c.pkg_dict.resources and c.pkg_dict.resources|length > 0 %}
+
+{% block content %}
+    <div id="edit-resources-container" class="container-fluid">
+        <div id="edit-resources" class="col-xs-12 col-md-10 col-md-offset-1">
+            <h1>Recursos del dataset</h1>
+            <div class="page_primary_action action-buttons">
+                {% link_for 'Editar dataset', controller='package', action='edit', id=c.pkg_dict.name, class_='btn btn-primary edit-dataset-button', icon='wrench' %}
+                {% link_for _('Add new resource'), controller='package', action='new_resource', id=c.pkg_dict.name, class_='btn btn-primary add-resource', icon='plus' %}
+
+            </div>
+            <ul class="resource-list"{% if has_reorder %} data-module="resource-reorder"
+                data-module-id="{{ c.pkg_dict.id }}"{% endif %}>
+                {% for resource in c.pkg_dict.resources %}
+                    {% snippet 'package/snippets/resource_item.html', pkg=c.pkg_dict, res=resource, url_is_edit=true %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+    {% if has_reorder %}
+        {% resource 'vendor/reorder' %}
+    {% endif %}
+{% endblock %}

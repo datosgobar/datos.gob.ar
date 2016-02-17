@@ -1075,6 +1075,21 @@ svg#background {
     font-size: 22px;
     border-bottom: solid 1px #D1D3D4; }
 
+#edit-resources-container #edit-resources {
+  padding: 30px 50px;
+  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+  color: #58595B;
+  font-size: 16px; }
+  #edit-resources-container #edit-resources .action-buttons {
+    margin: 20px 0; }
+    #edit-resources-container #edit-resources .action-buttons .edit-dataset-button, #edit-resources-container #edit-resources .action-buttons .add-resource {
+      margin: 0 10px 0 0; }
+    #edit-resources-container #edit-resources .action-buttons .btn {
+      border-color: #D1D3D4; }
+
 #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
   padding: 30px 50px;
   -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
