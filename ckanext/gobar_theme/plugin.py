@@ -54,6 +54,30 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
         routing_map.redirect('/group/members/{id}', '/group/list')
         routing_map.redirect('/group/activity/{id}/{offset}', '/group/list')
 
+        # Usuarios
+        user_controller = 'ckanext.gobar_theme.controller:GobArUserController'
+        routing_map.connect('/user/edit', action='edit', controller='user')
+        routing_map.redirect('/user/generate_key/{id}', '/')
+        routing_map.redirect('/user/activity/{id}/{offset}', '/')
+        routing_map.redirect('/user/activity/{id}', '/')
+        routing_map.redirect('/user/follow/{id}', '/')
+        routing_map.redirect('/user/unfollow/{id}', '/')
+        routing_map.redirect('/user/followers/{id:.*}', '/')
+        routing_map.connect('user_edit', '/user/edit/{id:.*}', action='edit', ckan_icon='cog', controller='user')
+        routing_map.redirect('/user/delete/{id}', '/')
+        routing_map.redirect('/user/reset/{id:.*}', '/')
+        routing_map.redirect('/user/register', '/')
+        routing_map.connect('login', '/user/login', action='login', controller='user')
+        routing_map.connect('/user/_logout', action='logout', controller='user')
+        routing_map.connect('/user/logged_in', action='logged_in', controller='user')
+        routing_map.connect('/user/logged_out', action='logged_out', controller='user')
+        routing_map.connect('/user/logged_out_redirect', action='logged_out_page', controller='user')
+        routing_map.redirect('/user/reset', '/')
+        routing_map.redirect('/user/me', '/')
+        routing_map.redirect('/user/set_lang/{lang}', '/')
+        routing_map.connect('user_datasets', '/user/{id:.*}', action='read', ckan_icon='sitemap', controller=user_controller)
+        routing_map.redirect('/user', '/')
+
         return routing_map
 
     def get_helpers(self):

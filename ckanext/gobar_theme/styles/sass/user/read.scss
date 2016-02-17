@@ -1,0 +1,8 @@
+@import '../utils/globals';
+@import '../utils/mixins';
+
+#user-datasets-container {
+  #user-datasets {
+    @include base-container();
+  }
+}

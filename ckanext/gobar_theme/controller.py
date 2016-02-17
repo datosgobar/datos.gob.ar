@@ -1,6 +1,8 @@
 from ckan.controllers.home import HomeController
 from ckan.controllers.organization import OrganizationController
+from ckan.controllers.user import UserController
 from ckan.common import c
+import ckan.lib.helpers as h
 import ckan.logic as logic
 import ckan.model as model
 import ckan.lib.base as base
@@ -37,3 +39,12 @@ class GobArOrganizationController(OrganizationController):
 
     def index(self):
         return base.render('organization/index.html')
+
+
+class GobArUserController(UserController):
+
+    def read(self, id=None):
+        if not c.user:
+            h.redirect_to('/')
+        else:
+            return super(GobArUserController, self).read(id)

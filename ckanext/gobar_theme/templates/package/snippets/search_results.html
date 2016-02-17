@@ -1,6 +1,7 @@
 <div id="search-results" class="col-xs-12 col-md-8">
     {% if h.check_access('package_create') %}
         <div class="add-dataset">
+            {% link_for 'Ver datasets privados', controller='user', action='read', id=c.user, class_='btn btn-primary', icon='list' %}
             {% link_for _('Add Dataset'), controller='package', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
         </div>
     {% endif %}

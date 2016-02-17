@@ -1,0 +1,14 @@
+{% extends "gobar_page.html" %}
+
+{% set user = c.user_dict %}
+
+{% block content %}
+    <div id="user-datasets-container" class="container-fluid">
+        <div id="user-datasets" class="col-xs-12 col-md-10 col-md-offset-1">
+            <div class="col-xs-12 col-md-8 col-md-offset-2">
+                <h2>Datasets</h2>
+                {% snippet 'snippets/package_list.html', packages=user.datasets %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
