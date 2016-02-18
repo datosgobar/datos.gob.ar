@@ -3,14 +3,14 @@
 
 .filters-container {
   background: #fafafa;
-  border-right: solid 1px $light-grey;
-  padding: 30px 0;
+  border-right: solid 1px $inactive;
+  padding: 0 0 30px 0;
 
   .search-filter {
     $side-padding: 15px;
 
     h2.filter-title {
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 500;
       padding: 0 $side-padding;
     }
@@ -49,10 +49,10 @@
     hr {
       margin: 20px;
       border: none;
-      border-top: solid 1px $light-grey;
+      border-top: solid 1px $inactive;
     }
 
-    a.filter-show-more + hr, a.filter-less-more + hr {
+    a.filter-show-more + hr, a.filter-show-less + hr {
       margin: 0;
     }
 
@@ -62,6 +62,7 @@
 
       a {
         color: inherit;
+        font-size: 14px;
 
         li {
           padding: 5px ($side-padding + 10px);
@@ -81,6 +82,7 @@
             background: $light-blue;
             border-left: solid 5px $dark-blue;
             padding-left: $side-padding + 5px;
+            padding-right: $side-padding + 15px;
             .close-filter {
               display: inline-block;
               position: absolute;
@@ -102,10 +104,9 @@
         display: inline-block;
         padding: 4px;
         text-align: center;
-        $inactive: #eaeced;
         svg {
-          max-width: 50px;
-          max-height: 50px;
+          max-width: 35px;
+          max-height: 35px;
           path {
             fill: $inactive;
           }

@@ -4,6 +4,7 @@
 .resource-container {
   .resource{
     @include base-container();
+    padding-bottom: 50px;
 
     .title {
       $top-space: 20px;
@@ -12,6 +13,10 @@
       h1 {
         color: $dark-blue;
         margin: $top-space 0 0 0;
+        font-size: 24px;
+      }
+      p {
+        font-size: 14px;
       }
       svg {
         width: $download-size;
@@ -26,8 +31,11 @@
     }
 
     .resource-alternative-packages {
+      border-bottom: solid 1px $light-grey;
+      padding-bottom: 20px;
+
       h2 {
-        font-size: 22px;
+        font-size: 17px;
         border-bottom: solid 1px $light-grey;
         margin-bottom: 0;
       }
@@ -35,14 +43,18 @@
 
     .resource-additional-info {
       h2 {
-        font-size: 22px;
+        font-size: 17px;
         border-bottom: solid 1px $light-grey;
         color: $dark-blue;
         margin-bottom: 0;
       }
       .resource-additional {
-        border-bottom: solid 1px $light-grey;
         padding: 15px 5px;
+        font-size: 14px;
+        border-bottom: solid 1px $inactive;
+        &:last-child {
+          border-bottom: solid 1px $light-grey;
+        }
         .key {
           padding: 0;
           font-weight: 500;

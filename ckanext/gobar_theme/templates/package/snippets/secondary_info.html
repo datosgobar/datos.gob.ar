@@ -79,4 +79,10 @@
         {% endif %}
 
     </div>
+
+    <div id="pkg-recent-activity">
+        <h2 class="recent-activity-title">Actividad reciente</h2>
+        {% set activity = h.get_action('package_activity_list_html', {'id': pkg.id, 'limit': 5}) %}
+        {{ activity }}
+    </div>
 </div>

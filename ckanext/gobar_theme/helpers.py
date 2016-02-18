@@ -61,3 +61,12 @@ def join_groups(selected_groups, remaining_groups):
         group['selected'] = False
         groups.append(group)
     return sorted(groups, key=lambda k: k['display_name'].lower())
+
+
+def cut_text(text, limit):
+    if len(text) > limit:
+        text, remaining = text[:limit], text[limit:]
+        if ' ' in remaining:
+            text += remaining.split(' ')[0]
+        text += '...'
+    return text

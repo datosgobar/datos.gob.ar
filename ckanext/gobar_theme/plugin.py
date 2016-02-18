@@ -84,5 +84,6 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
         return {
             'organization_tree': gobar_helpers.organization_tree,
             'get_faceted_groups': gobar_helpers.get_faceted_groups,
-            'join_groups': gobar_helpers.join_groups
+            'join_groups': gobar_helpers.join_groups,
+            'cut_text': gobar_helpers.cut_text
         }

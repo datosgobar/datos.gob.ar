@@ -54,15 +54,16 @@
 
     .order {
       text-align: right;
+      padding-right: 0;
       label {
         font-weight: 500;
         font-size: 16px;
         padding-right: 5px;
-        max-width: 50%;
+        max-width: 40%;
         @include box-sizing(border-box);
       }
       select {
-        max-width: 50%;
+        max-width: 60%;
       }
     }
 

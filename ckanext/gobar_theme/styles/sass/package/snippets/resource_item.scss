@@ -52,8 +52,13 @@
   .package-info {
     padding: 0 (2*$right-img-size + 10px) 0 ($file-img-width + 10px);
     color: $grey;
+    min-height: $right-img-size;
     h3 {
-      margin: 30px 0 0 0;
+      margin: 30px 0 6px 0;
+      font-size: 16px;
+    }
+    p {
+      font-size: 13px;
     }
   }
 }

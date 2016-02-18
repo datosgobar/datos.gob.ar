@@ -2,9 +2,9 @@
 
 {% set placeholder = placeholder if placeholder else _('Search datasets...') %}
 {% set sorting = [
-      (_('Name Ascending'), 'title_string asc'),
-      (_('Name Descending'), 'title_string desc'),
-      (_('Last Modified'), 'metadata_modified desc') ] %}
+      ('Ascendente', 'title_string asc'),
+      ('Descendente', 'title_string desc'),
+      ('Ultima modificación', 'metadata_modified desc') ] %}
 {% set search_class = search_class if search_class else 'search-giant' %}
 {% set no_bottom_border = no_bottom_border if no_bottom_border else false %}
 {% set form_id = form_id if form_id else false %}
@@ -24,7 +24,7 @@
     {%- endif %}
 
     <div class="order col-xs-6">
-        <label for="field-order-by">{{ _('Order by') }}</label>
+        <label for="field-order-by">Ordenar</label>
         <select id="field-order-by" name="sort">
             {% for label, value in sorting %}
                 {% if label and value %}
@@ -33,7 +33,7 @@
                 {% endif %}
             {% endfor %}
         </select>
-        <button class="btn js-hide" type="submit">{{ _('Go') }}</button>
+        <button class="btn js-hide" type="submit" style="display:none;"></button>
     </div>
 
 </form>

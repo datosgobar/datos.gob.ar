@@ -5,43 +5,49 @@
   h2.secondary-info-title {
     color: $dark-blue;
     margin-top: 58px;
-    font-size: 22px;
+    font-size: 17px;
     border-bottom: solid 1px $light-grey;
   }
 
   #info-container {
-    .title {
-      font-weight: 500;
+    font-size: 14px;
+    .row {
+      border-bottom: 1px solid $inactive;
       margin-bottom: 10px;
-      padding: 0;
-    }
-    .value {
-      margin-bottom: 10px;
-      padding: 0;
-      p.pkg-maintainer {
-        svg {
-          width: 1em;
-          height: 1em;
-          fill: $light-grey;
-          &:hover {
-            fill: $dark-blue;
+      .title {
+        font-weight: 500;
+        margin-bottom: 10px;
+        padding: 0;
+      }
+      .value {
+        margin-bottom: 10px;
+        padding: 0;
+        p.pkg-maintainer {
+          svg {
+            width: 1em;
+            height: 1em;
+            fill: $light-grey;
+            &:hover {
+              fill: $dark-blue;
+            }
           }
         }
-      }
-      img.group-image {
-        width: 30px;
-        height: 30px;
-        margin: 0 0 5px 5px;
-      }
-      p.pkg-tag {
-        a {
-          color: $grey;
-          &:hover {
-            color: $dark-blue;
-          }
+        img.group-image {
+          width: 30px;
+          height: 30px;
+          margin: 0 0 5px 5px;
         }
-        margin: 0 0 5px 0;
+        p.pkg-tag {
+          a {
+            color: $grey;
+            &:hover {
+              color: $dark-blue;
+            }
+          }
+          margin: 0 0 5px 0;
+        }
       }
     }
+
   }
 }

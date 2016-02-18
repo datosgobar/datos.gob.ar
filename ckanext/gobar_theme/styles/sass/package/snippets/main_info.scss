@@ -6,7 +6,7 @@
     h1.pkg-title {
       margin: 50px 0 0 0;
       color: $dark-blue;
-      font-size: 30px;
+      font-size: 24px;
     }
     .edit-button {
       float: right;
@@ -14,7 +14,7 @@
     }
     p.pkg-author {
       color: $light-grey;
-      font-size: 14px;
+      font-size: 13px;
       svg {
         width: 1em;
         height: 1em;
@@ -26,11 +26,12 @@
     }
     p.pkg-notes {
       margin-bottom: 50px;
+      font-size: 14px;
     }
     h2.pkg-resources-title {
       color: $grey;
       border-bottom: solid 1px $light-grey;
-      font-size: 22px;
+      font-size: 17px;
     }
     .contact {
       width: 15px;
@@ -40,5 +41,6 @@
   #pkg-resources {
     padding-bottom: 20px;
     border-bottom: solid 1px $light-grey;
+    margin-bottom: 50px;
   }
 }
