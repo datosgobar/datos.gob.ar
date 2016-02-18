@@ -1,5 +1,7 @@
 {% extends "gobar_page.html" %}
 
+{% block subtitle %} - Recursos del dataset{% endblock %}
+
 {% set has_reorder = c.pkg_dict and c.pkg_dict.resources and c.pkg_dict.resources|length > 0 %}
 
 {% block content %}

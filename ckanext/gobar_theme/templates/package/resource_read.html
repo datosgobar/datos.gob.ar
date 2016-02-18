@@ -1,5 +1,7 @@
 {% extends "gobar_page.html" %}
 
+{% block subtitle %} - {{ c.resource.name }}{% endblock %}
+
 {% set pkg = c.pkg_dict or pkg_dict %}
 {% set res = c.resource %}
 
