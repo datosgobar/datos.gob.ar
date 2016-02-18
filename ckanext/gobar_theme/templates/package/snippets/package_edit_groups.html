@@ -1,0 +1,17 @@
+<div class="control-group control-full">
+    <label class="control-label" for="field-groups">Grupos</label>
+
+    <div class="controls package-groups">
+        {% for group in h.join_groups(selected_groups, remaining_groups) %}
+            <input type="checkbox" class="package-group-checkbox"
+                   id="{{ group.name }}"
+                    {{ 'checked' if group.selected else '' }}>
+            <label class="package-group-label" for="{{ group.name }}">
+                {{ group.display_name }}
+                <i class="icon-check"></i>
+            </label>
+        {% endfor %}
+    </div>
+</div>
+
+{% resource 'gobar_js/form_groups.js' %}

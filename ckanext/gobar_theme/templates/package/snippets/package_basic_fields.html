@@ -3,13 +3,6 @@
 {% block package_basic_fields_org %}
     {{ super() }}
 
-    <div class="control-group control-full">
-        <label class="control-label" for="field-groups">Grupos</label>
+    {% snippet "package/snippets/package_edit_groups.html", selected_groups=data.groups, remaining_groups=groups_available %}
 
-        <div class="controls ">
-            <p>
-                Momentaneamente no hay edicion de grupos :(
-            </p>
-        </div>
-    </div>
 {% endblock %}

@@ -63,7 +63,7 @@
           display: inline-block;
           margin: 0;
           width: 20%;
-        @include font-spacing($font-size, $line-height, $input-padding);
+          @include font-spacing($font-size, $line-height, $input-padding);
         }
         label.icon-remove {
           position: absolute;
@@ -88,7 +88,32 @@
         }
       }
     }
+    .package-groups {
+      input[type="checkbox"].package-group-checkbox {
+        width: 1px;
+        height: 1px;
+        position: fixed;
+        left: -10px;
+        top: -10px;
+      }
+      label.package-group-label {
+        color: $light-grey;
+        margin: 0;
+        padding: 2px 0;
+        &:after {
+          content: initial;
+        }
+        &:hover {
+          color: $dark-blue;
+        }
+      }
+      input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
+        color: $dark-blue;
+      }
+
+    }
     .control-group {
+      position: relative;
       &.error {
         .input-prepend {
           .add-on {

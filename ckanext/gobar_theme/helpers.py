@@ -50,3 +50,14 @@ def get_faceted_groups():
             group['facet_active'] = False
             group['facet_count'] = 0
     return groups
+
+
+def join_groups(selected_groups, remaining_groups):
+    groups = []
+    for group in selected_groups:
+        group['selected'] = True
+        groups.append(group)
+    for group in remaining_groups:
+        group['selected'] = False
+        groups.append(group)
+    return sorted(groups, key=lambda k: k['display_name'].lower())
