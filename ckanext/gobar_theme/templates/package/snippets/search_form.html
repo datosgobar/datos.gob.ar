@@ -12,7 +12,7 @@
 <form {% if form_id %}id="{{ form_id }}" {% endif %} class="search-form container-fluid search-and-order"
       method="get" data-module="select-switch">
     <div class="searcher col-xs-6">
-        <input type="text" class="search" name="q" value="" autocomplete="off"
+        <input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off"
                placeholder="Buscar dataset">
         <button type="submit" value="search">
             <i class="icon-search"></i>
