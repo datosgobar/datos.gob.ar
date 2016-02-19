@@ -25,15 +25,26 @@ class GobArHomeController(HomeController):
         c.groups = logic.get_action('group_list')(context, data_dict_page_results)
         return super(GobArHomeController, self).index()
 
-    def about(self):
-        return base.render('static/about.html')
+    def open_data(self):
+        return base.render('static/open_data.html')
 
-    def terms(self):
-        return base.render('static/terms.html')
+    def legal_planning(self):
+        return base.render('static/legal_planning.html')
 
-    def specs(self):
-        return base.render('static/specs.html')
+    def legal_system(self):
+        return base.render('static/legal_system.html')
 
+    def legal_access(self):
+        return base.render('static/legal_access.html')
+
+    def platform_users(self):
+        return base.render('static/platform_users.html')
+
+    def platform_terms(self):
+        return base.render('static/platform_terms.html')
+
+    def platform_license(self):
+        return base.render('static/platform_license.html')
 
 class GobArOrganizationController(OrganizationController):
 
