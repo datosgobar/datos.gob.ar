@@ -1,1 +1,13 @@
-Platform license
+{% extends "gobar_page.html" %}
+
+{% block subtitle %} - Plataforma - Licencias{% endblock %}
+
+{% block content %}
+    {% snippet "static/static_nav_bar.html", active_button='nav-platform' %}
+
+    <div id="platform-license-container" class="container-fluid gobar-static-container">
+        <div id="platform-license" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
+            {% snippet "static/lorem.html" %}
+        </div>
+    </div>
+{% endblock %}

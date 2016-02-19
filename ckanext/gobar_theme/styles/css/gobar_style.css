@@ -316,7 +316,7 @@ div#background-container {
         -moz-animation-name: rotateCounterClockwise;
         animation-name: rotateCounterClockwise; }
 
-#about #about-text, #about #specs-text, #about #terms-text, #specs #about-text, #specs #specs-text, #specs #terms-text, #terms #about-text, #terms #specs-text, #terms #terms-text {
+.gobar-static-container .gobar-static {
   padding: 30px 50px;
   -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
   -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
@@ -324,18 +324,38 @@ div#background-container {
   box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
   color: #58595B;
   font-size: 16px; }
-  #about #about-text h1, #about #specs-text h1, #about #terms-text h1, #specs #about-text h1, #specs #specs-text h1, #specs #terms-text h1, #terms #about-text h1, #terms #specs-text h1, #terms #terms-text h1 {
+  .gobar-static-container .gobar-static h1 {
     margin: 20px 0;
     font-weight: 400;
     font-size: 40px; }
-  #about #about-text h2, #about #specs-text h2, #about #terms-text h2, #specs #about-text h2, #specs #specs-text h2, #specs #terms-text h2, #terms #about-text h2, #terms #specs-text h2, #terms #terms-text h2 {
+  .gobar-static-container .gobar-static h2 {
     font-weight: 400;
     font-size: 25px; }
-  #about #about-text h3, #about #specs-text h3, #about #terms-text h3, #specs #about-text h3, #specs #specs-text h3, #specs #terms-text h3, #terms #about-text h3, #terms #specs-text h3, #terms #terms-text h3 {
+  .gobar-static-container .gobar-static h3 {
     color: #0072bc;
     font-size: 20px; }
-  #about #about-text strong, #about #specs-text strong, #about #terms-text strong, #specs #about-text strong, #specs #specs-text strong, #specs #terms-text strong, #terms #about-text strong, #terms #specs-text strong, #terms #terms-text strong {
+  .gobar-static-container .gobar-static strong {
     font-weight: 500; }
+
+#static-nav-bar {
+  background-color: #f5f5f5;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  border-bottom: solid 1px #eaeced; }
+  #static-nav-bar a.nav-button {
+    display: inline-block;
+    color: #58595B;
+    padding: 10px 0 7px 0;
+    border-bottom: solid 3px transparent;
+    font-weight: 500; }
+    #static-nav-bar a.nav-button .nav-button-border {
+      padding: 0 20px; }
+    #static-nav-bar a.nav-button#nav-legal-link .nav-button-border, #static-nav-bar a.nav-button#nav-plaform-link .nav-button-border {
+      border-left: solid 1px #D1D3D4; }
+    #static-nav-bar a.nav-button:hover, #static-nav-bar a.nav-button.active {
+      color: #0072bc;
+      border-bottom-color: #0072bc; }
 
 #error #error-text {
   padding: 30px 50px;

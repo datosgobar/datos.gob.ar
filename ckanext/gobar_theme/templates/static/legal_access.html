@@ -1,1 +1,13 @@
-Legal access
+{% extends "gobar_page.html" %}
+
+{% block subtitle %} - Marco Legal - Régimen de Acceso a la Información Pública{% endblock %}
+
+{% block content %}
+    {% snippet "static/static_nav_bar.html", active_button='nav-legal' %}
+
+    <div id="legal-access-container" class="container-fluid gobar-static-container">
+        <div id="legal-access" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
+            {% snippet "static/lorem.html" %}
+        </div>
+    </div>
+{% endblock %}

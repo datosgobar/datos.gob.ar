@@ -1,1 +1,13 @@
-Platform terms
+{% extends "gobar_page.html" %}
+
+{% block subtitle %} - Plataforma - Términos y Condiciones de Uso{% endblock %}
+
+{% block content %}
+    {% snippet "static/static_nav_bar.html", active_button='nav-platform' %}
+
+    <div id="platform-terms-container" class="container-fluid gobar-static-container">
+        <div id="platform-terms" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
+            {% snippet "static/lorem.html" %}
+        </div>
+    </div>
+{% endblock %}

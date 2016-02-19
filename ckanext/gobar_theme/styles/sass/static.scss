@@ -1,8 +1,8 @@
 @import 'utils/globals';
 @import 'utils/mixins';
 
-#about, #specs, #terms {
-  #about-text, #specs-text, #terms-text {
+.gobar-static-container {
+  .gobar-static {
     @include base-container();
     h1 {
       margin: 20px 0;
@@ -19,6 +19,40 @@
     }
     strong {
       font-weight: 500;
+    }
+  }
+}
+
+#static-nav-bar {
+  background-color: #f5f5f5;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  border-bottom: solid 1px $inactive;
+
+  $vertical-padding: 10px;
+  $border-bottom: 3px;
+
+  a.nav-button {
+    display: inline-block;
+    color: $grey;
+    padding: $vertical-padding 0 ($vertical-padding - $border-bottom) 0;
+    border-bottom: solid $border-bottom transparent;
+    font-weight: 500;
+
+    .nav-button-border {
+      padding: 0 20px;
+    }
+
+    &#nav-legal-link, &#nav-plaform-link {
+      .nav-button-border {
+        border-left: solid 1px $light-grey;
+      }
+    }
+
+    &:hover, &.active {
+      color: $dark-blue;
+      border-bottom-color: $dark-blue;
     }
   }
 }

@@ -1,0 +1,27 @@
+<div id="static-nav-bar">
+    <a href="{{ h.url('gobar_open_data') }}"
+       class="nav-button {{ 'active' if active_button == 'nav-data' else '' }}">
+        <span class="nav-button-border">
+            DATOS ABIERTOS
+        </span>
+    </a>
+
+    {%- set spacer = None -%}
+
+    <a href="{{ h.url('gobar_legal_planning') }}" id="nav-legal-link"
+       class="nav-button {{ 'active' if active_button == 'nav-legal' else '' }}">
+        <span class="nav-button-border">
+            MARCO LEGAL
+        </span>
+    </a>
+
+    {%- set spacer = None -%}
+
+    <a href="{{ h.url('gobar_platform_users') }}" id="nav-plaform-link"
+       class="nav-button {{ 'active' if active_button == 'nav-platform' else '' }}">
+        <span class="nav-button-border">
+            PLATAFORMA
+        </span>
+    </a>
+
+</div>
