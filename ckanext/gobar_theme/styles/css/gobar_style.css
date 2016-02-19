@@ -343,19 +343,50 @@ div#background-container {
   z-index: 1;
   text-align: center;
   border-bottom: solid 1px #eaeced; }
-  #static-nav-bar a.nav-button {
-    display: inline-block;
-    color: #58595B;
-    padding: 10px 0 7px 0;
-    border-bottom: solid 3px transparent;
-    font-weight: 500; }
-    #static-nav-bar a.nav-button .nav-button-border {
-      padding: 0 20px; }
-    #static-nav-bar a.nav-button#nav-legal-link .nav-button-border, #static-nav-bar a.nav-button#nav-plaform-link .nav-button-border {
-      border-left: solid 1px #D1D3D4; }
-    #static-nav-bar a.nav-button:hover, #static-nav-bar a.nav-button.active {
+  #static-nav-bar .nav-section {
+    display: inline-block; }
+    #static-nav-bar .nav-section a.nav-button {
+      display: inline-block;
+      color: #58595B;
+      padding: 10px 0 7px 0;
+      border-bottom: solid 3px transparent;
+      font-weight: 500; }
+      #static-nav-bar .nav-section a.nav-button .nav-button-border {
+        padding: 0 20px; }
+      #static-nav-bar .nav-section a.nav-button#nav-legal-link .nav-button-border, #static-nav-bar .nav-section a.nav-button#nav-plaform-link .nav-button-border {
+        border-left: solid 1px #D1D3D4; }
+      #static-nav-bar .nav-section a.nav-button:hover {
+        color: #0072bc;
+        border-bottom-color: #0072bc; }
+    #static-nav-bar .nav-section:hover a.nav-button, #static-nav-bar .nav-section.active a.nav-button {
       color: #0072bc;
       border-bottom-color: #0072bc; }
+    #static-nav-bar .nav-section:hover .static-child-nav-bar, #static-nav-bar .nav-section.active .static-child-nav-bar {
+      display: block; }
+    #static-nav-bar .nav-section.active .static-child-nav-bar {
+      z-index: -1; }
+    #static-nav-bar .nav-section .static-child-nav-bar {
+      background-color: #f5f5f5;
+      position: absolute;
+      display: none;
+      width: 100%;
+      text-align: center;
+      border-top: solid 1px #eaeced;
+      border-bottom: solid 1px #eaeced;
+      height: 36.8px;
+      bottom: -36.8px;
+      left: 0; }
+      #static-nav-bar .nav-section .static-child-nav-bar a.nav-child-button {
+        display: inline-block;
+        color: #58595B;
+        padding: 10px 0;
+        font-size: 14px;
+        line-height: 1.2;
+        font-weight: 500; }
+        #static-nav-bar .nav-section .static-child-nav-bar a.nav-child-button .nav-button-border {
+          padding: 0 20px; }
+        #static-nav-bar .nav-section .static-child-nav-bar a.nav-child-button:hover, #static-nav-bar .nav-section .static-child-nav-bar a.nav-child-button.active {
+          color: #0072bc; }
 
 #error #error-text {
   padding: 30px 50px;
