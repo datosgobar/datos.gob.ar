@@ -957,7 +957,8 @@ div#background-container {
   box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
   color: #58595B;
   font-size: 16px;
-  padding: 0; }
+  padding: 0 0 30px 0;
+  overflow: hidden; }
 
 #search-results {
   -webkit-transition-duration: 300ms;
@@ -1031,11 +1032,14 @@ div#background-container {
         max-width: 60%; }
   #search-results .search-error strong {
     font-weight: 500; }
+  #search-results .pagination {
+    width: 100%; }
 
 .filters-container {
   background: #fafafa;
   border-right: solid 1px #eaeced;
-  padding: 0 0 30px 0; }
+  margin-bottom: -99999px;
+  padding: 0 0 99999px 0; }
   .filters-container .search-filter {
     -webkit-transition-duration: 300ms;
     -moz-transition-duration: 300ms;
