@@ -32,10 +32,15 @@
             }
           }
         }
-        img.group-image {
+        svg.group-image, img.group-image {
           width: 30px;
           height: 30px;
           margin: 0 0 5px 5px;
+          &:hover {
+            path {
+              fill: $dark-blue;
+            }
+          }
         }
         p.pkg-tag {
           a {
