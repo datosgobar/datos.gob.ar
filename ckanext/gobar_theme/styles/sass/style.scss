@@ -15,6 +15,10 @@ a, a:hover {
   text-decoration: none !important;
 }
 
+div.no-padding {
+  padding: 0;
+}
+
 @import 'header';
 @import 'footer';
 @import 'background';

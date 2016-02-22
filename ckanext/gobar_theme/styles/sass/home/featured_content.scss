@@ -1,0 +1,57 @@
+@import '../utils/mixins';
+
+#featured-content-container {
+  background-color: #e5e5e5;
+  padding: 0;
+
+  #featured-content {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .table-wrapper {
+      display: table;
+      .table-spacer {
+        display: table-cell;
+        border-right: solid 5px transparent;
+      }
+      a {
+        display: table-cell;
+        padding: 20px;
+        background: white;
+        @include border-radius(4px);
+        @include box-shadow(0 0 3px 0 rgba(100, 100, 100, 0.4));
+        width: 50%;
+
+        .featured-card {
+          h1 {
+            margin: 15px 0 0 0;
+            color: $dark-blue;
+            font-size: 18px;
+          }
+
+          h2 {
+            margin: 0;
+            color: $dark-blue;
+            font-size: 16px;
+            font-weight: 400;
+          }
+
+          h3 {
+            color: $light-grey;
+            font-size: 13px;
+            margin: 8px 0 0 0;
+          }
+
+          p {
+            color: $grey;
+            margin: 15px 0 0 0;
+            line-height: 1.3;
+          }
+
+        }
+      }
+
+    }
+
+  }
+}
