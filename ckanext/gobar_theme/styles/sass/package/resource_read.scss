@@ -6,6 +6,13 @@
     @include base-container();
     padding-bottom: 50px;
 
+    .back-to-pkg {
+      a {
+        color: $grey;
+        font-weight: 500;
+      }
+    }
+
     .title {
       $top-space: 20px;
       $download-size: 50px;

@@ -1532,6 +1532,9 @@ div#background-container {
   color: #58595B;
   font-size: 16px;
   padding-bottom: 50px; }
+  .resource-container .resource .back-to-pkg a {
+    color: #58595B;
+    font-weight: 500; }
   .resource-container .resource .title {
     padding-right: 60px; }
     .resource-container .resource .title h1 {

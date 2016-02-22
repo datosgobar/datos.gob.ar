@@ -8,6 +8,11 @@
 {% block content %}
     <div class="resource-container container-fluid">
         <div class="resource col-xs-12 col-md-10 col-md-offset-1">
+            <div class="col-xs-12 back-to-pkg">
+                <a href="{{ h.url_for(controller='package', action='read', id=pkg.name) }}">
+                    <i class="icon-chevron-left"></i> Volver
+                </a>
+            </div>
             <div class="col-xs-12 title">
                 <h1>{{ res.name }}</h1>
 
