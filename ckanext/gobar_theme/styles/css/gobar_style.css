@@ -1332,6 +1332,8 @@ div#background-container {
     #pkg-secondary-info #info-container .row {
       border-bottom: 1px solid #eaeced;
       margin-bottom: 10px; }
+      #pkg-secondary-info #info-container .row.group-row {
+        overflow: visible; }
       #pkg-secondary-info #info-container .row .title {
         font-weight: 500;
         margin-bottom: 10px;
@@ -1345,12 +1347,43 @@ div#background-container {
           fill: #D1D3D4; }
           #pkg-secondary-info #info-container .row .value p.pkg-maintainer svg:hover {
             fill: #0072bc; }
-        #pkg-secondary-info #info-container .row .value svg.group-image, #pkg-secondary-info #info-container .row .value img.group-image {
-          width: 30px;
-          height: 30px;
-          margin: 0 0 5px 5px; }
-          #pkg-secondary-info #info-container .row .value svg.group-image:hover path, #pkg-secondary-info #info-container .row .value img.group-image:hover path {
-            fill: #0072bc; }
+        #pkg-secondary-info #info-container .row .value .group-img-container {
+          display: inline-block;
+          position: relative; }
+          #pkg-secondary-info #info-container .row .value .group-img-container svg.group-image, #pkg-secondary-info #info-container .row .value .group-img-container img.group-image {
+            width: 30px;
+            height: 30px;
+            margin: 0 0 5px 5px; }
+            #pkg-secondary-info #info-container .row .value .group-img-container svg.group-image:hover path, #pkg-secondary-info #info-container .row .value .group-img-container img.group-image:hover path {
+              fill: #0072bc; }
+          #pkg-secondary-info #info-container .row .value .group-img-container .svg-tooltip {
+            position: absolute;
+            display: inline-block;
+            right: -99999px;
+            top: -70%; }
+            #pkg-secondary-info #info-container .row .value .group-img-container .svg-tooltip .tooltip-text {
+              padding: 4px;
+              background: #58595B;
+              color: white;
+              white-space: nowrap;
+              font-size: 10px;
+              opacity: 0;
+              -webkit-transition-delay: 400ms;
+              -moz-transition-delay: 400ms;
+              transition-delay: 400ms;
+              -webkit-transition-property: opacity;
+              -moz-transition-property: opacity;
+              transition-property: opacity;
+              -webkit-transition-timing-function: linear;
+              -moz-transition-timing-function: linear;
+              transition-timing-function: linear;
+              -webkit-transition-duration: 150ms;
+              -moz-transition-duration: 150ms;
+              transition-duration: 150ms; }
+          #pkg-secondary-info #info-container .row .value .group-img-container svg.group-image:hover + .svg-tooltip {
+            right: -25%; }
+            #pkg-secondary-info #info-container .row .value .group-img-container svg.group-image:hover + .svg-tooltip .tooltip-text {
+              opacity: 1; }
         #pkg-secondary-info #info-container .row .value p.pkg-tag {
           margin: 0 0 5px 0; }
           #pkg-secondary-info #info-container .row .value p.pkg-tag a {

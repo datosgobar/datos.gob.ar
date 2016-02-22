@@ -21,15 +21,18 @@
 
         {% set dataset_url = h.url_for(controller='package', action='search') %}
 
-        <div class="row">
+        <div class="row group-row">
             <div class="col-xs-12 col-md-4 title">
                 Grupos
             </div>
             <div class="col-xs-12 col-md-8 value">
                 {% for group in pkg.groups %}
-                    <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
-                        <img src="{{ group.image_display_url }}" title="{{ group.title }}" class="group-image" data-replace="svg">
-                    </a>
+                    <div class="group-img-container">
+                        <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
+                            <img src="{{ group.image_display_url }}" data-title="{{ group.title }}" class="group-image"
+                                 data-replace="svg">
+                        </a>
+                    </div>
                 {% endfor %}
             </div>
         </div>
