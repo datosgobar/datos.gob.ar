@@ -52,6 +52,9 @@ a, a:hover {
 div.no-padding {
   padding: 0; }
 
+div.svg-tooltip {
+  display: none; }
+
 #header {
   height: 50px;
   background: #0072bc;
@@ -1123,7 +1126,8 @@ div#background-container {
         width: 16.666666%;
         display: inline-block;
         padding: 4px;
-        text-align: center; }
+        text-align: center;
+        position: relative; }
         .filters-container .search-filter .group-images .group-image-container svg {
           max-width: 35px;
           max-height: 35px; }
@@ -1137,6 +1141,34 @@ div#background-container {
           fill: #0072bc; }
         .filters-container .search-filter .group-images .group-image-container.active:hover svg path {
           fill: #D1D3D4; }
+        .filters-container .search-filter .group-images .group-image-container .svg-tooltip {
+          position: absolute;
+          display: inline-block;
+          left: -99999px; }
+          .filters-container .search-filter .group-images .group-image-container .svg-tooltip .tooltip-text {
+            padding: 4px;
+            background: #58595B;
+            color: white;
+            white-space: nowrap;
+            font-size: 10px;
+            opacity: 0;
+            -webkit-transition-delay: 400ms;
+            -moz-transition-delay: 400ms;
+            transition-delay: 400ms;
+            -webkit-transition-property: opacity;
+            -moz-transition-property: opacity;
+            transition-property: opacity;
+            -webkit-transition-timing-function: linear;
+            -moz-transition-timing-function: linear;
+            transition-timing-function: linear;
+            -webkit-transition-duration: 150ms;
+            -moz-transition-duration: 150ms;
+            transition-duration: 150ms; }
+        .filters-container .search-filter .group-images .group-image-container:hover .svg-tooltip {
+          left: -25%;
+          top: -50%; }
+          .filters-container .search-filter .group-images .group-image-container:hover .svg-tooltip .tooltip-text {
+            opacity: 1; }
 
 .dataset-list .dataset-item .dataset-container {
   padding: 0;

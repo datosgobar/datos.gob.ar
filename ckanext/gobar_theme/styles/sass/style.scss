@@ -19,6 +19,10 @@ div.no-padding {
   padding: 0;
 }
 
+div.svg-tooltip {
+  display: none;
+}
+
 @import 'header';
 @import 'footer';
 @import 'background';

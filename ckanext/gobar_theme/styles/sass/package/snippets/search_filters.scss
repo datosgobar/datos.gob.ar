@@ -113,6 +113,7 @@
         display: inline-block;
         padding: 4px;
         text-align: center;
+        position: relative;
         svg {
           max-width: 35px;
           max-height: 35px;
@@ -148,6 +149,35 @@
             }
           }
         }
+
+        .svg-tooltip {
+          position: absolute;
+          display: inline-block;
+          left: -99999px;
+          .tooltip-text {
+            padding: 4px;
+            background: $grey;
+            color: white;
+            white-space: nowrap;
+            font-size: 10px;
+            opacity: 0;
+            @include transition-delay(400ms);
+            @include transition-property(opacity);
+            @include transition-timing-function(linear);
+            @include transition-duration(150ms);
+          }
+        }
+
+        &:hover {
+          .svg-tooltip {
+            left: -25%;
+            top: -50%;
+            .tooltip-text {
+              opacity: 1;
+            }
+          }
+        }
+
       }
     }
 
