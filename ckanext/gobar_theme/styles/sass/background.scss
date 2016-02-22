@@ -20,11 +20,12 @@
 
 div#background-container {
   position: absolute;
-  width: 50%;
-  padding-top: 50%;
-  right: 5%;
+  $size: 60%;
+  width: $size;
+  padding-top: $size;
+  right: 0;
   top: 50%;
-  margin-top: -25%;
+  margin-top: -$size/2;
 
   svg#background {
     position: absolute;
@@ -44,10 +45,10 @@ div#background-container {
       @include animation-iteration-count(infinite);
       @include animation-timing-function(linear);
 
-      $super-slow-speed: 910s;
-      $slow-speed: 450s;
-      $medium-speed: 210s;
-      $fast-speed: 90s;
+      $super-slow-speed: 606s;
+      $slow-speed: 300s;
+      $medium-speed: 140s;
+      $fast-speed: 60s;
 
       &#uno {
         opacity: 0.2;
