@@ -827,7 +827,7 @@ div#background-container {
           .organization-container .organization .organization-list .organization-item p svg path {
             fill: #D1D3D4; }
         .organization-container .organization .organization-list .organization-item p.top-organization {
-          color: #0072bc;
+          color: #58595B;
           font-weight: 500;
           font-size: 18px; }
       .organization-container .organization .organization-list .organization-item .organization-count {
@@ -1773,6 +1773,8 @@ div#background-container {
         line-height: 1.2;
         padding: 5px;
         height: 29.2px; }
+  #edit-group-container #edit-group .group-warning span, #edit-group-container #new-group .group-warning span, #new-group-container #edit-group .group-warning span, #new-group-container #new-group .group-warning span {
+    color: #870000; }
 
 ul.activity {
   background: none;

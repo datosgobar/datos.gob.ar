@@ -6,5 +6,11 @@
   #edit-group, #new-group {
     @include base-container();
     @include base-form();
+
+    .group-warning {
+      span {
+        color: #870000;
+      }
+    }
   }
 }
