@@ -3,6 +3,15 @@
 
 #search-results {
 
+  @include transition-duration(300ms);
+  @include transition-delay(0s);
+  @include transition-property(opacity);
+  @include transition-timing-function(linear);
+
+  &.invisible {
+    opacity: 0;
+  }
+
   .add-dataset {
     text-align: right;
     margin-top: 20px;

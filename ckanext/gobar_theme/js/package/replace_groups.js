@@ -1,3 +1,4 @@
+/*
 $(function () {
     var calls = [];
     $('img[data-replace="svg"]').each(function () {
@@ -13,3 +14,5 @@ $(function () {
         $('.group-images.invisible').removeClass('invisible');
     });
 });
+
+*/

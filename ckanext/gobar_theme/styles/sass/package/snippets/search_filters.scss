@@ -9,6 +9,15 @@
   .search-filter {
     $side-padding: 15px;
 
+    @include transition-duration(300ms);
+    @include transition-delay(0s);
+    @include transition-property(opacity);
+    @include transition-timing-function(linear);
+
+    &.invisible {
+      opacity: 0;
+    }
+
     h2.filter-title {
       font-size: 16px;
       font-weight: 500;

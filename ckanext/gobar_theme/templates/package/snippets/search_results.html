@@ -1,4 +1,4 @@
-<div id="search-results" class="col-xs-12 col-md-8">
+<div id="search-results" class="col-xs-12 col-md-8 invisible">
     {% if h.check_access('package_create') %}
         <div class="add-dataset">
             {% link_for 'Ver datasets privados', controller='user', action='read', id=c.user, class_='btn btn-primary', icon='list' %}
