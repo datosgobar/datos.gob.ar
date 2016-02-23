@@ -38,7 +38,7 @@
         padding: $padding;
         font-size: $font-size;
         line-height: $line-height;
-        height: $padding + $font-size * $line-height;
+        height: $padding + $font-size * $line-height + 5px;
 
         @include placeholder {
           color: $grey;
