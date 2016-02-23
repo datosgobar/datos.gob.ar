@@ -17,37 +17,53 @@
             <div class="organization-list">
                 <div class="organization-list-title">
                     <span>Denominación</span>
-                    <span class="count-title">Cantidad de datasets encontrados</span>
+                    <span class="count-title">Cantidad de Datasets encontrados</span>
                 </div>
 
                 {% set organizations_tree = h.organization_tree() %}
                 {% set dataset_url = h.url_for(controller='package', action='search') %}
 
                 {% for organization in organizations_tree recursive %}
-                    <div class="organization-item">
 
-                        {% if organization.package_count > 0 %}
-                            <a href="{{ h.add_url_param(new_params={'organization': organization.name}, alternative_url=dataset_url) }}">
-                        {% endif %}
+                    {% set top_organization = organization.depth == 0 %}
 
-                        <p style="padding-left:{{ 5 + organization.depth * 30 }}px"
-                           class="{{ 'top-organization' if organization.depth == 0 else '' }}">
-                            {{ organization.display_name }}
+                    <div class="organization-branch">
+
+
+                        <div class="organization-name {{ 'top-organization' if top_organization else '' }}">
+                            {% if top_organization %}
+                                {% snippet "svg/chevron_right.svg" %}
+                            {% endif %}
+
+                            {% if organization.package_count > 0 %}
+                                <a href="{{ h.add_url_param(new_params={'organization': organization.name}, alternative_url=dataset_url) }}">
+                                    {{ organization.display_name }} ({{ organization.package_count }})
+                                </a>
+                            {% else %}
+                                {{ organization.display_name }}
+                            {% endif %}
+
                             {% if h.check_access('organization_update', {'id': organization.name}) %}
                                 <a href="{{ h.url_for(controller='organization', action='edit', id=organization.name) }}">
-                                    {% snippet "svg/edit.svg" %}
+                                    <span class="edit-organization">
+                                        {% snippet "svg/edit.svg" %}
+                                    </span>
                                 </a>
                             {% endif %}
+
                             <span class="organization-count">
                                 {{ organization.display_count }}
                             </span>
-                        </p>
-                        {% if organization.package_count > 0 %}
-                            </a>
+
+                        </div>
+
+                        {% if organization.children %}
+                            {{ loop(organization.children) }}
                         {% endif %}
                     </div>
-                    {% if organization.children %}
-                        {{ loop(organization.children) }}
+
+                    {% if top_organization %}
+                        <hr>
                     {% endif %}
                 {% endfor %}
             </div>

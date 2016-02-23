@@ -802,7 +802,8 @@ div#background-container {
   -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
   box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
   color: #58595B;
-  font-size: 16px; }
+  font-size: 16px;
+  padding: 30px 20px; }
   .organization-container .organization .add-organization {
     text-align: right;
     margin-bottom: 20px; }
@@ -811,33 +812,45 @@ div#background-container {
     margin: 0;
     font-size: 16px; }
     .organization-container .organization .organization-list .organization-list-title {
-      font-weight: 500;
       padding: 5px;
-      border-bottom: solid 1px #D1D3D4; }
+      margin-bottom: 5px;
+      border-bottom: solid 1px #eaeced; }
       .organization-container .organization .organization-list .organization-list-title .count-title {
         float: right; }
-    .organization-container .organization .organization-list .organization-item {
-      border-bottom: solid 1px #D1D3D4; }
-      .organization-container .organization .organization-list .organization-item p {
-        padding: 5px;
-        margin: 0; }
-        .organization-container .organization .organization-list .organization-item p svg {
-          width: 1em;
-          height: 1em; }
-          .organization-container .organization .organization-list .organization-item p svg path {
-            fill: #D1D3D4; }
-        .organization-container .organization .organization-list .organization-item p.top-organization {
-          color: #58595B;
-          font-weight: 500;
-          font-size: 18px; }
-      .organization-container .organization .organization-list .organization-item .organization-count {
-        float: right;
-        font-weight: 500;
-        margin-right: 10px; }
-      .organization-container .organization .organization-list .organization-item:hover {
-        background: #D1D3D4; }
-        .organization-container .organization .organization-list .organization-item:hover svg path {
+    .organization-container .organization .organization-list hr {
+      margin: 5px 0;
+      border-color: #eaeced; }
+    .organization-container .organization .organization-list .organization-branch .organization-branch {
+      padding-left: 50px; }
+    .organization-container .organization .organization-list .organization-branch .organization-name {
+      padding: 5px;
+      margin: 0; }
+      .organization-container .organization .organization-list .organization-branch .organization-name .edit-organization svg {
+        width: 1em;
+        height: 1em; }
+        .organization-container .organization .organization-list .organization-branch .organization-name .edit-organization svg path {
+          fill: #D1D3D4; }
+        .organization-container .organization .organization-list .organization-branch .organization-name .edit-organization svg:hover path {
           fill: #58595B; }
+      .organization-container .organization .organization-list .organization-branch .organization-name svg.chevron-right {
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        -webkit-transform: scale(2);
+        -moz-transform: scale(2);
+        -ms-transform: scale(2);
+        -o-transform: scale(2);
+        transform: scale(2); }
+        .organization-container .organization .organization-list .organization-branch .organization-name svg.chevron-right path {
+          fill: #C7EAFB; }
+      .organization-container .organization .organization-list .organization-branch .organization-name.top-organization {
+        color: #58595B;
+        font-weight: 500;
+        font-size: 18px; }
+    .organization-container .organization .organization-list .organization-branch .organization-count {
+      float: right;
+      font-weight: 500;
+      margin-right: 10px; }
 
 /* Extiende ../home/title */
 #title.organization-title {
@@ -1298,8 +1311,7 @@ div#background-container {
   color: #0072bc;
   font-size: 24px; }
 #pkg-main-info #pkg-title-and-desc .edit-button {
-  float: right;
-  margin-top: 20px; }
+  float: right; }
 #pkg-main-info #pkg-title-and-desc p.pkg-author {
   color: #D1D3D4;
   font-size: 13px; }

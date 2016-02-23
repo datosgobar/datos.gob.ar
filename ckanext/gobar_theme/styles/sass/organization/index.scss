@@ -4,6 +4,8 @@
 .organization-container {
   .organization {
     @include base-container();
+    padding: 30px 20px;
+
     .add-organization {
       text-align: right;
       margin-bottom: 20px;
@@ -13,27 +15,53 @@
       padding: 0;
       margin: 0;
       font-size: 16px;
+
+      $border-color: $inactive;
+      $border-spacing: 5px;
       .organization-list-title {
-        font-weight: 500;
         padding: 5px;
-        border-bottom: solid 1px $light-grey;
+        margin-bottom: $border-spacing;
+        border-bottom: solid 1px $border-color;
         .count-title {
           float: right;
         }
       }
-      .organization-item {
-        border-bottom: solid 1px $light-grey;
-        p {
+      hr {
+        margin: $border-spacing 0;
+        border-color: $border-color;
+      }
+
+      .organization-branch {
+        $hierarchy-space: 50px;
+
+        .organization-branch {
+          padding-left: $hierarchy-space;
+        }
+
+        .organization-name {
           padding: 5px;
           margin: 0;
-          svg {
+
+          .edit-organization svg {
             width: 1em;
             height: 1em;
             path {
               fill: $light-grey;
             }
-
+            &:hover path {
+              fill: $grey;
+            }
           }
+          svg.chevron-right {
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            @include transform(scale(2));
+            path {
+              fill: $light-blue;
+            }
+          }
+
           &.top-organization {
             color: $grey;
             font-weight: 500;
@@ -44,14 +72,6 @@
           float: right;
           font-weight: 500;
           margin-right: 10px;
-        }
-        &:hover {
-          background: $light-grey;
-          svg {
-            path {
-              fill: $grey;
-            }
-          }
         }
       }
     }
