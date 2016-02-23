@@ -821,7 +821,24 @@ div#background-container {
       margin: 5px 0;
       border-color: #eaeced; }
     .organization-container .organization .organization-list .organization-branch .organization-branch {
-      padding-left: 50px; }
+      padding-left: 50px;
+      position: relative; }
+      .organization-container .organization .organization-list .organization-branch .organization-branch:before {
+        content: '';
+        position: absolute;
+        top: 1em;
+        left: 12px;
+        width: 38px;
+        border-bottom: dashed 1px #D1D3D4; }
+      .organization-container .organization .organization-list .organization-branch .organization-branch:after {
+        content: '';
+        position: absolute;
+        left: 12px;
+        top: 0;
+        height: 100%;
+        border-left: dashed 1px #D1D3D4; }
+      .organization-container .organization .organization-list .organization-branch .organization-branch:last-child:after {
+        height: 1em; }
     .organization-container .organization .organization-list .organization-branch .organization-name {
       padding: 5px;
       margin: 0; }
