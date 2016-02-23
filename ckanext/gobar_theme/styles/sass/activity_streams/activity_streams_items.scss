@@ -7,8 +7,12 @@ ul.activity {
     padding: 0 0 5px 0;
     border-bottom: solid 1px #eaeced;
     margin: 0 0 5px 0;
+    display: none;
     p {
       margin: 5px;
     }
+  }
+  li.load-more {
+    display: none !important;;
   }
 }

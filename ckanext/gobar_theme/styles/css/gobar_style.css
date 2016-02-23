@@ -1402,6 +1402,57 @@ div#background-container {
     margin: 50px 0 0 0;
     font-size: 17px;
     border-bottom: solid 1px #D1D3D4; }
+  #pkg-recent-activity ul.activity {
+    margin: 0; }
+  #pkg-recent-activity .activity-read-more, #pkg-recent-activity .activity-loading {
+    text-align: center;
+    background: transparent;
+    color: #D1D3D4;
+    cursor: pointer;
+    padding: 5px;
+    margin: -5px -15px 0 -15px;
+    -webkit-transition-property: background, color;
+    -moz-transition-property: background, color;
+    transition-property: background, color;
+    -webkit-transition-duration: 200ms, 200ms;
+    -moz-transition-duration: 200ms, 200ms;
+    transition-duration: 200ms, 200ms;
+    -webkit-transition-delay: 0s, 0s;
+    -moz-transition-delay: 0s, 0s;
+    transition-delay: 0s, 0s;
+    -webkit-transition-timing-function: linear, linear;
+    -moz-transition-timing-function: linear, linear;
+    transition-timing-function: linear, linear; }
+    #pkg-recent-activity .activity-read-more svg, #pkg-recent-activity .activity-loading svg {
+      width: 12px;
+      height: 12px; }
+      #pkg-recent-activity .activity-read-more svg path, #pkg-recent-activity .activity-loading svg path {
+        -webkit-transition-property: fill;
+        -moz-transition-property: fill;
+        transition-property: fill;
+        -webkit-transition-duration: 200ms;
+        -moz-transition-duration: 200ms;
+        transition-duration: 200ms;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        transition-delay: 0s;
+        -webkit-transition-timing-function: linear;
+        -moz-transition-timing-function: linear;
+        transition-timing-function: linear; }
+    #pkg-recent-activity .activity-read-more:hover, #pkg-recent-activity .activity-loading:hover {
+      color: #58595B;
+      background: #D1D3D4; }
+      #pkg-recent-activity .activity-read-more:hover svg path, #pkg-recent-activity .activity-loading:hover svg path {
+        fill: #58595B; }
+  #pkg-recent-activity .activity-loading {
+    cursor: initial; }
+  #pkg-recent-activity hr.final-separator {
+    margin: 0 0 30px 0;
+    border-color: #eaeced; }
+  #pkg-recent-activity.no-more-activity .activity-read-more, #pkg-recent-activity.no-more-activity .activity-loading, #pkg-recent-activity.no-more-activity hr.final-separator {
+    display: none; }
+  #pkg-recent-activity.no-more-activity ul.activity {
+    margin-bottom: 50px; }
 
 #edit-resources-container #edit-resources {
   padding: 30px 50px;
@@ -1789,8 +1840,11 @@ ul.activity {
   ul.activity li.item {
     padding: 0 0 5px 0;
     border-bottom: solid 1px #eaeced;
-    margin: 0 0 5px 0; }
+    margin: 0 0 5px 0;
+    display: none; }
     ul.activity li.item p {
       margin: 5px; }
+  ul.activity li.load-more {
+    display: none !important; }
 
 /*# sourceMappingURL=gobar_style.css.map */
