@@ -1336,9 +1336,10 @@ div#background-container {
   font-size: 13px; }
   #pkg-main-info #pkg-title-and-desc p.pkg-author svg {
     width: 1em;
-    height: 1em;
-    fill: #D1D3D4; }
-    #pkg-main-info #pkg-title-and-desc p.pkg-author svg:hover {
+    height: 1em; }
+    #pkg-main-info #pkg-title-and-desc p.pkg-author svg path {
+      fill: #D1D3D4; }
+    #pkg-main-info #pkg-title-and-desc p.pkg-author svg:hover path {
       fill: #0072bc; }
 #pkg-main-info #pkg-title-and-desc p.pkg-notes {
   margin-bottom: 50px;
@@ -1378,9 +1379,10 @@ div#background-container {
         padding: 0 0 0 5px; }
         #pkg-secondary-info #info-container .row .value p.pkg-maintainer svg {
           width: 1em;
-          height: 1em;
-          fill: #D1D3D4; }
-          #pkg-secondary-info #info-container .row .value p.pkg-maintainer svg:hover {
+          height: 1em; }
+          #pkg-secondary-info #info-container .row .value p.pkg-maintainer svg path {
+            fill: #D1D3D4; }
+          #pkg-secondary-info #info-container .row .value p.pkg-maintainer svg:hover path {
             fill: #0072bc; }
         #pkg-secondary-info #info-container .row .value .group-img-container {
           display: inline-block;

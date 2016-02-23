@@ -32,8 +32,10 @@
           svg {
             width: 1em;
             height: 1em;
-            fill: $light-grey;
-            &:hover {
+            path {
+              fill: $light-grey;
+            }
+            &:hover path {
               fill: $dark-blue;
             }
           }
