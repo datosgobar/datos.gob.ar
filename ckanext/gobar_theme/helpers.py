@@ -1,5 +1,6 @@
 import ckan.logic as logic
 import ckan.lib.helpers as ckan_helpers
+from urlparse import urlparse
 
 
 def _get_organizations_objs(organizations_branch, depth=0):
@@ -70,3 +71,7 @@ def cut_text(text, limit):
             text += remaining.split(' ')[0]
         text += '...'
     return text
+
+
+def cut_img_path(url):
+    return urlparse(url).path

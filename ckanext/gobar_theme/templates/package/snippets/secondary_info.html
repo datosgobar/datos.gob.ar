@@ -32,7 +32,7 @@
                     {% for group in pkg.groups %}
                         <div class="group-img-container">
                             <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
-                                <img src="{{ group.image_display_url }}" data-title="{{ group.title }}"
+                                <img src="{{ h.cut_img_path(group.image_display_url) }}" data-title="{{ group.title }}"
                                      class="group-image" data-replace="svg">
                             </a>
                         </div>

@@ -15,7 +15,7 @@
             <div class="dataset-groups-and-resources col-xs-3">
                 <div class="dataset-groups">
                     {% for group in package.groups %}
-                        <img src="{{ group.image_display_url }}" title="{{ group.title }}" class="group-image">
+                        <img src="{{ h.cut_img_path(group.image_display_url) }}" title="{{ group.title }}" class="group-image">
                     {% endfor %}
                 </div>
                 <div class="dataset-resources">
