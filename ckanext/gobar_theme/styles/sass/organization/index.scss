@@ -1,6 +1,3 @@
-@import '../utils/mixins';
-@import '../utils/globals';
-
 .organization-container {
   .organization {
     @include base-container();

@@ -1,7 +1,3 @@
-@import '../utils/globals';
-@import '../utils/mixins';
-@import '../bourbon/bourbon';
-
 #edit-organization-container, #new-organization-container {
   #edit-organization, #new-organization {
     @include base-container();

@@ -1,6 +1,3 @@
-@import '../utils/globals';
-@import '../utils/mixins';
-
 #edit-resources-container {
   #edit-resources {
     @include base-container();

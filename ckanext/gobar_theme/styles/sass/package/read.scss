@@ -1,5 +1,3 @@
-@import '../utils/mixins';
-
 .package-container {
   .package {
     @include base-container();

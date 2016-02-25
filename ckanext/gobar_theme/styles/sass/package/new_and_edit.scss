@@ -1,6 +1,3 @@
-@import '../utils/globals';
-@import '../utils/mixins';
-
 #edit-package-container, #new-package-container {
   #edit-package, #new-package{
     @include base-container();

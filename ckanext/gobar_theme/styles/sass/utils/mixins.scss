@@ -1,6 +1,3 @@
-@import 'globals';
-@import '../bourbon/bourbon';
-
 @mixin box-shadow($shadow) {
   -o-box-shadow: $shadow;
   -moz-box-shadow: $shadow;

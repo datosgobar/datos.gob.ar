@@ -1,6 +1,3 @@
-@import '../../bourbon/bourbon';
-@import '../../utils/mixins';
-
 #search-results {
 
   @include transition-duration(300ms);
@@ -69,7 +66,7 @@
         font-size: 16px;
         padding-right: 5px;
         max-width: 40%;
-        @include box-sizing(border-box);
+        box-sizing: border-box;
       }
       select {
         max-width: 60%;

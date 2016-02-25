@@ -31,6 +31,7 @@ div.no-padding {
 div.svg-tooltip {
   display: none; }
 
+/* Copia filtrada de _bourbon.scss */
 #header {
   height: 50px;
   background: #0072bc;
@@ -1033,8 +1034,6 @@ div#background-container {
         font-size: 16px;
         padding-right: 5px;
         max-width: 40%;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
         box-sizing: border-box; }
       #search-results .search-and-order .order select {
         max-width: 60%; }
@@ -1274,7 +1273,6 @@ div#background-container {
   .dataset-list .dataset-item:hover .dataset-border {
     border-right-color: #0072bc; }
 
-/* Extiende ../home/title */
 #title.package-title {
   padding-bottom: 40px; }
   #title.package-title #title-container .description {

@@ -1,5 +1,3 @@
-@import 'bourbon/bourbon';
-
 @include keyframes(rotateClockwise) {
   from {
     @include transform(rotate(0deg));
