@@ -9,9 +9,15 @@
     <div class="resource-container container-fluid">
         <div class="resource col-xs-12 col-md-10 col-md-offset-1">
             <div class="col-xs-12 back-to-pkg">
-                <a href="{{ h.url_for(controller='package', action='read', id=pkg.name) }}">
+                <a href="{{ h.url_for(controller='package', action='read', id=pkg.name) }}" class="back-link">
                     <i class="icon-chevron-left"></i> Volver
                 </a>
+
+                {% set can_edit = h.check_access('package_update', {'id':pkg.id }) %}
+
+                {% if can_edit %}
+                    {% link_for 'Editar recurso', controller='package', action='resource_edit', id=pkg.name, resource_id=res.id, class_='btn btn-primary edit-resource', icon='wrench' %}
+                {% endif %}
             </div>
             <div class="col-xs-12 title">
                 <h1>{{ res.name }}</h1>
@@ -66,17 +72,21 @@
                     {% endif %}
                 {% endif %}
             </div>
-            <div class="resource-alternative-packages col-xs-12 col-md-8">
-                {% if pkg.resources and pkg.resources|length > 1 %}
+
+            {% set has_more_resources = pkg.resources and pkg.resources|length > 1 %}
+
+            {% if has_more_resources %}
+                <div class="resource-alternative-packages col-xs-12 col-md-8">
                     <h2>Recursos alternativos</h2>
                     {% for resource in pkg.resources %}
                         {% if resource.id != res.id %}
                             {% snippet "package/snippets/dataset_resource_item.html", pkg=pkg, resource=resource %}
                         {% endif %}
                     {% endfor %}
-                {% endif %}
-            </div>
-            <div class="resource-additional-info col-xs-12 col-md-4">
+                </div>
+            {% endif %}
+
+            <div class="resource-additional-info col-xs-12 col-md-4 {{ '' if has_more_resources else 'col-md-offset-8' }}">
                 <h2>Información Adicional</h2>
 
                 <div class="resource-additional col-xs-12">

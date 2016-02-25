@@ -4,9 +4,13 @@
     padding-bottom: 50px;
 
     .back-to-pkg {
-      a {
+      a.back-link {
         color: $grey;
         font-weight: 500;
+      }
+      a.edit-resource {
+        color: white;
+        float: right;
       }
     }
 

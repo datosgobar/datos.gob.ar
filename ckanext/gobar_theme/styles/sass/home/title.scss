@@ -3,6 +3,7 @@
   color: white;
   position: relative;
   overflow: hidden;
+  width: 100%;
   @include linear-gradient(to right, $blue, $dark-blue);
 
   #title-container {

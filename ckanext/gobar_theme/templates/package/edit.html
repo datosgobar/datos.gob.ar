@@ -5,7 +5,7 @@
 {% block content %}
     <div id="edit-package-container" class="container-fluid">
         <div id="edit-package" class="col-xs-12 col-md-10 col-md-offset-1">
-            {% link_for _('Edit resources'), controller='package', action='resources', id=c.pkg_dict.name, class_='btn btn-primary edit-resources-button', icon='wrench' %}
+            {% link_for 'Editar recursos', controller='package', action='resources', id=c.pkg_dict.name, class_='btn btn-primary edit-resources-button', icon='wrench' %}
             <h1>Editar dataset</h1>
             {{- h.snippet(form_snippet, c=c, **form_vars) -}}
         </div>
