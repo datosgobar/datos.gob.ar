@@ -97,6 +97,7 @@ class GobArRouter:
 
     def connect_users(self):
         self.route_map.connect('login', '/635511788', action='login', controller='user')
+        self.route_map.connect('/logout', action='logout', controller='user')
         self.redirect(
             ('/user/login', '/'),
             ('/user/generate_key/{id}', '/'),
@@ -110,7 +111,10 @@ class GobArRouter:
             ('/user/register', '/'),
             ('/user/reset', '/'),
             ('/user/set_lang/{lang}', '/'),
-            ('/user', '/')
+            ('/user', '/'),
+            ('/user/_logout', '/logout'),
+            ('/user/logged_out_redirect', '/'),
+            ('/salir', '/logout')
         )
 
     def remove_tags(self):
