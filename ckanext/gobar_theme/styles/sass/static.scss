@@ -21,6 +21,12 @@
     p {
       font-size: 14px;
     }
+
+    ul li {
+      font-size: 14px;
+      margin-bottom: 5px;
+
+    }
   }
 }
 
@@ -60,45 +66,6 @@
       a.nav-button {
         color: $dark-blue;
         border-bottom-color: $dark-blue;
-      }
-      .static-child-nav-bar {
-        display: block;
-      }
-    }
-    &.active {
-      .static-child-nav-bar {
-        z-index: -1;
-      }
-    }
-
-    .static-child-nav-bar {
-      background-color: #f5f5f5;
-      position: absolute;
-      display: none;
-      width: 100%;
-      text-align: center;
-      border-top: solid 1px $inactive;
-      border-bottom: solid 1px $inactive;
-      $child-vertical-padding: 10px;
-      $child-font-size: 14px;
-      $child-line-height: 1.2;
-      $child-height: (2*$child-vertical-padding) + $child-font-size*$child-line-height;
-      height: $child-height;
-      bottom: -$child-height;
-      left: 0;
-      a.nav-child-button {
-        display: inline-block;
-        color: $grey;
-        padding: $child-vertical-padding 0;
-        font-size: $child-font-size;
-        line-height: $child-line-height;
-        font-weight: 500;
-        .nav-button-border {
-          padding: 0 20px;
-        }
-        &:hover, &.active {
-          color: $dark-blue;
-        }
       }
     }
   }

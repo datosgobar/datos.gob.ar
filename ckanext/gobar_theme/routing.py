@@ -29,16 +29,10 @@ class GobArRouter:
 
     def connect_static(self):
         self.home_routes.connect('gobar_open_data', '/datos-abiertos', action='open_data')
-        self.home_routes.connect('gobar_legal_planning', '/marco-legal/planificacion', action='legal_planning')
-        self.home_routes.connect('gobar_legal_system', '/marco-legal/sistema-nacional', action='legal_system')
-        self.home_routes.connect('gobar_legal_access', '/marco-legal/regimen-de-acceso', action='legal_access')
-        self.home_routes.connect('gobar_platform_users', '/plataforma/usuarios', action='platform_users')
-        self.home_routes.connect('gobar_platform_terms', '/plataforma/terminos-y-condiciones', action='platform_terms')
-        self.home_routes.connect('gobar_platform_license', '/plataforma/licencias', action='platform_license')
+        self.home_routes.connect('gobar_legal', '/marco-legal', action='legal')
+        self.home_routes.connect('gobar_platform', '/plataforma', action='platform')
         self.redirect(
-            ('/about', '/datos-abiertos'),
-            ('/marco-legal', '/marco-legal/planificacion'),
-            ('/plataforma', '/plataforma/usuarios')
+            ('/about', '/datos-abiertos')
         )
 
     def connect_datasets(self):

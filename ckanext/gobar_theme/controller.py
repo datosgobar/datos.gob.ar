@@ -25,20 +25,8 @@ class GobArHomeController(HomeController):
     def open_data(self):
         return base.render('static/open_data.html')
 
-    def legal_planning(self):
-        return base.render('static/legal_planning.html')
+    def legal(self):
+        return base.render('static/legal.html')
 
-    def legal_system(self):
-        return base.render('static/legal_system.html')
-
-    def legal_access(self):
-        return base.render('static/legal_access.html')
-
-    def platform_users(self):
-        return base.render('static/platform_users.html')
-
-    def platform_terms(self):
-        return base.render('static/platform_terms.html')
-
-    def platform_license(self):
-        return base.render('static/platform_license.html')
+    def platform(self):
+        return base.render('static/platform.html')

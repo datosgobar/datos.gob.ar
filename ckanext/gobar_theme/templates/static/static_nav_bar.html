@@ -10,62 +10,20 @@
     {%- set spacer = None -%}
 
     <div class="nav-section {{ 'active' if active_button == 'nav-legal' else '' }}">
-        <a href="{{ h.url('gobar_legal_planning') }}" id="nav-legal-link" class="nav-button">
+        <a href="{{ h.url('gobar_legal') }}" id="nav-legal-link" class="nav-button">
             <span class="nav-button-border">
                 MARCO LEGAL
             </span>
         </a>
-
-        <div class="static-child-nav-bar" id="legal-child">
-            <a href="{{ h.url('gobar_legal_planning') }}"
-               class="nav-child-button {{ 'active' if sub_active_button == 'legal-planning' else '' }}">
-                <span class="nav-button-border">
-                    Plan Nacional de Apertura de Datos
-                </span>
-            </a>
-            <a href="{{ h.url('gobar_legal_system') }}"
-               class="nav-child-button {{ 'active' if sub_active_button == 'legal-system' else '' }}">
-                <span class="nav-button-border">
-                    Sistema Nacional de Datos Públicos
-                </span>
-            </a>
-            <a href="{{ h.url('gobar_legal_access') }}"
-               class="nav-child-button {{ 'active' if sub_active_button == 'legal-access' else '' }}">
-                <span class="nav-button-border">
-                    Régimen de Acceso a la Información Pública
-                </span>
-            </a>
-        </div>
     </div>
 
     {%- set spacer = None -%}
 
     <div class="nav-section {{ 'active' if active_button == 'nav-platform' else '' }}">
-        <a href="{{ h.url('gobar_platform_users') }}" id="nav-plaform-link" class="nav-button">
+        <a href="{{ h.url('gobar_platform') }}" id="nav-plaform-link" class="nav-button">
             <span class="nav-button-border">
                 PLATAFORMA
             </span>
         </a>
-
-        <div class="static-child-nav-bar" id="platform-child">
-            <a href="{{ h.url('gobar_platform_users') }}"
-               class="nav-child-button {{ 'active' if sub_active_button == 'platform-users' else '' }}">
-                <span class="nav-button-border">
-                    Usuarios
-                </span>
-           </a>
-            <a href="{{ h.url('gobar_platform_terms') }}"
-               class="nav-child-button {{ 'active' if sub_active_button == 'platform-terms' else '' }}">
-                <span class="nav-button-border">
-                    Términos y Condiciones de Uso
-                </span>
-            </a>
-            <a href="{{ h.url('gobar_platform_license') }}"
-               class="nav-child-button {{ 'active' if sub_active_button == 'platform-license' else '' }}">
-                <span class="nav-button-border">
-                    Licencias
-                </span>
-            </a>
-        </div>
     </div>
 </div>
