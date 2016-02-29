@@ -32,11 +32,7 @@ div.svg-tooltip {
   display: none; }
 
 #header {
-  height: 50px;
   background: #0072bc;
-  font-size: 18px;
-  line-height: 2.77778;
-  text-align: right;
   padding: 0;
   -o-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
@@ -45,15 +41,24 @@ div.svg-tooltip {
   position: relative;
   z-index: 2; }
   #header #header-spacing {
-    padding: 0 20px; }
-    #header #header-spacing .logo-ministerio {
+    padding: 0 20px;
+    text-align: center; }
+    #header #header-spacing .logo-header, #header #header-spacing .header-links {
       height: 50px;
-      position: absolute;
-      top: 0;
-      left: 20px; }
-    #header #header-spacing a {
+      font-size: 18px;
+      line-height: 2.77778; }
+    @media (min-width: 768px) {
+      #header #header-spacing .header-links {
+        text-align: right; } }
+    #header #header-spacing .header-links a {
       color: white;
       margin-left: 1em; }
+    @media (min-width: 768px) {
+      #header #header-spacing .logo-header {
+        text-align: left; } }
+    #header #header-spacing .logo-header .logo-ministerio {
+      height: 100%;
+      max-width: 100%; }
 
 #footer {
   padding: 0;
