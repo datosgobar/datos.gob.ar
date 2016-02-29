@@ -39,7 +39,8 @@ div.svg-tooltip {
   -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  white-space: nowrap; }
   #header #header-spacing {
     padding: 0 20px;
     text-align: center; }
@@ -47,12 +48,16 @@ div.svg-tooltip {
       height: 50px;
       font-size: 18px;
       line-height: 2.77778; }
-    @media (min-width: 768px) {
-      #header #header-spacing .header-links {
-        text-align: right; } }
     #header #header-spacing .header-links a {
       color: white;
-      margin-left: 1em; }
+      margin-left: 0.5em;
+      font-size: 90%; }
+    @media (min-width: 768px) {
+      #header #header-spacing .header-links {
+        text-align: right; }
+        #header #header-spacing .header-links a {
+          margin-left: 1em;
+          font-size: 100%; } }
     @media (min-width: 768px) {
       #header #header-spacing .logo-header {
         text-align: left; } }

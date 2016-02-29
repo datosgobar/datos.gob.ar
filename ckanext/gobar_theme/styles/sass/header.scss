@@ -6,6 +6,7 @@ $header-height: 50px;
   @include box-shadow(0 0 12px 0 rgba(0, 0, 0, 0.5));
   position: relative;
   z-index: 2;
+  white-space: nowrap;
 
   #header-spacing {
     $padding: 20px;
@@ -20,12 +21,17 @@ $header-height: 50px;
     }
 
     .header-links {
-      @include breakpoint-sm {
-        text-align: right;
-      }
       a {
         color: white;
-        margin-left: 1em;
+        margin-left: 0.5em;
+        font-size: 90%;
+      }
+      @include breakpoint-sm {
+        text-align: right;
+        a {
+          margin-left: 1em;
+          font-size: 100%;
+        }
       }
     }
 
