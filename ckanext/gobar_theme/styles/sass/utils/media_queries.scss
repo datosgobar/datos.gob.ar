@@ -1,0 +1,21 @@
+$bp-sm: 768px;
+$bp-md: 992px;
+$bp-lg: 1200px;
+
+@mixin breakpoint-lg {
+  @media (min-width: $bp-lg) {
+    @content;
+  }
+}
+
+@mixin breakpoint-md {
+  @media (min-width: $bp-md) {
+    @content;
+  }
+}
+
+@mixin breakpoint-sm {
+  @media (min-width: $bp-sm) {
+    @content;
+  }
+}

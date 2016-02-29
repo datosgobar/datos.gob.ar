@@ -31,7 +31,6 @@ div.no-padding {
 div.svg-tooltip {
   display: none; }
 
-/* Copia filtrada de _bourbon.scss */
 #header {
   height: 50px;
   background: #0072bc;
@@ -64,30 +63,32 @@ div.svg-tooltip {
   -webkit-box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5);
   box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5); }
   #footer #footer-spacer {
-    padding: 0; }
+    padding: 20px 0; }
+    @media (min-width: 768px) {
+      #footer #footer-spacer {
+        padding: 50px 0; } }
     #footer #footer-spacer .footer-section {
-      height: 200px;
       color: #0072bc;
       font-size: 14px;
-      font-weight: 500; }
-      #footer #footer-spacer .footer-section.logo .logo-ministerio {
-        height: 60px;
-        margin: 60px 0 80px 0; }
-      #footer #footer-spacer .footer-section.links-internos {
-        padding-top: 50px; }
-        #footer #footer-spacer .footer-section.links-internos p {
-          margin: 0 0 5px 0; }
-      #footer #footer-spacer .footer-section.links-externos {
-        padding-top: 50px; }
-        #footer #footer-spacer .footer-section.links-externos p {
-          text-align: right; }
-          #footer #footer-spacer .footer-section.links-externos p i {
-            font-size: 28px;
-            margin-left: 20px; }
-          #footer #footer-spacer .footer-section.links-externos p .ckan-logo {
-            height: 22px;
-            vertical-align: bottom;
-            margin-left: 6px; }
+      font-weight: 500;
+      text-align: center; }
+      #footer #footer-spacer .footer-section.logo img {
+        max-width: 300px;
+        margin-bottom: 20px; }
+      #footer #footer-spacer .footer-section.links-externos i {
+        font-size: 28px;
+        margin-left: 20px; }
+      #footer #footer-spacer .footer-section.links-externos .ckan-link {
+        margin: 20px 0; }
+        #footer #footer-spacer .footer-section.links-externos .ckan-link .ckan-logo {
+          height: 22px;
+          vertical-align: bottom;
+          margin-left: 6px; }
+      @media (min-width: 768px) {
+        #footer #footer-spacer .footer-section {
+          text-align: left; }
+          #footer #footer-spacer .footer-section.links-externos {
+            text-align: right; } }
 
 @-webkit-keyframes rotateClockwise {
   from {

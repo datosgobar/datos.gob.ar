@@ -24,8 +24,9 @@ div.svg-tooltip {
 }
 
 @import 'utils/selective_bourbon';
-@import 'utils/globals';
+@import 'utils/colors';
 @import 'utils/mixins';
+@import 'utils/media_queries';
 
 @import 'header';
 @import 'footer';
