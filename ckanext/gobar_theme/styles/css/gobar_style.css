@@ -1255,35 +1255,33 @@ div#background-container {
         width: 3.5em;
         font-weight: 500;
         margin: 0 0 5px 5px;
-        background-color: #0072bc; }
+        background-color: #0072BC; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=html], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=html] {
-          background-color: #8e24aa; }
+          background-color: #8E24AA; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=json], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=json] {
-          background-color: #ef7100; }
+          background-color: #FB8C00; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=xml], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=xml] {
-          background-color: #ef7100; }
+          background-color: #FB8C00; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=text], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=text] {
-          background-color: #74cbec; }
+          background-color: #039BE5; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=csv], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=csv] {
-          background-color: #fdd835; }
+          background-color: #FFD600; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=xls], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=xls] {
-          background-color: #2db55d; }
-        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=zip], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=zip] {
-          background-color: #ffb300; }
+          background-color: #3949AB; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=api], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=api] {
-          background-color: #ec96be; }
+          background-color: #D81B60; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=pdf], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=pdf] {
-          background-color: #e53935; }
+          background-color: #E53935; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=zip], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=zip] {
-          background-color: #686868; }
+          background-color: #7CB342; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=rdf], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=rdf] {
-          background-color: #0b4498; }
+          background-color: #00ACC1; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=nquad], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=nquad] {
-          background-color: #0b4498; }
+          background-color: #00ACC1; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=ntriples], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=ntriples] {
-          background-color: #0b4498; }
+          background-color: #00ACC1; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=turtle], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=turtle] {
-          background-color: #0b4498; }
+          background-color: #00ACC1; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=shp], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=shp] {
           background-color: #1e88e5; }
 .dataset-list .dataset-item:hover {
@@ -1654,35 +1652,33 @@ div#background-container {
     .resource-container .resource .resource-additional-info .resource-additional .value {
       padding: 0; }
       .resource-container .resource .resource-additional-info .resource-additional .value span.label {
-        background-color: #0072bc; }
+        background-color: #0072BC; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=html], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=html] {
-          background-color: #8e24aa; }
+          background-color: #8E24AA; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=json], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=json] {
-          background-color: #ef7100; }
+          background-color: #FB8C00; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xml], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xml] {
-          background-color: #ef7100; }
+          background-color: #FB8C00; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=text], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=text] {
-          background-color: #74cbec; }
+          background-color: #039BE5; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=csv], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=csv] {
-          background-color: #fdd835; }
+          background-color: #FFD600; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xls], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xls] {
-          background-color: #2db55d; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=zip], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=zip] {
-          background-color: #ffb300; }
+          background-color: #3949AB; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=api], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=api] {
-          background-color: #ec96be; }
+          background-color: #D81B60; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=pdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=pdf] {
-          background-color: #e53935; }
+          background-color: #E53935; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=zip], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=zip] {
-          background-color: #686868; }
+          background-color: #7CB342; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=rdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=rdf] {
-          background-color: #0b4498; }
+          background-color: #00ACC1; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=nquad], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=nquad] {
-          background-color: #0b4498; }
+          background-color: #00ACC1; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=ntriples], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=ntriples] {
-          background-color: #0b4498; }
+          background-color: #00ACC1; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=turtle], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=turtle] {
-          background-color: #0b4498; }
+          background-color: #00ACC1; }
         .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=shp], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=shp] {
           background-color: #1e88e5; }
 
@@ -1695,35 +1691,33 @@ div#background-container {
     top: 0;
     left: 0; }
     .pkg-container .pkg-file-img svg path {
-      fill: #0072bc; }
+      fill: #0072BC; }
     .pkg-container .pkg-file-img[data-format=html] svg path, .pkg-container .pkg-file-img[data-format*=html] svg path {
-      fill: #8e24aa; }
+      fill: #8E24AA; }
     .pkg-container .pkg-file-img[data-format=json] svg path, .pkg-container .pkg-file-img[data-format*=json] svg path {
-      fill: #ef7100; }
+      fill: #FB8C00; }
     .pkg-container .pkg-file-img[data-format=xml] svg path, .pkg-container .pkg-file-img[data-format*=xml] svg path {
-      fill: #ef7100; }
+      fill: #FB8C00; }
     .pkg-container .pkg-file-img[data-format=text] svg path, .pkg-container .pkg-file-img[data-format*=text] svg path {
-      fill: #74cbec; }
+      fill: #039BE5; }
     .pkg-container .pkg-file-img[data-format=csv] svg path, .pkg-container .pkg-file-img[data-format*=csv] svg path {
-      fill: #fdd835; }
+      fill: #FFD600; }
     .pkg-container .pkg-file-img[data-format=xls] svg path, .pkg-container .pkg-file-img[data-format*=xls] svg path {
-      fill: #2db55d; }
-    .pkg-container .pkg-file-img[data-format=zip] svg path, .pkg-container .pkg-file-img[data-format*=zip] svg path {
-      fill: #ffb300; }
+      fill: #3949AB; }
     .pkg-container .pkg-file-img[data-format=api] svg path, .pkg-container .pkg-file-img[data-format*=api] svg path {
-      fill: #ec96be; }
+      fill: #D81B60; }
     .pkg-container .pkg-file-img[data-format=pdf] svg path, .pkg-container .pkg-file-img[data-format*=pdf] svg path {
-      fill: #e53935; }
+      fill: #E53935; }
     .pkg-container .pkg-file-img[data-format=zip] svg path, .pkg-container .pkg-file-img[data-format*=zip] svg path {
-      fill: #686868; }
+      fill: #7CB342; }
     .pkg-container .pkg-file-img[data-format=rdf] svg path, .pkg-container .pkg-file-img[data-format*=rdf] svg path {
-      fill: #0b4498; }
+      fill: #00ACC1; }
     .pkg-container .pkg-file-img[data-format=nquad] svg path, .pkg-container .pkg-file-img[data-format*=nquad] svg path {
-      fill: #0b4498; }
+      fill: #00ACC1; }
     .pkg-container .pkg-file-img[data-format=ntriples] svg path, .pkg-container .pkg-file-img[data-format*=ntriples] svg path {
-      fill: #0b4498; }
+      fill: #00ACC1; }
     .pkg-container .pkg-file-img[data-format=turtle] svg path, .pkg-container .pkg-file-img[data-format*=turtle] svg path {
-      fill: #0b4498; }
+      fill: #00ACC1; }
     .pkg-container .pkg-file-img[data-format=shp] svg path, .pkg-container .pkg-file-img[data-format*=shp] svg path {
       fill: #1e88e5; }
     .pkg-container .pkg-file-img p {

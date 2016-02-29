@@ -141,23 +141,22 @@
 }
 
 $colors: (
-                ("html", "#8e24aa"),
-                ("json", "#ef7100"),
-                ("xml", "#ef7100"),
-                ("text", "#74cbec"),
-                ("csv", "#fdd835"),
-                ("xls", "#2db55d"),
-                ("zip", "#ffb300"),
-                ("api", "#ec96be"),
-                ("pdf", "#e53935"),
-                ("zip", "#686868"),
-                ("rdf", "#0b4498"),
-                ("nquad", "#0b4498"),
-                ("ntriples", "#0b4498"),
-                ("turtle", "#0b4498"),
+                ("html", "#8E24AA"),
+                ("json", "#FB8C00"),
+                ("xml", "#FB8C00"),
+                ("text", "#039BE5"),
+                ("csv", "#FFD600"),
+                ("xls", "#3949AB"),
+                ("api", "#D81B60"),
+                ("pdf", "#E53935"),
+                ("zip", "#7CB342"),
+                ("rdf", "#00ACC1"),
+                ("nquad", "#00ACC1"),
+                ("ntriples", "#00ACC1"),
+                ("turtle", "#00ACC1"),
                 ("shp", "#1e88e5")
 );
-$default-color: $dark-blue;
+$default-color: #0072BC;
 
 @mixin svgFormatColors() {
   svg {
