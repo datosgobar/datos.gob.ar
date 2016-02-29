@@ -138,11 +138,18 @@ div.svg-tooltip {
     transform: rotate(-360deg); } }
 div#background-container {
   position: absolute;
-  width: 60%;
-  padding-top: 60%;
-  right: 0;
+  width: 90%;
+  padding-top: 90%;
+  right: 5%;
   top: 50%;
-  margin-top: -30%; }
+  margin-top: -45%; }
+  @media (min-width: 992px) {
+    div#background-container {
+      width: 60%;
+      padding-top: 60%;
+      right: 0;
+      top: 50%;
+      margin-top: -30%; } }
   div#background-container svg#background {
     position: absolute;
     top: 0;
@@ -422,62 +429,67 @@ div#background-container {
   background-color: #00B9F1;
   background-image: -webkit-linear-gradient(left, #00B9F1, #0072bc);
   background-image: linear-gradient(to right,#00B9F1, #0072bc); }
-  #title #title-container h1 {
-    font-size: 50px;
-    font-weight: 400; }
-  #title #title-container .description {
-    margin-bottom: 30px; }
-  #title #searcher {
-    position: absolute;
-    bottom: 0;
-    left: 25px;
-    padding: 0; }
-    #title #searcher form {
-      padding: 0;
-      border: none; }
-      #title #searcher form input[type="text"] {
-        background: transparent;
-        border: none;
-        width: 100%;
-        color: white;
-        -o-box-shadow: none;
-        -moz-box-shadow: none;
-        -webkit-box-shadow: none;
-        box-shadow: none;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-        border-bottom: solid 1px white;
-        padding: 10px;
-        font-size: 24px;
-        line-height: 1.2;
-        height: 38.8px; }
-        #title #searcher form input[type="text"]::-webkit-input-placeholder {
-          color: white; }
-        #title #searcher form input[type="text"]::-moz-placeholder {
-          color: white; }
-        #title #searcher form input[type="text"]:-moz-placeholder {
-          color: white; }
-        #title #searcher form input[type="text"]:-ms-input-placeholder {
-          color: white; }
-      #title #searcher form button {
-        background: none;
-        border: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 38.8px; }
-        #title #searcher form button i {
-          color: #C7EAFB;
-          font-size: 24px; }
+  #title #title-container {
+    text-align: center; }
+    @media (min-width: 992px) {
+      #title #title-container {
+        text-align: left; } }
+    #title #title-container h1 {
+      font-size: 50px;
+      font-weight: 400; }
+    #title #title-container .description {
+      margin-bottom: 30px; }
+  @media (min-width: 992px) {
+    #title #searcher {
+      position: absolute;
+      bottom: 0;
+      left: 25px;
+      padding: 0; } }
+  #title #searcher form {
+    padding: 0;
+    border: none; }
+    #title #searcher form input[type="text"] {
+      background: transparent;
+      border: none;
+      width: 100%;
+      color: white;
+      -o-box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-bottom: solid 1px white;
+      padding: 10px;
+      font-size: 24px;
+      line-height: 1.2;
+      height: 38.8px; }
+      #title #searcher form input[type="text"]::-webkit-input-placeholder {
+        color: white; }
+      #title #searcher form input[type="text"]::-moz-placeholder {
+        color: white; }
+      #title #searcher form input[type="text"]:-moz-placeholder {
+        color: white; }
+      #title #searcher form input[type="text"]:-ms-input-placeholder {
+        color: white; }
+    #title #searcher form button {
+      background: none;
+      border: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 38.8px; }
+      #title #searcher form button i {
+        color: #C7EAFB;
+        font-size: 24px; }
   #title #stats {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 0;
     padding-top: 20px;
     padding-right: 0; }
     @media (min-width: 992px) {
       #title #stats {
-        text-align: right;
-        margin-bottom: 0; } }
+        text-align: right; } }
     #title #stats > div {
       padding-right: 0; }
     #title #stats .stat {
@@ -487,8 +499,9 @@ div#background-container {
       font-weight: 300; }
     #title #stats .stats-legend {
       font-size: 20px; }
-      #title #stats .stats-legend.datasets {
-        margin-bottom: 40px; }
+      @media (min-width: 992px) {
+        #title #stats .stats-legend.datasets {
+          margin-bottom: 40px; } }
 
 .featured-groups {
   padding: 20px 0;

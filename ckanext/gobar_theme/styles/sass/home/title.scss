@@ -7,6 +7,11 @@
   @include linear-gradient(to right, $blue, $dark-blue);
 
   #title-container {
+    text-align: center;
+
+    @include breakpoint-md {
+      text-align: left;
+    }
 
     h1 {
       font-size: 50px;
@@ -18,10 +23,13 @@
     }
   }
   #searcher {
-    position: absolute;
-    bottom: 0;
-    left: 25px;
-    padding: 0;
+
+    @include breakpoint-md {
+      position: absolute;
+      bottom: 0;
+      left: 25px;
+      padding: 0;
+    }
 
     $font-size: 24px;
     $padding: 10px;
@@ -67,11 +75,11 @@
 
   #stats {
     text-align: center;
-    margin-bottom: 40px;
-    @media(min-width: 992px) {
+    margin-bottom: 0;
+    @include breakpoint-md {
       text-align: right;
-      margin-bottom: 0;
     }
+
     padding-top: 20px;
     padding-right: 0;
 
@@ -88,10 +96,12 @@
 
     .stats-legend {
       font-size: 20px;
-
-      &.datasets {
-        margin-bottom: 40px;
+      @include breakpoint-md {
+        &.datasets {
+          margin-bottom: 40px;
+        }
       }
+
     }
   }
 }

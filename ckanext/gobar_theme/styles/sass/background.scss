@@ -18,12 +18,22 @@
 
 div#background-container {
   position: absolute;
-  $size: 60%;
+
+  $size: 90%;
   width: $size;
   padding-top: $size;
-  right: 0;
+  right: (100% - $size)/2;
   top: 50%;
   margin-top: -$size/2;
+
+  @include breakpoint-md {
+    $md-size: 60%;
+    width: $md-size;
+    padding-top: $md-size;
+    right: 0;
+    top: 50%;
+    margin-top: -$md-size/2;
+  }
 
   svg#background {
     position: absolute;
