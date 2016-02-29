@@ -17,7 +17,7 @@
             <div class="organization-list">
                 <div class="organization-list-title">
                     <span>Denominación</span>
-                    <span class="count-title">Cantidad de Datasets encontrados</span>
+                    <span class="count-title">Cantidad de Datasets</span>
                 </div>
 
                 {% set organizations_tree = h.organization_tree() %}
@@ -31,25 +31,25 @@
 
 
                         <div class="organization-name {{ 'top-organization' if top_organization else '' }}">
-                            {% if top_organization %}
-                                {% snippet "svg/chevron_right.svg" %}
-                            {% endif %}
+                            {%- if top_organization -%}
+                                {%- snippet "svg/chevron_right.svg" -%}
+                            {%- endif -%}
 
-                            {% if organization.package_count > 0 %}
+                            {%- if organization.package_count > 0 -%}
                                 <a href="{{ h.add_url_param(new_params={'organization': organization.name}, alternative_url=dataset_url) }}">
                                     {{ organization.display_name }} ({{ organization.package_count }})
                                 </a>
-                            {% else %}
+                            {%- else -%}
                                 {{ organization.display_name }}
-                            {% endif %}
+                            {%- endif -%}
 
-                            {% if h.check_access('organization_update', {'id': organization.name}) %}
+                            {%- if h.check_access('organization_update', {'id': organization.name}) -%}
                                 <a href="{{ h.url_for(controller='organization', action='edit', id=organization.name) }}">
                                     <span class="edit-organization">
                                         {% snippet "svg/edit.svg" %}
                                     </span>
                                 </a>
-                            {% endif %}
+                            {%- endif -%}
 
                             <span class="organization-count">
                                 {{ organization.display_count }}

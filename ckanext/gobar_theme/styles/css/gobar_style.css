@@ -816,7 +816,11 @@ div#background-container {
     .organization-container .organization .organization-list .organization-list-title {
       padding: 5px;
       margin-bottom: 5px;
-      border-bottom: solid 1px #eaeced; }
+      border-bottom: solid 1px #eaeced;
+      font-size: 90%; }
+      @media (min-width: 768px) {
+        .organization-container .organization .organization-list .organization-list-title {
+          font-size: 100%; } }
       .organization-container .organization .organization-list .organization-list-title .count-title {
         float: right; }
     .organization-container .organization .organization-list hr {
@@ -865,15 +869,26 @@ div#background-container {
       .organization-container .organization .organization-list .organization-branch .organization-name.top-organization {
         color: #58595B;
         font-weight: 500;
-        font-size: 18px; }
+        font-size: 18px;
+        position: relative;
+        padding-right: 2em; }
     .organization-container .organization .organization-list .organization-branch .organization-count {
-      float: right;
       font-weight: 500;
-      margin-right: 10px; }
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px; }
+    .organization-container .organization .organization-list .top-organization ~ .organization-branch {
+      padding-right: 2em; }
 
 /* Extiende ../home/title */
 #title.organization-title {
   padding-bottom: 40px; }
+  #title.organization-title #title-container h1 {
+    font-size: 35px; }
+    @media (min-width: 768px) {
+      #title.organization-title #title-container h1 {
+        font-size: 50px; } }
   #title.organization-title #title-container .description {
     margin: 0; }
   #title.organization-title #stats .stats-legend {
