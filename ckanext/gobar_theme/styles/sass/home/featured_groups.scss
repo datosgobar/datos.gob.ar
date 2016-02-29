@@ -1,17 +1,37 @@
 .featured-groups {
-  padding: 50px 0;
+  padding: 20px 0;
   text-align: center;
+  background: #f5f5f5;
+
+  @include breakpoint-sm {
+    padding: 50px 0;
+  }
 
   a:hover {
     color: $dark-blue;
   }
 
   .group-container {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
     padding: 0 5px;
     float: none;
-    display: inline-block;
     opacity: 1;
+
+    display: block;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include breakpoint-sm {
+      display: inline-block;
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &.with-edit-button {
+      margin-bottom: 35px;
+    }
 
     @include transition-duration(1s);
     @include transition-delay(0s);

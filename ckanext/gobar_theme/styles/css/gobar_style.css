@@ -491,16 +491,23 @@ div#background-container {
         margin-bottom: 40px; }
 
 .featured-groups {
-  padding: 50px 0;
-  text-align: center; }
+  padding: 20px 0;
+  text-align: center;
+  background: #f5f5f5; }
+  @media (min-width: 768px) {
+    .featured-groups {
+      padding: 50px 0; } }
   .featured-groups a:hover {
     color: #0072bc; }
   .featured-groups .group-container {
-    margin-bottom: 35px;
+    margin-bottom: 10px;
     padding: 0 5px;
     float: none;
-    display: inline-block;
     opacity: 1;
+    display: block;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
     -webkit-transition-duration: 1s;
     -moz-transition-duration: 1s;
     transition-duration: 1s;
@@ -513,6 +520,14 @@ div#background-container {
     -webkit-transition-timing-function: linear;
     -moz-transition-timing-function: linear;
     transition-timing-function: linear; }
+    @media (min-width: 768px) {
+      .featured-groups .group-container {
+        display: inline-block;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0; } }
+    .featured-groups .group-container.with-edit-button {
+      margin-bottom: 35px; }
     .featured-groups .group-container.invisible {
       opacity: 0; }
     .featured-groups .group-container .group {
@@ -592,8 +607,14 @@ div#background-container {
       top: -28px; }
 
 #home-create-buttons {
-  margin-top: 15px;
-  text-align: right; }
+  padding-top: 15px;
+  background: #f5f5f5;
+  text-align: center; }
+  @media (min-width: 768px) {
+    #home-create-buttons {
+      text-align: right; } }
+  #home-create-buttons .btn {
+    margin-top: 10px; }
 
 #featured-content-container {
   background-color: #e5e5e5;
