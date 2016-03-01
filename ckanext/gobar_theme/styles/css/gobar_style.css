@@ -470,10 +470,16 @@ div#background-container {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
       border-bottom: solid 1px white;
-      padding: 10px;
-      font-size: 24px;
+      padding: 6px;
+      font-size: 16px;
       line-height: 1.2;
-      height: 38.8px; }
+      height: 25.2px; }
+      @media (min-width: 992px) {
+        #title #searcher form input[type="text"] {
+          padding: 10px;
+          font-size: 24px;
+          line-height: 1.2;
+          height: 38.8px; } }
       #title #searcher form input[type="text"]::-webkit-input-placeholder {
         color: white; }
       #title #searcher form input[type="text"]::-moz-placeholder {
@@ -488,10 +494,15 @@ div#background-container {
       position: absolute;
       top: 0;
       right: 0;
-      height: 38.8px; }
+      height: 25.2px; }
       #title #searcher form button i {
         color: #C7EAFB;
-        font-size: 24px; }
+        font-size: 16px; }
+      @media (min-width: 992px) {
+        #title #searcher form button {
+          height: 38.8px; }
+          #title #searcher form button i {
+            font-size: 24px; } }
   #title #stats {
     text-align: center;
     margin-bottom: 0;
