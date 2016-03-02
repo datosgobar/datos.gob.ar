@@ -9,6 +9,25 @@
     opacity: 0;
   }
 
+  &.hidden-by-filters {
+    opacity: 0.3;
+    position: relative;
+    .filters-veil {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    @include breakpoint-md {
+      opacity: 1;
+      .filters-veil {
+        display: none;
+      }
+    }
+  }
+
   .add-dataset {
     text-align: right;
     margin-top: 20px;

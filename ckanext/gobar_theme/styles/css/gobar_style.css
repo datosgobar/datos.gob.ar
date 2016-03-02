@@ -1043,6 +1043,20 @@ div#background-container {
   transition-timing-function: linear; }
   #search-results.invisible {
     opacity: 0; }
+  #search-results.hidden-by-filters {
+    opacity: 0.3;
+    position: relative; }
+    #search-results.hidden-by-filters .filters-veil {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0; }
+    @media (min-width: 992px) {
+      #search-results.hidden-by-filters {
+        opacity: 1; }
+        #search-results.hidden-by-filters .filters-veil {
+          display: none; } }
   #search-results .add-dataset {
     text-align: right;
     margin-top: 20px; }
@@ -1130,8 +1144,39 @@ div#background-container {
   border-right: solid 1px #eaeced;
   margin-bottom: -99999px;
   padding: 0 0 99999px 0;
-  position: relative;
-  z-index: 2; }
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  max-width: 400px;
+  left: -100%;
+  -webkit-transition-property: left;
+  -moz-transition-property: left;
+  transition-property: left;
+  -webkit-transition-duration: 400ms;
+  -moz-transition-duration: 400ms;
+  transition-duration: 400ms;
+  -webkit-transition-timing-function: ease-in;
+  -moz-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  -webkit-transition-delay: 0s;
+  -moz-transition-delay: 0s;
+  transition-delay: 0s; }
+  .filters-container.side-visible {
+    left: 0; }
+  @media (min-width: 992px) {
+    .filters-container {
+      position: relative;
+      left: 0;
+      max-width: none;
+      width: 33.33333333%; } }
+  .filters-container .hide-filters-button {
+    color: #D1D3D4;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    top: 10px; }
+    .filters-container .hide-filters-button i {
+      font-size: 25px; }
   .filters-container .search-filter {
     -webkit-transition-duration: 300ms;
     -moz-transition-duration: 300ms;
