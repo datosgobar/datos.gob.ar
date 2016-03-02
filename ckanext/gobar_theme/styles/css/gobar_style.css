@@ -1388,8 +1388,10 @@ div#background-container {
   height: 15px; }
 #pkg-main-info #pkg-resources {
   padding-bottom: 20px;
-  border-bottom: solid 1px #D1D3D4;
-  margin-bottom: 50px; }
+  border-bottom: solid 1px #D1D3D4; }
+  @media (min-width: 992px) {
+    #pkg-main-info #pkg-resources {
+      margin-bottom: 50px; } }
 
 #pkg-secondary-info {
   background: #fafafa; }
@@ -1780,22 +1782,33 @@ div#background-container {
   .pkg-container .pkg-actions {
     display: inline-block;
     float: right;
-    margin: 0 10px; }
+    margin: 0 10px 10px 10px; }
     .pkg-container .pkg-actions svg {
       width: 50px;
       height: 50px;
-      padding: 10px; }
+      display: block;
+      padding: 0 10px 10px 10px; }
+      @media (min-width: 768px) {
+        .pkg-container .pkg-actions svg {
+          display: inline; } }
       .pkg-container .pkg-actions svg path {
         fill: #D1D3D4; }
     .pkg-container .pkg-actions a:hover svg path {
       fill: #0072bc; }
+  .pkg-container:after {
+    content: "";
+    display: table;
+    clear: both; }
   .pkg-container .package-info {
     padding: 0 110px 0 50px;
     color: #58595B;
     min-height: 50px; }
     .pkg-container .package-info h3 {
-      margin: 30px 0 6px 0;
+      margin: 5px 0 6px 0;
       font-size: 16px; }
+      @media (min-width: 768px) {
+        .pkg-container .package-info h3 {
+          margin-top: 30px; } }
     .pkg-container .package-info p {
       font-size: 13px; }
 

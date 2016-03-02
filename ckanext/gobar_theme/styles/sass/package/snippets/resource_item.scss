@@ -29,11 +29,15 @@
   .pkg-actions {
     display: inline-block;
     float: right;
-    margin: 0 10px;
+    margin: 0 10px 10px 10px;
     svg {
       width: $right-img-size;
       height: $right-img-size;
-      padding: 10px;
+      display: block;
+      padding: 0 10px 10px 10px;
+      @include breakpoint-sm {
+        display: inline;
+      }
       path {
         fill: $light-grey;
       }
@@ -46,12 +50,20 @@
       }
     }
   }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   .package-info {
     padding: 0 (2*$right-img-size + 10px) 0 ($file-img-width + 10px);
     color: $grey;
     min-height: $right-img-size;
     h3 {
-      margin: 30px 0 6px 0;
+      margin: 5px 0 6px 0;
+      @include breakpoint-sm {
+        margin-top: 30px;
+      }
       font-size: 16px;
     }
     p {
