@@ -1095,7 +1095,9 @@ div#background-container {
   background: #fafafa;
   border-right: solid 1px #eaeced;
   margin-bottom: -99999px;
-  padding: 0 0 99999px 0; }
+  padding: 0 0 99999px 0;
+  position: relative;
+  z-index: 2; }
   .filters-container .search-filter {
     -webkit-transition-duration: 300ms;
     -moz-transition-duration: 300ms;
