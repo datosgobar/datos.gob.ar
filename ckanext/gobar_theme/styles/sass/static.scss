@@ -1,6 +1,16 @@
 .gobar-static-container {
+  padding: 0;
+  @include breakpoint-md {
+    padding: 0 15px;
+  }
+
   .gobar-static {
     @include base-container();
+    padding: 0;
+    @include breakpoint-md {
+      padding: 30px 50px;
+    }
+
     h1 {
       margin: 20px 0;
       font-weight: 400;
@@ -49,7 +59,10 @@
       border-bottom: solid $border-bottom transparent;
       font-weight: 500;
       .nav-button-border {
-        padding: 0 20px;
+        padding: 0 6px;
+        @include breakpoint-sm {
+          padding: 0 20px;
+        }
       }
       &#nav-legal-link, &#nav-plaform-link {
         .nav-button-border {
