@@ -318,10 +318,7 @@ div#background-container {
         animation-name: rotateCounterClockwise; }
 
 .gobar-static-container {
-  padding: 0; }
-  @media (min-width: 992px) {
-    .gobar-static-container {
-      padding: 0 15px; } }
+  padding: 0 15px; }
   .gobar-static-container .gobar-static {
     padding: 30px 50px;
     -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
@@ -371,8 +368,9 @@ div#background-container {
         @media (min-width: 768px) {
           #static-nav-bar .nav-section a.nav-button .nav-button-border {
             padding: 0 20px; } }
-      #static-nav-bar .nav-section a.nav-button#nav-legal-link .nav-button-border, #static-nav-bar .nav-section a.nav-button#nav-plaform-link .nav-button-border {
-        border-left: solid 1px #D1D3D4; }
+      @media (min-width: 768px) {
+        #static-nav-bar .nav-section a.nav-button#nav-legal-link .nav-button-border, #static-nav-bar .nav-section a.nav-button#nav-plaform-link .nav-button-border {
+          border-left: solid 1px #D1D3D4; } }
       #static-nav-bar .nav-section a.nav-button:hover {
         color: #0072bc;
         border-bottom-color: #0072bc; }
@@ -1053,7 +1051,9 @@ div#background-container {
     border: none;
     margin-top: 20px; }
     #search-results .search-and-order .searcher {
-      padding: 0; }
+      padding: 0;
+      overflow: hidden;
+      position: relative; }
       #search-results .search-and-order .searcher input {
         background: transparent;
         border: none;
@@ -1068,7 +1068,12 @@ div#background-container {
         padding: 10px;
         font-size: 16px;
         line-height: 1.2;
-        height: 34.2px; }
+        height: 34.2px;
+        margin-bottom: 0;
+        margin-left: 50px; }
+        @media (min-width: 992px) {
+          #search-results .search-and-order .searcher input {
+            margin-left: 0; } }
         #search-results .search-and-order .searcher input::-webkit-input-placeholder {
           color: #58595B; }
         #search-results .search-and-order .searcher input::-moz-placeholder {
@@ -1087,6 +1092,23 @@ div#background-container {
         #search-results .search-and-order .searcher button i {
           color: #58595B;
           font-size: 16px; }
+      #search-results .search-and-order .searcher .menu-button {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        margin-top: -20px;
+        padding: 5px; }
+        #search-results .search-and-order .searcher .menu-button svg {
+          width: 100%;
+          height: 100%; }
+          #search-results .search-and-order .searcher .menu-button svg path {
+            fill: #D1D3D4; }
+        #search-results .search-and-order .searcher .menu-button:hover {
+          cursor: pointer; }
+          #search-results .search-and-order .searcher .menu-button:hover svg path {
+            fill: #0072bc; }
     #search-results .search-and-order .order {
       text-align: right;
       padding-right: 0; }
@@ -1338,8 +1360,12 @@ div#background-container {
   padding-bottom: 40px; }
   #title.package-title #title-container .description {
     margin: 0; }
-  #title.package-title #stats .stats-legend {
-    margin: 0; }
+  #title.package-title #stats {
+    padding: 10px 0; }
+    #title.package-title #stats > div {
+      padding: 0; }
+      #title.package-title #stats > div .stats-legend {
+        margin: 0; }
 
 .package-container .package {
   padding: 30px 50px;

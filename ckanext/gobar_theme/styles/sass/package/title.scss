@@ -6,8 +6,12 @@
     }
   }
   #stats {
-    .stats-legend {
-      margin: 0;
+    padding: 10px 0;
+    > div {
+      padding: 0;
+      .stats-legend {
+        margin: 0;
+      }
     }
   }
 }

@@ -1,8 +1,5 @@
 .gobar-static-container {
-  padding: 0;
-  @include breakpoint-md {
-    padding: 0 15px;
-  }
+  padding: 0 15px;
 
   .gobar-static {
     @include base-container();
@@ -64,11 +61,14 @@
           padding: 0 20px;
         }
       }
-      &#nav-legal-link, &#nav-plaform-link {
-        .nav-button-border {
-          border-left: solid 1px $light-grey;
+      @include breakpoint-sm {
+        &#nav-legal-link, &#nav-plaform-link {
+          .nav-button-border {
+            border-left: solid 1px $light-grey;
+          }
         }
       }
+
       &:hover {
         color: $dark-blue;
         border-bottom-color: $dark-blue;

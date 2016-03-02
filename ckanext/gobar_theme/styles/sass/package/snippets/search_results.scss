@@ -20,6 +20,8 @@
     margin-top: 20px;
     .searcher {
       padding: 0;
+      overflow: hidden;
+      position: relative;
 
       $font-size: 16px;
       $padding: 10px;
@@ -36,6 +38,11 @@
         font-size: $font-size;
         line-height: $line-height;
         height: $padding + $font-size * $line-height + 5px;
+        margin-bottom: 0;
+        margin-left: 50px;
+        @include breakpoint-md {
+          margin-left: 0;
+        }
 
         @include placeholder {
           color: $grey;
@@ -54,6 +61,32 @@
         i {
           color: $grey;
           font-size: $font-size;
+        }
+      }
+
+      .menu-button {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        $size: 40px;
+        width: $size;
+        height: $size;
+        margin-top: -$size/2;
+        padding: 5px;
+
+        svg {
+          width: 100%;
+          height: 100%;
+          path {
+            fill: $light-grey;
+          }
+        }
+
+        &:hover {
+          cursor: pointer;
+          svg path {
+            fill: $dark-blue;
+          }
         }
       }
     }

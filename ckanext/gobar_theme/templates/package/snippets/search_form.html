@@ -11,7 +11,11 @@
 
 <form {% if form_id %}id="{{ form_id }}" {% endif %} class="search-form container-fluid search-and-order"
       method="get" data-module="select-switch">
-    <div class="searcher col-xs-6">
+    <div class="searcher col-xs-12 col-sm-6">
+        <div class="hidden-md hidden-lg menu-button">
+            {% snippet "svg/menu.svg" %}
+        </div>
+
         <input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off"
                placeholder="Buscar dataset">
         <button type="submit" value="search">
@@ -23,7 +27,7 @@
         <span>{{ form.hidden_from_list(fields=fields) }}</span>
     {%- endif %}
 
-    <div class="order col-xs-6">
+    <div class="order hidden-xs col-sm-6">
         <label for="field-order-by">Ordenar</label>
         <select id="field-order-by" name="sort">
             {% for label, value in sorting %}
