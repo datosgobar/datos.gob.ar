@@ -3,6 +3,8 @@
   border-right: solid 1px $inactive;
   margin-bottom: -99999px;
   padding: 0 0 99999px 0;
+  position: relative;
+  z-index: 2;
 
   .search-filter {
     $side-padding: 15px;
