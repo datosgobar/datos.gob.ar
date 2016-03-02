@@ -1,15 +1,41 @@
-{% ckan_extends %}
+{%- ckan_extends -%}
 
-{%- block styles %}
+{%- block styles -%}
     {{ super() }}
-    {% resource 'gobar_css/bootstrap_style.css' %}
-    {% resource 'gobar_css/gobar_style.css' %}
-{% endblock %}
-
-{%- block title -%}
-    Datos Argentina {%- block subtitle %}{% endblock -%}
+    {%- resource 'gobar_css/bootstrap_style.css' -%}
+    {%- resource 'gobar_css/gobar_style.css' -%}
 {%- endblock -%}
 
-{% block links -%}
+{%- block meta -%}
+    {{ super() }}
+
+    <meta property="og:url" content="http://datos.gob.ar">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Datos Argentina">
+    <meta property="og:site_name" content="Datos Argentina">
+    <meta property="og:description"
+          content="Portal de datos abiertos del Gobierno de la República Argentina. Acá encontrarás información pública, herramientas y recursos para desarrollar aplicaciones y visualizaciones y crear historias con datos.">
+    <meta property="og:image" content="/img/fb_card.png">
+    <meta property="og:locale" content="es_AR">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@datosgobar"/>
+    {% block twitter_title -%}
+        <meta name="twitter:title" content="Datos Argentina">
+    {%- endblock %}
+    {% block twitter_img -%}
+        <meta name="twitter:description"
+              content="Portal de datos abiertos del Gobierno de la República Argentina. Acá encontrarás información pública, herramientas y recursos para desarrollar aplicaciones y visualizaciones y crear historias con datos.">
+    {%- endblock %}
+    {% block twitter_description -%}
+        <meta name="twitter:image" content="/img/twitter_card.png">
+    {%- endblock %}
+{%- endblock -%}
+
+{%- block title -%}
+    Datos Argentina {%- block subtitle -%}{%- endblock -%}
+{%- endblock -%}
+
+{%- block links -%}
     <link rel="shortcut icon" href="/favicon.ico"/>
-{% endblock -%}
+{%- endblock -%}

@@ -5,6 +5,16 @@
 {% set pkg = c.pkg_dict or pkg_dict %}
 {% set res = c.resource %}
 
+{% block twitter_title -%}
+    <meta name="twitter:title" content="Datos Argentina | {{ res.name }}">
+{%- endblock %}
+{% block twitter_img -%}
+    <meta name="twitter:description" content="{{ res.description }}">
+{%- endblock %}
+{% block twitter_description -%}
+    <meta name="twitter:image" content="/img/twitter_card_data.png">
+{%- endblock %}
+
 {% block content %}
     <div class="resource-container container-fluid">
         <div class="resource col-xs-12 col-md-10 col-md-offset-1">

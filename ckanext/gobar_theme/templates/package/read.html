@@ -4,6 +4,16 @@
 
 {% set pkg = c.pkg_dict or pkg_dict %}
 
+{% block twitter_title -%}
+    <meta name="twitter:title" content="Datos Argentina | {{ pkg.title }}">
+{%- endblock %}
+{% block twitter_img -%}
+    <meta name="twitter:description" content="{{ pkg.notes }}">
+{%- endblock %}
+{% block twitter_description -%}
+    <meta name="twitter:image" content="/img/twitter_card_data.png">
+{%- endblock %}
+
 {% block content %}
     <div class="package-container container-fluid">
         <div class="package col-xs-12 col-md-10 col-md-offset-1">
