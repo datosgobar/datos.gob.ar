@@ -6,13 +6,13 @@
     <div id="home-create-buttons" class="container-fluid">
         <div class="col-xs-12 col-md-10 col-md-offset-1">
             {% if package_create %}
-                {% link_for _('Add Dataset'), controller='package', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
+                {% link_for 'Crear dataset', controller='package', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
             {% endif %}
             {%- if group_create -%}
-                {% link_for _('Add Group'), controller='group', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
+                {% link_for 'Crear grupo', controller='group', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
             {%- endif -%}
             {% if organization_create %}
-                {% link_for _('Add Organization'), controller='organization', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
+                {% link_for 'Crear organización', controller='organization', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
             {% endif %}
 
         </div>
