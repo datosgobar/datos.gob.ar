@@ -1,6 +1,7 @@
 .resource-container {
-  .resource{
-    @include base-container();
+  @include base-container();
+  .resource {
+    @include base-content();
     padding-bottom: 50px;
 
     .back-to-pkg {
@@ -39,6 +40,12 @@
     }
 
     .resource-alternative-packages {
+      padding-left: 0;
+      padding-right: 0;
+      @include breakpoint-md {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
       border-bottom: solid 1px $light-grey;
       padding-bottom: 20px;
 
@@ -50,6 +57,12 @@
     }
 
     .resource-additional-info {
+      padding-left: 0;
+      padding-right: 0;
+      @include breakpoint-md {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
       h2 {
         font-size: 17px;
         border-bottom: solid 1px $light-grey;

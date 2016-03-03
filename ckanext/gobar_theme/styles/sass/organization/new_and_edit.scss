@@ -1,6 +1,7 @@
 #edit-organization-container, #new-organization-container {
+  @include base-container();
   #edit-organization, #new-organization {
-    @include base-container();
+    @include base-content();
     @include base-form();
     form {
       .image-upload {

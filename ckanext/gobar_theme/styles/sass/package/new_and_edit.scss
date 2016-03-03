@@ -1,6 +1,7 @@
 #edit-package-container, #new-package-container {
+  @include base-container();
   #edit-package, #new-package{
-    @include base-container();
+    @include base-content();
     @include base-form();
     form {
       ol {

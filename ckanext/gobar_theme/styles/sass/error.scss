@@ -1,6 +1,7 @@
 #error {
+  @include base-container();
   #error-text {
-    @include base-container();
+    @include base-content();
     text-align: center;
     #error-code {
       padding: 50px 0;

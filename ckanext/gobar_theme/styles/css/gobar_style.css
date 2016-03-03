@@ -318,16 +318,23 @@ div#background-container {
         animation-name: rotateCounterClockwise; }
 
 .gobar-static-container {
-  padding: 0 15px; }
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    .gobar-static-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
   .gobar-static-container .gobar-static {
     padding: 30px 50px;
-    -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-    -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-    -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-    box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
     color: #58595B;
     font-size: 16px;
     padding: 0; }
+    @media (min-width: 992px) {
+      .gobar-static-container .gobar-static {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
     @media (min-width: 992px) {
       .gobar-static-container .gobar-static {
         padding: 30px 50px; } }
@@ -378,56 +385,65 @@ div#background-container {
       color: #0072bc;
       border-bottom-color: #0072bc; }
 
-#error #error-text {
-  padding: 30px 50px;
-  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  color: #58595B;
-  font-size: 16px;
-  text-align: center; }
-  #error #error-text #error-code {
-    padding: 50px 0;
-    font-weight: 300;
-    line-height: 0; }
-    #error #error-text #error-code .circle-container, #error #error-text #error-code .separator {
-      position: relative;
-      display: inline-block;
-      width: 3.125%;
-      padding-bottom: 3.125%; }
-    #error #error-text #error-code .circle-container .circle-gutter {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      padding: 2px;
-      top: 0;
-      left: 0; }
-      #error #error-text #error-code .circle-container .circle-gutter .circle-background {
+#error {
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    #error {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  #error #error-text {
+    padding: 30px 50px;
+    color: #58595B;
+    font-size: 16px;
+    text-align: center; }
+    @media (min-width: 992px) {
+      #error #error-text {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    #error #error-text #error-code {
+      padding: 50px 0;
+      font-weight: 300;
+      line-height: 0; }
+      #error #error-text #error-code .circle-container, #error #error-text #error-code .separator {
+        position: relative;
+        display: inline-block;
+        width: 3.125%;
+        padding-bottom: 3.125%; }
+      #error #error-text #error-code .circle-container .circle-gutter {
+        position: absolute;
         width: 100%;
         height: 100%;
-        background: #0072bc;
-        -o-border-radius: 15%;
-        -moz-border-radius: 15%;
-        -webkit-border-radius: 15%;
-        border-radius: 15%;
-        -webkit-transition-duration: 800ms;
-        -moz-transition-duration: 800ms;
-        transition-duration: 800ms;
-        -webkit-transition-property: opacity;
-        -moz-transition-property: opacity;
-        transition-property: opacity;
-        -webkit-transition-delay: 0s;
-        -moz-transition-delay: 0s;
-        transition-delay: 0s;
-        -webkit-transition-timing-function: linear;
-        -moz-transition-timing-function: linear;
-        transition-timing-function: linear;
-        opacity: 0; }
-        #error #error-text #error-code .circle-container .circle-gutter .circle-background.visible {
-          opacity: 1; }
-        #error #error-text #error-code .circle-container .circle-gutter .circle-background.different {
-          opacity: 0.75; }
+        padding: 2px;
+        top: 0;
+        left: 0; }
+        #error #error-text #error-code .circle-container .circle-gutter .circle-background {
+          width: 100%;
+          height: 100%;
+          background: #0072bc;
+          -o-border-radius: 15%;
+          -moz-border-radius: 15%;
+          -webkit-border-radius: 15%;
+          border-radius: 15%;
+          -webkit-transition-duration: 800ms;
+          -moz-transition-duration: 800ms;
+          transition-duration: 800ms;
+          -webkit-transition-property: opacity;
+          -moz-transition-property: opacity;
+          transition-property: opacity;
+          -webkit-transition-delay: 0s;
+          -moz-transition-delay: 0s;
+          transition-delay: 0s;
+          -webkit-transition-timing-function: linear;
+          -moz-transition-timing-function: linear;
+          transition-timing-function: linear;
+          opacity: 0; }
+          #error #error-text #error-code .circle-container .circle-gutter .circle-background.visible {
+            opacity: 1; }
+          #error #error-text #error-code .circle-container .circle-gutter .circle-background.different {
+            opacity: 0.75; }
 
 .modal-open .modal {
   width: 50%;
@@ -702,205 +718,232 @@ div#background-container {
           margin: 15px 0 0 0;
           line-height: 1.3; }
 
-#login-container #login {
-  padding: 30px 50px;
-  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  color: #58595B;
-  font-size: 16px; }
-  #login-container #login h1 {
-    margin: 20px 0;
-    font-weight: 400;
-    font-size: 40px; }
-  #login-container #login form {
-    padding: 20px 50px;
-    -o-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-    -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-    -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-    box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
-    #login-container #login form label {
-      display: block;
-      text-align: left;
+#login-container {
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    #login-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  #login-container #login {
+    padding: 30px 50px;
+    color: #58595B;
+    font-size: 16px; }
+    @media (min-width: 992px) {
+      #login-container #login {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    #login-container #login h1 {
+      margin: 20px 0;
       font-weight: 400;
+      font-size: 40px; }
+    #login-container #login form {
+      padding: 20px 50px;
+      -o-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
+      #login-container #login form label {
+        display: block;
+        text-align: left;
+        font-weight: 400;
+        padding: 5px 20px 5px 0;
+        font-size: 16px;
+        line-height: 1.2; }
+      #login-container #login form input[type="text"], #login-container #login form input[type="password"] {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 5px;
+        height: 29.2px; }
+      #login-container #login form input[type="checkbox"] {
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        -o-transform: scale(1.3);
+        transform: scale(1.3); }
+      #login-container #login form .control-custom .input-prepend {
+        width: 100%;
+        white-space: normal;
+        position: relative; }
+        #login-container #login form .control-custom .input-prepend label.add-on {
+          display: inline-block;
+          margin: 0;
+          width: 20%;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+        #login-container #login form .control-custom .input-prepend label.icon-remove {
+          position: absolute;
+          top: 50%;
+          left: initial;
+          right: 0;
+          min-width: 4em;
+          margin: -1em 0 0 0;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+          #login-container #login form .control-custom .input-prepend label.icon-remove:before, #login-container #login form .control-custom .input-prepend label.icon-remove:after {
+            content: initial; }
+          #login-container #login form .control-custom .input-prepend label.icon-remove span {
+            display: inline-block; }
+        #login-container #login form .control-custom .input-prepend input[type="text"] {
+          display: inline-block;
+          margin: 0;
+          width: 65%;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+      #login-container #login form .package-groups input[type="checkbox"].package-group-checkbox {
+        width: 1px;
+        height: 1px;
+        position: fixed;
+        left: -10px;
+        top: -10px; }
+      #login-container #login form .package-groups label.package-group-label {
+        color: #D1D3D4;
+        margin: 0;
+        padding: 2px 0; }
+        #login-container #login form .package-groups label.package-group-label:after {
+          content: initial; }
+        #login-container #login form .package-groups label.package-group-label:hover {
+          color: #0072bc; }
+      #login-container #login form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
+        color: #0072bc; }
+      #login-container #login form .control-group {
+        position: relative; }
+        #login-container #login form .control-group.error .input-prepend .add-on {
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+    #login-container #login form label {
+      width: 50%;
       padding: 5px 20px 5px 0;
       font-size: 16px;
       line-height: 1.2; }
-    #login-container #login form input[type="text"], #login-container #login form input[type="password"] {
-      width: 100%;
-      font-size: 16px;
-      line-height: 1.2;
-      padding: 5px;
-      height: 29.2px; }
-    #login-container #login form input[type="checkbox"] {
-      -webkit-transform: scale(1.3);
-      -moz-transform: scale(1.3);
-      -ms-transform: scale(1.3);
-      -o-transform: scale(1.3);
-      transform: scale(1.3); }
-    #login-container #login form .control-custom .input-prepend {
-      width: 100%;
-      white-space: normal;
-      position: relative; }
-      #login-container #login form .control-custom .input-prepend label.add-on {
-        display: inline-block;
-        margin: 0;
-        width: 20%;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #login-container #login form .control-custom .input-prepend label.icon-remove {
-        position: absolute;
-        top: 50%;
-        left: initial;
-        right: 0;
-        min-width: 4em;
-        margin: -1em 0 0 0;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-        #login-container #login form .control-custom .input-prepend label.icon-remove:before, #login-container #login form .control-custom .input-prepend label.icon-remove:after {
-          content: initial; }
-        #login-container #login form .control-custom .input-prepend label.icon-remove span {
-          display: inline-block; }
-      #login-container #login form .control-custom .input-prepend input[type="text"] {
-        display: inline-block;
-        margin: 0;
-        width: 65%;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-    #login-container #login form .package-groups input[type="checkbox"].package-group-checkbox {
-      width: 1px;
-      height: 1px;
-      position: fixed;
-      left: -10px;
-      top: -10px; }
-    #login-container #login form .package-groups label.package-group-label {
-      color: #D1D3D4;
-      margin: 0;
-      padding: 2px 0; }
-      #login-container #login form .package-groups label.package-group-label:after {
-        content: initial; }
-      #login-container #login form .package-groups label.package-group-label:hover {
-        color: #0072bc; }
-    #login-container #login form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-      color: #0072bc; }
-    #login-container #login form .control-group {
-      position: relative; }
-      #login-container #login form .control-group.error .input-prepend .add-on {
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-  #login-container #login form label {
-    width: 50%;
-    padding: 5px 20px 5px 0;
-    font-size: 16px;
-    line-height: 1.2; }
-  #login-container #login form .controls {
-    margin-left: 50%; }
+    #login-container #login form .controls {
+      margin-left: 50%; }
 
-#user-datasets-container #user-datasets {
-  padding: 30px 50px;
-  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  color: #58595B;
-  font-size: 16px; }
-
-.organization-container .organization {
-  padding: 30px 50px;
-  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  color: #58595B;
-  font-size: 16px;
-  padding: 30px 20px; }
-  .organization-container .organization .add-organization {
-    text-align: right;
-    margin-bottom: 20px; }
-  .organization-container .organization .organization-list {
-    padding: 0;
-    margin: 0;
+#user-datasets-container {
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    #user-datasets-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  #user-datasets-container #user-datasets {
+    padding: 30px 50px;
+    color: #58595B;
     font-size: 16px; }
-    .organization-container .organization .organization-list .organization-list-title {
-      padding: 5px;
-      margin-bottom: 5px;
-      border-bottom: solid 1px #eaeced;
-      font-size: 90%; }
-      @media (min-width: 768px) {
-        .organization-container .organization .organization-list .organization-list-title {
-          font-size: 100%; } }
-      .organization-container .organization .organization-list .organization-list-title .count-title {
-        float: right; }
-    .organization-container .organization .organization-list hr {
-      margin: 5px 0;
-      border-color: #eaeced; }
-    .organization-container .organization .organization-list .organization-branch .organization-branch {
-      padding-left: 50px;
-      position: relative; }
-      .organization-container .organization .organization-list .organization-branch .organization-branch:before {
-        content: '';
-        position: absolute;
-        top: 1em;
-        left: 12px;
-        width: 38px;
-        border-bottom: dashed 1px #D1D3D4; }
-      .organization-container .organization .organization-list .organization-branch .organization-branch:after {
-        content: '';
-        position: absolute;
-        left: 12px;
-        top: 0;
-        height: 100%;
-        border-left: dashed 1px #D1D3D4; }
-      .organization-container .organization .organization-list .organization-branch .organization-branch:last-child:after {
-        height: 1em; }
-    .organization-container .organization .organization-list .organization-branch .organization-name {
-      padding: 5px;
-      margin: 0; }
-      .organization-container .organization .organization-list .organization-branch .organization-name .edit-organization svg {
-        width: 1em;
-        height: 1em; }
-        .organization-container .organization .organization-list .organization-branch .organization-name .edit-organization svg path {
-          fill: #D1D3D4; }
-        .organization-container .organization .organization-list .organization-branch .organization-name .edit-organization svg:hover path {
-          fill: #58595B; }
-      .organization-container .organization .organization-list .organization-branch .organization-name svg.chevron-right {
-        vertical-align: middle;
-        width: 20px;
-        height: 20px;
-        -webkit-transform: scale(2);
-        -moz-transform: scale(2);
-        -ms-transform: scale(2);
-        -o-transform: scale(2);
-        transform: scale(2); }
-        .organization-container .organization .organization-list .organization-branch .organization-name svg.chevron-right path {
-          fill: #C7EAFB; }
-      .organization-container .organization .organization-list .organization-branch .organization-name.top-organization {
-        color: #58595B;
+    @media (min-width: 992px) {
+      #user-datasets-container #user-datasets {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+
+.organization-container {
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    .organization-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  .organization-container .organization {
+    padding: 30px 50px;
+    color: #58595B;
+    font-size: 16px;
+    padding: 30px 20px; }
+    @media (min-width: 992px) {
+      .organization-container .organization {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    .organization-container .organization .add-organization {
+      text-align: right;
+      margin-bottom: 20px; }
+    .organization-container .organization .organization-list {
+      padding: 0;
+      margin: 0;
+      font-size: 16px; }
+      .organization-container .organization .organization-list .organization-list-title {
+        padding: 5px;
+        margin-bottom: 5px;
+        border-bottom: solid 1px #eaeced;
+        font-size: 90%; }
+        @media (min-width: 768px) {
+          .organization-container .organization .organization-list .organization-list-title {
+            font-size: 100%; } }
+        .organization-container .organization .organization-list .organization-list-title .count-title {
+          float: right; }
+      .organization-container .organization .organization-list hr {
+        margin: 5px 0;
+        border-color: #eaeced; }
+      .organization-container .organization .organization-list .organization-branch .organization-branch {
+        padding-left: 50px;
+        position: relative; }
+        .organization-container .organization .organization-list .organization-branch .organization-branch:before {
+          content: '';
+          position: absolute;
+          top: 1em;
+          left: 12px;
+          width: 38px;
+          border-bottom: dashed 1px #D1D3D4; }
+        .organization-container .organization .organization-list .organization-branch .organization-branch:after {
+          content: '';
+          position: absolute;
+          left: 12px;
+          top: 0;
+          height: 100%;
+          border-left: dashed 1px #D1D3D4; }
+        .organization-container .organization .organization-list .organization-branch .organization-branch:last-child:after {
+          height: 1em; }
+      .organization-container .organization .organization-list .organization-branch .organization-name {
+        padding: 5px;
+        margin: 0; }
+        .organization-container .organization .organization-list .organization-branch .organization-name .edit-organization svg {
+          width: 1em;
+          height: 1em; }
+          .organization-container .organization .organization-list .organization-branch .organization-name .edit-organization svg path {
+            fill: #D1D3D4; }
+          .organization-container .organization .organization-list .organization-branch .organization-name .edit-organization svg:hover path {
+            fill: #58595B; }
+        .organization-container .organization .organization-list .organization-branch .organization-name svg.chevron-right {
+          vertical-align: middle;
+          width: 20px;
+          height: 20px;
+          -webkit-transform: scale(2);
+          -moz-transform: scale(2);
+          -ms-transform: scale(2);
+          -o-transform: scale(2);
+          transform: scale(2); }
+          .organization-container .organization .organization-list .organization-branch .organization-name svg.chevron-right path {
+            fill: #C7EAFB; }
+        .organization-container .organization .organization-list .organization-branch .organization-name.top-organization {
+          color: #58595B;
+          font-weight: 500;
+          font-size: 18px;
+          position: relative;
+          padding-right: 2em; }
+      .organization-container .organization .organization-list .organization-branch .organization-count {
         font-weight: 500;
-        font-size: 18px;
-        position: relative;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 5px; }
+      .organization-container .organization .organization-list .top-organization ~ .organization-branch {
         padding-right: 2em; }
-    .organization-container .organization .organization-list .organization-branch .organization-count {
-      font-weight: 500;
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 5px; }
-    .organization-container .organization .organization-list .top-organization ~ .organization-branch {
-      padding-right: 2em; }
 
 /* Extiende ../home/title */
 #title.organization-title {
@@ -915,118 +958,136 @@ div#background-container {
   #title.organization-title #stats .stats-legend {
     margin: 0; }
 
-#edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
-  padding: 30px 50px;
-  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  color: #58595B;
-  font-size: 16px; }
-  #edit-organization-container #edit-organization h1, #edit-organization-container #new-organization h1, #new-organization-container #edit-organization h1, #new-organization-container #new-organization h1 {
-    margin: 20px 0;
-    font-weight: 400;
-    font-size: 40px; }
-  #edit-organization-container #edit-organization form, #edit-organization-container #new-organization form, #new-organization-container #edit-organization form, #new-organization-container #new-organization form {
-    padding: 20px 50px;
-    -o-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-    -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-    -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-    box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
-    #edit-organization-container #edit-organization form label, #edit-organization-container #new-organization form label, #new-organization-container #edit-organization form label, #new-organization-container #new-organization form label {
-      display: block;
-      text-align: left;
+#edit-organization-container, #new-organization-container {
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    #edit-organization-container, #new-organization-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  #edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
+    padding: 30px 50px;
+    color: #58595B;
+    font-size: 16px; }
+    @media (min-width: 992px) {
+      #edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    #edit-organization-container #edit-organization h1, #edit-organization-container #new-organization h1, #new-organization-container #edit-organization h1, #new-organization-container #new-organization h1 {
+      margin: 20px 0;
       font-weight: 400;
-      padding: 5px 20px 5px 0;
-      font-size: 16px;
-      line-height: 1.2; }
-    #edit-organization-container #edit-organization form input[type="text"], #edit-organization-container #edit-organization form input[type="password"], #edit-organization-container #new-organization form input[type="text"], #edit-organization-container #new-organization form input[type="password"], #new-organization-container #edit-organization form input[type="text"], #new-organization-container #edit-organization form input[type="password"], #new-organization-container #new-organization form input[type="text"], #new-organization-container #new-organization form input[type="password"] {
-      width: 100%;
-      font-size: 16px;
-      line-height: 1.2;
-      padding: 5px;
-      height: 29.2px; }
-    #edit-organization-container #edit-organization form input[type="checkbox"], #edit-organization-container #new-organization form input[type="checkbox"], #new-organization-container #edit-organization form input[type="checkbox"], #new-organization-container #new-organization form input[type="checkbox"] {
-      -webkit-transform: scale(1.3);
-      -moz-transform: scale(1.3);
-      -ms-transform: scale(1.3);
-      -o-transform: scale(1.3);
-      transform: scale(1.3); }
-    #edit-organization-container #edit-organization form .control-custom .input-prepend, #edit-organization-container #new-organization form .control-custom .input-prepend, #new-organization-container #edit-organization form .control-custom .input-prepend, #new-organization-container #new-organization form .control-custom .input-prepend {
-      width: 100%;
-      white-space: normal;
-      position: relative; }
-      #edit-organization-container #edit-organization form .control-custom .input-prepend label.add-on, #edit-organization-container #new-organization form .control-custom .input-prepend label.add-on, #new-organization-container #edit-organization form .control-custom .input-prepend label.add-on, #new-organization-container #new-organization form .control-custom .input-prepend label.add-on {
-        display: inline-block;
+      font-size: 40px; }
+    #edit-organization-container #edit-organization form, #edit-organization-container #new-organization form, #new-organization-container #edit-organization form, #new-organization-container #new-organization form {
+      padding: 20px 50px;
+      -o-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
+      #edit-organization-container #edit-organization form label, #edit-organization-container #new-organization form label, #new-organization-container #edit-organization form label, #new-organization-container #new-organization form label {
+        display: block;
+        text-align: left;
+        font-weight: 400;
+        padding: 5px 20px 5px 0;
+        font-size: 16px;
+        line-height: 1.2; }
+      #edit-organization-container #edit-organization form input[type="text"], #edit-organization-container #edit-organization form input[type="password"], #edit-organization-container #new-organization form input[type="text"], #edit-organization-container #new-organization form input[type="password"], #new-organization-container #edit-organization form input[type="text"], #new-organization-container #edit-organization form input[type="password"], #new-organization-container #new-organization form input[type="text"], #new-organization-container #new-organization form input[type="password"] {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 5px;
+        height: 29.2px; }
+      #edit-organization-container #edit-organization form input[type="checkbox"], #edit-organization-container #new-organization form input[type="checkbox"], #new-organization-container #edit-organization form input[type="checkbox"], #new-organization-container #new-organization form input[type="checkbox"] {
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        -o-transform: scale(1.3);
+        transform: scale(1.3); }
+      #edit-organization-container #edit-organization form .control-custom .input-prepend, #edit-organization-container #new-organization form .control-custom .input-prepend, #new-organization-container #edit-organization form .control-custom .input-prepend, #new-organization-container #new-organization form .control-custom .input-prepend {
+        width: 100%;
+        white-space: normal;
+        position: relative; }
+        #edit-organization-container #edit-organization form .control-custom .input-prepend label.add-on, #edit-organization-container #new-organization form .control-custom .input-prepend label.add-on, #new-organization-container #edit-organization form .control-custom .input-prepend label.add-on, #new-organization-container #new-organization form .control-custom .input-prepend label.add-on {
+          display: inline-block;
+          margin: 0;
+          width: 20%;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+        #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove {
+          position: absolute;
+          top: 50%;
+          left: initial;
+          right: 0;
+          min-width: 4em;
+          margin: -1em 0 0 0;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+          #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:before, #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:after, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:before, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:after, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:before, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:after, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:before, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:after {
+            content: initial; }
+          #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove span, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove span, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove span, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove span {
+            display: inline-block; }
+        #edit-organization-container #edit-organization form .control-custom .input-prepend input[type="text"], #edit-organization-container #new-organization form .control-custom .input-prepend input[type="text"], #new-organization-container #edit-organization form .control-custom .input-prepend input[type="text"], #new-organization-container #new-organization form .control-custom .input-prepend input[type="text"] {
+          display: inline-block;
+          margin: 0;
+          width: 65%;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+      #edit-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox, #edit-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox, #new-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox, #new-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox {
+        width: 1px;
+        height: 1px;
+        position: fixed;
+        left: -10px;
+        top: -10px; }
+      #edit-organization-container #edit-organization form .package-groups label.package-group-label, #edit-organization-container #new-organization form .package-groups label.package-group-label, #new-organization-container #edit-organization form .package-groups label.package-group-label, #new-organization-container #new-organization form .package-groups label.package-group-label {
+        color: #D1D3D4;
         margin: 0;
-        width: 20%;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove {
-        position: absolute;
-        top: 50%;
-        left: initial;
-        right: 0;
-        min-width: 4em;
-        margin: -1em 0 0 0;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-        #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:before, #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:after, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:before, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:after, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:before, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:after, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:before, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:after {
+        padding: 2px 0; }
+        #edit-organization-container #edit-organization form .package-groups label.package-group-label:after, #edit-organization-container #new-organization form .package-groups label.package-group-label:after, #new-organization-container #edit-organization form .package-groups label.package-group-label:after, #new-organization-container #new-organization form .package-groups label.package-group-label:after {
           content: initial; }
-        #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove span, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove span, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove span, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove span {
-          display: inline-block; }
-      #edit-organization-container #edit-organization form .control-custom .input-prepend input[type="text"], #edit-organization-container #new-organization form .control-custom .input-prepend input[type="text"], #new-organization-container #edit-organization form .control-custom .input-prepend input[type="text"], #new-organization-container #new-organization form .control-custom .input-prepend input[type="text"] {
-        display: inline-block;
-        margin: 0;
-        width: 65%;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-    #edit-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox, #edit-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox, #new-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox, #new-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox {
-      width: 1px;
-      height: 1px;
-      position: fixed;
-      left: -10px;
-      top: -10px; }
-    #edit-organization-container #edit-organization form .package-groups label.package-group-label, #edit-organization-container #new-organization form .package-groups label.package-group-label, #new-organization-container #edit-organization form .package-groups label.package-group-label, #new-organization-container #new-organization form .package-groups label.package-group-label {
-      color: #D1D3D4;
-      margin: 0;
-      padding: 2px 0; }
-      #edit-organization-container #edit-organization form .package-groups label.package-group-label:after, #edit-organization-container #new-organization form .package-groups label.package-group-label:after, #new-organization-container #edit-organization form .package-groups label.package-group-label:after, #new-organization-container #new-organization form .package-groups label.package-group-label:after {
-        content: initial; }
-      #edit-organization-container #edit-organization form .package-groups label.package-group-label:hover, #edit-organization-container #new-organization form .package-groups label.package-group-label:hover, #new-organization-container #edit-organization form .package-groups label.package-group-label:hover, #new-organization-container #new-organization form .package-groups label.package-group-label:hover {
+        #edit-organization-container #edit-organization form .package-groups label.package-group-label:hover, #edit-organization-container #new-organization form .package-groups label.package-group-label:hover, #new-organization-container #edit-organization form .package-groups label.package-group-label:hover, #new-organization-container #new-organization form .package-groups label.package-group-label:hover {
+          color: #0072bc; }
+      #edit-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
         color: #0072bc; }
-    #edit-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-      color: #0072bc; }
-    #edit-organization-container #edit-organization form .control-group, #edit-organization-container #new-organization form .control-group, #new-organization-container #edit-organization form .control-group, #new-organization-container #new-organization form .control-group {
-      position: relative; }
-      #edit-organization-container #edit-organization form .control-group.error .input-prepend .add-on, #edit-organization-container #new-organization form .control-group.error .input-prepend .add-on, #new-organization-container #edit-organization form .control-group.error .input-prepend .add-on, #new-organization-container #new-organization form .control-group.error .input-prepend .add-on {
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-  #edit-organization-container #edit-organization form .image-upload, #edit-organization-container #new-organization form .image-upload, #new-organization-container #edit-organization form .image-upload, #new-organization-container #new-organization form .image-upload {
-    display: none; }
+      #edit-organization-container #edit-organization form .control-group, #edit-organization-container #new-organization form .control-group, #new-organization-container #edit-organization form .control-group, #new-organization-container #new-organization form .control-group {
+        position: relative; }
+        #edit-organization-container #edit-organization form .control-group.error .input-prepend .add-on, #edit-organization-container #new-organization form .control-group.error .input-prepend .add-on, #new-organization-container #edit-organization form .control-group.error .input-prepend .add-on, #new-organization-container #new-organization form .control-group.error .input-prepend .add-on {
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+    #edit-organization-container #edit-organization form .image-upload, #edit-organization-container #new-organization form .image-upload, #new-organization-container #edit-organization form .image-upload, #new-organization-container #new-organization form .image-upload {
+      display: none; }
 
-.package-container .package-search {
-  padding: 30px 50px;
-  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  color: #58595B;
-  font-size: 16px;
-  padding: 0 0 30px 0;
-  overflow: hidden; }
+.package-container {
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    .package-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  .package-container .package-search {
+    padding: 30px 50px;
+    color: #58595B;
+    font-size: 16px;
+    padding: 0 0 30px 0;
+    overflow: hidden; }
+    @media (min-width: 992px) {
+      .package-container .package-search {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
 
 #search-results {
   -webkit-transition-duration: 300ms;
@@ -1412,24 +1473,33 @@ div#background-container {
       #title.package-title #stats > div .stats-legend {
         margin: 0; }
 
-.package-container .package {
-  padding: 30px 50px;
-  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  color: #58595B;
-  font-size: 16px;
-  padding: 0; }
-  .package-container .package .row {
-    overflow: hidden;
-    margin: 0; }
-  .package-container .package #pkg-main-info,
-  .package-container .package #pkg-secondary-info,
-  .package-container .package #pkg-recent-activity,
-  .package-container .package #pkg-related {
-    margin-bottom: -99999px;
-    padding-bottom: 99999px; }
+.package-container {
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    .package-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  .package-container .package {
+    padding: 30px 50px;
+    color: #58595B;
+    font-size: 16px;
+    padding: 0; }
+    @media (min-width: 992px) {
+      .package-container .package {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    .package-container .package .row {
+      overflow: hidden;
+      margin: 0; }
+    .package-container .package #pkg-main-info,
+    .package-container .package #pkg-secondary-info,
+    .package-container .package #pkg-recent-activity,
+    .package-container .package #pkg-related {
+      margin-bottom: -99999px;
+      padding-bottom: 99999px; }
 
 #pkg-main-info #pkg-title-and-desc h1.pkg-title {
   margin: 50px 0 0 0;
@@ -1595,210 +1665,250 @@ div#background-container {
   #pkg-recent-activity.no-more-activity ul.activity {
     margin-bottom: 50px; }
 
-#edit-resources-container #edit-resources {
-  padding: 30px 50px;
-  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  color: #58595B;
-  font-size: 16px; }
-  #edit-resources-container #edit-resources .action-buttons {
-    margin: 20px 0; }
-    #edit-resources-container #edit-resources .action-buttons .edit-dataset-button, #edit-resources-container #edit-resources .action-buttons .add-resource {
-      margin: 0 10px 0 0; }
-    #edit-resources-container #edit-resources .action-buttons .btn {
-      border-color: #D1D3D4; }
-
-#edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
-  padding: 30px 50px;
-  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  color: #58595B;
-  font-size: 16px; }
-  #edit-package-container #edit-package h1, #edit-package-container #new-package h1, #new-package-container #edit-package h1, #new-package-container #new-package h1 {
-    margin: 20px 0;
-    font-weight: 400;
-    font-size: 40px; }
-  #edit-package-container #edit-package form, #edit-package-container #new-package form, #new-package-container #edit-package form, #new-package-container #new-package form {
-    padding: 20px 50px;
-    -o-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-    -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-    -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-    box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
-    #edit-package-container #edit-package form label, #edit-package-container #new-package form label, #new-package-container #edit-package form label, #new-package-container #new-package form label {
-      display: block;
-      text-align: left;
-      font-weight: 400;
-      padding: 5px 20px 5px 0;
-      font-size: 16px;
-      line-height: 1.2; }
-    #edit-package-container #edit-package form input[type="text"], #edit-package-container #edit-package form input[type="password"], #edit-package-container #new-package form input[type="text"], #edit-package-container #new-package form input[type="password"], #new-package-container #edit-package form input[type="text"], #new-package-container #edit-package form input[type="password"], #new-package-container #new-package form input[type="text"], #new-package-container #new-package form input[type="password"] {
-      width: 100%;
-      font-size: 16px;
-      line-height: 1.2;
-      padding: 5px;
-      height: 29.2px; }
-    #edit-package-container #edit-package form input[type="checkbox"], #edit-package-container #new-package form input[type="checkbox"], #new-package-container #edit-package form input[type="checkbox"], #new-package-container #new-package form input[type="checkbox"] {
-      -webkit-transform: scale(1.3);
-      -moz-transform: scale(1.3);
-      -ms-transform: scale(1.3);
-      -o-transform: scale(1.3);
-      transform: scale(1.3); }
-    #edit-package-container #edit-package form .control-custom .input-prepend, #edit-package-container #new-package form .control-custom .input-prepend, #new-package-container #edit-package form .control-custom .input-prepend, #new-package-container #new-package form .control-custom .input-prepend {
-      width: 100%;
-      white-space: normal;
-      position: relative; }
-      #edit-package-container #edit-package form .control-custom .input-prepend label.add-on, #edit-package-container #new-package form .control-custom .input-prepend label.add-on, #new-package-container #edit-package form .control-custom .input-prepend label.add-on, #new-package-container #new-package form .control-custom .input-prepend label.add-on {
-        display: inline-block;
-        margin: 0;
-        width: 20%;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove {
-        position: absolute;
-        top: 50%;
-        left: initial;
-        right: 0;
-        min-width: 4em;
-        margin: -1em 0 0 0;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-        #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove:before, #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove:after, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove:before, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove:after, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove:before, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove:after, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove:before, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove:after {
-          content: initial; }
-        #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove span, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove span, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove span, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove span {
-          display: inline-block; }
-      #edit-package-container #edit-package form .control-custom .input-prepend input[type="text"], #edit-package-container #new-package form .control-custom .input-prepend input[type="text"], #new-package-container #edit-package form .control-custom .input-prepend input[type="text"], #new-package-container #new-package form .control-custom .input-prepend input[type="text"] {
-        display: inline-block;
-        margin: 0;
-        width: 65%;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-    #edit-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox, #edit-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox, #new-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox, #new-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox {
-      width: 1px;
-      height: 1px;
-      position: fixed;
-      left: -10px;
-      top: -10px; }
-    #edit-package-container #edit-package form .package-groups label.package-group-label, #edit-package-container #new-package form .package-groups label.package-group-label, #new-package-container #edit-package form .package-groups label.package-group-label, #new-package-container #new-package form .package-groups label.package-group-label {
-      color: #D1D3D4;
-      margin: 0;
-      padding: 2px 0; }
-      #edit-package-container #edit-package form .package-groups label.package-group-label:after, #edit-package-container #new-package form .package-groups label.package-group-label:after, #new-package-container #edit-package form .package-groups label.package-group-label:after, #new-package-container #new-package form .package-groups label.package-group-label:after {
-        content: initial; }
-      #edit-package-container #edit-package form .package-groups label.package-group-label:hover, #edit-package-container #new-package form .package-groups label.package-group-label:hover, #new-package-container #edit-package form .package-groups label.package-group-label:hover, #new-package-container #new-package form .package-groups label.package-group-label:hover {
-        color: #0072bc; }
-    #edit-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-      color: #0072bc; }
-    #edit-package-container #edit-package form .control-group, #edit-package-container #new-package form .control-group, #new-package-container #edit-package form .control-group, #new-package-container #new-package form .control-group {
-      position: relative; }
-      #edit-package-container #edit-package form .control-group.error .input-prepend .add-on, #edit-package-container #new-package form .control-group.error .input-prepend .add-on, #new-package-container #edit-package form .control-group.error .input-prepend .add-on, #new-package-container #new-package form .control-group.error .input-prepend .add-on {
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-  #edit-package-container #edit-package form ol, #edit-package-container #new-package form ol, #new-package-container #edit-package form ol, #new-package-container #new-package form ol {
-    margin: 0 0 10px 0; }
-  #edit-package-container #edit-package .edit-resources-button, #edit-package-container #new-package .edit-resources-button, #new-package-container #edit-package .edit-resources-button, #new-package-container #new-package .edit-resources-button {
-    float: right;
-    margin: 20px 0; }
-
-.resource-container .resource {
-  padding: 30px 50px;
-  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  color: #58595B;
-  font-size: 16px;
-  padding-bottom: 50px; }
-  .resource-container .resource .back-to-pkg a.back-link {
+#edit-resources-container {
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    #edit-resources-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  #edit-resources-container #edit-resources {
+    padding: 30px 50px;
     color: #58595B;
-    font-weight: 500; }
-  .resource-container .resource .back-to-pkg a.edit-resource {
-    color: white;
-    float: right; }
-  .resource-container .resource .title {
-    padding-right: 60px; }
-    .resource-container .resource .title h1 {
-      color: #0072bc;
-      margin: 20px 0 0 0;
-      font-size: 24px; }
-    .resource-container .resource .title p {
-      font-size: 14px; }
-    .resource-container .resource .title svg {
-      width: 50px;
-      position: absolute;
-      top: 20px;
-      right: 0;
-      fill: #D1D3D4; }
-      .resource-container .resource .title svg:hover {
-        fill: #0072bc; }
-  .resource-container .resource .resource-alternative-packages {
-    border-bottom: solid 1px #D1D3D4;
-    padding-bottom: 20px; }
-    .resource-container .resource .resource-alternative-packages h2 {
-      font-size: 17px;
-      border-bottom: solid 1px #D1D3D4;
-      margin-bottom: 0; }
-  .resource-container .resource .resource-additional-info h2 {
-    font-size: 17px;
-    border-bottom: solid 1px #D1D3D4;
-    color: #0072bc;
-    margin-bottom: 0; }
-  .resource-container .resource .resource-additional-info .resource-additional {
-    padding: 15px 5px;
-    font-size: 14px;
-    border-bottom: solid 1px #eaeced; }
-    .resource-container .resource .resource-additional-info .resource-additional:last-child {
-      border-bottom: solid 1px #D1D3D4; }
-    .resource-container .resource .resource-additional-info .resource-additional .key {
-      padding: 0;
+    font-size: 16px; }
+    @media (min-width: 992px) {
+      #edit-resources-container #edit-resources {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    #edit-resources-container #edit-resources .action-buttons {
+      margin: 20px 0; }
+      #edit-resources-container #edit-resources .action-buttons .edit-dataset-button, #edit-resources-container #edit-resources .action-buttons .add-resource {
+        margin: 0 10px 0 0; }
+      #edit-resources-container #edit-resources .action-buttons .btn {
+        border-color: #D1D3D4; }
+
+#edit-package-container, #new-package-container {
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    #edit-package-container, #new-package-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
+    padding: 30px 50px;
+    color: #58595B;
+    font-size: 16px; }
+    @media (min-width: 992px) {
+      #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    #edit-package-container #edit-package h1, #edit-package-container #new-package h1, #new-package-container #edit-package h1, #new-package-container #new-package h1 {
+      margin: 20px 0;
+      font-weight: 400;
+      font-size: 40px; }
+    #edit-package-container #edit-package form, #edit-package-container #new-package form, #new-package-container #edit-package form, #new-package-container #new-package form {
+      padding: 20px 50px;
+      -o-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
+      #edit-package-container #edit-package form label, #edit-package-container #new-package form label, #new-package-container #edit-package form label, #new-package-container #new-package form label {
+        display: block;
+        text-align: left;
+        font-weight: 400;
+        padding: 5px 20px 5px 0;
+        font-size: 16px;
+        line-height: 1.2; }
+      #edit-package-container #edit-package form input[type="text"], #edit-package-container #edit-package form input[type="password"], #edit-package-container #new-package form input[type="text"], #edit-package-container #new-package form input[type="password"], #new-package-container #edit-package form input[type="text"], #new-package-container #edit-package form input[type="password"], #new-package-container #new-package form input[type="text"], #new-package-container #new-package form input[type="password"] {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 5px;
+        height: 29.2px; }
+      #edit-package-container #edit-package form input[type="checkbox"], #edit-package-container #new-package form input[type="checkbox"], #new-package-container #edit-package form input[type="checkbox"], #new-package-container #new-package form input[type="checkbox"] {
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        -o-transform: scale(1.3);
+        transform: scale(1.3); }
+      #edit-package-container #edit-package form .control-custom .input-prepend, #edit-package-container #new-package form .control-custom .input-prepend, #new-package-container #edit-package form .control-custom .input-prepend, #new-package-container #new-package form .control-custom .input-prepend {
+        width: 100%;
+        white-space: normal;
+        position: relative; }
+        #edit-package-container #edit-package form .control-custom .input-prepend label.add-on, #edit-package-container #new-package form .control-custom .input-prepend label.add-on, #new-package-container #edit-package form .control-custom .input-prepend label.add-on, #new-package-container #new-package form .control-custom .input-prepend label.add-on {
+          display: inline-block;
+          margin: 0;
+          width: 20%;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+        #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove {
+          position: absolute;
+          top: 50%;
+          left: initial;
+          right: 0;
+          min-width: 4em;
+          margin: -1em 0 0 0;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+          #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove:before, #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove:after, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove:before, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove:after, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove:before, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove:after, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove:before, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove:after {
+            content: initial; }
+          #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove span, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove span, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove span, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove span {
+            display: inline-block; }
+        #edit-package-container #edit-package form .control-custom .input-prepend input[type="text"], #edit-package-container #new-package form .control-custom .input-prepend input[type="text"], #new-package-container #edit-package form .control-custom .input-prepend input[type="text"], #new-package-container #new-package form .control-custom .input-prepend input[type="text"] {
+          display: inline-block;
+          margin: 0;
+          width: 65%;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+      #edit-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox, #edit-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox, #new-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox, #new-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox {
+        width: 1px;
+        height: 1px;
+        position: fixed;
+        left: -10px;
+        top: -10px; }
+      #edit-package-container #edit-package form .package-groups label.package-group-label, #edit-package-container #new-package form .package-groups label.package-group-label, #new-package-container #edit-package form .package-groups label.package-group-label, #new-package-container #new-package form .package-groups label.package-group-label {
+        color: #D1D3D4;
+        margin: 0;
+        padding: 2px 0; }
+        #edit-package-container #edit-package form .package-groups label.package-group-label:after, #edit-package-container #new-package form .package-groups label.package-group-label:after, #new-package-container #edit-package form .package-groups label.package-group-label:after, #new-package-container #new-package form .package-groups label.package-group-label:after {
+          content: initial; }
+        #edit-package-container #edit-package form .package-groups label.package-group-label:hover, #edit-package-container #new-package form .package-groups label.package-group-label:hover, #new-package-container #edit-package form .package-groups label.package-group-label:hover, #new-package-container #new-package form .package-groups label.package-group-label:hover {
+          color: #0072bc; }
+      #edit-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
+        color: #0072bc; }
+      #edit-package-container #edit-package form .control-group, #edit-package-container #new-package form .control-group, #new-package-container #edit-package form .control-group, #new-package-container #new-package form .control-group {
+        position: relative; }
+        #edit-package-container #edit-package form .control-group.error .input-prepend .add-on, #edit-package-container #new-package form .control-group.error .input-prepend .add-on, #new-package-container #edit-package form .control-group.error .input-prepend .add-on, #new-package-container #new-package form .control-group.error .input-prepend .add-on {
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+    #edit-package-container #edit-package form ol, #edit-package-container #new-package form ol, #new-package-container #edit-package form ol, #new-package-container #new-package form ol {
+      margin: 0 0 10px 0; }
+    #edit-package-container #edit-package .edit-resources-button, #edit-package-container #new-package .edit-resources-button, #new-package-container #edit-package .edit-resources-button, #new-package-container #new-package .edit-resources-button {
+      float: right;
+      margin: 20px 0; }
+
+.resource-container {
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    .resource-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  .resource-container .resource {
+    padding: 30px 50px;
+    color: #58595B;
+    font-size: 16px;
+    padding-bottom: 50px; }
+    @media (min-width: 992px) {
+      .resource-container .resource {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    .resource-container .resource .back-to-pkg a.back-link {
+      color: #58595B;
       font-weight: 500; }
-    .resource-container .resource .resource-additional-info .resource-additional .value {
-      padding: 0; }
-      .resource-container .resource .resource-additional-info .resource-additional .value span.label {
-        background-color: #0072BC; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=html], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=html] {
-          background-color: #8E24AA; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=json], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=json] {
-          background-color: #FB8C00; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xml], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xml] {
-          background-color: #FB8C00; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=text], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=text] {
-          background-color: #039BE5; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=csv], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=csv] {
-          background-color: #FFD600; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xls], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xls] {
-          background-color: #3949AB; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=api], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=api] {
-          background-color: #D81B60; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=pdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=pdf] {
-          background-color: #E53935; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=zip], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=zip] {
-          background-color: #7CB342; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=rdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=rdf] {
-          background-color: #00ACC1; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=nquad], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=nquad] {
-          background-color: #00ACC1; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=ntriples], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=ntriples] {
-          background-color: #00ACC1; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=turtle], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=turtle] {
-          background-color: #00ACC1; }
-        .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=shp], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=shp] {
-          background-color: #1e88e5; }
+    .resource-container .resource .back-to-pkg a.edit-resource {
+      color: white;
+      float: right; }
+    .resource-container .resource .title {
+      padding-right: 60px; }
+      .resource-container .resource .title h1 {
+        color: #0072bc;
+        margin: 20px 0 0 0;
+        font-size: 24px; }
+      .resource-container .resource .title p {
+        font-size: 14px; }
+      .resource-container .resource .title svg {
+        width: 50px;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        fill: #D1D3D4; }
+        .resource-container .resource .title svg:hover {
+          fill: #0072bc; }
+    .resource-container .resource .resource-alternative-packages {
+      padding-left: 0;
+      padding-right: 0;
+      border-bottom: solid 1px #D1D3D4;
+      padding-bottom: 20px; }
+      @media (min-width: 992px) {
+        .resource-container .resource .resource-alternative-packages {
+          padding-left: 15px;
+          padding-right: 15px; } }
+      .resource-container .resource .resource-alternative-packages h2 {
+        font-size: 17px;
+        border-bottom: solid 1px #D1D3D4;
+        margin-bottom: 0; }
+    .resource-container .resource .resource-additional-info {
+      padding-left: 0;
+      padding-right: 0; }
+      @media (min-width: 992px) {
+        .resource-container .resource .resource-additional-info {
+          padding-left: 15px;
+          padding-right: 15px; } }
+      .resource-container .resource .resource-additional-info h2 {
+        font-size: 17px;
+        border-bottom: solid 1px #D1D3D4;
+        color: #0072bc;
+        margin-bottom: 0; }
+      .resource-container .resource .resource-additional-info .resource-additional {
+        padding: 15px 5px;
+        font-size: 14px;
+        border-bottom: solid 1px #eaeced; }
+        .resource-container .resource .resource-additional-info .resource-additional:last-child {
+          border-bottom: solid 1px #D1D3D4; }
+        .resource-container .resource .resource-additional-info .resource-additional .key {
+          padding: 0;
+          font-weight: 500; }
+        .resource-container .resource .resource-additional-info .resource-additional .value {
+          padding: 0; }
+          .resource-container .resource .resource-additional-info .resource-additional .value span.label {
+            background-color: #0072BC; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=html], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=html] {
+              background-color: #8E24AA; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=json], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=json] {
+              background-color: #FB8C00; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xml], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xml] {
+              background-color: #FB8C00; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=text], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=text] {
+              background-color: #039BE5; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=csv], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=csv] {
+              background-color: #FFD600; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xls], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xls] {
+              background-color: #3949AB; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=api], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=api] {
+              background-color: #D81B60; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=pdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=pdf] {
+              background-color: #E53935; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=zip], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=zip] {
+              background-color: #7CB342; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=rdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=rdf] {
+              background-color: #00ACC1; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=nquad], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=nquad] {
+              background-color: #00ACC1; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=ntriples], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=ntriples] {
+              background-color: #00ACC1; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=turtle], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=turtle] {
+              background-color: #00ACC1; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=shp], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=shp] {
+              background-color: #1e88e5; }
 
 .pkg-container {
   position: relative; }
@@ -1883,107 +1993,116 @@ div#background-container {
     .pkg-container .package-info p {
       font-size: 13px; }
 
-#edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
-  padding: 30px 50px;
-  -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
-  color: #58595B;
-  font-size: 16px; }
-  #edit-group-container #edit-group h1, #edit-group-container #new-group h1, #new-group-container #edit-group h1, #new-group-container #new-group h1 {
-    margin: 20px 0;
-    font-weight: 400;
-    font-size: 40px; }
-  #edit-group-container #edit-group form, #edit-group-container #new-group form, #new-group-container #edit-group form, #new-group-container #new-group form {
-    padding: 20px 50px;
-    -o-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-    -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-    -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-    box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
-    #edit-group-container #edit-group form label, #edit-group-container #new-group form label, #new-group-container #edit-group form label, #new-group-container #new-group form label {
-      display: block;
-      text-align: left;
+#edit-group-container, #new-group-container {
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    #edit-group-container, #new-group-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
+    padding: 30px 50px;
+    color: #58595B;
+    font-size: 16px; }
+    @media (min-width: 992px) {
+      #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    #edit-group-container #edit-group h1, #edit-group-container #new-group h1, #new-group-container #edit-group h1, #new-group-container #new-group h1 {
+      margin: 20px 0;
       font-weight: 400;
-      padding: 5px 20px 5px 0;
-      font-size: 16px;
-      line-height: 1.2; }
-    #edit-group-container #edit-group form input[type="text"], #edit-group-container #edit-group form input[type="password"], #edit-group-container #new-group form input[type="text"], #edit-group-container #new-group form input[type="password"], #new-group-container #edit-group form input[type="text"], #new-group-container #edit-group form input[type="password"], #new-group-container #new-group form input[type="text"], #new-group-container #new-group form input[type="password"] {
-      width: 100%;
-      font-size: 16px;
-      line-height: 1.2;
-      padding: 5px;
-      height: 29.2px; }
-    #edit-group-container #edit-group form input[type="checkbox"], #edit-group-container #new-group form input[type="checkbox"], #new-group-container #edit-group form input[type="checkbox"], #new-group-container #new-group form input[type="checkbox"] {
-      -webkit-transform: scale(1.3);
-      -moz-transform: scale(1.3);
-      -ms-transform: scale(1.3);
-      -o-transform: scale(1.3);
-      transform: scale(1.3); }
-    #edit-group-container #edit-group form .control-custom .input-prepend, #edit-group-container #new-group form .control-custom .input-prepend, #new-group-container #edit-group form .control-custom .input-prepend, #new-group-container #new-group form .control-custom .input-prepend {
-      width: 100%;
-      white-space: normal;
-      position: relative; }
-      #edit-group-container #edit-group form .control-custom .input-prepend label.add-on, #edit-group-container #new-group form .control-custom .input-prepend label.add-on, #new-group-container #edit-group form .control-custom .input-prepend label.add-on, #new-group-container #new-group form .control-custom .input-prepend label.add-on {
-        display: inline-block;
+      font-size: 40px; }
+    #edit-group-container #edit-group form, #edit-group-container #new-group form, #new-group-container #edit-group form, #new-group-container #new-group form {
+      padding: 20px 50px;
+      -o-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
+      #edit-group-container #edit-group form label, #edit-group-container #new-group form label, #new-group-container #edit-group form label, #new-group-container #new-group form label {
+        display: block;
+        text-align: left;
+        font-weight: 400;
+        padding: 5px 20px 5px 0;
+        font-size: 16px;
+        line-height: 1.2; }
+      #edit-group-container #edit-group form input[type="text"], #edit-group-container #edit-group form input[type="password"], #edit-group-container #new-group form input[type="text"], #edit-group-container #new-group form input[type="password"], #new-group-container #edit-group form input[type="text"], #new-group-container #edit-group form input[type="password"], #new-group-container #new-group form input[type="text"], #new-group-container #new-group form input[type="password"] {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 5px;
+        height: 29.2px; }
+      #edit-group-container #edit-group form input[type="checkbox"], #edit-group-container #new-group form input[type="checkbox"], #new-group-container #edit-group form input[type="checkbox"], #new-group-container #new-group form input[type="checkbox"] {
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        -o-transform: scale(1.3);
+        transform: scale(1.3); }
+      #edit-group-container #edit-group form .control-custom .input-prepend, #edit-group-container #new-group form .control-custom .input-prepend, #new-group-container #edit-group form .control-custom .input-prepend, #new-group-container #new-group form .control-custom .input-prepend {
+        width: 100%;
+        white-space: normal;
+        position: relative; }
+        #edit-group-container #edit-group form .control-custom .input-prepend label.add-on, #edit-group-container #new-group form .control-custom .input-prepend label.add-on, #new-group-container #edit-group form .control-custom .input-prepend label.add-on, #new-group-container #new-group form .control-custom .input-prepend label.add-on {
+          display: inline-block;
+          margin: 0;
+          width: 20%;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+        #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove {
+          position: absolute;
+          top: 50%;
+          left: initial;
+          right: 0;
+          min-width: 4em;
+          margin: -1em 0 0 0;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+          #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove:before, #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove:after, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove:before, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove:after, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove:before, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove:after, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove:before, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove:after {
+            content: initial; }
+          #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove span, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove span, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove span, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove span {
+            display: inline-block; }
+        #edit-group-container #edit-group form .control-custom .input-prepend input[type="text"], #edit-group-container #new-group form .control-custom .input-prepend input[type="text"], #new-group-container #edit-group form .control-custom .input-prepend input[type="text"], #new-group-container #new-group form .control-custom .input-prepend input[type="text"] {
+          display: inline-block;
+          margin: 0;
+          width: 65%;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+      #edit-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox, #edit-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox, #new-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox, #new-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox {
+        width: 1px;
+        height: 1px;
+        position: fixed;
+        left: -10px;
+        top: -10px; }
+      #edit-group-container #edit-group form .package-groups label.package-group-label, #edit-group-container #new-group form .package-groups label.package-group-label, #new-group-container #edit-group form .package-groups label.package-group-label, #new-group-container #new-group form .package-groups label.package-group-label {
+        color: #D1D3D4;
         margin: 0;
-        width: 20%;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove {
-        position: absolute;
-        top: 50%;
-        left: initial;
-        right: 0;
-        min-width: 4em;
-        margin: -1em 0 0 0;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-        #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove:before, #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove:after, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove:before, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove:after, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove:before, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove:after, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove:before, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove:after {
+        padding: 2px 0; }
+        #edit-group-container #edit-group form .package-groups label.package-group-label:after, #edit-group-container #new-group form .package-groups label.package-group-label:after, #new-group-container #edit-group form .package-groups label.package-group-label:after, #new-group-container #new-group form .package-groups label.package-group-label:after {
           content: initial; }
-        #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove span, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove span, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove span, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove span {
-          display: inline-block; }
-      #edit-group-container #edit-group form .control-custom .input-prepend input[type="text"], #edit-group-container #new-group form .control-custom .input-prepend input[type="text"], #new-group-container #edit-group form .control-custom .input-prepend input[type="text"], #new-group-container #new-group form .control-custom .input-prepend input[type="text"] {
-        display: inline-block;
-        margin: 0;
-        width: 65%;
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-    #edit-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox, #edit-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox, #new-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox, #new-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox {
-      width: 1px;
-      height: 1px;
-      position: fixed;
-      left: -10px;
-      top: -10px; }
-    #edit-group-container #edit-group form .package-groups label.package-group-label, #edit-group-container #new-group form .package-groups label.package-group-label, #new-group-container #edit-group form .package-groups label.package-group-label, #new-group-container #new-group form .package-groups label.package-group-label {
-      color: #D1D3D4;
-      margin: 0;
-      padding: 2px 0; }
-      #edit-group-container #edit-group form .package-groups label.package-group-label:after, #edit-group-container #new-group form .package-groups label.package-group-label:after, #new-group-container #edit-group form .package-groups label.package-group-label:after, #new-group-container #new-group form .package-groups label.package-group-label:after {
-        content: initial; }
-      #edit-group-container #edit-group form .package-groups label.package-group-label:hover, #edit-group-container #new-group form .package-groups label.package-group-label:hover, #new-group-container #edit-group form .package-groups label.package-group-label:hover, #new-group-container #new-group form .package-groups label.package-group-label:hover {
+        #edit-group-container #edit-group form .package-groups label.package-group-label:hover, #edit-group-container #new-group form .package-groups label.package-group-label:hover, #new-group-container #edit-group form .package-groups label.package-group-label:hover, #new-group-container #new-group form .package-groups label.package-group-label:hover {
+          color: #0072bc; }
+      #edit-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
         color: #0072bc; }
-    #edit-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-      color: #0072bc; }
-    #edit-group-container #edit-group form .control-group, #edit-group-container #new-group form .control-group, #new-group-container #edit-group form .control-group, #new-group-container #new-group form .control-group {
-      position: relative; }
-      #edit-group-container #edit-group form .control-group.error .input-prepend .add-on, #edit-group-container #new-group form .control-group.error .input-prepend .add-on, #new-group-container #edit-group form .control-group.error .input-prepend .add-on, #new-group-container #new-group form .control-group.error .input-prepend .add-on {
-        font-size: 16px;
-        line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-  #edit-group-container #edit-group .group-warning span, #edit-group-container #new-group .group-warning span, #new-group-container #edit-group .group-warning span, #new-group-container #new-group .group-warning span {
-    color: #870000; }
+      #edit-group-container #edit-group form .control-group, #edit-group-container #new-group form .control-group, #new-group-container #edit-group form .control-group, #new-group-container #new-group form .control-group {
+        position: relative; }
+        #edit-group-container #edit-group form .control-group.error .input-prepend .add-on, #edit-group-container #new-group form .control-group.error .input-prepend .add-on, #new-group-container #edit-group form .control-group.error .input-prepend .add-on, #new-group-container #new-group form .control-group.error .input-prepend .add-on {
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+    #edit-group-container #edit-group .group-warning span, #edit-group-container #new-group .group-warning span, #new-group-container #edit-group .group-warning span, #new-group-container #new-group .group-warning span {
+      color: #870000; }
 
 ul.activity {
   background: none;

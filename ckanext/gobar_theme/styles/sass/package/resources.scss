@@ -1,6 +1,7 @@
 #edit-resources-container {
+  @include base-container();
   #edit-resources {
-    @include base-container();
+    @include base-content();
     .action-buttons {
       margin: 20px 0;
       .edit-dataset-button, .add-resource {

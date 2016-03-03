@@ -1,6 +1,7 @@
 .organization-container {
+  @include base-container();
   .organization {
-    @include base-container();
+    @include base-content();
     padding: 30px 20px;
 
     .add-organization {

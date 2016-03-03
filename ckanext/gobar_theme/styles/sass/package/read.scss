@@ -1,6 +1,7 @@
 .package-container {
+  @include base-container();
   .package {
-    @include base-container();
+    @include base-content();
     padding: 0;
     .row {
       overflow: hidden;

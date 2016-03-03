@@ -1,6 +1,7 @@
 #edit-group-container, #new-group-container {
+  @include base-container();
   #edit-group, #new-group {
-    @include base-container();
+    @include base-content();
     @include base-form();
 
     .group-warning {
