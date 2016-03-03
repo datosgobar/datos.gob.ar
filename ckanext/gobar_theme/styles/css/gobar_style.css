@@ -328,7 +328,7 @@ div#background-container {
     padding: 30px 50px;
     color: #58595B;
     font-size: 16px;
-    padding: 0; }
+    padding: 20px 0; }
     @media (min-width: 992px) {
       .gobar-static-container .gobar-static {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
@@ -1231,13 +1231,13 @@ div#background-container {
       max-width: none;
       width: 33.33333333%; } }
   .filters-container .hide-filters-button {
-    color: #D1D3D4;
+    color: #58595B;
     position: absolute;
     cursor: pointer;
     right: 10px;
     top: 10px; }
     .filters-container .hide-filters-button i {
-      font-size: 25px; }
+      font-size: 14px; }
   .filters-container .search-filter {
     -webkit-transition-duration: 300ms;
     -moz-transition-duration: 300ms;

@@ -2,7 +2,7 @@
   @include base-container();
   .gobar-static {
     @include base-content();
-    padding: 0;
+    padding: 20px 0;
     @include breakpoint-md {
       padding: 30px 50px;
     }
