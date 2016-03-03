@@ -37,7 +37,7 @@
                     {% snippet "svg/descargar.svg" %}
                 </a>
             </div>
-            <div class="data-preview col-xs-12">
+            <div class="data-preview hidden-xs hidden-sm col-md-12">
                 {% set resource_preview = h.resource_preview(c.resource, c.package) %}
                 {% snippet "package/snippets/resource_views_list.html",
                     views=resource_views,
