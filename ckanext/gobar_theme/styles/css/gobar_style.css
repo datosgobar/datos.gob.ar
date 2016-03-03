@@ -1814,20 +1814,29 @@ div#background-container {
     padding: 30px 50px;
     color: #58595B;
     font-size: 16px;
-    padding-bottom: 50px; }
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px; }
     @media (min-width: 992px) {
       .resource-container .resource {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
-    .resource-container .resource .back-to-pkg a.back-link {
-      color: #58595B;
-      font-weight: 500; }
-    .resource-container .resource .back-to-pkg a.edit-resource {
-      color: white;
-      float: right; }
+    @media (min-width: 992px) {
+      .resource-container .resource {
+        padding-left: 50px;
+        padding-right: 50px; } }
+    .resource-container .resource .back-to-pkg {
+      padding-left: 0; }
+      .resource-container .resource .back-to-pkg a.back-link {
+        color: #58595B;
+        font-weight: 500; }
+      .resource-container .resource .back-to-pkg a.edit-resource {
+        color: white;
+        float: right; }
     .resource-container .resource .title {
+      padding-left: 0;
       padding-right: 60px; }
       .resource-container .resource .title h1 {
         color: #0072bc;
