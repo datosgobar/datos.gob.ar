@@ -6,7 +6,6 @@ import ckan.lib.base as base
 
 
 class GobArHomeController(HomeController):
-
     def _list_groups(self):
         context = {
             'model': model,
@@ -39,7 +38,9 @@ class GobArHomeController(HomeController):
                 for extra_pair in result['extras']:
                     if extra_pair['key'] == 'home_featured':
                         featured_packages.append(result)
-            return featured_packages
+
+            segmented_packages = [featured_packages[n:n + 2] for n in range(len(featured_packages))[::2]]
+            return segmented_packages
         return []
 
     def index(self):

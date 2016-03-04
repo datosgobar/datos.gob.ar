@@ -8,6 +8,7 @@
 
     .table-wrapper {
       display: table;
+      margin-bottom: 10px;
       .table-spacer {
         display: table-cell;
         border-right: solid 10px transparent;
@@ -49,6 +50,10 @@
         }
       }
 
+      .empty-card {
+        display: table-cell;
+        width: 50%;
+      }
     }
 
   }
