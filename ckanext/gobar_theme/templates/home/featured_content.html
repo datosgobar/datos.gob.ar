@@ -2,39 +2,22 @@
     <div id="featured-content" class="hidden-xs col-sm-10 col-sm-offset-1">
         <div class="col-xs-12 col-lg-10 col-lg-offset-1 no-padding">
             <div class="table-wrapper">
-                <a href="{{ h.url_for(controller='package', action='search') }}">
-                    <div class="featured-card">
-                        <h2>DATASET DESTACADO</h2>
+                {% for featured_pkg in c.featured_packages %}
+                    <a href="{{ h.url_for(controller='package', action='read', id=featured_pkg.name) }}">
+                        <div class="featured-card">
+                            <h2>DATASET DESTACADO</h2>
 
-                        <h1>Catálogo Centralizado de la red de Bibliotecas Públicas</h1>
+                            <h1>{{ featured_pkg.title or featured_pkg.name }}</h1>
 
-                        <h3>Ministerio de Cultura - SS de Patrimonio Cultural - DG del Libro - Bilbiotecas y
-                            Promoción
-                            de
-                            Lectura</h3>
+                            <h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3>
 
-                        <p>El catálogo contiene la informacion de los libros disponibles en las 29 bibliotecas de la
-                            red.
-                            Incluye información de cada ejemplar y de la biblioteca donde se encuentra.</p>
-                    </div>
-                </a>
-                <div class="table-spacer"></div>
-                <a href="{{ h.url('gobar_open_data') }}">
-                    <div class="featured-card">
-                        <h2>ACERCA DE</h2>
-
-                        <h1>Datos Abiertos</h1>
-
-                        <p>Datos Abiertos (Open Data) significa poner información del Estado en un catálogo al
-                            alcance
-                            de
-                            todos,
-                            en formatos digitales, estándar y abiertos, siguiendo una estructura clara que permita
-                            su
-                            fácil
-                            comprensión y reutilización por parte de la ciudadania.</p>
-                    </div>
-                </a>
+                            <p>{{ h.cut_text(featured_pkg.notes, 250)|urlize }}</p>
+                        </div>
+                    </a>
+                    {% if loop.index % 2 == 1 %}
+                        <div class="table-spacer"></div>
+                    {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>

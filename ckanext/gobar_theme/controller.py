@@ -7,7 +7,7 @@ import ckan.lib.base as base
 
 class GobArHomeController(HomeController):
 
-    def index(self):
+    def _list_groups(self):
         context = {
             'model': model,
             'session': model.Session,
@@ -19,7 +19,32 @@ class GobArHomeController(HomeController):
             'limit': None,
             'offset': 0,
         }
-        c.groups = logic.get_action('group_list')(context, data_dict_page_results)
+        return logic.get_action('group_list')(context, data_dict_page_results)
+
+    def _featured_packages(self):
+        context = {
+            'model': model,
+            'session': model.Session,
+            'user': c.user or c.author,
+            'for_view': True
+        }
+        data_dict = {
+            'q': ''
+        }
+        search = logic.get_action('package_search')(context, data_dict)
+        if 'results' in search:
+            results = search['results']
+            featured_packages = []
+            for result in results:
+                for extra_pair in result['extras']:
+                    if extra_pair['key'] == 'home_featured':
+                        featured_packages.append(result)
+            return featured_packages
+        return []
+
+    def index(self):
+        c.groups = self._list_groups()
+        c.featured_packages = self._featured_packages()
         return super(GobArHomeController, self).index()
 
     def open_data(self):
