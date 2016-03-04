@@ -686,7 +686,7 @@ div#background-container {
       display: table; }
       #featured-content-container #featured-content .table-wrapper .table-spacer {
         display: table-cell;
-        border-right: solid 5px transparent; }
+        border-right: solid 10px transparent; }
       #featured-content-container #featured-content .table-wrapper a {
         display: table-cell;
         padding: 20px;
