@@ -98,14 +98,16 @@
 
         {% if pkg.extras %}
             {% for extra in pkg.extras %}
-                <div class="row">
-                    <div class="col-xs-4 title">
-                        {{ extra.key }}
+                {% if extra.key != 'home_featured' %}
+                    <div class="row">
+                        <div class="col-xs-4 title">
+                            {{ extra.key }}
+                        </div>
+                        <div class="col-xs-8 value">
+                            <p>{{ extra.value }}</p>
+                        </div>
                     </div>
-                    <div class="col-xs-8 value">
-                        <p>{{ extra.value }}</p>
-                    </div>
-                </div>
+                {% endif %}
             {% endfor %}
         {% endif %}
 

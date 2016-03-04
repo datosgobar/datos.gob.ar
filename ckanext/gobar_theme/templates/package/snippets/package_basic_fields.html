@@ -5,4 +5,8 @@
 
     {% snippet "package/snippets/package_edit_groups.html", selected_groups=data.groups, remaining_groups=groups_available %}
 
+    {{ form.input('home_featured', label='Mostrar tarjeta en la home', type='checkbox') }}
+
+    {% resource 'gobar_js/package/form_actions.js' %}
+
 {% endblock %}
