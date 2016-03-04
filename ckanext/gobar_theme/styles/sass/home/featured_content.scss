@@ -4,7 +4,14 @@
 
   #featured-content {
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+
+    h2 {
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: $grey;
+    }
 
     .table-wrapper {
       display: table;
@@ -52,7 +59,7 @@
 
       .empty-card {
         display: table-cell;
-        width: 50%;
+        width: 25%;
       }
     }
 
