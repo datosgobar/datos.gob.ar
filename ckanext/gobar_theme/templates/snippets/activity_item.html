@@ -4,7 +4,9 @@
     {% endif %}
     <p>
         {% set clean_format = activity.data.update({'actor': 'Se'}) %}
-        {{ h.literal(activity.msg.format(**activity.data)) }}
+        {% set msg = activity.msg.format(**activity.data) %}
+        {% set msg = msg.replace('conjunto de datos', 'dataset') %}
+        {{ h.literal(msg) }}
         <span class="date" title="{{ h.render_datetime(activity.timestamp, with_hours=True) }}">
             {{ h.time_ago_from_timestamp(activity.timestamp) }}
         </span>
