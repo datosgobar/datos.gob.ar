@@ -1587,7 +1587,9 @@ div#background-container {
         padding: 0; }
       #pkg-secondary-info #info-container .row .value {
         margin-bottom: 10px;
-        padding: 0 0 0 5px; }
+        padding: 0 0 0 5px;
+        overflow: hidden;
+        text-overflow: ellipsis; }
         #pkg-secondary-info #info-container .row .value p.pkg-maintainer svg {
           width: 1em;
           height: 1em; }

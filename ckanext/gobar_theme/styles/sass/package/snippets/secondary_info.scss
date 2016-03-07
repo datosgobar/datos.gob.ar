@@ -25,6 +25,8 @@
       .value {
         margin-bottom: 10px;
         padding: 0 0 0 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
         p.pkg-maintainer {
           svg {
             width: 1em;
