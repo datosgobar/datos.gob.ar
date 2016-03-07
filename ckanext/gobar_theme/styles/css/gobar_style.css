@@ -1437,7 +1437,8 @@ div#background-container {
       padding: 0; }
       .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-title {
         color: #0072bc;
-        margin: 0; }
+        margin: 0;
+        line-height: 1.3; }
       .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-author {
         color: #D1D3D4;
         font-style: italic;
