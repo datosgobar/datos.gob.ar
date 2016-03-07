@@ -2,9 +2,9 @@
 
 {% set placeholder = placeholder if placeholder else _('Search datasets...') %}
 {% set sorting = [
-      ('Ascendente', 'title_string asc'),
-      ('Descendente', 'title_string desc'),
-      ('Ultima modificación', 'metadata_modified desc') ] %}
+    ('Ultima modificación', 'metadata_modified desc'),
+    ('Ascendente (A - Z)', 'title_string asc'),
+    ('Descendente (Z - A)', 'title_string desc')] %}
 {% set search_class = search_class if search_class else 'search-giant' %}
 {% set no_bottom_border = no_bottom_border if no_bottom_border else false %}
 {% set form_id = form_id if form_id else false %}
