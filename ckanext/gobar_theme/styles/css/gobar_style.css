@@ -89,7 +89,8 @@ div.svg-tooltip {
         font-size: 28px;
         margin-left: 20px; }
       #footer #footer-spacer .footer-section.links-externos .ckan-link {
-        margin: 20px 0; }
+        margin: 20px 0;
+        color: #58595B; }
         #footer #footer-spacer .footer-section.links-externos .ckan-link .ckan-logo {
           height: 22px;
           vertical-align: bottom;
