@@ -10,178 +10,59 @@
             <div class="col-xs-12 col-md-10 col-md-offset-1">
                 <h2>Plataforma</h2>
 
+                <h3>Especificaciones Técnicas</h3>
+
                 <p>
-                    El catálogo de datos utiliza <a href="http://ckan.org/" target="_blank">CKAN</a> en su versión 2.5
-                    como plataforma.
+                    Para el portal de datos se ha utilizado la plataforma CKAN (<a href="http://ckan.org/"
+                                                                                   target="_blank">http://ckan.org/</a>)
+                    en su versión 2.5. CKAN es una herramienta desarrollada por la Open Knowledge Foundation (<a
+                        href="http://okfn.org/" target="_blank">http://okfn.org/</a>). Es software libre distribuido
+                    bajo la licencia “GNU Affero General Public License” (<a href="http://www.gnu.org/licenses/"
+                                                                             target="_blank">http://www.gnu.org/licenses/</a>)
                 </p>
 
                 <p>
-                    CKAN es una herramienta desarrollada por la Open Knowledge Foundation (<a href="http://okfn.org/"
-                                                                                              target="_blank">http://okfn.org/</a>)
-                    y actualmente se encuentra entre las plataformas más populares siendo utilizada, entre otros, por el
-                    Gobierno Británico, de Brasil y Chile.
+                    Actualmente se encuentra entre las plataformas más populares para este tipo de iniciativas, siendo
+                    utilizada, entre otros, por el Gobierno de Reino Unido, Brasil y Chile.
                 </p>
 
                 <p>
-                    CKAN permite tanto la organización de los datasets y recursos como el acceso programático
-                    a estos datos aplicando estándares aprobados internacionalmente.
+                    CKAN permite la organización de los datos publicados a través de su esquema de datasets y recursos,
+                    así como el acceso programático a los mismos, aplicando estándares aprobados internacionalmente para
+                    la generación de metadata.
                 </p>
 
                 <h3>Datasets</h3>
 
                 <p>
-                    Los datasets (también denominados “conjuntos de datos”) son la pieza principal en todo el catálogo
-                    de datos. Los datasets agrupan uno o más recursos de datos así como la documentación que
-                    les da contexto.
-                </p>
-
-                <h3>Criterios de Agrupamiento</h3>
-
-                <p>Para pertenecer a un mismo dataset, los recursos deben:</p>
-
-                <ul>
-                    <li>
-                        Versar sobre un mismo tema y
-                    </li>
-                    <li>
-                        tener la misma de estructura o encontrarse relacionados entre sí de tal modo que adquieran valor
-                        al utilizarlos en conjunto.
-                    </li>
-                </ul>
-
-                <p>
-                    Asimismo, un dataset puede contener recursos documentales que sin proveer datos permiten
-                    su interpretación y enriquecen el análisis, así como recursos alternativos en una variedad de
-                    formatos que permitan la reutilización con un mayor número de herramientas.
+                    Los “datasets” (también denominados “conjuntos de datos”) son la pieza principal en todo el catálogo
+                    de datos. Estos agrupan uno o más recursos de datos y son el eje sobre la cual se documenta la
+                    metadata de la información.
                 </p>
 
                 <h3>Recursos</h3>
 
                 <p>
-                    Los recursos son la pieza de información más pequeña del catálogo.
+                    Los recursos son la pieza de información más pequeña del catálogo y son los verdaderos activos de
+                    datos del portal.
                 </p>
 
                 <h3>Metadata</h3>
 
                 <p>
-                    Para facilitar la navegación en el sitio y la búsqueda de datasets se utiliza los
+                    Para facilitar la navegación en el sitio y la búsqueda de conjuntos de datos se utiliza los
                     estándares de metadata propuestos por defecto en CKAN (dublin core <a href="http://dublincore.org/"
                                                                                           target="_blank">http://dublincore.org/</a>
                     y dcat <a href="http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/" target="_blank">http://www.w3.org/TR/2013/WD-vocab-dcat-20130312/</a>)
                 </p>
 
-                <h3>Dataset</h3>
+                <h3>Acceso Programático</h3>
 
-                <ul>
-                    <li>
-                        <strong>Título:</strong> descriptivo y único. Lo suficientemente abstracto como para abarcar la
-                        multiplicidad de
-                        recursos. No incluye referencia a fechas ni lugares.
-                    </li>
-                    <li>
-                        <strong>Descripción:</strong> una descripción amplia de los temas que aborda el dataset.
-                    </li>
-                    <li>
-                        <strong>Tags:</strong> etiquetas que colaboran en la búsqueda de los usuarios. Los tags
-                        escritos, en singular y
-                        respetando la existencia de tags anteriores.
-                    </li>
-                    <li>
-                        <strong>Organización:</strong> área del gobierno responsable del mantenimiento del dato.
-                    </li>
-                    <li>
-                        <strong>Autor:</strong> unidad que genera la información. Estructura jerárquica separada por
-                        guiones. Ej: Ministerio de Cultura- SS Patrimonio Cultural- DG del Libro, Bibliotecas y
-                        Promoción de la Lectura
-                    </li>
-                    <li>
-                        <strong>Responsable:</strong> En algunos casos puede que el responsable de publicar y mantener
-                        la información actualizada no responda a la misma unidad que el generador de la información; en
-                        dicho caso se detalla al igual que se lo hizo con el autor. En caso de que coincidan, se repite
-                        la información.
-                    </li>
-                    <li>
-                        <strong>Email del Responsable:</strong> dirección de correo para la recepción de consultas.
-                    </li>
-                    <li>
-                        <strong>Frecuencia de actualización:</strong> frecuencia de actualización acordada con el área
-                        que produce/mantiene el dataset.
-                    </li>
-                    <li>
-                        <strong>Grupo:</strong> área/s temáticas/s predefinida a la que el dataset pertenece.
-                    </li>
-                </ul>
-
-                <h3>API</h3>
-
-                <p>CKAN provee acceso a los datos y a la metadata por medio de una API.</p>
-
-                <p>La documentación puede encontrarse en el siguiente link: <a
+                <p>
+                    CKAN provee acceso a los datos y a la metadata por medio de una API (Interfaz de Programación de
+                    Aplicaciones) . La documentación de la misma puede encontrarse en <a
                         href="http://docs.ckan.org/en/latest/api.html" target="_blank">http://docs.ckan.org/en/latest/api.html</a>
                 </p>
-
-                <h3>Recurso</h3>
-
-                <ul>
-                    <li>
-                        <strong>Nombre del Recurso:</strong> nombre simple y descriptivo.
-                    </li>
-                    <li>
-                        <strong>Descripción:</strong> descripción simple de la información contenida en el recurso. No
-                        más de una línea.
-                    </li>
-                    <li>
-                        <strong>Formato:</strong> formato del archivo.
-                    </li>
-                </ul>
-
-                <h3>Glosario</h3>
-
-                <ul>
-                    <li>
-                        <strong>Datos abiertos (open data):</strong> datos públicos completos, primarios, oportunos,
-                        accesibles, procesables, no discriminatorios, de uso libre y con formatos no restringidos.
-                    </li>
-                    <li>
-                        <strong>Recurso:</strong> archivos con datos o documentación de contexto.
-                    </li>
-                    <li>
-                        <strong>Dataset:</strong> Agrupamiento de recursos que tratan sobre un mismo
-                        tema y/o tienen una misma estructura.
-                    </li>
-                    <li>
-                        <strong>Codificación de caracteres (encoding):</strong> estándares por los cuales un sistema
-                        informático reproduce un carácter al lenguaje natural.
-                    </li>
-                    <li>
-                        <strong>API (Interfaz de Programación de Aplicaciones):</strong> es una interfaz de comunicación
-                        entre componentes software.
-                    </li>
-                    <li>
-                        <strong>Aplicación:</strong> programa compilado y escrito en cualquier lenguaje de programación
-                        que suele resultar una solución informática para la automatización de ciertas tareas.
-                    </li>
-                    <li>
-                        <strong>Catálogo de datos:</strong> herramienta que reúne, ordena y categoriza datasets de
-                        diverso tipo para facilitar su descubrimiento y localización.
-                    </li>
-                    <li>
-                        <strong>Metadatos:</strong> datos y/o documentos que describen otros datos en términos de
-                        contexto, contenido o, en general, cualquier aspecto que se considere necesario para ampliar la
-                        conceptualización del dato descrito.
-                    </li>
-                    <li>
-                        <strong>Software Libre:</strong> software que una vez obtenido puede ser usado, copiado,
-                        estudiado, modificado,y redistribuido libremente.
-                    </li>
-                    <li>
-                        <strong>Licencia Abierta (de contenido abierto):</strong> es toda aquella formalización por
-                        escrito -por parte del titular, originario o no, de los derechos de propiedad intelectual de una
-                        determinada información- que recoja necesariamente la cesión explícita en exclusiva de los
-                        derechos patrimoniales de reproducción, distribución y comunicación pública de dicha
-                        información, incluyendo la puesta a disposición interactiva.
-                    </li>
-                </ul>
 
             </div>
         </div>
