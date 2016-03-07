@@ -27,10 +27,19 @@
         @include border-radius(4px);
         @include box-shadow(0 0 3px 0 rgba(100, 100, 100, 0.4));
         width: 50%;
+        border-right: solid 6px $light-grey;
+        @include transition-delay(0s);
+        @include transition-duration(200ms);
+        @include transition-timing-function(ease-in);
+        @include transition-property(border);
+
+        &:hover {
+          border-right-color: $dark-blue;
+        }
 
         .featured-card {
           h1 {
-            margin: 15px 0 0 0;
+            margin: 0;
             color: $dark-blue;
             font-size: 18px;
           }

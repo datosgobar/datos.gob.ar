@@ -45,9 +45,9 @@ div.svg-tooltip {
     padding: 0 20px;
     text-align: center; }
     #header #header-spacing .logo-header, #header #header-spacing .header-links {
-      height: 50px;
+      height: 60px;
       font-size: 18px;
-      line-height: 2.77778; }
+      line-height: 3.33333; }
     #header #header-spacing .header-links a {
       color: white;
       margin-left: 0.5em;
@@ -630,9 +630,11 @@ div#background-container {
             display: table-cell;
             vertical-align: middle; }
       .featured-groups .group-container .group.inactive {
-        color: #D1D3D4; }
+        color: #eaeced; }
         .featured-groups .group-container .group.inactive .group-text {
-          border-bottom-color: #D1D3D4; }
+          border-bottom-color: #eaeced; }
+          .featured-groups .group-container .group.inactive .group-text svg path {
+            fill: #eaeced; }
       .featured-groups .group-container .group.active:hover svg path {
         fill: #0072bc !important; }
     .featured-groups .group-container .edit-container {
@@ -705,9 +707,24 @@ div#background-container {
         -moz-box-shadow: 0 0 3px 0 rgba(100, 100, 100, 0.4);
         -webkit-box-shadow: 0 0 3px 0 rgba(100, 100, 100, 0.4);
         box-shadow: 0 0 3px 0 rgba(100, 100, 100, 0.4);
-        width: 50%; }
+        width: 50%;
+        border-right: solid 6px #D1D3D4;
+        -webkit-transition-delay: 0s;
+        -moz-transition-delay: 0s;
+        transition-delay: 0s;
+        -webkit-transition-duration: 200ms;
+        -moz-transition-duration: 200ms;
+        transition-duration: 200ms;
+        -webkit-transition-timing-function: ease-in;
+        -moz-transition-timing-function: ease-in;
+        transition-timing-function: ease-in;
+        -webkit-transition-property: border;
+        -moz-transition-property: border;
+        transition-property: border; }
+        #featured-content-container #featured-content .table-wrapper a:hover {
+          border-right-color: #0072bc; }
         #featured-content-container #featured-content .table-wrapper a .featured-card h1 {
-          margin: 15px 0 0 0;
+          margin: 0;
           color: #0072bc;
           font-size: 18px; }
         #featured-content-container #featured-content .table-wrapper a .featured-card h2 {

@@ -92,9 +92,12 @@
       }
 
       &.inactive {
-        color: $light-grey;
+        color: $inactive;
         .group-text {
-          border-bottom-color: $light-grey;
+          border-bottom-color: $inactive;
+          svg path {
+            fill: $inactive;
+          }
         }
       }
 
