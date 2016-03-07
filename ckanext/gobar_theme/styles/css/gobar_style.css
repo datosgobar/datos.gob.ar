@@ -31,6 +31,12 @@ div.no-padding {
 div.svg-tooltip {
   display: none; }
 
+.modal.in {
+  margin-top: 0;
+  top: 20%;
+  bottom: initial;
+  left: 50%; }
+
 #header {
   background: #0072bc;
   padding: 0;
