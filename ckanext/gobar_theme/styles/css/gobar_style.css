@@ -96,7 +96,7 @@ div.svg-tooltip {
         margin-left: 20px; }
       #footer #footer-spacer .footer-section.links-externos .ckan-link {
         margin: 20px 0;
-        color: #58595B; }
+        color: #D1D3D4; }
         #footer #footer-spacer .footer-section.links-externos .ckan-link .ckan-logo {
           height: 22px;
           vertical-align: bottom;
@@ -733,7 +733,8 @@ div#background-container {
         #featured-content-container #featured-content .table-wrapper a .featured-card h1 {
           margin: 0;
           color: #0072bc;
-          font-size: 18px; }
+          font-size: 18px;
+          line-height: 1.3; }
         #featured-content-container #featured-content .table-wrapper a .featured-card h2 {
           margin: 0;
           color: #0072bc;
