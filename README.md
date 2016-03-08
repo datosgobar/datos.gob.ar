@@ -1,4 +1,5 @@
-# ckanext-gobar_theme
+# [datos.gob.ar](http://datos.gob.ar/)
+
 Plugin para ckan con los seteos de la instancia del portal de datos de Argentina
 
 ## Instalacion
