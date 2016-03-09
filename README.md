@@ -7,7 +7,7 @@ Suponiendo que la instancia de ckan está instalada en /usr/lib/ckan/default/src
 ```
 $ . /usr/lib/ckan/default/bin/activate
 (virtualenv) $ cd /usr/lib/ckan/default
-(virtualenv) $ pip install -e "git+https://github.com/transparencia-argentina/ckanext-gobar_theme.git#egg=ckanext-gobar_theme"
+(virtualenv) $ pip install -e "git+https://github.com/gobabiertoAR/datos.gob.ar.git#egg=ckanext-gobar_theme"
 ```
 Y agregar al archivo de configuracion de ckan (development.ini o production.ini) el plugin
 ```
