@@ -1,0 +1,52 @@
+// sass --watch recline.scss:../css/gobar_recline.css
+
+h4.loading-dialog {
+  text-align: center;
+  width: 100%;
+  .loading-spinner {
+    float: none;
+    display: inline-block;
+  }
+}
+
+// Vista 'Explorador de datos'
+
+.header.clearfix {
+  text-align: center;
+  .navigation {
+    display: none;
+  }
+  .recline-results-info {
+    display: none;
+  }
+  .recline-pager {
+    margin: 10px 0;
+    float: none;
+    display: inline-block;
+  }
+  .menu-right {
+    display: none;
+  }
+  .query-editor-here {
+    display: none!important;
+  }
+}
+
+
+// Vista 'Tabla'
+
+.clearfix.controls {
+  .recline-record-count {
+    display: none;
+  }
+  .recline-query-editor {
+    display: none;
+  }
+  .recline-pager {
+    .pagination {
+      float: none;
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
+}

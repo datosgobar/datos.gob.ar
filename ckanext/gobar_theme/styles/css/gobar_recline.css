@@ -1,0 +1,32 @@
+h4.loading-dialog {
+  text-align: center;
+  width: 100%; }
+  h4.loading-dialog .loading-spinner {
+    float: none;
+    display: inline-block; }
+
+.header.clearfix {
+  text-align: center; }
+  .header.clearfix .navigation {
+    display: none; }
+  .header.clearfix .recline-results-info {
+    display: none; }
+  .header.clearfix .recline-pager {
+    margin: 10px 0;
+    float: none;
+    display: inline-block; }
+  .header.clearfix .menu-right {
+    display: none; }
+  .header.clearfix .query-editor-here {
+    display: none !important; }
+
+.clearfix.controls .recline-record-count {
+  display: none; }
+.clearfix.controls .recline-query-editor {
+  display: none; }
+.clearfix.controls .recline-pager .pagination {
+  float: none;
+  text-align: center;
+  margin: 10px 0; }
+
+/*# sourceMappingURL=gobar_recline.css.map */
