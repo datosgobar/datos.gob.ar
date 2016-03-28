@@ -1438,7 +1438,7 @@ my.FlotControls = Backbone.View.extend({
 ',
   templateSeriesEditor: ' \
     <div class="editor-series js-series-{{seriesIndex}}"> \
-      <label>Eje vertical - serie <span>{{seriesName}}</span> \
+      <label>Eje vertical - Serie <span>{{seriesName}}</span> \
         [<a href="#remove" class="action-remove-series">Eliminar</a>] \
       </label> \
       <div class="input"> \
@@ -3955,7 +3955,7 @@ my.Fields = Backbone.View.extend({
   className: 'recline-fields-view', 
   template: ' \
     <div class="accordion fields-list well"> \
-    <h3>Fields <a href="#" class="js-show-hide">+</a></h3> \
+    <h3>Campos <a href="#" class="js-show-hide">+</a></h3> \
     {{#fields}} \
       <div class="accordion-group field"> \
         <div class="accordion-heading"> \
@@ -4058,7 +4058,7 @@ my.FilterEditor = Backbone.View.extend({
           {{{filterRender}}} \
         {{/filters}} \
         {{#filters.length}} \
-        <button type="submit" class="btn">Update</button> \
+        <button type="submit" class="btn">Actualizar</button> \
         {{/filters.length}} \
       </form> \
     </div> \
@@ -4069,7 +4069,7 @@ my.FilterEditor = Backbone.View.extend({
         <fieldset> \
           <legend> \
             {{field}} <small>{{type}}</small> \
-            <a class="js-remove-filter" href="#" title="Remove this filter" data-filter-id="{{id}}">&times;</a> \
+            <a class="js-remove-filter" href="#" title="Eliminar este filtro" data-filter-id="{{id}}">&times;</a> \
           </legend> \
           <input type="text" value="{{term}}" name="term" data-filter-field="{{field}}" data-filter-id="{{id}}" data-filter-type="{{type}}" /> \
         </fieldset> \
@@ -4080,11 +4080,11 @@ my.FilterEditor = Backbone.View.extend({
         <fieldset> \
           <legend> \
             {{field}} <small>{{type}}</small> \
-            <a class="js-remove-filter" href="#" title="Remove this filter" data-filter-id="{{id}}">&times;</a> \
+            <a class="js-remove-filter" href="#" title="Eliminar este filtro" data-filter-id="{{id}}">&times;</a> \
           </legend> \
-          <label class="control-label" for="">From</label> \
+          <label class="control-label" for="">Desde</label> \
           <input type="text" value="{{from}}" name="from" data-filter-field="{{field}}" data-filter-id="{{id}}" data-filter-type="{{type}}" /> \
-          <label class="control-label" for="">To</label> \
+          <label class="control-label" for="">Hasta</label> \
           <input type="text" value="{{to}}" name="to" data-filter-field="{{field}}" data-filter-id="{{id}}" data-filter-type="{{type}}" /> \
         </fieldset> \
       </div> \
@@ -4094,13 +4094,13 @@ my.FilterEditor = Backbone.View.extend({
         <fieldset> \
           <legend> \
             {{field}} <small>{{type}}</small> \
-            <a class="js-remove-filter" href="#" title="Remove this filter" data-filter-id="{{id}}">&times;</a> \
+            <a class="js-remove-filter" href="#" title="Eliminar este filtro" data-filter-id="{{id}}">&times;</a> \
           </legend> \
-          <label class="control-label" for="">Longitude</label> \
+          <label class="control-label" for="">Longitud</label> \
           <input type="text" value="{{point.lon}}" name="lon" data-filter-field="{{field}}" data-filter-id="{{id}}" data-filter-type="{{type}}" /> \
-          <label class="control-label" for="">Latitude</label> \
+          <label class="control-label" for="">Latitud</label> \
           <input type="text" value="{{point.lat}}" name="lat" data-filter-field="{{field}}" data-filter-id="{{id}}" data-filter-type="{{type}}" /> \
-          <label class="control-label" for="">Distance (km)</label> \
+          <label class="control-label" for="">Distancia (km)</label> \
           <input type="text" value="{{distance}}" name="distance" data-filter-field="{{field}}" data-filter-id="{{id}}" data-filter-type="{{type}}" /> \
         </fieldset> \
       </div> \
