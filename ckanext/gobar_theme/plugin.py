@@ -15,6 +15,7 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('styles/css', 'gobar_css')
         toolkit.add_resource('js', 'gobar_js')
+        toolkit.add_resource('recline', 'gobar_data_preview')
 
     def before_map(self, routing_map):
         gobar_router = gobar_routes.GobArRouter(routing_map)
