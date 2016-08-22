@@ -1,7 +1,7 @@
 $header-height: 60px;
 
 #header {
-  background: $dark-blue;
+  background: white;
   padding: 0;
   @include box-shadow(0 0 12px 0 rgba(0, 0, 0, 0.5));
   position: relative;
@@ -21,15 +21,21 @@ $header-height: 60px;
     }
 
     .header-links {
+      overflow: hidden;
       a {
-        color: white;
-        margin-left: 0.5em;
+        color: $blue-300;
+        padding: 0 0.5em;
         font-size: 90%;
+        display: inline-block;
+        height: 100%;
+        &:hover {
+          background: $blue-300;
+          color: white;
+        }
       }
       @include breakpoint-sm {
         text-align: right;
         a {
-          margin-left: 1em;
           font-size: 100%;
         }
       }
@@ -41,6 +47,7 @@ $header-height: 60px;
       }
       .logo-ministerio {
         height: 100%;
+        width: 300px;
         max-width: 100%;
       }
     }

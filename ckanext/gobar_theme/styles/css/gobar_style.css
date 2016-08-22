@@ -38,7 +38,7 @@ div.svg-tooltip {
   left: 50%; }
 
 #header {
-  background: #0072bc;
+  background: white;
   padding: 0;
   -o-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
@@ -54,21 +54,28 @@ div.svg-tooltip {
       height: 60px;
       font-size: 18px;
       line-height: 3.33333; }
-    #header #header-spacing .header-links a {
-      color: white;
-      margin-left: 0.5em;
-      font-size: 90%; }
-    @media (min-width: 768px) {
-      #header #header-spacing .header-links {
-        text-align: right; }
-        #header #header-spacing .header-links a {
-          margin-left: 1em;
-          font-size: 100%; } }
+    #header #header-spacing .header-links {
+      overflow: hidden; }
+      #header #header-spacing .header-links a {
+        color: #0072bc;
+        padding: 0 0.5em;
+        font-size: 90%;
+        display: inline-block;
+        height: 100%; }
+        #header #header-spacing .header-links a:hover {
+          background: #0072bc;
+          color: white; }
+      @media (min-width: 768px) {
+        #header #header-spacing .header-links {
+          text-align: right; }
+          #header #header-spacing .header-links a {
+            font-size: 100%; } }
     @media (min-width: 768px) {
       #header #header-spacing .logo-header {
         text-align: left; } }
     #header #header-spacing .logo-header .logo-ministerio {
       height: 100%;
+      width: 300px;
       max-width: 100%; }
 
 #footer {
