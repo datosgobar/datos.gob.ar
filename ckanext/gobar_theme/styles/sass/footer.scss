@@ -10,8 +10,8 @@
     }
 
     .footer-section {
-      color: $dark-blue;
-      font-size: 14px;
+      color: $blue-300;
+      font-size: 16px;
       font-weight: 500;
       text-align: center;
 
@@ -20,30 +20,59 @@
           max-width: 300px;
           margin-bottom: 20px;
         }
+        a.social-link {
+          display: inline-block;
+          @include border-radius(4px);
+          padding: 8px;
+          text-align: center;
+          width: 46px;
+          height: 46px;
+          i {
+            display: inline-block;
+            font-size: 28px;
+          }
+          &:hover {
+            background: $blue-300;
+            color: white;
+          }
+        }
+      }
+
+      &.links-internos {
+        a:hover {
+          color: $blue-200;
+        }
       }
 
       &.links-externos {
-        i {
-          font-size: 28px;
-          margin-left: 20px;
+
+
+        @include breakpoint-sm {
+          text-align: right;
         }
+
+        a {
+          display: inline-block;
+          text-align: left;
+        }
+
         .ckan-link {
-          margin: 20px 0;
-          color: $light-grey;
-          .ckan-logo {
-            height: 22px;
-            vertical-align: bottom;
-            margin-left: 6px;
+          margin: 0;
+          color: $grey-400;
+        }
+        .ckan-name {
+          color: $blue-300;
+          &:hover {
+            color: $blue-200;
+          }
+          @include breakpoint-sm {
+            display: block;
           }
         }
       }
 
       @include breakpoint-sm {
         text-align: left;
-
-        &.links-externos {
-          text-align: right;
-        }
       }
 
     }

@@ -14,12 +14,12 @@
     }
 
     h1 {
-      font-size: 60px;
-      font-weight: 300;
+      font-size: 55px;
+      font-weight: 400;
     }
 
     .description {
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 300;
       margin-bottom: 30px;
     }
@@ -57,7 +57,7 @@
         font-size: $xs-font-size;
         line-height: $line-height;
         height: $xs-padding + $xs-font-size * $line-height;
-
+        margin-bottom: 15px;
         @include breakpoint-md {
           padding: $md-padding;
           padding-right: 2em;
@@ -68,6 +68,7 @@
 
         @include placeholder {
           color: white;
+          font-weight: 300;
         }
       }
 
