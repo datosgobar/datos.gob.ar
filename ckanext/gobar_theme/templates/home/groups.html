@@ -4,7 +4,7 @@
 
         {%- for group in c.groups -%}
             {%- set can_update = h.check_access('group_update', {'id': c.group_dict.id}) -%}
-            <div class="group-container col-xs-12 col-sm-4 col-md-3 col-lg-2 invisible {{ 'with-edit-button' if can_update else '' }}">
+            <div class="group-container col-xs-12 col-sm-4 col-md-3 invisible {{ 'with-edit-button' if can_update else '' }}">
                 {% if can_update %}
                     <a href="{{ h.url_for(controller='group', action='edit', id=group.name) }}">
                         <div class="edit-container">

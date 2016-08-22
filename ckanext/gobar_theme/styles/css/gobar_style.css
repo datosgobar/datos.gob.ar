@@ -577,8 +577,8 @@ div#background-container {
   .featured-groups a:hover {
     color: #0072bc; }
   .featured-groups .group-container {
-    margin-bottom: 10px;
-    padding: 0 5px;
+    margin-bottom: 20px;
+    padding: 0 10px;
     float: none;
     opacity: 1;
     display: block;
@@ -617,12 +617,11 @@ div#background-container {
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
       border-radius: 4px;
-      -o-box-shadow: 0 0 3px 0 rgba(100, 100, 100, 0.4);
-      -moz-box-shadow: 0 0 3px 0 rgba(100, 100, 100, 0.4);
-      -webkit-box-shadow: 0 0 3px 0 rgba(100, 100, 100, 0.4);
-      box-shadow: 0 0 3px 0 rgba(100, 100, 100, 0.4); }
+      -o-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+      box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2); }
       .featured-groups .group-container .group .group-text {
-        border-bottom: solid 5px #0072bc;
         padding: 10px 10px;
         position: relative;
         overflow: hidden; }
@@ -634,26 +633,27 @@ div#background-container {
           left: 10px;
           margin-top: -17.5px; }
           .featured-groups .group-container .group .group-text svg path, .featured-groups .group-container .group .group-text img path {
-            fill: #D1D3D4; }
+            fill: #0072bc; }
         .featured-groups .group-container .group .group-text .group-table {
           padding-left: 45px;
           overflow: hidden;
           display: table;
           text-align: left;
-          font-size: 13px;
+          font-size: 15px;
           line-height: 1.2;
-          height: 46.8px; }
+          height: 54px; }
           .featured-groups .group-container .group .group-text .group-table .group-cell {
             display: table-cell;
             vertical-align: middle; }
       .featured-groups .group-container .group.inactive {
-        color: #eaeced; }
-        .featured-groups .group-container .group.inactive .group-text {
-          border-bottom-color: #eaeced; }
-          .featured-groups .group-container .group.inactive .group-text svg path {
-            fill: #eaeced; }
-      .featured-groups .group-container .group.active:hover svg path {
-        fill: #0072bc !important; }
+        color: #cccccc; }
+        .featured-groups .group-container .group.inactive .group-text svg path {
+          fill: #cccccc; }
+      .featured-groups .group-container .group.active:hover {
+        background: #0072bc;
+        color: white; }
+        .featured-groups .group-container .group.active:hover svg path {
+          fill: white !important; }
     .featured-groups .group-container .edit-container {
       position: absolute;
       z-index: 1;
@@ -661,7 +661,7 @@ div#background-container {
       right: 10px;
       overflow: hidden;
       padding: 4px;
-      background: #D1D3D4;
+      background: #cccccc;
       -o-border-radius: 4px;
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
@@ -708,10 +708,10 @@ div#background-container {
       color: #767676; }
     #featured-content-container #featured-content .table-wrapper {
       display: table;
-      margin-bottom: 10px; }
+      margin-bottom: 20px; }
       #featured-content-container #featured-content .table-wrapper .table-spacer {
         display: table-cell;
-        border-right: solid 10px transparent; }
+        border-right: solid 20px transparent; }
       #featured-content-container #featured-content .table-wrapper a {
         display: table-cell;
         padding: 20px;
@@ -1517,12 +1517,10 @@ div#background-container {
   padding-bottom: 40px; }
   #title.package-title #title-container .description {
     margin: 0; }
-  #title.package-title #stats {
-    padding: 10px 0; }
-    #title.package-title #stats > div {
-      padding: 0; }
-      #title.package-title #stats > div .stats-legend {
-        margin: 0; }
+  #title.package-title #stats > div {
+    padding: 0; }
+    #title.package-title #stats > div .stats-legend {
+      margin: 0; }
 
 .package-container {
   padding-right: 0;

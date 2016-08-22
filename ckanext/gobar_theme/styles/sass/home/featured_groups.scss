@@ -1,7 +1,7 @@
 .featured-groups {
   padding: 20px 0;
   text-align: center;
-  background: #f5f5f5;
+  background: $grey-100;
 
   @include breakpoint-sm {
     padding: 50px 0;
@@ -12,8 +12,8 @@
   }
 
   .group-container {
-    margin-bottom: 10px;
-    padding: 0 5px;
+    margin-bottom: 20px;
+    padding: 0 10px;
     float: none;
     opacity: 1;
 
@@ -49,10 +49,9 @@
       border: solid 0 transparent;
       overflow: hidden;
       @include border-radius(4px);
-      @include box-shadow(0 0 3px 0 rgba(100, 100, 100, 0.4));
+      @include box-shadow(0 0 7px 0 rgba(0, 0, 0, 0.2));
 
       .group-text {
-        border-bottom: solid 5px $dark-blue;
         $vertical-padding: 10px;
         $horizontal-padding: 10px;
         padding: $vertical-padding $horizontal-padding;
@@ -68,7 +67,7 @@
           left: $horizontal-padding;
           margin-top: -$img-size/2;
           path {
-            fill: $light-grey;
+            fill: $blue-300;
           }
         }
 
@@ -77,7 +76,7 @@
           overflow: hidden;
           display: table;
           text-align: left;
-          $font-size: 13px;
+          $font-size: 15px;
           $line-height: 1.2;
           $lines: 3;
           font-size: $font-size;
@@ -92,19 +91,20 @@
       }
 
       &.inactive {
-        color: $inactive;
+        color: $grey-200;
         .group-text {
-          border-bottom-color: $inactive;
           svg path {
-            fill: $inactive;
+            fill: $grey-200;
           }
         }
       }
 
       &.active:hover {
+        background: $blue-300;
+        color: white;
         svg {
           path {
-            fill: $dark-blue !important;
+            fill: white !important;
           }
         }
       }
@@ -120,7 +120,7 @@
       right: 10px;
       overflow: hidden;
       padding: $edit-padding;
-      background: $light-grey;
+      background: $grey-200;
       @include border-radius(4px);
       @include transition-delay(0s);
       @include transition-duration(200ms);
