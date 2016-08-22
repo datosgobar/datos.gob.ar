@@ -1480,18 +1480,18 @@ div#background-container {
     .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content {
       padding: 0; }
       .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-title {
-        color: #0072bc;
+        color: #767676;
         margin: 0;
         line-height: 1.3; }
       .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-author {
-        color: #D1D3D4;
+        color: #767676;
         font-style: italic;
         font-size: 13px;
         line-height: 1.2;
         padding-bottom: 15.6px;
         font-weight: 500; }
       .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-notes {
-        color: #58595B;
+        color: #424242;
         font-size: 14px;
         margin: 0; }
     .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources {
@@ -1516,7 +1516,7 @@ div#background-container {
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=text], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=text] {
           background-color: #039BE5; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=csv], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=csv] {
-          background-color: #FFD600; }
+          background-color: #F7CD0F; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=xls], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=xls] {
           background-color: #3949AB; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=api], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=api] {
@@ -1539,6 +1539,8 @@ div#background-container {
   color: inherit; }
   .dataset-list .dataset-item:hover .dataset-border {
     border-right-color: #0072bc; }
+    .dataset-list .dataset-item:hover .dataset-border .dataset-content .dataset-title {
+      color: #0072bc; }
 
 #title.package-title {
   padding-bottom: 40px; }
@@ -1977,7 +1979,7 @@ div#background-container {
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=text], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=text] {
               background-color: #039BE5; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=csv], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=csv] {
-              background-color: #FFD600; }
+              background-color: #F7CD0F; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xls], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xls] {
               background-color: #3949AB; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=api], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=api] {
@@ -2016,7 +2018,7 @@ div#background-container {
     .pkg-container .pkg-file-img[data-format=text] svg path, .pkg-container .pkg-file-img[data-format*=text] svg path {
       fill: #039BE5; }
     .pkg-container .pkg-file-img[data-format=csv] svg path, .pkg-container .pkg-file-img[data-format*=csv] svg path {
-      fill: #FFD600; }
+      fill: #F7CD0F; }
     .pkg-container .pkg-file-img[data-format=xls] svg path, .pkg-container .pkg-file-img[data-format*=xls] svg path {
       fill: #3949AB; }
     .pkg-container .pkg-file-img[data-format=api] svg path, .pkg-container .pkg-file-img[data-format*=api] svg path {
