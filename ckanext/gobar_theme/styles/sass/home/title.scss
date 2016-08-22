@@ -14,11 +14,13 @@
     }
 
     h1 {
-      font-size: 50px;
-      font-weight: 400;
+      font-size: 60px;
+      font-weight: 300;
     }
 
     .description {
+      font-size: 18px;
+      font-weight: 300;
       margin-bottom: 30px;
     }
   }
@@ -51,12 +53,14 @@
         border-bottom: solid 1px white;
 
         padding: $xs-padding;
+        padding-right: 2em;
         font-size: $xs-font-size;
         line-height: $line-height;
         height: $xs-padding + $xs-font-size * $line-height;
 
         @include breakpoint-md {
           padding: $md-padding;
+          padding-right: 2em;
           font-size: $md-font-size;
           line-height: $line-height;
           height: $md-padding + $md-font-size * $line-height;
@@ -74,15 +78,14 @@
         top: 0;
         right: 0;
         height: $xs-padding + $xs-font-size * $line-height;
-        i {
-          color: $light-blue;
-          font-size: $xs-font-size;
+
+        .search-icon {
+          width: auto;
+          height: 100%;
+          padding: 4px 0;
         }
         @include breakpoint-md {
           height: $md-padding + $md-font-size * $line-height;
-          i {
-            font-size: $md-font-size;
-          }
         }
       }
     }

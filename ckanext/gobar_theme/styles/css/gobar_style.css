@@ -485,9 +485,11 @@ div#background-container {
       #title #title-container {
         text-align: left; } }
     #title #title-container h1 {
-      font-size: 50px;
-      font-weight: 400; }
+      font-size: 60px;
+      font-weight: 300; }
     #title #title-container .description {
+      font-size: 18px;
+      font-weight: 300;
       margin-bottom: 30px; }
   @media (min-width: 992px) {
     #title #searcher {
@@ -511,12 +513,14 @@ div#background-container {
       border-bottom-right-radius: 0;
       border-bottom: solid 1px white;
       padding: 6px;
+      padding-right: 2em;
       font-size: 16px;
       line-height: 1.2;
       height: 25.2px; }
       @media (min-width: 992px) {
         #title #searcher form input[type="text"] {
           padding: 10px;
+          padding-right: 2em;
           font-size: 24px;
           line-height: 1.2;
           height: 38.8px; } }
@@ -535,14 +539,13 @@ div#background-container {
       top: 0;
       right: 0;
       height: 25.2px; }
-      #title #searcher form button i {
-        color: #C7EAFB;
-        font-size: 16px; }
+      #title #searcher form button .search-icon {
+        width: auto;
+        height: 100%;
+        padding: 4px 0; }
       @media (min-width: 992px) {
         #title #searcher form button {
-          height: 38.8px; }
-          #title #searcher form button i {
-            font-size: 24px; } }
+          height: 38.8px; } }
   #title #stats {
     text-align: center;
     margin-bottom: 0;
@@ -1209,10 +1212,11 @@ div#background-container {
         position: absolute;
         top: 0;
         right: 0;
-        height: 29.2px; }
-        #search-results .search-and-order .searcher button i {
-          color: #58595B;
-          font-size: 16px; }
+        height: 100%; }
+        #search-results .search-and-order .searcher button .search-icon {
+          width: auto;
+          height: 100%;
+          padding: 4px 0; }
       #search-results .search-and-order .searcher .menu-button {
         position: absolute;
         top: 50%;

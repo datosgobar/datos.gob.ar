@@ -75,11 +75,12 @@
         position: absolute;
         top: 0;
         right: 0;
-        height: $padding + $font-size * $line-height;
+        height: 100%;
 
-        i {
-          color: $grey;
-          font-size: $font-size;
+        .search-icon {
+          width: auto;
+          height: 100%;
+          padding: 4px 0;
         }
       }
 
