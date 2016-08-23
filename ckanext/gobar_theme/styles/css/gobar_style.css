@@ -1312,7 +1312,7 @@ div#background-container {
       max-width: none;
       width: 33.33333333%; } }
   .filters-container .hide-filters-button {
-    color: #58595B;
+    color: #767676;
     position: absolute;
     cursor: pointer;
     right: 10px;
@@ -1335,15 +1335,16 @@ div#background-container {
     .filters-container .search-filter.invisible {
       opacity: 0; }
     .filters-container .search-filter h2.filter-title {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 500;
-      padding: 0 15px; }
+      padding: 0 15px;
+      color: #767676; }
     .filters-container .search-filter p.filter-empty {
       color: #D1D3D4;
       font-size: 16px;
       padding: 0 25px; }
     .filters-container .search-filter a.filter-show-less, .filters-container .search-filter a.filter-show-more {
-      color: #D1D3D4; }
+      color: #999999; }
       .filters-container .search-filter a.filter-show-less p, .filters-container .search-filter a.filter-show-more p {
         padding: 5px 25px;
         text-align: center;
@@ -1353,15 +1354,15 @@ div#background-container {
           width: 12px;
           height: 12px; }
       .filters-container .search-filter a.filter-show-less:hover, .filters-container .search-filter a.filter-show-more:hover {
-        color: #58595B; }
+        color: #767676; }
         .filters-container .search-filter a.filter-show-less:hover p, .filters-container .search-filter a.filter-show-more:hover p {
-          background: #D1D3D4; }
+          background: #e5e5e5; }
           .filters-container .search-filter a.filter-show-less:hover p .arrow-up path, .filters-container .search-filter a.filter-show-less:hover p .arrow-down path, .filters-container .search-filter a.filter-show-more:hover p .arrow-up path, .filters-container .search-filter a.filter-show-more:hover p .arrow-down path {
-            fill: #58595B; }
+            fill: #767676; }
     .filters-container .search-filter hr {
       margin: 20px;
       border: none;
-      border-top: solid 1px #eaeced; }
+      border-top: solid 1px #999999; }
     .filters-container .search-filter a.filter-show-more + hr, .filters-container .search-filter a.filter-show-less + hr {
       margin: 0; }
     .filters-container .search-filter ul {
@@ -1387,14 +1388,13 @@ div#background-container {
           -moz-transition-duration: 150ms;
           transition-duration: 150ms; }
           .filters-container .search-filter ul a li:hover {
-            background: #D1D3D4; }
+            background: #e5e5e5;
+            color: #1e90da; }
           .filters-container .search-filter ul a li .close-filter {
             display: none; }
           .filters-container .search-filter ul a li.active {
-            background: #C7EAFB;
-            border-left: solid 5px #0072bc;
-            padding-left: 20px;
-            padding-right: 30px; }
+            background: #767676;
+            color: white; }
             .filters-container .search-filter ul a li.active .close-filter {
               display: inline-block;
               position: absolute;
@@ -1415,22 +1415,22 @@ div#background-container {
           max-width: 35px;
           max-height: 35px; }
           .filters-container .search-filter .group-images .group-image-container svg path {
-            fill: #eaeced; }
+            fill: #cccccc; }
         .filters-container .search-filter .group-images .group-image-container.available svg path {
-          fill: #D1D3D4; }
+          fill: #999999; }
         .filters-container .search-filter .group-images .group-image-container.available:hover svg path {
           fill: #0072bc; }
         .filters-container .search-filter .group-images .group-image-container.active svg path {
           fill: #0072bc; }
         .filters-container .search-filter .group-images .group-image-container.active:hover svg path {
-          fill: #D1D3D4; }
+          fill: #999999; }
         .filters-container .search-filter .group-images .group-image-container .svg-tooltip {
           position: absolute;
           display: inline-block;
           left: -99999px; }
           .filters-container .search-filter .group-images .group-image-container .svg-tooltip .tooltip-text {
             padding: 4px;
-            background: #58595B;
+            background: #424242;
             color: white;
             white-space: nowrap;
             font-size: 10px;
