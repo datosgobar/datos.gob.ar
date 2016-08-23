@@ -648,10 +648,10 @@ div#background-container {
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
       border-radius: 4px;
-      -o-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
-      -moz-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
-      -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
-      box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2); }
+      -o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); }
       .featured-groups .group-container .group .group-text {
         padding: 10px 10px;
         position: relative;
@@ -751,10 +751,10 @@ div#background-container {
         -moz-border-radius: 4px;
         -webkit-border-radius: 4px;
         border-radius: 4px;
-        -o-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
-        -webkit-box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
-        box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+        -o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
         width: 50%;
         -webkit-transition-delay: 0s;
         -moz-transition-delay: 0s;
@@ -771,7 +771,7 @@ div#background-container {
         #featured-content-container #featured-content .table-wrapper a .featured-card h1 {
           margin: 0;
           color: #767676;
-          font-size: 20px;
+          font-size: 22px;
           line-height: 1.3; }
         #featured-content-container #featured-content .table-wrapper a .featured-card h2 {
           margin: 0;
@@ -1460,10 +1460,10 @@ div#background-container {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-  -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-  -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
-  box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+  -o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   margin-bottom: 15px;
   overflow: hidden; }
   .dataset-list .dataset-item .dataset-container .dataset-border {

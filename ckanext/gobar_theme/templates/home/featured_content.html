@@ -15,7 +15,7 @@
                                 <div class="featured-card">
                                     <h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3>
                                     <h1>{{ featured_pkg.title or featured_pkg.name }}</h1>
-                                    <p>{{ h.cut_text(featured_pkg.notes, 250)|urlize }}</p>
+                                    <p>{{ h.cut_text(featured_pkg.notes, 160)|urlize }}</p>
                                 </div>
                             </a>
                             {% if loop.index % 2 == 1 and featured_row|length == 2%}
