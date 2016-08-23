@@ -4,9 +4,11 @@
 
 {% block content %}
     <div id="new-package-container" class="container-fluid">
+      <div class="restricted-max-width">
         <div id="new-package" class="col-xs-12 col-md-10 col-md-offset-1">
             <h1>Crear dataset</h1>
             {{- h.snippet(form_snippet, c=c, **form_vars) -}}
         </div>
+      </div>
     </div>
 {% endblock %}

@@ -6,22 +6,24 @@
 <a href="{{ h.url_for(controller='package', action='read', id=package.name) }}" class="dataset-item">
     <div class="dataset-container">
         <div class="dataset-border container-fluid">
-            <div class="dataset-content col-xs-9">
-                <h3 class="dataset-title">{{ title }}</h3>
+            <div class="restricted-max-width">
+                <div class="dataset-content col-xs-9">
+                    <h3 class="dataset-title">{{ title }}</h3>
 
-                <div class="dataset-author">{{ h.cut_text(package.author, 150) }}</div>
-                <div class="dataset-notes">{{ h.cut_text(notes, 250)|urlize }}</div>
-            </div>
-            <div class="dataset-groups-and-resources col-xs-3">
-                <div class="dataset-groups">
-                    {% for group in package.groups %}
-                        <img src="{{ h.cut_img_path(group.image_display_url) }}" title="{{ group.title }}" class="group-image">
-                    {% endfor %}
+                    <div class="dataset-author">{{ h.cut_text(package.author, 150) }}</div>
+                    <div class="dataset-notes">{{ h.cut_text(notes, 250)|urlize }}</div>
                 </div>
-                <div class="dataset-resources">
-                    {% for resource in h.dict_list_reduce(package.resources, 'format') %}
-                        <span class="label" data-format="{{ resource.lower() }}">{{ resource.lower() }}</span>
-                    {% endfor %}
+                <div class="dataset-groups-and-resources col-xs-3">
+                    <div class="dataset-groups">
+                        {% for group in package.groups %}
+                            <img src="{{ h.cut_img_path(group.image_display_url) }}" title="{{ group.title }}" class="group-image">
+                        {% endfor %}
+                    </div>
+                    <div class="dataset-resources">
+                        {% for resource in h.dict_list_reduce(package.resources, 'format') %}
+                            <span class="label" data-format="{{ resource.lower() }}">{{ resource.lower() }}</span>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

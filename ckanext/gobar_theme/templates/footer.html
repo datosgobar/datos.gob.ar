@@ -1,29 +1,31 @@
 <div id="footer" class="container-fluid">
-    <div id="footer-spacer" class="col-xs-10 col-xs-offset-1">
-        <div class="footer-section logo col-xs-12 col-sm-6 col-md-6">
-            <p>
-                <a href="https://twitter.com/datosgobar" target="_blank" class="social-link">
-                    <i class="icon-twitter"></i>
+    <div class="restricted-max-width">
+        <div id="footer-spacer" class="col-xs-10 col-xs-offset-1">
+            <div class="footer-section logo col-xs-12 col-sm-6 col-md-6">
+                <p>
+                    <a href="https://twitter.com/datosgobar" target="_blank" class="social-link">
+                        <i class="icon-twitter"></i>
+                    </a>
+                    <a href="https://www.facebook.com/GobAbiertoAR/" target="_blank" class="social-link">
+                        <i class="icon-facebook"></i>
+                    </a>
+                    <a href="https://github.com/gobabiertoAR" target="_blank" class="social-link">
+                        <i class="icon-github-alt"></i>
+                    </a>
+                </p>
+                <a href="http://www.argentina.gob.ar/modernizacion" target="_blank"><img src="/img/logo_ministerio.svg" class="logo-ministerio"></a>
+            </div>
+            <div class="footer-section links-internos hidden-xs hidden-sm col-md-3">
+                <a href="{{ h.url('gobar_open_data') }}"><p>Datos Abiertos</p></a>
+                <a href="{{ h.url('gobar_legal') }}"><p>Marco Legal</p></a>
+                <a href="{{ h.url('gobar_platform') }}"><p>Plataforma</p></a>
+                <a href="mailto:gobiernoabierto@modernizacion.gob.ar"><p>Contacto</p></a>
+            </div>
+            <div class="footer-section links-externos col-xs-12 col-sm-6 col-md-3">
+                <a href="http://ckan.org/" target="_blank">
+                    <p class="ckan-link">Desarrollado con <span class="ckan-name">CKAN</span></p>
                 </a>
-                <a href="https://www.facebook.com/GobAbiertoAR/" target="_blank" class="social-link">
-                    <i class="icon-facebook"></i>
-                </a>
-                <a href="https://github.com/gobabiertoAR" target="_blank" class="social-link">
-                    <i class="icon-github-alt"></i>
-                </a>
-            </p>
-            <a href="http://www.argentina.gob.ar/modernizacion" target="_blank"><img src="/img/logo_ministerio.svg" class="logo-ministerio"></a>
-        </div>
-        <div class="footer-section links-internos hidden-xs hidden-sm col-md-3">
-            <a href="{{ h.url('gobar_open_data') }}"><p>Datos Abiertos</p></a>
-            <a href="{{ h.url('gobar_legal') }}"><p>Marco Legal</p></a>
-            <a href="{{ h.url('gobar_platform') }}"><p>Plataforma</p></a>
-            <a href="mailto:gobiernoabierto@modernizacion.gob.ar"><p>Contacto</p></a>
-        </div>
-        <div class="footer-section links-externos col-xs-12 col-sm-6 col-md-3">
-            <a href="http://ckan.org/" target="_blank">
-                <p class="ckan-link">Desarrollado con <span class="ckan-name">CKAN</span></p>
-            </a>
+            </div>
         </div>
     </div>
 </div>

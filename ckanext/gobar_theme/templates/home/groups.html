@@ -1,36 +1,38 @@
 <div class="featured-groups container-fluid">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-        {% set dataset_url = h.url_for(controller='package', action='search') %}
+    <div class="restricted-max-width">
+        <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            {% set dataset_url = h.url_for(controller='package', action='search') %}
 
-        {%- for group in c.groups -%}
-            {%- set can_update = h.check_access('group_update', {'id': c.group_dict.id}) -%}
-            <div class="group-container col-xs-12 col-sm-4 col-md-3 invisible {{ 'with-edit-button' if can_update else '' }}">
-                {% if can_update %}
-                    <a href="{{ h.url_for(controller='group', action='edit', id=group.name) }}">
-                        <div class="edit-container">
-                            {% snippet "svg/edit.svg" %}
-                        </div>
-                    </a>
-                {% endif %}
-                {% set group_class = 'active' if group.package_count > 0 else 'inactive' %}
-                {% if group.package_count > 0 %}
-                    <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
-                {% endif %}
-                <div class="group {{ group_class }}">
-                    <div class="group-text">
-                        <img src="{{ group.image_display_url }}" data-replace="svg">
+            {%- for group in c.groups -%}
+                {%- set can_update = h.check_access('group_update', {'id': c.group_dict.id}) -%}
+                <div class="group-container col-xs-12 col-sm-4 col-md-3 invisible {{ 'with-edit-button' if can_update else '' }}">
+                    {% if can_update %}
+                        <a href="{{ h.url_for(controller='group', action='edit', id=group.name) }}">
+                            <div class="edit-container">
+                                {% snippet "svg/edit.svg" %}
+                            </div>
+                        </a>
+                    {% endif %}
+                    {% set group_class = 'active' if group.package_count > 0 else 'inactive' %}
+                    {% if group.package_count > 0 %}
+                        <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
+                    {% endif %}
+                    <div class="group {{ group_class }}">
+                        <div class="group-text">
+                            <img src="{{ group.image_display_url }}" data-replace="svg">
 
-                        <div class="group-table">
-                            <div class="group-cell">
-                                {{ group.display_name }}
+                            <div class="group-table">
+                                <div class="group-cell">
+                                    {{ group.display_name }}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                {% if group.package_count > 0 %}
-                    </a>
-                {% endif %}
-            </div>{%- endfor -%}
+                    {% if group.package_count > 0 %}
+                        </a>
+                    {% endif %}
+                </div>{%- endfor -%}
+        </div>
     </div>
 </div>
 

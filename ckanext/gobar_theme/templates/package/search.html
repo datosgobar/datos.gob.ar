@@ -17,9 +17,11 @@
     {% snippet "package/title.html" %}
 
     <div class="package-container container-fluid">
-        <div class="package-search col-xs-12 col-md-10 col-md-offset-1">
-            {% snippet "package/snippets/search_filters.html" %}
-            {% snippet "package/snippets/search_results.html" %}
+        <div class="restricted-max-width">
+            <div class="package-search col-xs-12 col-md-10 col-md-offset-1">
+                {% snippet "package/snippets/search_filters.html" %}
+                {% snippet "package/snippets/search_results.html" %}
+            </div>
         </div>
     </div>
 

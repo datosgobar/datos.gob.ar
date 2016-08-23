@@ -37,6 +37,10 @@ div.svg-tooltip {
   bottom: initial;
   left: 50%; }
 
+.restricted-max-width {
+  max-width: 1200px;
+  margin: auto; }
+
 #header {
   background: white;
   padding: 0;

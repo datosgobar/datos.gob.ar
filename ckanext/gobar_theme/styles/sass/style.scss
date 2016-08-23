@@ -30,6 +30,11 @@ div.svg-tooltip {
   left: 50%;
 }
 
+.restricted-max-width {
+  max-width: 1200px;
+  margin: auto;
+}
+
 @import 'utils/selective_bourbon';
 @import 'utils/colors';
 @import 'utils/mixins';

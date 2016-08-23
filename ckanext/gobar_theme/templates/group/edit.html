@@ -4,9 +4,11 @@
 
 {% block content %}
     <div id="edit-group-container" class="container-fluid">
-        <div id="edit-group" class="col-xs-12 col-md-10 col-md-offset-1">
-            <h1>Editar grupo</h1>
-            {{ c.form | safe }}
+      <div class="restricted-max-width">
+          <div id="edit-group" class="col-xs-12 col-md-10 col-md-offset-1">
+              <h1>Editar grupo</h1>
+              {{ c.form | safe }}
+          </div>
         </div>
     </div>
 

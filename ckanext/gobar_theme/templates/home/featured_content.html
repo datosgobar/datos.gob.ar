@@ -1,33 +1,35 @@
 <div id="featured-content-container" class="container-fluid">
-    <div id="featured-content" class="hidden-xs col-sm-10 col-sm-offset-1">
-        <div class="col-xs-12 no-padding">
-            <h2>DESTACADOS</h2>
-            {% for featured_row in c.featured_packages %}
-                <div class="table-wrapper">
-                    {% if featured_row|length == 1 %}
-                        <div class="empty-card">
-                        </div>
-                    {% endif %}
-
-                    {% for featured_pkg in featured_row %}
-                        <a href="{{ h.url_for(controller='package', action='read', id=featured_pkg.name) }}">
-                            <div class="featured-card">
-                                <h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3>
-                                <h1>{{ featured_pkg.title or featured_pkg.name }}</h1>
-                                <p>{{ h.cut_text(featured_pkg.notes, 250)|urlize }}</p>
+    <div class="restricted-max-width">
+        <div id="featured-content" class="hidden-xs col-sm-10 col-sm-offset-1">
+            <div class="col-xs-12 no-padding">
+                <h2>DESTACADOS</h2>
+                {% for featured_row in c.featured_packages %}
+                    <div class="table-wrapper">
+                        {% if featured_row|length == 1 %}
+                            <div class="empty-card">
                             </div>
-                        </a>
-                        {% if loop.index % 2 == 1 and featured_row|length == 2%}
-                            <div class="table-spacer"></div>
                         {% endif %}
-                    {% endfor %}
 
-                    {% if featured_row|length == 1 %}
-                        <div class="empty-card">
-                        </div>
-                    {% endif %}
-                </div>
-            {% endfor %}
+                        {% for featured_pkg in featured_row %}
+                            <a href="{{ h.url_for(controller='package', action='read', id=featured_pkg.name) }}">
+                                <div class="featured-card">
+                                    <h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3>
+                                    <h1>{{ featured_pkg.title or featured_pkg.name }}</h1>
+                                    <p>{{ h.cut_text(featured_pkg.notes, 250)|urlize }}</p>
+                                </div>
+                            </a>
+                            {% if loop.index % 2 == 1 and featured_row|length == 2%}
+                                <div class="table-spacer"></div>
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if featured_row|length == 1 %}
+                            <div class="empty-card">
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
         </div>
     </div>
 </div>
