@@ -36,7 +36,7 @@
   }
 
   .search-filter {
-    $side-padding: 15px;
+    $side-padding: 30px;
 
     @include transition-duration(300ms);
     @include transition-delay(0s);
@@ -57,13 +57,13 @@
     p.filter-empty {
       color: $light-grey;
       font-size: 16px;
-      padding: 0 ($side-padding + 10px);
+      padding: 0 $side-padding;
     }
 
     a.filter-show-less, a.filter-show-more {
       color: $grey-300;
       p {
-        padding: 5px ($side-padding + 10px);
+        padding: 5px $side-padding;
         text-align: center;
         margin: 0;
         background: transparent;
@@ -104,7 +104,7 @@
         font-size: 15px;
 
         li {
-          padding: 5px ($side-padding + 10px);
+          padding: 5px $side-padding;
           position: relative;
           background: transparent;
           @include transition-delay(0s);
@@ -136,7 +136,7 @@
     }
 
     .group-images {
-      padding: 0 25px;
+      padding: 0 15px;
       .group-image-container {
         width: 16.666666%;
         display: inline-block;

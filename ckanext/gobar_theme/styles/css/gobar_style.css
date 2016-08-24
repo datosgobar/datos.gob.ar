@@ -1338,16 +1338,16 @@ div#background-container {
     .filters-container .search-filter h2.filter-title {
       font-size: 20px;
       font-weight: 400;
-      padding: 0 15px;
+      padding: 0 30px;
       color: #767676; }
     .filters-container .search-filter p.filter-empty {
       color: #D1D3D4;
       font-size: 16px;
-      padding: 0 25px; }
+      padding: 0 30px; }
     .filters-container .search-filter a.filter-show-less, .filters-container .search-filter a.filter-show-more {
       color: #999999; }
       .filters-container .search-filter a.filter-show-less p, .filters-container .search-filter a.filter-show-more p {
-        padding: 5px 25px;
+        padding: 5px 30px;
         text-align: center;
         margin: 0;
         background: transparent; }
@@ -1373,7 +1373,7 @@ div#background-container {
         color: inherit;
         font-size: 15px; }
         .filters-container .search-filter ul a li {
-          padding: 5px 25px;
+          padding: 5px 30px;
           position: relative;
           background: transparent;
           -webkit-transition-delay: 0s;
@@ -1405,7 +1405,7 @@ div#background-container {
               width: 20px;
               height: 20px; }
     .filters-container .search-filter .group-images {
-      padding: 0 25px; }
+      padding: 0 15px; }
       .filters-container .search-filter .group-images .group-image-container {
         width: 16.666666%;
         display: inline-block;
@@ -1465,6 +1465,7 @@ div#background-container {
   -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  border-top: #eeeeee solid 1px;
   margin-bottom: 15px;
   overflow: hidden; }
   .dataset-list .dataset-item .dataset-container .dataset-border {
@@ -1622,19 +1623,21 @@ div#background-container {
   #pkg-secondary-info h2.secondary-info-title {
     color: #0072bc;
     margin-top: 58px;
-    font-size: 17px;
-    border-bottom: solid 1px #D1D3D4; }
+    font-size: 20px;
+    border-bottom: solid 1px #999999;
+    font-weight: 400; }
   #pkg-secondary-info #info-container {
-    font-size: 14px; }
+    color: #767676;
+    font-size: 16px; }
     #pkg-secondary-info #info-container .row {
-      border-bottom: 1px solid #eaeced;
+      border-bottom: 1px solid #999999;
       margin-bottom: 10px; }
       #pkg-secondary-info #info-container .row.group-row {
         overflow: visible; }
       #pkg-secondary-info #info-container .row .title {
-        font-weight: 500;
         margin-bottom: 10px;
-        padding: 0; }
+        padding: 0;
+        font-size: 18px; }
       #pkg-secondary-info #info-container .row .value {
         margin-bottom: 10px;
         padding: 0 0 0 5px;
@@ -1644,7 +1647,7 @@ div#background-container {
           width: 1em;
           height: 1em; }
           #pkg-secondary-info #info-container .row .value p.pkg-maintainer svg path {
-            fill: #D1D3D4; }
+            fill: #999999; }
           #pkg-secondary-info #info-container .row .value p.pkg-maintainer svg:hover path {
             fill: #0072bc; }
         #pkg-secondary-info #info-container .row .value .group-img-container {
@@ -1663,7 +1666,7 @@ div#background-container {
             top: -70%; }
             #pkg-secondary-info #info-container .row .value .group-img-container .svg-tooltip .tooltip-text {
               padding: 4px;
-              background: #58595B;
+              background: #424242;
               color: white;
               white-space: nowrap;
               font-size: 10px;
@@ -1687,7 +1690,7 @@ div#background-container {
         #pkg-secondary-info #info-container .row .value p.pkg-tag {
           margin: 0 0 5px 0; }
           #pkg-secondary-info #info-container .row .value p.pkg-tag a {
-            color: #58595B; }
+            color: #767676; }
             #pkg-secondary-info #info-container .row .value p.pkg-tag a:hover {
               color: #0072bc; }
 

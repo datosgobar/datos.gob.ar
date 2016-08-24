@@ -5,6 +5,7 @@
       border: solid 0 transparent;
       @include border-radius(4px);
       @include box-shadow(0 2px 2px rgba(0,0,0,0.2));
+      border-top: #eeeeee solid 1px;
       margin-bottom: 15px;
       overflow: hidden;
 

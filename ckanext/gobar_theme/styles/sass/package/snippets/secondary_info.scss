@@ -3,14 +3,16 @@
   h2.secondary-info-title {
     color: $dark-blue;
     margin-top: 58px;
-    font-size: 17px;
-    border-bottom: solid 1px $light-grey;
+    font-size: 20px;
+    border-bottom: solid 1px $grey-300;
+    font-weight: 400;
   }
 
   #info-container {
-    font-size: 14px;
+    color: $grey-400;
+    font-size: 16px;
     .row {
-      border-bottom: 1px solid $inactive;
+      border-bottom: 1px solid $grey-300;
       margin-bottom: 10px;
 
       &.group-row {
@@ -18,9 +20,9 @@
       }
 
       .title {
-        font-weight: 500;
         margin-bottom: 10px;
         padding: 0;
+        font-size: 18px;
       }
       .value {
         margin-bottom: 10px;
@@ -32,10 +34,10 @@
             width: 1em;
             height: 1em;
             path {
-              fill: $light-grey;
+              fill: $grey-300;
             }
             &:hover path {
-              fill: $dark-blue;
+              fill: $blue-300;
             }
           }
         }
@@ -50,7 +52,7 @@
             margin: 0 0 5px 5px;
             &:hover {
               path {
-                fill: $dark-blue;
+                fill: $blue-300;
               }
             }
           }
@@ -62,7 +64,7 @@
             top: -70%;
             .tooltip-text {
               padding: 4px;
-              background: $grey;
+              background: $grey-500;
               color: white;
               white-space: nowrap;
               font-size: 10px;
@@ -84,9 +86,9 @@
 
         p.pkg-tag {
           a {
-            color: $grey;
+            color: $grey-400;
             &:hover {
-              color: $dark-blue;
+              color: $blue-300;
             }
           }
           margin: 0 0 5px 0;
