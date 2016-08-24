@@ -1,6 +1,5 @@
 .filters-container {
   background: #fafafa;
-  border-right: solid 1px $inactive;
   margin-bottom: -99999px;
   padding: 0 0 99999px 0;
   z-index: 2;
@@ -49,8 +48,8 @@
     }
 
     h2.filter-title {
-      font-size: 18px;
-      font-weight: 500;
+      font-size: 20px;
+      font-weight: 400;
       padding: 0 $side-padding;
       color: $grey-400;
     }
@@ -93,7 +92,7 @@
     }
 
     a.filter-show-more + hr, a.filter-show-less + hr {
-      margin: 0;
+      margin: 0 20px;
     }
 
     ul {
@@ -102,7 +101,7 @@
 
       a {
         color: inherit;
-        font-size: 14px;
+        font-size: 15px;
 
         li {
           padding: 5px ($side-padding + 10px);
@@ -154,7 +153,7 @@
         &.available {
           svg {
             path {
-              fill: $grey-300;
+              fill: $grey-400;
             }
           }
           &:hover {

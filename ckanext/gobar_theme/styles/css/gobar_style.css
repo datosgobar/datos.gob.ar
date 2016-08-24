@@ -38,7 +38,7 @@ div.svg-tooltip {
   left: 50%; }
 
 .restricted-max-width {
-  max-width: 1200px;
+  max-width: 1440px;
   margin: auto; }
 
 #header {
@@ -85,6 +85,7 @@ div.svg-tooltip {
 #footer {
   padding: 0;
   position: relative;
+  z-index: 10;
   -o-box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5);
   -moz-box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5);
   -webkit-box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5);
@@ -1230,13 +1231,13 @@ div#background-container {
           #search-results .search-and-order .searcher input {
             margin-left: 0; } }
         #search-results .search-and-order .searcher input::-webkit-input-placeholder {
-          color: #58595B; }
+          color: #767676; }
         #search-results .search-and-order .searcher input::-moz-placeholder {
-          color: #58595B; }
+          color: #767676; }
         #search-results .search-and-order .searcher input:-moz-placeholder {
-          color: #58595B; }
+          color: #767676; }
         #search-results .search-and-order .searcher input:-ms-input-placeholder {
-          color: #58595B; }
+          color: #767676; }
       #search-results .search-and-order .searcher button {
         background: none;
         border: none;
@@ -1245,7 +1246,7 @@ div#background-container {
         right: 0;
         height: 100%; }
         #search-results .search-and-order .searcher button .search-icon {
-          width: auto;
+          width: 20px;
           height: 100%;
           padding: 4px 0; }
       #search-results .search-and-order .searcher .menu-button {
@@ -1273,7 +1274,8 @@ div#background-container {
         font-size: 16px;
         padding-right: 5px;
         max-width: 40%;
-        box-sizing: border-box; }
+        box-sizing: border-box;
+        color: #767676; }
       #search-results .search-and-order .order select {
         max-width: 60%; }
   #search-results .search-error strong {
@@ -1283,7 +1285,6 @@ div#background-container {
 
 .filters-container {
   background: #fafafa;
-  border-right: solid 1px #eaeced;
   margin-bottom: -99999px;
   padding: 0 0 99999px 0;
   z-index: 2;
@@ -1335,8 +1336,8 @@ div#background-container {
     .filters-container .search-filter.invisible {
       opacity: 0; }
     .filters-container .search-filter h2.filter-title {
-      font-size: 18px;
-      font-weight: 500;
+      font-size: 20px;
+      font-weight: 400;
       padding: 0 15px;
       color: #767676; }
     .filters-container .search-filter p.filter-empty {
@@ -1364,13 +1365,13 @@ div#background-container {
       border: none;
       border-top: solid 1px #999999; }
     .filters-container .search-filter a.filter-show-more + hr, .filters-container .search-filter a.filter-show-less + hr {
-      margin: 0; }
+      margin: 0 20px; }
     .filters-container .search-filter ul {
       list-style: none;
       margin: 0; }
       .filters-container .search-filter ul a {
         color: inherit;
-        font-size: 14px; }
+        font-size: 15px; }
         .filters-container .search-filter ul a li {
           padding: 5px 25px;
           position: relative;
@@ -1417,7 +1418,7 @@ div#background-container {
           .filters-container .search-filter .group-images .group-image-container svg path {
             fill: #cccccc; }
         .filters-container .search-filter .group-images .group-image-container.available svg path {
-          fill: #999999; }
+          fill: #767676; }
         .filters-container .search-filter .group-images .group-image-container.available:hover svg path {
           fill: #0072bc; }
         .filters-container .search-filter .group-images .group-image-container.active svg path {
@@ -1467,7 +1468,7 @@ div#background-container {
   margin-bottom: 15px;
   overflow: hidden; }
   .dataset-list .dataset-item .dataset-container .dataset-border {
-    border-right: solid 8px #D1D3D4;
+    border-right: solid 8px #999999;
     padding: 15px;
     -webkit-transition-delay: 0s;
     -moz-transition-delay: 0s;
@@ -1486,17 +1487,17 @@ div#background-container {
       .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-title {
         color: #767676;
         margin: 0;
-        line-height: 1.3; }
+        line-height: 1.3;
+        font-size: 25px; }
       .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-author {
         color: #767676;
-        font-style: italic;
-        font-size: 13px;
-        line-height: 1.2;
-        padding-bottom: 15.6px;
+        font-size: 15px;
+        line-height: 1.4;
+        margin: 4px 0 8px 0;
         font-weight: 500; }
       .dataset-list .dataset-item .dataset-container .dataset-border .dataset-content .dataset-notes {
         color: #424242;
-        font-size: 14px;
+        font-size: 17px;
         margin: 0; }
     .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources {
       text-align: right;

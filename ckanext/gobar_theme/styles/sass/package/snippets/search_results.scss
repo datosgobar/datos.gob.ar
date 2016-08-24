@@ -64,7 +64,7 @@
         }
 
         @include placeholder {
-          color: $grey;
+          color: $grey-400;
         }
 
       }
@@ -78,7 +78,7 @@
         height: 100%;
 
         .search-icon {
-          width: auto;
+          width: 20px;
           height: 100%;
           padding: 4px 0;
         }
@@ -120,6 +120,7 @@
         padding-right: 5px;
         max-width: 40%;
         box-sizing: border-box;
+        color: $grey-400;
       }
       select {
         max-width: 60%;
