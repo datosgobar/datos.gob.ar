@@ -1585,8 +1585,11 @@ div#background-container {
       margin-bottom: -99999px;
       padding-bottom: 99999px; }
 
+#pkg-main-info #pkg-path {
+  color: #999999;
+  margin-top: 20px; }
 #pkg-main-info #pkg-title-and-desc h1.pkg-title {
-  margin: 50px 0 0 0;
+  margin: 20px 0 0 0;
   color: #0072bc;
   font-size: 25px; }
 #pkg-main-info #pkg-title-and-desc .edit-button {
@@ -1596,6 +1599,7 @@ div#background-container {
   color: #767676;
   font-size: 16px; }
   #pkg-main-info #pkg-title-and-desc p.pkg-author svg {
+    vertical-align: middle;
     width: 1em;
     height: 1em; }
     #pkg-main-info #pkg-title-and-desc p.pkg-author svg path {

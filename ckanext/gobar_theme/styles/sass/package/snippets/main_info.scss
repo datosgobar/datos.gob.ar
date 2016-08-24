@@ -1,7 +1,11 @@
 #pkg-main-info {
+  #pkg-path {
+    color: $grey-300;
+    margin-top: 20px;
+  }
   #pkg-title-and-desc {
     h1.pkg-title {
-      margin: 50px 0 0 0;
+      margin: 20px 0 0 0;
       color: $blue-300;
       font-size: 25px;
     }
@@ -13,6 +17,7 @@
       color: $grey-400;
       font-size: 16px;
       svg {
+        vertical-align: middle;
         width: 1em;
         height: 1em;
         path {
