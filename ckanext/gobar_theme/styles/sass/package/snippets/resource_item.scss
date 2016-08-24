@@ -1,13 +1,15 @@
 .pkg-container {
   position: relative;
-  $file-img-width: 40px;
+  $file-img-width: 45px;
+  margin: 40px 0;
   .pkg-file-img {
     position: absolute;
     width: $file-img-width;
     $height: $file-img-width*1.26;
     height: $height;
-    top: 0;
+    top: 50%;
     left: 0;
+    margin-top: -$height/2;
     @include svgFormatColors();
     p {
       position: absolute;
@@ -17,7 +19,7 @@
       height: $height;
       $vcenter-offset: 4px;
       line-height: $height + $vcenter-offset;
-      $font-size: 12px;
+      $font-size: 15px;
       font-size: $font-size;
       margin: 0;
       text-align: center;
@@ -28,8 +30,11 @@
   $right-button-size: 90px;
   .pkg-actions {
     display: inline-block;
-    float: right;
-    margin: 0 10px 10px 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin: 0 10px 0 10px;
+    margin-top: -26px;
     button {
       background: $blue-300;
       color: white;
@@ -40,6 +45,7 @@
       width: $right-button-size;
       margin-bottom: 5px;
       font-weight: 300;
+      padding: 3px 6px;
       &:hover {
         background-color: $blue-200;
       }
@@ -51,19 +57,17 @@
     clear: both;
   }
   .package-info {
-    padding: 0 ($right-button-size + 20px) 0 ($file-img-width + 10px);
+    padding: 0 ($right-button-size + 70px) 0 ($file-img-width + 10px);
     h3 {
       color: $grey-400;
-      margin: 5px 0 6px 0;
+      margin: 0 0 6px 0;
       font-weight: 400;
-      font-size: 16px;
-      @include breakpoint-sm {
-        margin-top: 30px;
-      }
+      font-size: 18px;
     }
     p {
       color: $grey-500;
       font-size: 16px;
+      margin: 0;
     }
     &:hover h3 {
       color: $blue-300;

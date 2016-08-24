@@ -3,6 +3,7 @@
 // Para compilar y quedar escuchando cambios a los archivos (para desarrollo) correr:
 // sass --watch style.scss:../css/gobar_style.css
 @import 'fonts';
+@import 'utils/colors';
 
 body {
   background: #fff;
@@ -13,6 +14,10 @@ body {
 
 a, a:hover {
   text-decoration: none !important;
+}
+
+a:hover {
+  color: $blue-200;
 }
 
 div.no-padding {
@@ -36,7 +41,6 @@ div.svg-tooltip {
 }
 
 @import 'utils/selective_bourbon';
-@import 'utils/colors';
 @import 'utils/mixins';
 @import 'utils/media_queries';
 
