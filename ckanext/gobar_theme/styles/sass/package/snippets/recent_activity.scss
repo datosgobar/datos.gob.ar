@@ -1,20 +1,23 @@
 #pkg-recent-activity {
   background: #fafafa;
   h2.recent-activity-title {
-    color: $dark-blue;
+    color: $blue-300;
     margin: 50px 0 0 0;
-    font-size: 17px;
-    border-bottom: solid 1px $light-grey;
+    font-size: 18px;
+    border-bottom: solid 1px $grey-300;
   }
 
   ul.activity {
     margin: 0;
+    li.item {
+      border-bottom: solid 1px $grey-300;
+    }
   }
 
   .activity-read-more, .activity-loading {
     text-align: center;
     background: transparent;
-    color: $light-grey;
+    color: $grey-300;
     cursor: pointer;
     padding: 5px;
     margin: -5px -15px 0 -15px;
@@ -36,11 +39,11 @@
     }
 
     &:hover {
-      color: $grey;
-      background: $light-grey;
+      color: $grey-400;
+      background: $grey-150;
       svg {
         path {
-          fill: $grey;
+          fill: $grey-400;
         }
       }
     }

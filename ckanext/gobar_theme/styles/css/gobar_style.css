@@ -1588,32 +1588,35 @@ div#background-container {
 #pkg-main-info #pkg-title-and-desc h1.pkg-title {
   margin: 50px 0 0 0;
   color: #0072bc;
-  font-size: 24px; }
+  font-size: 25px; }
 #pkg-main-info #pkg-title-and-desc .edit-button {
-  float: right; }
+  float: right;
+  margin-left: 16px; }
 #pkg-main-info #pkg-title-and-desc p.pkg-author {
-  color: #D1D3D4;
-  font-size: 13px; }
+  color: #767676;
+  font-size: 16px; }
   #pkg-main-info #pkg-title-and-desc p.pkg-author svg {
     width: 1em;
     height: 1em; }
     #pkg-main-info #pkg-title-and-desc p.pkg-author svg path {
-      fill: #D1D3D4; }
+      fill: #767676; }
     #pkg-main-info #pkg-title-and-desc p.pkg-author svg:hover path {
       fill: #0072bc; }
 #pkg-main-info #pkg-title-and-desc p.pkg-notes {
   margin-bottom: 50px;
-  font-size: 14px; }
+  font-size: 16px;
+  color: #424242; }
 #pkg-main-info #pkg-title-and-desc h2.pkg-resources-title {
-  color: #58595B;
-  border-bottom: solid 1px #D1D3D4;
-  font-size: 17px; }
+  color: #424242;
+  border-bottom: solid 1px #999999;
+  font-size: 20px;
+  font-weight: 400; }
 #pkg-main-info #pkg-title-and-desc .contact {
   width: 15px;
   height: 15px; }
 #pkg-main-info #pkg-resources {
   padding-bottom: 20px;
-  border-bottom: solid 1px #D1D3D4; }
+  border-bottom: solid 1px #999999; }
   @media (min-width: 992px) {
     #pkg-main-info #pkg-resources {
       margin-bottom: 50px; } }
@@ -1699,14 +1702,16 @@ div#background-container {
   #pkg-recent-activity h2.recent-activity-title {
     color: #0072bc;
     margin: 50px 0 0 0;
-    font-size: 17px;
-    border-bottom: solid 1px #D1D3D4; }
+    font-size: 18px;
+    border-bottom: solid 1px #999999; }
   #pkg-recent-activity ul.activity {
     margin: 0; }
+    #pkg-recent-activity ul.activity li.item {
+      border-bottom: solid 1px #999999; }
   #pkg-recent-activity .activity-read-more, #pkg-recent-activity .activity-loading {
     text-align: center;
     background: transparent;
-    color: #D1D3D4;
+    color: #999999;
     cursor: pointer;
     padding: 5px;
     margin: -5px -15px 0 -15px;
@@ -1739,10 +1744,10 @@ div#background-container {
         -moz-transition-timing-function: linear;
         transition-timing-function: linear; }
     #pkg-recent-activity .activity-read-more:hover, #pkg-recent-activity .activity-loading:hover {
-      color: #58595B;
-      background: #D1D3D4; }
+      color: #767676;
+      background: #e5e5e5; }
       #pkg-recent-activity .activity-read-more:hover svg path, #pkg-recent-activity .activity-loading:hover svg path {
-        fill: #58595B; }
+        fill: #767676; }
   #pkg-recent-activity .activity-loading {
     cursor: initial; }
   #pkg-recent-activity hr.final-separator {
@@ -2061,34 +2066,37 @@ div#background-container {
     display: inline-block;
     float: right;
     margin: 0 10px 10px 10px; }
-    .pkg-container .pkg-actions svg {
-      width: 50px;
-      height: 50px;
+    .pkg-container .pkg-actions button {
+      background: #0072bc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 13px;
       display: block;
-      padding: 0 10px 10px 10px; }
-      @media (min-width: 768px) {
-        .pkg-container .pkg-actions svg {
-          display: inline; } }
-      .pkg-container .pkg-actions svg path {
-        fill: #D1D3D4; }
-    .pkg-container .pkg-actions a:hover svg path {
-      fill: #0072bc; }
+      width: 90px;
+      margin-bottom: 5px;
+      font-weight: 300; }
+      .pkg-container .pkg-actions button:hover {
+        background-color: #1e90da; }
   .pkg-container:after {
     content: "";
     display: table;
     clear: both; }
   .pkg-container .package-info {
-    padding: 0 110px 0 50px;
-    color: #58595B;
-    min-height: 50px; }
+    padding: 0 110px 0 50px; }
     .pkg-container .package-info h3 {
+      color: #767676;
       margin: 5px 0 6px 0;
+      font-weight: 400;
       font-size: 16px; }
       @media (min-width: 768px) {
         .pkg-container .package-info h3 {
           margin-top: 30px; } }
     .pkg-container .package-info p {
-      font-size: 13px; }
+      color: #424242;
+      font-size: 16px; }
+    .pkg-container .package-info:hover h3 {
+      color: #0072bc; }
 
 #edit-group-container, #new-group-container {
   padding-right: 0;

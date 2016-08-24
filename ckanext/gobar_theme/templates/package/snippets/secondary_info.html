@@ -5,10 +5,10 @@
 
         {% if pkg.maintainer|length > 0 %}
             <div class="row">
-                <div class="col-xs-4 title">
+                <div class="col-xs-5 title">
                     Responsable
                 </div>
-                <div class="col-xs-8 value">
+                <div class="col-xs-7 value">
                     <p class="pkg-maintainer">
                         {{ pkg.maintainer }}
                         {% if pkg.maintainer_email %}
@@ -25,10 +25,10 @@
 
         {% if pkg.groups|length > 0 %}
             <div class="row group-row">
-                <div class="col-xs-4 title">
+                <div class="col-xs-5 title">
                     Grupos
                 </div>
-                <div class="col-xs-8 value">
+                <div class="col-xs-7 value">
                     {% for group in pkg.groups %}
                         <div class="group-img-container">
                             <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
@@ -43,10 +43,10 @@
 
         {% if pkg.tags|length > 0 %}
             <div class="row">
-                <div class="col-xs-4 title">
+                <div class="col-xs-5 title">
                     Tags
                 </div>
-                <div class="col-xs-8 value">
+                <div class="col-xs-7 value">
                     {% for tag in pkg.tags %}
                         <p class="pkg-tag">
                             <a href="{{ h.add_url_param(new_params={'tags': tag.name}, alternative_url=dataset_url) }}">
@@ -59,38 +59,38 @@
         {% endif %}
 
         <div class="row">
-            <div class="col-xs-4 title">
+            <div class="col-xs-5 title">
                 Fecha de publicación
             </div>
-            <div class="col-xs-8 value">
+            <div class="col-xs-7 value">
                 {{ h.render_datetime(pkg.metadata_created) }}
             </div>
         </div>
 
         <div class="row">
-            <div class="col-xs-4 title">
+            <div class="col-xs-5 title">
                 Fecha de actualización
             </div>
-            <div class="col-xs-8 value">
+            <div class="col-xs-7 value">
                 {{ h.render_datetime(pkg.metadata_modified) }}
             </div>
         </div>
 
         <div class="row">
-            <div class="col-xs-4 title">
+            <div class="col-xs-5 title">
                 Licencia
             </div>
-            <div class="col-xs-8 value">
+            <div class="col-xs-7 value">
                 {{ pkg.license_title }}
             </div>
         </div>
 
         {% if pkg.url %}
             <div class="row">
-                <div class="col-xs-4 title">
+                <div class="col-xs-5 title">
                     Fuente
                 </div>
-                <div class="col-xs-8 value">
+                <div class="col-xs-7 value">
                     {{ pkg.url|urlize }}
                 </div>
             </div>
@@ -100,10 +100,10 @@
             {% for extra in pkg.extras %}
                 {% if extra.key != 'home_featured' %}
                     <div class="row">
-                        <div class="col-xs-4 title">
+                        <div class="col-xs-5 title">
                             {{ extra.key }}
                         </div>
-                        <div class="col-xs-8 value">
+                        <div class="col-xs-7 value">
                             <p>{{ extra.value|urlize }}</p>
                         </div>
                     </div>

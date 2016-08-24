@@ -2,34 +2,37 @@
   #pkg-title-and-desc {
     h1.pkg-title {
       margin: 50px 0 0 0;
-      color: $dark-blue;
-      font-size: 24px;
+      color: $blue-300;
+      font-size: 25px;
     }
     .edit-button {
       float: right;
+      margin-left: 16px;
     }
     p.pkg-author {
-      color: $light-grey;
-      font-size: 13px;
+      color: $grey-400;
+      font-size: 16px;
       svg {
         width: 1em;
         height: 1em;
         path {
-          fill: $light-grey;
+          fill: $grey-400;
         }
         &:hover path {
-          fill: $dark-blue;
+          fill: $blue-300;
         }
       }
     }
     p.pkg-notes {
       margin-bottom: 50px;
-      font-size: 14px;
+      font-size: 16px;
+      color: $grey-500;
     }
     h2.pkg-resources-title {
-      color: $grey;
-      border-bottom: solid 1px $light-grey;
-      font-size: 17px;
+      color: $grey-500;
+      border-bottom: solid 1px $grey-300;
+      font-size: 20px;
+      font-weight: 400;
     }
     .contact {
       width: 15px;
@@ -38,7 +41,7 @@
   }
   #pkg-resources {
     padding-bottom: 20px;
-    border-bottom: solid 1px $light-grey;
+    border-bottom: solid 1px $grey-300;
     @include breakpoint-md {
       margin-bottom: 50px;
     }
