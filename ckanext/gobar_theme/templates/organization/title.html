@@ -14,7 +14,7 @@
             </div>
             <div id="stats" class="col-xs-12 col-md-4 col-md-offset-2">
                 <div>
-                    <p class="stat organizations">{{ "%03d" % stats.organization_count }}</p>
+                    <p class="stat organizations">{{ "%03d" % h.organizations_with_packages() }}</p>
 
                     <p class="stats-legend">ORGANIZACIONES</p>
                 </div>

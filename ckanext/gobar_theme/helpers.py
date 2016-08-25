@@ -75,3 +75,11 @@ def cut_text(text, limit):
 
 def cut_img_path(url):
     return urlparse(url).path
+
+
+def organizations_with_packages():
+    organizations = logic.get_action('organization_list')({}, {'all_fields': True})
+    organizations_with_at_least_one_package = [
+        organization for organization in organizations if organization['package_count'] > 0
+    ]
+    return len(organizations_with_at_least_one_package)
