@@ -14,30 +14,30 @@
       margin: 0;
       font-size: 16px;
 
-      $border-color: $inactive;
+      $border-color: $grey-150;
       $border-spacing: 5px;
       .organization-list-title {
         padding: 5px;
         margin-bottom: $border-spacing;
-        border-bottom: solid 1px $border-color;
+        border-bottom: solid 2px $border-color;
         font-size: 90%;
-        @include breakpoint-sm {
-          font-size: 100%;
-        }
+        font-size: 18px;
+        color: $grey-400;
         .count-title {
           float: right;
         }
       }
       hr {
         margin: $border-spacing 0;
-        border-color: $border-color;
+        border: none;
+        border-top: solid 2px $border-color;
       }
 
       .organization-branch {
         $hierarchy-space: 50px;
         $border-left-space: 12px;
         $border-top-space: 1em;
-        $border-color: $light-grey;
+        $border-color: $grey-200;
         .organization-branch {
           padding-left: $hierarchy-space;
           position: relative;
@@ -68,15 +68,16 @@
         .organization-name {
           padding: 5px;
           margin: 0;
+          font-size: 18px;
 
           .edit-organization svg {
             width: 1em;
             height: 1em;
             path {
-              fill: $light-grey;
+              fill: $grey-300;
             }
             &:hover path {
-              fill: $grey;
+              fill: $grey-400;
             }
           }
           svg.chevron-right {
@@ -85,14 +86,14 @@
             height: 20px;
             @include transform(scale(2));
             path {
-              fill: $light-blue;
+              fill: $grey-300;
             }
           }
 
           &.top-organization {
-            color: $grey;
+            color: $grey-500;
             font-weight: 500;
-            font-size: 18px;
+            font-size: 20px;
             position: relative;
             padding-right: 2em;
           }
@@ -103,6 +104,7 @@
           top: 0;
           right: 0;
           padding: 5px;
+          color: $grey-500;
         }
       }
 

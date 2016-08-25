@@ -964,16 +964,16 @@ div#background-container {
       .organization-container .organization .organization-list .organization-list-title {
         padding: 5px;
         margin-bottom: 5px;
-        border-bottom: solid 1px #eaeced;
-        font-size: 90%; }
-        @media (min-width: 768px) {
-          .organization-container .organization .organization-list .organization-list-title {
-            font-size: 100%; } }
+        border-bottom: solid 2px #e5e5e5;
+        font-size: 90%;
+        font-size: 18px;
+        color: #767676; }
         .organization-container .organization .organization-list .organization-list-title .count-title {
           float: right; }
       .organization-container .organization .organization-list hr {
         margin: 5px 0;
-        border-color: #eaeced; }
+        border: none;
+        border-top: solid 2px #e5e5e5; }
       .organization-container .organization .organization-list .organization-branch .organization-branch {
         padding-left: 50px;
         position: relative; }
@@ -983,26 +983,27 @@ div#background-container {
           top: 1em;
           left: 12px;
           width: 38px;
-          border-bottom: dashed 1px #D1D3D4; }
+          border-bottom: dashed 1px #cccccc; }
         .organization-container .organization .organization-list .organization-branch .organization-branch:after {
           content: '';
           position: absolute;
           left: 12px;
           top: 0;
           height: 100%;
-          border-left: dashed 1px #D1D3D4; }
+          border-left: dashed 1px #cccccc; }
         .organization-container .organization .organization-list .organization-branch .organization-branch:last-child:after {
           height: 1em; }
       .organization-container .organization .organization-list .organization-branch .organization-name {
         padding: 5px;
-        margin: 0; }
+        margin: 0;
+        font-size: 18px; }
         .organization-container .organization .organization-list .organization-branch .organization-name .edit-organization svg {
           width: 1em;
           height: 1em; }
           .organization-container .organization .organization-list .organization-branch .organization-name .edit-organization svg path {
-            fill: #D1D3D4; }
+            fill: #999999; }
           .organization-container .organization .organization-list .organization-branch .organization-name .edit-organization svg:hover path {
-            fill: #58595B; }
+            fill: #767676; }
         .organization-container .organization .organization-list .organization-branch .organization-name svg.chevron-right {
           vertical-align: middle;
           width: 20px;
@@ -1013,11 +1014,11 @@ div#background-container {
           -o-transform: scale(2);
           transform: scale(2); }
           .organization-container .organization .organization-list .organization-branch .organization-name svg.chevron-right path {
-            fill: #C7EAFB; }
+            fill: #999999; }
         .organization-container .organization .organization-list .organization-branch .organization-name.top-organization {
-          color: #58595B;
+          color: #424242;
           font-weight: 500;
-          font-size: 18px;
+          font-size: 20px;
           position: relative;
           padding-right: 2em; }
       .organization-container .organization .organization-list .organization-branch .organization-count {
@@ -1025,7 +1026,8 @@ div#background-container {
         position: absolute;
         top: 0;
         right: 0;
-        padding: 5px; }
+        padding: 5px;
+        color: #424242; }
       .organization-container .organization .organization-list .top-organization ~ .organization-branch {
         padding-right: 2em; }
 
