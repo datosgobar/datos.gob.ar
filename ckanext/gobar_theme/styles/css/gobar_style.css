@@ -1913,6 +1913,7 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   .resource-container .resource {
+    color: #999999;
     padding: 30px 50px;
     color: #58595B;
     font-size: 16px;
@@ -1943,30 +1944,38 @@ div#background-container {
       .resource-container .resource .title h1 {
         color: #0072bc;
         margin: 20px 0 0 0;
-        font-size: 24px; }
+        font-size: 26px; }
       .resource-container .resource .title p {
-        font-size: 14px; }
-      .resource-container .resource .title svg {
-        width: 50px;
+        font-size: 18px; }
+      .resource-container .resource .title button {
+        background: #0072bc;
+        border: none;
+        -o-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        color: white;
+        padding: 4px 8px;
+        font-weight: 400;
         position: absolute;
         top: 20px;
-        right: 0;
-        fill: #D1D3D4; }
-        .resource-container .resource .title svg:hover {
-          fill: #0072bc; }
+        right: 0; }
+        .resource-container .resource .title button:hover {
+          background: #1e90da; }
     .resource-container .resource .resource-alternative-packages {
       padding-left: 0;
       padding-right: 0;
-      border-bottom: solid 1px #D1D3D4;
+      border-bottom: solid 1px #999999;
       padding-bottom: 20px; }
       @media (min-width: 992px) {
         .resource-container .resource .resource-alternative-packages {
           padding-left: 15px;
           padding-right: 15px; } }
       .resource-container .resource .resource-alternative-packages h2 {
-        font-size: 17px;
-        border-bottom: solid 1px #D1D3D4;
-        margin-bottom: 0; }
+        color: #424242;
+        border-bottom: solid 1px #999999;
+        font-size: 20px;
+        font-weight: 400; }
     .resource-container .resource .resource-additional-info {
       padding-left: 0;
       padding-right: 0; }
@@ -1975,22 +1984,24 @@ div#background-container {
           padding-left: 15px;
           padding-right: 15px; } }
       .resource-container .resource .resource-additional-info h2 {
-        font-size: 17px;
-        border-bottom: solid 1px #D1D3D4;
+        font-size: 19px;
+        font-weight: 400;
+        border-bottom: solid 1px #999999;
         color: #0072bc;
         margin-bottom: 0; }
       .resource-container .resource .resource-additional-info .resource-additional {
         padding: 15px 5px;
-        font-size: 14px;
-        border-bottom: solid 1px #eaeced; }
+        font-size: 16px;
+        border-bottom: solid 1px #999999; }
         .resource-container .resource .resource-additional-info .resource-additional:last-child {
-          border-bottom: solid 1px #D1D3D4; }
+          border-bottom: solid 1px #999999; }
         .resource-container .resource .resource-additional-info .resource-additional .key {
           padding: 0;
           font-weight: 500; }
         .resource-container .resource .resource-additional-info .resource-additional .value {
           padding: 0; }
           .resource-container .resource .resource-additional-info .resource-additional .value span.label {
+            font-size: 14px;
             background-color: #0072BC; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=html], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=html] {
               background-color: #8E24AA; }

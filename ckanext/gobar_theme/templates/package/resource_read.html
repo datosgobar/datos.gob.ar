@@ -20,9 +20,7 @@
         <div class="restricted-max-width">
             <div class="resource col-xs-12 col-md-10 col-md-offset-1">
                 <div class="col-xs-12 back-to-pkg">
-                    <a href="{{ h.url_for(controller='package', action='read', id=pkg.name) }}" class="back-link">
-                        <i class="icon-chevron-left"></i> Volver
-                    </a>
+                    <a href="{{ h.url_for(controller='package', action='search') }}">Datos Argentina</a> / <a href="{{ h.url_for(controller='package', action='read', id=pkg.name) }}">Dataset</a> / Recurso
 
                     {% set can_edit = h.check_access('package_update', {'id':pkg.id }) %}
 
@@ -35,7 +33,7 @@
 
                     <p>{{ res.description }}</p>
                     <a href="{{ res.url }}">
-                        {% snippet "svg/descargar.svg" %}
+                        <button>DESCARGAR</button>
                     </a>
                 </div>
                 <div class="data-preview hidden-xs hidden-sm col-md-12">

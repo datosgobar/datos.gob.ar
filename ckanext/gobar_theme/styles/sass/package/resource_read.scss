@@ -1,6 +1,7 @@
 .resource-container {
   @include base-container();
   .resource {
+    color: $grey-300;
     @include base-content();
     padding-bottom: 50px;
     padding-left: 15px;
@@ -28,21 +29,25 @@
       padding-left: 0;
       padding-right: $download-size + 10px;
       h1 {
-        color: $dark-blue;
+        color: $blue-300;
         margin: $top-space 0 0 0;
-        font-size: 24px;
+        font-size: 26px;
       }
       p {
-        font-size: 14px;
+        font-size: 18px;
       }
-      svg {
-        width: $download-size;
+      button {
+        background: $blue-300;
+        border: none;
+        @include border-radius(4px);
+        color: white;
+        padding: 4px 8px;
+        font-weight: 400;
         position: absolute;
         top: $top-space;
         right: 0;
-        fill: $light-grey;
         &:hover {
-          fill: $dark-blue;
+          background: $blue-200;
         }
       }
     }
@@ -54,13 +59,14 @@
         padding-left: 15px;
         padding-right: 15px;
       }
-      border-bottom: solid 1px $light-grey;
+      border-bottom: solid 1px $grey-300;
       padding-bottom: 20px;
 
       h2 {
-        font-size: 17px;
-        border-bottom: solid 1px $light-grey;
-        margin-bottom: 0;
+        color: $grey-500;
+        border-bottom: solid 1px $grey-300;
+        font-size: 20px;
+        font-weight: 400;
       }
     }
 
@@ -72,17 +78,18 @@
         padding-right: 15px;
       }
       h2 {
-        font-size: 17px;
-        border-bottom: solid 1px $light-grey;
-        color: $dark-blue;
+        font-size: 19px;
+        font-weight: 400;
+        border-bottom: solid 1px $grey-300;
+        color: $blue-300;
         margin-bottom: 0;
       }
       .resource-additional {
         padding: 15px 5px;
-        font-size: 14px;
-        border-bottom: solid 1px $inactive;
+        font-size: 16px;
+        border-bottom: solid 1px $grey-300;
         &:last-child {
-          border-bottom: solid 1px $light-grey;
+          border-bottom: solid 1px $grey-300;
         }
         .key {
           padding: 0;
@@ -91,6 +98,7 @@
         .value {
           padding: 0;
           span.label {
+            font-size: 14px;
             @include labelsFormatColors();
           }
         }
