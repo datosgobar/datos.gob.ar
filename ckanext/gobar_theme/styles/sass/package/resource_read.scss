@@ -1,6 +1,9 @@
 .resource-container {
   @include base-container();
+  height: 100%;
+  display: table-row;
   .resource {
+    height: 100%;
     color: $grey-300;
     @include base-content();
     padding-bottom: 50px;

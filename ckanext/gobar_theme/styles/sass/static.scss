@@ -1,6 +1,9 @@
 .gobar-static-container {
+  display: table-row;
+  height: 100%;
   @include base-container();
   .gobar-static {
+    height: 100%;
     @include base-content();
     padding: 20px 0;
     @include breakpoint-md {

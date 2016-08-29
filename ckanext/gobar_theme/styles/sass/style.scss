@@ -5,11 +5,16 @@
 @import 'fonts';
 @import 'utils/colors';
 
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
 body {
   background: #fff;
   font-family: 'Roboto', sans-serif !important;
   font-weight: 400;
-  padding: 0;
 }
 
 a, a:hover {
@@ -38,6 +43,7 @@ div.svg-tooltip {
 .restricted-max-width {
   max-width: 1440px;
   margin: auto;
+  height: 100%;
 }
 
 @import 'utils/selective_bourbon';

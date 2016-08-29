@@ -1,12 +1,25 @@
-$header-height: 60px;
+$header-height: 72px;
+
+@include breakpoint-sm {
+  body {
+    padding-top: $header-height
+  }
+}
+
 
 #header {
   background: white;
   padding: 0;
   @include box-shadow(0 0 12px 0 rgba(0, 0, 0, 0.5));
   position: relative;
-  z-index: 2;
   white-space: nowrap;
+  z-index: 4;
+
+  @include breakpoint-sm {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
 
   #header-spacing {
     $padding: 20px;

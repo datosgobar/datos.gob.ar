@@ -15,17 +15,19 @@
     <!-- End Google Tag Manager -->
 
 
-    {%- block header %}
-        {% include "header.html" %}
-    {% endblock -%}
+    <div class="footer-down">
+        {%- block header %}
+            {% include "header.html" %}
+        {% endblock -%}
 
-    {%- block content %}
-    {% endblock -%}
+        {%- block content %}
+        {% endblock -%}
 
 
-    {%- block footer %}
-        {% include "footer.html" %}
-    {% endblock -%}
+        {%- block footer %}
+            {% include "footer.html" %}
+        {% endblock -%}
+    </div>
 {%- endblock -%}
 
 {%- block scripts %}

@@ -16,11 +16,15 @@
   src: url("/font/Roboto-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("/font/Roboto-Medium-webfont.woff") format("woff"), url("/font/Roboto-Medium-webfont.ttf") format("truetype"), url("/font/Roboto-Medium-webfont.svg#RobotoMedium") format("svg");
   font-weight: 500;
   font-style: normal; }
+html, body {
+  padding: 0;
+  margin: 0;
+  height: 100%; }
+
 body {
   background: #fff;
   font-family: 'Roboto', sans-serif !important;
-  font-weight: 400;
-  padding: 0; }
+  font-weight: 400; }
 
 a, a:hover {
   text-decoration: none !important; }
@@ -42,8 +46,12 @@ div.svg-tooltip {
 
 .restricted-max-width {
   max-width: 1440px;
-  margin: auto; }
+  margin: auto;
+  height: 100%; }
 
+@media (min-width: 768px) {
+  body {
+    padding-top: 72px; } }
 #header {
   background: white;
   padding: 0;
@@ -52,15 +60,20 @@ div.svg-tooltip {
   -webkit-box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
   position: relative;
-  z-index: 2;
-  white-space: nowrap; }
+  white-space: nowrap;
+  z-index: 4; }
+  @media (min-width: 768px) {
+    #header {
+      position: fixed;
+      top: 0;
+      width: 100%; } }
   #header #header-spacing {
     padding: 0 20px;
     text-align: center; }
     #header #header-spacing .logo-header, #header #header-spacing .header-links {
-      height: 60px;
+      height: 72px;
       font-size: 18px;
-      line-height: 3.33333; }
+      line-height: 4; }
     #header #header-spacing .header-links {
       overflow: hidden; }
       #header #header-spacing .header-links a {
@@ -85,9 +98,22 @@ div.svg-tooltip {
       width: 300px;
       max-width: 100%; }
 
+.footer-down {
+  position: relative;
+  padding-bottom: 230px;
+  min-height: 100%;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  height: 100%; }
+
 #footer {
   padding: 0;
-  position: relative;
+  position: absolute;
+  background: white;
+  bottom: 0;
+  height: 230px;
+  width: 100%;
   z-index: 10;
   -o-box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5);
   -moz-box-shadow: 0 -2px 4px 0 rgba(220, 220, 220, 0.5);
@@ -362,6 +388,8 @@ div#background-container {
         animation-name: rotateCounterClockwise; }
 
 .gobar-static-container {
+  display: table-row;
+  height: 100%;
   padding-right: 0;
   padding-left: 0; }
   @media (min-width: 992px) {
@@ -369,6 +397,7 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   .gobar-static-container .gobar-static {
+    height: 100%;
     padding: 30px 50px;
     color: #58595B;
     font-size: 16px;
@@ -802,6 +831,11 @@ div#background-container {
         display: table-cell;
         width: 25%; }
 
+.home {
+  background: #f5f5f5;
+  height: 100%;
+  display: table-row; }
+
 #login-container {
   padding-right: 0;
   padding-left: 0; }
@@ -937,6 +971,8 @@ div#background-container {
         box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
 
 .organization-container {
+  display: table-row;
+  height: 100%;
   padding-right: 0;
   padding-left: 0; }
   @media (min-width: 992px) {
@@ -944,6 +980,7 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   .organization-container .organization {
+    height: 100%;
     padding: 30px 50px;
     color: #58595B;
     font-size: 16px;
@@ -1156,6 +1193,7 @@ div#background-container {
       display: none; }
 
 .package-container {
+  height: 100%;
   padding-right: 0;
   padding-left: 0; }
   @media (min-width: 992px) {
@@ -1163,6 +1201,7 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   .package-container .package-search {
+    height: 100%;
     padding: 30px 50px;
     color: #58595B;
     font-size: 16px;
@@ -1563,6 +1602,8 @@ div#background-container {
       margin: 0; }
 
 .package-container {
+  height: 100%;
+  display: table-row;
   padding-right: 0;
   padding-left: 0; }
   @media (min-width: 992px) {
@@ -1570,6 +1611,7 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   .package-container .package {
+    height: 100%;
     padding: 30px 50px;
     color: #58595B;
     font-size: 16px;
@@ -1909,12 +1951,15 @@ div#background-container {
 
 .resource-container {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  height: 100%;
+  display: table-row; }
   @media (min-width: 992px) {
     .resource-container {
       padding-right: 15px;
       padding-left: 15px; } }
   .resource-container .resource {
+    height: 100%;
     color: #999999;
     padding: 30px 50px;
     color: #58595B;

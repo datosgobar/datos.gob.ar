@@ -1,6 +1,9 @@
 .package-container {
+  height: 100%;
+  display: table-row;
   @include base-container();
   .package {
+    height: 100%;
     @include base-content();
     padding: 0;
     .row {

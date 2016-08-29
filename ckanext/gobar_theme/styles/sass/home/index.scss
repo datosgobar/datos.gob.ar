@@ -2,3 +2,9 @@
 @import 'featured_groups';
 @import 'create_buttons';
 @import 'featured_content';
+
+.home {
+  background: $grey-100;
+  height: 100%;
+  display: table-row;
+}

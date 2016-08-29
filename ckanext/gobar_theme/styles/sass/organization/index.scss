@@ -1,6 +1,9 @@
 .organization-container {
+  display: table-row;
+  height: 100%;
   @include base-container();
   .organization {
+    height: 100%;
     @include base-content();
     padding: 30px 20px;
 
