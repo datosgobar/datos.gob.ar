@@ -20,8 +20,8 @@
       font-size: 25px;
     }
     h3 {
-      color: $dark-blue;
-      font-size: 20px;
+      color: $blue-300;
+      font-size: 25px;
     }
     strong {
       font-weight: 500;
@@ -40,7 +40,7 @@
 }
 
 #static-nav-bar {
-  background-color: #f5f5f5;
+  background-color: $grey-100;
   position: relative;
   z-index: 1;
   text-align: center;
@@ -53,10 +53,11 @@
     display: inline-block;
     a.nav-button {
       display: inline-block;
-      color: $grey;
+      color: $grey-400;
       padding: $vertical-padding 0 ($vertical-padding - $border-bottom) 0;
       border-bottom: solid $border-bottom transparent;
       font-weight: 500;
+      font-size: 15px;
       .nav-button-border {
         padding: 0 6px;
         @include breakpoint-sm {
@@ -66,21 +67,21 @@
       @include breakpoint-sm {
         &#nav-legal-link, &#nav-plaform-link {
           .nav-button-border {
-            border-left: solid 1px $light-grey;
+            border-left: solid 1px $grey-300;
           }
         }
       }
 
       &:hover {
-        color: $dark-blue;
-        border-bottom-color: $dark-blue;
+        color: $blue-300;
+        border-bottom-color: $blue-300;
       }
     }
 
     &:hover, &.active {
       a.nav-button {
-        color: $dark-blue;
-        border-bottom-color: $dark-blue;
+        color: $blue-300;
+        border-bottom-color: $blue-300;
       }
     }
   }

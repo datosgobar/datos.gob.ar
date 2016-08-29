@@ -420,7 +420,7 @@ div#background-container {
       font-size: 25px; }
     .gobar-static-container .gobar-static h3 {
       color: #0072bc;
-      font-size: 20px; }
+      font-size: 25px; }
     .gobar-static-container .gobar-static strong {
       font-weight: 500; }
     .gobar-static-container .gobar-static p {
@@ -439,10 +439,11 @@ div#background-container {
     display: inline-block; }
     #static-nav-bar .nav-section a.nav-button {
       display: inline-block;
-      color: #58595B;
+      color: #767676;
       padding: 10px 0 7px 0;
       border-bottom: solid 3px transparent;
-      font-weight: 500; }
+      font-weight: 500;
+      font-size: 15px; }
       #static-nav-bar .nav-section a.nav-button .nav-button-border {
         padding: 0 6px; }
         @media (min-width: 768px) {
@@ -450,7 +451,7 @@ div#background-container {
             padding: 0 20px; } }
       @media (min-width: 768px) {
         #static-nav-bar .nav-section a.nav-button#nav-legal-link .nav-button-border, #static-nav-bar .nav-section a.nav-button#nav-plaform-link .nav-button-border {
-          border-left: solid 1px #D1D3D4; } }
+          border-left: solid 1px #999999; } }
       #static-nav-bar .nav-section a.nav-button:hover {
         color: #0072bc;
         border-bottom-color: #0072bc; }
