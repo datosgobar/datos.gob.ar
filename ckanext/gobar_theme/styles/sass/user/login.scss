@@ -1,6 +1,9 @@
 #login-container {
+  height: 100%;
   @include base-container();
+  display: table-row;
   #login {
+    height: 100%;
     @include base-content();
     @include base-form();
     form {

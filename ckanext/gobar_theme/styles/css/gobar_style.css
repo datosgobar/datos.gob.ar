@@ -838,13 +838,16 @@ div#background-container {
   display: table-row; }
 
 #login-container {
+  height: 100%;
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  display: table-row; }
   @media (min-width: 992px) {
     #login-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #login-container #login {
+    height: 100%;
     padding: 30px 50px;
     color: #58595B;
     font-size: 16px; }
