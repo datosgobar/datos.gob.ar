@@ -13,7 +13,7 @@
                         {% for featured_pkg in featured_row %}
                             <a href="{{ h.url_for(controller='package', action='read', id=featured_pkg.name) }}">
                                 <div class="featured-card">
-                                    <h3>{{ h.cut_text(featured_pkg.author, 150) }}</h3>
+                                    <h3>{{ h.cut_text(h.get_pkg_extra(featured_pkg, 'Responsable') or featured_pkg.author, 150) }}</h3>
                                     <h1>{{ featured_pkg.title or featured_pkg.name }}</h1>
                                     <p>{{ h.cut_text(featured_pkg.notes, 160)|urlize }}</p>
                                 </div>

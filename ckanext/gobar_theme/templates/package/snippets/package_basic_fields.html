@@ -7,6 +7,8 @@
 
     {{ form.input('home_featured', label='Mostrar tarjeta en la home', type='checkbox') }}
 
+    {{ form.input('Responsable', label='Autor (nombre corto para tarjeta en la home)', type='text') }}
+
     {% resource 'gobar_js/package/form_actions.js' %}
 
 {% endblock %}

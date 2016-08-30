@@ -98,7 +98,7 @@
 
         {% if pkg.extras %}
             {% for extra in pkg.extras %}
-                {% if extra.key != 'home_featured' %}
+                {% if extra.key != 'home_featured' and extra.key != 'Responsable' %}
                     <div class="row">
                         <div class="col-xs-5 title">
                             {{ extra.key }}
