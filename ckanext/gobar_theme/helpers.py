@@ -83,3 +83,11 @@ def organizations_with_packages():
         organization for organization in organizations if organization['package_count'] > 0
     ]
     return len(organizations_with_at_least_one_package)
+
+
+def get_pkg_extra(pkg, keyname):
+    if pkg['extras']:
+        for extra in pkg['extras']:
+            if extra['key'] == keyname:
+                return extra['value']
+    return None

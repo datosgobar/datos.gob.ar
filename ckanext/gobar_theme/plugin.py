@@ -29,5 +29,6 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
             'join_groups': gobar_helpers.join_groups,
             'cut_text': gobar_helpers.cut_text,
             'cut_img_path': gobar_helpers.cut_img_path,
-            'organizations_with_packages': gobar_helpers.organizations_with_packages
+            'organizations_with_packages': gobar_helpers.organizations_with_packages,
+            'get_pkg_extra': gobar_helpers.get_pkg_extra
         }
