@@ -53,10 +53,10 @@ div#background-container {
       @include animation-iteration-count(infinite);
       @include animation-timing-function(linear);
 
-      $super-slow-speed: 606s;
-      $slow-speed: 300s;
-      $medium-speed: 140s;
-      $fast-speed: 60s;
+      $super-slow-speed: 206s;
+      $slow-speed: 100s;
+      $medium-speed: 50s;
+      $fast-speed: 20s;
 
       &#uno {
         opacity: 0.2;
