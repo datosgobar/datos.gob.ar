@@ -86,7 +86,7 @@
 
                 {% if has_more_resources %}
                     <div class="resource-alternative-packages col-xs-12 col-md-8">
-                        <h2>Recursos alternativos</h2>
+                        <h2>RECURSOS ALTERNATIVOS</h2>
                         {% for resource in pkg.resources %}
                             {% if resource.id != res.id %}
                                 {% snippet "package/snippets/dataset_resource_item.html", pkg=pkg, resource=resource %}

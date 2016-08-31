@@ -41,9 +41,11 @@ $header-height: 72px;
         font-size: 90%;
         display: inline-block;
         height: 100%;
-        &:hover {
-          background: $blue-300;
-          color: white;
+        @include breakpoint-sm {
+          &:hover {
+            background: $blue-300;
+            color: white;
+          }
         }
       }
       @include breakpoint-sm {

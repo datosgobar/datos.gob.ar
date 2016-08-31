@@ -82,9 +82,10 @@ div.svg-tooltip {
         font-size: 90%;
         display: inline-block;
         height: 100%; }
-        #header #header-spacing .header-links a:hover {
-          background: #0072bc;
-          color: white; }
+        @media (min-width: 768px) {
+          #header #header-spacing .header-links a:hover {
+            background: #0072bc;
+            color: white; } }
       @media (min-width: 768px) {
         #header #header-spacing .header-links {
           text-align: right; }
@@ -420,11 +421,13 @@ div#background-container {
       font-size: 25px; }
     .gobar-static-container .gobar-static h3 {
       color: #0072bc;
-      font-size: 25px; }
+      font-size: 25px;
+      margin-top: 30px;
+      margin-bottom: 15px; }
     .gobar-static-container .gobar-static strong {
       font-weight: 500; }
     .gobar-static-container .gobar-static p {
-      font-size: 14px; }
+      font-size: 16px; }
     .gobar-static-container .gobar-static ul li {
       font-size: 14px;
       margin-bottom: 5px; }
@@ -1295,7 +1298,7 @@ div#background-container {
         height: 100%; }
         #search-results .search-and-order .searcher button .search-icon {
           width: 20px;
-          height: 100%;
+          height: 30px;
           padding: 4px 0; }
       #search-results .search-and-order .searcher .menu-button {
         position: absolute;
@@ -1991,7 +1994,8 @@ div#background-container {
         float: right; }
     .resource-container .resource .title {
       padding-left: 0;
-      padding-right: 60px; }
+      padding-right: 120px;
+      margin-bottom: 15px; }
       .resource-container .resource .title h1 {
         color: #0072bc;
         margin: 20px 0 0 0;
@@ -2009,8 +2013,9 @@ div#background-container {
         padding: 4px 8px;
         font-weight: 400;
         position: absolute;
-        top: 20px;
-        right: 0; }
+        top: 50%;
+        right: 0;
+        margin-top: -15px; }
         .resource-container .resource .title button:hover {
           background: #1e90da; }
     .resource-container .resource .resource-alternative-packages {
@@ -2035,6 +2040,7 @@ div#background-container {
           padding-left: 15px;
           padding-right: 15px; } }
       .resource-container .resource .resource-additional-info h2 {
+        padding-top: 2px;
         font-size: 19px;
         font-weight: 400;
         border-bottom: solid 1px #999999;
@@ -2160,7 +2166,7 @@ div#background-container {
     display: table;
     clear: both; }
   .pkg-container .package-info {
-    padding: 0 160px 0 55px; }
+    padding: 0 160px 0 62px; }
     .pkg-container .package-info h3 {
       color: #767676;
       margin: 0 0 6px 0;

@@ -30,7 +30,8 @@
       $top-space: 20px;
       $download-size: 50px;
       padding-left: 0;
-      padding-right: $download-size + 10px;
+      padding-right: $download-size + 70px;
+      margin-bottom: 15px;
       h1 {
         color: $blue-300;
         margin: $top-space 0 0 0;
@@ -47,8 +48,9 @@
         padding: 4px 8px;
         font-weight: 400;
         position: absolute;
-        top: $top-space;
+        top: 50%;
         right: 0;
+        margin-top: -15px;
         &:hover {
           background: $blue-200;
         }
@@ -81,6 +83,7 @@
         padding-right: 15px;
       }
       h2 {
+        padding-top: 2px;
         font-size: 19px;
         font-weight: 400;
         border-bottom: solid 1px $grey-300;
