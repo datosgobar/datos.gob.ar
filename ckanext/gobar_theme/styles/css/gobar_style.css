@@ -464,7 +464,8 @@ div#background-container {
 
 #error {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  height: 100%; }
   @media (min-width: 992px) {
     #error {
       padding-right: 15px;
@@ -473,7 +474,8 @@ div#background-container {
     padding: 30px 50px;
     color: #58595B;
     font-size: 16px;
-    text-align: center; }
+    text-align: center;
+    height: 100%; }
     @media (min-width: 992px) {
       #error #error-text {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
