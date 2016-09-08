@@ -1,6 +1,6 @@
-{% with items = h.get_facet_items_dict(name) %}
+{% with items = h.organization_filters() %}
     <div class="search-filter invisible">
-        <h2 class="filter-title">{{ title }}</h2>
+        <h2 class="filter-title">Organizaciones</h2>
         {% if items %}
             <ul class="filter-values">
                 {% for item in items %}
@@ -15,19 +15,17 @@
                 {% endfor %}
             </ul>
 
-            {% if h.get_param_int('_%s_limit' % name) %}
-                {% if h.has_more_facets(name) %}
-                    <a href="{{ h.remove_url_param('_%s_limit' % name, replace=0, extras=extras, alternative_url=alternative_url) }}"
-                       class="filter-show-more">
-                        <p>
-                            {{ h.snippet('svg/flecha_abajo.svg') }}
-                            Mostrar mas
-                            {{ h.snippet('svg/flecha_abajo.svg') }}
-                        </p>
-                    </a>
-                {% endif %}
+            {% if h.get_param_int('_organization_limit') %}
+                <a href="{{ h.remove_url_param('_organization_limit', replace=0, extras=extras, alternative_url=alternative_url) }}"
+                   class="filter-show-more">
+                    <p>
+                        {{ h.snippet('svg/flecha_abajo.svg') }}
+                        Mostrar mas
+                        {{ h.snippet('svg/flecha_abajo.svg') }}
+                    </p>
+                </a>
             {% else %}
-                <a href="{{ h.remove_url_param('_%s_limit' % name, extras=extras, alternative_url=alternative_url) }}"
+                <a href="{{ h.remove_url_param('_organization_limit', extras=extras, alternative_url=alternative_url) }}"
                    class="filter-show-less">
                     <p>
                         {{ h.snippet('svg/flecha_arriba.svg') }}
