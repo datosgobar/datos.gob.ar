@@ -1477,7 +1477,7 @@ div#background-container {
         .filters-container .search-filter .group-images .group-image-container.active svg path {
           fill: #0072bc; }
         .filters-container .search-filter .group-images .group-image-container.active:hover svg path {
-          fill: #999999; }
+          fill: #1e90da; }
         .filters-container .search-filter .group-images .group-image-container .svg-tooltip {
           position: absolute;
           display: inline-block;
