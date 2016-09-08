@@ -1,6 +1,5 @@
 from ckan.controllers.home import HomeController
 from ckan.controllers.api import ApiController
-from ckan.controllers.package import PackageController
 from ckan.common import c
 import ckan.logic as logic
 import ckan.model as model
@@ -82,9 +81,3 @@ class GobArApiController(ApiController):
         if logic_function == 'datastore_search':
             default_response = self._remove_extra_id_field(default_response)
         return default_response
-
-
-class GobArPackageController(PackageController):
-
-    def search(self):
-        return super(GobArPackageController, self).search()
