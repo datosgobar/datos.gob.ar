@@ -119,9 +119,10 @@ def organization_filters():
         top_parent_name = ancestors_relations[organization['name']]
         if top_parent_name in top_organizations:
             top_organizations[top_parent_name]['count'] += organization['count']
-        if organization['active']:
-            top_organizations[top_parent_name]['active'] = True
+    if ckan_helpers.get_request_param('organization') in top_organizations:
+        top_organizations[ckan_helpers.get_request_param('organization')]['active'] = True
 
     top_organizations_with_results = [organization for organization in top_organizations.values() if organization['count'] > 0]
     # TODO cortar en los 10 mas importantes a menos que se pidan todos
+    # TODO modificar links en seccion de organizaciones
     return top_organizations_with_results
