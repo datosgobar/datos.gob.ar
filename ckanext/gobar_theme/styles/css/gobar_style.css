@@ -1062,7 +1062,6 @@ div#background-container {
           .organization-container .organization .organization-list .organization-branch .organization-name svg.chevron-right path {
             fill: #999999; }
         .organization-container .organization .organization-list .organization-branch .organization-name.top-organization {
-          color: #424242;
           font-weight: 500;
           font-size: 20px;
           position: relative;

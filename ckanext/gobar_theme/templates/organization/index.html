@@ -35,6 +35,10 @@
 
                         {% set top_organization = organization.depth == 0 %}
 
+                        {% if top_organization and organization.display_count > 0 %}
+                            <a href="{{ h.add_url_param(new_params={'organization': organization.name}, alternative_url=dataset_url) }}">
+                        {% endif %}
+
                         <div class="organization-branch">
 
 
@@ -44,9 +48,7 @@
                                 {%- endif -%}
 
                                 {%- if organization.package_count > 0 -%}
-                                    <a href="{{ h.add_url_param(new_params={'organization': organization.name}, alternative_url=dataset_url) }}">
                                         {{ organization.display_name }} ({{ organization.package_count }})
-                                    </a>
                                 {%- else -%}
                                     {{ organization.display_name }}
                                 {%- endif -%}
@@ -59,9 +61,11 @@
                                     </a>
                                 {%- endif -%}
 
-                                <span class="organization-count">
-                                    {{ organization.display_count }}
-                                </span>
+                                {%- if top_organization -%}
+                                    <span class="organization-count">
+                                        {{ organization.display_count }}
+                                    </span>
+                                {%- endif -%}
 
                             </div>
 
@@ -69,6 +73,10 @@
                                 {{ loop(organization.children) }}
                             {% endif %}
                         </div>
+
+                        {% if top_organization and organization.display_count > 0 %}
+                            </a>
+                        {% endif %}
 
                         {% if top_organization %}
                             <hr>
