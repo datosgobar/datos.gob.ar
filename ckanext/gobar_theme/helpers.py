@@ -124,5 +124,4 @@ def organization_filters():
 
     top_organizations_with_results = [organization for organization in top_organizations.values() if organization['count'] > 0]
     # TODO cortar en los 10 mas importantes a menos que se pidan todos
-    # TODO modificar links en seccion de organizaciones
     return top_organizations_with_results
