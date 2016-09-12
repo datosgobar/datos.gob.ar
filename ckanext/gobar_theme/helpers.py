@@ -1,6 +1,7 @@
 import ckan.logic as logic
 import ckan.lib.helpers as ckan_helpers
 from urlparse import urlparse
+from ckan.common import request, c, g
 
 
 def _get_organizations_objs(organizations_branch, depth=0):
@@ -123,5 +124,16 @@ def organization_filters():
         top_organizations[ckan_helpers.get_request_param('organization')]['active'] = True
 
     top_organizations_with_results = [organization for organization in top_organizations.values() if organization['count'] > 0]
-    # TODO cortar en los 10 mas importantes a menos que se pidan todos
-    return top_organizations_with_results
+    sorted_organizations = sorted(top_organizations_with_results, key=lambda item: item['count'], reverse=True)
+
+    limit = int(request.params.get('_organization_limit', g.facets_default_number))
+    c.search_facets_limits['organization'] = limit
+    if limit is not None and limit > 0:
+        return sorted_organizations[:limit]
+    return sorted_organizations
+
+
+def get_facet_items_dict(facet, limit=None, exclude_active=False):
+    if facet == 'organization':
+        return organization_filters()
+    return ckan_helpers.get_facet_items_dict(facet, limit, exclude_active)

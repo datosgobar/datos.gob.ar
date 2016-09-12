@@ -186,7 +186,7 @@ class GobArPackageController(PackageController):
                 if facet != 'organization':
                     limit = int(request.params.get('_%s_limit' % facet, g.facets_default_number))
                 else:
-                    limit = 0
+                    limit = None
             except ValueError:
                 error_description = _('Parameter "{parameter_name}" is not an integer')
                 error_description = error_description.format(parameter_name='_%s_limit' % facet)
