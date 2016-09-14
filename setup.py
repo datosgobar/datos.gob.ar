@@ -21,7 +21,7 @@ setup(
     long_description=long_description,
 
     # The project's main homepage.
-    url='https://github.com/iheredia/ckanext-gobar_theme',
+    url='https://github.com/gobabiertoAR/datos.gob.ar',
 
     # Author details
     author='''Ignacio Heredia''',
