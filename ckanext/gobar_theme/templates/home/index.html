@@ -2,7 +2,13 @@
 
 {% block content %}
   <div class="home">
-    {% snippet "home/title.html" %}
+    {% if h.template_config_for('home_title_template') == 1 %}
+        {% snippet "home/title_1.html" %}
+    {% elif h.template_config_for('home_title_template') == 2 %}
+        {% snippet "home/title_2.html" %}
+    {% else %}
+        {% snippet "home/title_3.html" %}
+    {% endif %}
     {% snippet "home/create_buttons.html" %}
     {% snippet "home/groups.html" %}
     {% snippet "home/featured_content.html" %}

@@ -2,6 +2,7 @@ import ckan.logic as logic
 import ckan.lib.helpers as ckan_helpers
 from urlparse import urlparse
 from ckan.common import request, c, g
+import json
 
 
 def _get_organizations_objs(organizations_branch, depth=0):
@@ -137,3 +138,12 @@ def get_facet_items_dict(facet, limit=None, exclude_active=False):
     if facet == 'organization':
         return organization_filters()
     return ckan_helpers.get_facet_items_dict(facet, limit, exclude_active)
+
+
+def template_config_for(name):
+    try:
+        gobar_config = g['gobar']
+    except TypeError:
+        with open('/var/lib/ckan/default/gobar/settings.json') as json_data:
+            g.gobar = gobar_config = json.load(json_data)
+    return gobar_config[name]
