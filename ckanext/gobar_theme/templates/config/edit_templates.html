@@ -1,0 +1,22 @@
+{% extends "gobar_page.html" %}
+{% import 'macros/form.html' as form %}
+
+{% set config = h.template_config() %}
+
+{% block content %}
+    <div id="template-config-container" class="container-fluid">
+      <div class="restricted-max-width">
+        <div id="template-config" class="col-xs-12 col-md-10 col-md-offset-1">
+          <h1>Editar configuracion</h1>
+          <form id="config-edit" class="config-form form-horizontal" method="post" action="" data-module="basic-form">
+              <label><input type="radio" name="title-variant" {{ 'checked' if config['home_title_template'] == 1 else '' }} value="1"> Variante 1</label>
+              <label><input type="radio" name="title-variant" {{ 'checked' if config['home_title_template'] == 2 else '' }} value="2"> Variante 2</label>
+              <label><input type="radio" name="title-variant" {{ 'checked' if config['home_title_template'] == 3 else '' }} value="3"> Variante 3</label>
+            <button class="btn btn-primary" type="submit" name="save">Guardar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+

@@ -2304,4 +2304,113 @@ ul.activity {
   ul.activity li.load-more {
     display: none !important; }
 
+#template-config-container {
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    #template-config-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  #template-config-container #template-config {
+    padding: 30px 50px;
+    color: #58595B;
+    font-size: 16px; }
+    @media (min-width: 992px) {
+      #template-config-container #template-config {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    #template-config-container #template-config h1 {
+      margin: 20px 0;
+      font-weight: 400;
+      font-size: 40px; }
+    #template-config-container #template-config form {
+      padding: 20px 50px;
+      -o-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
+      #template-config-container #template-config form label {
+        display: block;
+        text-align: left;
+        font-weight: 400;
+        padding: 5px 20px 5px 0;
+        font-size: 16px;
+        line-height: 1.2; }
+      #template-config-container #template-config form input[type="text"], #template-config-container #template-config form input[type="password"] {
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 5px;
+        height: 29.2px; }
+      #template-config-container #template-config form input[type="checkbox"] {
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        -o-transform: scale(1.3);
+        transform: scale(1.3); }
+      #template-config-container #template-config form .control-custom .input-prepend {
+        width: 100%;
+        white-space: normal;
+        position: relative; }
+        #template-config-container #template-config form .control-custom .input-prepend label.add-on {
+          display: inline-block;
+          margin: 0;
+          width: 20%;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+        #template-config-container #template-config form .control-custom .input-prepend label.icon-remove {
+          position: absolute;
+          top: 50%;
+          left: initial;
+          right: 0;
+          min-width: 4em;
+          margin: -1em 0 0 0;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+          #template-config-container #template-config form .control-custom .input-prepend label.icon-remove:before, #template-config-container #template-config form .control-custom .input-prepend label.icon-remove:after {
+            content: initial; }
+          #template-config-container #template-config form .control-custom .input-prepend label.icon-remove span {
+            display: inline-block; }
+        #template-config-container #template-config form .control-custom .input-prepend input[type="text"] {
+          display: inline-block;
+          margin: 0;
+          width: 65%;
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+      #template-config-container #template-config form .package-groups input[type="checkbox"].package-group-checkbox {
+        width: 1px;
+        height: 1px;
+        position: fixed;
+        left: -10px;
+        top: -10px; }
+      #template-config-container #template-config form .package-groups label.package-group-label {
+        color: #D1D3D4;
+        margin: 0;
+        padding: 2px 0; }
+        #template-config-container #template-config form .package-groups label.package-group-label:after {
+          content: initial; }
+        #template-config-container #template-config form .package-groups label.package-group-label:hover {
+          color: #0072bc; }
+      #template-config-container #template-config form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
+        color: #0072bc; }
+      #template-config-container #template-config form .control-group {
+        position: relative; }
+        #template-config-container #template-config form .control-group.error .input-prepend .add-on {
+          font-size: 16px;
+          line-height: 1.2;
+          padding: 5px;
+          height: 29.2px; }
+
 /*# sourceMappingURL=gobar_style.css.map */

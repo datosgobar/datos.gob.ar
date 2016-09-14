@@ -10,6 +10,7 @@ class GobArRouter:
         self.home_routes = SubMapper(self.route_map, controller=self.home_controller)
         self.api_controller = 'ckanext.gobar_theme.controller:GobArApiController'
         self.package_controller = 'ckanext.gobar_theme.package_controller:GobArPackageController'
+        self.config_controller = 'ckanext.gobar_theme.config_controller:GobArConfigController'
 
     def redirect(self, *routes):
         for url_from, url_to in routes:
@@ -26,6 +27,7 @@ class GobArRouter:
         self.remove_tags()
         self.remove_revision()
         self.connect_api()
+        self.connect_template_config()
 
     def connect_home(self):
         self.home_routes.connect('/', action='index')
@@ -134,3 +136,8 @@ class GobArRouter:
     def connect_api(self):
         with SubMapper(self.route_map, controller=self.api_controller, path_prefix='/api{ver:/3|}', ver='/3') as m:
             m.connect('/action/{logic_function}', action='action', conditions=dict(method=['GET', 'POST']))
+
+    def connect_template_config(self):
+        with SubMapper(self.route_map, controller=self.config_controller) as m:
+            m.connect('/template_config', action='edit_config')
+

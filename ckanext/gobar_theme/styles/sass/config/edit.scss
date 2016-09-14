@@ -1,0 +1,7 @@
+#template-config-container {
+  @include base-container();
+  #template-config {
+    @include base-content();
+    @include base-form();
+  }
+}

@@ -140,10 +140,13 @@ def get_facet_items_dict(facet, limit=None, exclude_active=False):
     return ckan_helpers.get_facet_items_dict(facet, limit, exclude_active)
 
 
-def template_config_for(name):
+def template_config(name=None):
     try:
         gobar_config = g['gobar']
     except TypeError:
         with open('/var/lib/ckan/default/gobar/settings.json') as json_data:
             g.gobar = gobar_config = json.load(json_data)
-    return gobar_config[name]
+    if name is not None:
+        return gobar_config[name]
+    return gobar_config
+
