@@ -13,7 +13,7 @@
         <label><input type="radio" name="title-variant" {{ 'checked' if config['home_title_template'] == 2 else '' }} value="2"> Variante 2</label>
         <label><input type="radio" name="title-variant" {{ 'checked' if config['home_title_template'] == 3 else '' }} value="3"> Variante 3</label>
         <label>Titulo home <input type="text" value="{{ config['home_title'] }}" name="home_title"></label>
-        <label>Bajada home<textarea name="home_description" value="{{ config['home_description'] }}"></textarea></label>
+        <label>Bajada home<textarea name="home_description">{{ config['home_description'] }}</textarea></label>
         <button class="btn btn-primary" type="submit" name="save">Guardar</button>
 
       </form>

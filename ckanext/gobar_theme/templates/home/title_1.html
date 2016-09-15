@@ -9,7 +9,7 @@
                     <h1>{{ config['home_title'] }}</h1>
                     <p class="description">{{ config['home_description'] }}</p>
                 </div>
-                <div id="searcher" class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-0 col-lg-5 no-padding">
+                <div id="searcher" class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-0 no-padding position-bottom">
                     <form class="module-content search-form" method="get"
                           action="{% url_for controller='package', action='search' %}">
                         <input type="text" class="search" name="q" value="" autocomplete="off"

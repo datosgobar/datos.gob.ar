@@ -2,7 +2,7 @@
 {% set config = h.template_config() %}
 
 <div id="title" class="container-fluid">
-    <div class="background-overlay">
+    <div class="background-overlay no-padding-bottom">
         <div class="restricted-max-width">
             <div class="col-xs-12 col-sm-10 col-sm-offset-1">
                 <div id="title-container" class="col-xs-12 text-center">
@@ -21,17 +21,24 @@
                 </div>
             </div>
         </div>
-        <div class="restricted-max-width">
-            <div id="stats" class="hidden-xs col-sm-12">
-                <div class="col-sm-6">
-                    <p class="stat">{{ "%03d" % stats.dataset_count }}</p>
+        <div class="stats-overlay">
+            <div class="restricted-max-width">
+                <div id="stats" class="hidden-xs col-sm-12 text-center">
+                    <div class="single-stat">
+                        <p class="stat">{{ "%03d" % stats.dataset_count }}</p>
 
-                    <p class="stats-legend datasets">DATASETS</p>
-                </div>
-                <div class="col-sm-6">
-                    <p class="stat organizations">{{ "%03d" % h.organizations_with_packages() }}</p>
+                        <p class="stats-legend datasets">DATASETS</p>
+                    </div>
+                    <div class="single-stat">
+                        <p class="stat organizations">{{ "%03d" % h.organizations_with_packages() }}</p>
 
-                    <p class="stats-legend">ORGANIZACIONES</p>
+                        <p class="stats-legend">ORGANIZACIONES</p>
+                    </div>
+                    <div class="single-stat">
+                        <p class="stat organizations">{{ "%03d" % stats.group_count }}</p>
+
+                        <p class="stats-legend">GRUPOS</p>
+                    </div>
                 </div>
             </div>
         </div>
