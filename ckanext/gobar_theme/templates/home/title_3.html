@@ -1,15 +1,13 @@
 {% set stats = h.get_site_statistics() %}
+{% set config = h.template_config() %}
 
 <div id="title" class="container-fluid">
     <div class="background-overlay">
         <div class="restricted-max-width">
             <div class="col-xs-12 col-sm-10 col-sm-offset-1">
                 <div id="title-container" class="col-xs-12 text-center">
-                    <h1>Datos Argentina 2</h1>
-
-                    <p class="description">Portal de datos abiertos del Gobierno de la República Argentina.
-                        Acá encontrarás información pública, herramientas y recursos para desarrollar aplicaciones y
-                        visualizaciones y crear historias con datos.</p>
+                    <h1>{{ config['home_title'] }}</h1>
+                    <p class="description">{{ config['home_description'] }}</p>
                 </div>
                 <div id="searcher" class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3 col-lg-offset-3 col-lg-6 no-padding">
                     <form class="module-content search-form" method="get"

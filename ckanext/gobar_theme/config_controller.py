@@ -18,7 +18,9 @@ class GobArConfigController(base.BaseController):
 
     def _update_config(self, new_params):
         new_params_dict = {
-            "home_title_template": int(new_params['title-variant'])
+            "home_title_template": int(new_params['title-variant']),
+            "home_title": new_params['home_title'],
+            "home_description": new_params['home_description']
         }
         g.gobar = new_params_dict
         with open('/var/lib/ckan/default/gobar/settings.json', 'w') as json_data:
