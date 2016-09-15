@@ -48,6 +48,11 @@ div.svg-tooltip {
   max-width: 1440px;
   margin: auto;
   height: 100%; }
+  .restricted-max-width:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both; }
 
 @media (min-width: 768px) {
   body {
@@ -536,18 +541,23 @@ div#background-container {
   padding: 0 !important; }
 
 #title {
-  padding: 20px 0;
   color: white;
   position: relative;
   overflow: hidden;
   width: 100%;
   background-color: #00B9F1;
   background-image: -webkit-linear-gradient(left, #00B9F1, #0072bc);
-  background-image: linear-gradient(to right,#00B9F1, #0072bc); }
+  background-image: linear-gradient(to right,#00B9F1, #0072bc);
+  background-size: cover;
+  background-position: center center;
+  padding: 0; }
+  #title .background-overlay {
+    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.5); }
   #title #title-container {
     text-align: center; }
     @media (min-width: 992px) {
-      #title #title-container {
+      #title #title-container.text-left {
         text-align: left; } }
     #title #title-container h1 {
       font-size: 55px;
@@ -566,56 +576,46 @@ div#background-container {
     padding: 0;
     border: none; }
     #title #searcher form input[type="text"] {
-      background: transparent;
+      background: white;
       border: none;
       width: 100%;
-      color: white;
+      color: #424242;
       -o-box-shadow: none;
       -moz-box-shadow: none;
       -webkit-box-shadow: none;
       box-shadow: none;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-      border-bottom: solid 1px white;
-      padding: 6px;
-      padding-right: 2em;
-      font-size: 16px;
+      margin-bottom: 15px;
+      padding: 10px 2em 10px 10px;
+      font-size: 24px;
       line-height: 1.2;
-      height: 25.2px;
-      margin-bottom: 15px; }
-      @media (min-width: 992px) {
-        #title #searcher form input[type="text"] {
-          padding: 10px;
-          padding-right: 2em;
-          font-size: 24px;
-          line-height: 1.2;
-          height: 38.8px; } }
+      height: 38.8px; }
       #title #searcher form input[type="text"]::-webkit-input-placeholder {
-        color: white;
+        color: #999999;
         font-weight: 300; }
       #title #searcher form input[type="text"]::-moz-placeholder {
-        color: white;
+        color: #999999;
         font-weight: 300; }
       #title #searcher form input[type="text"]:-moz-placeholder {
-        color: white;
+        color: #999999;
         font-weight: 300; }
       #title #searcher form input[type="text"]:-ms-input-placeholder {
-        color: white;
+        color: #999999;
         font-weight: 300; }
     #title #searcher form button {
-      background: none;
+      background: #0072bc;
       border: none;
       position: absolute;
       top: 0;
-      right: 0;
-      height: 25.2px; }
+      right: -4px;
+      height: 38.8px;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px; }
+      #title #searcher form button:hover {
+        background: #1e90da; }
       #title #searcher form button .search-icon {
         width: auto;
         height: 100%;
         padding: 4px 0; }
-      @media (min-width: 992px) {
-        #title #searcher form button {
-          height: 38.8px; } }
   #title #stats {
     text-align: center;
     margin-bottom: 0;

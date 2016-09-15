@@ -44,6 +44,12 @@ div.svg-tooltip {
   max-width: 1440px;
   margin: auto;
   height: 100%;
+  &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+  }
 }
 
 @import 'utils/selective_bourbon';

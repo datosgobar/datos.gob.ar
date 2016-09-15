@@ -1,17 +1,27 @@
 #title {
-  padding: 20px 0;
   color: white;
   position: relative;
   overflow: hidden;
   width: 100%;
   @include linear-gradient(to right, $blue, $dark-blue);
+  background-size: cover;
+  background-position: center center;
+  padding: 0;
+
+  .background-overlay {
+    padding: 20px 0;
+    background-color: rgba(black, 0.5);
+  }
 
   #title-container {
     text-align: center;
 
-    @include breakpoint-md {
-      text-align: left;
+    &.text-left {
+      @include breakpoint-md {
+        text-align: left;
+      }
     }
+
 
     h1 {
       font-size: 55px;
@@ -33,10 +43,8 @@
       padding: 0;
     }
 
-    $md-font-size: 24px;
-    $md-padding: 10px;
-    $xs-font-size: 16px;
-    $xs-padding: 6px;
+    $font-size: 24px;
+    $padding: 10px;
     $line-height: 1.2;
 
     form {
@@ -44,49 +52,42 @@
       border: none;
 
       input[type="text"] {
-        background: transparent;
+        background: white;
         border: none;
         width: 100%;
-        color: white;
+        color: $grey-500;
         @include box-shadow(none);
-        @include border-bottom-radius(0);
-        border-bottom: solid 1px white;
 
-        padding: $xs-padding;
-        padding-right: 2em;
-        font-size: $xs-font-size;
-        line-height: $line-height;
-        height: $xs-padding + $xs-font-size * $line-height;
         margin-bottom: 15px;
-        @include breakpoint-md {
-          padding: $md-padding;
-          padding-right: 2em;
-          font-size: $md-font-size;
-          line-height: $line-height;
-          height: $md-padding + $md-font-size * $line-height;
-        }
+        padding: $padding 2em $padding $padding;
+        font-size: $font-size;
+        line-height: $line-height;
+        height: $padding + $font-size * $line-height;
 
         @include placeholder {
-          color: white;
+          color: $grey-300;
           font-weight: 300;
         }
       }
 
       button {
-        background: none;
+        background: $blue-300;
         border: none;
         position: absolute;
         top: 0;
-        right: 0;
-        height: $xs-padding + $xs-font-size * $line-height;
+        right: -4px;
+        height: $padding + $font-size * $line-height;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+
+        &:hover {
+          background: $blue-200;
+        }
 
         .search-icon {
           width: auto;
           height: 100%;
           padding: 4px 0;
-        }
-        @include breakpoint-md {
-          height: $md-padding + $md-font-size * $line-height;
         }
       }
     }
