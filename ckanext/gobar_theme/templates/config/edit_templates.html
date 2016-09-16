@@ -49,6 +49,8 @@
           <textarea name="dataset_description">{{ config['dataset_description'] }}</textarea>
         </label>
 
+        <hr>
+
         <h2>Organizaciones</h2>
 
         <label class="title-description">
@@ -56,6 +58,29 @@
           <textarea name="organization_description">{{ config['organization_description'] }}</textarea>
         </label>
 
+        <hr>
+
+        <h2>Footer</h2>
+        <label>
+          Facebook
+          <input type="text" name="facebook_link" value="{{ config['facebook_link'] }}">
+        </label>
+        <label>
+          Twitter
+          <input type="text" name="twitter_link" value="{{ config['twitter_link'] }}">
+        </label>
+        <label>
+          Github
+          <input type="text" name="github_link" value="{{ config['github_link'] }}">
+        </label>
+        <label>
+          Instagram
+          <input type="text" name="instagram_link" value="{{ config['instagram_link'] }}">
+        </label>
+        <label>
+          Youtube
+          <input type="text" name="youtube_link" value="{{ config['youtube_link'] }}">
+        </label>
         <button class="btn btn-primary" type="submit" name="save">Guardar</button>
 
       </form>

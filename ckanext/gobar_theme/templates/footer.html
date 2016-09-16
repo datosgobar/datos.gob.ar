@@ -1,17 +1,35 @@
+{% set config = h.template_config() %}
+
 <div id="footer" class="container-fluid">
     <div class="restricted-max-width">
         <div id="footer-spacer" class="col-xs-10 col-xs-offset-1">
             <div class="footer-section logo col-xs-12 col-sm-6 col-md-6">
                 <p>
-                    <a href="https://twitter.com/datosgobar" target="_blank" class="social-link">
-                        <i class="icon-twitter"></i>
-                    </a>
-                    <a href="https://www.facebook.com/GobAbiertoAR/" target="_blank" class="social-link">
-                        <i class="icon-facebook"></i>
-                    </a>
-                    <a href="https://github.com/gobabiertoAR" target="_blank" class="social-link">
-                        <i class="icon-github-alt"></i>
-                    </a>
+                    {% if config['twitter_link']|length > 0 %}
+                        <a href="{{ config['twitter_link'] }}" target="_blank" class="social-link">
+                            <i class="icon-twitter"></i>
+                        </a>
+                    {% endif %}
+                    {% if config['facebook_link']|length > 0 %}
+                        <a href="{{ config['facebook_link'] }}" target="_blank" class="social-link">
+                            <i class="icon-facebook"></i>
+                        </a>
+                    {% endif %}
+                    {% if config['github_link']|length > 0 %}
+                        <a href="{{ config['github_link'] }}" target="_blank" class="social-link">
+                            <i class="icon-github-alt"></i>
+                        </a>
+                    {% endif %}
+                    {% if config['instagram_link']|length > 0 %}
+                        <a href="{{ config['instagram_link'] }}" target="_blank" class="social-link">
+                            <i class="icon-instagram"></i>
+                        </a>
+                    {% endif %}
+                    {% if config['youtube_link']|length > 0 %}
+                        <a href="{{ config['youtube_link'] }}" target="_blank" class="social-link">
+                            <i class="icon-youtube-play"></i>
+                        </a>
+                    {% endif %}
                 </p>
                 <a href="http://www.argentina.gob.ar/modernizacion" target="_blank"><img src="/img/logo_ministerio.svg" class="logo-ministerio"></a>
             </div>

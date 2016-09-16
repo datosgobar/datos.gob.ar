@@ -22,7 +22,12 @@ class GobArConfigController(base.BaseController):
             "home_title": new_params['home_title'],
             "home_description": new_params['home_description'],
             "organization_description": new_params['organization_description'],
-            "dataset_description": new_params['dataset_description']
+            "dataset_description": new_params['dataset_description'],
+            "facebook_link": new_params['facebook_link'],
+            "twitter_link": new_params['twitter_link'],
+            "github_link": new_params['github_link'],
+            "instagram_link": new_params['instagram_link'],
+            "youtube_link": new_params['youtube_link']
         }
         g.gobar = new_params_dict
         with open('/var/lib/ckan/default/gobar/settings.json', 'w') as json_data:
