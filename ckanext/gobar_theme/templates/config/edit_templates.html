@@ -44,7 +44,17 @@
         <hr>
 
         <h2>Buscador de datasets</h2>
-        <p>Cosas acà</p>
+        <label class="title-description">
+          Bajada titulo
+          <textarea name="dataset_description">{{ config['dataset_description'] }}</textarea>
+        </label>
+
+        <h2>Organizaciones</h2>
+
+        <label class="title-description">
+          Bajada titulo
+          <textarea name="organization_description">{{ config['organization_description'] }}</textarea>
+        </label>
 
         <button class="btn btn-primary" type="submit" name="save">Guardar</button>
 
