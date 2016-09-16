@@ -619,8 +619,10 @@ div#background-container {
         height: 100%;
         padding: 4px 0; }
   #title .stats-overlay {
-    background: rgba(0, 0, 0, 0.4); }
+    background: rgba(0, 0, 0, 0.4);
+    margin-top: 25px; }
     #title .stats-overlay #stats {
+      padding-top: 40px;
       text-align: center; }
   #title #stats {
     text-align: center;
