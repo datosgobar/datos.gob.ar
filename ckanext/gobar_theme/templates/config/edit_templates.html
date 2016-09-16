@@ -9,11 +9,43 @@
     <div id="template-config" class="col-xs-12 col-md-10 col-md-offset-1">
       <h1>Editar configuracion</h1>
       <form id="config-edit" class="config-form form-horizontal" method="post" action="" data-module="basic-form">
-        <label><input type="radio" name="title-variant" {{ 'checked' if config['home_title_template'] == 1 else '' }} value="1"> Variante 1</label>
-        <label><input type="radio" name="title-variant" {{ 'checked' if config['home_title_template'] == 2 else '' }} value="2"> Variante 2</label>
-        <label><input type="radio" name="title-variant" {{ 'checked' if config['home_title_template'] == 3 else '' }} value="3"> Variante 3</label>
-        <label>Titulo home <input type="text" value="{{ config['home_title'] }}" name="home_title"></label>
-        <label>Bajada home<textarea name="home_description">{{ config['home_description'] }}</textarea></label>
+
+        <h2>Pagina de inicio</h2>
+
+        <div class="title-options">
+          <label class="col-xs-4" for="title1">
+            <img src="/img/home_title_1.png">
+            Variante 1
+            <input type="radio" name="title-variant" {{ 'checked' if config['home_title_template'] == 1 else '' }} value="1" id="title1">
+          </label>
+
+          <label class="col-xs-4" for="title2">
+            <img src="/img/home_title_2.png">
+            Variante 2
+            <input type="radio" name="title-variant" {{ 'checked' if config['home_title_template'] == 2 else '' }} value="2" id="title2">
+          </label>
+
+          <label class="col-xs-4" for="title3">
+            <img src="/img/home_title_3.png">
+            Variante 3
+            <input type="radio" name="title-variant" {{ 'checked' if config['home_title_template'] == 3 else '' }} value="3" id="title3">
+          </label>
+        </div>
+
+        <label class="title-text">
+          Titulo home
+          <input type="text" value="{{ config['home_title'] }}" name="home_title">
+        </label>
+        <label class="title-description">
+          Bajada home
+          <textarea name="home_description">{{ config['home_description'] }}</textarea>
+        </label>
+
+        <hr>
+
+        <h2>Buscador de datasets</h2>
+        <p>Cosas acà</p>
+
         <button class="btn btn-primary" type="submit" name="save">Guardar</button>
 
       </form>

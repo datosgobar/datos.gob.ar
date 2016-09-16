@@ -3,5 +3,27 @@
   #template-config {
     @include base-content();
     @include base-form();
+
+    label:after {
+      content: none;
+    }
+    .title-options {
+      display: table;
+      label {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+        text-align: center;
+        input {
+          position: static;
+          margin: 0;
+        }
+      }
+    }
+    .title-description {
+      textarea {
+        width: 100%;
+      }
+    }
   }
 }

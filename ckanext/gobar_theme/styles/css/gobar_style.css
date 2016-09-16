@@ -2426,5 +2426,19 @@ ul.activity {
           line-height: 1.2;
           padding: 5px;
           height: 29.2px; }
+    #template-config-container #template-config label:after {
+      content: none; }
+    #template-config-container #template-config .title-options {
+      display: table; }
+      #template-config-container #template-config .title-options label {
+        float: none;
+        display: table-cell;
+        vertical-align: top;
+        text-align: center; }
+        #template-config-container #template-config .title-options label input {
+          position: static;
+          margin: 0; }
+    #template-config-container #template-config .title-description textarea {
+      width: 100%; }
 
 /*# sourceMappingURL=gobar_style.css.map */
