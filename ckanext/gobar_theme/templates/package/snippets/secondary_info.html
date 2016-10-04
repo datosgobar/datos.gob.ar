@@ -26,7 +26,7 @@
         {% if pkg.groups|length > 0 %}
             <div class="row group-row">
                 <div class="col-xs-5 title">
-                    Grupos
+                    Temas
                 </div>
                 <div class="col-xs-7 value">
                     {% for group in pkg.groups %}
@@ -44,7 +44,7 @@
         {% if pkg.tags|length > 0 %}
             <div class="row">
                 <div class="col-xs-5 title">
-                    Tags
+                    Etiquetas
                 </div>
                 <div class="col-xs-7 value">
                     {% for tag in pkg.tags %}
@@ -119,7 +119,7 @@
         {{ activity }}
         <p class="activity-read-more">
             {{ h.snippet('svg/flecha_abajo.svg') }}
-            Mostrar mas
+            Mostrar más
             {{ h.snippet('svg/flecha_abajo.svg') }}
         </p>
 
