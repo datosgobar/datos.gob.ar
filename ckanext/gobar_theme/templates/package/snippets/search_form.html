@@ -18,7 +18,7 @@
             </div>
 
             <input type="text" class="search" name="q" value="{{ c.q }}" autocomplete="off"
-                   placeholder="Buscar Dataset">
+                   placeholder="¿Qué datasets buscás?">
             <button type="submit" value="search">
                 <img src="/img/search_gris.svg" class="search-icon">
             </button>
@@ -29,7 +29,7 @@
         {%- endif %}
 
         <div class="order hidden-xs col-sm-6">
-            <label for="field-order-by">Ordenar</label>
+            <label for="field-order-by">Ordenar por</label>
             <select id="field-order-by" name="sort">
                 {% for label, value in sorting %}
                     {% if label and value %}
