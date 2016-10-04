@@ -151,10 +151,7 @@ div.svg-tooltip {
           color: white; }
       #footer #footer-spacer .footer-section.links-internos a:hover {
         color: #1e90da; }
-      @media (min-width: 768px) {
-        #footer #footer-spacer .footer-section.links-externos {
-          text-align: right; } }
-      #footer #footer-spacer .footer-section.links-externos a {
+      #footer #footer-spacer .footer-section.links-externos a.ckan-anchor {
         display: inline-block;
         text-align: left; }
       #footer #footer-spacer .footer-section.links-externos .ckan-link {
@@ -164,9 +161,6 @@ div.svg-tooltip {
         color: #0072bc; }
         #footer #footer-spacer .footer-section.links-externos .ckan-name:hover {
           color: #1e90da; }
-        @media (min-width: 768px) {
-          #footer #footer-spacer .footer-section.links-externos .ckan-name {
-            display: block; } }
       @media (min-width: 768px) {
         #footer #footer-spacer .footer-section {
           text-align: left; } }
@@ -555,7 +549,7 @@ div#background-container {
     #title #title-container .description {
       font-size: 16px;
       font-weight: 300;
-      margin-bottom: 30px; }
+      margin-bottom: 60px; }
   @media (min-width: 992px) {
     #title #searcher {
       position: absolute;

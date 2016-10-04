@@ -2,20 +2,20 @@
 
 <div id="title" class="container-fluid">
     <div class="restricted-max-width">
-    {% snippet "title_background.html" %}
+        {% snippet "title_background.html" %}
         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
             <div id="title-container" class="col-xs-12 col-md-7">
-                <h1>Datos Argentina</h1>
+                <h1>Datos Abiertos Argentina</h1>
 
-                <p class="description">Portal de datos abiertos del Gobierno de la República Argentina.
-                    Acá encontrarás información pública, herramientas y recursos para desarrollar aplicaciones y
-                    visualizaciones y crear historias con datos.</p>
+                <p class="description">Ponemos a tu alcance datos públicos en formatos abiertos para que puedas usarlos,
+                    modificarlos y compartirlos. Estos datos son tuyos. Podés crear visualizaciones, aplicaciones y
+                    grandes herramientas con ellos.</p>
             </div>
             <div id="searcher" class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-0 col-lg-4 no-padding">
                 <form class="module-content search-form" method="get"
                       action="{% url_for controller='package', action='search' %}">
                     <input type="text" class="search" name="q" value="" autocomplete="off"
-                           placeholder="Buscar Dataset"/>
+                           placeholder="¿Qué dataset buscás?"/>
                     <button type="submit">
                         <img src="/img/search.svg" class="search-icon">
                     </button>
@@ -30,7 +30,7 @@
                 <div class="col-sm-4 col-md-12">
                     <p class="stat organizations">{{ "%03d" % h.organizations_with_packages() }}</p>
 
-                    <p class="stats-legend">ORGANIZACIONES</p>
+                    <p class="stats-legend">ORGANIZACIONES <br> CON DATASETS</p>
                 </div>
             </div>
         </div>
