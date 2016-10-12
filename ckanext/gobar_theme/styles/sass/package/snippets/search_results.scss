@@ -52,7 +52,7 @@
         width: 100%;
         @include box-shadow(none);
         @include border-bottom-radius(0);
-        border-bottom: solid 1px $light-grey;
+        border-bottom: solid 1px $grey-200;
         padding: $padding;
         font-size: $font-size;
         line-height: $line-height;
@@ -98,14 +98,14 @@
           width: 100%;
           height: 100%;
           path {
-            fill: $light-grey;
+            fill: $grey-200;
           }
         }
 
         &:hover {
           cursor: pointer;
           svg path {
-            fill: $dark-blue;
+            fill: $blue-300;
           }
         }
       }

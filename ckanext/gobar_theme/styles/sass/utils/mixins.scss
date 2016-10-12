@@ -23,7 +23,7 @@
 
 @mixin base-content() {
   padding: 30px 50px;
-  color: $grey;
+  color: $grey-400;
   font-size: 16px;
   @include breakpoint-md {
     @include box-shadow(0 -2px 4px 0 rgba(150, 150, 150, 0.5));
@@ -105,18 +105,18 @@
         top: -10px;
       }
       label.package-group-label {
-        color: $light-grey;
+        color: $grey-200;
         margin: 0;
         padding: 2px 0;
         &:after {
           content: initial;
         }
         &:hover {
-          color: $dark-blue;
+          color: $blue-300;
         }
       }
       input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: $dark-blue;
+        color: $blue-300;
       }
 
     }
@@ -157,17 +157,17 @@ $colors: (
                 ("xml", "#FB8C00"),
                 ("text", "#039BE5"),
                 ("csv", "#F7CD0F"),
-                ("xls", "#3949AB"),
+                ("xls", "#4CAF50"),
                 ("api", "#D81B60"),
                 ("pdf", "#E53935"),
-                ("zip", "#7CB342"),
+                ("zip", "#4CAF50"),
                 ("rdf", "#00ACC1"),
                 ("nquad", "#00ACC1"),
                 ("ntriples", "#00ACC1"),
                 ("turtle", "#00ACC1"),
-                ("shp", "#1e88e5")
+                ("shp", "#039BE5")
 );
-$default-color: #0072BC;
+$default-color: $blue-300;
 
 @mixin svgFormatColors() {
   svg {

@@ -27,7 +27,7 @@
           .circle-background {
             width: 100%;
             height: 100%;
-            background: $dark-blue;
+            background: $blue-300;
             @include border-radius(15%);
             @include transition-duration(800ms);
             @include transition-property(opacity);

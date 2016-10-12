@@ -17,11 +17,13 @@ body {
   font-weight: 400;
 }
 
-a, a:hover {
+a {
+  color: $blue-300;
   text-decoration: none !important;
 }
 
 a:hover {
+  text-decoration: none !important;
   color: $blue-200;
 }
 
