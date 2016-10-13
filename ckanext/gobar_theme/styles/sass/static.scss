@@ -40,4 +40,30 @@
 
     }
   }
+
+  .bottom-link {
+    width: 100%;
+    text-align: center;
+    @include linear-gradient(to right, $blue-350, $blue-400);
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    .background-pattern {
+      padding: 90px 0;
+      background-image: url('/img/tramita.svg');
+      background-size: 300px;
+      background-repeat: repeat repeat;
+    }
+    button {
+      color: white;
+      background-color: $blue-200;
+      border: none;
+      padding: 10px 18px;
+      font-size: 18px;
+      @include border-radius(4px);
+      &:hover {
+        background-color: $blue-350;
+      }
+    }
+  }
 }

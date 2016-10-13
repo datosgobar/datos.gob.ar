@@ -396,7 +396,7 @@ div#background-container {
   .gobar-static-container .gobar-static {
     height: 100%;
     padding: 30px 50px;
-    color: #767676;
+    color: #424242;
     font-size: 16px;
     padding: 20px 0; }
     @media (min-width: 992px) {
@@ -428,6 +428,32 @@ div#background-container {
     .gobar-static-container .gobar-static ul li {
       font-size: 14px;
       margin-bottom: 5px; }
+  .gobar-static-container .bottom-link {
+    width: 100%;
+    text-align: center;
+    background-color: #00b9f1;
+    background-image: -webkit-linear-gradient(left, #00b9f1, #0072bc);
+    background-image: linear-gradient(to right,#00b9f1, #0072bc);
+    color: white;
+    font-size: 24px;
+    font-weight: 400; }
+    .gobar-static-container .bottom-link .background-pattern {
+      padding: 90px 0;
+      background-image: url("/img/tramita.svg");
+      background-size: 300px;
+      background-repeat: repeat repeat; }
+    .gobar-static-container .bottom-link button {
+      color: white;
+      background-color: #17b2f8;
+      border: none;
+      padding: 10px 18px;
+      font-size: 18px;
+      -o-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px; }
+      .gobar-static-container .bottom-link button:hover {
+        background-color: #00b9f1; }
 
 #error {
   padding-right: 0;
@@ -439,7 +465,7 @@ div#background-container {
       padding-left: 15px; } }
   #error #error-text {
     padding: 30px 50px;
-    color: #767676;
+    color: #424242;
     font-size: 16px;
     text-align: center;
     height: 100%; }
@@ -821,7 +847,7 @@ div#background-container {
   #login-container #login {
     height: 100%;
     padding: 30px 50px;
-    color: #767676;
+    color: #424242;
     font-size: 16px; }
     @media (min-width: 992px) {
       #login-container #login {
@@ -937,7 +963,7 @@ div#background-container {
       padding-left: 15px; } }
   #user-datasets-container #user-datasets {
     padding: 30px 50px;
-    color: #767676;
+    color: #424242;
     font-size: 16px; }
     @media (min-width: 992px) {
       #user-datasets-container #user-datasets {
@@ -958,7 +984,7 @@ div#background-container {
   .organization-container .organization {
     height: 100%;
     padding: 30px 50px;
-    color: #767676;
+    color: #424242;
     font-size: 16px;
     padding: 30px 20px; }
     @media (min-width: 992px) {
@@ -1065,7 +1091,7 @@ div#background-container {
       padding-left: 15px; } }
   #edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
     padding: 30px 50px;
-    color: #767676;
+    color: #424242;
     font-size: 16px; }
     @media (min-width: 992px) {
       #edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
@@ -1178,7 +1204,7 @@ div#background-container {
   .package-container .package-search {
     height: 100%;
     padding: 30px 50px;
-    color: #767676;
+    color: #424242;
     font-size: 16px;
     padding: 0 0 30px 0;
     overflow: hidden; }
@@ -1588,7 +1614,7 @@ div#background-container {
   .package-container .package {
     height: 100%;
     padding: 30px 50px;
-    color: #767676;
+    color: #424242;
     font-size: 16px;
     padding: 0; }
     @media (min-width: 992px) {
@@ -1795,7 +1821,7 @@ div#background-container {
       padding-left: 15px; } }
   #edit-resources-container #edit-resources {
     padding: 30px 50px;
-    color: #767676;
+    color: #424242;
     font-size: 16px; }
     @media (min-width: 992px) {
       #edit-resources-container #edit-resources {
@@ -1819,7 +1845,7 @@ div#background-container {
       padding-left: 15px; } }
   #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
     padding: 30px 50px;
-    color: #767676;
+    color: #424242;
     font-size: 16px; }
     @media (min-width: 992px) {
       #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
@@ -1937,7 +1963,7 @@ div#background-container {
     height: 100%;
     color: #999999;
     padding: 30px 50px;
-    color: #767676;
+    color: #424242;
     font-size: 16px;
     padding-bottom: 50px;
     padding-left: 15px;
@@ -2156,7 +2182,7 @@ div#background-container {
       padding-left: 15px; } }
   #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
     padding: 30px 50px;
-    color: #767676;
+    color: #424242;
     font-size: 16px; }
     @media (min-width: 992px) {
       #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
