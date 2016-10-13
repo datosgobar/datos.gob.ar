@@ -31,11 +31,13 @@ class GobArRouter:
         self.home_routes.connect('/', action='index')
 
     def connect_static(self):
-        self.home_routes.connect('gobar_open_data', '/datos-abiertos', action='open_data')
-        self.home_routes.connect('gobar_legal', '/marco-legal', action='legal')
-        self.home_routes.connect('gobar_platform', '/plataforma', action='platform')
+        self.home_routes.connect('gobar_our_site', '/acerca/nuestro-portal', action='about_our_site')
+        self.home_routes.connect('gobar_legal', '/acerca/marco-legal', action='about_legal')
+        self.home_routes.connect('gobar_devs', '/acerca/desarrolladores', action='about_developers')
+        self.home_routes.connect('gobar_glossary', '/acerca/glosario', action='about_glossary')
         self.redirect(
-            ('/about', '/datos-abiertos')
+            ('/acerca', '/acerca/nuestro-portal'),
+            ('/about', '/acerca/nuestro-portal')
         )
 
     def connect_datasets(self):

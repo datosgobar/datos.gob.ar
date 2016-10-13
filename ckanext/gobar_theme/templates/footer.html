@@ -16,11 +16,10 @@
                 <a href="http://www.argentina.gob.ar/modernizacion" target="_blank"><img src="/img/logo_ministerio.svg" class="logo-ministerio"></a>
             </div>
             <div class="footer-section links-internos hidden-xs hidden-sm col-md-4">
-                <!-- TODO: poner links una vez que estén las respectivas secciones -->
-                <a href="#"><p>Acerca</p></a>
-                <a href="#"><p>Desarrolladores</p></a>
-                <a href="#"><p>Marco legal</p></a>
-                <a href="#"><p>Glosario</p></a>
+                <a href="{{ h.url('gobar_our_site') }}"><p>Nuestro portal</p></a>
+                <a href="{{ h.url('gobar_devs') }}"><p>Desarrolladores</p></a>
+                <a href="{{ h.url('gobar_legal') }}"><p>Marco legal</p></a>
+                <a href="{{ h.url('gobar_glossary') }}"><p>Glosario</p></a>
             </div>
             <div class="footer-section links-externos col-xs-12 col-sm-6 col-md-2">
                 <a href="mailto:gobiernoabierto@modernizacion.gob.ar"><p>Contacto</p></a>
