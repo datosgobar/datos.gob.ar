@@ -16,8 +16,9 @@
       font-size: 40px;
     }
     h2 {
+      color: $blue-300;
       font-weight: 400;
-      font-size: 25px;
+      font-size: 50px;
     }
     h3 {
       color: $blue-300;
@@ -37,54 +38,6 @@
       font-size: 14px;
       margin-bottom: 5px;
 
-    }
-  }
-}
-
-#static-nav-bar {
-  background-color: $grey-100;
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  border-bottom: solid 1px $grey-150;
-
-  $vertical-padding: 10px;
-  $border-bottom: 3px;
-
-  .nav-section {
-    display: inline-block;
-    a.nav-button {
-      display: inline-block;
-      color: $grey-400;
-      padding: $vertical-padding 0 ($vertical-padding - $border-bottom) 0;
-      border-bottom: solid $border-bottom transparent;
-      font-weight: 500;
-      font-size: 15px;
-      .nav-button-border {
-        padding: 0 6px;
-        @include breakpoint-sm {
-          padding: 0 20px;
-        }
-      }
-      @include breakpoint-sm {
-        &#nav-legal-link, &#nav-plaform-link {
-          .nav-button-border {
-            border-left: solid 1px $grey-300;
-          }
-        }
-      }
-
-      &:hover {
-        color: $blue-300;
-        border-bottom-color: $blue-300;
-      }
-    }
-
-    &:hover, &.active {
-      a.nav-button {
-        color: $blue-300;
-        border-bottom-color: $blue-300;
-      }
     }
   }
 }
