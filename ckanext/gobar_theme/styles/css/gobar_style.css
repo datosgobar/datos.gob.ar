@@ -442,18 +442,18 @@ div#background-container {
       background-image: url("/img/tramita.svg");
       background-size: 300px;
       background-repeat: repeat repeat; }
-    .gobar-static-container .bottom-link button {
-      color: white;
-      background-color: #17b2f8;
-      border: none;
-      padding: 10px 18px;
-      font-size: 18px;
-      -o-border-radius: 4px;
-      -moz-border-radius: 4px;
-      -webkit-border-radius: 4px;
-      border-radius: 4px; }
-      .gobar-static-container .bottom-link button:hover {
-        background-color: #00b9f1; }
+  .gobar-static-container button {
+    color: white;
+    background-color: #17b2f8;
+    border: none;
+    padding: 10px 18px;
+    font-size: 18px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
+    .gobar-static-container button:hover {
+      background-color: #00b9f1; }
 
 #error {
   padding-right: 0;

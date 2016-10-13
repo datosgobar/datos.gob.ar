@@ -8,6 +8,119 @@
         <div class="restricted-max-width">
             <div id="developers-users" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
                 <div class="col-xs-12 col-md-10 col-md-offset-1">
+
+                    <h2>Desarrolladores</h2>
+
+                    <h3>El catálogo</h3>
+
+                    <p>
+                        Nuestro portal usa la plataforma CKAN en su versión 2.5. CKAN es una herramienta desarrollada
+                        por la Open Knowledge Foundation. Se trata de software libre distribuido bajo la licencia GNU
+                        Affero General Public License.
+                    </p>
+
+                    <p>
+                        Actualmente es una de las plataformas más populares para este tipo de iniciativas. La usan,
+                        entre otros, el Gobierno de Reino Unido, Estados Unidos, Brasil y Chile.
+                    </p>
+
+                    <p>
+                        CKAN permite la organización de los datos publicados a través de su esquema de datasets y
+                        recursos, así como el acceso programático a éstos, aplicando estándares aprobados
+                        internacionalmente para la generación de metadata.
+                    </p>
+
+                    <h3>Metadata</h3>
+                    <p>
+                        Para hacer más fácil la navegación en el portal y la búsqueda de conjuntos de datos, usamos los
+                        estándares de metadata propuestos por defecto en CKAN (dublin core y dcat).
+                    </p>
+
+                    <h3>Integrar nuestros datos</h3>
+
+                    <p>
+                        Podés integrar los datos y los metadatos de un dataset por medio de la API de CKAN.
+                    </p>
+
+                    <p>
+                        Esta es la forma genérica de consultar los metadatos:
+                    </p>
+
+                    <pre><code>http://datos.gob.ar/api/3/action/package_show?id=&lt;id_del_dataset&gt;</code></pre>
+
+                    <p>
+                        Por ejemplo, podríamos ver la metadata del dataset de Estructura orgánica y autoridades del
+                        Poder Ejecutivo Nacional, consultando:
+                    </p>
+
+                    <pre><code>http://datos.gob.ar/api/3/action/package_show?id=estructura-organica-pen</code></pre>
+                    <pre><code>{
+  "help": "http:\/\/datos.gob.ar\/api\/3\/action\/help_show?name=package_show",
+  "success": true,
+  "result": {
+    "license_title": "Open Data Commons Open Database License 1.0",
+    "maintainer": "Ministerio de Modernizaci\u00f3n. Secretar\u00eda  de Empleo P\u00fablico. Subsecretar\u00eda de Planificaci\u00f3n de Empleo P\u00fablico",
+    "relationships_as_object": [
+
+    ],
+    "private": false,
+    "maintainer_email": "",
+    "num_tags": 5,
+    "id": "ad5b0e15-a9ed-40d5-9827-33a0ece12433",
+    "metadata_created": "2016-03-07T22:09:06.225695",
+    "metadata_modified": "2016-10-05T14:34:32.780131",
+    "author": "Ministerio de Modernizaci\u00f3n. Secretar\u00eda  de Empleo P\u00fablico. Subsecretar\u00eda de Planificaci\u00f3n de Empleo P\u00fablico",
+    "author_email": "mapadelestado@modernizacion.gob.ar",
+    "state": "active",
+    "version": "",
+    "creator_user_id": "ebc97263-5330-4fe0-82fe-50b241a40183",
+</code></pre>
+
+                    <p>
+                        A su vez, esta es el modo genérico de consultar los datos de un recurso dentro de un dataset
+                        específico:
+                    </p>
+
+                    <pre><code>http://datos.gob.ar/api/3/action/datastore_search?resource_id=&lt;id_del_recurso&gt;</code></pre>
+
+                    <p>
+                        ¿Un ejemplo? Podemos ver los datos de un recurso del dataset de Estructura orgánica y
+                        autoridades del Poder Ejecutivo Nacional, así:
+                    </p>
+
+                    <pre><code>http://datos.gob.ar/api/3/action/datastore_search?resource_id=b705d8c1-650f-43cc-bde6-68850fcecd21</code></pre>
+
+                    <pre><code>{
+  "help": "http:\/\/datos.gob.ar\/api\/3\/action\/help_show?name=datastore_search",
+  "success": true,
+  "result": {
+    "fields": [
+      {
+        "type": "text",
+        "id": "jurisdiccion"
+      },
+      {
+        "type": "text",
+        "id": "unidad"
+      },
+      {
+        "type": "text",
+        "id": "reporta_a"
+      },
+      {
+        "type": "text",
+        "id": "unidad_tipo"
+      },
+      {ç
+</code></pre>
+
+                    <p>
+                        Mirá más <a href="">detalles para usar la API.</a>
+                    </p>
+
+                    <p class="text-center">
+                        <button>Ir a nuestro Github</button>
+                    </p>
                 </div>
             </div>
         </div>

@@ -54,16 +54,17 @@
       background-size: 300px;
       background-repeat: repeat repeat;
     }
-    button {
-      color: white;
-      background-color: $blue-200;
-      border: none;
-      padding: 10px 18px;
-      font-size: 18px;
-      @include border-radius(4px);
-      &:hover {
-        background-color: $blue-350;
-      }
+  }
+
+  button {
+    color: white;
+    background-color: $blue-200;
+    border: none;
+    padding: 10px 18px;
+    font-size: 18px;
+    @include border-radius(4px);
+    &:hover {
+      background-color: $blue-350;
     }
   }
 }
