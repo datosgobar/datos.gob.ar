@@ -4,19 +4,19 @@
     <div class="restricted-max-width">
         {% snippet "title_background.html" %}
         <div class="col-xs-12 col-md-10 col-md-offset-1">
-            <div id="title-container" class="col-xs-12 col-md-6">
-                <h1>Organizaciones</h1>
+            <div id="title-container" class="col-xs-12 col-md-8">
+                <h1>Organizaciones con datasets</h1>
 
                 <p class="description">
-                    Ministerios, Secretarías y Organismos dependientes del Poder Ejecutivo Nacional que
-                    participan en el proceso de apertura de datos públicos.
+                    Mirá los Ministerios, Secretarías y Organizaciones dependientes del Poder Ejecutivo Nacional que ya
+                    abrieron sus datos.
                 </p>
             </div>
-            <div id="stats" class="col-xs-12 col-md-4 col-md-offset-2">
+            <div id="stats" class="col-xs-12 col-md-4">
                 <div>
                     <p class="stat organizations">{{ "%03d" % h.organizations_with_packages() }}</p>
 
-                    <p class="stats-legend">ORGANIZACIONES</p>
+                    <p class="stats-legend">ORGANIZACIONE<br> CON DATASETS</p>
                 </div>
             </div>
         </div>
