@@ -52,10 +52,20 @@ div.svg-tooltip {
 @import 'utils/mixins';
 @import 'utils/media_queries';
 
+.blue-gradient {
+  @include linear-gradient(to right, $blue-350, $blue-400);
+  .background-pattern {
+    padding: 90px 0;
+    background-image: url('/img/tramita.svg');
+    background-size: 300px;
+    background-repeat: repeat repeat;
+  }
+}
+
 @import 'header';
 @import 'footer';
 @import 'background';
-@import 'static';
+@import 'static/about_pages';
 @import 'error';
 @import 'modals';
 @import 'home/index';

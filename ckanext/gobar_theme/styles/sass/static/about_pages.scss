@@ -1,0 +1,66 @@
+.gobar-static-container {
+  display: table-row;
+  height: 100%;
+  @include base-container();
+  .gobar-static {
+    height: 100%;
+    @include base-content();
+    padding: 20px 0;
+    @include breakpoint-md {
+      padding: 30px 50px;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-weight: 400;
+      font-size: 40px;
+    }
+    h2 {
+      color: $blue-300;
+      font-weight: 400;
+      font-size: 50px;
+    }
+    h3 {
+      color: $blue-300;
+      font-size: 25px;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    strong {
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    ul li {
+      font-size: 14px;
+      margin-bottom: 5px;
+
+    }
+  }
+
+  .bottom-link {
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  button {
+    color: white;
+    background-color: $blue-200;
+    border: none;
+    padding: 10px 18px;
+    font-size: 18px;
+    @include border-radius(4px);
+    &:hover {
+      background-color: $blue-350;
+    }
+  }
+}
+
+@import 'about_developers';
+@import 'about_our_site';

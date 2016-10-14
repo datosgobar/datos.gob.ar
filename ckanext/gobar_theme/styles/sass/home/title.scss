@@ -4,7 +4,6 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  @include linear-gradient(to right, $blue-350, $blue-400);
 
   #title-container {
     text-align: center;
