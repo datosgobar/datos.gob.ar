@@ -5,9 +5,32 @@
                 <a href="{{ h.url('home') }}"><img src="/img/logo_ministerio.svg" class="logo-ministerio"></a>
             </div>
             <div class="col-xs-12 col-sm-7 no-padding header-links">
-                <a href="{{ h.url_for(controller='package', action='search') }}">DATASETS</a>
-                <a href="{{ h.url_for(controller='organization', action='index') }}">ORGANIZACIONES CON DATOS</a>
-                <a href="{{ h.url('gobar_our_site') }}">ACERCA</a>
+                <a class="header-link" href="{{ h.url_for(controller='package', action='search') }}">
+                    DATASETS
+                </a>
+                <a class="header-link" href="{{ h.url_for(controller='organization', action='index') }}">
+                    ORGANIZACIONES CON DATOS
+                </a>
+                <span class="header-link dropdown" href="{{ h.url('gobar_our_site') }}">
+                    ACERCA <span class="caret"></span>
+                    <ul>
+                        <a href="{{ h.url('gobar_our_site') }}">
+                            <li>NUESTRO PORTAL</li>
+                        </a>
+
+                        <a href="{{ h.url('gobar_legal') }}">
+                            <li>MARCO LEGAL</li>
+                        </a>
+
+                        <a href="{{ h.url('gobar_devs') }}">
+                            <li>DESARROLLADORES</li>
+                        </a>
+
+                        <a href="{{ h.url('gobar_glossary') }}">
+                            <li>GLOSARIO</li>
+                        </a>
+                    </ul>
+                </span>
             </div>
         </div>
     </div>

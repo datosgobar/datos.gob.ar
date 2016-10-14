@@ -34,15 +34,16 @@ $header-height: 72px;
     }
 
     .header-links {
-      overflow: hidden;
-      a {
+      .header-link {
         color: $blue-300;
+        margin: 0;
         padding: 0 0.5em;
         font-size: 90%;
         display: inline-block;
         height: 100%;
+        cursor: pointer;
         @include breakpoint-sm {
-          &:hover {
+          &:hover, &.active {
             background: $blue-300;
             color: white;
           }
@@ -50,8 +51,46 @@ $header-height: 72px;
       }
       @include breakpoint-sm {
         text-align: right;
-        a {
+        .header-link {
           font-size: 100%;
+        }
+      }
+
+      .header-link.dropdown {
+        position: relative;
+
+        .caret {
+          margin-bottom: 8px;
+        }
+
+        ul {
+          margin: 0;
+          display: none;
+          position: absolute;
+          right: 0;
+          width: 250px;
+          background-color: $blue-300;
+          color: white;
+          list-style-type: none;
+          text-align: left;
+          bottom: -160px;
+          @include box-shadow(0 5px 14px -4px rgba(0, 0, 0, 0.5));
+
+          a {
+            li {
+              height: 40px;
+              line-height: 26px;
+              padding: 7px 14px;
+              color: white;
+              &:hover {
+                background: $blue-200;
+              }
+            }
+          }
+        }
+
+        &.active ul {
+          display: block;
         }
       }
     }
