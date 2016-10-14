@@ -26,9 +26,6 @@
       margin-top: 30px;
       margin-bottom: 15px;
     }
-    strong {
-      font-weight: 500;
-    }
 
     p {
       font-size: 16px;
@@ -44,9 +41,11 @@
   .bottom-link {
     width: 100%;
     text-align: center;
-    color: white;
     font-size: 24px;
     font-weight: 400;
+    .background-pattern {
+      padding: 90px 0;
+    }
   }
 
   button {

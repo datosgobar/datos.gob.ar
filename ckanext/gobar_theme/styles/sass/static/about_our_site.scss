@@ -1,0 +1,72 @@
+#our-site-container {
+  .first-section {
+    text-align: center;
+    @include breakpoint-md {
+      text-align: left;
+    }
+
+    padding: 50px 0;
+    h1 {
+      font-weight: 400;
+      font-size: 50px;
+      margin: 0 0 40px 0;
+    }
+    h2 {
+      font-weight: 400;
+      font-size: 16px;
+      margin: 0 0 8px 0;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    .round-counter-section {
+      text-align: center;
+
+      .round-counter-max-width {
+        max-width: 220px;
+        margin: 0 auto;
+        @include breakpoint-md {
+          margin: 0 0 0 auto;
+        }
+      }
+
+      .round-counter-container {
+        padding-top: 100%;
+        position: relative;
+        margin-bottom: 10px;
+
+        .round-counter {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border: solid 8px;
+          @include border-radius(50%);
+
+          .counter-table {
+            display: table;
+            height: 100%;
+            width: 100%;
+
+            h3 {
+              display: table-cell;
+              vertical-align: middle;
+              margin: 0;
+              font-weight: 400;
+              font-size: 23px;
+              .counter-number {
+                display: block;
+                font-weight: 300;
+                font-size: 70px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

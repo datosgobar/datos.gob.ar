@@ -54,12 +54,15 @@ div.svg-tooltip {
 .blue-gradient {
   background-color: #00b9f1;
   background-image: -webkit-linear-gradient(left, #00b9f1, #0072bc);
-  background-image: linear-gradient(to right,#00b9f1, #0072bc); }
+  background-image: linear-gradient(to right,#00b9f1, #0072bc);
+  color: white; }
   .blue-gradient .background-pattern {
-    padding: 90px 0;
     background-image: url("/img/tramita.svg");
     background-size: 300px;
     background-repeat: repeat repeat; }
+
+strong {
+  font-weight: 500; }
 
 @media (min-width: 768px) {
   body {
@@ -431,8 +434,6 @@ div#background-container {
       font-size: 25px;
       margin-top: 30px;
       margin-bottom: 15px; }
-    .gobar-static-container .gobar-static strong {
-      font-weight: 500; }
     .gobar-static-container .gobar-static p {
       font-size: 16px; }
     .gobar-static-container .gobar-static ul li {
@@ -441,9 +442,10 @@ div#background-container {
   .gobar-static-container .bottom-link {
     width: 100%;
     text-align: center;
-    color: white;
     font-size: 24px;
     font-weight: 400; }
+    .gobar-static-container .bottom-link .background-pattern {
+      padding: 90px 0; }
   .gobar-static-container button {
     color: white;
     background-color: #17b2f8;
@@ -476,6 +478,60 @@ div#background-container {
     right: 10px;
     font-size: 20px;
     margin-top: -10px; }
+
+#our-site-container .first-section {
+  text-align: center;
+  padding: 50px 0; }
+  @media (min-width: 992px) {
+    #our-site-container .first-section {
+      text-align: left; } }
+  #our-site-container .first-section h1 {
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0 0 40px 0; }
+  #our-site-container .first-section h2 {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 0 0 8px 0; }
+  #our-site-container .first-section p {
+    font-size: 18px; }
+  #our-site-container .first-section .round-counter-section {
+    text-align: center; }
+    #our-site-container .first-section .round-counter-section .round-counter-max-width {
+      max-width: 220px;
+      margin: 0 auto; }
+      @media (min-width: 992px) {
+        #our-site-container .first-section .round-counter-section .round-counter-max-width {
+          margin: 0 0 0 auto; } }
+    #our-site-container .first-section .round-counter-section .round-counter-container {
+      padding-top: 100%;
+      position: relative;
+      margin-bottom: 10px; }
+      #our-site-container .first-section .round-counter-section .round-counter-container .round-counter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: solid 8px;
+        -o-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%; }
+        #our-site-container .first-section .round-counter-section .round-counter-container .round-counter .counter-table {
+          display: table;
+          height: 100%;
+          width: 100%; }
+          #our-site-container .first-section .round-counter-section .round-counter-container .round-counter .counter-table h3 {
+            display: table-cell;
+            vertical-align: middle;
+            margin: 0;
+            font-weight: 400;
+            font-size: 23px; }
+            #our-site-container .first-section .round-counter-section .round-counter-container .round-counter .counter-table h3 .counter-number {
+              display: block;
+              font-weight: 300;
+              font-size: 70px; }
 
 #error {
   padding-right: 0;
@@ -1342,8 +1398,6 @@ div#background-container {
         color: #767676; }
       #search-results .search-and-order .order select {
         max-width: 60%; }
-  #search-results .search-error strong {
-    font-weight: 500; }
   #search-results .pagination {
     width: 100%; }
 
