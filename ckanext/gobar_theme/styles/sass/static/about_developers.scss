@@ -21,21 +21,4 @@
     }
   }
 
-  .source-example-container {
-    margin-bottom: 10px;
-    position: relative;
-    border: solid 1px $grey-200;
-    @include border-radius(4px);
-    pre {
-      border: none;
-    }
-    .source-example-fade-out {
-      position: absolute;
-      width: 100%;
-      height: 60%;
-      bottom: 0;
-      right: 0;
-      @include linear-gradient(to bottom, transparent, $grey-100);
-    }
-  }
 }
