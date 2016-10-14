@@ -55,7 +55,9 @@ div.svg-tooltip {
   background-color: #00b9f1;
   background-image: -webkit-linear-gradient(left, #00b9f1, #0072bc);
   background-image: linear-gradient(to right,#00b9f1, #0072bc);
-  color: white; }
+  color: white;
+  padding-left: 0;
+  padding-right: 0; }
   .blue-gradient .background-pattern {
     background-image: url("/img/tramita.svg");
     background-size: 300px;
@@ -479,35 +481,36 @@ div#background-container {
     font-size: 20px;
     margin-top: -10px; }
 
-#our-site-container .first-section {
-  text-align: center;
-  padding: 50px 0; }
+#our-site-container .counter-section {
+  text-align: center; }
   @media (min-width: 992px) {
-    #our-site-container .first-section {
+    #our-site-container .counter-section {
       text-align: left; } }
-  #our-site-container .first-section h1 {
+  #our-site-container .counter-section .background-pattern {
+    padding: 50px 0; }
+  #our-site-container .counter-section h1 {
     font-weight: 400;
     font-size: 50px;
     margin: 0 0 40px 0; }
-  #our-site-container .first-section h2 {
+  #our-site-container .counter-section h2 {
     font-weight: 400;
     font-size: 16px;
     margin: 0 0 8px 0; }
-  #our-site-container .first-section p {
+  #our-site-container .counter-section p {
     font-size: 18px; }
-  #our-site-container .first-section .round-counter-section {
+  #our-site-container .counter-section .round-counter-section {
     text-align: center; }
-    #our-site-container .first-section .round-counter-section .round-counter-max-width {
+    #our-site-container .counter-section .round-counter-section .round-counter-max-width {
       max-width: 220px;
       margin: 0 auto; }
       @media (min-width: 992px) {
-        #our-site-container .first-section .round-counter-section .round-counter-max-width {
+        #our-site-container .counter-section .round-counter-section .round-counter-max-width {
           margin: 0 0 0 auto; } }
-    #our-site-container .first-section .round-counter-section .round-counter-container {
+    #our-site-container .counter-section .round-counter-section .round-counter-container {
       padding-top: 100%;
       position: relative;
       margin-bottom: 10px; }
-      #our-site-container .first-section .round-counter-section .round-counter-container .round-counter {
+      #our-site-container .counter-section .round-counter-section .round-counter-container .round-counter {
         position: absolute;
         top: 0;
         left: 0;
@@ -518,20 +521,43 @@ div#background-container {
         -moz-border-radius: 50%;
         -webkit-border-radius: 50%;
         border-radius: 50%; }
-        #our-site-container .first-section .round-counter-section .round-counter-container .round-counter .counter-table {
+        #our-site-container .counter-section .round-counter-section .round-counter-container .round-counter .counter-table {
           display: table;
           height: 100%;
           width: 100%; }
-          #our-site-container .first-section .round-counter-section .round-counter-container .round-counter .counter-table h3 {
+          #our-site-container .counter-section .round-counter-section .round-counter-container .round-counter .counter-table h3 {
             display: table-cell;
             vertical-align: middle;
             margin: 0;
             font-weight: 400;
             font-size: 23px; }
-            #our-site-container .first-section .round-counter-section .round-counter-container .round-counter .counter-table h3 .counter-number {
+            #our-site-container .counter-section .round-counter-section .round-counter-container .round-counter .counter-table h3 .counter-number {
               display: block;
               font-weight: 300;
               font-size: 70px; }
+#our-site-container .data-section-background {
+  background: #f5f5f5; }
+#our-site-container .data-section {
+  padding: 50px 0;
+  text-align: center; }
+  #our-site-container .data-section h2 {
+    color: #0695d6;
+    font-size: 40px;
+    font-weight: 400; }
+  #our-site-container .data-section svg {
+    width: 100%; }
+  #our-site-container .data-section h3 {
+    color: #00D57A; }
+#our-site-container .steps-section {
+  padding: 50px 0; }
+#our-site-container .team-section {
+  text-align: center; }
+  #our-site-container .team-section .background-pattern {
+    padding: 50px 0; }
+    #our-site-container .team-section .background-pattern .restricted-max-width {
+      max-width: 500px; }
+      #our-site-container .team-section .background-pattern .restricted-max-width h2 {
+        margin: 0 0 10px 0; }
 
 #error {
   padding-right: 0;

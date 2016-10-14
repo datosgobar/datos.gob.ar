@@ -1,11 +1,14 @@
 #our-site-container {
-  .first-section {
+  .counter-section {
     text-align: center;
     @include breakpoint-md {
       text-align: left;
     }
 
-    padding: 50px 0;
+    .background-pattern {
+      padding: 50px 0;
+    }
+
     h1 {
       font-weight: 400;
       font-size: 50px;
@@ -69,4 +72,43 @@
     }
   }
 
+  .data-section-background {
+    background: $grey-100;
+  }
+  .data-section {
+    padding: 50px 0;
+    text-align: center;
+
+    h2 {
+      color: $blue-300;
+      font-size: 40px;
+      font-weight: 400;
+    }
+
+    svg {
+      width: 100%;
+    }
+
+    h3 {
+      color: $green;
+    }
+  }
+
+  .steps-section {
+    padding: 50px 0;
+  }
+
+  .team-section {
+    text-align: center;
+    .background-pattern {
+      padding: 50px 0;
+      .restricted-max-width {
+        max-width: 500px;
+
+        h2 {
+          margin: 0 0 10px 0;
+        }
+      }
+    }
+  }
 }

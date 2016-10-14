@@ -55,6 +55,9 @@ div.svg-tooltip {
 .blue-gradient {
   @include linear-gradient(to right, $blue-350, $blue-400);
   color: white;
+  padding-left: 0;
+  padding-right: 0;
+
   .background-pattern {
     background-image: url('/img/tramita.svg');
     background-size: 300px;

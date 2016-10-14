@@ -6,8 +6,8 @@
 
     <div id="our-site-container" class="container-fluid gobar-static-container">
 
-        <div class="col-xs-12 blue-gradient first-section">
-            <div class="background-pattern">
+        <div class="col-xs-12 blue-gradient counter-section">
+            <div class="container-fluid background-pattern">
                 <div class="restricted-max-width">
                     <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-1">
                         <h2>DATOS ABIERTOS ARGENTINA</h2>
@@ -43,6 +43,62 @@
             </div>
         </div>
 
+        <div class="data-section-background container-fluid">
+            <div class="restricted-max-width">
+                <div class="col-xs-12 col-sm-10 col-sm-offset-1 data-section">
+                    <div class="col-xs-12">
+                        <h2>Un mundo de datos</h2>
+                        <p>
+                            <strong>Sin darte cuenta, usás y producís datos.</strong> Cuando abrís una planilla de
+                            cálculo en la oficina o cuando lees una nota sobre la comunidad de científicos que trabaja
+                            en nuevas curas de enfermedades, ¡todo el tiempo!
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 svg-container">
+                        {% snippet "static/usalos.svg" %}
+                        <h3>USALOS</h3>
+                        <p>
+                            ¡Descargalos y analizalos!
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 svg-container">
+                        {% snippet "static/procesalos.svg" %}
+                        <h3>PROCESALOS</h3>
+                        <p>
+                            ¡Combinalos con otros datos! Crea visualizaciones, investigaciones y nuevos productos.
+                        </p>
+                    </div>
+
+                    <div class="col-xs-12 col-md-4 svg-container">
+                        {% snippet "static/compartilos.svg" %}
+                        <h3>COMPARTILOS</h3>
+                        <p>
+                            ¡Que todos vean lo que creaste!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 steps-section">
+
+        </div>
+
+        <div class="col-xs-12 blue-gradient team-section">
+            <div class="container-fluid background-pattern">
+                <div class="restricted-max-width">
+                    <h2>Nuestro equipo</h2>
+                    <p>
+                        La <strong>Dirección Nacional de Datos e Información Pública</strong> forma parte del Ministerio
+                        de Modernización de la Nación Argentina.
+                    </p>
+                    <button>Descubrí los datasets</button>
+
+                </div>
+            </div>
+        </div>
 
     </div>
 {% endblock %}
