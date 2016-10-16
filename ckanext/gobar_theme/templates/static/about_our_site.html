@@ -24,9 +24,11 @@
                         <div class="round-counter-max-width">
                             <div class="round-counter-container">
                                 <div class="round-counter">
+                                    {% include 'static/circulito_fondo.svg' %}
+                                    {% include 'static/circulito.svg' %}
                                     <div class="counter-table">
                                         <h3>
-                                            <span class="counter-number">100%</span>
+                                            <span class="counter-number">&nbsp;</span>
                                             DATOS LIBRES
                                         </h3>
                                     </div>
@@ -143,3 +145,8 @@
 
     </div>
 {% endblock %}
+
+{%- block scripts %}
+    {{ super() }}
+    {% resource 'gobar_js/about_our_site.js' %}
+{%- endblock -%}
