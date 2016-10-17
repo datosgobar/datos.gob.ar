@@ -1,4 +1,4 @@
-$(function() {
+function counterAnimation() {
     var totalFrames = 200;
     var counterAnimation = new Vivus('svg-round-counter', {
         duration: totalFrames,
@@ -16,4 +16,26 @@ $(function() {
         }
     }, 50);
 
+}
+
+function svgDrawingAnimation() {
+    var totalFrames = 200;
+    new Vivus('usalos-svg', {
+        duration: totalFrames,
+        type: 'async'
+    });
+    new Vivus('procesalos-svg', {
+        duration: totalFrames,
+        type: 'async'
+    });
+    new Vivus('compartilos-svg', {
+        duration: totalFrames,
+        type: 'async'
+    });
+    $('#usalos-svg, #compartilos-svg, #procesalos-svg').css('visibility', 'visible')
+}
+
+$(function() {
+    counterAnimation();
+    svgDrawingAnimation();
 });

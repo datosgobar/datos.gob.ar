@@ -586,8 +586,12 @@ div#background-container {
     color: #0695d6;
     font-size: 40px;
     font-weight: 400; }
-  #our-site-container .data-section svg {
-    width: 100%; }
+  #our-site-container .data-section .svg-drawing-container {
+    display: block;
+    max-width: 200px;
+    margin: 0 auto; }
+    #our-site-container .data-section .svg-drawing-container svg {
+      width: 100%; }
   #our-site-container .data-section h3 {
     color: #00D57A; }
 #our-site-container .steps-section {

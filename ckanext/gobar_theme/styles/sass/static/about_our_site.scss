@@ -107,8 +107,13 @@
       font-weight: 400;
     }
 
-    svg {
-      width: 100%;
+    .svg-drawing-container {
+      display: block;
+      max-width: 200px;
+      margin: 0 auto;
+      svg {
+        width: 100%;
+      }
     }
 
     h3 {
