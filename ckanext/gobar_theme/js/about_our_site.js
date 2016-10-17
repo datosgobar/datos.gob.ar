@@ -42,7 +42,26 @@ function svgDrawingAnimation() {
     showWhenVisible('procesalos');
 }
 
+function stepsAnimation() {
+    var fadeWhenVisible = function(name, fadeType) {
+        var container = $('#' + name + '-container');
+        var visSenseOptions = {fullyvisible: 0.8};
+        var visibility = VisSense(container[0], visSenseOptions);
+        var monitor = visibility.monitor({
+            fullyvisible: function () {
+                $('#' + name + '-svg').css('visibility', 'visible').attr('class', 'animated ' + fadeType);
+                monitor.stop();
+            }
+        });
+        monitor.start();
+    };
+    fadeWhenVisible('transparencia', 'fadeInRight');
+    fadeWhenVisible('comunidad', 'fadeInLeft');
+    fadeWhenVisible('kit', 'fadeInRight');
+}
+
 $(function () {
     counterAnimation();
     svgDrawingAnimation();
+    stepsAnimation();
 });
