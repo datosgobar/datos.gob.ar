@@ -2653,10 +2653,10 @@ div#background-container {
       padding-left: 15px; } }
   .gobar-static-container .gobar-static {
     height: 100%;
-    padding: 30px 50px;
     color: #424242;
     font-size: 16px;
-    padding: 20px 0; }
+    padding-top: 20px;
+    padding-bottom: 20px; }
     @media (min-width: 992px) {
       .gobar-static-container .gobar-static {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
@@ -2665,7 +2665,8 @@ div#background-container {
         box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
     @media (min-width: 992px) {
       .gobar-static-container .gobar-static {
-        padding: 30px 50px; } }
+        padding-top: 30px;
+        padding-bottom: 50px; } }
     .gobar-static-container .gobar-static h1 {
       margin: 20px 0;
       font-weight: 400;
@@ -2840,7 +2841,6 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #error #error-text {
-    padding: 30px 50px;
     color: #424242;
     font-size: 16px;
     text-align: center;
@@ -3219,7 +3219,6 @@ div#background-container {
       padding-left: 15px; } }
   #login-container #login {
     height: 100%;
-    padding: 30px 50px;
     color: #424242;
     font-size: 16px; }
     @media (min-width: 992px) {
@@ -3335,7 +3334,6 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #user-datasets-container #user-datasets {
-    padding: 30px 50px;
     color: #424242;
     font-size: 16px; }
     @media (min-width: 992px) {
@@ -3356,7 +3354,6 @@ div#background-container {
       padding-left: 15px; } }
   .organization-container .organization {
     height: 100%;
-    padding: 30px 50px;
     color: #424242;
     font-size: 16px;
     padding: 30px 20px; }
@@ -3463,7 +3460,6 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
-    padding: 30px 50px;
     color: #424242;
     font-size: 16px; }
     @media (min-width: 992px) {
@@ -3576,7 +3572,6 @@ div#background-container {
       padding-left: 15px; } }
   .package-container .package-search {
     height: 100%;
-    padding: 30px 50px;
     color: #424242;
     font-size: 16px;
     padding: 0 0 30px 0;
@@ -3984,7 +3979,6 @@ div#background-container {
       padding-left: 15px; } }
   .package-container .package {
     height: 100%;
-    padding: 30px 50px;
     color: #424242;
     font-size: 16px;
     padding: 0; }
@@ -4191,7 +4185,6 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #edit-resources-container #edit-resources {
-    padding: 30px 50px;
     color: #424242;
     font-size: 16px; }
     @media (min-width: 992px) {
@@ -4215,7 +4208,6 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
-    padding: 30px 50px;
     color: #424242;
     font-size: 16px; }
     @media (min-width: 992px) {
@@ -4333,7 +4325,6 @@ div#background-container {
   .resource-container .resource {
     height: 100%;
     color: #999999;
-    padding: 30px 50px;
     color: #424242;
     font-size: 16px;
     padding-bottom: 50px;
@@ -4552,7 +4543,6 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
-    padding: 30px 50px;
     color: #424242;
     font-size: 16px; }
     @media (min-width: 992px) {

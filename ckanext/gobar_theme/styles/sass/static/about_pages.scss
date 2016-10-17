@@ -5,9 +5,11 @@
   .gobar-static {
     height: 100%;
     @include base-content();
-    padding: 20px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     @include breakpoint-md {
-      padding: 30px 50px;
+      padding-top: 30px;
+      padding-bottom: 50px;
     }
 
     h1 {
