@@ -5,7 +5,7 @@ function counterAnimation() {
         type: 'async'
     });
     $('#svg-round-counter').show();
-    var counterInterval = setInterval(function() {
+    var counterInterval = setInterval(function () {
         if (counterAnimation.currentFrame >= totalFrames) {
             clearInterval(counterInterval);
             $('.counter-number').text('100%');
@@ -19,23 +19,30 @@ function counterAnimation() {
 }
 
 function svgDrawingAnimation() {
-    var totalFrames = 200;
-    new Vivus('usalos-svg', {
-        duration: totalFrames,
-        type: 'async'
-    });
-    new Vivus('procesalos-svg', {
-        duration: totalFrames,
-        type: 'async'
-    });
-    new Vivus('compartilos-svg', {
-        duration: totalFrames,
-        type: 'async'
-    });
-    $('#usalos-svg, #compartilos-svg, #procesalos-svg').css('visibility', 'visible')
+    var showWhenVisible = function (name) {
+        var vivusOptions = {
+            duration: 200,
+            type: 'async'
+        };
+        var visSenseOptions = {fullyvisible: 0.8};
+        var container = $('#' + name + '-container');
+        var visibility = VisSense(container[0], visSenseOptions);
+        var monitor = visibility.monitor({
+            fullyvisible: function () {
+                new Vivus(name + '-svg', vivusOptions);
+                $('#' + name + '-svg').css('visibility', 'visible');
+                monitor.stop();
+            }
+        });
+        monitor.start();
+    };
+
+    showWhenVisible('usalos');
+    showWhenVisible('compartilos');
+    showWhenVisible('procesalos');
 }
 
-$(function() {
+$(function () {
     counterAnimation();
     svgDrawingAnimation();
 });
