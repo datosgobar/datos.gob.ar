@@ -42,6 +42,7 @@ $header-height: 72px;
         display: inline-block;
         height: 100%;
         cursor: pointer;
+        vertical-align: bottom;
         @include breakpoint-sm {
           &:hover, &.active {
             background: $blue-300;
