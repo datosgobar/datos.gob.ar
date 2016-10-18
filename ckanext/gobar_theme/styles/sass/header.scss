@@ -24,7 +24,6 @@ $header-height: 72px;
   #header-spacing {
     $padding: 20px;
     padding: 0 $padding;
-    text-align: center;
 
     .logo-header, .header-links {
       height: $header-height;
@@ -34,11 +33,18 @@ $header-height: 72px;
     }
 
     .header-links {
+      display: none;
+      text-align: right;
+      @include breakpoint-sm {
+        display: block;
+      }
+
       .header-link {
         color: $blue-300;
         margin: 0;
-        padding: 0 0.5em;
-        font-size: 90%;
+        padding: 0 0.3em;
+        font-size: 85%;
+        line-height: $header-height;
         display: inline-block;
         height: 100%;
         cursor: pointer;
@@ -49,10 +55,8 @@ $header-height: 72px;
             color: white;
           }
         }
-      }
-      @include breakpoint-sm {
-        text-align: right;
-        .header-link {
+        @include breakpoint-md {
+          padding: 0 0.5em;
           font-size: 100%;
         }
       }
@@ -97,8 +101,53 @@ $header-height: 72px;
     }
 
     .logo-header {
-      @include breakpoint-sm {
-        text-align: left;
+      &.showing-nav {
+        height: auto;
+      }
+
+      .logo-and-xs-icon {
+        position: relative;
+        padding-left: 50px;
+        @include breakpoint-sm {
+          padding-left: 0;
+        }
+      }
+
+      .icon-reorder {
+        position: absolute;
+        font-size: 30px;
+        top: 50%;
+        left: 0;
+        $size: 36px;
+        width: $size;
+        height: $size;
+        line-height: $size;
+        text-align: center;
+        margin-top: - $size / 2;
+        border: none;
+        @include border-radius(4px);
+        color: $blue-300;
+        &:hover, &.active {
+          color: white;
+          background: $blue-300;
+        }
+        @include breakpoint-sm {
+          display: none;
+        }
+      }
+
+      .xs-navbar {
+        @include breakpoint-sm {
+          display: none;
+        }
+        .navbar-link {
+          line-height: initial;
+          padding: 10px 0;
+          color: $blue-300;
+        }
+        .dropdown-navbar .navbar-link {
+          padding-left: 15px;
+        }
       }
       .logo-ministerio {
         height: 100%;
