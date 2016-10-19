@@ -31,5 +31,6 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
             'cut_img_path': gobar_helpers.cut_img_path,
             'organizations_with_packages': gobar_helpers.organizations_with_packages,
             'get_pkg_extra': gobar_helpers.get_pkg_extra,
-            'get_facet_items_dict': gobar_helpers.get_facet_items_dict
+            'get_facet_items_dict': gobar_helpers.get_facet_items_dict,
+            'render_ar_datetime': gobar_helpers.render_ar_datetime
         }

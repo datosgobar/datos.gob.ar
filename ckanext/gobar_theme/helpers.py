@@ -1,7 +1,8 @@
 import ckan.logic as logic
 import ckan.lib.helpers as ckan_helpers
 from urlparse import urlparse
-from ckan.common import request, c, g
+from ckan.common import request, c, g, _
+import ckan.lib.formatters as formatters
 
 
 def _get_organizations_objs(organizations_branch, depth=0):
@@ -137,3 +138,18 @@ def get_facet_items_dict(facet, limit=None, exclude_active=False):
     if facet == 'organization':
         return organization_filters()
     return ckan_helpers.get_facet_items_dict(facet, limit, exclude_active)
+
+
+def render_ar_datetime(datetime_):
+    datetime_ = ckan_helpers._datestamp_to_datetime(datetime_)
+    if not datetime_:
+        return ''
+    details = {
+        'min': datetime_.minute,
+        'hour': datetime_.hour,
+        'day': datetime_.day,
+        'year': datetime_.year,
+        'month': formatters._MONTH_FUNCTIONS[datetime_.month - 1](),
+        'timezone': datetime_.tzinfo.zone,
+    }
+    return _('{day} de {month} de {year}').format(**details)
