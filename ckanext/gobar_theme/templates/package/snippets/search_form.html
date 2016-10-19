@@ -48,7 +48,10 @@
     <p>Por favor trate de vuelta y si el problema persiste <a href="{{ h.url('gobar_contacto') }}">contactenos</a>.</p>
 {% else %}
     {% if count == 0 %}
-        <p class="extra">No se encontraron resultados</p>
+        <p class="extra">
+            <strong>¡Ups! Nada por acá.</strong>
+            Por favor, revisá que la palabra esté bien escrita o probá con otro término.
+        </p>
     {% endif %}
 {% endif %}
 
