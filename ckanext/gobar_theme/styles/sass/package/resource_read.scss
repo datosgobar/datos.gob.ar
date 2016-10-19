@@ -6,16 +6,12 @@
     height: 100%;
     color: $grey-300;
     @include base-content();
-    padding-bottom: 50px;
-    padding-left: 15px;
-    padding-right: 15px;
-    @include breakpoint-md {
-      padding-left: 50px;
-      padding-right: 50px;
-    }
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     .back-to-pkg {
       padding-left: 0;
+      color: $grey-300;
       a.back-link {
         color: $grey-400;
         font-weight: 500;

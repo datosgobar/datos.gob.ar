@@ -30,7 +30,7 @@ a {
   color: #0695d6;
   text-decoration: none !important; }
 
-a:hover {
+a:hover, a:focus {
   text-decoration: none !important;
   color: #17b2f8; }
 
@@ -2379,11 +2379,11 @@ strong {
       font-size: 30px;
       top: 50%;
       left: 0;
-      width: 36px;
-      height: 36px;
-      line-height: 36px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
       text-align: center;
-      margin-top: -18px;
+      margin-top: -20px;
       border: none;
       -o-border-radius: 4px;
       -moz-border-radius: 4px;
@@ -2396,15 +2396,23 @@ strong {
       @media (min-width: 768px) {
         #header #header-spacing .logo-header .icon-reorder {
           display: none; } }
-    @media (min-width: 768px) {
-      #header #header-spacing .logo-header .xs-navbar {
-        display: none; } }
-    #header #header-spacing .logo-header .xs-navbar .navbar-link {
-      line-height: initial;
-      padding: 10px 0;
-      color: #0695d6; }
-    #header #header-spacing .logo-header .xs-navbar .dropdown-navbar .navbar-link {
-      padding-left: 15px; }
+    #header #header-spacing .logo-header .xs-navbar {
+      padding-bottom: 10px; }
+      @media (min-width: 768px) {
+        #header #header-spacing .logo-header .xs-navbar {
+          display: none; } }
+      #header #header-spacing .logo-header .xs-navbar .navbar-link {
+        line-height: initial;
+        padding: 10px;
+        color: #0695d6; }
+        #header #header-spacing .logo-header .xs-navbar .navbar-link:hover {
+          background: #0695d6;
+          color: white;
+          cursor: pointer; }
+          #header #header-spacing .logo-header .xs-navbar .navbar-link:hover a {
+            color: white; }
+      #header #header-spacing .logo-header .xs-navbar .dropdown-navbar .navbar-link {
+        padding-left: 15px; }
     #header #header-spacing .logo-header .logo-ministerio {
       height: 100%;
       width: 300px;
@@ -3025,9 +3033,9 @@ div#background-container {
       border-bottom: solid 1px white;
       padding: 6px;
       padding-right: 2em;
-      font-size: 16px;
+      font-size: 24px;
       line-height: 1.2;
-      height: 25.2px;
+      height: 34.8px;
       margin-bottom: 15px; }
       @media (min-width: 992px) {
         #title #searcher form input[type="text"] {
@@ -3038,23 +3046,27 @@ div#background-container {
           height: 38.8px; } }
       #title #searcher form input[type="text"]::-webkit-input-placeholder {
         color: white;
-        font-weight: 300; }
+        font-weight: 300;
+        font-size: 16px; }
       #title #searcher form input[type="text"]::-moz-placeholder {
         color: white;
-        font-weight: 300; }
+        font-weight: 300;
+        font-size: 16px; }
       #title #searcher form input[type="text"]:-moz-placeholder {
         color: white;
-        font-weight: 300; }
+        font-weight: 300;
+        font-size: 16px; }
       #title #searcher form input[type="text"]:-ms-input-placeholder {
         color: white;
-        font-weight: 300; }
+        font-weight: 300;
+        font-size: 16px; }
     #title #searcher form button {
       background: none;
       border: none;
       position: absolute;
       top: 0;
       right: 0;
-      height: 25.2px; }
+      height: 34.8px; }
       #title #searcher form button .search-icon {
         width: auto;
         height: 100%;
@@ -4407,21 +4419,17 @@ div#background-container {
     color: #999999;
     color: #424242;
     font-size: 16px;
-    padding-bottom: 50px;
-    padding-left: 15px;
-    padding-right: 15px; }
+    padding-top: 20px;
+    padding-bottom: 20px; }
     @media (min-width: 992px) {
       .resource-container .resource {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
-    @media (min-width: 992px) {
-      .resource-container .resource {
-        padding-left: 50px;
-        padding-right: 50px; } }
     .resource-container .resource .back-to-pkg {
-      padding-left: 0; }
+      padding-left: 0;
+      color: #999999; }
       .resource-container .resource .back-to-pkg a.back-link {
         color: #767676;
         font-weight: 500; }

@@ -118,7 +118,7 @@ $header-height: 72px;
         font-size: 30px;
         top: 50%;
         left: 0;
-        $size: 36px;
+        $size: 40px;
         width: $size;
         height: $size;
         line-height: $size;
@@ -137,13 +137,22 @@ $header-height: 72px;
       }
 
       .xs-navbar {
+        padding-bottom: 10px;
         @include breakpoint-sm {
           display: none;
         }
         .navbar-link {
           line-height: initial;
-          padding: 10px 0;
+          padding: 10px;
           color: $blue-300;
+          &:hover {
+            background: $blue-300;
+            color: white;
+            cursor: pointer;
+            a {
+              color: white;
+            }
+          }
         }
         .dropdown-navbar .navbar-link {
           padding-left: 15px;
