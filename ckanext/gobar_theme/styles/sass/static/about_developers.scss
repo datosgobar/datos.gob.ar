@@ -4,6 +4,7 @@
     background-color: $grey-100;
     border: solid 1px $grey-200;
     @include border-radius(4px);
+    margin-bottom: 30px;
   }
 
   .source-link-container {
@@ -19,6 +20,10 @@
       font-size: 20px;
       margin-top: -10px;
     }
+  }
+
+  .button-container {
+    padding: 100px 0 50px 0;
   }
 
 }

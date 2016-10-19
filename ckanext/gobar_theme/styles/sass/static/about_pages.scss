@@ -21,11 +21,12 @@
       color: $blue-300;
       font-weight: 400;
       font-size: 50px;
+      margin-top: 40px;
     }
     h3 {
       color: $blue-300;
       font-size: 25px;
-      margin-top: 30px;
+      margin-top: 40px;
       margin-bottom: 15px;
     }
 
@@ -59,6 +60,15 @@
     @include border-radius(4px);
     &:hover {
       background-color: $blue-350;
+    }
+  }
+}
+
+#glossary-container {
+  .background-pattern {
+    p {
+      font-size: 40px;
+      margin-bottom: 20px;
     }
   }
 }
