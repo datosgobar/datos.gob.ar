@@ -62,6 +62,6 @@ function stepsAnimation() {
 
 $(function () {
     counterAnimation();
-    svgDrawingAnimation();
+    //svgDrawingAnimation();
     stepsAnimation();
 });

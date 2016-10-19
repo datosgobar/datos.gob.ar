@@ -92,7 +92,7 @@
 
         <div class="container-fluid restricted-max-width">
             <div class="col-xs-12 col-md-10 col-md-offset-1 steps-section">
-                <div class="col-xs-12">
+                <div class="col-xs-12 step">
                     <div class="col-xs-12 col-sm-8">
                         <h2>Construimos con transparencia</h2>
                         <p>
@@ -108,7 +108,7 @@
                 </div>
 
 
-                <div class="col-xs-12">
+                <div class="col-xs-12 step">
                     <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
                         <h2>Creamos comunidad</h2>
                         <p>
@@ -132,7 +132,7 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12">
+                <div class="col-xs-12 step">
                     <div class="col-xs-12 col-sm-8">
                         <h2>¡Aprendé más!</h2>
                         <p>
@@ -146,6 +146,12 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-xs-12 text-center discover">
+                    <a href="{{ h.url_for(controller='package', action='search') }}">
+                            <button>DESCUBRÍ LOS DATASETS</button>
+                        </a>
+                </div>
             </div>
         </div>
 
@@ -157,9 +163,7 @@
                         La <strong>Dirección Nacional de Datos e Información Pública</strong> forma parte del Ministerio
                         de Modernización de la Nación Argentina.
                     </p>
-                    <a href="{{ h.url_for(controller='package', action='search') }}">
-                        <button>Descubrí los datasets</button>
-                    </a>
+
                 </div>
             </div>
         </div>
