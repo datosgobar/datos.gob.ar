@@ -868,6 +868,8 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #login-container #login {
+    display: table;
+    width: 100%;
     height: 100%;
     padding: 30px 50px;
     color: #767676;
@@ -963,13 +965,48 @@ div#background-container {
           line-height: 1.2;
           padding: 10px;
           height: 39.2px; }
-    #login-container #login form label {
-      width: 50%;
-      padding: 5px 20px 5px 0;
-      font-size: 16px;
-      line-height: 1.2; }
-    #login-container #login form .controls {
-      margin-left: 50%; }
+    #login-container #login #login-vertical-wrapper {
+      display: table-cell;
+      vertical-align: middle; }
+    #login-container #login form {
+      width: 100%;
+      margin: 0 auto; }
+      @media (min-width: 768px) {
+        #login-container #login form {
+          width: 600px; } }
+      #login-container #login form label {
+        padding: 0;
+        display: block;
+        width: auto;
+        margin-bottom: 10px; }
+      #login-container #login form .controls {
+        display: block;
+        margin: 0; }
+      #login-container #login form .checkbox {
+        text-align: right;
+        margin: 0; }
+        #login-container #login form .checkbox input {
+          top: 50%;
+          margin-top: -10px; }
+      #login-container #login form .control-group {
+        margin-bottom: 30px; }
+      #login-container #login form .form-actions {
+        margin: 0;
+        padding: 50px 0 0 0;
+        border: none;
+        text-align: center; }
+      #login-container #login form button {
+        background: #0695d6;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 5px;
+        font-weight: 300;
+        padding: 12px;
+        display: inline-block; }
+        #login-container #login form button:hover {
+          background-color: #17b2f8; }
 
 #user-datasets-container {
   padding-right: 0;

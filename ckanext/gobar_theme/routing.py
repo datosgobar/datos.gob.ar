@@ -97,7 +97,7 @@ class GobArRouter:
         )
 
     def connect_users(self):
-        self.route_map.connect('login', '/635511788', action='login', controller='user')
+        self.route_map.connect('login', '/ingresar', action='login', controller='user')
         self.route_map.connect('/logout', action='logout', controller='user')
         self.redirect(
             ('/user/login', '/'),
