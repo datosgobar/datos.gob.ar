@@ -26,11 +26,13 @@ body {
   font-family: 'Roboto', sans-serif !important;
   font-weight: 400; }
 
-a, a:hover {
+a {
+  color: #0695d6;
   text-decoration: none !important; }
 
 a:hover {
-  color: #1e90da; }
+  text-decoration: none !important;
+  color: #17b2f8; }
 
 div.no-padding {
   padding: 0; }
@@ -82,14 +84,14 @@ div.svg-tooltip {
     #header #header-spacing .header-links {
       overflow: hidden; }
       #header #header-spacing .header-links a {
-        color: #0072bc;
+        color: #0695d6;
         padding: 0 0.5em;
         font-size: 90%;
         display: inline-block;
         height: 100%; }
         @media (min-width: 768px) {
           #header #header-spacing .header-links a:hover {
-            background: #0072bc;
+            background: #0695d6;
             color: white; } }
       @media (min-width: 768px) {
         #header #header-spacing .header-links {
@@ -131,7 +133,7 @@ div.svg-tooltip {
       #footer #footer-spacer {
         padding: 50px 0; } }
     #footer #footer-spacer .footer-section {
-      color: #0072bc;
+      color: #0695d6;
       font-size: 16px;
       font-weight: 500;
       text-align: center; }
@@ -152,10 +154,10 @@ div.svg-tooltip {
           display: inline-block;
           font-size: 28px; }
         #footer #footer-spacer .footer-section.logo a.social-link:hover {
-          background: #0072bc;
+          background: #0695d6;
           color: white; }
       #footer #footer-spacer .footer-section.links-internos a:hover {
-        color: #1e90da; }
+        color: #17b2f8; }
       @media (min-width: 768px) {
         #footer #footer-spacer .footer-section.links-externos {
           text-align: right; } }
@@ -166,9 +168,9 @@ div.svg-tooltip {
         margin: 0;
         color: #767676; }
       #footer #footer-spacer .footer-section.links-externos .ckan-name {
-        color: #0072bc; }
+        color: #0695d6; }
         #footer #footer-spacer .footer-section.links-externos .ckan-name:hover {
-          color: #1e90da; }
+          color: #17b2f8; }
         @media (min-width: 768px) {
           #footer #footer-spacer .footer-section.links-externos .ckan-name {
             display: block; } }
@@ -405,7 +407,7 @@ div#background-container {
   .gobar-static-container .gobar-static {
     height: 100%;
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px;
     padding: 20px 0; }
     @media (min-width: 992px) {
@@ -425,7 +427,7 @@ div#background-container {
       font-weight: 400;
       font-size: 25px; }
     .gobar-static-container .gobar-static h3 {
-      color: #0072bc;
+      color: #0695d6;
       font-size: 25px;
       margin-top: 30px;
       margin-bottom: 15px; }
@@ -442,7 +444,7 @@ div#background-container {
   position: relative;
   z-index: 1;
   text-align: center;
-  border-bottom: solid 1px #eaeced; }
+  border-bottom: solid 1px #e5e5e5; }
   #static-nav-bar .nav-section {
     display: inline-block; }
     #static-nav-bar .nav-section a.nav-button {
@@ -461,11 +463,11 @@ div#background-container {
         #static-nav-bar .nav-section a.nav-button#nav-legal-link .nav-button-border, #static-nav-bar .nav-section a.nav-button#nav-plaform-link .nav-button-border {
           border-left: solid 1px #999999; } }
       #static-nav-bar .nav-section a.nav-button:hover {
-        color: #0072bc;
-        border-bottom-color: #0072bc; }
+        color: #0695d6;
+        border-bottom-color: #0695d6; }
     #static-nav-bar .nav-section:hover a.nav-button, #static-nav-bar .nav-section.active a.nav-button {
-      color: #0072bc;
-      border-bottom-color: #0072bc; }
+      color: #0695d6;
+      border-bottom-color: #0695d6; }
 
 #error {
   padding-right: 0;
@@ -477,7 +479,7 @@ div#background-container {
       padding-left: 15px; } }
   #error #error-text {
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px;
     text-align: center;
     height: 100%; }
@@ -506,7 +508,7 @@ div#background-container {
         #error #error-text #error-code .circle-container .circle-gutter .circle-background {
           width: 100%;
           height: 100%;
-          background: #0072bc;
+          background: #0695d6;
           -o-border-radius: 15%;
           -moz-border-radius: 15%;
           -webkit-border-radius: 15%;
@@ -545,9 +547,9 @@ div#background-container {
   position: relative;
   overflow: hidden;
   width: 100%;
-  background-color: #00B9F1;
-  background-image: -webkit-linear-gradient(left, #00B9F1, #0072bc);
-  background-image: linear-gradient(to right,#00B9F1, #0072bc);
+  background-color: #00b9f1;
+  background-image: -webkit-linear-gradient(left, #00b9f1, #0072bc);
+  background-image: linear-gradient(to right,#00b9f1, #0072bc);
   background-size: cover;
   background-position: center center;
   padding: 0; }
@@ -604,7 +606,7 @@ div#background-container {
         color: #999999;
         font-weight: 300; }
     #title #searcher form button {
-      background: #0072bc;
+      background: #0695d6;
       border: none;
       position: absolute;
       top: 0;
@@ -613,7 +615,7 @@ div#background-container {
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px; }
       #title #searcher form button:hover {
-        background: #1e90da; }
+        background: #17b2f8; }
       #title #searcher form button .search-icon {
         width: auto;
         height: 100%;
@@ -659,7 +661,7 @@ div#background-container {
     .featured-groups {
       padding: 50px 0; } }
   .featured-groups a:hover {
-    color: #0072bc; }
+    color: #0695d6; }
   .featured-groups .group-container {
     margin-bottom: 20px;
     padding: 0 10px;
@@ -717,7 +719,7 @@ div#background-container {
           left: 10px;
           margin-top: -17.5px; }
           .featured-groups .group-container .group .group-text svg path, .featured-groups .group-container .group .group-text img path {
-            fill: #0072bc; }
+            fill: #0695d6; }
         .featured-groups .group-container .group .group-text .group-table {
           padding-left: 45px;
           overflow: hidden;
@@ -734,7 +736,7 @@ div#background-container {
         .featured-groups .group-container .group.inactive .group-text svg path {
           fill: #cccccc; }
       .featured-groups .group-container .group.active:hover {
-        background: #0072bc;
+        background: #0695d6;
         color: white; }
         .featured-groups .group-container .group.active:hover svg path {
           fill: white !important; }
@@ -841,7 +843,7 @@ div#background-container {
           line-height: 1.3;
           font-size: 16px; }
         #featured-content-container #featured-content .table-wrapper a:hover {
-          background: #0072bc; }
+          background: #0695d6; }
           #featured-content-container #featured-content .table-wrapper a:hover .featured-card h1,
           #featured-content-container #featured-content .table-wrapper a:hover .featured-card p {
             color: white; }
@@ -868,7 +870,7 @@ div#background-container {
   #login-container #login {
     height: 100%;
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px; }
     @media (min-width: 992px) {
       #login-container #login {
@@ -881,7 +883,7 @@ div#background-container {
       font-weight: 400;
       font-size: 40px; }
     #login-container #login form {
-      padding: 20px 50px;
+      padding: 50px;
       -o-border-radius: 4px;
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
@@ -901,14 +903,8 @@ div#background-container {
         width: 100%;
         font-size: 16px;
         line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #login-container #login form input[type="checkbox"] {
-        -webkit-transform: scale(1.3);
-        -moz-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        -o-transform: scale(1.3);
-        transform: scale(1.3); }
+        padding: 10px;
+        height: 39.2px; }
       #login-container #login form .control-custom .input-prepend {
         width: 100%;
         white-space: normal;
@@ -919,8 +915,8 @@ div#background-container {
           width: 20%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
         #login-container #login form .control-custom .input-prepend label.icon-remove {
           position: absolute;
           top: 50%;
@@ -930,8 +926,8 @@ div#background-container {
           margin: -1em 0 0 0;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
           #login-container #login form .control-custom .input-prepend label.icon-remove:before, #login-container #login form .control-custom .input-prepend label.icon-remove:after {
             content: initial; }
           #login-container #login form .control-custom .input-prepend label.icon-remove span {
@@ -942,8 +938,8 @@ div#background-container {
           width: 65%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
       #login-container #login form .package-groups input[type="checkbox"].package-group-checkbox {
         width: 1px;
         height: 1px;
@@ -951,22 +947,22 @@ div#background-container {
         left: -10px;
         top: -10px; }
       #login-container #login form .package-groups label.package-group-label {
-        color: #D1D3D4;
+        color: #cccccc;
         margin: 0;
         padding: 2px 0; }
         #login-container #login form .package-groups label.package-group-label:after {
           content: initial; }
         #login-container #login form .package-groups label.package-group-label:hover {
-          color: #0072bc; }
+          color: #0695d6; }
       #login-container #login form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0072bc; }
+        color: #0695d6; }
       #login-container #login form .control-group {
         position: relative; }
         #login-container #login form .control-group.error .input-prepend .add-on {
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
     #login-container #login form label {
       width: 50%;
       padding: 5px 20px 5px 0;
@@ -984,7 +980,7 @@ div#background-container {
       padding-left: 15px; } }
   #user-datasets-container #user-datasets {
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px; }
     @media (min-width: 992px) {
       #user-datasets-container #user-datasets {
@@ -1005,7 +1001,7 @@ div#background-container {
   .organization-container .organization {
     height: 100%;
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px;
     padding: 30px 20px; }
     @media (min-width: 992px) {
@@ -1112,7 +1108,7 @@ div#background-container {
       padding-left: 15px; } }
   #edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px; }
     @media (min-width: 992px) {
       #edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
@@ -1125,7 +1121,7 @@ div#background-container {
       font-weight: 400;
       font-size: 40px; }
     #edit-organization-container #edit-organization form, #edit-organization-container #new-organization form, #new-organization-container #edit-organization form, #new-organization-container #new-organization form {
-      padding: 20px 50px;
+      padding: 50px;
       -o-border-radius: 4px;
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
@@ -1145,14 +1141,8 @@ div#background-container {
         width: 100%;
         font-size: 16px;
         line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #edit-organization-container #edit-organization form input[type="checkbox"], #edit-organization-container #new-organization form input[type="checkbox"], #new-organization-container #edit-organization form input[type="checkbox"], #new-organization-container #new-organization form input[type="checkbox"] {
-        -webkit-transform: scale(1.3);
-        -moz-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        -o-transform: scale(1.3);
-        transform: scale(1.3); }
+        padding: 10px;
+        height: 39.2px; }
       #edit-organization-container #edit-organization form .control-custom .input-prepend, #edit-organization-container #new-organization form .control-custom .input-prepend, #new-organization-container #edit-organization form .control-custom .input-prepend, #new-organization-container #new-organization form .control-custom .input-prepend {
         width: 100%;
         white-space: normal;
@@ -1163,8 +1153,8 @@ div#background-container {
           width: 20%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
         #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove {
           position: absolute;
           top: 50%;
@@ -1174,8 +1164,8 @@ div#background-container {
           margin: -1em 0 0 0;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
           #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:before, #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:after, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:before, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:after, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:before, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:after, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:before, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:after {
             content: initial; }
           #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove span, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove span, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove span, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove span {
@@ -1186,8 +1176,8 @@ div#background-container {
           width: 65%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
       #edit-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox, #edit-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox, #new-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox, #new-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox {
         width: 1px;
         height: 1px;
@@ -1195,22 +1185,22 @@ div#background-container {
         left: -10px;
         top: -10px; }
       #edit-organization-container #edit-organization form .package-groups label.package-group-label, #edit-organization-container #new-organization form .package-groups label.package-group-label, #new-organization-container #edit-organization form .package-groups label.package-group-label, #new-organization-container #new-organization form .package-groups label.package-group-label {
-        color: #D1D3D4;
+        color: #cccccc;
         margin: 0;
         padding: 2px 0; }
         #edit-organization-container #edit-organization form .package-groups label.package-group-label:after, #edit-organization-container #new-organization form .package-groups label.package-group-label:after, #new-organization-container #edit-organization form .package-groups label.package-group-label:after, #new-organization-container #new-organization form .package-groups label.package-group-label:after {
           content: initial; }
         #edit-organization-container #edit-organization form .package-groups label.package-group-label:hover, #edit-organization-container #new-organization form .package-groups label.package-group-label:hover, #new-organization-container #edit-organization form .package-groups label.package-group-label:hover, #new-organization-container #new-organization form .package-groups label.package-group-label:hover {
-          color: #0072bc; }
+          color: #0695d6; }
       #edit-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0072bc; }
+        color: #0695d6; }
       #edit-organization-container #edit-organization form .control-group, #edit-organization-container #new-organization form .control-group, #new-organization-container #edit-organization form .control-group, #new-organization-container #new-organization form .control-group {
         position: relative; }
         #edit-organization-container #edit-organization form .control-group.error .input-prepend .add-on, #edit-organization-container #new-organization form .control-group.error .input-prepend .add-on, #new-organization-container #edit-organization form .control-group.error .input-prepend .add-on, #new-organization-container #new-organization form .control-group.error .input-prepend .add-on {
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
     #edit-organization-container #edit-organization form .image-upload, #edit-organization-container #new-organization form .image-upload, #new-organization-container #edit-organization form .image-upload, #new-organization-container #new-organization form .image-upload {
       display: none; }
 
@@ -1225,7 +1215,7 @@ div#background-container {
   .package-container .package-search {
     height: 100%;
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px;
     padding: 0 0 30px 0;
     overflow: hidden; }
@@ -1286,7 +1276,7 @@ div#background-container {
         box-shadow: none;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-        border-bottom: solid 1px #D1D3D4;
+        border-bottom: solid 1px #cccccc;
         padding: 10px;
         font-size: 16px;
         line-height: 1.2;
@@ -1327,11 +1317,11 @@ div#background-container {
           width: 100%;
           height: 100%; }
           #search-results .search-and-order .searcher .menu-button svg path {
-            fill: #D1D3D4; }
+            fill: #cccccc; }
         #search-results .search-and-order .searcher .menu-button:hover {
           cursor: pointer; }
           #search-results .search-and-order .searcher .menu-button:hover svg path {
-            fill: #0072bc; }
+            fill: #0695d6; }
     #search-results .search-and-order .order {
       text-align: right;
       padding-right: 0; }
@@ -1407,7 +1397,7 @@ div#background-container {
       padding: 0 30px;
       color: #767676; }
     .filters-container .search-filter p.filter-empty {
-      color: #D1D3D4;
+      color: #cccccc;
       font-size: 16px;
       padding: 0 30px; }
     .filters-container .search-filter a.filter-show-less, .filters-container .search-filter a.filter-show-more {
@@ -1456,7 +1446,7 @@ div#background-container {
           transition-duration: 150ms; }
           .filters-container .search-filter ul a li:hover {
             background: #e5e5e5;
-            color: #1e90da; }
+            color: #17b2f8; }
           .filters-container .search-filter ul a li .close-filter {
             display: none; }
           .filters-container .search-filter ul a li.active {
@@ -1486,11 +1476,11 @@ div#background-container {
         .filters-container .search-filter .group-images .group-image-container.available svg path {
           fill: #767676; }
         .filters-container .search-filter .group-images .group-image-container.available:hover svg path {
-          fill: #0072bc; }
+          fill: #0695d6; }
         .filters-container .search-filter .group-images .group-image-container.active svg path {
-          fill: #0072bc; }
+          fill: #0695d6; }
         .filters-container .search-filter .group-images .group-image-container.active:hover svg path {
-          fill: #1e90da; }
+          fill: #17b2f8; }
         .filters-container .search-filter .group-images .group-image-container .svg-tooltip {
           position: absolute;
           display: inline-block;
@@ -1578,7 +1568,7 @@ div#background-container {
         width: 3.5em;
         font-weight: 500;
         margin: 0 0 5px 5px;
-        background-color: #0072BC; }
+        background-color: #0695d6; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=html], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=html] {
           background-color: #8E24AA; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=json], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=json] {
@@ -1590,13 +1580,13 @@ div#background-container {
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=csv], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=csv] {
           background-color: #F7CD0F; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=xls], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=xls] {
-          background-color: #3949AB; }
+          background-color: #4CAF50; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=api], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=api] {
           background-color: #D81B60; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=pdf], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=pdf] {
           background-color: #E53935; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=zip], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=zip] {
-          background-color: #7CB342; }
+          background-color: #4CAF50; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=rdf], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=rdf] {
           background-color: #00ACC1; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=nquad], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=nquad] {
@@ -1606,13 +1596,13 @@ div#background-container {
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=turtle], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=turtle] {
           background-color: #00ACC1; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=shp], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=shp] {
-          background-color: #1e88e5; }
+          background-color: #039BE5; }
 .dataset-list .dataset-item:hover {
   color: inherit; }
   .dataset-list .dataset-item:hover .dataset-border {
-    border-right-color: #0072bc; }
+    border-right-color: #0695d6; }
     .dataset-list .dataset-item:hover .dataset-border .dataset-content .dataset-title {
-      color: #0072bc; }
+      color: #0695d6; }
 
 #title.package-title .background-overlay {
   padding-bottom: 40px; }
@@ -1635,7 +1625,7 @@ div#background-container {
   .package-container .package {
     height: 100%;
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px;
     padding: 0; }
     @media (min-width: 992px) {
@@ -1659,7 +1649,7 @@ div#background-container {
   margin-top: 20px; }
 #pkg-main-info #pkg-title-and-desc h1.pkg-title {
   margin: 20px 0 0 0;
-  color: #0072bc;
+  color: #0695d6;
   font-size: 25px; }
 #pkg-main-info #pkg-title-and-desc .edit-button {
   float: right;
@@ -1674,7 +1664,7 @@ div#background-container {
     #pkg-main-info #pkg-title-and-desc p.pkg-author svg path {
       fill: #767676; }
     #pkg-main-info #pkg-title-and-desc p.pkg-author svg:hover path {
-      fill: #0072bc; }
+      fill: #0695d6; }
 #pkg-main-info #pkg-title-and-desc p.pkg-notes {
   margin-bottom: 50px;
   font-size: 16px;
@@ -1697,7 +1687,7 @@ div#background-container {
 #pkg-secondary-info {
   background: #fafafa; }
   #pkg-secondary-info h2.secondary-info-title {
-    color: #0072bc;
+    color: #0695d6;
     margin-top: 58px;
     font-size: 20px;
     border-bottom: solid 1px #999999;
@@ -1725,7 +1715,7 @@ div#background-container {
           #pkg-secondary-info #info-container .row .value p.pkg-maintainer svg path {
             fill: #999999; }
           #pkg-secondary-info #info-container .row .value p.pkg-maintainer svg:hover path {
-            fill: #0072bc; }
+            fill: #0695d6; }
         #pkg-secondary-info #info-container .row .value .group-img-container {
           display: inline-block;
           position: relative; }
@@ -1734,7 +1724,7 @@ div#background-container {
             height: 30px;
             margin: 0 0 5px 5px; }
             #pkg-secondary-info #info-container .row .value .group-img-container svg.group-image:hover path, #pkg-secondary-info #info-container .row .value .group-img-container img.group-image:hover path {
-              fill: #0072bc; }
+              fill: #0695d6; }
           #pkg-secondary-info #info-container .row .value .group-img-container .svg-tooltip {
             position: absolute;
             display: inline-block;
@@ -1768,13 +1758,13 @@ div#background-container {
           #pkg-secondary-info #info-container .row .value p.pkg-tag a {
             color: #767676; }
             #pkg-secondary-info #info-container .row .value p.pkg-tag a:hover {
-              color: #0072bc; }
+              color: #0695d6; }
 
 #pkg-recent-activity {
   background: #fafafa;
   color: #767676; }
   #pkg-recent-activity h2.recent-activity-title {
-    color: #0072bc;
+    color: #0695d6;
     font-weight: 400;
     margin: 50px 0 0 0;
     font-size: 20px;
@@ -1842,7 +1832,7 @@ div#background-container {
       padding-left: 15px; } }
   #edit-resources-container #edit-resources {
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px; }
     @media (min-width: 992px) {
       #edit-resources-container #edit-resources {
@@ -1855,7 +1845,7 @@ div#background-container {
       #edit-resources-container #edit-resources .action-buttons .edit-dataset-button, #edit-resources-container #edit-resources .action-buttons .add-resource {
         margin: 0 10px 0 0; }
       #edit-resources-container #edit-resources .action-buttons .btn {
-        border-color: #D1D3D4; }
+        border-color: #cccccc; }
 
 #edit-package-container, #new-package-container {
   padding-right: 0;
@@ -1866,7 +1856,7 @@ div#background-container {
       padding-left: 15px; } }
   #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px; }
     @media (min-width: 992px) {
       #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
@@ -1879,7 +1869,7 @@ div#background-container {
       font-weight: 400;
       font-size: 40px; }
     #edit-package-container #edit-package form, #edit-package-container #new-package form, #new-package-container #edit-package form, #new-package-container #new-package form {
-      padding: 20px 50px;
+      padding: 50px;
       -o-border-radius: 4px;
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
@@ -1899,14 +1889,8 @@ div#background-container {
         width: 100%;
         font-size: 16px;
         line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #edit-package-container #edit-package form input[type="checkbox"], #edit-package-container #new-package form input[type="checkbox"], #new-package-container #edit-package form input[type="checkbox"], #new-package-container #new-package form input[type="checkbox"] {
-        -webkit-transform: scale(1.3);
-        -moz-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        -o-transform: scale(1.3);
-        transform: scale(1.3); }
+        padding: 10px;
+        height: 39.2px; }
       #edit-package-container #edit-package form .control-custom .input-prepend, #edit-package-container #new-package form .control-custom .input-prepend, #new-package-container #edit-package form .control-custom .input-prepend, #new-package-container #new-package form .control-custom .input-prepend {
         width: 100%;
         white-space: normal;
@@ -1917,8 +1901,8 @@ div#background-container {
           width: 20%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
         #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove {
           position: absolute;
           top: 50%;
@@ -1928,8 +1912,8 @@ div#background-container {
           margin: -1em 0 0 0;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
           #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove:before, #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove:after, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove:before, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove:after, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove:before, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove:after, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove:before, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove:after {
             content: initial; }
           #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove span, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove span, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove span, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove span {
@@ -1940,8 +1924,8 @@ div#background-container {
           width: 65%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
       #edit-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox, #edit-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox, #new-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox, #new-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox {
         width: 1px;
         height: 1px;
@@ -1949,22 +1933,22 @@ div#background-container {
         left: -10px;
         top: -10px; }
       #edit-package-container #edit-package form .package-groups label.package-group-label, #edit-package-container #new-package form .package-groups label.package-group-label, #new-package-container #edit-package form .package-groups label.package-group-label, #new-package-container #new-package form .package-groups label.package-group-label {
-        color: #D1D3D4;
+        color: #cccccc;
         margin: 0;
         padding: 2px 0; }
         #edit-package-container #edit-package form .package-groups label.package-group-label:after, #edit-package-container #new-package form .package-groups label.package-group-label:after, #new-package-container #edit-package form .package-groups label.package-group-label:after, #new-package-container #new-package form .package-groups label.package-group-label:after {
           content: initial; }
         #edit-package-container #edit-package form .package-groups label.package-group-label:hover, #edit-package-container #new-package form .package-groups label.package-group-label:hover, #new-package-container #edit-package form .package-groups label.package-group-label:hover, #new-package-container #new-package form .package-groups label.package-group-label:hover {
-          color: #0072bc; }
+          color: #0695d6; }
       #edit-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0072bc; }
+        color: #0695d6; }
       #edit-package-container #edit-package form .control-group, #edit-package-container #new-package form .control-group, #new-package-container #edit-package form .control-group, #new-package-container #new-package form .control-group {
         position: relative; }
         #edit-package-container #edit-package form .control-group.error .input-prepend .add-on, #edit-package-container #new-package form .control-group.error .input-prepend .add-on, #new-package-container #edit-package form .control-group.error .input-prepend .add-on, #new-package-container #new-package form .control-group.error .input-prepend .add-on {
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
     #edit-package-container #edit-package form ol, #edit-package-container #new-package form ol, #new-package-container #edit-package form ol, #new-package-container #new-package form ol {
       margin: 0 0 10px 0; }
     #edit-package-container #edit-package .edit-resources-button, #edit-package-container #new-package .edit-resources-button, #new-package-container #edit-package .edit-resources-button, #new-package-container #new-package .edit-resources-button {
@@ -1984,7 +1968,7 @@ div#background-container {
     height: 100%;
     color: #999999;
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px;
     padding-bottom: 50px;
     padding-left: 15px;
@@ -2002,7 +1986,7 @@ div#background-container {
     .resource-container .resource .back-to-pkg {
       padding-left: 0; }
       .resource-container .resource .back-to-pkg a.back-link {
-        color: #58595B;
+        color: #767676;
         font-weight: 500; }
       .resource-container .resource .back-to-pkg a.edit-resource {
         color: white;
@@ -2012,13 +1996,13 @@ div#background-container {
       padding-right: 120px;
       margin-bottom: 15px; }
       .resource-container .resource .title h1 {
-        color: #0072bc;
+        color: #0695d6;
         margin: 20px 0 0 0;
         font-size: 26px; }
       .resource-container .resource .title p {
         font-size: 18px; }
       .resource-container .resource .title button {
-        background: #0072bc;
+        background: #0695d6;
         border: none;
         -o-border-radius: 4px;
         -moz-border-radius: 4px;
@@ -2032,7 +2016,7 @@ div#background-container {
         right: 0;
         margin-top: -15px; }
         .resource-container .resource .title button:hover {
-          background: #1e90da; }
+          background: #17b2f8; }
     .resource-container .resource .resource-alternative-packages {
       padding-left: 0;
       padding-right: 0;
@@ -2059,7 +2043,7 @@ div#background-container {
         font-size: 19px;
         font-weight: 400;
         border-bottom: solid 1px #999999;
-        color: #0072bc;
+        color: #0695d6;
         margin-bottom: 0; }
       .resource-container .resource .resource-additional-info .resource-additional {
         padding: 15px 5px;
@@ -2074,7 +2058,7 @@ div#background-container {
           padding: 0; }
           .resource-container .resource .resource-additional-info .resource-additional .value span.label {
             font-size: 14px;
-            background-color: #0072BC; }
+            background-color: #0695d6; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=html], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=html] {
               background-color: #8E24AA; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=json], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=json] {
@@ -2086,13 +2070,13 @@ div#background-container {
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=csv], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=csv] {
               background-color: #F7CD0F; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=xls], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=xls] {
-              background-color: #3949AB; }
+              background-color: #4CAF50; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=api], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=api] {
               background-color: #D81B60; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=pdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=pdf] {
               background-color: #E53935; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=zip], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=zip] {
-              background-color: #7CB342; }
+              background-color: #4CAF50; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=rdf], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=rdf] {
               background-color: #00ACC1; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=nquad], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=nquad] {
@@ -2102,7 +2086,7 @@ div#background-container {
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=turtle], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=turtle] {
               background-color: #00ACC1; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=shp], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=shp] {
-              background-color: #1e88e5; }
+              background-color: #039BE5; }
 
 .pkg-container {
   position: relative;
@@ -2115,7 +2099,7 @@ div#background-container {
     left: 0;
     margin-top: -28.35px; }
     .pkg-container .pkg-file-img svg path {
-      fill: #0072BC; }
+      fill: #0695d6; }
     .pkg-container .pkg-file-img[data-format=html] svg path, .pkg-container .pkg-file-img[data-format*=html] svg path {
       fill: #8E24AA; }
     .pkg-container .pkg-file-img[data-format=json] svg path, .pkg-container .pkg-file-img[data-format*=json] svg path {
@@ -2127,13 +2111,13 @@ div#background-container {
     .pkg-container .pkg-file-img[data-format=csv] svg path, .pkg-container .pkg-file-img[data-format*=csv] svg path {
       fill: #F7CD0F; }
     .pkg-container .pkg-file-img[data-format=xls] svg path, .pkg-container .pkg-file-img[data-format*=xls] svg path {
-      fill: #3949AB; }
+      fill: #4CAF50; }
     .pkg-container .pkg-file-img[data-format=api] svg path, .pkg-container .pkg-file-img[data-format*=api] svg path {
       fill: #D81B60; }
     .pkg-container .pkg-file-img[data-format=pdf] svg path, .pkg-container .pkg-file-img[data-format*=pdf] svg path {
       fill: #E53935; }
     .pkg-container .pkg-file-img[data-format=zip] svg path, .pkg-container .pkg-file-img[data-format*=zip] svg path {
-      fill: #7CB342; }
+      fill: #4CAF50; }
     .pkg-container .pkg-file-img[data-format=rdf] svg path, .pkg-container .pkg-file-img[data-format*=rdf] svg path {
       fill: #00ACC1; }
     .pkg-container .pkg-file-img[data-format=nquad] svg path, .pkg-container .pkg-file-img[data-format*=nquad] svg path {
@@ -2143,7 +2127,7 @@ div#background-container {
     .pkg-container .pkg-file-img[data-format=turtle] svg path, .pkg-container .pkg-file-img[data-format*=turtle] svg path {
       fill: #00ACC1; }
     .pkg-container .pkg-file-img[data-format=shp] svg path, .pkg-container .pkg-file-img[data-format*=shp] svg path {
-      fill: #1e88e5; }
+      fill: #039BE5; }
     .pkg-container .pkg-file-img p {
       position: absolute;
       top: 0;
@@ -2164,7 +2148,7 @@ div#background-container {
     margin: 0 10px 0 10px;
     margin-top: -26px; }
     .pkg-container .pkg-actions button {
-      background: #0072bc;
+      background: #0695d6;
       color: white;
       border: none;
       border-radius: 4px;
@@ -2175,7 +2159,7 @@ div#background-container {
       font-weight: 300;
       padding: 3px 6px; }
       .pkg-container .pkg-actions button:hover {
-        background-color: #1e90da; }
+        background-color: #17b2f8; }
   .pkg-container:after {
     content: "";
     display: table;
@@ -2192,7 +2176,7 @@ div#background-container {
       font-size: 16px;
       margin: 0; }
     .pkg-container .package-info:hover h3 {
-      color: #0072bc; }
+      color: #0695d6; }
 
 #edit-group-container, #new-group-container {
   padding-right: 0;
@@ -2203,7 +2187,7 @@ div#background-container {
       padding-left: 15px; } }
   #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px; }
     @media (min-width: 992px) {
       #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
@@ -2216,7 +2200,7 @@ div#background-container {
       font-weight: 400;
       font-size: 40px; }
     #edit-group-container #edit-group form, #edit-group-container #new-group form, #new-group-container #edit-group form, #new-group-container #new-group form {
-      padding: 20px 50px;
+      padding: 50px;
       -o-border-radius: 4px;
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
@@ -2236,14 +2220,8 @@ div#background-container {
         width: 100%;
         font-size: 16px;
         line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #edit-group-container #edit-group form input[type="checkbox"], #edit-group-container #new-group form input[type="checkbox"], #new-group-container #edit-group form input[type="checkbox"], #new-group-container #new-group form input[type="checkbox"] {
-        -webkit-transform: scale(1.3);
-        -moz-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        -o-transform: scale(1.3);
-        transform: scale(1.3); }
+        padding: 10px;
+        height: 39.2px; }
       #edit-group-container #edit-group form .control-custom .input-prepend, #edit-group-container #new-group form .control-custom .input-prepend, #new-group-container #edit-group form .control-custom .input-prepend, #new-group-container #new-group form .control-custom .input-prepend {
         width: 100%;
         white-space: normal;
@@ -2254,8 +2232,8 @@ div#background-container {
           width: 20%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
         #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove {
           position: absolute;
           top: 50%;
@@ -2265,8 +2243,8 @@ div#background-container {
           margin: -1em 0 0 0;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
           #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove:before, #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove:after, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove:before, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove:after, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove:before, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove:after, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove:before, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove:after {
             content: initial; }
           #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove span, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove span, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove span, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove span {
@@ -2277,8 +2255,8 @@ div#background-container {
           width: 65%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
       #edit-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox, #edit-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox, #new-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox, #new-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox {
         width: 1px;
         height: 1px;
@@ -2286,22 +2264,22 @@ div#background-container {
         left: -10px;
         top: -10px; }
       #edit-group-container #edit-group form .package-groups label.package-group-label, #edit-group-container #new-group form .package-groups label.package-group-label, #new-group-container #edit-group form .package-groups label.package-group-label, #new-group-container #new-group form .package-groups label.package-group-label {
-        color: #D1D3D4;
+        color: #cccccc;
         margin: 0;
         padding: 2px 0; }
         #edit-group-container #edit-group form .package-groups label.package-group-label:after, #edit-group-container #new-group form .package-groups label.package-group-label:after, #new-group-container #edit-group form .package-groups label.package-group-label:after, #new-group-container #new-group form .package-groups label.package-group-label:after {
           content: initial; }
         #edit-group-container #edit-group form .package-groups label.package-group-label:hover, #edit-group-container #new-group form .package-groups label.package-group-label:hover, #new-group-container #edit-group form .package-groups label.package-group-label:hover, #new-group-container #new-group form .package-groups label.package-group-label:hover {
-          color: #0072bc; }
+          color: #0695d6; }
       #edit-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0072bc; }
+        color: #0695d6; }
       #edit-group-container #edit-group form .control-group, #edit-group-container #new-group form .control-group, #new-group-container #edit-group form .control-group, #new-group-container #new-group form .control-group {
         position: relative; }
         #edit-group-container #edit-group form .control-group.error .input-prepend .add-on, #edit-group-container #new-group form .control-group.error .input-prepend .add-on, #new-group-container #edit-group form .control-group.error .input-prepend .add-on, #new-group-container #new-group form .control-group.error .input-prepend .add-on {
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
     #edit-group-container #edit-group .group-warning span, #edit-group-container #new-group .group-warning span, #new-group-container #edit-group .group-warning span, #new-group-container #new-group .group-warning span {
       color: #870000; }
 
@@ -2327,7 +2305,7 @@ ul.activity {
       padding-left: 15px; } }
   #template-config-container #template-config {
     padding: 30px 50px;
-    color: #58595B;
+    color: #767676;
     font-size: 16px; }
     @media (min-width: 992px) {
       #template-config-container #template-config {
@@ -2340,7 +2318,7 @@ ul.activity {
       font-weight: 400;
       font-size: 40px; }
     #template-config-container #template-config form {
-      padding: 20px 50px;
+      padding: 50px;
       -o-border-radius: 4px;
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
@@ -2360,14 +2338,8 @@ ul.activity {
         width: 100%;
         font-size: 16px;
         line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #template-config-container #template-config form input[type="checkbox"] {
-        -webkit-transform: scale(1.3);
-        -moz-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        -o-transform: scale(1.3);
-        transform: scale(1.3); }
+        padding: 10px;
+        height: 39.2px; }
       #template-config-container #template-config form .control-custom .input-prepend {
         width: 100%;
         white-space: normal;
@@ -2378,8 +2350,8 @@ ul.activity {
           width: 20%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
         #template-config-container #template-config form .control-custom .input-prepend label.icon-remove {
           position: absolute;
           top: 50%;
@@ -2389,8 +2361,8 @@ ul.activity {
           margin: -1em 0 0 0;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
           #template-config-container #template-config form .control-custom .input-prepend label.icon-remove:before, #template-config-container #template-config form .control-custom .input-prepend label.icon-remove:after {
             content: initial; }
           #template-config-container #template-config form .control-custom .input-prepend label.icon-remove span {
@@ -2401,8 +2373,8 @@ ul.activity {
           width: 65%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
       #template-config-container #template-config form .package-groups input[type="checkbox"].package-group-checkbox {
         width: 1px;
         height: 1px;
@@ -2410,22 +2382,22 @@ ul.activity {
         left: -10px;
         top: -10px; }
       #template-config-container #template-config form .package-groups label.package-group-label {
-        color: #D1D3D4;
+        color: #cccccc;
         margin: 0;
         padding: 2px 0; }
         #template-config-container #template-config form .package-groups label.package-group-label:after {
           content: initial; }
         #template-config-container #template-config form .package-groups label.package-group-label:hover {
-          color: #0072bc; }
+          color: #0695d6; }
       #template-config-container #template-config form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0072bc; }
+        color: #0695d6; }
       #template-config-container #template-config form .control-group {
         position: relative; }
         #template-config-container #template-config form .control-group.error .input-prepend .add-on {
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
     #template-config-container #template-config label:after {
       content: none; }
     #template-config-container #template-config .title-options {
