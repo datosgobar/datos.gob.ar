@@ -81,6 +81,8 @@ div.svg-tooltip {
       height: 72px;
       font-size: 18px;
       line-height: 4; }
+      #header #header-spacing .logo-header svg.edit-svg path, #header #header-spacing .header-links svg.edit-svg path {
+        fill: #999999; }
     #header #header-spacing .header-links {
       overflow: hidden; }
       #header #header-spacing .header-links a {
@@ -137,9 +139,21 @@ div.svg-tooltip {
       font-size: 16px;
       font-weight: 500;
       text-align: center; }
-      #footer #footer-spacer .footer-section.logo img {
-        max-width: 300px;
-        margin-bottom: 20px; }
+      #footer #footer-spacer .footer-section.logo .logo-edit-container {
+        padding-right: 30px;
+        position: relative;
+        display: inline; }
+        #footer #footer-spacer .footer-section.logo .logo-edit-container svg.edit-svg {
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          right: 0;
+          top: 0; }
+        #footer #footer-spacer .footer-section.logo .logo-edit-container img {
+          max-width: 300px;
+          margin-bottom: 20px; }
+      #footer #footer-spacer .footer-section.logo svg.edit-svg path {
+        fill: #999999; }
       #footer #footer-spacer .footer-section.logo a.social-link {
         display: inline-block;
         -o-border-radius: 4px;
@@ -1143,9 +1157,9 @@ div#background-container {
       font-size: 50px; } }
 #title.organization-title #title-container .description {
   margin: 0; }
-  #title.organization-title #title-container .description .edit-description-link svg {
+  #title.organization-title #title-container .description .edit-description-link svg.edit-svg {
     display: inline-block; }
-    #title.organization-title #title-container .description .edit-description-link svg path {
+    #title.organization-title #title-container .description .edit-description-link svg.edit-svg path {
       fill: white; }
 #title.organization-title #stats .stats-legend {
   margin: 0; }
@@ -1670,9 +1684,9 @@ div#background-container {
   padding-bottom: 40px; }
 #title.package-title #title-container .description {
   margin: 0; }
-  #title.package-title #title-container .description .edit-description-link svg {
+  #title.package-title #title-container .description .edit-description-link svg.edit-svg {
     display: inline-block; }
-    #title.package-title #title-container .description .edit-description-link svg path {
+    #title.package-title #title-container .description .edit-description-link svg.edit-svg path {
       fill: white; }
 #title.package-title #stats > div {
   padding: 0; }

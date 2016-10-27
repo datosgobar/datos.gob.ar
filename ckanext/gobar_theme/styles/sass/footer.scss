@@ -33,9 +33,25 @@ $footer-height: 230px;
       text-align: center;
 
       &.logo {
-        img {
-          max-width: 300px;
-          margin-bottom: 20px;
+        .logo-edit-container {
+          padding-right: 30px;
+          position: relative;
+          display: inline;
+
+          svg.edit-svg {
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          img {
+            max-width: 300px;
+            margin-bottom: 20px;
+          }
+        }
+        svg.edit-svg path {
+          fill: $grey-300;
         }
         a.social-link {
           display: inline-block;
