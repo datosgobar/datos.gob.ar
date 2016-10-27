@@ -14,6 +14,11 @@
       padding-right: 20px;
     }
 
+    form {
+      margin: 0;
+      padding: 0;
+    }
+
     h1 {
       color: $blue-300;
       font-weight: 400;
@@ -88,6 +93,7 @@
     }
     .submit-container {
       padding-top: 50px;
+      padding-bottom: 50px;
       text-align: center;
       .submit-button {
         background-color: $blue-300;

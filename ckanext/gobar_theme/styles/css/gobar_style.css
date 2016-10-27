@@ -2358,6 +2358,9 @@ ul.activity {
     #template-config-container #template-config .main-config-container {
       padding-left: 20px;
       padding-right: 20px; }
+    #template-config-container #template-config form {
+      margin: 0;
+      padding: 0; }
     #template-config-container #template-config h1 {
       color: #0695d6;
       font-weight: 400;
@@ -2416,6 +2419,7 @@ ul.activity {
       height: 100px; }
     #template-config-container #template-config .submit-container {
       padding-top: 50px;
+      padding-bottom: 50px;
       text-align: center; }
       #template-config-container #template-config .submit-container .submit-button {
         background-color: #0695d6;

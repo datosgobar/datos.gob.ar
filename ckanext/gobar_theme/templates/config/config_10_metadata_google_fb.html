@@ -1,5 +1,34 @@
 {% extends "config/config_base.html" %}
 
 {% block config %}
-    Metadata fb y google
+    <h1>Metadatos</h1>
+
+    <form method="post" action="" data-module="basic-form">
+        <p>Esta información te permite definir el título, la descripción y la imagen que se muestran en FB y Twitter
+            cuando compartís un link de tu portal. Además, es muy útil porque también es la manera en la que Google
+            muestra tu sitio en sus resultados. Por favor, completalo</p>
+
+        <h1>Google y Facebook</h1>
+
+        <p>Titulo de tu portal</p>
+        <p>Escribí como máximo 67 caracteres para que no se vea cortado.</p>
+        <input type="text" title="Título del portal" placeholder="Título" id="metadata-fb-title">
+
+        <p>Descripción de tu portal</p>
+        <p>Escribí como máximo 155 caracteres para que no se vea cortado.</p>
+        <input type="text" title="Descripción del portal" placeholder="Descripción" id="metadata-fb-description">
+
+        <h1>Twitter</h1>
+        <p>Titulo de tu portal</p>
+        <p>Escribí como máximo 67 caracteres para que no se vea cortado.</p>
+        <input type="text" title="Título del portal" placeholder="Título" id="metadata-tw-title">
+
+        <p>Descripción de tu portal</p>
+        <p>Escribí como máximo 155 caracteres para que no se vea cortado.</p>
+        <input type="text" title="Descripción del portal" placeholder="Descripción" id="metadata-tw-description">
+
+        <div class="submit-container">
+            <button class="submit-button" type="submit" name="save">GUARDAR</button>
+        </div>
+    </form>
 {% endblock %}
