@@ -3,6 +3,7 @@
   height: 100%;
   display: table-row;
   #template-config {
+    overflow: hidden;
     @include base-content();
     height: 100%;
     padding: 0;
@@ -23,9 +24,31 @@
       font-weight: 400;
       margin: 0 0 10px 0;
       font-size: 22px;
+      &.blue {
+        color: $blue-300;
+      }
     }
     p {
       margin: 0 0 10px 0;
+    }
+    .checkboxes-container {
+      margin-bottom: 30px;
+      label.img-checkbox {
+        text-align: center;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        &:after {
+          content: none;
+        }
+        input {
+          position: absolute;
+          left: -9999px;
+          top: -9999px;
+        }
+        .checkbox-description {
+          padding: 10px;
+        }
+      }
     }
     input[type="text"] {
       width: 100%;
