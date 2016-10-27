@@ -7,7 +7,9 @@
         <div class="restricted-max-width">
             <div id="template-config" class="col-xs-12 col-md-10 col-md-offset-1">
                 {% snippet "config/navbar.html" %}
-                {% block config %}{% endblock %}
+                <div class="col-xs-12 col-md-8 main-config-container">
+                    {% block config %}{% endblock %}
+                </div>
             </div>
         </div>
     </div>

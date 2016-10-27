@@ -6,5 +6,52 @@
     @include base-content();
     height: 100%;
     padding: 0;
+    color: $grey-400;
+
+    .main-config-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    h1 {
+      color: $blue-300;
+      font-weight: 400;
+      margin: 50px 0 30px 0;
+      font-size: 40px;
+    }
+    h2 {
+      font-weight: 400;
+      margin: 0 0 10px 0;
+      font-size: 22px;
+    }
+    p {
+      margin: 0 0 10px 0;
+    }
+    input[type="text"] {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 10px;
+      height: auto;
+    }
+
+    textarea {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 10px;
+      height: 100px;
+    }
+
+    .submit-container {
+      padding-top: 50px;
+      text-align: center;
+      .submit-button {
+        background-color: $blue-300;
+        color: white;
+        border: none;
+        @include border-radius(4px);
+        padding: 12px;
+      }
+    }
+
   }
 }
