@@ -4,7 +4,6 @@
   display: table-row;
   #login {
     display: table;
-    width: 100%;
     height: 100%;
     @include base-content();
     @include base-form();

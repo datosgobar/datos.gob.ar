@@ -869,7 +869,6 @@ div#background-container {
       padding-left: 15px; } }
   #login-container #login {
     display: table;
-    width: 100%;
     height: 100%;
     padding: 30px 50px;
     color: #767676;
