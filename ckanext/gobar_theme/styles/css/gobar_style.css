@@ -1309,6 +1309,17 @@ div#background-container {
   #search-results .add-dataset {
     text-align: right;
     margin-top: 20px; }
+    #search-results .add-dataset a {
+      color: white;
+      border: none;
+      padding: 12px;
+      -o-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      background-color: #0695d6; }
+      #search-results .add-dataset a:hover {
+        background-color: #17b2f8; }
   #search-results .search-and-order {
     padding: 0;
     border: none;
@@ -1659,6 +1670,10 @@ div#background-container {
   padding-bottom: 40px; }
 #title.package-title #title-container .description {
   margin: 0; }
+  #title.package-title #title-container .description .edit-description-link svg {
+    display: inline-block; }
+    #title.package-title #title-container .description .edit-description-link svg path {
+      fill: white; }
 #title.package-title #stats > div {
   padding: 0; }
   #title.package-title #stats > div .stats-legend {
