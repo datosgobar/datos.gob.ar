@@ -35,6 +35,9 @@
       font-size: 16px;
       font-weight: 300;
       margin-bottom: 30px;
+      svg.edit-svg path {
+        fill: white;
+      }
     }
   }
   #searcher {
@@ -144,6 +147,15 @@
         }
       }
 
+    }
+  }
+
+  .title-links {
+    padding-top: 20px;
+    background-color: rgba(black, 0.5);
+    text-align: right;
+    a {
+      color: white;
     }
   }
 }

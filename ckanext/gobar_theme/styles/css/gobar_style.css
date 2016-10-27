@@ -584,6 +584,8 @@ div#background-container {
       font-size: 16px;
       font-weight: 300;
       margin-bottom: 30px; }
+      #title #title-container .description svg.edit-svg path {
+        fill: white; }
   @media (min-width: 992px) {
     #title #searcher.position-bottom {
       position: absolute;
@@ -666,6 +668,12 @@ div#background-container {
       @media (min-width: 992px) {
         #title #stats .stats-legend.datasets {
           margin-bottom: 40px; } }
+  #title .title-links {
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: right; }
+    #title .title-links a {
+      color: white; }
 
 .featured-groups {
   padding: 20px 0;
@@ -792,8 +800,18 @@ div#background-container {
   @media (min-width: 768px) {
     #home-create-buttons {
       text-align: right; } }
-  #home-create-buttons .btn {
-    margin-top: 10px; }
+  #home-create-buttons a {
+    display: inline-block;
+    color: white;
+    border: none;
+    padding: 12px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #0695d6; }
+    #home-create-buttons a:hover {
+      background-color: #17b2f8; }
 
 #featured-content-container {
   background-color: #f5f5f5;
@@ -1064,6 +1082,7 @@ div#background-container {
       text-align: right;
       margin-bottom: 20px; }
       .organization-container .organization .add-organization a {
+        display: inline-block;
         color: white;
         border: none;
         padding: 12px;
@@ -1324,6 +1343,7 @@ div#background-container {
     text-align: right;
     margin-top: 20px; }
     #search-results .add-dataset a {
+      display: inline-block;
       color: white;
       border: none;
       padding: 12px;

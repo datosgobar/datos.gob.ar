@@ -2,12 +2,20 @@
 {% set config = h.template_config() %}
 
 <div id="title" class="container-fluid">
+    {% snippet "home/title_config.html" %}
     <div class="background-overlay no-padding-bottom">
         <div class="restricted-max-width">
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
                 <div id="title-container" class="col-xs-12 text-center">
                     <h1>{{ config['home_title'] }}</h1>
-                    <p class="description">{{ config['home_description'] }}</p>
+                    <p class="description">
+                        {{ config['home_description'] }}
+                        {% if h.check_access('package_create') %}
+                            <a class="edit-description-link" href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_title') }}">
+                                {% snippet "svg/edit.svg" %}
+                            </a>
+                        {% endif %}
+                    </p>
                 </div>
                 <div id="searcher" class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3 col-lg-offset-3 col-lg-6 no-padding">
                     <form class="module-content search-form" method="get"

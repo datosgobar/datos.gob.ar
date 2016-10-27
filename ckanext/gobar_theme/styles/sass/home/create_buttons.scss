@@ -4,10 +4,18 @@
   text-align: center;
 
   @include breakpoint-sm {
-      text-align: right;
+    text-align: right;
   }
 
-  .btn {
-    margin-top: 10px;
+  a {
+    display: inline-block;
+    color: white;
+    border: none;
+    padding: 12px;
+    @include border-radius(4px);
+    background-color: $blue-300;
+    &:hover {
+      background-color: $blue-200;
+    }
   }
 }
