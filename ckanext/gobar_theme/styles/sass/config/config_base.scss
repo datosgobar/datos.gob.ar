@@ -1,0 +1,10 @@
+#template-config-container {
+  @include base-container();
+  height: 100%;
+  display: table-row;
+  #template-config {
+    @include base-content();
+    height: 100%;
+    padding: 0;
+  }
+}

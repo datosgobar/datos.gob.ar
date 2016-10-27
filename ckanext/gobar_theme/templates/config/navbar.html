@@ -1,131 +1,62 @@
-<div id="pkg-secondary-info" class="col-xs-12 col-md-4">
-    <h2 class="secondary-info-title">Información adicional</h2>
+<div id="navbar" class="col-xs-12 col-md-4">
 
-    <div id="info-container">
-
-        {% if pkg.maintainer|length > 0 %}
-            <div class="row">
-                <div class="col-xs-5 title">
-                    Responsable
-                </div>
-                <div class="col-xs-7 value">
-                    <p class="pkg-maintainer">
-                        {{ pkg.maintainer }}
-                        {% if pkg.maintainer_email %}
-                            <a href="mailto:{{ pkg.maintainer_email }}">
-                                {% snippet "svg/mail.svg" %}
-                            </a>
-                        {% endif %}
-                    </p>
-                </div>
-            </div>
-        {% endif %}
-
-        {% set dataset_url = h.url_for(controller='package', action='search') %}
-
-        {% if pkg.groups|length > 0 %}
-            <div class="row group-row">
-                <div class="col-xs-5 title">
-                    Grupos
-                </div>
-                <div class="col-xs-7 value">
-                    {% for group in pkg.groups %}
-                        <div class="group-img-container">
-                            <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
-                                <img src="{{ h.cut_img_path(group.image_display_url) }}" data-title="{{ group.title }}"
-                                     class="group-image" data-replace="svg">
-                            </a>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
-        {% endif %}
-
-        {% if pkg.tags|length > 0 %}
-            <div class="row">
-                <div class="col-xs-5 title">
-                    Tags
-                </div>
-                <div class="col-xs-7 value">
-                    {% for tag in pkg.tags %}
-                        <p class="pkg-tag">
-                            <a href="{{ h.add_url_param(new_params={'tags': tag.name}, alternative_url=dataset_url) }}">
-                                {{ tag.name }}
-                            </a>
-                        </p>
-                    {% endfor %}
-                </div>
-            </div>
-        {% endif %}
-
-        <div class="row">
-            <div class="col-xs-5 title">
-                Fecha de publicación
-            </div>
-            <div class="col-xs-7 value">
-                {{ h.render_datetime(pkg.metadata_created) }}
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-5 title">
-                Fecha de actualización
-            </div>
-            <div class="col-xs-7 value">
-                {{ h.render_datetime(pkg.metadata_modified) }}
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-5 title">
-                Licencia
-            </div>
-            <div class="col-xs-7 value">
-                {{ pkg.license_title }}
-            </div>
-        </div>
-
-        {% if pkg.url %}
-            <div class="row">
-                <div class="col-xs-5 title">
-                    Fuente
-                </div>
-                <div class="col-xs-7 value">
-                    {{ pkg.url|urlize }}
-                </div>
-            </div>
-        {% endif %}
-
-        {% if pkg.extras %}
-            {% for extra in pkg.extras %}
-                {% if extra.key != 'home_featured' and extra.key != 'Responsable' %}
-                    <div class="row">
-                        <div class="col-xs-5 title">
-                            {{ extra.key }}
-                        </div>
-                        <div class="col-xs-7 value">
-                            <p>{{ extra.value|urlize }}</p>
-                        </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-
+    <h2>Página de inicio</h2>
+    <div class="links-section">
+        <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_title') }}"
+            class="section-link {{ 'active' if c.action == 'edit_title' else '' }}">
+            Título, descripción e imagen del portal
+        </a>
+        <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_home') }}"
+            class="section-link {{ 'active' if c.action == 'edit_home' else '' }}">
+            Formato de la portada
+        </a>
+        <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_groups') }}"
+            class="section-link {{ 'active' if c.action == 'edit_groups' else '' }}">
+            Formato de los temas
+        </a>
+        <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_header') }}"
+           class="section-link {{ 'active' if c.action == 'edit_header' else '' }}">
+            Logo del encabezado
+        </a>
+        <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_social') }}"
+           class="section-link {{ 'active' if c.action == 'edit_social' else '' }}">
+            Redes sociales y contacto
+        </a>
+        <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_footer') }}"
+           class="section-link {{ 'active' if c.action == 'edit_footer' else '' }}">
+            Logo del piede de página
+        </a>
     </div>
 
-    <div id="pkg-recent-activity">
-        <h2 class="recent-activity-title">Actividad reciente</h2>
-        {% set activity = h.get_action('package_activity_list_html', {'id': pkg.id, 'limit': 500}) %}
-        {{ activity }}
-        <p class="activity-read-more">
-            {{ h.snippet('svg/flecha_abajo.svg') }}
-            Mostrar mas
-            {{ h.snippet('svg/flecha_abajo.svg') }}
-        </p>
+    <h2>Otras secciones del portal</h2>
+    <div class="links-section">
+        <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_datasets') }}"
+           class="section-link {{ 'active' if c.action == 'edit_datasets' else '' }}">
+            Datasets
+        </a>
+        <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_organizations') }}"
+           class="section-link {{ 'active' if c.action == 'edit_organizations' else '' }}">
+            Organizaciones con datasets (opcional)
+        </a>
+        <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_about') }}"
+           class="section-link {{ 'active' if c.action == 'edit_about' else '' }}">
+            Acerca (opcional)
+        </a>
+    </div>
 
-        <p class="activity-loading hidden">Cargando</p>
-        <hr class="final-separator">
+    <h2>Metadatos</h2>
+    <div class="links-section">
+        <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_metadata_google_fb') }}"
+           class="section-link {{ 'active' if c.action == 'edit_metadata_google_fb' else '' }}">
+            Google y Facebook
+        </a>
+        <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_metadata_tw') }}"
+           class="section-link {{ 'active' if c.action == 'edit_metadata_tw' else '' }}">
+            Twitter
+        </a>
+    </div>
+
+    <div class="links-section guide-link">
+        ¿Dudas? Tené a mano la <a class="inline" href="https://github.com/datosgobar">guía de uso</a>.
     </div>
 </div>
-
-{% resource 'gobar_js/package/activity.js' %}

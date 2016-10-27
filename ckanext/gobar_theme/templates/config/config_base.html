@@ -3,8 +3,13 @@
 
 {% block content %}
 
-    {% set config = h.template_config() %}
-
-    {% block config %}{% endblock %}
+    <div id="template-config-container" class="container-fluid">
+        <div class="restricted-max-width">
+            <div id="template-config" class="col-xs-12 col-md-10 col-md-offset-1">
+                {% snippet "config/navbar.html" %}
+                {% block config %}{% endblock %}
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
