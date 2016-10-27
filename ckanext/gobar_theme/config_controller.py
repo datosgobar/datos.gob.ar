@@ -9,12 +9,46 @@ parse_params = logic.parse_params
 class GobArConfigController(base.BaseController):
 
     def edit_config(self):
+        # TODO: sacar este metodo
         if request.method == 'POST':
             params = parse_params(request.POST)
             self._update_config(params)
             h.redirect_to(controller='ckanext.gobar_theme.controller:GobArHomeController', action='index')
         else:
             return base.render('config/edit_templates.html')
+
+    def edit_title(self):
+        return base.render('config/config_01_title.html')
+
+    def edit_home(self):
+        return base.render('config/config_02_home.html')
+
+    def edit_groups(self):
+        return base.render('config/config_03_groups.html')
+
+    def edit_header(self):
+        return base.render('config/config_04_header.html')
+
+    def edit_social(self):
+        return base.render('config/config_05_social.html')
+
+    def edit_footer(self):
+        return base.render('config/config_06_footer.html')
+
+    def edit_datasets(self):
+        return base.render('config/config_07_dataset.html')
+
+    def edit_organizations(self):
+        return base.render('config/config_08_organizations.html')
+
+    def edit_about(self):
+        return base.render('config/config_09_about.html')
+
+    def edit_metadata_google_fb(self):
+        return base.render('config/config_10_metadata_google_fb.html')
+
+    def edit_metadata_tw(self):
+        return base.render('config/config_11_metadata_twitter.html')
 
     def _update_config(self, new_params):
         new_params_dict = {

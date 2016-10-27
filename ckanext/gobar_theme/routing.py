@@ -139,5 +139,19 @@ class GobArRouter:
 
     def connect_template_config(self):
         with SubMapper(self.route_map, controller=self.config_controller) as m:
-            m.connect('/template_config', action='edit_config')
+            m.connect('/configurar/titulo', action='edit_title')
+            m.connect('/configurar/portada', action='edit_home')
+            m.connect('/configurar/encabezado', action='edit_header')
+            m.connect('/configurar/temas', action='edit_groups')
+            m.connect('/configurar/redes', action='edit_social')
+            m.connect('/configurar/pie-de-pagina', action='edit_footer')
+            m.connect('/configurar/datasets', action='edit_datasets')
+            m.connect('/configurar/organizaciones', action='edit_organizations')
+            m.connect('/configurar/acerca', action='edit_about')
+            m.connect('/configurar/metadata/google_fb', action='edit_metadata_google_fb')
+            m.connect('/configurar/metadata/tw', action='edit_metadata_tw')
 
+        self.redirect(
+            ('/configurar', '/configurar/titulo'),
+            ('/configurar', '/configurar/metadata')
+        )
