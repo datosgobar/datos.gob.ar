@@ -31,24 +31,27 @@
     p {
       margin: 0 0 10px 0;
     }
-    .checkboxes-container {
+    .radio-container {
       margin-bottom: 30px;
 
-      .checkbox-box {
+      .radio-box {
         @include border-radius(4px);
         border: solid 2px $grey-100;
         &.selected, &:hover {
           border-color: $blue-300;
-          .checkbox-description {
+          .radio-description {
             background-color: $blue-300;
             color: white;
           }
         }
         &.not-selected {
           opacity: 0.75;
+          &:hover {
+            opacity: 1;
+          }
         }
       }
-      label.img-checkbox {
+      label.img-radio {
         text-align: center;
         font-weight: 400;
         margin: 0 0 10px 0;
@@ -60,7 +63,7 @@
           left: -9999px;
           top: -9999px;
         }
-        .checkbox-description {
+        .radio-description {
           padding: 10px;
         }
       }

@@ -2371,32 +2371,34 @@ ul.activity {
         color: #0695d6; }
     #template-config-container #template-config p {
       margin: 0 0 10px 0; }
-    #template-config-container #template-config .checkboxes-container {
+    #template-config-container #template-config .radio-container {
       margin-bottom: 30px; }
-      #template-config-container #template-config .checkboxes-container .checkbox-box {
+      #template-config-container #template-config .radio-container .radio-box {
         -o-border-radius: 4px;
         -moz-border-radius: 4px;
         -webkit-border-radius: 4px;
         border-radius: 4px;
         border: solid 2px #f5f5f5; }
-        #template-config-container #template-config .checkboxes-container .checkbox-box.selected, #template-config-container #template-config .checkboxes-container .checkbox-box:hover {
+        #template-config-container #template-config .radio-container .radio-box.selected, #template-config-container #template-config .radio-container .radio-box:hover {
           border-color: #0695d6; }
-          #template-config-container #template-config .checkboxes-container .checkbox-box.selected .checkbox-description, #template-config-container #template-config .checkboxes-container .checkbox-box:hover .checkbox-description {
+          #template-config-container #template-config .radio-container .radio-box.selected .radio-description, #template-config-container #template-config .radio-container .radio-box:hover .radio-description {
             background-color: #0695d6;
             color: white; }
-        #template-config-container #template-config .checkboxes-container .checkbox-box.not-selected {
+        #template-config-container #template-config .radio-container .radio-box.not-selected {
           opacity: 0.75; }
-      #template-config-container #template-config .checkboxes-container label.img-checkbox {
+          #template-config-container #template-config .radio-container .radio-box.not-selected:hover {
+            opacity: 1; }
+      #template-config-container #template-config .radio-container label.img-radio {
         text-align: center;
         font-weight: 400;
         margin: 0 0 10px 0; }
-        #template-config-container #template-config .checkboxes-container label.img-checkbox:after {
+        #template-config-container #template-config .radio-container label.img-radio:after {
           content: none; }
-        #template-config-container #template-config .checkboxes-container label.img-checkbox input {
+        #template-config-container #template-config .radio-container label.img-radio input {
           position: absolute;
           left: -9999px;
           top: -9999px; }
-        #template-config-container #template-config .checkboxes-container label.img-checkbox .checkbox-description {
+        #template-config-container #template-config .radio-container label.img-radio .radio-description {
           padding: 10px; }
     #template-config-container #template-config input[type="text"] {
       width: 100%;
