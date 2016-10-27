@@ -14,6 +14,12 @@
     }
     .description {
       margin: 0;
+      .edit-description-link svg {
+        display: inline-block;
+        path {
+          fill: white;
+        }
+      }
     }
   }
   #stats {

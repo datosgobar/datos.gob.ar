@@ -10,6 +10,16 @@
     .add-organization {
       text-align: right;
       margin-bottom: 20px;
+      a {
+        color: white;
+        border: none;
+        padding: 12px;
+        @include border-radius(4px);
+        background-color: $blue-300;
+        &:hover {
+          background-color: $blue-200;
+        }
+      }
     }
 
     .organization-list {

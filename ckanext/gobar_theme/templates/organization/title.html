@@ -8,7 +8,14 @@
                 <div id="title-container" class="col-xs-12 col-md-6 text-left">
                     <h1>Organizaciones</h1>
 
-                    <p class="description">{{ config['organization_description'] }}</p>
+                    <p class="description">
+                        {{ config['organization_description'] }}
+                        {% if h.check_access('organization_create') %}
+                            <a class="edit-description-link" href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_organizations') }}">
+                                {% snippet "svg/edit.svg" %}
+                            </a>
+                        {% endif %}
+                    </p>
                 </div>
                 <div id="stats" class="col-xs-12 col-md-4 col-md-offset-2">
                     <div>

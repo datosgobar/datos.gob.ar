@@ -18,7 +18,7 @@
             <div class="organization col-xs-12 col-md-10 col-md-offset-1">
                 {% if h.check_access('organization_create') %}
                     <div class="add-organization">
-                        {% link_for _('Add Organization'), controller='organization', action='new', class_='btn btn-primary', icon='plus-sign-alt' %}
+                        {% link_for 'CREAR ORGANIZACIÓN', controller='organization', action='new', class_='' %}
                     </div>
                 {% endif %}
 
