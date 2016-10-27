@@ -33,6 +33,21 @@
     }
     .checkboxes-container {
       margin-bottom: 30px;
+
+      .checkbox-box {
+        @include border-radius(4px);
+        border: solid 2px $grey-100;
+        &.selected, &:hover {
+          border-color: $blue-300;
+          .checkbox-description {
+            background-color: $blue-300;
+            color: white;
+          }
+        }
+        &.not-selected {
+          opacity: 0.75;
+        }
+      }
       label.img-checkbox {
         text-align: center;
         font-weight: 400;

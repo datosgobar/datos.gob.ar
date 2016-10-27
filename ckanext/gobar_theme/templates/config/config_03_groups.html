@@ -1,5 +1,43 @@
 {% extends "config/config_base.html" %}
 
 {% block config %}
-    Groups
+    {% set config = h.template_config() %}
+
+    <h1>Formato de los temas</h1>
+
+    <form method="post" action="" data-module="basic-form">
+        <h2 class="blue">¿Cómo te gustaría que se vea tu portada?</h2>
+        <p>Podés elegir la alineación del título y la descripción, y mostrar (o no) la cantidad de datasets u organizaciones con datos.</p>
+
+        <div class="container-fluid checkboxes-container">
+            <label class="img-checkbox col-xs-12 col-md-6">
+                <div class="checkbox-box">
+                    <img src="/img/config/temas1.svg" class="logo-ministerio">
+                    <div class="checkbox-description">
+                        <h2>Temas con íconos</h2>
+                        Mostrar temas con íconos y descripción
+                    </div>
+                    <input type="checkbox" name="home">
+                </div>
+            </label>
+
+            <label class="img-checkbox col-xs-12 col-md-6">
+                <div class="checkbox-box">
+                    <img src="/img/config/temas2.svg" class="logo-ministerio">
+                    <div class="checkbox-description">
+                        <h2>Temas sin íconos</h2>
+                        Mostrar temas solo con descripción
+                    </div>
+                    <input type="checkbox" name="home">
+                </div>
+            </label>
+
+        </div>
+
+
+        <div class="submit-container">
+            <button class="submit-button" type="submit" name="save">GUARDAR</button>
+        </div>
+    </form>
+
 {% endblock %}
