@@ -1,5 +1,31 @@
 {% extends "config/config_base.html" %}
 
 {% block config %}
-    Social
+    <h1>Redes sociales y contacto</h1>
+
+    <form method="post" action="" data-module="basic-form">
+        <p>Por favor, cargá las URL's de tus redes sociales y tu mail oficial de contacto. Si no tenés alguno, dejalo en blanco y no se mostrará en la pagina.</p>
+
+        <p>Facebook</p>
+        <input type="text" title="Facebook" id="fb">
+
+        <p>Twitter</p>
+        <input type="text" title="Twitter" id="tw">
+
+        <p>GitHub</p>
+        <input type="text" title="GitHub" id="git">
+
+        <p>Instagram</p>
+        <input type="text" title="Instagram" id="inst">
+
+        <p>Youtube</p>
+        <input type="text" title="Youtube" id="yt">
+
+        <p>Mail de contacto</p>
+        <input type="text" title="Mail de contacto" id="mail">
+
+        <div class="submit-container">
+            <button class="submit-button" type="submit" name="save">GUARDAR</button>
+        </div>
+    </form>
 {% endblock %}
