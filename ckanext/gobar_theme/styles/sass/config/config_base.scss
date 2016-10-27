@@ -28,8 +28,12 @@
         color: $blue-300;
       }
     }
-    p {
+    p, label {
       margin: 0 0 10px 0;
+      font-weight: 400;
+      &:after {
+        content: none;
+      }
     }
     .radio-container {
       margin-bottom: 30px;
@@ -55,9 +59,6 @@
         text-align: center;
         font-weight: 400;
         margin: 0 0 10px 0;
-        &:after {
-          content: none;
-        }
         input {
           position: absolute;
           left: -9999px;
@@ -74,6 +75,10 @@
       padding: 10px;
       height: auto;
     }
+    input[type="checkbox"] {
+      margin: 0 5px 0 0;
+      position: static;
+    }
 
     textarea {
       width: 100%;
@@ -81,7 +86,6 @@
       padding: 10px;
       height: 100px;
     }
-
     .submit-container {
       padding-top: 50px;
       text-align: center;

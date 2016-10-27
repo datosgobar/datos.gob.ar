@@ -2369,8 +2369,11 @@ ul.activity {
       font-size: 22px; }
       #template-config-container #template-config h2.blue {
         color: #0695d6; }
-    #template-config-container #template-config p {
-      margin: 0 0 10px 0; }
+    #template-config-container #template-config p, #template-config-container #template-config label {
+      margin: 0 0 10px 0;
+      font-weight: 400; }
+      #template-config-container #template-config p:after, #template-config-container #template-config label:after {
+        content: none; }
     #template-config-container #template-config .radio-container {
       margin-bottom: 30px; }
       #template-config-container #template-config .radio-container .radio-box {
@@ -2392,8 +2395,6 @@ ul.activity {
         text-align: center;
         font-weight: 400;
         margin: 0 0 10px 0; }
-        #template-config-container #template-config .radio-container label.img-radio:after {
-          content: none; }
         #template-config-container #template-config .radio-container label.img-radio input {
           position: absolute;
           left: -9999px;
@@ -2405,6 +2406,9 @@ ul.activity {
       margin-bottom: 30px;
       padding: 10px;
       height: auto; }
+    #template-config-container #template-config input[type="checkbox"] {
+      margin: 0 5px 0 0;
+      position: static; }
     #template-config-container #template-config textarea {
       width: 100%;
       margin-bottom: 30px;
