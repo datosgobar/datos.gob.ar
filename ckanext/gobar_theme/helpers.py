@@ -140,13 +140,35 @@ def get_facet_items_dict(facet, limit=None, exclude_active=False):
     return ckan_helpers.get_facet_items_dict(facet, limit, exclude_active)
 
 
-def template_config(name=None):
+CONFIG_PATH = '/var/lib/ckan/default/gobar/settings.json'
+
+
+def get_theme_config(path=None):
     try:
-        gobar_config = g['gobar']
-    except TypeError:
-        with open('/var/lib/ckan/default/gobar/settings.json') as json_data:
-            g.gobar = gobar_config = json.load(json_data)
-    if name is not None:
-        return gobar_config[name]
+        gobar_config = g.gobar
+    except Exception:
+        g.gobar = gobar_config = _read_theme_config()
+
+    if path is not None:
+        keys = path.split('.')
+        for key in keys:
+            if gobar_config is not None and key in gobar_config:
+                gobar_config = gobar_config[key]
+            else:
+                gobar_config = None
+
     return gobar_config
 
+
+def _read_theme_config():
+    with open(CONFIG_PATH) as json_data:
+        try:
+            return json.load(json_data)
+        except Exception:
+            return {}
+
+
+def save_theme_config():
+    with open(CONFIG_PATH, 'w') as json_data:
+        config = g.gobar
+        json_data.write(json.dumps(config))
