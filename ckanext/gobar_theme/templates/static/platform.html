@@ -10,7 +10,8 @@
             <div id="platform-users" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
                 <div class="col-xs-12 col-md-10 col-md-offset-1">
                     <div id="pkg-path">
-                        <a href="{{ h.url_for(controller='package', action='search') }}">Datos Argentina</a> / Plataforma
+                        {% set title = h.get_theme_config('title.site-title') %}
+                        <a href="{{ h.url_for(controller='package', action='search') }}">{{ title if title else '' }}</a> / Plataforma
                     </div>
 
                     <h2>Plataforma</h2>

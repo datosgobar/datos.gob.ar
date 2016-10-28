@@ -1,6 +1,7 @@
 <div id="pkg-main-info" class="col-xs-12 col-md-8">
     <div id="pkg-path">
-        <a href="{{ h.url_for(controller='package', action='search') }}">Datos Argentina</a> / Dataset
+        {% set title = h.get_theme_config('title.site-title') %}
+        <a href="{{ h.url_for(controller='package', action='search') }}">{{ title if title else '' }}</a> / Dataset
     </div>
     <div id="pkg-title-and-desc">
         {% if h.check_access('package_update', {'id':pkg.id }) %}

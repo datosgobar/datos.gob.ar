@@ -36,7 +36,8 @@
 {%- endblock -%}
 
 {%- block title -%}
-    Datos Argentina {%- block subtitle -%}{%- endblock -%}
+    {% set title = h.get_theme_config('title.site-title') %}
+    {{ title if title else '' }} {%- block subtitle -%}{%- endblock -%}
 {%- endblock -%}
 
 {%- block links -%}
