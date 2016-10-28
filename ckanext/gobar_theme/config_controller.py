@@ -21,13 +21,19 @@ class GobArConfigController(base.BaseController):
         if request.method == 'POST':
             params = parse_params(request.POST)
             g.gobar['title'] = {
-                'site-title': params['site-title'],
-                'site-description': params['site-description']
+                'site-title': params['site-title'].strip(),
+                'site-description': params['site-description'].strip()
             }
             gobar_helpers.save_theme_config()
         return base.render('config/config_01_title.html')
 
     def edit_home(self):
+        if request.method == 'POST':
+            params = parse_params(request.POST)
+            g.gobar['home'] = {
+                'title-template': params['title-template']
+            }
+            gobar_helpers.save_theme_config()
         return base.render('config/config_02_home.html')
 
     def edit_groups(self):

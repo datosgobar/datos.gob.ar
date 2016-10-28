@@ -2,12 +2,15 @@
 
 {% block content %}
   <div class="home">
-    {% if h.get_theme_config('home_title_template') == 1 %}
+    {% set title_template = h.get_theme_config('home.title-template') %}
+    {% if title_template == 'portada1' %}
         {% snippet "home/title_1.html" %}
-    {% elif h.get_theme_config('home_title_template') == 2 %}
+    {% elif title_template == 'portada2' %}
         {% snippet "home/title_2.html" %}
-    {% else %}
+    {% elif title_template == 'portada3' %}
         {% snippet "home/title_3.html" %}
+    {% else %}
+        {% snippet "home/title_4.html" %}
     {% endif %}
     {% snippet "home/create_buttons.html" %}
     {% snippet "home/groups.html" %}

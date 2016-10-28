@@ -6,9 +6,11 @@
         <div class="restricted-max-width">
             <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2">
                 <div id="title-container" class="col-xs-12 text-center">
-                    <h1>{{ h.get_theme_config('title.site-title') }}</h1>
+                    {% set title = h.get_theme_config('title.site-title') %}
+                    <h1>{{ title if title else '' }}</h1>
                     <p class="description">
-                        {{ h.get_theme_config('title.site-description') }}
+                        {% set description = h.get_theme_config('title.site-description') %}
+                        {{ description if description else '' }}
                         {% if h.check_access('package_create') %}
                             <a class="edit-description-link" href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_title') }}">
                                 {% snippet "svg/edit.svg" %}

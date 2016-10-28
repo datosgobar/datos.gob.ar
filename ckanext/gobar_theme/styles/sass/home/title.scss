@@ -25,7 +25,6 @@
       }
     }
 
-
     h1 {
       font-size: 55px;
       font-weight: 400;
@@ -35,8 +34,12 @@
       font-size: 16px;
       font-weight: 300;
       margin-bottom: 30px;
-      svg.edit-svg path {
-        fill: white;
+      svg.edit-svg {
+        width: 1em;
+        height: 1em;
+        path {
+          fill: white;
+        }
       }
     }
   }

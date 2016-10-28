@@ -577,8 +577,11 @@ div#background-container {
       font-size: 16px;
       font-weight: 300;
       margin-bottom: 30px; }
-      #title #title-container .description svg.edit-svg path {
-        fill: white; }
+      #title #title-container .description svg.edit-svg {
+        width: 1em;
+        height: 1em; }
+        #title #title-container .description svg.edit-svg path {
+          fill: white; }
   @media (min-width: 992px) {
     #title #searcher.position-bottom {
       position: absolute;
@@ -1170,7 +1173,9 @@ div#background-container {
 #title.organization-title #title-container .description {
   margin: 0; }
   #title.organization-title #title-container .description .edit-description-link svg.edit-svg {
-    display: inline-block; }
+    display: inline-block;
+    width: 1em;
+    height: 1em; }
     #title.organization-title #title-container .description .edit-description-link svg.edit-svg path {
       fill: white; }
 #title.organization-title #stats .stats-legend {
@@ -1698,7 +1703,9 @@ div#background-container {
 #title.package-title #title-container .description {
   margin: 0; }
   #title.package-title #title-container .description .edit-description-link svg.edit-svg {
-    display: inline-block; }
+    display: inline-block;
+    width: 1em;
+    height: 1em; }
     #title.package-title #title-container .description .edit-description-link svg.edit-svg path {
       fill: white; }
 #title.package-title #stats > div {
