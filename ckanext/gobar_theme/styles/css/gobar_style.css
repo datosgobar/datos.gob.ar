@@ -172,12 +172,8 @@ div.svg-tooltip {
           color: white; }
       #footer #footer-spacer .footer-section.links-internos a:hover {
         color: #17b2f8; }
-      @media (min-width: 768px) {
-        #footer #footer-spacer .footer-section.links-externos {
-          text-align: right; } }
       #footer #footer-spacer .footer-section.links-externos a {
-        display: inline-block;
-        text-align: left; }
+        display: block; }
       #footer #footer-spacer .footer-section.links-externos .ckan-link {
         margin: 0;
         color: #767676; }
@@ -185,9 +181,6 @@ div.svg-tooltip {
         color: #0695d6; }
         #footer #footer-spacer .footer-section.links-externos .ckan-name:hover {
           color: #17b2f8; }
-        @media (min-width: 768px) {
-          #footer #footer-spacer .footer-section.links-externos .ckan-name {
-            display: block; } }
       @media (min-width: 768px) {
         #footer #footer-spacer .footer-section {
           text-align: left; } }

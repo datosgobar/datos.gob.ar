@@ -37,6 +37,17 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_04_header.html')
 
     def edit_social(self):
+        if request.method == 'POST':
+            params = parse_params(request.POST)
+            g.gobar['social'] = {
+                'fb': params['fb'].strip(),
+                'tw': params['tw'].strip(),
+                'github': params['github'].strip(),
+                'inst': params['inst'].strip(),
+                'yt': params['yt'].strip(),
+                'mail': params['mail'].strip()
+            }
+            gobar_helpers.save_theme_config()
         return base.render('config/config_05_social.html')
 
     def edit_footer(self):

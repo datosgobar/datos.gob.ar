@@ -1,35 +1,43 @@
-{% set config = h.template_config() %}
-
 <div id="footer" class="container-fluid">
     <div class="restricted-max-width">
         <div id="footer-spacer" class="col-xs-10 col-xs-offset-1">
             <div class="footer-section logo col-xs-12 col-sm-6 col-md-6">
                 <p>
-                    {% if config['twitter_link']|length > 0 %}
-                        <a href="{{ config['twitter_link'] }}" target="_blank" class="social-link">
+                    {% set tw = h.get_theme_config('social.tw') %}
+                    {% if tw and tw|length > 0 %}
+                        <a href="{{ tw }}" target="_blank" class="social-link">
                             <i class="icon-twitter"></i>
                         </a>
                     {% endif %}
-                    {% if config['facebook_link']|length > 0 %}
-                        <a href="{{ config['facebook_link'] }}" target="_blank" class="social-link">
+
+                    {% set fb = h.get_theme_config('social.fb') %}
+                    {% if fb and fb|length > 0 %}
+                        <a href="{{ fb }}" target="_blank" class="social-link">
                             <i class="icon-facebook"></i>
                         </a>
                     {% endif %}
-                    {% if config['github_link']|length > 0 %}
-                        <a href="{{ config['github_link'] }}" target="_blank" class="social-link">
+
+                    {% set github = h.get_theme_config('social.github') %}
+                    {% if github and github|length > 0 %}
+                        <a href="{{ github }}" target="_blank" class="social-link">
                             <i class="icon-github-alt"></i>
                         </a>
                     {% endif %}
-                    {% if config['instagram_link']|length > 0 %}
-                        <a href="{{ config['instagram_link'] }}" target="_blank" class="social-link">
+
+                    {% set inst = h.get_theme_config('social.inst') %}
+                    {% if inst and inst|length > 0 %}
+                        <a href="{{ inst }}" target="_blank" class="social-link">
                             <i class="icon-instagram"></i>
                         </a>
                     {% endif %}
-                    {% if config['youtube_link']|length > 0 %}
-                        <a href="{{ config['youtube_link'] }}" target="_blank" class="social-link">
+
+                    {% set yt = h.get_theme_config('social.yt') %}
+                    {% if yt and yt|length > 0 %}
+                        <a href="{{ yt }}" target="_blank" class="social-link">
                             <i class="icon-youtube-play"></i>
                         </a>
                     {% endif %}
+
                     {% if h.check_access('package_create') %}
                         <a class="edit-social-link"
                            href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_social') }}">
@@ -50,12 +58,13 @@
                 </div>
             </div>
             <div class="footer-section links-internos hidden-xs hidden-sm col-md-3">
-                <a href="{{ h.url('gobar_open_data') }}"><p>Datos Abiertos</p></a>
-                <a href="{{ h.url('gobar_legal') }}"><p>Marco Legal</p></a>
-                <a href="{{ h.url('gobar_platform') }}"><p>Plataforma</p></a>
-                <a href="mailto:gobiernoabierto@modernizacion.gob.ar"><p>Contacto</p></a>
+                <p></p>
             </div>
             <div class="footer-section links-externos col-xs-12 col-sm-6 col-md-3">
+                {% set mail = h.get_theme_config('social.mail') %}
+                {% if mail and mail|length > 0 %}
+                    <a href="mailto:{{ mail }}">Contactanos</a>
+                {% endif %}
                 <a href="http://ckan.org/" target="_blank">
                     <p class="ckan-link">Desarrollado con <span class="ckan-name">CKAN</span></p>
                 </a>

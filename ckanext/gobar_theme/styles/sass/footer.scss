@@ -80,13 +80,8 @@ $footer-height: 230px;
       &.links-externos {
 
 
-        @include breakpoint-sm {
-          text-align: right;
-        }
-
         a {
-          display: inline-block;
-          text-align: left;
+          display: block;
         }
 
         .ckan-link {
@@ -97,9 +92,6 @@ $footer-height: 230px;
           color: $blue-300;
           &:hover {
             color: $blue-200;
-          }
-          @include breakpoint-sm {
-            display: block;
           }
         }
       }
