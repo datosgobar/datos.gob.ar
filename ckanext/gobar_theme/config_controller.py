@@ -66,6 +66,12 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_06_footer.html')
 
     def edit_datasets(self):
+        if request.method == 'POST':
+            params = parse_params(request.POST)
+            g.gobar['dataset'] = {
+                'description': params['dataset-description'].strip()
+            }
+            gobar_helpers.save_theme_config()
         return base.render('config/config_07_dataset.html')
 
     def edit_organizations(self):

@@ -9,7 +9,8 @@
                     <h1>Datos</h1>
 
                     <p class="description">
-                        {{ config['dataset_description'] }}
+                        {% set description = h.get_theme_config('dataset.description') %}
+                        {{ description if description else '' }}
                         {% if h.check_access('package_create') %}
                             <a class="edit-description-link" href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_datasets') }}">
                                 {% snippet "svg/edit.svg" %}
