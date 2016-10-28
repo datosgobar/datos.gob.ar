@@ -46,8 +46,10 @@
                     {% endif %}
                 </p>
                 <div class="logo-edit-container">
-                    <a href="http://www.argentina.gob.ar/modernizacion" target="_blank">
-                        <img src="/img/logo_ministerio.svg" class="logo-ministerio">
+                    {% set url = h.get_theme_config('footer.url') %}
+                    {% set image = h.get_theme_config('footer.image') %}
+                    <a href="{{ url if url else 'http://datos.gob.ar/' }}" target="_blank">
+                        <img src="{{ image if image else '/img/logo_ministerio.svg' }}" class="logo-ministerio">
                     </a>
                     {% if h.check_access('package_create') %}
                         <a class="edit-logo-link"

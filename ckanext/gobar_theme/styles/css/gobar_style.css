@@ -2440,7 +2440,10 @@ ul.activity {
       margin: 0 5px 0 0;
       position: static; }
     #template-config-container #template-config .file-upload-container {
-      position: relative; }
+      position: relative;
+      margin: 0 0 30px 0; }
+      #template-config-container #template-config .file-upload-container p {
+        margin: 0; }
       #template-config-container #template-config .file-upload-container input[type="file"] {
         display: inline-block;
         width: 1px;

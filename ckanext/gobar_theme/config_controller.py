@@ -69,6 +69,17 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_05_social.html')
 
     def edit_footer(self):
+        if request.method == 'POST':
+            params = parse_params(request.params)
+            new_footer_params = {'url': params['url'].strip()}
+            if params['image-logic'] == 'new-image':
+                new_footer_params['image'] = gobar_helpers.save_img(params['background-image'])
+            elif params['image-logic'] == 'delete-image':
+                new_footer_params['image'] = None
+            else:
+                new_footer_params['image'] = gobar_helpers.get_theme_config('footer.image')
+            g.gobar['footer'] = new_footer_params
+            gobar_helpers.save_theme_config()
         return base.render('config/config_06_footer.html')
 
     def edit_datasets(self):

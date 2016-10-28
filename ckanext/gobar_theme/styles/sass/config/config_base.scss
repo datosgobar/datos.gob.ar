@@ -86,6 +86,10 @@
     }
     .file-upload-container {
       position: relative;
+      margin: 0 0 30px 0;
+      p {
+        margin: 0;
+      }
       input[type="file"] {
         display: inline-block;
         width: 1px;
