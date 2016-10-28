@@ -145,7 +145,7 @@ IMG_DIR = '/usr/lib/ckan/default/src/ckanext-gobar-theme/ckanext/gobar_theme/pub
 CONFIG_PATH = '/var/lib/ckan/theme_config/settings.json'
 
 
-def get_theme_config(path=None):
+def get_theme_config(path=None, default=None):
     try:
         gobar_config = g.gobar
     except Exception:
@@ -157,7 +157,7 @@ def get_theme_config(path=None):
             if gobar_config is not None and key in gobar_config:
                 gobar_config = gobar_config[key]
             else:
-                gobar_config = None
+                gobar_config = default
 
     return gobar_config
 

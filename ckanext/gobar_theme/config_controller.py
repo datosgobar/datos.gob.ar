@@ -115,19 +115,34 @@ class GobArConfigController(base.BaseController):
     def edit_metadata_google_fb(self):
         if request.method == 'POST':
             params = parse_params(request.POST)
-            g.gobar['fb-metadata'] = {
+            new_metadata_config = {
                 'title': params['metadata-title'].strip(),
                 'description': params['metadata-description'].strip()
             }
+            if params['image-logic'] == 'new-image':
+                new_metadata_config['image'] = gobar_helpers.save_img(params['image'])
+            elif params['image-logic'] == 'delete-image':
+                new_metadata_config['image'] = None
+            else:
+                new_metadata_config['image'] = gobar_helpers.get_theme_config('fb-metadata.image')
+            g.gobar['fb-metadata'] = new_metadata_config
             gobar_helpers.save_theme_config()
         return base.render('config/config_10_metadata_google_fb.html')
 
     def edit_metadata_tw(self):
         if request.method == 'POST':
             params = parse_params(request.POST)
-            g.gobar['tw-metadata'] = {
+            new_metadata_config = {
                 'title': params['metadata-title'].strip(),
-                'description': params['metadata-description'].strip()
+                'description': params['metadata-description'].strip(),
+                'user': params['metadata-user'].strip()
             }
+            if params['image-logic'] == 'new-image':
+                new_metadata_config['image'] = gobar_helpers.save_img(params['image'])
+            elif params['image-logic'] == 'delete-image':
+                new_metadata_config['image'] = None
+            else:
+                new_metadata_config['image'] = gobar_helpers.get_theme_config('tw-metadata.image')
+            g.gobar['tw-metadata'] = new_metadata_config
             gobar_helpers.save_theme_config()
         return base.render('config/config_11_metadata_twitter.html')

@@ -14,15 +14,15 @@
     <meta property="og:title" content="{{ h.get_theme_config('fb-metadata.title') }}">
     <meta property="og:site_name" content="{{ h.get_theme_config('fb-metadata.title') }}">
     <meta property="og:description" content="{{ h.get_theme_config('fb-metadata.description') }}">
-    <meta property="og:image" content="http://datos.gob.ar/img/fb_card.png">
+    <meta property="og:image" content="{{ h.url('', locale='default', qualified=true) }}{{ h.get_theme_config('fb-metadata.image', default='') }}">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="2400">
     <meta property="og:image:height" content="1260">
     <meta property="og:locale" content="es_AR">
 
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@datosgobar"/>
-    <meta name="twitter:image:src" content="http://datos.gob.ar/img/twitter_card.png">
+    <meta name="twitter:site:id" content="@{{ h.get_theme_config('tw-metadata.user') }}"/>
+    <meta name="twitter:image:src" content="{{ h.url('', locale='default', qualified=true) }}{{ h.get_theme_config('tw-metadata.image', default='') }}">
     {% block twitter_title -%}
         <meta name="twitter:title" content="{{ h.get_theme_config('tw-metadata.title') }}">
     {%- endblock %}
