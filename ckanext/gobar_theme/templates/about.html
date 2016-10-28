@@ -4,12 +4,28 @@
 
 {% block content %}
 
-    {% set title = h.get_theme_config('about.title') %}
-    <h1>{{ title if title else '' }}</h1>
+    <div id="about-container" class="container-fluid gobar-static-container">
+        <div class="restricted-max-width">
+            <div id="about" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
+                <div id="pkg-path">
+                    {% set title = h.get_theme_config('title.site-title') %}
+                    <a href="{{ h.url_for(controller='package', action='search') }}">{{ title if title else '' }}</a> / Acerca
+                </div>
 
-    <p>
-        {% set description = h.get_theme_config('about.description') %}
-        {{ description if description else '' }}
-    </p>
 
+                {% set title = h.get_theme_config('about.title') %}
+                <h2>{{ title if title else '' }}</h2>
+
+                {%- set description = h.get_theme_config('about.description') -%}
+                {% if description %}
+                    {% set paragraphs = description.split('\n') %}
+                    {% for paragraph in paragraphs %}
+                        <p>
+                            {{- paragraph -}}
+                        </p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

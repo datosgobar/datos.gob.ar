@@ -475,6 +475,40 @@ div#background-container {
   margin: 0 !important;
   padding: 0 !important; }
 
+.gobar-static-container {
+  display: table-row;
+  height: 100%;
+  padding-right: 0;
+  padding-left: 0; }
+  @media (min-width: 992px) {
+    .gobar-static-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  .gobar-static-container .gobar-static {
+    height: 100%;
+    padding: 30px 50px;
+    color: #767676;
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    @media (min-width: 992px) {
+      .gobar-static-container .gobar-static {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    @media (min-width: 992px) {
+      .gobar-static-container .gobar-static {
+        padding-top: 30px;
+        padding-bottom: 50px; } }
+    .gobar-static-container .gobar-static h2 {
+      color: #0695d6;
+      font-weight: 400;
+      font-size: 50px;
+      margin-top: 40px; }
+    .gobar-static-container .gobar-static p {
+      font-size: 16px; }
+
 #title {
   color: white;
   position: relative;
