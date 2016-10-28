@@ -33,11 +33,9 @@ class GobArRouter:
         self.home_routes.connect('/', action='index')
 
     def connect_static(self):
-        self.home_routes.connect('gobar_open_data', '/datos-abiertos', action='open_data')
-        self.home_routes.connect('gobar_legal', '/marco-legal', action='legal')
-        self.home_routes.connect('gobar_platform', '/plataforma', action='platform')
+        self.home_routes.connect('gobar_about', '/acerca', action='about')
         self.redirect(
-            ('/about', '/datos-abiertos')
+            ('/about', '/acerca')
         )
 
     def connect_datasets(self):

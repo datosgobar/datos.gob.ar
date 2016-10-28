@@ -11,10 +11,14 @@
             </div>
             <div class="col-xs-12 col-sm-7 no-padding header-links">
                 <a href="{{ h.url_for(controller='package', action='search') }}">DATASETS</a>
+
                 {% if h.get_theme_config('organization.show-organizations') %}
                     <a href="{{ h.url_for(controller='organization', action='index') }}">ORGANIZACIONES CON DATOS</a>
                 {% endif %}
-                <a href="{{ h.url('gobar_open_data') }}">ACERCA</a>
+
+                {% if h.get_theme_config('about.show-about') %}
+                    <a href="{{ h.url('gobar_about') }}">ACERCA</a>
+                {% endif %}
             </div>
         </div>
     </div>

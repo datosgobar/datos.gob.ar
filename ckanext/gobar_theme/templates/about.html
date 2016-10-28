@@ -1,0 +1,15 @@
+{% extends "gobar_page.html" %}
+
+{% block subtitle %} - Acerca{% endblock %}
+
+{% block content %}
+
+    {% set title = h.get_theme_config('about.title') %}
+    <h1>{{ title if title else '' }}</h1>
+
+    <p>
+        {% set description = h.get_theme_config('about.description') %}
+        {{ description if description else '' }}
+    </p>
+
+{% endblock %}

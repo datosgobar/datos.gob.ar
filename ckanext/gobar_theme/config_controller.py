@@ -85,6 +85,14 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_08_organizations.html')
 
     def edit_about(self):
+        if request.method == 'POST':
+            params = parse_params(request.POST)
+            g.gobar['about'] = {
+                'title': params['about-title'].strip(),
+                'description': params['about-description'].strip(),
+                'show-about': 'show-about' in params
+            }
+            gobar_helpers.save_theme_config()
         return base.render('config/config_09_about.html')
 
     def edit_metadata_google_fb(self):

@@ -140,6 +140,7 @@ def get_facet_items_dict(facet, limit=None, exclude_active=False):
     return ckan_helpers.get_facet_items_dict(facet, limit, exclude_active)
 
 
+IMG_DIR = '/var/lib/ckan/data'  # TODO: revisar
 CONFIG_PATH = '/var/lib/ckan/default/gobar/settings.json'
 
 

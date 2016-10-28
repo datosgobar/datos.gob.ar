@@ -50,14 +50,8 @@ class GobArHomeController(HomeController):
         c.featured_packages = self._featured_packages()
         return super(GobArHomeController, self).index()
 
-    def open_data(self):
-        return base.render('static/open_data.html')
-
-    def legal(self):
-        return base.render('static/legal.html')
-
-    def platform(self):
-        return base.render('static/platform.html')
+    def about(self):
+        return base.render('about.html')
 
 
 class GobArApiController(ApiController):
