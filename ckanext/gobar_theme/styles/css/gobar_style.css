@@ -105,7 +105,6 @@ div.svg-tooltip {
         text-align: left; } }
     #header #header-spacing .logo-header .logo-ministerio {
       height: 100%;
-      width: 300px;
       max-width: 100%; }
 
 .footer-down {
@@ -519,6 +518,7 @@ div#background-container {
   background-image: linear-gradient(to right,#00b9f1, #0072bc);
   background-size: cover;
   background-position: center center;
+  background-image: url("/img/home_bg.jpg");
   padding: 0; }
   #title .background-overlay {
     padding: 20px 0;
@@ -2453,7 +2453,8 @@ ul.activity {
         display: inline-block;
         margin: 0 10px 0 0;
         width: 300px;
-        background-color: white; }
+        background-color: white;
+        padding-right: 3em; }
       #template-config-container #template-config .file-upload-container .upload-file-button {
         height: 42px;
         color: white;

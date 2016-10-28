@@ -2,11 +2,11 @@ import ckan.lib.base as base
 from ckan.common import request, g
 import ckanext.gobar_theme.helpers as gobar_helpers
 import ckan.logic as logic
+
 parse_params = logic.parse_params
 
 
 class GobArConfigController(base.BaseController):
-
     def edit_title(self):
         if request.method == 'POST':
             params = parse_params(request.params)
@@ -43,6 +43,15 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_03_groups.html')
 
     def edit_header(self):
+        if request.method == 'POST':
+            params = parse_params(request.params)
+            if params['image-logic'] == 'new-image':
+                g.gobar['header'] = {'image': gobar_helpers.save_img(params['background-image'])}
+            elif params['image-logic'] == 'delete-image':
+                g.gobar['header'] = {'image': None}
+            else:
+                g.gobar['header'] = {'image': gobar_helpers.get_theme_config('header.image')}
+            gobar_helpers.save_theme_config()
         return base.render('config/config_04_header.html')
 
     def edit_social(self):
