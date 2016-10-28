@@ -9,7 +9,8 @@
                     <h1>Organizaciones</h1>
 
                     <p class="description">
-                        {{ config['organization_description'] }}
+                        {% set description = h.get_theme_config('organization.description') %}
+                        {{ description if description else '' }}
                         {% if h.check_access('organization_create') %}
                             <a class="edit-description-link" href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_organizations') }}">
                                 {% snippet "svg/edit.svg" %}

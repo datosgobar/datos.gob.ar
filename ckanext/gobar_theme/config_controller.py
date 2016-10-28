@@ -75,6 +75,13 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_07_dataset.html')
 
     def edit_organizations(self):
+        if request.method == 'POST':
+            params = parse_params(request.POST)
+            g.gobar['organization'] = {
+                'description': params['organization-description'].strip(),
+                'show-organizations': 'show-organizations' in params
+            }
+            gobar_helpers.save_theme_config()
         return base.render('config/config_08_organizations.html')
 
     def edit_about(self):
