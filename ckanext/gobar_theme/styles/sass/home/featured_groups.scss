@@ -51,12 +51,12 @@
       @include border-radius(4px);
       @include box-shadow(0 2px 2px rgba(0,0,0,0.2));
 
+      $img-size: 35px;
       .group-text {
         $vertical-padding: 10px;
         $horizontal-padding: 10px;
         padding: $vertical-padding $horizontal-padding;
         position: relative;
-        $img-size: 35px;
         overflow: hidden;
 
         svg, img {
@@ -72,10 +72,10 @@
         }
 
         .group-table {
-          padding-left: $img-size + 10px;
+          width: 100%;
           overflow: hidden;
           display: table;
-          text-align: left;
+          text-align: center;
           $font-size: 15px;
           $line-height: 1.2;
           $lines: 3;
@@ -88,6 +88,11 @@
             vertical-align: middle;
           }
         }
+      }
+
+      &.show-icons .group-text .group-table {
+        padding-left: $img-size + 10px;
+        text-align: left;
       }
 
       &.inactive {

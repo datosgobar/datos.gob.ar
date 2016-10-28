@@ -37,6 +37,12 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_02_home.html')
 
     def edit_groups(self):
+        if request.method == 'POST':
+            params = parse_params(request.POST)
+            g.gobar['groups'] = {
+                'imgs': params['group-imgs']
+            }
+            gobar_helpers.save_theme_config()
         return base.render('config/config_03_groups.html')
 
     def edit_header(self):

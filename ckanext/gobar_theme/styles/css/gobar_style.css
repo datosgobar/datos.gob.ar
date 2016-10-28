@@ -739,16 +739,19 @@ div#background-container {
           .featured-groups .group-container .group .group-text svg path, .featured-groups .group-container .group .group-text img path {
             fill: #0695d6; }
         .featured-groups .group-container .group .group-text .group-table {
-          padding-left: 45px;
+          width: 100%;
           overflow: hidden;
           display: table;
-          text-align: left;
+          text-align: center;
           font-size: 15px;
           line-height: 1.2;
           height: 54px; }
           .featured-groups .group-container .group .group-text .group-table .group-cell {
             display: table-cell;
             vertical-align: middle; }
+      .featured-groups .group-container .group.show-icons .group-text .group-table {
+        padding-left: 45px;
+        text-align: left; }
       .featured-groups .group-container .group.inactive {
         color: #cccccc; }
         .featured-groups .group-container .group.inactive .group-text svg path {

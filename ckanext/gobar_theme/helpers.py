@@ -171,4 +171,4 @@ def _read_theme_config():
 def save_theme_config():
     with open(CONFIG_PATH, 'w') as json_data:
         config = g.gobar
-        json_data.write(json.dumps(config))
+        json_data.write(json.dumps(config, sort_keys=True, indent=2))
