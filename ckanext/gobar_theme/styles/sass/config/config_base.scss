@@ -84,7 +84,46 @@
       margin: 0 5px 0 0;
       position: static;
     }
-
+    .file-upload-container {
+      position: relative;
+      input[type="file"] {
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        visibility: hidden;
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      .filename-input {
+        display: inline-block;
+        margin: 0 10px 0 0;
+        width: 300px;
+        background-color: white;
+      }
+      .upload-file-button {
+        height: 42px;
+        color: white;
+        background: $grey-400;
+        border: none;
+        padding: 12px;
+        @include border-radius(4px);
+        &:hover {
+          background-color: $grey-300;
+        }
+      }
+      .icon-remove-sign {
+        position: absolute;
+        top: 5px;
+        font-size: 2em;
+        left: 267px;
+        cursor: pointer;
+        display: none;
+      }
+      &.with-image .icon-remove-sign {
+        display: inline-block;
+      }
+    }
     textarea {
       width: 100%;
       margin-bottom: 30px;

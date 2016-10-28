@@ -1,6 +1,7 @@
 <div class="featured-groups container-fluid">
     <div class="restricted-max-width">
         <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+            <!-- TODO: cuando no se muestran imagenes: mostrar igual que un boton y en disable con opacity en 0.65 -->
             {% set dataset_url = h.url_for(controller='package', action='search') %}
             {% set group_imgs = h.get_theme_config('groups.imgs') %}
             {%- for group in c.groups -%}

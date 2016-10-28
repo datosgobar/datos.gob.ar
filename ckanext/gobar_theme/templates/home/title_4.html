@@ -1,6 +1,7 @@
 {% set stats = h.get_site_statistics() %}
 
-<div id="title" class="container-fluid">
+{% set background = h.get_theme_config('title.background-image') %}
+<div id="title" class="container-fluid" {{ 'style=background-image:url(' + background + ')' if background else '' }}>
     {% snippet "home/title_config.html" %}
     <div class="background-overlay no-padding-bottom">
         <div class="restricted-max-width">

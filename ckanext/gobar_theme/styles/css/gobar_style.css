@@ -2439,6 +2439,42 @@ ul.activity {
     #template-config-container #template-config input[type="checkbox"] {
       margin: 0 5px 0 0;
       position: static; }
+    #template-config-container #template-config .file-upload-container {
+      position: relative; }
+      #template-config-container #template-config .file-upload-container input[type="file"] {
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        visibility: hidden;
+        position: absolute;
+        top: -9999px;
+        left: -9999px; }
+      #template-config-container #template-config .file-upload-container .filename-input {
+        display: inline-block;
+        margin: 0 10px 0 0;
+        width: 300px;
+        background-color: white; }
+      #template-config-container #template-config .file-upload-container .upload-file-button {
+        height: 42px;
+        color: white;
+        background: #767676;
+        border: none;
+        padding: 12px;
+        -o-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px; }
+        #template-config-container #template-config .file-upload-container .upload-file-button:hover {
+          background-color: #999999; }
+      #template-config-container #template-config .file-upload-container .icon-remove-sign {
+        position: absolute;
+        top: 5px;
+        font-size: 2em;
+        left: 267px;
+        cursor: pointer;
+        display: none; }
+      #template-config-container #template-config .file-upload-container.with-image .icon-remove-sign {
+        display: inline-block; }
     #template-config-container #template-config textarea {
       width: 100%;
       margin-bottom: 30px;

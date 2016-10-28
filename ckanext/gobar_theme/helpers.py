@@ -3,6 +3,7 @@ import ckan.lib.helpers as ckan_helpers
 from urlparse import urlparse
 from ckan.common import request, c, g
 import json
+import os
 
 
 def _get_organizations_objs(organizations_branch, depth=0):
@@ -140,8 +141,8 @@ def get_facet_items_dict(facet, limit=None, exclude_active=False):
     return ckan_helpers.get_facet_items_dict(facet, limit, exclude_active)
 
 
-IMG_DIR = '/var/lib/ckan/data'  # TODO: revisar
-CONFIG_PATH = '/var/lib/ckan/default/gobar/settings.json'
+IMG_DIR = '/usr/lib/ckan/default/src/ckanext-gobar-theme/ckanext/gobar_theme/public/user_images/'
+CONFIG_PATH = '/var/lib/ckan/theme_config/settings.json'
 
 
 def get_theme_config(path=None):
@@ -173,3 +174,17 @@ def save_theme_config():
     with open(CONFIG_PATH, 'w') as json_data:
         config = g.gobar
         json_data.write(json.dumps(config, sort_keys=True, indent=2))
+
+
+def save_img(field_storage):
+    output_path = os.path.join(IMG_DIR, field_storage.filename)
+    output_file = open(output_path, 'wb')
+    upload_file = field_storage.file
+    upload_file.seek(0)
+    while True:
+        data = upload_file.read(2 ** 20)
+        if not data:
+            break
+        output_file.write(data)
+    output_file.close()
+    return os.path.join('/user_images/', field_storage.filename)

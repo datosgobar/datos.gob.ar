@@ -1,6 +1,5 @@
 import ckan.lib.base as base
 from ckan.common import request, g
-import ckan.lib.helpers as h
 import ckanext.gobar_theme.helpers as gobar_helpers
 import ckan.logic as logic
 parse_params = logic.parse_params
@@ -8,22 +7,20 @@ parse_params = logic.parse_params
 
 class GobArConfigController(base.BaseController):
 
-    def edit_config(self):
-        # TODO: sacar este metodo
-        if request.method == 'POST':
-            params = parse_params(request.POST)
-            self._update_config(params)
-            h.redirect_to(controller='ckanext.gobar_theme.controller:GobArHomeController', action='index')
-        else:
-            return base.render('config/edit_templates.html')
-
     def edit_title(self):
         if request.method == 'POST':
-            params = parse_params(request.POST)
-            g.gobar['title'] = {
+            params = parse_params(request.params)
+            new_title_config = {
                 'site-title': params['site-title'].strip(),
                 'site-description': params['site-description'].strip()
             }
+            if params['image-logic'] == 'new-image':
+                new_title_config['background-image'] = gobar_helpers.save_img(params['background-image'])
+            elif params['image-logic'] == 'delete-image':
+                new_title_config['background-image'] = None
+            else:
+                new_title_config['background-image'] = gobar_helpers.get_theme_config('title.background-image')
+            g.gobar['title'] = new_title_config
             gobar_helpers.save_theme_config()
         return base.render('config/config_01_title.html')
 
