@@ -12,20 +12,13 @@
 
         <p>Titulo de tu portal</p>
         <p>Escribí como máximo 67 caracteres para que no se vea cortado.</p>
-        <input type="text" title="Título del portal" placeholder="Título" id="metadata-fb-title">
+        {% set title = h.get_theme_config('fb-metadata.title') %}
+        <input name="metadata-title" type="text" title="Título" placeholder="Título" value="{{ title if title else '' }}">
 
         <p>Descripción de tu portal</p>
         <p>Escribí como máximo 155 caracteres para que no se vea cortado.</p>
-        <input type="text" title="Descripción del portal" placeholder="Descripción" id="metadata-fb-description">
-
-        <h1>Twitter</h1>
-        <p>Titulo de tu portal</p>
-        <p>Escribí como máximo 67 caracteres para que no se vea cortado.</p>
-        <input type="text" title="Título del portal" placeholder="Título" id="metadata-tw-title">
-
-        <p>Descripción de tu portal</p>
-        <p>Escribí como máximo 155 caracteres para que no se vea cortado.</p>
-        <input type="text" title="Descripción del portal" placeholder="Descripción" id="metadata-tw-description">
+        {% set description = h.get_theme_config('fb-metadata.description') %}
+        <input name="metadata-description" type="text" title="Descripción" placeholder="Descripción" value="{{ description if description else '' }}">
 
         <div class="submit-container">
             <button class="submit-button" type="submit" name="save">GUARDAR</button>

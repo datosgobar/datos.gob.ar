@@ -96,7 +96,21 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_09_about.html')
 
     def edit_metadata_google_fb(self):
+        if request.method == 'POST':
+            params = parse_params(request.POST)
+            g.gobar['fb-metadata'] = {
+                'title': params['metadata-title'].strip(),
+                'description': params['metadata-description'].strip()
+            }
+            gobar_helpers.save_theme_config()
         return base.render('config/config_10_metadata_google_fb.html')
 
     def edit_metadata_tw(self):
+        if request.method == 'POST':
+            params = parse_params(request.POST)
+            g.gobar['tw-metadata'] = {
+                'title': params['metadata-title'].strip(),
+                'description': params['metadata-description'].strip()
+            }
+            gobar_helpers.save_theme_config()
         return base.render('config/config_11_metadata_twitter.html')

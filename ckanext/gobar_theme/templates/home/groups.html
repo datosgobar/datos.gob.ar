@@ -19,7 +19,7 @@
                     {% endif %}
                     <div class="group {{ group_class }} {{ group_imgs if group_imgs else '' }}">
                         <div class="group-text">
-                            {% if group_imgs == 'show-icons' %}
+                            {% if group_imgs == 'show-icons' and group.image_display_url|length > 0 %}
                                 <img src="{{ group.image_display_url }}" data-replace="svg">
                             {% endif %}
 

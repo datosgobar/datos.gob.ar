@@ -6,14 +6,12 @@
 {% set res = c.resource %}
 
 {% block twitter_title -%}
-    <meta name="twitter:title" content="Datos Argentina | {{ res.name }}">
-{%- endblock %}
-{% block twitter_img -%}
-    <meta name="twitter:description" content="{{ res.description }}">
+    <meta name="twitter:title" content="{{ h.get_theme_config('tw-metadata.title') }} | {{ res.name }}">
 {%- endblock %}
 {% block twitter_description -%}
-    <meta name="twitter:image:src" content="http://datos.gob.ar/img/twitter_card_data.png">
+    <meta name="twitter:description" content="{{ res.description }}">
 {%- endblock %}
+
 
 {% block content %}
     <div class="resource-container container-fluid">
