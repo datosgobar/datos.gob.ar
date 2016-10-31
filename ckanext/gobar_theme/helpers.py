@@ -4,6 +4,7 @@ from urlparse import urlparse
 from ckan.common import request, c, g
 import json
 import os
+from subprocess import call
 
 
 def _get_organizations_objs(organizations_branch, depth=0):
@@ -174,6 +175,7 @@ def save_theme_config():
     with open(CONFIG_PATH, 'w') as json_data:
         config = g.gobar
         json_data.write(json.dumps(config, sort_keys=True, indent=2))
+    call(['rm', '-fr', '/tmp/nginx_proxy/*', '/tmp/nginx_cache/*'])
 
 
 def save_img(field_storage):
