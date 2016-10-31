@@ -1,13 +1,18 @@
 import ckan.lib.base as base
-from ckan.common import request, g
+from ckan.common import request, g, c, _
 import ckanext.gobar_theme.helpers as gobar_helpers
 import ckan.logic as logic
+import ckan.model as model
 
 parse_params = logic.parse_params
+abort = base.abort
+check_access = logic.check_access
+NotAuthorized = logic.NotAuthorized
 
 
 class GobArConfigController(base.BaseController):
     def edit_title(self):
+        self.authorize()
         if request.method == 'POST':
             params = parse_params(request.params)
             new_title_config = {
@@ -25,6 +30,7 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_01_title.html')
 
     def edit_home(self):
+        self.authorize()
         if request.method == 'POST':
             params = parse_params(request.POST)
             g.gobar['home'] = {
@@ -34,6 +40,7 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_02_home.html')
 
     def edit_groups(self):
+        self.authorize()
         if request.method == 'POST':
             params = parse_params(request.POST)
             g.gobar['groups'] = {
@@ -43,6 +50,7 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_03_groups.html')
 
     def edit_header(self):
+        self.authorize()
         if request.method == 'POST':
             params = parse_params(request.params)
             if params['image-logic'] == 'new-image':
@@ -55,6 +63,7 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_04_header.html')
 
     def edit_social(self):
+        self.authorize()
         if request.method == 'POST':
             params = parse_params(request.POST)
             g.gobar['social'] = {
@@ -69,6 +78,7 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_05_social.html')
 
     def edit_footer(self):
+        self.authorize()
         if request.method == 'POST':
             params = parse_params(request.params)
             new_footer_params = {'url': params['url'].strip()}
@@ -83,6 +93,7 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_06_footer.html')
 
     def edit_datasets(self):
+        self.authorize()
         if request.method == 'POST':
             params = parse_params(request.POST)
             g.gobar['dataset'] = {
@@ -92,6 +103,7 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_07_dataset.html')
 
     def edit_organizations(self):
+        self.authorize()
         if request.method == 'POST':
             params = parse_params(request.POST)
             g.gobar['organization'] = {
@@ -102,6 +114,7 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_08_organizations.html')
 
     def edit_about(self):
+        self.authorize()
         if request.method == 'POST':
             params = parse_params(request.POST)
             g.gobar['about'] = {
@@ -113,6 +126,7 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_09_about.html')
 
     def edit_metadata_google_fb(self):
+        self.authorize()
         if request.method == 'POST':
             params = parse_params(request.POST)
             new_metadata_config = {
@@ -130,6 +144,7 @@ class GobArConfigController(base.BaseController):
         return base.render('config/config_10_metadata_google_fb.html')
 
     def edit_metadata_tw(self):
+        self.authorize()
         if request.method == 'POST':
             params = parse_params(request.POST)
             new_metadata_config = {
@@ -146,3 +161,14 @@ class GobArConfigController(base.BaseController):
             g.gobar['tw-metadata'] = new_metadata_config
             gobar_helpers.save_theme_config()
         return base.render('config/config_11_metadata_twitter.html')
+
+    @staticmethod
+    def authorize():
+        context = {'model': model, 'session': model.Session,
+                   'user': c.user or c.author, 'auth_user_obj': c.userobj,
+                   'save': 'save' in request.params}
+        try:
+            check_access('package_create', context)
+            return True
+        except NotAuthorized:
+            abort(401, _('Unauthorized to change config'))
