@@ -2,7 +2,7 @@
     <label class="control-label" for="field-groups">Grupos</label>
 
     <div class="controls package-groups">
-        {% for group in h.join_groups(selected_groups, remaining_groups) %}
+        {% for group in h.join_groups(selected_groups) %}
             <input type="checkbox" class="package-group-checkbox"
                    id="{{ group.name }}"
                     {{ 'checked' if group.selected else '' }}>
