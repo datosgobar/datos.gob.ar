@@ -57,14 +57,18 @@ def get_faceted_groups():
     return groups
 
 
-def join_groups(selected_groups, remaining_groups):
-    groups = []
-    for group in selected_groups:
-        group['selected'] = True
-        groups.append(group)
-    for group in remaining_groups:
-        group['selected'] = False
-        groups.append(group)
+def join_groups(selected_groups):
+    data_dict_page_results = {
+        'all_fields': True,
+        'type': 'group',
+        'limit': None,
+        'offset': 0,
+    }
+    groups = logic.get_action('group_list')({}, data_dict_page_results)
+    for selected_group in selected_groups:
+        for group in groups:
+            if selected_group['name'] == group['name']:
+                group['selected'] = True
     return sorted(groups, key=lambda k: k['display_name'].lower())
 
 
@@ -175,7 +179,6 @@ def save_theme_config():
     with open(CONFIG_PATH, 'w') as json_data:
         config = g.gobar
         json_data.write(json.dumps(config, sort_keys=True, indent=2))
-    call(['rm', '-fr', '/tmp/nginx_proxy/*', '/tmp/nginx_cache/*'])
 
 
 def save_img(field_storage):

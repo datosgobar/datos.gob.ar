@@ -47,8 +47,8 @@ $(function () {
     var hiddenKeyShortAuthorName = 'Responsable';
     var extraInputShortAuthorName = $('input[value="Responsable"]');
     if (extraInputShortAuthorName.length > 0) {
-        shortAuthorNameValue = $('#' + extraInputShortAuthorName.attr('id').replace('key', 'value')).val()
-        $('#' + hiddenKeyShortAuthorName).val(shortAuthorNameValue)
+        var shortAuthorNameValue = $('#' + extraInputShortAuthorName.attr('id').replace('key', 'value')).val();
+        $('#' + hiddenKeyShortAuthorName).val(shortAuthorNameValue);
         extraInputShortAuthorName.closest('.control-group').remove();
     }
 
@@ -73,7 +73,12 @@ $(function () {
             value: $('#' + hiddenKeyShortAuthorName).val()
         });
         $form.append(value);
-    }    
+    }
+
+    function addSaveHidden() {
+        var hiddenSave = $('<input type="hidden" name="save">');
+        $form.append(hiddenSave);
+    }
 
     $('form#dataset-edit').submit(function (e) {
         e.preventDefault();
@@ -81,6 +86,7 @@ $(function () {
         addGroupValues();
         addHomeFeaturedValues();
         addShortAuthorNameValues();
+        addSaveHidden();
         $form[0].submit();
     })
 });
