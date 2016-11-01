@@ -1,7 +1,8 @@
 {% set stats = h.get_site_statistics() %}
 {% set config = h.get_theme_config() %}
 
-<div id="title" class="package-title container-fluid">
+{% set background = h.get_theme_config('title.background-image') %}
+<div id="title" class="package-title container-fluid" {{ 'style=background-image:url(' + background + ')' if background else '' }}>
     <div class="background-overlay">
         <div class="restricted-max-width">
             <div class="col-xs-12 col-md-10 col-md-offset-1">
