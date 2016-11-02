@@ -1654,6 +1654,9 @@ div#background-container {
           background-color: #00ACC1; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=shp], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=shp] {
           background-color: #039BE5; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label.group {
+          width: auto;
+          background: #999999; }
 .dataset-list .dataset-item:hover {
   color: inherit; }
   .dataset-list .dataset-item:hover .dataset-border {

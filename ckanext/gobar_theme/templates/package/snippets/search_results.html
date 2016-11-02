@@ -16,10 +16,11 @@
     {% snippet 'package/snippets/search_form.html', form_id='dataset-search-form', type='dataset', query=c.q, sorting=sorting, sorting_selected=c.sort_by_selected, count=c.page.item_count, facets=facets, show_empty=request.params, error=c.query_error, fields=c.fields %}
 
     <div class="dataset-list">
-        {% set packages = c.page.items %}
-        {% for package in packages %}
-	        {% snippet 'package/snippets/search_item.html', package=package, truncate=truncate, truncate_title=truncate_title %}
-        {% endfor %}
+        {%- set show_group_imgs = h.get_theme_config('groups.imgs') != 'hide-icons' -%}
+        {%- set packages = c.page.items -%}
+        {%- for package in packages -%}
+	        {%- snippet 'package/snippets/search_item.html', package=package, truncate=truncate, truncate_title=truncate_title, show_group_imgs=show_group_imgs -%}
+        {%- endfor -%}
     </div>
 
     {{ c.page.pager(q=c.q) }}

@@ -2,7 +2,14 @@
     <div class="hidden-md hidden-lg hide-filters-button">
         <i class="icon-chevron-left"></i>
     </div>
-    {{ h.snippet('package/snippets/search_facets_groups.html', title=c.facet_titles['groups'], name='groups') }}
+
+    {%- set group_imgs = h.get_theme_config('groups.imgs') -%}
+
+    {%- if group_imgs == 'hide-icons' -%}
+        {{ h.snippet('package/snippets/search_facets.html', title='Temas', name='groups') }}
+    {%- else -%}
+        {{ h.snippet('package/snippets/search_facets_groups.html', title='Temas', name='groups') }}
+    {%- endif -%}
     {{ h.snippet('package/snippets/search_facets.html', title=c.facet_titles['organization'], name='organization') }}
     {{ h.snippet('package/snippets/search_facets.html', title=c.facet_titles['tags'], name='tags') }}
     <a class="close no-text hide-filters"><i class="icon-remove-sign"></i><span class="text">close</span></a>

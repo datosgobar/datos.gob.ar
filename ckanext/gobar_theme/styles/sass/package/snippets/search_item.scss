@@ -63,6 +63,11 @@
               font-weight: 500;
               margin: 0 0 5px 5px;
               @include labelsFormatColors();
+
+              &.group {
+                width: auto;
+                background: $grey-300;
+              }
             }
           }
         }

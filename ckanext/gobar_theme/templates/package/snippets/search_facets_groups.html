@@ -13,7 +13,7 @@
                         <a href="{{ href }}">
                     {%- endif -%}
 
-                        <img src="{{ item.image_display_url }}" data-title="{{ item.display_name }} {{ count }}" data-replace="svg">
+                        <img src="{{ item.image_display_url }}" data-title="{{ item.display_name }} {{ count }}" {{ 'data-replace=svg' if item.image_display_url|length > 0 else '' }}>
 
                     {%- if available -%}
                         </a>
