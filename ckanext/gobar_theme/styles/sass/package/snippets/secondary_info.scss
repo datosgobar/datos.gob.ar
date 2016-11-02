@@ -17,6 +17,20 @@
 
       &.group-row {
         overflow: visible;
+
+        .label {
+          display: inline-block;
+          margin-bottom: 5px;
+          font-weight: 400;
+          background: $grey-300;
+          max-width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          &:hover {
+            background: $grey-400;
+          }
+        }
       }
 
       .title {
@@ -45,6 +59,7 @@
         .group-img-container {
           display: inline-block;
           position: relative;
+          max-width: 100%;
 
           svg.group-image, img.group-image {
             width: 30px;
