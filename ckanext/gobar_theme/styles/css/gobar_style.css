@@ -24,7 +24,8 @@ html, body {
 body {
   background: #fff;
   font-family: 'Roboto', sans-serif !important;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #767676; }
 
 a {
   color: #0695d6;
@@ -474,6 +475,39 @@ div#background-container {
   margin: 0 !important;
   padding: 0 !important; }
 
+.modal-backdrop.in {
+  background: white;
+  opacity: 0.8; }
+
+.modal {
+  border: none;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+  .modal .modal-dialog {
+    width: 100%;
+    margin: 0; }
+  .modal .modal-content {
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
+  .modal .modal-body {
+    padding: 30px; }
+    .modal .modal-body h1 {
+      margin: 0 0 10px 0;
+      text-align: center;
+      color: #0695d6;
+      font-weight: 400; }
+    .modal .modal-body p {
+      font-size: 18px;
+      text-align: center;
+      margin: 0 0 10px 0; }
+    .modal .modal-body .modal-actions {
+      text-align: center;
+      margin: 30px 0 0 0; }
+
 .gobar-static-container {
   display: table-row;
   height: 100%;
@@ -507,6 +541,27 @@ div#background-container {
       margin-top: 40px; }
     .gobar-static-container .gobar-static p {
       font-size: 16px; }
+
+.btn {
+  color: white;
+  border: none;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-shadow: none;
+  font-weight: 400;
+  margin-left: 10px; }
+  .btn.btn-grey {
+    background: #999999; }
+    .btn.btn-grey:hover {
+      background: #767676;
+      color: white; }
+  .btn.btn-blue {
+    background: #0695d6; }
+    .btn.btn-blue:hover {
+      background: #17b2f8;
+      color: white; }
 
 #title {
   color: white;

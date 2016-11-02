@@ -1,0 +1,24 @@
+.btn {
+  color: white;
+  border: none;
+  @include border-radius(4px);
+  text-shadow: none;
+  font-weight: 400;
+  margin-left: 10px;
+
+  &.btn-grey {
+    background: $grey-300;
+    &:hover {
+      background: $grey-400;
+      color: white;
+    }
+  }
+
+  &.btn-blue {
+    background: $blue-300;
+    &:hover {
+      background: $blue-200;
+      color: white;
+    }
+  }
+}

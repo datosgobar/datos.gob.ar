@@ -1,5 +1,6 @@
 import ckan.lib.base as base
 from ckan.common import request, g, c, _
+import ckan.lib.helpers as h
 import ckanext.gobar_theme.helpers as gobar_helpers
 import ckan.logic as logic
 import ckan.model as model
@@ -161,6 +162,12 @@ class GobArConfigController(base.BaseController):
             g.gobar['tw-metadata'] = new_metadata_config
             gobar_helpers.save_theme_config()
         return base.render('config/config_11_metadata_twitter.html')
+
+    def edit_greetings(self):
+        if request.method == 'POST':
+            g.gobar['show-greetings'] = False
+            gobar_helpers.save_theme_config()
+        return h.json.dumps({'success': True}, for_json=True)
 
     @staticmethod
     def authorize():

@@ -1,19 +1,40 @@
 {% extends "gobar_page.html" %}
 
+
 {% block content %}
-  <div class="home">
-    {% set title_template = h.get_theme_config('home.title-template') %}
-    {% if title_template == 'portada1' %}
-        {% snippet "home/title_1.html" %}
-    {% elif title_template == 'portada2' %}
-        {% snippet "home/title_2.html" %}
-    {% elif title_template == 'portada3' %}
-        {% snippet "home/title_3.html" %}
-    {% else %}
-        {% snippet "home/title_4.html" %}
+    <div class="home">
+        {% set title_template = h.get_theme_config('home.title-template') %}
+        {% if title_template == 'portada1' %}
+            {% snippet "home/title_1.html" %}
+        {% elif title_template == 'portada2' %}
+            {% snippet "home/title_2.html" %}
+        {% elif title_template == 'portada3' %}
+            {% snippet "home/title_3.html" %}
+        {% else %}
+            {% snippet "home/title_4.html" %}
+        {% endif %}
+        {% snippet "home/create_buttons.html" %}
+        {% snippet "home/groups.html" %}
+        {% snippet "home/featured_content.html" %}
+    </div>
+
+    {% set show_greetings = h.get_theme_config('show-greetings', default=True) %}
+    {% if show_greetings %}
+        <div id="greetings-modal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h1>¡Ya estás listo para usar tu portal!</h1>
+                        <p>Creamos una guía de uso para ayudarte con los primeros pasos</p>
+                        <div class="modal-actions">
+                            <button id="dismiss-greetings" type="button" class="btn btn-grey" data-dismiss="modal">VER MÁS TARDE</button>
+                            <button type="button" class="btn btn-blue">VER GUÍA DE USO</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% resource 'gobar_js/config/greetings.js' %}
     {% endif %}
-    {% snippet "home/create_buttons.html" %}
-    {% snippet "home/groups.html" %}
-    {% snippet "home/featured_content.html" %}
-  </div>
+
 {% endblock %}
