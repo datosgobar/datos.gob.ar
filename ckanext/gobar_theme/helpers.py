@@ -4,7 +4,7 @@ from urlparse import urlparse
 from ckan.common import request, c, g
 import json
 import os
-from subprocess import call
+from urlparse import urljoin
 
 
 def _get_organizations_objs(organizations_branch, depth=0):
@@ -193,3 +193,7 @@ def save_img(field_storage):
         output_file.write(data)
     output_file.close()
     return os.path.join('/user_images/', field_storage.filename)
+
+
+def url_join(*args):
+    return urljoin(*args)

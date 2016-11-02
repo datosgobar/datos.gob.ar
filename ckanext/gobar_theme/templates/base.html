@@ -8,13 +8,14 @@
 
 {%- block meta -%}
     {{ super() }}
-
+    {%- set base_url = h.url('', locale='default', qualified=true) -%}
     <meta property="og:url" content="{{ h.url('/', locale='default', qualified=true) }}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{ h.get_theme_config('fb-metadata.title') }}">
     <meta property="og:site_name" content="{{ h.get_theme_config('fb-metadata.title') }}">
     <meta property="og:description" content="{{ h.get_theme_config('fb-metadata.description') }}">
-    <meta property="og:image" content="{{ h.url('', locale='default', qualified=true) }}{{ h.get_theme_config('fb-metadata.image', default='') }}">
+    {%- set fb_img = h.get_theme_config('fb-metadata.image', default='') %}
+    <meta property="og:image" content="{{ h.url_join(base_url, fb_img) }}">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="2400">
     <meta property="og:image:height" content="1260">
@@ -22,7 +23,8 @@
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site:id" content="@{{ h.get_theme_config('tw-metadata.user') }}"/>
-    <meta name="twitter:image:src" content="{{ h.url('', locale='default', qualified=true) }}{{ h.get_theme_config('tw-metadata.image', default='') }}">
+    {%- set tw_img = h.get_theme_config('tw-metadata.image', default='') %}
+    <meta name="twitter:image:src" content="{{ h.url_join(base_url, tw_img) }}">
     {% block twitter_title -%}
         <meta name="twitter:title" content="{{ h.get_theme_config('tw-metadata.title') }}">
     {%- endblock %}

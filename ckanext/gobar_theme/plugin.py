@@ -32,5 +32,6 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
             'organizations_with_packages': gobar_helpers.organizations_with_packages,
             'get_pkg_extra': gobar_helpers.get_pkg_extra,
             'get_facet_items_dict': gobar_helpers.get_facet_items_dict,
-            'get_theme_config': gobar_helpers.get_theme_config
+            'get_theme_config': gobar_helpers.get_theme_config,
+            'url_join': gobar_helpers.url_join
         }
