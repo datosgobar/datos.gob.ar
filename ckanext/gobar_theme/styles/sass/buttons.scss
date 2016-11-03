@@ -5,8 +5,12 @@
   text-shadow: none;
   font-weight: 400;
   margin-left: 10px;
-
   background: $grey-300;
+
+  &:focus {
+    color: white;
+  }
+
   &:hover {
     background: $grey-400;
     color: white;

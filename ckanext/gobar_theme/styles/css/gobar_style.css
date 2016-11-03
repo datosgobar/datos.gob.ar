@@ -553,6 +553,8 @@ div#background-container {
   font-weight: 400;
   margin-left: 10px;
   background: #999999; }
+  .btn:focus {
+    color: white; }
   .btn:hover {
     background: #767676;
     color: white; }
@@ -1315,7 +1317,8 @@ div#background-container {
       font-size: 40px;
       margin: 0 0 20px 0; }
     #edit-organization-container #edit-organization form, #edit-organization-container #new-organization form, #new-organization-container #edit-organization form, #new-organization-container #new-organization form {
-      padding: 50px; }
+      padding: 50px;
+      margin: 0 0 50px 0; }
       #edit-organization-container #edit-organization form .image-upload, #edit-organization-container #new-organization form .image-upload, #new-organization-container #edit-organization form .image-upload, #new-organization-container #new-organization form .image-upload {
         display: none; }
       #edit-organization-container #edit-organization form .control-group, #edit-organization-container #new-organization form .control-group, #new-organization-container #edit-organization form .control-group, #new-organization-container #new-organization form .control-group {
@@ -1354,6 +1357,10 @@ div#background-container {
       #edit-organization-container #edit-organization form select, #edit-organization-container #new-organization form select, #new-organization-container #edit-organization form select, #new-organization-container #new-organization form select {
         max-width: 100%;
         width: 25em; }
+    #edit-organization-container #edit-organization #delete-modal form, #edit-organization-container #new-organization #delete-modal form, #new-organization-container #edit-organization #delete-modal form, #new-organization-container #new-organization #delete-modal form {
+      padding: 0;
+      margin: 0;
+      box-shadow: none; }
 
 .package-container {
   height: 100%;
