@@ -48,6 +48,8 @@ class GobArConfigController(base.BaseController):
                 'imgs': params['group-imgs']
             }
             gobar_helpers.save_theme_config()
+            if 'json' in params:
+                return h.json.dumps({'success': True}, for_json=True)
         return base.render('config/config_03_groups.html')
 
     def edit_header(self):

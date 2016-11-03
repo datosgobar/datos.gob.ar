@@ -20,4 +20,49 @@
         </div>
     </div>
 
+    {% if h.get_theme_config('groups.imgs', default='not-set') == 'not-set' %}
+        <div id="group-imgs-modal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h1>¿Cómo querés mostrar los temas de tus datasets?</h1>
+                        <p>Vas a poder cambiarlo siempre desde Configuración</p>
+
+                        <div class="container-fluid radio-container">
+                            <label class="img-radio col-xs-12 col-md-6">
+                                <div class="radio-box">
+                                    <img src="/img/config/temas1.svg" class="logo-ministerio">
+                                    <div class="radio-description">
+                                        <h2>Temas con íconos</h2>
+                                        Mostrar temas con íconos y descripción
+                                    </div>
+                                    <input value="show-icons" type="radio"
+                                           name="group-imgs">
+                                </div>
+                            </label>
+
+                            <label class="img-radio col-xs-12 col-md-6">
+                                <div class="radio-box">
+                                    <img src="/img/config/temas2.svg" class="logo-ministerio">
+                                    <div class="radio-description">
+                                        <h2>Temas sin íconos</h2>
+                                        Mostrar temas solo con descripción
+                                    </div>
+                                    <input value="hide-icons" type="radio" name="group-imgs">
+                                </div>
+                            </label>
+
+                        </div>
+
+                        <div class="modal-actions">
+                            <button id="select-option" type="button" class="btn btn-blue">GUARDAR</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% resource 'gobar_js/config/radio_buttons.js' %}
+        {% resource 'gobar_js/config/select_group_format.js' %}
+    {% endif %}
+
 {% endblock %}

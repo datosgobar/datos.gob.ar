@@ -102,3 +102,46 @@
     }
   }
 }
+
+#group-imgs-modal.modal {
+  .modal-body {
+    max-height: inherit;
+    label:after {
+      content: none;
+    }
+    .radio-container {
+      margin-bottom: 30px;
+
+      .radio-box {
+        @include border-radius(4px);
+        border: solid 2px $grey-100;
+        &.selected, &:hover {
+          border-color: $blue-300;
+          .radio-description {
+            background-color: $blue-300;
+            color: white;
+          }
+        }
+        &.not-selected {
+          opacity: 0.75;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+      label.img-radio {
+        text-align: center;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        input {
+          position: absolute;
+          left: -9999px;
+          top: -9999px;
+        }
+        .radio-description {
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
