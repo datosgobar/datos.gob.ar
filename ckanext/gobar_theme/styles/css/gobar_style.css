@@ -2374,7 +2374,8 @@ div#background-container {
 
 #edit-group-container, #new-group-container {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  height: 100%; }
   @media (min-width: 992px) {
     #edit-group-container, #new-group-container {
       padding-right: 15px;
@@ -2382,7 +2383,9 @@ div#background-container {
   #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
     padding: 30px 50px;
     color: #767676;
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 0;
+    height: 100%; }
     @media (min-width: 992px) {
       #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
@@ -2474,8 +2477,65 @@ div#background-container {
           line-height: 1.2;
           padding: 10px;
           height: 39.2px; }
-    #edit-group-container #edit-group .group-warning span, #edit-group-container #new-group .group-warning span, #new-group-container #edit-group .group-warning span, #new-group-container #new-group .group-warning span {
-      color: #870000; }
+    #edit-group-container #edit-group .back-btn, #edit-group-container #new-group .back-btn, #new-group-container #edit-group .back-btn, #new-group-container #new-group .back-btn {
+      padding: 20px 0; }
+    #edit-group-container #edit-group h1, #edit-group-container #new-group h1, #new-group-container #edit-group h1, #new-group-container #new-group h1 {
+      color: #0695d6;
+      font-weight: 400;
+      font-size: 40px;
+      margin: 0 0 20px 0; }
+    #edit-group-container #edit-group form, #edit-group-container #new-group form, #new-group-container #edit-group form, #new-group-container #new-group form {
+      padding: 50px;
+      margin: 0 0 50px 0; }
+      #edit-group-container #edit-group form .control-group, #edit-group-container #new-group form .control-group, #new-group-container #edit-group form .control-group, #new-group-container #new-group form .control-group {
+        margin: 0 0 30px 0;
+        padding: 0; }
+        #edit-group-container #edit-group form .control-group label, #edit-group-container #new-group form .control-group label, #new-group-container #edit-group form .control-group label, #new-group-container #new-group form .control-group label {
+          display: block;
+          float: none;
+          margin: 0 0 10px 0;
+          padding: 0;
+          width: 100%; }
+          #edit-group-container #edit-group form .control-group label:after, #edit-group-container #new-group form .control-group label:after, #new-group-container #edit-group form .control-group label:after, #new-group-container #new-group form .control-group label:after {
+            content: none; }
+        #edit-group-container #edit-group form .control-group .controls, #edit-group-container #new-group form .control-group .controls, #new-group-container #edit-group form .control-group .controls, #new-group-container #new-group form .control-group .controls {
+          display: block;
+          margin: 0 0 10px 0; }
+      #edit-group-container #edit-group form .form-actions, #edit-group-container #new-group form .form-actions, #new-group-container #edit-group form .form-actions, #new-group-container #new-group form .form-actions {
+        text-align: center;
+        padding: 50px 0 0 0;
+        margin: 0;
+        border: none; }
+      #edit-group-container #edit-group form .slug-preview, #edit-group-container #new-group form .slug-preview, #new-group-container #edit-group form .slug-preview, #new-group-container #new-group form .slug-preview {
+        margin: 10px 0 0 0; }
+        #edit-group-container #edit-group form .slug-preview .btn-mini, #edit-group-container #new-group form .slug-preview .btn-mini, #new-group-container #edit-group form .slug-preview .btn-mini, #new-group-container #new-group form .slug-preview .btn-mini {
+          background: none;
+          display: inline;
+          padding: 0;
+          color: #0695d6;
+          border: none;
+          box-shadow: none; }
+      #edit-group-container #edit-group form .add-on, #edit-group-container #new-group form .add-on, #new-group-container #edit-group form .add-on, #new-group-container #new-group form .add-on {
+        height: 40px;
+        line-height: 2; }
+      #edit-group-container #edit-group form #field-url, #edit-group-container #new-group form #field-url, #new-group-container #edit-group form #field-url, #new-group-container #new-group form #field-url {
+        height: 40px; }
+      #edit-group-container #edit-group form .btn-remove-url, #edit-group-container #new-group form .btn-remove-url, #new-group-container #edit-group form .btn-remove-url, #new-group-container #new-group form .btn-remove-url {
+        top: 9px; }
+      #edit-group-container #edit-group form .img-description, #edit-group-container #new-group form .img-description, #new-group-container #edit-group form .img-description, #new-group-container #new-group form .img-description {
+        margin: 0; }
+      #edit-group-container #edit-group form .image-upload .icon-cloud-upload, #edit-group-container #edit-group form .image-upload .icon-globe, #edit-group-container #new-group form .image-upload .icon-cloud-upload, #edit-group-container #new-group form .image-upload .icon-globe, #new-group-container #edit-group form .image-upload .icon-cloud-upload, #new-group-container #edit-group form .image-upload .icon-globe, #new-group-container #new-group form .image-upload .icon-cloud-upload, #new-group-container #new-group form .image-upload .icon-globe {
+        display: none; }
+      #edit-group-container #edit-group form .image-upload a, #edit-group-container #new-group form .image-upload a, #new-group-container #edit-group form .image-upload a, #new-group-container #new-group form .image-upload a {
+        margin-left: 0;
+        text-transform: uppercase; }
+      #edit-group-container #edit-group form .image-upload a.hover, #edit-group-container #new-group form .image-upload a.hover, #new-group-container #edit-group form .image-upload a.hover, #new-group-container #new-group form .image-upload a.hover {
+        color: white;
+        cursor: pointer; }
+    #edit-group-container #edit-group #delete-modal form, #edit-group-container #new-group #delete-modal form, #new-group-container #edit-group #delete-modal form, #new-group-container #new-group #delete-modal form {
+      padding: 0;
+      margin: 0;
+      box-shadow: none; }
 
 ul.activity {
   background: none;

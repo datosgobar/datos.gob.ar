@@ -13,7 +13,7 @@
     {% set prefix = h.url_for(controller='organization', action='read', id='') %}
     {% set domain = h.url_for(controller='organization', action='read', id='', qualified=true) %}
     {% set domain = domain|replace("http://", "")|replace("https://", "") %}
-    {% set attrs = {'data-module': 'slug-preview-slug', 'data-module-prefix': domain, 'data-module-placeholder': '<organization>'} %}
+    {% set attrs = {'data-module': 'slug-preview-slug', 'data-module-prefix': domain, 'data-module-placeholder': '<nombre-de-la-organización>'} %}
 
     {{ form.prepend('name', label=_('URL'), prepend=prefix, id='field-url', placeholder='mi-organización', value=data.name, error=errors.name, attrs=attrs, is_required=true) }}
 
