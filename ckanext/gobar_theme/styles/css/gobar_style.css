@@ -551,17 +551,20 @@ div#background-container {
   border-radius: 4px;
   text-shadow: none;
   font-weight: 400;
-  margin-left: 10px; }
-  .btn.btn-grey {
-    background: #999999; }
-    .btn.btn-grey:hover {
-      background: #767676;
-      color: white; }
+  margin-left: 10px;
+  background: #999999; }
+  .btn:hover {
+    background: #767676;
+    color: white; }
   .btn.btn-blue {
     background: #0695d6; }
     .btn.btn-blue:hover {
       background: #17b2f8;
       color: white; }
+  .btn.btn-red {
+    background: #ef4d3d; }
+    .btn.btn-red:hover {
+      background: #ff7366; }
 
 #title {
   color: white;
@@ -1201,7 +1204,8 @@ div#background-container {
 
 #edit-organization-container, #new-organization-container {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  height: 100%; }
   @media (min-width: 992px) {
     #edit-organization-container, #new-organization-container {
       padding-right: 15px;
@@ -1209,7 +1213,9 @@ div#background-container {
   #edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
     padding: 30px 50px;
     color: #767676;
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 0;
+    height: 100%; }
     @media (min-width: 992px) {
       #edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
@@ -1301,8 +1307,53 @@ div#background-container {
           line-height: 1.2;
           padding: 10px;
           height: 39.2px; }
-    #edit-organization-container #edit-organization form .image-upload, #edit-organization-container #new-organization form .image-upload, #new-organization-container #edit-organization form .image-upload, #new-organization-container #new-organization form .image-upload {
-      display: none; }
+    #edit-organization-container #edit-organization .back-btn, #edit-organization-container #new-organization .back-btn, #new-organization-container #edit-organization .back-btn, #new-organization-container #new-organization .back-btn {
+      padding: 20px 0; }
+    #edit-organization-container #edit-organization h1, #edit-organization-container #new-organization h1, #new-organization-container #edit-organization h1, #new-organization-container #new-organization h1 {
+      color: #0695d6;
+      font-weight: 400;
+      font-size: 40px;
+      margin: 0 0 20px 0; }
+    #edit-organization-container #edit-organization form, #edit-organization-container #new-organization form, #new-organization-container #edit-organization form, #new-organization-container #new-organization form {
+      padding: 50px; }
+      #edit-organization-container #edit-organization form .image-upload, #edit-organization-container #new-organization form .image-upload, #new-organization-container #edit-organization form .image-upload, #new-organization-container #new-organization form .image-upload {
+        display: none; }
+      #edit-organization-container #edit-organization form .control-group, #edit-organization-container #new-organization form .control-group, #new-organization-container #edit-organization form .control-group, #new-organization-container #new-organization form .control-group {
+        margin: 0 0 30px 0;
+        padding: 0; }
+        #edit-organization-container #edit-organization form .control-group label, #edit-organization-container #new-organization form .control-group label, #new-organization-container #edit-organization form .control-group label, #new-organization-container #new-organization form .control-group label {
+          display: block;
+          float: none;
+          margin: 0 0 10px 0;
+          padding: 0;
+          width: 100%; }
+          #edit-organization-container #edit-organization form .control-group label:after, #edit-organization-container #new-organization form .control-group label:after, #new-organization-container #edit-organization form .control-group label:after, #new-organization-container #new-organization form .control-group label:after {
+            content: none; }
+        #edit-organization-container #edit-organization form .control-group .controls, #edit-organization-container #new-organization form .control-group .controls, #new-organization-container #edit-organization form .control-group .controls, #new-organization-container #new-organization form .control-group .controls {
+          display: block;
+          margin: 0 0 10px 0; }
+      #edit-organization-container #edit-organization form .form-actions, #edit-organization-container #new-organization form .form-actions, #new-organization-container #edit-organization form .form-actions, #new-organization-container #new-organization form .form-actions {
+        text-align: center;
+        padding: 50px 0 0 0;
+        margin: 0;
+        border: none; }
+      #edit-organization-container #edit-organization form .slug-preview, #edit-organization-container #new-organization form .slug-preview, #new-organization-container #edit-organization form .slug-preview, #new-organization-container #new-organization form .slug-preview {
+        margin: 10px 0 0 0; }
+        #edit-organization-container #edit-organization form .slug-preview .btn-mini, #edit-organization-container #new-organization form .slug-preview .btn-mini, #new-organization-container #edit-organization form .slug-preview .btn-mini, #new-organization-container #new-organization form .slug-preview .btn-mini {
+          background: none;
+          display: inline;
+          padding: 0;
+          color: #0695d6;
+          border: none;
+          box-shadow: none; }
+      #edit-organization-container #edit-organization form .add-on, #edit-organization-container #new-organization form .add-on, #new-organization-container #edit-organization form .add-on, #new-organization-container #new-organization form .add-on {
+        height: 40px;
+        line-height: 2; }
+      #edit-organization-container #edit-organization form #field-url, #edit-organization-container #new-organization form #field-url, #new-organization-container #edit-organization form #field-url, #new-organization-container #new-organization form #field-url {
+        height: 40px; }
+      #edit-organization-container #edit-organization form select, #edit-organization-container #new-organization form select, #new-organization-container #edit-organization form select, #new-organization-container #new-organization form select {
+        max-width: 100%;
+        width: 25em; }
 
 .package-container {
   height: 100%;

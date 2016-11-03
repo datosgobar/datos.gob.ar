@@ -1,11 +1,81 @@
 #edit-organization-container, #new-organization-container {
   @include base-container();
+  height: 100%;
   #edit-organization, #new-organization {
     @include base-content();
     @include base-form();
+    padding: 0;
+    height: 100%;
+
+    .back-btn {
+      padding: 20px 0;
+    }
+
+    h1 {
+      color: $blue-300;
+      font-weight: 400;
+      font-size: 40px;
+      margin: 0 0 20px 0;
+    }
+
     form {
+      padding: 50px;
       .image-upload {
         display: none;
+      }
+
+      .control-group {
+        margin: 0 0 30px 0;
+        padding: 0;
+
+        label {
+          display: block;
+          float: none;
+          margin: 0 0 10px 0;
+          padding: 0;
+          width: 100%;
+          &:after {
+            content: none;
+          }
+        }
+
+        .controls {
+          display: block;
+          margin: 0 0 10px 0;
+        }
+      }
+
+      .form-actions {
+        text-align: center;
+        padding: 50px 0 0 0;
+        margin: 0;
+        border: none;
+      }
+
+      .slug-preview {
+        margin: 10px 0 0 0;
+        .btn-mini {
+          background: none;
+          display: inline;
+          padding: 0;
+          color: $blue-300;
+          border: none;
+          box-shadow: none;
+        }
+      }
+
+      .add-on {
+        height: 40px;
+        line-height: 2;
+      }
+
+      #field-url {
+        height: 40px;
+      }
+
+      select {
+        max-width: 100%;
+        width: 25em;
       }
     }
   }

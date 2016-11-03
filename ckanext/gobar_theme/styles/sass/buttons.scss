@@ -6,12 +6,10 @@
   font-weight: 400;
   margin-left: 10px;
 
-  &.btn-grey {
-    background: $grey-300;
-    &:hover {
-      background: $grey-400;
-      color: white;
-    }
+  background: $grey-300;
+  &:hover {
+    background: $grey-400;
+    color: white;
   }
 
   &.btn-blue {
@@ -19,6 +17,13 @@
     &:hover {
       background: $blue-200;
       color: white;
+    }
+  }
+
+  &.btn-red {
+    background: $red-300;
+    &:hover {
+      background: $red-200;
     }
   }
 }
