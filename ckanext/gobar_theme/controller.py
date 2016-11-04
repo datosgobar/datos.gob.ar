@@ -1,5 +1,7 @@
 from ckan.controllers.home import HomeController
 from ckan.controllers.api import ApiController
+from ckan.controllers.user import UserController
+import ckan.lib.helpers as h
 from ckan.common import c
 import ckan.logic as logic
 import ckan.model as model
@@ -75,3 +77,11 @@ class GobArApiController(ApiController):
         if logic_function == 'datastore_search':
             default_response = self._remove_extra_id_field(default_response)
         return default_response
+
+
+class GobArUserController(UserController):
+
+    def read(self, id=None):
+        if id and id == c.user:
+            return super(GobArUserController, self).read(id)
+        return h.redirect_to('home')

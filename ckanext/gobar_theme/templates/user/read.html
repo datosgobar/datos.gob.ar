@@ -3,14 +3,30 @@
 {% set user = c.user_dict %}
 
 {% block content %}
-    <div id="user-datasets-container" class="container-fluid">
-      <div class="restricted-max-width">
-        <div id="user-datasets" class="col-xs-12 col-md-10 col-md-offset-1">
-            <div class="col-xs-12 col-md-8 col-md-offset-2">
-                <h2>Datasets</h2>
-                {% snippet 'snippets/package_list.html', packages=user.datasets %}
+    <div id="user-datasets-container" class="package-container container-fluid">
+        <div class="restricted-max-width">
+            <div id="user-datasets" class="package-search col-xs-12 col-md-10 col-md-offset-1">
+                <div id="search-results" class="col-xs-12">
+                    <div class="back-btn">
+                        <a href="{{ h.url_for(controller='package', action='search') }}">
+                            <i class="icon-chevron-left"></i>
+                            VOLVER
+                        </a>
+                    </div>
+                    <h1>Datasets</h1>
+                    <div class="dataset-list">
+                        {%- set show_group_imgs = h.get_theme_config('groups.imgs') != 'hide-icons' -%}
+                        {%- set packages = c.page.items -%}
+                        {%- for package in user.datasets -%}
+                            {% if package.private or package.state == 'draft' %}
+                                {%- snippet 'package/snippets/search_item.html', package=package, truncate=truncate, truncate_title=truncate_title, show_group_imgs=show_group_imgs -%}
+                            {% else %}
+                                {% set package_name = package.title %}
+                            {% endif %}
+                        {%- endfor -%}
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
     </div>
 {% endblock %}

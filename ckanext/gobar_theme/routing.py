@@ -97,6 +97,8 @@ class GobArRouter:
     def connect_users(self):
         self.route_map.connect('login', '/ingresar', action='login', controller='user')
         self.route_map.connect('/logout', action='logout', controller='user')
+        self.route_map.connect('user_datasets', '/user/{id:.*}', action='read',
+                               controller='ckanext.gobar_theme.controller:GobArUserController')
         self.redirect(
             ('/user/login', '/'),
             ('/user/generate_key/{id}', '/'),
