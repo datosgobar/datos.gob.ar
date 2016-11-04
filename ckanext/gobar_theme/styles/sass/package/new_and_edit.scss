@@ -1,11 +1,63 @@
 #edit-package-container, #new-package-container {
   @include base-container();
-  #edit-package, #new-package{
+  #edit-package, #new-package {
     @include base-content();
     @include base-form();
+    padding: 0;
+
+    .back-btn {
+      margin: 20px 0;
+    }
+
+    h1 {
+      color: $blue-300;
+      margin: 20px 0;
+    }
+
     form {
+      padding: 50px;
+
+      .control-group {
+        margin: 0 0 30px 0;
+        label {
+          padding: 0;
+          display: block;
+          float: none;
+          margin: 0 0 10px 0;
+          width: auto;
+          &:after {
+            content: none;
+          }
+        }
+        .controls {
+          margin: 0;
+        }
+      }
       ol {
-        margin: 0 0 10px 0;
+        margin: 0 0 50px 0;
+        background: $grey-300;
+        li {
+          background: transparent;
+          color: white;
+          font-weight: 400;
+          &:after {
+            border-color: $grey-300 transparent;
+          }
+          &:before {
+            color: white;
+            background: transparent;
+            border: solid 2px white;
+            font-weight: 400;
+            line-height: 23px;
+          }
+          &.active {
+            .highlight {
+              color: white;
+              background: $blue-300;
+
+            }
+          }
+        }
       }
     }
     .edit-resources-button {

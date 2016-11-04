@@ -2066,7 +2066,8 @@ div#background-container {
   #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
     padding: 30px 50px;
     color: #767676;
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 0; }
     @media (min-width: 992px) {
       #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
@@ -2158,8 +2159,43 @@ div#background-container {
           line-height: 1.2;
           padding: 10px;
           height: 39.2px; }
-    #edit-package-container #edit-package form ol, #edit-package-container #new-package form ol, #new-package-container #edit-package form ol, #new-package-container #new-package form ol {
-      margin: 0 0 10px 0; }
+    #edit-package-container #edit-package .back-btn, #edit-package-container #new-package .back-btn, #new-package-container #edit-package .back-btn, #new-package-container #new-package .back-btn {
+      margin: 20px 0; }
+    #edit-package-container #edit-package h1, #edit-package-container #new-package h1, #new-package-container #edit-package h1, #new-package-container #new-package h1 {
+      color: #0695d6;
+      margin: 20px 0; }
+    #edit-package-container #edit-package form, #edit-package-container #new-package form, #new-package-container #edit-package form, #new-package-container #new-package form {
+      padding: 50px; }
+      #edit-package-container #edit-package form .control-group, #edit-package-container #new-package form .control-group, #new-package-container #edit-package form .control-group, #new-package-container #new-package form .control-group {
+        margin: 0 0 30px 0; }
+        #edit-package-container #edit-package form .control-group label, #edit-package-container #new-package form .control-group label, #new-package-container #edit-package form .control-group label, #new-package-container #new-package form .control-group label {
+          padding: 0;
+          display: block;
+          float: none;
+          margin: 0 0 10px 0;
+          width: auto; }
+          #edit-package-container #edit-package form .control-group label:after, #edit-package-container #new-package form .control-group label:after, #new-package-container #edit-package form .control-group label:after, #new-package-container #new-package form .control-group label:after {
+            content: none; }
+        #edit-package-container #edit-package form .control-group .controls, #edit-package-container #new-package form .control-group .controls, #new-package-container #edit-package form .control-group .controls, #new-package-container #new-package form .control-group .controls {
+          margin: 0; }
+      #edit-package-container #edit-package form ol, #edit-package-container #new-package form ol, #new-package-container #edit-package form ol, #new-package-container #new-package form ol {
+        margin: 0 0 50px 0;
+        background: #999999; }
+        #edit-package-container #edit-package form ol li, #edit-package-container #new-package form ol li, #new-package-container #edit-package form ol li, #new-package-container #new-package form ol li {
+          background: transparent;
+          color: white;
+          font-weight: 400; }
+          #edit-package-container #edit-package form ol li:after, #edit-package-container #new-package form ol li:after, #new-package-container #edit-package form ol li:after, #new-package-container #new-package form ol li:after {
+            border-color: #999999 transparent; }
+          #edit-package-container #edit-package form ol li:before, #edit-package-container #new-package form ol li:before, #new-package-container #edit-package form ol li:before, #new-package-container #new-package form ol li:before {
+            color: white;
+            background: transparent;
+            border: solid 2px white;
+            font-weight: 400;
+            line-height: 23px; }
+          #edit-package-container #edit-package form ol li.active .highlight, #edit-package-container #new-package form ol li.active .highlight, #new-package-container #edit-package form ol li.active .highlight, #new-package-container #new-package form ol li.active .highlight {
+            color: white;
+            background: #0695d6; }
     #edit-package-container #edit-package .edit-resources-button, #edit-package-container #new-package .edit-resources-button, #new-package-container #edit-package .edit-resources-button, #new-package-container #new-package .edit-resources-button {
       float: right;
       margin: 20px 0; }
