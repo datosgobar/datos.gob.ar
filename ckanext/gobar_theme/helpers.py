@@ -168,11 +168,14 @@ def get_theme_config(path=None, default=None):
 
 
 def _read_theme_config():
-    with open(CONFIG_PATH) as json_data:
-        try:
-            return json.load(json_data)
-        except Exception:
-            return {}
+    try:
+        with open(CONFIG_PATH) as json_data:
+            try:
+                return json.load(json_data)
+            except Exception:
+                return {}
+    except IOError:
+        return {}
 
 
 def save_theme_config():
