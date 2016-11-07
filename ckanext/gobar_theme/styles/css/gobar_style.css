@@ -2176,17 +2176,30 @@ div#background-container {
           width: auto; }
           #edit-package-container #edit-package form .control-group label:after, #edit-package-container #new-package form .control-group label:after, #new-package-container #edit-package form .control-group label:after, #new-package-container #new-package form .control-group label:after {
             content: none; }
+        #edit-package-container #edit-package form .control-group select, #edit-package-container #new-package form .control-group select, #new-package-container #edit-package form .control-group select, #new-package-container #new-package form .control-group select {
+          width: 24em;
+          max-width: 100%; }
         #edit-package-container #edit-package form .control-group .controls, #edit-package-container #new-package form .control-group .controls, #new-package-container #edit-package form .control-group .controls, #new-package-container #new-package form .control-group .controls {
           margin: 0; }
+          #edit-package-container #edit-package form .control-group .controls.editor textarea, #edit-package-container #new-package form .control-group .controls.editor textarea, #new-package-container #edit-package form .control-group .controls.editor textarea, #new-package-container #new-package form .control-group .controls.editor textarea {
+            -o-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            border: solid 1px #cccccc; }
+          #edit-package-container #edit-package form .control-group .controls.editor .editor-info-block, #edit-package-container #new-package form .control-group .controls.editor .editor-info-block, #new-package-container #edit-package form .control-group .controls.editor .editor-info-block, #new-package-container #new-package form .control-group .controls.editor .editor-info-block {
+            display: none; }
+          #edit-package-container #edit-package form .control-group .controls .select2-container .select2-choices, #edit-package-container #new-package form .control-group .controls .select2-container .select2-choices, #new-package-container #edit-package form .control-group .controls .select2-container .select2-choices, #new-package-container #new-package form .control-group .controls .select2-container .select2-choices {
+            background: transparent; }
       #edit-package-container #edit-package form ol, #edit-package-container #new-package form ol, #new-package-container #edit-package form ol, #new-package-container #new-package form ol {
         margin: 0 0 50px 0;
-        background: #999999; }
+        background: #cccccc; }
         #edit-package-container #edit-package form ol li, #edit-package-container #new-package form ol li, #new-package-container #edit-package form ol li, #new-package-container #new-package form ol li {
           background: transparent;
           color: white;
           font-weight: 400; }
           #edit-package-container #edit-package form ol li:after, #edit-package-container #new-package form ol li:after, #new-package-container #edit-package form ol li:after, #new-package-container #new-package form ol li:after {
-            border-color: #999999 transparent; }
+            border-color: #cccccc transparent; }
           #edit-package-container #edit-package form ol li:before, #edit-package-container #new-package form ol li:before, #new-package-container #edit-package form ol li:before, #new-package-container #new-package form ol li:before {
             color: white;
             background: transparent;

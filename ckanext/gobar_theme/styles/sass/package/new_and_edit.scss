@@ -29,19 +29,39 @@
             content: none;
           }
         }
+
+        select {
+          width: 24em;
+          max-width: 100%;
+        }
+
         .controls {
           margin: 0;
+          &.editor {
+            textarea {
+              @include border-radius(4px);
+              border: solid 1px $grey-200;
+            }
+            .editor-info-block {
+              display: none;
+            }
+          }
+          .select2-container {
+            .select2-choices {
+              background: transparent;
+            }
+          }
         }
       }
       ol {
         margin: 0 0 50px 0;
-        background: $grey-300;
+        background: $grey-200;
         li {
           background: transparent;
           color: white;
           font-weight: 400;
           &:after {
-            border-color: $grey-300 transparent;
+            border-color: $grey-200 transparent;
           }
           &:before {
             color: white;
