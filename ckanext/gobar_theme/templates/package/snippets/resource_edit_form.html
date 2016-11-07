@@ -1,0 +1,42 @@
+{% set stage = stage or 1 %}
+{% set include_metadata = include_metadata or false %}
+
+{% extends resource_form_snippet %}
+
+{% block stages %}{% endblock %}
+
+{% block previous_button %}{% endblock %}
+
+{% block again_button %}{% endblock %}
+
+{% block save_button_text %}GUARDAR CAMBIOS{% endblock %}
+
+{% block resource_nav %}
+    {% set pkg = c.pkg_dict or pkg_dict %}
+    {% set res = c.resource %}
+    <div class="resource-nav container-fluid">
+        {% set with_datapusher = 'datapusher' in g.plugins %}
+        <a href="{{ h.url_for('resource_edit', id=pkg.name, resource_id=res.id) }}">
+            <div class="{{ 'col-xs-4' if with_datapusher else 'col-xs-6' }} active">
+                Editar recurso
+            </div>
+        </a>
+        {% if with_datapusher %}
+            <a href="{{ h.url_for('resource_data', id=pkg.name, resource_id=res.id) }}">
+                <div class="col-xs-4">
+                    DataStore
+                </div>
+            </a>
+        {% endif %}
+        <a href="{{ h.url_for('views', id=pkg.name, resource_id=res.id) }}">
+            <div class="{{ 'col-xs-4' if with_datapusher else 'col-xs-6' }}">
+                Vistas
+            </div>
+        </a>
+    </div>
+{% endblock %}
+
+{% block see_all_resources_button %}
+    {% set pkg = c.pkg_dict or pkg_dict %}
+    {% link_for 'VER TODOS LOS RECURSOS', controller='package', action='resources', id=pkg.name, class_='btn btn-blue' %}
+{% endblock %}

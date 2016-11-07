@@ -2109,7 +2109,8 @@ div#background-container {
 
 #edit-package-container, #new-package-container {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  height: 100%; }
   @media (min-width: 992px) {
     #edit-package-container, #new-package-container {
       padding-right: 15px;
@@ -2118,6 +2119,7 @@ div#background-container {
     padding: 30px 50px;
     color: #767676;
     font-size: 16px;
+    height: 100%;
     padding: 0; }
     @media (min-width: 992px) {
       #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
@@ -2216,7 +2218,20 @@ div#background-container {
       color: #0695d6;
       margin: 20px 0; }
     #edit-package-container #edit-package form, #edit-package-container #new-package form, #new-package-container #edit-package form, #new-package-container #new-package form {
-      padding: 50px; }
+      padding: 50px;
+      margin: 0 0 50px 0; }
+      #edit-package-container #edit-package form .resource-nav, #edit-package-container #new-package form .resource-nav, #new-package-container #edit-package form .resource-nav, #new-package-container #new-package form .resource-nav {
+        margin: 0 0 50px 0;
+        padding: 0;
+        color: white;
+        background: #cccccc;
+        text-align: center; }
+        #edit-package-container #edit-package form .resource-nav a, #edit-package-container #edit-package form .resource-nav a:hover, #edit-package-container #new-package form .resource-nav a, #edit-package-container #new-package form .resource-nav a:hover, #new-package-container #edit-package form .resource-nav a, #new-package-container #edit-package form .resource-nav a:hover, #new-package-container #new-package form .resource-nav a, #new-package-container #new-package form .resource-nav a:hover {
+          color: white; }
+          #edit-package-container #edit-package form .resource-nav a div, #edit-package-container #edit-package form .resource-nav a:hover div, #edit-package-container #new-package form .resource-nav a div, #edit-package-container #new-package form .resource-nav a:hover div, #new-package-container #edit-package form .resource-nav a div, #new-package-container #edit-package form .resource-nav a:hover div, #new-package-container #new-package form .resource-nav a div, #new-package-container #new-package form .resource-nav a:hover div {
+            padding: 10px 0; }
+            #edit-package-container #edit-package form .resource-nav a div.active, #edit-package-container #edit-package form .resource-nav a:hover div.active, #edit-package-container #new-package form .resource-nav a div.active, #edit-package-container #new-package form .resource-nav a:hover div.active, #new-package-container #edit-package form .resource-nav a div.active, #new-package-container #edit-package form .resource-nav a:hover div.active, #new-package-container #new-package form .resource-nav a div.active, #new-package-container #new-package form .resource-nav a:hover div.active {
+              background: #0695d6; }
       #edit-package-container #edit-package form .control-group, #edit-package-container #new-package form .control-group, #new-package-container #edit-package form .control-group, #new-package-container #new-package form .control-group {
         margin: 0 0 30px 0; }
         #edit-package-container #edit-package form .control-group label, #edit-package-container #new-package form .control-group label, #new-package-container #edit-package form .control-group label, #new-package-container #new-package form .control-group label {
@@ -2263,6 +2278,14 @@ div#background-container {
           #edit-package-container #edit-package form ol.stages li.complete .highlight, #edit-package-container #new-package form ol.stages li.complete .highlight, #new-package-container #edit-package form ol.stages li.complete .highlight, #new-package-container #new-package form ol.stages li.complete .highlight {
             color: white;
             background: #cccccc; }
+      #edit-package-container #edit-package form .form-actions, #edit-package-container #new-package form .form-actions, #new-package-container #edit-package form .form-actions, #new-package-container #new-package form .form-actions {
+        padding: 50px 0 0 0;
+        margin: 10px 0 0 0;
+        text-align: center;
+        text-transform: uppercase;
+        border-top: solid 1px #cccccc; }
+        #edit-package-container #edit-package form .form-actions .btn, #edit-package-container #new-package form .form-actions .btn, #new-package-container #edit-package form .form-actions .btn, #new-package-container #new-package form .form-actions .btn {
+          float: none !important; }
     #edit-package-container #edit-package .edit-resources-button, #edit-package-container #new-package .edit-resources-button, #new-package-container #edit-package .edit-resources-button, #new-package-container #new-package .edit-resources-button {
       float: right;
       margin: 20px 0; }
