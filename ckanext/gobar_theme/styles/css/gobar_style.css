@@ -571,6 +571,10 @@ div#background-container {
     background: #ef4d3d; }
     .btn.btn-red:hover {
       background: #ff7366; }
+  .btn.btn-green {
+    background: #00D57A; }
+    .btn.btn-green:hover {
+      background: #16de84; }
 
 #title {
   color: white;

@@ -30,4 +30,11 @@
       background: $red-200;
     }
   }
+
+  &.btn-green {
+    background: $green-300;
+    &:hover {
+      background: $green-200;
+    }
+  }
 }
