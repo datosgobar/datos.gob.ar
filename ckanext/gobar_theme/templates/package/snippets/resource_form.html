@@ -13,7 +13,7 @@
         {% endif %}
     {% endblock %}
 
-    {% block resource_nav %}{% endblock %}
+    {% snippet'package/snippets/resource_nav.html', current='edit' %}
 
     {% block errors %}{{ form.errors(error_summary) }}{% endblock %}
 
