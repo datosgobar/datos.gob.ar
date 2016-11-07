@@ -2034,7 +2034,8 @@ div#background-container {
 
 #edit-resources-container {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  height: 100%; }
   @media (min-width: 992px) {
     #edit-resources-container {
       padding-right: 15px;
@@ -2042,19 +2043,69 @@ div#background-container {
   #edit-resources-container #edit-resources {
     padding: 30px 50px;
     color: #767676;
-    font-size: 16px; }
+    font-size: 16px;
+    height: 100%;
+    padding: 0; }
     @media (min-width: 992px) {
       #edit-resources-container #edit-resources {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
-    #edit-resources-container #edit-resources .action-buttons {
+    #edit-resources-container #edit-resources .back-btn {
       margin: 20px 0; }
-      #edit-resources-container #edit-resources .action-buttons .edit-dataset-button, #edit-resources-container #edit-resources .action-buttons .add-resource {
-        margin: 0 10px 0 0; }
+    #edit-resources-container #edit-resources h1 {
+      color: #0695d6;
+      margin: 20px 0; }
+    #edit-resources-container #edit-resources .form-like {
+      padding: 50px;
+      margin: 0 0 50px 0;
+      -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
+      #edit-resources-container #edit-resources .form-like h1 {
+        display: none !important; }
+      #edit-resources-container #edit-resources .form-like .spacer {
+        height: 83px;
+        margin: 0 0 10px 0;
+        border-bottom: solid 1px #cccccc;
+        display: none; }
+    #edit-resources-container #edit-resources .resource-actions {
+      padding: 50px 0 0 0;
+      margin: 10px 0 0 0;
+      border-top: solid 1px #cccccc;
+      text-align: center; }
+    #edit-resources-container #edit-resources .form-actions {
+      padding: 50px 0 0 0;
+      margin: 10px 0 0 0;
+      text-align: center;
+      text-transform: uppercase;
+      border-top: solid 1px #cccccc; }
+      #edit-resources-container #edit-resources .form-actions .btn {
+        float: none !important; }
+        #edit-resources-container #edit-resources .form-actions .btn.save {
+          background: #0695d6; }
+          #edit-resources-container #edit-resources .form-actions .btn.save:hover {
+            background: #17b2f8;
+            color: white; }
+      #edit-resources-container #edit-resources .form-actions .saving {
+        display: none !important; }
+    #edit-resources-container #edit-resources .action-buttons {
+      margin: 0 0 10px 0;
+      padding: 0 0 50px 0;
+      border-bottom: solid 1px #cccccc;
+      text-align: right; }
       #edit-resources-container #edit-resources .action-buttons .btn {
-        border-color: #cccccc; }
+        text-transform: uppercase;
+        background: #0695d6; }
+        #edit-resources-container #edit-resources .action-buttons .btn:hover {
+          background: #17b2f8;
+          color: white; }
+        #edit-resources-container #edit-resources .action-buttons .btn i {
+          display: none; }
+    #edit-resources-container #edit-resources ul {
+      margin: 0; }
 
 #edit-package-container, #new-package-container {
   padding-right: 0;
