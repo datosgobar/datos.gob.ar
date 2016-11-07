@@ -2191,24 +2191,27 @@ div#background-container {
             display: none; }
           #edit-package-container #edit-package form .control-group .controls .select2-container .select2-choices, #edit-package-container #new-package form .control-group .controls .select2-container .select2-choices, #new-package-container #edit-package form .control-group .controls .select2-container .select2-choices, #new-package-container #new-package form .control-group .controls .select2-container .select2-choices {
             background: transparent; }
-      #edit-package-container #edit-package form ol, #edit-package-container #new-package form ol, #new-package-container #edit-package form ol, #new-package-container #new-package form ol {
+      #edit-package-container #edit-package form ol.stages, #edit-package-container #new-package form ol.stages, #new-package-container #edit-package form ol.stages, #new-package-container #new-package form ol.stages {
         margin: 0 0 50px 0;
         background: #cccccc; }
-        #edit-package-container #edit-package form ol li, #edit-package-container #new-package form ol li, #new-package-container #edit-package form ol li, #new-package-container #new-package form ol li {
+        #edit-package-container #edit-package form ol.stages li, #edit-package-container #new-package form ol.stages li, #new-package-container #edit-package form ol.stages li, #new-package-container #new-package form ol.stages li {
           background: transparent;
           color: white;
           font-weight: 400; }
-          #edit-package-container #edit-package form ol li:after, #edit-package-container #new-package form ol li:after, #new-package-container #edit-package form ol li:after, #new-package-container #new-package form ol li:after {
+          #edit-package-container #edit-package form ol.stages li:after, #edit-package-container #new-package form ol.stages li:after, #new-package-container #edit-package form ol.stages li:after, #new-package-container #new-package form ol.stages li:after {
             border-color: #cccccc transparent; }
-          #edit-package-container #edit-package form ol li:before, #edit-package-container #new-package form ol li:before, #new-package-container #edit-package form ol li:before, #new-package-container #new-package form ol li:before {
+          #edit-package-container #edit-package form ol.stages li:before, #edit-package-container #new-package form ol.stages li:before, #new-package-container #edit-package form ol.stages li:before, #new-package-container #new-package form ol.stages li:before {
             color: white;
             background: transparent;
             border: solid 2px white;
             font-weight: 400;
             line-height: 23px; }
-          #edit-package-container #edit-package form ol li.active .highlight, #edit-package-container #new-package form ol li.active .highlight, #new-package-container #edit-package form ol li.active .highlight, #new-package-container #new-package form ol li.active .highlight {
+          #edit-package-container #edit-package form ol.stages li.active .highlight, #edit-package-container #new-package form ol.stages li.active .highlight, #new-package-container #edit-package form ol.stages li.active .highlight, #new-package-container #new-package form ol.stages li.active .highlight {
             color: white;
             background: #0695d6; }
+          #edit-package-container #edit-package form ol.stages li.complete .highlight, #edit-package-container #new-package form ol.stages li.complete .highlight, #new-package-container #edit-package form ol.stages li.complete .highlight, #new-package-container #new-package form ol.stages li.complete .highlight {
+            color: white;
+            background: #cccccc; }
     #edit-package-container #edit-package .edit-resources-button, #edit-package-container #new-package .edit-resources-button, #new-package-container #edit-package .edit-resources-button, #new-package-container #new-package .edit-resources-button {
       float: right;
       margin: 20px 0; }

@@ -53,7 +53,7 @@
           }
         }
       }
-      ol {
+      ol.stages {
         margin: 0 0 50px 0;
         background: $grey-200;
         li {
@@ -74,7 +74,12 @@
             .highlight {
               color: white;
               background: $blue-300;
-
+            }
+          }
+          &.complete {
+            .highlight {
+              color: white;
+              background: $grey-200;
             }
           }
         }
