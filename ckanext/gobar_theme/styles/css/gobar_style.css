@@ -2286,6 +2286,10 @@ div#background-container {
         border-top: solid 1px #cccccc; }
         #edit-package-container #edit-package form .form-actions .btn, #edit-package-container #new-package form .form-actions .btn, #new-package-container #edit-package form .form-actions .btn, #new-package-container #new-package form .form-actions .btn {
           float: none !important; }
+    #edit-package-container #edit-package #delete-modal form, #edit-package-container #new-package #delete-modal form, #new-package-container #edit-package #delete-modal form, #new-package-container #new-package #delete-modal form {
+      padding: 0;
+      margin: 0;
+      box-shadow: none; }
     #edit-package-container #edit-package .edit-resources-button, #edit-package-container #new-package .edit-resources-button, #new-package-container #edit-package .edit-resources-button, #new-package-container #new-package .edit-resources-button {
       float: right;
       margin: 20px 0; }
