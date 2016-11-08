@@ -2327,7 +2327,7 @@ div#background-container {
         padding-left: 50px;
         padding-right: 50px; } }
     .resource-container .resource .back-to-pkg {
-      padding-left: 0; }
+      padding: 0; }
       .resource-container .resource .back-to-pkg a.back-link {
         color: #767676;
         font-weight: 500; }

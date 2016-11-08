@@ -78,7 +78,7 @@
             <div class="modal-body">
                 <h1>¿Estás seguro de que querés borrar este recurso?</h1>
                 <div class="modal-actions">
-                    <form id="organization-confirm-delete-form"
+                    <form id="resource-confirm-delete-form"
                           action="{% url_for controller='package', action='resource_delete', resource_id=data.id, id=pkg_name %}"
                           method="post">
                         <button class="btn btn-blue" type="submit" name="delete">SI, BORRAR RECURSO</button>

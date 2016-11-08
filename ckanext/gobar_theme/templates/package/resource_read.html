@@ -24,7 +24,7 @@
                     {% set can_edit = h.check_access('package_update', {'id':pkg.id }) %}
 
                     {% if can_edit %}
-                        {% link_for 'Editar recurso', controller='package', action='resource_edit', id=pkg.name, resource_id=res.id, class_='btn btn-primary edit-resource', icon='wrench' %}
+                        {% link_for 'EDITAR RECURSO', controller='package', action='resource_edit', id=pkg.name, resource_id=res.id, class_='btn btn-blue edit-resource' %}
                     {% endif %}
                 </div>
                 <div class="col-xs-12 title">
