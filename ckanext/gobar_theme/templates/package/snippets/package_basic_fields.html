@@ -1,17 +1,13 @@
 {% import 'macros/form.html' as form %}
 
-{% block package_basic_fields_title %}
-    {{ form.input('title', id='field-title', label='Titulo del dataset', placeholder='Ej: Sistema de Contrataciones ELectrónicas (Argentina Compra)', value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target'}) }}
-{% endblock %}
+{{ form.input('title', id='field-title', label='Titulo del dataset', placeholder='Ej: Sistema de Contrataciones ELectrónicas (Argentina Compra)', value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target'}) }}
 
-{% block package_basic_fields_url %}
-    {% set prefix = h.url_for(controller='package', action='read', id='') %}
-    {% set domain = h.url_for(controller='package', action='read', id='', qualified=true) %}
-    {% set domain = domain|replace("http://", "")|replace("https://", "") %}
-    {% set attrs = {'data-module': 'slug-preview-slug', 'data-module-prefix': domain, 'data-module-placeholder': '<dataset>'} %}
+{% set prefix = h.url_for(controller='package', action='read', id='') %}
+{% set domain = h.url_for(controller='package', action='read', id='', qualified=true) %}
+{% set domain = domain|replace("http://", "")|replace("https://", "") %}
+{% set attrs = {'data-module': 'slug-preview-slug', 'data-module-prefix': domain, 'data-module-placeholder': '<dataset>'} %}
 
-    {{ form.prepend('name', id='field-name', label=_('URL'), prepend=prefix, placeholder=_('eg. my-dataset'), value=data.name, error=errors.name, attrs=attrs, is_required=true) }}
-{% endblock %}
+{{ form.prepend('name', id='field-name', label=_('URL'), prepend=prefix, placeholder=_('eg. my-dataset'), value=data.name, error=errors.name, attrs=attrs, is_required=true) }}
 
 {% block package_basic_fields_custom %}{% endblock %}
 
@@ -32,7 +28,8 @@
             Esta licencia aplica para los contenidos de cualquier recurso de este dataset. Cuando publiques, aceptarás
             liberar los metadatos del formulario bajo la <a href="http://opendatacommons.org/licenses/odbl/1-0/"
                                                             target="_blank">licencia Open Database</a>. Encontrá
-            <a href="http://opendefinition.org/" target="_blank">más información sobre licencias en Open Definition</a>.</p>
+            <a href="http://opendefinition.org/" target="_blank">más información sobre licencias en Open Definition</a>.
+        </p>
         <div class="controls">
             <select id="field-license" name="license_id" data-module="autocomplete">
                 {% set existing_license_id = data.get('license_id') %}
@@ -118,18 +115,5 @@
             </div>
         </div>
     {% endif %}
-
-{% endblock %}
-
-
-{% block package_basic_fields_groups %}
-
-    {% snippet "package/snippets/package_edit_groups.html", selected_groups=data.groups, remaining_groups=groups_available %}
-
-    {{ form.input('home_featured', label='Mostrar tarjeta en la home', type='checkbox') }}
-
-    {{ form.input('Responsable', label='Autor (nombre corto para tarjeta en la home)', type='text') }}
-
-    {% resource 'gobar_js/package/form_actions.js' %}
 
 {% endblock %}

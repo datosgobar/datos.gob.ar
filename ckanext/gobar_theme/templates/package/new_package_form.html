@@ -3,27 +3,33 @@
 {% set form_style = c.form_style or c.action %}
 
 {% block stages %}
-  {% if form_style != 'edit' %}
-    {{ super() }}
-  {% endif %}
+    {% if form_style != 'edit' %}
+        {{ super() }}
+    {% endif %}
 {% endblock %}
 
 {% block save_button_text %}
-  {% if form_style != 'edit' %}
-    {{ super() }}
-  {% else %}
-    GUARDAR CAMBIOS
-  {% endif %}
+    {% if form_style != 'edit' %}
+        {{ super() }}
+    {% else %}
+        GUARDAR CAMBIOS
+    {% endif %}
+{% endblock %}
+
+{% block see_resources %}
+    {% if form_style == 'edit' %}
+        {% link_for 'EDITAR RECURSOS', controller='package', action='resources', id=c.pkg_dict.name, class_='btn btn-blue' %}
+    {% endif %}
 {% endblock %}
 
 {% block cancel_button %}
-  {% if form_style != 'edit' %}
-    {{ super() }}
-  {% endif %}
+    {% if form_style != 'edit' %}
+        {{ super() }}
+    {% endif %}
 {% endblock %}
 
 {% block delete_button %}
-  {% if form_style == 'edit' and h.check_access('package_delete', {'id': c.pkg_dict.id}) %}
-    {{ super() }}
-  {% endif %}
+    {% if form_style == 'edit' and h.check_access('package_delete', {'id': c.pkg_dict.id}) %}
+        {{ super() }}
+    {% endif %}
 {% endblock %}

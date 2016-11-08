@@ -1001,21 +1001,17 @@ div#background-container {
           padding: 10px;
           height: 39.2px; }
       #login-container #login form .package-groups input[type="checkbox"].package-group-checkbox {
-        width: 1px;
-        height: 1px;
-        position: fixed;
-        left: -10px;
-        top: -10px; }
+        display: inline-block;
+        width: auto;
+        margin: 0;
+        position: static;
+        vertical-align: baseline; }
       #login-container #login form .package-groups label.package-group-label {
-        color: #cccccc;
+        color: #999999;
         margin: 0;
         padding: 2px 0; }
         #login-container #login form .package-groups label.package-group-label:after {
-          content: initial; }
-        #login-container #login form .package-groups label.package-group-label:hover {
-          color: #0695d6; }
-      #login-container #login form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0695d6; }
+          content: none; }
       #login-container #login form .control-group {
         position: relative; }
         #login-container #login form .control-group.error .input-prepend .add-on {
@@ -1306,21 +1302,17 @@ div#background-container {
           padding: 10px;
           height: 39.2px; }
       #edit-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox, #edit-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox, #new-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox, #new-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox {
-        width: 1px;
-        height: 1px;
-        position: fixed;
-        left: -10px;
-        top: -10px; }
+        display: inline-block;
+        width: auto;
+        margin: 0;
+        position: static;
+        vertical-align: baseline; }
       #edit-organization-container #edit-organization form .package-groups label.package-group-label, #edit-organization-container #new-organization form .package-groups label.package-group-label, #new-organization-container #edit-organization form .package-groups label.package-group-label, #new-organization-container #new-organization form .package-groups label.package-group-label {
-        color: #cccccc;
+        color: #999999;
         margin: 0;
         padding: 2px 0; }
         #edit-organization-container #edit-organization form .package-groups label.package-group-label:after, #edit-organization-container #new-organization form .package-groups label.package-group-label:after, #new-organization-container #edit-organization form .package-groups label.package-group-label:after, #new-organization-container #new-organization form .package-groups label.package-group-label:after {
-          content: initial; }
-        #edit-organization-container #edit-organization form .package-groups label.package-group-label:hover, #edit-organization-container #new-organization form .package-groups label.package-group-label:hover, #new-organization-container #edit-organization form .package-groups label.package-group-label:hover, #new-organization-container #new-organization form .package-groups label.package-group-label:hover {
-          color: #0695d6; }
-      #edit-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0695d6; }
+          content: none; }
       #edit-organization-container #edit-organization form .control-group, #edit-organization-container #new-organization form .control-group, #new-organization-container #edit-organization form .control-group, #new-organization-container #new-organization form .control-group {
         position: relative; }
         #edit-organization-container #edit-organization form .control-group.error .input-prepend .add-on, #edit-organization-container #new-organization form .control-group.error .input-prepend .add-on, #new-organization-container #edit-organization form .control-group.error .input-prepend .add-on, #new-organization-container #new-organization form .control-group.error .input-prepend .add-on {
@@ -2194,21 +2186,17 @@ div#background-container {
           padding: 10px;
           height: 39.2px; }
       #edit-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox, #edit-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox, #new-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox, #new-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox {
-        width: 1px;
-        height: 1px;
-        position: fixed;
-        left: -10px;
-        top: -10px; }
+        display: inline-block;
+        width: auto;
+        margin: 0;
+        position: static;
+        vertical-align: baseline; }
       #edit-package-container #edit-package form .package-groups label.package-group-label, #edit-package-container #new-package form .package-groups label.package-group-label, #new-package-container #edit-package form .package-groups label.package-group-label, #new-package-container #new-package form .package-groups label.package-group-label {
-        color: #cccccc;
+        color: #999999;
         margin: 0;
         padding: 2px 0; }
         #edit-package-container #edit-package form .package-groups label.package-group-label:after, #edit-package-container #new-package form .package-groups label.package-group-label:after, #new-package-container #edit-package form .package-groups label.package-group-label:after, #new-package-container #new-package form .package-groups label.package-group-label:after {
-          content: initial; }
-        #edit-package-container #edit-package form .package-groups label.package-group-label:hover, #edit-package-container #new-package form .package-groups label.package-group-label:hover, #new-package-container #edit-package form .package-groups label.package-group-label:hover, #new-package-container #new-package form .package-groups label.package-group-label:hover {
-          color: #0695d6; }
-      #edit-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0695d6; }
+          content: none; }
       #edit-package-container #edit-package form .control-group, #edit-package-container #new-package form .control-group, #new-package-container #edit-package form .control-group, #new-package-container #new-package form .control-group {
         position: relative; }
         #edit-package-container #edit-package form .control-group.error .input-prepend .add-on, #edit-package-container #new-package form .control-group.error .input-prepend .add-on, #new-package-container #edit-package form .control-group.error .input-prepend .add-on, #new-package-container #new-package form .control-group.error .input-prepend .add-on {
@@ -2261,6 +2249,20 @@ div#background-container {
             display: none; }
           #edit-package-container #edit-package form .control-group .controls .select2-container .select2-choices, #edit-package-container #new-package form .control-group .controls .select2-container .select2-choices, #new-package-container #edit-package form .control-group .controls .select2-container .select2-choices, #new-package-container #new-package form .control-group .controls .select2-container .select2-choices {
             background: transparent; }
+        #edit-package-container #edit-package form .control-group .slug-preview, #edit-package-container #new-package form .control-group .slug-preview, #new-package-container #edit-package form .control-group .slug-preview, #new-package-container #new-package form .control-group .slug-preview {
+          margin: 10px 0 0 0; }
+          #edit-package-container #edit-package form .control-group .slug-preview .btn-mini, #edit-package-container #new-package form .control-group .slug-preview .btn-mini, #new-package-container #edit-package form .control-group .slug-preview .btn-mini, #new-package-container #new-package form .control-group .slug-preview .btn-mini {
+            background: none;
+            display: inline;
+            padding: 0;
+            color: #0695d6;
+            border: none;
+            box-shadow: none; }
+        #edit-package-container #edit-package form .control-group .add-on, #edit-package-container #new-package form .control-group .add-on, #new-package-container #edit-package form .control-group .add-on, #new-package-container #new-package form .control-group .add-on {
+          height: 40px;
+          line-height: 2; }
+        #edit-package-container #edit-package form .control-group .add-on + input, #edit-package-container #new-package form .control-group .add-on + input, #new-package-container #edit-package form .control-group .add-on + input, #new-package-container #new-package form .control-group .add-on + input {
+          height: 40px; }
       #edit-package-container #edit-package form ol.stages, #edit-package-container #new-package form ol.stages, #new-package-container #edit-package form ol.stages, #new-package-container #new-package form ol.stages {
         margin: 0 0 50px 0;
         background: #cccccc; }
@@ -2604,21 +2606,17 @@ div#background-container {
           padding: 10px;
           height: 39.2px; }
       #edit-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox, #edit-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox, #new-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox, #new-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox {
-        width: 1px;
-        height: 1px;
-        position: fixed;
-        left: -10px;
-        top: -10px; }
+        display: inline-block;
+        width: auto;
+        margin: 0;
+        position: static;
+        vertical-align: baseline; }
       #edit-group-container #edit-group form .package-groups label.package-group-label, #edit-group-container #new-group form .package-groups label.package-group-label, #new-group-container #edit-group form .package-groups label.package-group-label, #new-group-container #new-group form .package-groups label.package-group-label {
-        color: #cccccc;
+        color: #999999;
         margin: 0;
         padding: 2px 0; }
         #edit-group-container #edit-group form .package-groups label.package-group-label:after, #edit-group-container #new-group form .package-groups label.package-group-label:after, #new-group-container #edit-group form .package-groups label.package-group-label:after, #new-group-container #new-group form .package-groups label.package-group-label:after {
-          content: initial; }
-        #edit-group-container #edit-group form .package-groups label.package-group-label:hover, #edit-group-container #new-group form .package-groups label.package-group-label:hover, #new-group-container #edit-group form .package-groups label.package-group-label:hover, #new-group-container #new-group form .package-groups label.package-group-label:hover {
-          color: #0695d6; }
-      #edit-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0695d6; }
+          content: none; }
       #edit-group-container #edit-group form .control-group, #edit-group-container #new-group form .control-group, #new-group-container #edit-group form .control-group, #new-group-container #new-group form .control-group {
         position: relative; }
         #edit-group-container #edit-group form .control-group.error .input-prepend .add-on, #edit-group-container #new-group form .control-group.error .input-prepend .add-on, #new-group-container #edit-group form .control-group.error .input-prepend .add-on, #new-group-container #new-group form .control-group.error .input-prepend .add-on {

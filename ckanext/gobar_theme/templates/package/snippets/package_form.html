@@ -12,33 +12,29 @@
     <input type="hidden" name="pkg_name" value="{{ data.id }}"/>
     {% block errors %}{{ form.errors(error_summary) }}{% endblock %}
 
-    {% block basic_fields %}
-        {% snippet 'package/snippets/package_basic_fields.html', data=data, errors=errors, licenses=c.licenses, groups_available=c.groups_available %}
-    {% endblock %}
+    {% snippet 'package/snippets/package_basic_fields.html', data=data, errors=errors, licenses=c.licenses, groups_available=c.groups_available %}
 
-    {% block metadata_fields %}
-        {% snippet 'package/snippets/package_metadata_fields.html', data=data, errors=errors %}
-    {% endblock %}
+    {% snippet "package/snippets/package_edit_groups.html", selected_groups=data.groups, remaining_groups=groups_available %}
 
-    {% block form_actions %}
-        <div class="form-actions">
-            {% block delete_button %}
-                {% if h.check_access('package_delete', {'id': data.id}) and not data.state == 'deleted' %}
-                    <button type="button" class="btn btn-red" id="confirm-delete">
-                        BORRAR DATASET
-                    </button>
-                {% endif %}
-            {% endblock %}
-            {% block save_button %}
-                <button class="btn btn-blue" type="submit" name="save">
-                    {% block save_button_text -%}
-                        SEGUIR Y AGREGAR RECURSOS
-                    {%- endblock %}
+    {% snippet 'package/snippets/package_metadata_fields.html', data=data, errors=errors %}
+
+    <div class="form-actions">
+        {% block delete_button %}
+            {% if h.check_access('package_delete', {'id': data.id}) and not data.state == 'deleted' %}
+                <button type="button" class="btn btn-red" id="confirm-delete">
+                    BORRAR DATASET
                 </button>
-            {% endblock %}
-
-        </div>
-    {% endblock %}
+            {% endif %}
+        {% endblock %}
+        {% block save_button %}
+            <button class="btn btn-blue" type="submit" name="save">
+                {% block save_button_text -%}
+                    SEGUIR Y AGREGAR RECURSOS
+                {%- endblock %}
+            </button>
+        {% endblock %}
+        {% block see_resources %}{% endblock %}
+    </div>
 </form>
 
 <div id="delete-modal" class="modal" tabindex="-1" role="dialog">
@@ -62,4 +58,5 @@
     </div>
 </div>
 
+{% resource 'gobar_js/package/form_actions.js' %}
 {% resource 'gobar_js/forms/confirm_delete.js' %}

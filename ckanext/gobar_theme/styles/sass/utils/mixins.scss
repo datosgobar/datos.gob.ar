@@ -95,25 +95,19 @@
     }
     .package-groups {
       input[type="checkbox"].package-group-checkbox {
-        width: 1px;
-        height: 1px;
-        position: fixed;
-        left: -10px;
-        top: -10px;
+        display: inline-block;
+        width: auto;
+        margin: 0;
+        position: static;
+        vertical-align: baseline;
       }
       label.package-group-label {
-        color: $grey-200;
+        color: $grey-300;
         margin: 0;
         padding: 2px 0;
         &:after {
-          content: initial;
+          content: none;
         }
-        &:hover {
-          color: $blue-300;
-        }
-      }
-      input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: $blue-300;
       }
 
     }
