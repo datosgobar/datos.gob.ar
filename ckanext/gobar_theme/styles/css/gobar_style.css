@@ -2263,6 +2263,11 @@ div#background-container {
           line-height: 2; }
         #edit-package-container #edit-package form .control-group .add-on + input, #edit-package-container #new-package form .control-group .add-on + input, #new-package-container #edit-package form .control-group .add-on + input, #new-package-container #new-package form .control-group .add-on + input {
           height: 40px; }
+        #edit-package-container #edit-package form .control-group input[type="checkbox"], #edit-package-container #new-package form .control-group input[type="checkbox"], #new-package-container #edit-package form .control-group input[type="checkbox"], #new-package-container #new-package form .control-group input[type="checkbox"] {
+          margin: 0;
+          display: inline-block;
+          width: auto;
+          position: static; }
       #edit-package-container #edit-package form ol.stages, #edit-package-container #new-package form ol.stages, #new-package-container #edit-package form ol.stages, #new-package-container #new-package form ol.stages {
         margin: 0 0 50px 0;
         background: #cccccc; }

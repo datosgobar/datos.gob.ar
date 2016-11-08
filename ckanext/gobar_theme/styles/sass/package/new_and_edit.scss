@@ -91,6 +91,13 @@
         .add-on + input {
           height: 40px;
         }
+
+        input[type="checkbox"] {
+          margin: 0;
+          display: inline-block;
+          width: auto;
+          position: static;
+        }
       }
       ol.stages {
         margin: 0 0 50px 0;

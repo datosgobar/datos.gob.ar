@@ -1,0 +1,33 @@
+{% import 'macros/form.html' as form %}
+
+{% block package_metadata_fields %}
+
+    {{ form.input('author', label='Responsable', id='field-author', placeholder=_('Joe Bloggs'), value=data.author, error=errors.author, classes=['control-medium']) }}
+
+    {{ form.input('author_email', label='E-mail del responsable', id='field-author-email', value=data.author_email, error=errors.author_email, classes=['control-medium']) }}
+
+    {{ form.input('maintainer', label='Mantenedor', id='field-maintainer', value=data.maintainer, error=errors.maintainer, classes=['control-medium']) }}
+
+    {{ form.input('maintainer_email', label='E-mail del mantenedor', id='field-maintainer-email', value=data.maintainer_email, error=errors.maintainer_email, classes=['control-medium']) }}
+
+    {{ form.input('Fecha de publicación', label='Fecha de publicación', type='text') }}
+
+    {{ form.input('Frecuencia de actualización', label='Frecuencia de actualización', type='text') }}
+
+    {{ form.input('Documentación', label='Documentación', type='text') }}
+
+    {{ form.input('url', label='Fuente', id='field-url', placeholder=_('http://example.com/dataset.json'), value=data.url, error=errors.url, classes=['control-medium']) }}
+
+    <div class="control-group">
+        <label>
+            {% for extra in data.extras %}
+                {% if extra.key == 'home_featured' and extra.value == 'true' %}
+                    {% set is_featured = True %}
+                {% endif %}
+            {% endfor %}
+            <input type="checkbox" id="home_featured" name="home_featured" {{ 'checked' if is_featured else '' }}>
+            ¿Querés destacar este dataset en la página principal?
+        </label>
+    </div>
+
+{% endblock %}
