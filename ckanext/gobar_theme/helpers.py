@@ -94,7 +94,7 @@ def organizations_with_packages():
 
 
 def get_pkg_extra(pkg, keyname):
-    if pkg['extras']:
+    if 'extras' in pkg and pkg['extras']:
         for extra in pkg['extras']:
             if extra['key'] == keyname:
                 return extra['value']

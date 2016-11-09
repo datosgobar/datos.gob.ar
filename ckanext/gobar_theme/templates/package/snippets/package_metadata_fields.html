@@ -10,24 +10,22 @@
 
     {{ form.input('maintainer_email', label='E-mail del mantenedor', id='field-maintainer-email', value=data.maintainer_email, error=errors.maintainer_email, classes=['control-medium']) }}
 
-    {{ form.input('Fecha de publicación', label='Fecha de publicación', type='text') }}
+    {{ form.input('Fecha de publicación', label='Fecha de publicación', type='text', value=h.get_pkg_extra(data, 'Fecha de publicación'), classes=['hidden-extra']) }}
 
-    {{ form.input('Frecuencia de actualización', label='Frecuencia de actualización', type='text') }}
+    {{ form.input('Frecuencia de actualización', label='Frecuencia de actualización', type='text', value=h.get_pkg_extra(data, 'Frecuencia de actualización'), classes=['hidden-extra']) }}
 
-    {{ form.input('Documentación', label='Documentación', type='text') }}
+    {{ form.input('Documentación', label='Documentación', type='text', value=h.get_pkg_extra(data, 'Documentación'), classes=['hidden-extra']) }}
 
     {{ form.input('url', label='Fuente', id='field-url', placeholder=_('http://example.com/dataset.json'), value=data.url, error=errors.url, classes=['control-medium']) }}
 
-    <div class="control-group">
+    <div class="control-group hidden-extra">
         <label>
-            {% for extra in data.extras %}
-                {% if extra.key == 'home_featured' and extra.value == 'true' %}
-                    {% set is_featured = True %}
-                {% endif %}
-            {% endfor %}
+            {% set is_featured = h.get_pkg_extra(data, 'home_featured') == 'true' %}
             <input type="checkbox" id="home_featured" name="home_featured" {{ 'checked' if is_featured else '' }}>
             ¿Querés destacar este dataset en la página principal?
         </label>
     </div>
+
+    <div class="hidden-extras-container hidden"></div>
 
 {% endblock %}
