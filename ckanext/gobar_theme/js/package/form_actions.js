@@ -24,6 +24,7 @@ $(function () {
     }
 
     var extraCounter = 0;
+
     function addExtra(key, value) {
         var hiddenKey = $('<input type="hidden">').attr({
             type: 'hidden',
@@ -39,6 +40,32 @@ $(function () {
         extrasContainer.append(hiddenKey);
         extrasContainer.append(hiddenValue);
         extraCounter += 1;
+    }
+
+    function addDates() {
+        var dateFrom = $('#date-from').datepicker('getDate');
+        var dateTo = $('#date-to').datepicker('getDate');
+        if (dateFrom || dateTo) {
+            var withHours = $('#date_with_time').is(':checked');
+            if (withHours && dateFrom) {
+                var hoursFrom = $('#date-from-hour option:selected').val();
+                var minutesFrom = $('#date-from-minute option:selected').val();
+                dateFrom.setHours(hoursFrom, minutesFrom);
+            }
+            if (withHours && dateTo) {
+                var hoursTo = $('#date-to-hour option:selected').val();
+                var minutesTo = $('#date-to-minute option:selected').val();
+                dateTo.setHours(hoursTo, minutesTo);
+            }
+            var value = '';
+            if (dateFrom) {
+                value = dateFrom.toISOString();
+            }
+            if (dateTo) {
+                value += '/' + dateTo.toISOString();
+            }
+            addExtra('date-range', value);
+        }
     }
 
     function addHiddenExtras() {
@@ -59,7 +86,6 @@ $(function () {
                     value.push($(selectedOptions[j]).val());
                 }
                 value = JSON.stringify(value);
-                console.log(value);
             }
             addExtra(name, value);
         }
@@ -76,7 +102,53 @@ $(function () {
         addGroupValues();
         addGlobalGroupValues();
         addHiddenExtras();
+        addDates();
         addSaveHidden();
         $form[0].submit();
-    })
+    });
+
+    $('#date-from, #date-to').datepicker({
+        language: 'es'
+    });
+
+    $('#date_with_time').on('change', function (e) {
+        var showHours = $(e.currentTarget).is(':checked');
+        $('.hour-picker-to, .hour-picker-from').toggleClass('hidden', !showHours);
+    });
+
+    var dates = $('.date-picker').data('dates');
+    var dateFrom, dateTo;
+    if (dates.indexOf('/')) {
+        dates = dates.split('/');
+        dateFrom = new Date(dates[0]);
+        dateTo = new Date(dates[1]);
+    } else {
+        dateFrom = new Date(dates);
+    }
+    if (dateFrom) {
+        $('#date-from').datepicker('setDate', dateFrom);
+        var hoursFrom = dateFrom.getHours();
+        var minutesFrom = dateFrom.getMinutes();
+        if (hoursFrom != 0 || minutesFrom != 0) {
+            hoursFrom = hoursFrom < 10 ? '0' + hoursFrom : hoursFrom.toString();
+            minutesFrom = minutesFrom < 10 ? '0' + minutesFrom : minutesFrom.toString();
+            $('#date_with_time').prop('checked', true);
+            $('.hour-picker-to, .hour-picker-from').removeClass('hidden');
+            $('#date-from-hour').val(hoursFrom);
+            $('#date-from-minute').val(minutesFrom);
+        }
+    }
+    if (dateTo) {
+        $('#date-to').datepicker('setDate', dateTo);
+        var hoursTo = dateTo.getHours();
+        var minutesTo = dateTo.getMinutes();
+        if (hoursTo != 0 || minutesTo != 0) {
+            hoursTo = hoursTo < 10 ? '0' + hoursTo : hoursTo.toString();
+            minutesTo = minutesTo < 10 ? '0' + minutesTo : minutesTo.toString();
+            $('#date_with_time').prop('checked', true);
+            $('.hour-picker-to, .hour-picker-to').removeClass('hidden');
+            $('#date-to-hour').val(hoursTo);
+            $('#date-to-minute').val(minutesTo);
+        }
+    }
 });

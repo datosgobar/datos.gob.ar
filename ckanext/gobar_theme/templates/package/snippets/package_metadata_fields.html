@@ -3,7 +3,7 @@
 {% block package_metadata_fields %}
     {{ form.input('Frecuencia de actualización', label='Frecuencia de actualización', type='text', value=h.get_pkg_extra(data, 'Frecuencia de actualización'), classes=['hidden-extra']) }}
 
-    {{ form.input('author', label='Responsable', id='field-author', placeholder=_('Joe Bloggs'), value=data.author, error=errors.author, classes=['control-medium']) }}
+    {{ form.input('author', label='Responsable', id='field-author', value=data.author, error=errors.author, classes=['control-medium']) }}
 
     {{ form.input('author_email', label='E-mail del responsable', id='field-author-email', value=data.author_email, error=errors.author_email, classes=['control-medium']) }}
 
@@ -30,6 +30,57 @@
         </div>
     </div>
 
+    <div class="control-group">
+        {% set date_has_time = False %}
+        <p>Tiempo que cubre el dataset</p>
+        <label>
+            <input type="checkbox" id="date_with_time" {{ 'checked' if date_has_time else '' }}>
+            ¿Querés detallar la hora?
+        </label>
+        <table class="date-picker" data-dates="{{ h.get_pkg_extra(data, 'date-range') }}">
+            <tr>
+                <td>
+                    <label>Desde <input type="text" id="date-from" name="date-from"></label>
+                </td>
+                <td>
+                    <label>Hasta <input type="text" id="date-to" name="date-to"></label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="hidden hour-picker-from">
+                        {% set hours = ["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23"] %}
+                        <select id="date-from-hour">
+                            {% for hour in hours %}
+                                <option val="{{ hour }}">{{ hour }}</option>
+                            {% endfor %}
+                        </select>
+                        {% set minutes = ["00","01","02","03","04","05","06","07","08","09","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"] %}
+                        <select id="date-from-minute">
+                            {% for minute in minutes %}
+                                <option val="{{ minute }}">{{ minute }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="hidden hour-picker-to">
+                        <select id="date-to-hour">
+                            {% for hour in hours %}
+                                <option val="{{ hour }}">{{ hour }}</option>
+                            {% endfor %}
+                        </select>
+                        <select id="date-to-minute">
+                            {% for minute in minutes %}
+                                <option val="{{ minute }}">{{ minute }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
     <div class="control-group hidden-extra">
         <label>
             {% set is_featured = h.get_pkg_extra(data, 'home_featured') == 'true' %}
@@ -39,5 +90,7 @@
     </div>
 
     <div class="hidden-extras-container hidden"></div>
+
+    {% resource 'gobar_js/libs/bootstrap-datepicker.js' %}
 
 {% endblock %}

@@ -98,6 +98,25 @@
           width: auto;
           position: static;
         }
+
+        .date-picker {
+          max-width: 100%;
+          width: 30em;
+          label {
+            display: inline-block;
+          }
+          input {
+            width: 10em;
+          }
+          .hour-picker-from,
+          .hour-picker-to {
+            text-align: center;
+            select {
+              width: 4em;
+            }
+          }
+
+        }
       }
       ol.stages {
         margin: 0 0 50px 0;

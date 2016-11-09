@@ -2705,6 +2705,25 @@ div#background-container {
           display: inline-block;
           width: auto;
           position: static; }
+        #edit-package-container #edit-package form .control-group .date-picker, #edit-package-container #new-package form .control-group .date-picker, #new-package-container #edit-package form .control-group .date-picker, #new-package-container #new-package form .control-group .date-picker {
+          max-width: 100%;
+          width: 30em; }
+          #edit-package-container #edit-package form .control-group .date-picker label, #edit-package-container #new-package form .control-group .date-picker label, #new-package-container #edit-package form .control-group .date-picker label, #new-package-container #new-package form .control-group .date-picker label {
+            display: inline-block; }
+          #edit-package-container #edit-package form .control-group .date-picker input, #edit-package-container #new-package form .control-group .date-picker input, #new-package-container #edit-package form .control-group .date-picker input, #new-package-container #new-package form .control-group .date-picker input {
+            width: 10em; }
+          #edit-package-container #edit-package form .control-group .date-picker .hour-picker-from,
+          #edit-package-container #edit-package form .control-group .date-picker .hour-picker-to, #edit-package-container #new-package form .control-group .date-picker .hour-picker-from,
+          #edit-package-container #new-package form .control-group .date-picker .hour-picker-to, #new-package-container #edit-package form .control-group .date-picker .hour-picker-from,
+          #new-package-container #edit-package form .control-group .date-picker .hour-picker-to, #new-package-container #new-package form .control-group .date-picker .hour-picker-from,
+          #new-package-container #new-package form .control-group .date-picker .hour-picker-to {
+            text-align: center; }
+            #edit-package-container #edit-package form .control-group .date-picker .hour-picker-from select,
+            #edit-package-container #edit-package form .control-group .date-picker .hour-picker-to select, #edit-package-container #new-package form .control-group .date-picker .hour-picker-from select,
+            #edit-package-container #new-package form .control-group .date-picker .hour-picker-to select, #new-package-container #edit-package form .control-group .date-picker .hour-picker-from select,
+            #new-package-container #edit-package form .control-group .date-picker .hour-picker-to select, #new-package-container #new-package form .control-group .date-picker .hour-picker-from select,
+            #new-package-container #new-package form .control-group .date-picker .hour-picker-to select {
+              width: 4em; }
       #edit-package-container #edit-package form ol.stages, #edit-package-container #new-package form ol.stages, #new-package-container #edit-package form ol.stages, #new-package-container #new-package form ol.stages {
         margin: 0 0 50px 0;
         background: #cccccc; }
