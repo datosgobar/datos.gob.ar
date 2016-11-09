@@ -12,20 +12,33 @@ $(function () {
         }
     }
 
-    function addExtra(key, value, number) {
+    function addGlobalGroupValues() {
+        var checkboxList = $('.package-global-group-checkbox:checked');
+        var values = [];
+        for (var i = 0; i < checkboxList.length; i++) {
+            var $checkbox = $(checkboxList[i]);
+            values.push($checkbox.attr('id'));
+        }
+        values = JSON.stringify(values);
+        addExtra('global-groups', values)
+    }
+
+    var extraCounter = 0;
+    function addExtra(key, value) {
         var hiddenKey = $('<input type="hidden">').attr({
             type: 'hidden',
-            name: 'extras__' + number.toString() + '__key',
+            name: 'extras__' + extraCounter.toString() + '__key',
             value: key
         });
         var hiddenValue = $('<input type="hidden">').attr({
             type: 'hidden',
-            name: 'extras__' + number.toString() + '__value',
+            name: 'extras__' + extraCounter.toString() + '__value',
             value: value
         });
         var extrasContainer = $('.hidden-extras-container');
         extrasContainer.append(hiddenKey);
         extrasContainer.append(hiddenValue);
+        extraCounter += 1;
     }
 
     function addHiddenExtras() {
@@ -42,13 +55,13 @@ $(function () {
             } else if (inputType == 'select') {
                 var selectedOptions = extra.find('option:selected');
                 value = [];
-                for (var j=0; j<selectedOptions.length; j++) {
+                for (var j = 0; j < selectedOptions.length; j++) {
                     value.push($(selectedOptions[j]).val());
                 }
                 value = JSON.stringify(value);
                 console.log(value);
             }
-            addExtra(name, value, i);
+            addExtra(name, value);
         }
     }
 
@@ -61,6 +74,7 @@ $(function () {
         e.preventDefault();
         $form = $(this);
         addGroupValues();
+        addGlobalGroupValues();
         addHiddenExtras();
         addSaveHidden();
         $form[0].submit();
