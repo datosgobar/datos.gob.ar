@@ -14,21 +14,19 @@
   {"id": "TRAN", "label": "Transporte"}
 ] %}
 
-{% if h.get_pkg_extra(data, 'global-groups') %}
-    {% set selected_global_groups = h.json_loads(h.get_pkg_extra(data, 'global-groups')) %}
+{% set selected_global_groups = h.json_loads(h.get_pkg_extra(data, 'global-groups') or '[]') %}
 
-    <div class="control-group control-full">
-        <label class="control-label" for="field-groups">Tema global</label>
-        <p>Este tema <strong>no se verá en tu portal</strong>. Al elegirlo, <strong>ayudás a que el portal nacional
-            datos.gob.ar pueda republicar el dataset con facilidad</strong>.</p>
-        <div class="controls package-groups">
-            {% for group in global_groups %}
-                <label class="package-group-label" for="{{ group.id }}">
-                    <input type="checkbox" class="package-global-group-checkbox"
-                           id="{{ group.id }}" {{ 'checked' if group.id in selected_global_groups else '' }}>
-                    {{ group.label }}
-                </label>
-            {% endfor %}
-        </div>
+<div class="control-group control-full">
+    <label class="control-label" for="field-groups">Tema global</label>
+    <p>Este tema <strong>no se verá en tu portal</strong>. Al elegirlo, <strong>ayudás a que el portal nacional
+        datos.gob.ar pueda republicar el dataset con facilidad</strong>.</p>
+    <div class="controls package-groups">
+        {% for group in global_groups %}
+            <label class="package-group-label" for="{{ group.id }}">
+                <input type="checkbox" class="package-global-group-checkbox"
+                       id="{{ group.id }}" {{ 'checked' if group.id in selected_global_groups else '' }}>
+                {{ group.label }}
+            </label>
+        {% endfor %}
     </div>
-{% endif %}
+</div>
