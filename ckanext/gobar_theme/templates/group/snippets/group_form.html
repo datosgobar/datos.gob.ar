@@ -18,6 +18,8 @@
 
         {{ form.prepend('name', label=_('URL'), prepend=prefix, id='field-url', placeholder=_('my-group'), value=data.name, error=errors.name, attrs=attrs, is_required=true) }}
 
+        {{ form.markdown('description', label='Descripción del tema', id='field-description', placeholder='', value=data.description, error=errors.description) }}
+
         {% set is_upload = data.image_url and not data.image_url.startswith('http') %}
         {% set is_url = data.image_url and data.image_url.startswith('http') %}
 
@@ -33,7 +35,7 @@
         {% block delete_button %}
             {% if h.check_access('group_delete', {'id': data.id}) %}
                 <button type="button" class="btn btn-red" id="confirm-delete">
-                    BORRAR ORGANIZACIÓN
+                    BORRAR TEMA
                 </button>
             {% endif %}
         {% endblock %}

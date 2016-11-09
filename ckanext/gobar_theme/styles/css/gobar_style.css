@@ -2653,6 +2653,14 @@ div#background-container {
         #edit-group-container #edit-group form .control-group .controls, #edit-group-container #new-group form .control-group .controls, #new-group-container #edit-group form .control-group .controls, #new-group-container #new-group form .control-group .controls {
           display: block;
           margin: 0 0 10px 0; }
+          #edit-group-container #edit-group form .control-group .controls.editor textarea, #edit-group-container #new-group form .control-group .controls.editor textarea, #new-group-container #edit-group form .control-group .controls.editor textarea, #new-group-container #new-group form .control-group .controls.editor textarea {
+            -o-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            border: solid 1px #cccccc; }
+          #edit-group-container #edit-group form .control-group .controls.editor .editor-info-block, #edit-group-container #new-group form .control-group .controls.editor .editor-info-block, #new-group-container #edit-group form .control-group .controls.editor .editor-info-block, #new-group-container #new-group form .control-group .controls.editor .editor-info-block {
+            display: none; }
       #edit-group-container #edit-group form .form-actions, #edit-group-container #new-group form .form-actions, #new-group-container #edit-group form .form-actions, #new-group-container #new-group form .form-actions {
         text-align: center;
         padding: 50px 0 0 0;

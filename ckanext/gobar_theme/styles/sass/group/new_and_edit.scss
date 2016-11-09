@@ -39,6 +39,15 @@
         .controls {
           display: block;
           margin: 0 0 10px 0;
+          &.editor {
+            textarea {
+              @include border-radius(4px);
+              border: solid 1px $grey-200;
+            }
+            .editor-info-block {
+              display: none;
+            }
+          }
         }
       }
 
