@@ -1,6 +1,7 @@
 {% import 'macros/form.html' as form %}
 
 {% block package_metadata_fields %}
+    {{ form.input('Frecuencia de actualización', label='Frecuencia de actualización', type='text', value=h.get_pkg_extra(data, 'Frecuencia de actualización'), classes=['hidden-extra']) }}
 
     {{ form.input('author', label='Responsable', id='field-author', placeholder=_('Joe Bloggs'), value=data.author, error=errors.author, classes=['control-medium']) }}
 
@@ -9,10 +10,6 @@
     {{ form.input('maintainer', label='Mantenedor', id='field-maintainer', value=data.maintainer, error=errors.maintainer, classes=['control-medium']) }}
 
     {{ form.input('maintainer_email', label='E-mail del mantenedor', id='field-maintainer-email', value=data.maintainer_email, error=errors.maintainer_email, classes=['control-medium']) }}
-
-    {{ form.input('Fecha de publicación', label='Fecha de publicación', type='text', value=h.get_pkg_extra(data, 'Fecha de publicación'), classes=['hidden-extra']) }}
-
-    {{ form.input('Frecuencia de actualización', label='Frecuencia de actualización', type='text', value=h.get_pkg_extra(data, 'Frecuencia de actualización'), classes=['hidden-extra']) }}
 
     {{ form.input('Documentación', label='Documentación', type='text', value=h.get_pkg_extra(data, 'Documentación'), classes=['hidden-extra']) }}
 

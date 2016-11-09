@@ -9,56 +9,23 @@
 
 {{ form.prepend('name', id='field-name', label=_('URL'), prepend=prefix, placeholder=_('eg. my-dataset'), value=data.name, error=errors.name, attrs=attrs, is_required=true) }}
 
-{% block package_basic_fields_custom %}{% endblock %}
+{{ form.markdown('notes', id='field-notes', label='Descripción del dataset', placeholder='Ej: Datos correspondientes al Sistema de Contrataciones Electrónicas (Argentina Compra), incluyendo las contrataciones de bienes y servicios, el Sistema de Información de Proveedores (SIPRO) y el Catálogo de Bienes y Servicios (SIByS).', value=data.notes, error=errors.notes) }}
 
-{% block package_basic_fields_description %}
-    {{ form.markdown('notes', id='field-notes', label='Descripción del dataset', placeholder='Ej: Datos correspondientes al Sistema de Contrataciones Electrónicas (Argentina Compra), incluyendo las contrataciones de bienes y servicios, el Sistema de Información de Proveedores (SIPRO) y el Catálogo de Bienes y Servicios (SIByS).', value=data.notes, error=errors.notes) }}
-{% endblock %}
+{# if we have a default group then this wants remembering #}
+{% if data.group_id %}
+    <input type="hidden" name="groups__0__id" value="{{ data.group_id }}"/>
+{% endif %}
 
-{% block package_basic_fields_tags %}
-    {% set tag_attrs = {'data-module': 'autocomplete', 'data-module-tags': '', 'data-module-source': '/api/2/util/tag/autocomplete?incomplete=?'} %}
-    {{ form.input('tag_string', id='field-tags', label=_('Tags'), placeholder='Ej: Compras, Gastos, Presupuesto.', value=data.tag_string, error=errors.tags, classes=['control-full'], attrs=tag_attrs) }}
-{% endblock %}
+{% set dataset_is_draft = data.get('state', 'draft').startswith('draft') or data.get('state', 'none') ==  'none' %}
+{% set dataset_has_organization = data.owner_org or data.group_id %}
+{% set organizations_available = h.organizations_available('create_dataset') %}
+{% set user_is_sysadmin = h.check_access('sysadmin') %}
+{% set show_organizations_selector = organizations_available %}
+{% set show_visibility_selector = dataset_has_organization or (organizations_available and (user_is_sysadmin or dataset_is_draft)) %}
 
-{% block package_basic_fields_license %}
-    <div class="control-group">
-        {% set error = errors.license_id %}
-        <label class="control-label" for="field-license">{{ _("License") }}</label>
-        <p>
-            Esta licencia aplica para los contenidos de cualquier recurso de este dataset. Cuando publiques, aceptarás
-            liberar los metadatos del formulario bajo la <a href="http://opendatacommons.org/licenses/odbl/1-0/"
-                                                            target="_blank">licencia Open Database</a>. Encontrá
-            <a href="http://opendefinition.org/" target="_blank">más información sobre licencias en Open Definition</a>.
-        </p>
-        <div class="controls">
-            <select id="field-license" name="license_id" data-module="autocomplete">
-                {% set existing_license_id = data.get('license_id') %}
-                {% for license_id, license_desc in h.license_options(existing_license_id) %}
-                    <option value="{{ license_id }}"
-                            {% if existing_license_id == license_id %}selected="selected"{% endif %}>{{ license_desc }}</option>
-                {% endfor %}
-            </select>
-            {% if error %}<span class="error-block">{{ error }}</span>{% endif %}
-        </div>
-    </div>
-{% endblock %}
-
-{% block package_basic_fields_org %}
-    {# if we have a default group then this wants remembering #}
-    {% if data.group_id %}
-        <input type="hidden" name="groups__0__id" value="{{ data.group_id }}"/>
-    {% endif %}
-
-    {% set dataset_is_draft = data.get('state', 'draft').startswith('draft') or data.get('state', 'none') ==  'none' %}
-    {% set dataset_has_organization = data.owner_org or data.group_id %}
-    {% set organizations_available = h.organizations_available('create_dataset') %}
-    {% set user_is_sysadmin = h.check_access('sysadmin') %}
-    {% set show_organizations_selector = organizations_available %}
-    {% set show_visibility_selector = dataset_has_organization or (organizations_available and (user_is_sysadmin or dataset_is_draft)) %}
-
-    {% if show_organizations_selector and show_visibility_selector %}
-        <div data-module="dataset-visibility">
-    {% endif %}
+{% if show_organizations_selector and show_visibility_selector %}
+    <div data-module="dataset-visibility">
+{% endif %}
 
 {% if show_organizations_selector %}
     {% set existing_org = data.owner_org or data.group_id %}
@@ -80,25 +47,3 @@
         </div>
     </div>
 {% endif %}
-
-{% if show_visibility_selector %}
-    {% block package_metadata_fields_visibility %}
-        <div class="control-group">
-            <label for="field-private" class="control-label">{{ _('Visibility') }}</label>
-            <div class="controls">
-                <select id="field-private" name="private">
-                    {% for option in [('True', _('Private')), ('False', _('Public'))] %}
-                        <option value="{{ option[0] }}"
-                                {% if option[0] == data.private|trim %}selected="selected"{% endif %}>{{ option[1] }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-        </div>
-    {% endblock %}
-{% endif %}
-
-{% if show_organizations_selector and show_visibility_selector %}
-    </div>
-{% endif %}
-
-{% endblock %}
