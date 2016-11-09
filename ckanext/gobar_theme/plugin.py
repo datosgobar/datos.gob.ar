@@ -33,5 +33,6 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
             'get_pkg_extra': gobar_helpers.get_pkg_extra,
             'get_facet_items_dict': gobar_helpers.get_facet_items_dict,
             'get_theme_config': gobar_helpers.get_theme_config,
-            'url_join': gobar_helpers.url_join
+            'url_join': gobar_helpers.url_join,
+            'json_loads': gobar_helpers.json_loads
         }

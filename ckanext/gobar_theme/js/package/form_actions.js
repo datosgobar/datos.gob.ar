@@ -29,7 +29,7 @@ $(function () {
     }
 
     function addHiddenExtras() {
-        var extras = $('.hidden-extra input');
+        var extras = $('.hidden-extra input, .hidden-extra-select select');
         for (var i = 0; i < extras.length; i++) {
             var extra = $(extras[i]);
             var inputType = extra.attr('type');
@@ -39,6 +39,14 @@ $(function () {
                 value = extra.val();
             } else if (inputType == 'checkbox') {
                 value = extra.is(':checked').toString()
+            } else if (inputType == 'select') {
+                var selectedOptions = extra.find('option:selected');
+                value = [];
+                for (var j=0; j<selectedOptions.length; j++) {
+                    value.push($(selectedOptions[j]).val());
+                }
+                value = JSON.stringify(value);
+                console.log(value);
             }
             addExtra(name, value, i);
         }

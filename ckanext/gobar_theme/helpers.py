@@ -200,3 +200,7 @@ def save_img(field_storage):
 
 def url_join(*args):
     return urljoin(*args)
+
+
+def json_loads(json_string):
+    return json.loads(json_string)
