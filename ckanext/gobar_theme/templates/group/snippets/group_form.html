@@ -25,7 +25,7 @@
 
         <p class="img-title">Imagen</p>
         <p class="img-description">
-            Por favor, subí solo imágenes en .svg, sin contenidos ocultos.
+            Por favor, subí solo imágenes en .SVG, sin contenidos ocultos.
         </p>
         {{ form.image_upload(data, errors, is_upload_enabled=h.uploads_enabled(), is_url=is_url, is_upload=is_upload, upload_label=' ', url_label=' ') }}
 
@@ -54,7 +54,7 @@
                     <form id="organization-confirm-delete-form"
                           action="{% url_for controller='group', action='delete', id=data.id %}"
                           method="post">
-                        <button class="btn btn-blue" type="submit" name="delete">SI, BORRAR TEMA</button>
+                        <button class="btn btn-blue" type="submit" name="delete">SÍ, BORRAR TEMA</button>
                         <button id="dismiss-greetings" type="button" class="btn btn-blue" data-dismiss="modal">
                             NO, NO BORRAR
                         </button>

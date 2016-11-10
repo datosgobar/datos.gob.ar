@@ -82,6 +82,9 @@
     }
 
     #delete-modal {
+      .modal-content {
+        box-shadow: none;
+      }
       form {
         padding: 0;
         margin: 0;

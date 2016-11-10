@@ -613,11 +613,10 @@ div.svg-tooltip {
           color: white; }
       #footer #footer-spacer .footer-section.links-internos a:hover {
         color: #17b2f8; }
-      #footer #footer-spacer .footer-section.links-externos a {
-        display: block; }
       #footer #footer-spacer .footer-section.links-externos .ckan-link {
         margin: 0;
-        color: #767676; }
+        color: #767676;
+        text-align: right; }
       #footer #footer-spacer .footer-section.links-externos .ckan-name {
         color: #0695d6; }
         #footer #footer-spacer .footer-section.links-externos .ckan-name:hover {
@@ -1067,9 +1066,9 @@ div#background-container {
       box-shadow: none;
       margin-bottom: 15px;
       padding: 10px 2em 10px 10px;
-      font-size: 24px;
+      font-size: 21px;
       line-height: 1.2;
-      height: 38.8px; }
+      height: 35.2px; }
       #title #searcher form input[type="text"]::-webkit-input-placeholder {
         color: #999999;
         font-weight: 300; }
@@ -1088,7 +1087,7 @@ div#background-container {
       position: absolute;
       top: 0;
       right: -4px;
-      height: 38.8px;
+      height: 35.2px;
       border-top-right-radius: 3px;
       border-bottom-right-radius: 3px; }
       #title #searcher form button:hover {
@@ -1805,6 +1804,8 @@ div#background-container {
       #edit-organization-container #edit-organization form select, #edit-organization-container #new-organization form select, #new-organization-container #edit-organization form select, #new-organization-container #new-organization form select {
         max-width: 100%;
         width: 25em; }
+    #edit-organization-container #edit-organization #delete-modal .modal-content, #edit-organization-container #new-organization #delete-modal .modal-content, #new-organization-container #edit-organization #delete-modal .modal-content, #new-organization-container #new-organization #delete-modal .modal-content {
+      box-shadow: none; }
     #edit-organization-container #edit-organization #delete-modal form, #edit-organization-container #new-organization #delete-modal form, #new-organization-container #edit-organization #delete-modal form, #new-organization-container #new-organization #delete-modal form {
       padding: 0;
       margin: 0;
@@ -3165,6 +3166,8 @@ div#background-container {
       -webkit-border-radius: 4px;
       border-radius: 4px;
       border: solid 2px #f5f5f5; }
+      #group-imgs-modal.modal .modal-body .radio-container .radio-box h2 {
+        font-size: 22px; }
       #group-imgs-modal.modal .modal-body .radio-container .radio-box.selected, #group-imgs-modal.modal .modal-body .radio-container .radio-box:hover {
         border-color: #0695d6; }
         #group-imgs-modal.modal .modal-body .radio-container .radio-box.selected .radio-description, #group-imgs-modal.modal .modal-body .radio-container .radio-box:hover .radio-description {
@@ -3237,10 +3240,12 @@ ul.activity {
       margin: 0 0 10px 0;
       font-size: 22px; }
       #template-config-container #template-config h2.blue {
-        color: #0695d6; }
+        color: #0695d6;
+        margin-bottom: 30px; }
     #template-config-container #template-config p, #template-config-container #template-config label {
       margin: 0 0 10px 0;
-      font-weight: 400; }
+      font-weight: 400;
+      font-size: 16px; }
       #template-config-container #template-config p:after, #template-config-container #template-config label:after {
         content: none; }
     #template-config-container #template-config .radio-container {
@@ -3363,5 +3368,8 @@ ul.activity {
     #template-config #navbar .links-section.guide-link {
       padding: 20px 20px 10px 20px;
       color: #999999; }
+      #template-config #navbar .links-section.guide-link i {
+        color: #0695d6;
+        font-size: 18px; }
 
 /*# sourceMappingURL=gobar_style.css.map */

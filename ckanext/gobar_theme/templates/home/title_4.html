@@ -23,7 +23,7 @@
                     <form class="module-content search-form" method="get"
                           action="{% url_for controller='package', action='search' %}">
                         <input type="text" class="search" name="q" value="" autocomplete="off"
-                               placeholder="Buscar Dataset"/>
+                               placeholder="¿Qué dataset buscás?"/>
                         <button type="submit">
                             <img src="/img/search.svg" class="search-icon">
                         </button>
@@ -42,7 +42,7 @@
                     <div class="single-stat">
                         <p class="stat organizations">{{ "%03d" % h.organizations_with_packages() }}</p>
 
-                        <p class="stats-legend">ORGANIZACIONES</p>
+                        <p class="stats-legend">ORGANIZACIONES CON DATOS</p>
                     </div>
                     <div class="single-stat">
                         <p class="stat organizations">{{ "%03d" % stats.group_count }}</p>

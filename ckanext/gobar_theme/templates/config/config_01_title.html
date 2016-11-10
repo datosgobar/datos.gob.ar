@@ -22,13 +22,13 @@
         {% set image = h.get_theme_config('title.background-image') %}
         <div class="file-upload-container {{ 'with-image' if image else '' }}">
             <i class="icon-remove-sign" aria-hidden="true"></i>
-            <input type="text" disabled placeholder="Subí tu imagen" id="filename" class="filename-input" value="{{ image if image else '' }}">
+            <input type="text" disabled placeholder="Subí tu archivo" id="filename" class="filename-input" value="{{ image if image else '' }}">
             <input type="file" id="background-image" name="background-image">
             <input type="hidden" name="image-logic" id="image-logic" value="">
             <label for="background-image">
                 <span class="upload-file-button">ELEGIR</span>
             </label>
-            <p>*Por favor, elegí formato .SVG o .PNG</p>
+            <p>*Por favor, elegí formato .JPG, .SVG o .PNG.</p>
         </div>
 
         <div class="submit-container">

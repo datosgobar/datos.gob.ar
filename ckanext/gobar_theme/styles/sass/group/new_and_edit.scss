@@ -122,6 +122,9 @@
       margin-bottom: 30px;
 
       .radio-box {
+        h2 {
+          font-size: 22px;
+        }
         @include border-radius(4px);
         border: solid 2px $grey-100;
         &.selected, &:hover {

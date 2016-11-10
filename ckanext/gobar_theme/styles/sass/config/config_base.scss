@@ -31,11 +31,13 @@
       font-size: 22px;
       &.blue {
         color: $blue-300;
+        margin-bottom: 30px;
       }
     }
     p, label {
       margin: 0 0 10px 0;
       font-weight: 400;
+      font-size: 16px;
       &:after {
         content: none;
       }

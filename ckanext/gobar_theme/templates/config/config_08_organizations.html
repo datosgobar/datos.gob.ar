@@ -1,12 +1,12 @@
 {% extends "config/config_base.html" %}
 
 {% block config %}
-    <h1>Organizaciones con datasets (opcional)</h1>
+    <h1>Organizaciones con datos (opcional)</h1>
 
     <form method="post" action="" data-module="basic-form">
         <label>
             <input type="checkbox" name="show-organizations" {{ 'checked="checked"' if h.get_theme_config('organization.show-organizations') else '' }}>
-            ¿Queres que esta sección se vea en tu portal?
+            ¿Querés que esta sección se vea en tu portal?
         </label>
 
         <p>Descripción</p>

@@ -16,7 +16,7 @@
         </a>
         <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_header') }}"
            class="section-link {{ 'active' if c.action == 'edit_header' else '' }}">
-            Logo del encabezado
+            Logo en el encabezado
         </a>
         <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_social') }}"
            class="section-link {{ 'active' if c.action == 'edit_social' else '' }}">
@@ -24,7 +24,7 @@
         </a>
         <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_footer') }}"
            class="section-link {{ 'active' if c.action == 'edit_footer' else '' }}">
-            Logo del pie de página
+            Logo en el pie de página
         </a>
     </div>
 
@@ -36,7 +36,7 @@
         </a>
         <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_organizations') }}"
            class="section-link {{ 'active' if c.action == 'edit_organizations' else '' }}">
-            Organizaciones con datasets (opcional)
+            Organizaciones con datos (opcional)
         </a>
         <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_about') }}"
            class="section-link {{ 'active' if c.action == 'edit_about' else '' }}">
@@ -57,6 +57,7 @@
     </div>
 
     <div class="links-section guide-link">
-        ¿Dudas? Tené a mano la <a class="inline" href="https://github.com/datosgobar">guía de uso</a>.
+        <i class="icon-question-sign" aria-hidden="true"></i>
+        ¿Dudas? Tené a mano la <a class="inline" href="https://github.com/datosgobar/distribuible.datos.gob.ar/blob/master/docs/guia_uso_abrear.md" target="_blank">guía de uso</a>.
     </div>
 </div>

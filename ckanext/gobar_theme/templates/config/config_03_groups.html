@@ -6,7 +6,6 @@
 
     <form method="post" action="" data-module="basic-form">
         <h2 class="blue">¿Cómo te gustaría que se vea tu portada?</h2>
-        <p>Podés elegir la alineación del título y la descripción, y mostrar (o no) la cantidad de datasets u organizaciones con datos.</p>
 
         {% set selected_option = h.get_theme_config('groups.imgs') %}
         {% set something_selected = selected_option and selected_option|length > 0 %}

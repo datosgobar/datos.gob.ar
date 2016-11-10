@@ -32,6 +32,10 @@
     &.guide-link {
       padding: 20px 20px 10px 20px;
       color: $grey-300;
+      i {
+        color: $blue-300;
+        font-size: 18px;
+      }
     }
   }
 }
