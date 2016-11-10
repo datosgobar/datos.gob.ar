@@ -6,10 +6,11 @@
     {% set error = errors.license_id %}
     <label class="control-label" for="field-license">{{ _("License") }}</label>
     <p>
-        Esta licencia aplica para los contenidos de cualquier recurso de este dataset. Cuando publiques, aceptarás
-        liberar los metadatos del formulario bajo la <a href="http://opendatacommons.org/licenses/odbl/1-0/"
-                                                        target="_blank">licencia Open Database</a>. Encontrá
-        <a href="http://opendefinition.org/" target="_blank">más información sobre licencias en Open Definition</a>.
+        Esta licencia aplica para los contenidos de cualquier recurso de este dataset (a menos que especifiques una
+        licencia distinta en alguno de sus recursos). Cuando publiques, aceptarás liberar los metadatos del formulario
+        bajo la <a href="http://opendatacommons.org/licenses/odbl/1-0/" target="_blank">licencia Open Database</a>.
+        Encontrá <a href="http://opendefinition.org/" target="_blank">más información sobre licencias en Open
+        Definition</a>.
     </p>
     <div class="controls">
         <select id="field-license" name="license_id" data-module="autocomplete">
