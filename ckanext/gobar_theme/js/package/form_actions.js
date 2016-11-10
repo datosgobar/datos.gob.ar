@@ -80,12 +80,17 @@ $(function () {
             } else if (inputType == 'checkbox') {
                 value = extra.is(':checked').toString()
             } else if (inputType == 'select') {
-                var selectedOptions = extra.find('option:selected');
-                value = [];
-                for (var j = 0; j < selectedOptions.length; j++) {
-                    value.push($(selectedOptions[j]).val());
+                if (extra.attr('multiple') == 'multiple') {
+                    var selectedOptions = extra.find('option:selected');
+                    value = [];
+                    for (var j = 0; j < selectedOptions.length; j++) {
+                        value.push($(selectedOptions[j]).val());
+                    }
+                    value = JSON.stringify(value);
+                } else {
+                    value = extra.find('option:selected').val();
                 }
-                value = JSON.stringify(value);
+
             }
             addExtra(name, value);
         }

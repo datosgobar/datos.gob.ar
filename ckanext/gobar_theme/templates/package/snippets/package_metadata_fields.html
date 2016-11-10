@@ -1,7 +1,18 @@
 {% import 'macros/form.html' as form %}
 
 {% block package_metadata_fields %}
-    {{ form.input('Frecuencia de actualización', label='Frecuencia de actualización', type='text', value=h.get_pkg_extra(data, 'Frecuencia de actualización'), classes=['hidden-extra']) }}
+    {% set frequencies = [{"name": "Cada diez años", "code": "R/P10Y"},{"name": "Cada cuatro años", "code": "R/P4Y"},{"name": "Cada tres años", "code": "R/P3Y"},{"name": "Cada dos años", "code": "R/P2Y"},{"name": "Anualmente", "code": "R/P1Y"},{"name": "Cada medio año", "code": "R/P6M"},{"name": "Cuatrimestralmente", "code": "R/P4M"},{"name": "Trimestralmente", "code": "R/P3M"},{"name": "Bimestralmente", "code": "R/P2M"},{"name": "Mensualmente", "code": "R/P1M"},{"name": "Cada 15 dias", "code": "R/P0.5M"},{"name": "Tres veces por mes", "code": "R/P0.33M"},{"name": "Semanalmente", "code": "R/P1W"},{"name": "Cada media semana", "code": "R/P3.5D"},{"name": "Dos veces a la semana", "code": "R/P0.5W"},{"name": "Tres veces a la semana", "code": "R/P0.33W"},{"name": "Diariamente", "code": "R/P1D"},{"name": "Cada hora", "code": "R/PT1H"},{"name": "Continuamente actualizado", "code": "R/PT1S"}] %}
+    {% set selected_freq = h.get_pkg_extra(data, 'Frecuencia de actualización') %}
+    <div class="control-group hidden-extra-select">
+        <label for="update-freq" class="control-label">Frecuencia de actualización</label>
+        <div class="controls">
+            <select id="update-freq" name="Frecuencia de actualización" type="select">
+                {% for frequencie in frequencies %}
+                    <option value="{{ frequencie.code }}" {{ 'selected' if frequencie.code == selected_freq }}>{{ frequencie.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
 
     {{ form.input('author', label='Responsable', id='field-author', value=data.author, error=errors.author, classes=['control-medium']) }}
 
