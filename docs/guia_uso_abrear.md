@@ -219,11 +219,11 @@ Hacer que tu portal represente tu organización es muy fácil. Por favor, **and�
 ***
 ### Otros contenidos útiles
 
-* Glosario
-* Kit de Datos abiertos
-* Guía para el uso y la publicación de metadatos
-* Guia para la identificación y uso de entidades interoperables
-* Guía para la publicación de datos en formatos abiertos
+* Glosario.
+* Kit de Datos abiertos.
+* Guía para el uso y la publicación de metadatos.
+* Guía para la identificación y uso de entidades interoperables.
+* Guía para la publicación de datos en formatos abiertos.
 
 
 
