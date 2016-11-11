@@ -1022,7 +1022,7 @@ div#background-container {
   background-image: linear-gradient(to right,#00b9f1, #0072bc);
   background-size: cover;
   background-position: center center;
-  background-image: url("/img/home_bg.jpg");
+  background-image: url("/img/home_bg.png");
   padding: 0; }
   #title .background-overlay {
     padding: 20px 0;
