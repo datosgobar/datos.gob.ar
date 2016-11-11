@@ -8,3 +8,16 @@
   height: 100%;
   display: table-row;
 }
+
+#greetings-modal {
+  .modal-body {
+    position: relative;
+  }
+  .icon-remove {
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+  }
+}

@@ -1353,6 +1353,15 @@ div#background-container {
   height: 100%;
   display: table-row; }
 
+#greetings-modal .modal-body {
+  position: relative; }
+#greetings-modal .icon-remove {
+  position: absolute;
+  font-size: 20px;
+  cursor: pointer;
+  top: 10px;
+  left: 10px; }
+
 #login-container {
   height: 100%;
   padding-right: 0;
