@@ -36,8 +36,6 @@ Esta guía te ayudará a:
 
 ***
 
-
-
 ## Entrar y salir de tu portal
 
 Para poder entrar y salir de tu portal, **es necesario que tu administrador haya creado un usuario y contraseña**. Con esa información, cada vez que quieras entrar al portal, **podrás hacerlo desde http://*tu-url.com*/ingresar**.
@@ -51,6 +49,8 @@ Para poder entrar y salir de tu portal, **es necesario que tu administrador haya
 **¿Y si olvidé mi contraseña?**
 
 Por el momento, tanto la creación del usuario y la contraseña, como la recuperación de esta última sólo podrá hacerla quien se haya encargado de instalarte AbreAr. 
+
+***
 
 ## Elementos de tu portal
 
@@ -81,7 +81,7 @@ Andá a **Página principal > Crear Organizaciones**.
 En caso de que hayas elegido que tu portal tenga una sección de Organizaciones con datos, también se mostrarán allí. 
 
 //Imagen de la sección//
-
+***
 ### Sección Organizaciones con datos
 
 **Esta sección es opcional**. Te permite armar un árbol de jerarquías con las organizaciones que abrieron datos en tu portal. Los organismos que se muestran en esta parte de tu portal son los mismos que asignás a los datasets y que creas antes de generar estos últimos. 
@@ -97,7 +97,7 @@ Es importante que tengas bien en claro qué organizaciones dependenden de otras,
 ##### ¿Cómo las creo?
 
 Como la sección Organizaciones con datos es opcional, podés elegir que se vea en tu portal. Para eso, **andá a Configuraciones > Organizaciones con datos** y tildá la habilitación. 
-
+***
 ### Temas
 
 Son las categorías en las que se pueden clasificar todos los datasets de tu portal. Hay dos taxonomías de temas:
@@ -128,7 +128,7 @@ Son las categorías en las que se pueden clasificar todos los datasets de tu por
 **Cada vez que generes un nuevo dataset**, el formulario te pedirá que asignes temas. Recordá siempre reutilizar los que ya hayas creado y no repetirlos.  
 
 //Imagen del form con zoom en la parte de temas//
-
+***
 ### Datasets
 
 También los llamamos “conjuntos de datos”. Son la pieza principal de tu portal o catálogo de datos. Cada dataset está formado por uno o más recursos. 
@@ -152,7 +152,7 @@ Ingresá a tu cuenta y andá a **Página principal > Crear dataset**.
 //Imagen de la home. Remarcado botón crear dataset//
 
 **Siempre podrás editar los dataset** que hayas creado. Para eso, ingresá a tu cuenta > Página principal > Datasets > **Editar dataset**. 
-
+***
 ### Recursos
 
 Cada dataset está formado por, al menos, un recurso. Por eso decimos que los recursos son la pieza de información más pequeña del catálogo y los verdaderos activos de datos del portal. 
@@ -175,7 +175,7 @@ Ingresá a tu cuenta y andá a Página principal > Crear dataset. Una vez que co
 //Imagen del botón para ir a crear recurso. Imagen de la vista crear recurso//
 
 Al igual que con los datasets, siempre podrás editar los recursos que hayas creado. Para eso, ingresá a tu cuenta > Página principal > Datasets > Editar dataset > Editar recursos. 
-
+***
 ### Etiquetas
 
 Son las palabras que ayudan a los usuarios a filtrar y encontrar los datasets. Cuanto más amplia y uniforme sea la lista de Etiquetas, mayor es su poder de ayuda. 
@@ -210,13 +210,13 @@ Al igual que con los Temas, cada vez que generes un nuevo dataset, el formulario
 //Imagen del form con zoom en la parte de etiquetas//
 
 //Imagen tipo portacda. Ver con quien lo implemente tamaños y formatos//
-
+***
 ### Personalizar el portal
 
 Hacer que tu portal represente tu organización es muy fácil. Por favor, **andá a la Página principal > Configuración**. Llegarás a la sección que te permite cambiar cómo luce la portada de tu catálogo de datos y cada sección en particular.
 
 //Imagen de la home con config remarcado + imagen del form//
-
+***
 ### Otros contenidos útiles
 
 * Glosario
