@@ -221,7 +221,9 @@ Hacer que tu portal represente tu organización es muy fácil. Por favor, **and�
 
 * Glosario
 * Kit de Datos abiertos
-* Guía de metadatos
+* Guía para el uso y la publicación de metadatos
+* Guia para la identificación y uso de entidades interoperables
+* Guía para la publicación de datos en formatos abiertos
 
 
 
