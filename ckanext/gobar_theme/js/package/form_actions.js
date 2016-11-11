@@ -20,7 +20,7 @@ $(function () {
             values.push($checkbox.attr('id'));
         }
         values = JSON.stringify(values);
-        addExtra('global-groups', values)
+        addExtra('globalGroups', values)
     }
 
     var extraCounter = 0;
@@ -64,7 +64,7 @@ $(function () {
             if (dateTo) {
                 value += '/' + dateTo.toISOString();
             }
-            addExtra('date-range', value);
+            addExtra('dateRange', value);
         }
     }
 

@@ -34,5 +34,6 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
             'get_facet_items_dict': gobar_helpers.get_facet_items_dict,
             'get_theme_config': gobar_helpers.get_theme_config,
             'url_join': gobar_helpers.url_join,
-            'json_loads': gobar_helpers.json_loads
+            'json_loads': gobar_helpers.json_loads,
+            'update_frequencies': gobar_helpers.update_frequencies
         }

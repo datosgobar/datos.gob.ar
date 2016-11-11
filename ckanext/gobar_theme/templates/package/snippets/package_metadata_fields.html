@@ -1,14 +1,15 @@
 {% import 'macros/form.html' as form %}
 
 {% block package_metadata_fields %}
-    {% set frequencies = [{"name": "Cada diez años", "code": "R/P10Y"},{"name": "Cada cuatro años", "code": "R/P4Y"},{"name": "Cada tres años", "code": "R/P3Y"},{"name": "Cada dos años", "code": "R/P2Y"},{"name": "Anualmente", "code": "R/P1Y"},{"name": "Cada medio año", "code": "R/P6M"},{"name": "Cuatrimestralmente", "code": "R/P4M"},{"name": "Trimestralmente", "code": "R/P3M"},{"name": "Bimestralmente", "code": "R/P2M"},{"name": "Mensualmente", "code": "R/P1M"},{"name": "Cada 15 días", "code": "R/P0.5M"},{"name": "Tres veces por mes", "code": "R/P0.33M"},{"name": "Semanalmente", "code": "R/P1W"},{"name": "Cada media semana", "code": "R/P3.5D"},{"name": "Dos veces a la semana", "code": "R/P0.5W"},{"name": "Tres veces a la semana", "code": "R/P0.33W"},{"name": "Diariamente", "code": "R/P1D"},{"name": "Cada hora", "code": "R/PT1H"},{"name": "Continuamente actualizado", "code": "R/PT1S"}] %}
-    {% set selected_freq = h.get_pkg_extra(data, 'Frecuencia de actualización') %}
+    {% set frequencies = h.update_frequencies().items() %}
+    {% set selected_freq = h.get_pkg_extra(data, 'updateFrequency') %}
     <div class="control-group hidden-extra-select">
         <label for="update-freq" class="control-label">Frecuencia de actualización</label>
         <div class="controls">
-            <select id="update-freq" name="Frecuencia de actualización" type="select">
+            <select id="update-freq" name="updateFrequency" type="select">
+                <option {{ 'selected=true' if not selected_freq or selected_freq|length == 0 }} disabled="disabled"></option>
                 {% for frequencie in frequencies %}
-                    <option value="{{ frequencie.code }}" {{ 'selected' if frequencie.code == selected_freq }}>{{ frequencie.name }}</option>
+                    <option value="{{ frequencie[0] }}" {{ 'selected' if frequencie[0] == selected_freq }}>{{ frequencie[1].decode('utf-8') }}</option>
                 {% endfor %}
             </select>
         </div>
@@ -48,7 +49,7 @@
             <input type="checkbox" id="date_with_time" {{ 'checked' if date_has_time else '' }}>
             ¿Querés detallar la hora?
         </label>
-        <table class="date-picker" data-dates="{{ h.get_pkg_extra(data, 'date-range') }}">
+        <table class="date-picker" data-dates="{{ h.get_pkg_extra(data, 'dateRange') }}">
             <tr>
                 <td>
                     <label>Desde <input type="text" id="date-from" name="date-from"></label>

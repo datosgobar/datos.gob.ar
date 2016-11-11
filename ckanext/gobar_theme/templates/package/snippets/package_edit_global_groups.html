@@ -14,7 +14,7 @@
   {"id": "TRAN", "label": "Transporte"}
 ] %}
 
-{% set selected_global_groups = h.json_loads(h.get_pkg_extra(data, 'global-groups') or '[]') %}
+{% set selected_global_groups = h.json_loads(h.get_pkg_extra(data, 'globalGroups') or '[]') %}
 
 <div class="control-group control-full">
     <label class="control-label" for="field-groups">Temas globales</label>
