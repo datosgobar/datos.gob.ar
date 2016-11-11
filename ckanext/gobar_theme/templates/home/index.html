@@ -19,7 +19,8 @@
     </div>
 
     {% set show_greetings = h.get_theme_config('show-greetings', default=True) %}
-    {% if show_greetings %}
+    {% set package_create = h.check_access('package_create') %}
+    {% if show_greetings and package_create %}
         <div id="greetings-modal" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
