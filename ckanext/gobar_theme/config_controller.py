@@ -4,6 +4,7 @@ import ckan.lib.helpers as h
 import ckanext.gobar_theme.helpers as gobar_helpers
 import ckan.logic as logic
 import ckan.model as model
+import urlparse
 
 parse_params = logic.parse_params
 abort = base.abort
@@ -70,11 +71,11 @@ class GobArConfigController(base.BaseController):
         if request.method == 'POST':
             params = parse_params(request.POST)
             g.gobar['social'] = {
-                'fb': params['fb'].strip(),
-                'tw': params['tw'].strip(),
-                'github': params['github'].strip(),
-                'inst': params['inst'].strip(),
-                'yt': params['yt'].strip(),
+                'fb': self._url_with_protocol(params['fb'].strip()),
+                'tw': self._url_with_protocol(params['tw'].strip()),
+                'github': self._url_with_protocol(params['github'].strip()),
+                'inst': self._url_with_protocol(params['inst'].strip()),
+                'yt': self._url_with_protocol(params['yt'].strip()),
                 'mail': params['mail'].strip()
             }
             gobar_helpers.save_theme_config()
@@ -84,7 +85,7 @@ class GobArConfigController(base.BaseController):
         self.authorize()
         if request.method == 'POST':
             params = parse_params(request.params)
-            new_footer_params = {'url': params['url'].strip()}
+            new_footer_params = {'url': self._url_with_protocol(params['url'].strip())}
             if params['image-logic'] == 'new-image':
                 new_footer_params['image'] = gobar_helpers.save_img(params['background-image'])
             elif params['image-logic'] == 'delete-image':
@@ -170,6 +171,12 @@ class GobArConfigController(base.BaseController):
             g.gobar['show-greetings'] = False
             gobar_helpers.save_theme_config()
         return h.json.dumps({'success': True}, for_json=True)
+
+    @staticmethod
+    def _url_with_protocol(url):
+        if not urlparse.urlparse(url).scheme:
+            url = "http://" + url
+        return url
 
     @staticmethod
     def authorize():
