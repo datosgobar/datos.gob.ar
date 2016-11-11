@@ -37,7 +37,7 @@ Esta guía te ayudará a:
 
 Para poder entrar y salir de tu portal, **es necesario que tu administrador haya creado un usuario y contraseña**. Con esa información, cada vez que quieras entrar al portal, **podrás hacerlo desde http://*tu-url.com*/ingresar**.
 
-![alt text](assets/readme-login-01.png "Login")
+[IMAGEN]
 
 **Para salir**, sólo tenés que **hacer clic en el botón en el margen superior derecho**.
 
