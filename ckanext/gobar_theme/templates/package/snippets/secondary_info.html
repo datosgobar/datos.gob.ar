@@ -105,13 +105,13 @@
 
         {% if pkg.extras %}
             {% for extra in pkg.extras %}
-                {% if extra.key != 'home_featured' and extra.key != 'Responsable' %}
+                {% if extra.key == 'updateFrequency' %}
                     <div class="row">
                         <div class="col-xs-5 title">
-                            {{ extra.key }}
+                            Frecuencia de actualización
                         </div>
                         <div class="col-xs-7 value">
-                            <p>{{ extra.value|urlize }}</p>
+                            <p>{{ h.update_frequencies()[extra.value].decode('utf-8') }}</p>
                         </div>
                     </div>
                 {% endif %}
