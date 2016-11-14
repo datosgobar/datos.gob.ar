@@ -4,8 +4,8 @@ import ckan.lib.helpers as ckan_helpers
 from urlparse import urlparse
 from ckan.common import request, c, g
 import json
-import os
 from urlparse import urljoin
+from config_controller import GobArConfigController
 
 
 def _get_organizations_objs(organizations_branch, depth=0):
@@ -14,7 +14,7 @@ def _get_organizations_objs(organizations_branch, depth=0):
         organization = ckan_helpers.get_organization(org=tree_obj['name'])
         organization['depth'] = depth
         if 'children' in tree_obj and len(tree_obj['children']) > 0:
-            organization['children'] = _get_organizations_objs(tree_obj['children'], depth=depth+1)
+            organization['children'] = _get_organizations_objs(tree_obj['children'], depth=depth + 1)
         organizations.append(organization)
     return organizations
 
@@ -90,7 +90,7 @@ def organizations_with_packages():
     organizations = logic.get_action('organization_list')({}, {'all_fields': True})
     organizations_with_at_least_one_package = [
         organization for organization in organizations if organization['package_count'] > 0
-    ]
+        ]
     return len(organizations_with_at_least_one_package)
 
 
@@ -131,7 +131,8 @@ def organization_filters():
     if ckan_helpers.get_request_param('organization') in top_organizations:
         top_organizations[ckan_helpers.get_request_param('organization')]['active'] = True
 
-    top_organizations_with_results = [organization for organization in top_organizations.values() if organization['count'] > 0]
+    top_organizations_with_results = [organization for organization in top_organizations.values() if
+                                      organization['count'] > 0]
     sorted_organizations = sorted(top_organizations_with_results, key=lambda item: item['count'], reverse=True)
 
     limit = int(request.params.get('_organization_limit', g.facets_default_number))
@@ -147,56 +148,8 @@ def get_facet_items_dict(facet, limit=None, exclude_active=False):
     return ckan_helpers.get_facet_items_dict(facet, limit, exclude_active)
 
 
-IMG_DIR = '/usr/lib/ckan/default/src/ckanext-gobar-theme/ckanext/gobar_theme/public/user_images/'
-CONFIG_PATH = '/var/lib/ckan/theme_config/settings.json'
-
-
 def get_theme_config(path=None, default=None):
-    try:
-        gobar_config = g.gobar
-    except Exception:
-        g.gobar = gobar_config = _read_theme_config()
-
-    if path is not None:
-        keys = path.split('.')
-        for key in keys:
-            if gobar_config is not None and key in gobar_config:
-                gobar_config = gobar_config[key]
-            else:
-                gobar_config = default
-
-    return gobar_config
-
-
-def _read_theme_config():
-    try:
-        with open(CONFIG_PATH) as json_data:
-            try:
-                return json.load(json_data)
-            except Exception:
-                return {}
-    except IOError:
-        return {}
-
-
-def save_theme_config():
-    with open(CONFIG_PATH, 'w') as json_data:
-        config = g.gobar
-        json_data.write(json.dumps(config, sort_keys=True, indent=2))
-
-
-def save_img(field_storage):
-    output_path = os.path.join(IMG_DIR, field_storage.filename)
-    output_file = open(output_path, 'wb')
-    upload_file = field_storage.file
-    upload_file.seek(0)
-    while True:
-        data = upload_file.read(2 ** 20)
-        if not data:
-            break
-        output_file.write(data)
-    output_file.close()
-    return os.path.join('/user_images/', field_storage.filename)
+    return GobArConfigController.get_theme_config(path, default)
 
 
 def url_join(*args):
