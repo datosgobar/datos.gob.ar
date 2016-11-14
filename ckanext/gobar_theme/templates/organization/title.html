@@ -2,7 +2,7 @@
 {% set config = h.get_theme_config() %}
 
 {% set background = h.get_theme_config('title.background-image') %}
-<div id="title" class="organization-title container-fluid" {{ 'style=background-image:url(' + background + ')' if background else '' }}>
+<div id="title" class="organization-title container-fluid" style="{{ 'background-image:url("%s")' % background if background else '' }}">
     <div class="background-overlay">
         <div class="restricted-max-width">
             <div class="col-xs-12 col-md-10 col-md-offset-1">
