@@ -41,6 +41,10 @@
         {% endblock %}
     {% endblock basic_fields %}
 
+    {% snippet 'package/snippets/resource_form_license.html', data=data %}
+
+    {% snippet 'package/snippets/resource_form_attributes.html', data=data %}
+
     <div class="form-actions">
         {% block see_all_resources_button %}{% endblock %}
         {% block delete_button %}
@@ -64,8 +68,9 @@
             {% endblock %}
         {% else %}
             {% block add_button %}
-                <button class="btn btn-green" name="save" value="go-dataset-complete"
-                        type="submit">GUARDAR NUEVO RECURSO</button>
+                <button class="btn btn-green" name="save" value="go-dataset-complete" type="submit">
+                    GUARDAR NUEVO RECURSO
+                </button>
             {% endblock %}
         {% endif %}
     </div>

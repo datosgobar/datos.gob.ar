@@ -15,7 +15,13 @@
                             VOLVER
                         </a>
                     </div>
-                    <h1>Editar dataset</h1>
+                    <h1>
+                        {% if res %}
+                            {{ res.name }}.{{ res.format.lower() }}
+                        {% else %}
+                            Agregar recurso
+                        {% endif %}
+                    </h1>
 
                     {% block form %}{% endblock %}
 

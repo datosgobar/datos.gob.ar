@@ -130,7 +130,7 @@ $(function () {
     } else {
         dateFrom = new Date(dates);
     }
-    if (dateFrom) {
+    if (dateFrom instanceof Date && isFinite(dateFrom)) {
         $('#date-from').datepicker('setDate', dateFrom);
         var hoursFrom = dateFrom.getHours();
         var minutesFrom = dateFrom.getMinutes();
@@ -143,7 +143,7 @@ $(function () {
             $('#date-from-minute').val(minutesFrom);
         }
     }
-    if (dateTo) {
+    if (dateTo instanceof Date && isFinite(dateTo)) {
         $('#date-to').datepicker('setDate', dateTo);
         var hoursTo = dateTo.getHours();
         var minutesTo = dateTo.getMinutes();

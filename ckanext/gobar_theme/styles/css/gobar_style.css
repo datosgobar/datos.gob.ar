@@ -2772,6 +2772,10 @@ div#background-container {
       float: right;
       margin: 20px 0; }
 
+#resource-attributes-form {
+  padding-top: 30px;
+  border-top: solid 1px #cccccc; }
+
 .resource-container {
   padding-right: 0;
   padding-left: 0;
