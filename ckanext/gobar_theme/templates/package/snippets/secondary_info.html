@@ -105,7 +105,7 @@
 
         {% if pkg.extras %}
             {% for extra in pkg.extras %}
-                {% if extra.key == 'updateFrequency' %}
+                {% if extra.key == 'updateFrequency' and extra.value|length > 0 %}
                     <div class="row">
                         <div class="col-xs-5 title">
                             Frecuencia de actualización

@@ -40,7 +40,7 @@ class GobArHomeController(HomeController):
             featured_packages = []
             for result in results:
                 for extra_pair in result['extras']:
-                    if extra_pair['key'] == 'home_featured':
+                    if extra_pair['key'] == 'home_featured' and extra_pair['value'] == 'true':
                         featured_packages.append(result)
 
             segmented_packages = [featured_packages[n:n + 2] for n in range(len(featured_packages))[::2]]
