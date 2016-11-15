@@ -2772,10 +2772,16 @@ div#background-container {
       float: right;
       margin: 20px 0; }
 
-#resource-attributes-form {
+#resource-edit a.btn {
+  text-transform: uppercase;
+  margin-left: 0; }
+#resource-edit .icon-cloud-upload,
+#resource-edit .icon-globe {
+  display: none; }
+#resource-edit #resource-attributes-form {
   padding-top: 30px;
   border-top: solid 1px #cccccc; }
-  #resource-attributes-form .resource-attributes-actions {
+  #resource-edit #resource-attributes-form .resource-attributes-actions {
     text-align: right;
     padding: 30px 0;
     border-top: solid 1px #cccccc; }

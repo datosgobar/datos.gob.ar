@@ -11,24 +11,29 @@
         <div class="control-group control-full">
             <label class="control-label">Titulo de la columna</label>
             <div class="controls">
-                <input class="resource-col-name" type="text" title="Titulo de la columna"
-                       placeholder="Ej: audiencia_fecha">
+                <input name="column-name" class="resource-col-name" type="text" title="Titulo de la columna"
+                       placeholder="Ej: audiencia_fecha" value="{{ data['column-name'] }}">
             </div>
         </div>
 
         <div class="control-group control-full">
             <label class="control-label">Tipo de dato</label>
             <div class="controls">
-                <select class=resource-col-type"">
-                    <option>Poner opciones acá</option>
+                <select name="column-type" class=resource-col-type"">
+                    {% set selected_type = False %}
+                    <option {{ 'selected=true' if not selected_type or selected_type|length == 0 }}
+                            disabled="disabled">Ej.: date</option>
+                    {% for field_type in h.field_types().items() %}
+                        <option value="{{ field_type[0] }}">{{ field_type[1].decode('utf-8') }}</option>
+                    {% endfor %}
                 </select>
             </div>
         </div>
 
         <div class="control-group control-full">
             <label class="control-label">Descripción de la columna</label>
-            <textarea title="Descripción de la columna" class="resource-col-descrition"
-                      placeholder="Ej: Fecha en la que se hizo una audiencia pública."></textarea>
+            <textarea name="column-description" title="Descripción de la columna" class="resource-col-descrition"
+                      placeholder="Ej: Fecha en la que se hizo una audiencia pública.">{{ data['column-description'] }}</textarea>
         </div>
     </div>
 

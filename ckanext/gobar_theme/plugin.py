@@ -36,5 +36,6 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
             'get_theme_config': gobar_helpers.get_theme_config,
             'url_join': gobar_helpers.url_join,
             'json_loads': gobar_helpers.json_loads,
-            'update_frequencies': gobar_helpers.update_frequencies
+            'update_frequencies': gobar_helpers.update_frequencies,
+            'field_types': gobar_helpers.field_types
         }
