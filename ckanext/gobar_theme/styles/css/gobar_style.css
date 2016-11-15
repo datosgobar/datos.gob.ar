@@ -1113,6 +1113,7 @@ div#background-container {
     #title #stats > div {
       padding-right: 0; }
     #title #stats .single-stat {
+      vertical-align: top;
       text-align: center;
       display: inline-block;
       margin: 0 40px; }
