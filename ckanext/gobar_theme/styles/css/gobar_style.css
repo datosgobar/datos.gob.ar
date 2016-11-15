@@ -2757,11 +2757,11 @@ div#background-container {
             color: white;
             background: #cccccc; }
       #edit-package-container #edit-package form .form-actions, #edit-package-container #new-package form .form-actions, #new-package-container #edit-package form .form-actions, #new-package-container #new-package form .form-actions {
+        border: none;
         padding: 50px 0 0 0;
-        margin: 10px 0 0 0;
+        margin: 0;
         text-align: center;
-        text-transform: uppercase;
-        border-top: solid 1px #cccccc; }
+        text-transform: uppercase; }
         #edit-package-container #edit-package form .form-actions .btn, #edit-package-container #new-package form .form-actions .btn, #new-package-container #edit-package form .form-actions .btn, #new-package-container #new-package form .form-actions .btn {
           float: none !important; }
     #edit-package-container #edit-package #delete-modal form, #edit-package-container #new-package #delete-modal form, #new-package-container #edit-package #delete-modal form, #new-package-container #new-package #delete-modal form {
@@ -2775,6 +2775,10 @@ div#background-container {
 #resource-attributes-form {
   padding-top: 30px;
   border-top: solid 1px #cccccc; }
+  #resource-attributes-form .resource-attributes-actions {
+    text-align: right;
+    padding: 30px 0;
+    border-top: solid 1px #cccccc; }
 
 .resource-container {
   padding-right: 0;

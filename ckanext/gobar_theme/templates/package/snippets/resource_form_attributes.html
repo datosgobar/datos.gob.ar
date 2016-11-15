@@ -7,25 +7,36 @@
         </p>
     </div>
 
-    <div class="control-group control-full">
-        <label class="control-label">Titulo de la columna</label>
-        <div class="controls">
-            <input class="resource-col-name" type="text" title="Titulo de la columna" placeholder="Ej: audiencia_fecha">
+    <div class="resource-attributes-group">
+        <div class="control-group control-full">
+            <label class="control-label">Titulo de la columna</label>
+            <div class="controls">
+                <input class="resource-col-name" type="text" title="Titulo de la columna"
+                       placeholder="Ej: audiencia_fecha">
+            </div>
+        </div>
+
+        <div class="control-group control-full">
+            <label class="control-label">Tipo de dato</label>
+            <div class="controls">
+                <select class=resource-col-type"">
+                    <option>Poner opciones acá</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-group control-full">
+            <label class="control-label">Descripción de la columna</label>
+            <textarea title="Descripción de la columna" class="resource-col-descrition"
+                      placeholder="Ej: Fecha en la que se hizo una audiencia pública."></textarea>
         </div>
     </div>
 
-    <div class="control-group control-full">
-        <label class="control-label">Tipo de dato</label>
-        <div class="controls">
-            <select class=resource-col-type"">
-                <option>Poner opciones acá</option>
-            </select>
-        </div>
+    <div class="resource-attributes-actions">
+        <span id="add-col" class="btn">AGREGAR OTRA COLUMNA</span>
+        <span id="remove-col" class="btn hidden">BORRAR COLUMNA</span>
     </div>
 
-    <div class="control-group control-full">
-        <label class="control-label">Descripción de la columna</label>
-        <textarea title="Descripción de la columna" class="resource-col-descrition"
-                  placeholder="Ej: Fecha en la que se hizo una audiencia pública."></textarea>
-    </div>
 </div>
+
+{% resource 'gobar_js/forms/resource_form.js' %}

@@ -1,8 +1,5 @@
 {% extends "package/resource_edit_base.html" %}
 
-{% block subtitle %}{{ _('Edit') }} - {{ h.resource_display_name(res) }} -
-    {{ h.dataset_display_name(pkg) }}{% endblock %}
-
 {% block form %}
     {% snippet 'package/snippets/resource_edit_form.html',
     data=data,
