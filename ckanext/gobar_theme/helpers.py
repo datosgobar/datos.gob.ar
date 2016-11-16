@@ -187,17 +187,17 @@ def update_frequencies():
 
 def field_types():
     return {
-        "string": "Valores de texto",
-        "number": "Números que puedan no ser enteros (incluyen decimales)",
-        "integer": "Números que siempre son enteros",
-        "date": "Fecha ISO-8601",
-        "time": "Tiempo ISO-8601",
-        "date-time": "Fecha completa ISO-8601",
-        "boolean": "Valores verdadero/falso",
-        "binary": "Representación de datos binarios base64",
-        "geo_point": "Objeto GeoPoint",
-        "geojson": "Objeto GeoJSON",
-        "array": "Lista de valores",
-        "object": "Objeto de JSON",
-        "any": "Campo que puede contener valores de cualquier tipo"
+        "string": "Texto (string)",
+        "integer": "Número entero (integer)",
+        "number": "Número decimal (number)",
+        "boolean": "Verdadero/falso (boolean)",
+        "time": "Tiempo ISO-8601 (time)",
+        "date": "Fecha ISO-8601 (date)",
+        "date-time": "Fecha y hora ISO-8601 (date-time)",
+        "object": "JSON (object)",
+        "geojson": "GeoJSON (geojson)",
+        "geo_point": "GeoPoint (geo_point)",
+        "array": "Lista de valores en formato JSON (array)",
+        "binary": "Valor binario en base64 (binary)",
+        "any": "Otro (any)"
     }
