@@ -7,7 +7,8 @@
         </p>
     </div>
 
-    {% set attributes = h.json_loads(data['attributesDescription'] or '[{}]') %}
+    {% set attributes = h.json_loads(data['attributesDescription'] or '[]') %}
+    {% set attributes = attributes|length == 0 and attributes + [{}] or attributes %}
 
     {% for attribute_group in attributes %}
         <div class="resource-attributes-group">
@@ -49,6 +50,8 @@
         <span id="remove-col" class="btn {{ 'hidden' if attributes|length < 2 }}">BORRAR COLUMNA</span>
     </div>
 
+    <input id="attributes-description" type="hidden"
+           name="attributesDescription" value="{{ data['attributesDescription'] }}">
 </div>
 
 {% resource 'gobar_js/forms/resource_form.js' %}

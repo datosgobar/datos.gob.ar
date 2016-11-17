@@ -28,18 +28,11 @@ $(function () {
                 attributes.push(attributeGroup);
             }
         }
-        var hiddenEl = $('<input type="hidden">')
-            .val(JSON.stringify(attributes))
-            .attr('name', 'attributesDescription');
-        $('#resource-attributes-form').append(hiddenEl);
+        $('#attributes-description').val(JSON.stringify(attributes));
     }
 
     $('form#resource-edit').on('submit', function (e) {
-        e.preventDefault();
-        var $form = $(this);
         addAttributesHidden();
-        var hiddenSave = $('<input type="hidden" name="save">');
-        $form.append(hiddenSave);
-        $form[0].submit();
+        return true
     });
 });
