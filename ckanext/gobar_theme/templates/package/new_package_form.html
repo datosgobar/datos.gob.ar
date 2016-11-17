@@ -22,6 +22,12 @@
     {% endif %}
 {% endblock %}
 
+{% block save_draft %}
+    {% if form_style != 'edit' %}
+        {{ super() }}
+    {% endif %}
+{% endblock %}
+
 {% block cancel_button %}
     {% if form_style != 'edit' %}
         {{ super() }}

@@ -995,22 +995,29 @@ div#background-container {
   background: #999999; }
   .btn:focus {
     color: white; }
-  .btn:hover {
+  .btn:hover, .btn:active, .btn:focus {
     background: #767676;
     color: white; }
   .btn.btn-blue {
     background: #0695d6; }
-    .btn.btn-blue:hover {
+    .btn.btn-blue:hover, .btn.btn-blue:active, .btn.btn-blue:focus {
       background: #17b2f8;
       color: white; }
   .btn.btn-red {
     background: #ef4d3d; }
-    .btn.btn-red:hover {
+    .btn.btn-red:hover, .btn.btn-red:active, .btn.btn-red:focus {
       background: #ff7366; }
   .btn.btn-green {
     background: #00D57A; }
-    .btn.btn-green:hover {
+    .btn.btn-green:hover, .btn.btn-green:active, .btn.btn-green:focus {
       background: #16de84; }
+  .btn.btn-transparent {
+    background: transparent;
+    color: #0695d6;
+    border: none;
+    box-shadow: none; }
+    .btn.btn-transparent:hover {
+      color: #17b2f8; }
 
 #title {
   color: white;

@@ -30,6 +30,11 @@
                 </button>
             {% endif %}
         {% endblock %}
+        {% block save_draft %}
+            <button class="btn btn-transparent" type="submit" name="save-draft">
+                GUARDAR BORRADOR
+            </button>
+        {% endblock %}
         {% block save_button %}
             <button class="btn btn-blue" type="submit" name="save">
                 {% block save_button_text -%}
