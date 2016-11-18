@@ -3176,12 +3176,14 @@ div#background-container {
           float: none;
           margin: 0 0 10px 0;
           padding: 0;
-          width: 100%; }
+          width: 100%;
+          font-size: 20px;
+          color: #999999; }
           #edit-group-container #edit-group form .control-group label:after, #edit-group-container #new-group form .control-group label:after, #new-group-container #edit-group form .control-group label:after, #new-group-container #new-group form .control-group label:after {
             content: none; }
         #edit-group-container #edit-group form .control-group .controls, #edit-group-container #new-group form .control-group .controls, #new-group-container #edit-group form .control-group .controls, #new-group-container #new-group form .control-group .controls {
           display: block;
-          margin: 0 0 10px 0; }
+          margin: 0; }
           #edit-group-container #edit-group form .control-group .controls.editor textarea, #edit-group-container #new-group form .control-group .controls.editor textarea, #new-group-container #edit-group form .control-group .controls.editor textarea, #new-group-container #new-group form .control-group .controls.editor textarea {
             -o-border-radius: 4px;
             -moz-border-radius: 4px;
@@ -3211,25 +3213,48 @@ div#background-container {
         height: 40px; }
       #edit-group-container #edit-group form .btn-remove-url, #edit-group-container #new-group form .btn-remove-url, #new-group-container #edit-group form .btn-remove-url, #new-group-container #new-group form .btn-remove-url {
         top: 9px; }
+      #edit-group-container #edit-group form .img-title, #edit-group-container #new-group form .img-title, #new-group-container #edit-group form .img-title, #new-group-container #new-group form .img-title {
+        font-size: 20px;
+        color: #999999; }
       #edit-group-container #edit-group form .img-description, #edit-group-container #new-group form .img-description, #new-group-container #edit-group form .img-description, #new-group-container #new-group form .img-description {
         margin: 0; }
       #edit-group-container #edit-group form .image-upload .icon-cloud-upload, #edit-group-container #edit-group form .image-upload .icon-globe, #edit-group-container #new-group form .image-upload .icon-cloud-upload, #edit-group-container #new-group form .image-upload .icon-globe, #new-group-container #edit-group form .image-upload .icon-cloud-upload, #new-group-container #edit-group form .image-upload .icon-globe, #new-group-container #new-group form .image-upload .icon-cloud-upload, #new-group-container #new-group form .image-upload .icon-globe {
         display: none; }
-      #edit-group-container #edit-group form .image-upload a, #edit-group-container #new-group form .image-upload a, #new-group-container #edit-group form .image-upload a, #new-group-container #new-group form .image-upload a {
+      #edit-group-container #edit-group form .image-upload a.btn, #edit-group-container #new-group form .image-upload a.btn, #new-group-container #edit-group form .image-upload a.btn, #new-group-container #new-group form .image-upload a.btn {
         margin-left: 0;
-        text-transform: uppercase; }
+        text-transform: uppercase;
+        padding: 12px; }
+      #edit-group-container #edit-group form .image-upload a.btn-remove-url, #edit-group-container #new-group form .image-upload a.btn-remove-url, #new-group-container #edit-group form .image-upload a.btn-remove-url, #new-group-container #new-group form .image-upload a.btn-remove-url {
+        padding: 0 4px; }
       #edit-group-container #edit-group form .image-upload a.hover, #edit-group-container #new-group form .image-upload a.hover, #new-group-container #edit-group form .image-upload a.hover, #new-group-container #new-group form .image-upload a.hover {
         color: white;
         cursor: pointer; }
+      #edit-group-container #edit-group form button, #edit-group-container #new-group form button, #new-group-container #edit-group form button, #new-group-container #new-group form button {
+        padding: 12px; }
+    #edit-group-container #edit-group #delete-modal .modal-content, #edit-group-container #new-group #delete-modal .modal-content, #new-group-container #edit-group #delete-modal .modal-content, #new-group-container #new-group #delete-modal .modal-content {
+      -o-box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+    #edit-group-container #edit-group #delete-modal .modal-body, #edit-group-container #new-group #delete-modal .modal-body, #new-group-container #edit-group #delete-modal .modal-body, #new-group-container #new-group #delete-modal .modal-body {
+      padding: 50px; }
     #edit-group-container #edit-group #delete-modal form, #edit-group-container #new-group #delete-modal form, #new-group-container #edit-group #delete-modal form, #new-group-container #new-group #delete-modal form {
       padding: 0;
       margin: 0;
       box-shadow: none; }
 
+#group-imgs-modal.modal .modal-content {
+  -o-box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
 #group-imgs-modal.modal .modal-body {
-  max-height: inherit; }
+  max-height: inherit;
+  padding: 50px; }
   #group-imgs-modal.modal .modal-body label:after {
     content: none; }
+  #group-imgs-modal.modal .modal-body p {
+    margin-bottom: 30px; }
   #group-imgs-modal.modal .modal-body .radio-container {
     margin-bottom: 30px; }
     #group-imgs-modal.modal .modal-body .radio-container .radio-box {
@@ -3259,6 +3284,8 @@ div#background-container {
         top: -9999px; }
       #group-imgs-modal.modal .modal-body .radio-container label.img-radio .radio-description {
         padding: 10px; }
+  #group-imgs-modal.modal .modal-body button {
+    padding: 12px; }
 
 ul.activity {
   background: none;

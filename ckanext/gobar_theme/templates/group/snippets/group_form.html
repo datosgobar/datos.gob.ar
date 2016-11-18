@@ -20,14 +20,16 @@
 
         {{ form.markdown('description', label='Descripción del tema', id='field-description', placeholder='', value=data.description, error=errors.description) }}
 
-        {% set is_upload = data.image_url and not data.image_url.startswith('http') %}
-        {% set is_url = data.image_url and data.image_url.startswith('http') %}
+        {% if h.get_theme_config('groups.imgs') != 'hide-icons' %}
+            {% set is_upload = data.image_url and not data.image_url.startswith('http') %}
+            {% set is_url = data.image_url and data.image_url.startswith('http') %}
 
-        <p class="img-title">Imagen</p>
-        <p class="img-description">
-            Por favor, subí solo imágenes en .SVG, sin contenidos ocultos.
-        </p>
-        {{ form.image_upload(data, errors, is_upload_enabled=h.uploads_enabled(), is_url=is_url, is_upload=is_upload, upload_label=' ', url_label=' ') }}
+            <p class="img-title">Imagen</p>
+            <p class="img-description">
+                Por favor, subí solo imágenes en .SVG, sin contenidos ocultos.
+            </p>
+            {{ form.image_upload(data, errors, is_upload_enabled=h.uploads_enabled(), is_url=is_url, is_upload=is_upload, upload_label=' ', url_label=' ') }}
+        {% endif %}
 
     {% endblock %}
 
