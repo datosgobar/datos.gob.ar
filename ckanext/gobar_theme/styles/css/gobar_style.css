@@ -1055,6 +1055,17 @@ div#background-container {
         height: 1em; }
         #title #title-container .description svg.edit-svg path {
           fill: white; }
+  #title.title-variant-2 #title-container .description {
+    margin-bottom: 45px; }
+  #title.title-variant-4 #title-container .description {
+    margin-bottom: 45px; }
+  #title.title-variant-4 .stats-overlay #stats {
+    padding-top: 20px; }
+    #title.title-variant-4 .stats-overlay #stats .stat {
+      font-size: 80px; }
+    #title.title-variant-4 .stats-overlay #stats .stats-legend {
+      font-size: 18px;
+      margin-bottom: 20px; }
   @media (min-width: 992px) {
     #title #searcher.position-bottom {
       position: absolute;
@@ -1074,10 +1085,10 @@ div#background-container {
       -webkit-box-shadow: none;
       box-shadow: none;
       margin-bottom: 15px;
-      padding: 10px 2em 10px 10px;
-      font-size: 21px;
+      padding: 15px 2em 15px 15px;
+      font-size: 20px;
       line-height: 1.2;
-      height: 35.2px; }
+      height: 39px; }
       #title #searcher form input[type="text"]::-webkit-input-placeholder {
         color: #999999;
         font-weight: 300; }
@@ -1096,9 +1107,10 @@ div#background-container {
       position: absolute;
       top: 0;
       right: -4px;
-      height: 35.2px;
+      height: 39px;
       border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px; }
+      border-bottom-right-radius: 3px;
+      padding: 2px 8px; }
       #title #searcher form button:hover {
         background: #17b2f8; }
       #title #searcher form button .search-icon {

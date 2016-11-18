@@ -44,6 +44,32 @@
       }
     }
   }
+
+  &.title-variant-2 {
+    #title-container .description {
+      margin-bottom: 45px;
+    }
+  }
+
+  &.title-variant-4 {
+    #title-container .description {
+      margin-bottom: 45px;
+    }
+    .stats-overlay {
+      #stats {
+        padding-top: 20px;
+        .stat {
+          font-size: 80px;
+        }
+        .stats-legend {
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+  }
+
   #searcher {
 
     &.position-bottom {
@@ -54,8 +80,8 @@
         padding: 0;
       }
     }
-    $font-size: 21px;
-    $padding: 10px;
+    $font-size: 20px;
+    $padding: 15px;
     $line-height: 1.2;
 
     form {
@@ -90,6 +116,7 @@
         height: $padding + $font-size * $line-height;
         border-top-right-radius: 3px;
         border-bottom-right-radius: 3px;
+        padding: 2px 8px;
 
         &:hover {
           background: $blue-200;

@@ -1,7 +1,7 @@
 {% set stats = h.get_site_statistics() %}
 
 {% set background = h.get_theme_config('title.background-image') %}
-<div id="title" class="container-fluid" style="{{ 'background-image:url("%s")' % background if background else '' }}">
+<div id="title" class="container-fluid title-variant-2" style="{{ 'background-image:url("%s")' % background if background else '' }}">
     {% snippet "home/title_config.html" %}
     <div class="background-overlay">
         <div class="restricted-max-width">
@@ -9,7 +9,7 @@
                 <div id="title-container" class="col-xs-12 text-center">
                     {% set title = h.get_theme_config('title.site-title') %}
                     <h1>{{ title if title else '' }}</h1>
-                    <p class="description">
+                    <p class="description col-xs-10 col-xs-offset-1">
                         {% set description = h.get_theme_config('title.site-description') %}
                         {{ description if description else '' }}
                         {% if h.check_access('package_create') %}
