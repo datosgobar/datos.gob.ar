@@ -113,7 +113,10 @@
           }
         }
       }
-
+      &.hide-icons {
+        text-transform: uppercase;
+        font-weight: 500;
+      }
     }
 
     $edit-size: 20px;

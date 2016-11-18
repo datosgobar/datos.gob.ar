@@ -613,14 +613,16 @@ div.svg-tooltip {
           color: white; }
       #footer #footer-spacer .footer-section.links-internos a:hover {
         color: #17b2f8; }
-      #footer #footer-spacer .footer-section.links-externos .ckan-link {
-        margin: 0;
-        color: #767676;
+      #footer #footer-spacer .footer-section.links-externos {
         text-align: right; }
-      #footer #footer-spacer .footer-section.links-externos .ckan-name {
-        color: #0695d6; }
-        #footer #footer-spacer .footer-section.links-externos .ckan-name:hover {
-          color: #17b2f8; }
+        #footer #footer-spacer .footer-section.links-externos .ckan-link {
+          margin: 0;
+          color: #767676;
+          text-align: right; }
+        #footer #footer-spacer .footer-section.links-externos .ckan-name {
+          color: #0695d6; }
+          #footer #footer-spacer .footer-section.links-externos .ckan-name:hover {
+            color: #17b2f8; }
       @media (min-width: 768px) {
         #footer #footer-spacer .footer-section {
           text-align: left; } }
@@ -1233,6 +1235,9 @@ div#background-container {
         color: white; }
         .featured-groups .group-container .group.active:hover svg path {
           fill: white !important; }
+      .featured-groups .group-container .group.hide-icons {
+        text-transform: uppercase;
+        font-weight: 500; }
     .featured-groups .group-container .edit-container {
       position: absolute;
       z-index: 1;
