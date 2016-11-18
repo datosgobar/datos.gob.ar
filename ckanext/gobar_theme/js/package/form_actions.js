@@ -102,14 +102,19 @@ $(function () {
     }
 
     $('form#dataset-edit').submit(function (e) {
-        e.preventDefault();
         $form = $(this);
         addGroupValues();
         addGlobalGroupValues();
         addHiddenExtras();
         addDates();
+        return true
+    });
+
+    $('#save-draft').on('click', function() {
+        $('#visibility').val('False');
+        $form = $('form#dataset-edit');
         addSaveHidden();
-        $form[0].submit();
+        $form.attr('action', '/dataset/new_draft').submit();
     });
 
     $('#date-from, #date-to').datepicker({
