@@ -3,24 +3,6 @@
 
     <div id="info-container">
 
-        {% if pkg.maintainer|length > 0 %}
-            <div class="row">
-                <div class="col-xs-5 title">
-                    Responsable
-                </div>
-                <div class="col-xs-7 value">
-                    <p class="pkg-maintainer">
-                        {{ pkg.maintainer }}
-                        {% if pkg.maintainer_email %}
-                            <a href="mailto:{{ pkg.maintainer_email }}">
-                                {% snippet "svg/mail.svg" %}
-                            </a>
-                        {% endif %}
-                    </p>
-                </div>
-            </div>
-        {% endif %}
-
         {% set dataset_url = h.url_for(controller='package', action='search') %}
 
         {% if pkg.groups|length > 0 %}
@@ -35,7 +17,8 @@
                             <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
                                 {%- if show_group_imgs -%}
                                     {%- if group.image_display_url|length > 0 -%}
-                                        <img src="{{ h.cut_img_path(group.image_display_url) }}" data-title="{{ group.title }}"
+                                        <img src="{{ h.cut_img_path(group.image_display_url) }}"
+                                             data-title="{{ group.title }}"
                                              class="group-image" data-replace="svg">
                                     {%- endif -%}
                                 {%- else -%}
@@ -67,41 +50,12 @@
 
         <div class="row">
             <div class="col-xs-5 title">
-                Fecha de publicación
-            </div>
-            <div class="col-xs-7 value">
-                {{ h.render_datetime(pkg.metadata_created) }}
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-5 title">
-                Fecha de actualización
-            </div>
-            <div class="col-xs-7 value">
-                {{ h.render_datetime(pkg.metadata_modified) }}
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-5 title">
                 Licencia
             </div>
             <div class="col-xs-7 value">
                 {{ pkg.license_title }}
             </div>
         </div>
-
-        {% if pkg.url %}
-            <div class="row">
-                <div class="col-xs-5 title">
-                    Fuente
-                </div>
-                <div class="col-xs-7 value">
-                    {{ pkg.url|urlize }}
-                </div>
-            </div>
-        {% endif %}
 
         {% if pkg.extras %}
             {% for extra in pkg.extras %}
@@ -118,6 +72,52 @@
             {% endfor %}
         {% endif %}
 
+        {% if pkg.maintainer|length > 0 %}
+            <div class="row">
+                <div class="col-xs-5 title">
+                    Responsable
+                </div>
+                <div class="col-xs-7 value">
+                    <p class="pkg-maintainer">
+                        {{ pkg.maintainer }}
+                        {% if pkg.maintainer_email %}
+                            <a href="mailto:{{ pkg.maintainer_email }}">
+                                {% snippet "svg/mail.svg" %}
+                            </a>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if pkg.url %}
+            <div class="row">
+                <div class="col-xs-5 title">
+                    Fuente
+                </div>
+                <div class="col-xs-7 value">
+                    {{ pkg.url|urlize }}
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="row">
+            <div class="col-xs-5 title">
+                Fecha de publicación
+            </div>
+            <div class="col-xs-7 value">
+                {{ h.render_datetime(pkg.metadata_created) }}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-5 title">
+                Fecha de actualización
+            </div>
+            <div class="col-xs-7 value">
+                {{ h.render_datetime(pkg.metadata_modified) }}
+            </div>
+        </div>
     </div>
 
     <div id="pkg-recent-activity">

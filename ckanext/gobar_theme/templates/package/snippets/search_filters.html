@@ -6,11 +6,11 @@
     {%- set group_imgs = h.get_theme_config('groups.imgs') -%}
 
     {%- if group_imgs == 'hide-icons' -%}
-        {{ h.snippet('package/snippets/search_facets.html', title='Temas', name='groups') }}
+        {{ h.snippet('package/snippets/search_facets.html', title='Por temas', name='groups') }}
     {%- else -%}
-        {{ h.snippet('package/snippets/search_facets_groups.html', title='Temas', name='groups') }}
+        {{ h.snippet('package/snippets/search_facets_groups.html', title='Por temas', name='groups') }}
     {%- endif -%}
-    {{ h.snippet('package/snippets/search_facets.html', title=c.facet_titles['organization'], name='organization') }}
-    {{ h.snippet('package/snippets/search_facets.html', title=c.facet_titles['tags'], name='tags') }}
+    {{ h.snippet('package/snippets/search_facets.html', title='Por organizaciones', name='organization') }}
+    {{ h.snippet('package/snippets/search_facets.html', title='Etiquetas', name='tags') }}
     <a class="close no-text hide-filters"><i class="icon-remove-sign"></i><span class="text">close</span></a>
 </div>

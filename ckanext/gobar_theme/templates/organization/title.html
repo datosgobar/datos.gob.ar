@@ -6,8 +6,8 @@
     <div class="background-overlay">
         <div class="restricted-max-width">
             <div class="col-xs-12 col-md-10 col-md-offset-1">
-                <div id="title-container" class="col-xs-12 col-md-6 text-left">
-                    <h1>Organizaciones</h1>
+                <div id="title-container" class="col-xs-12 col-md-8 text-left">
+                    <h1>Organizaciones con datos</h1>
 
                     <p class="description">
                         {% set description = h.get_theme_config('organization.description') %}
@@ -19,7 +19,7 @@
                         {% endif %}
                     </p>
                 </div>
-                <div id="stats" class="col-xs-12 col-md-4 col-md-offset-2">
+                <div id="stats" class="col-xs-12 col-md-4">
                     <div>
                         <p class="stat organizations">{{ "%03d" % h.organizations_with_packages() }}</p>
 

@@ -5,8 +5,7 @@
   .gobar-static {
     height: 100%;
     @include base-content();
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
     @include breakpoint-md {
       padding-top: 30px;
       padding-bottom: 50px;
