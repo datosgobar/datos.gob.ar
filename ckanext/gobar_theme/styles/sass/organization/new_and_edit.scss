@@ -36,6 +36,8 @@
           margin: 0 0 10px 0;
           padding: 0;
           width: 100%;
+          font-size: 20px;
+          color: $grey-300;
           &:after {
             content: none;
           }
@@ -43,7 +45,7 @@
 
         .controls {
           display: block;
-          margin: 0 0 10px 0;
+          margin: 0;
         }
       }
 
@@ -52,6 +54,9 @@
         padding: 50px 0 0 0;
         margin: 0;
         border: none;
+        .btn {
+          padding: 12px;
+        }
       }
 
       .slug-preview {
@@ -85,10 +90,19 @@
       .modal-content {
         box-shadow: none;
       }
+      .modal-body {
+        padding: 50px;
+        h1 {
+          margin-bottom: 10px;
+        }
+      }
       form {
         padding: 0;
         margin: 0;
         box-shadow: none;
+        button {
+          padding: 12px;
+        }
       }
     }
   }

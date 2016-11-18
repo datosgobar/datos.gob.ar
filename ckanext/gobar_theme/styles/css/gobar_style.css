@@ -1823,17 +1823,21 @@ div#background-container {
           float: none;
           margin: 0 0 10px 0;
           padding: 0;
-          width: 100%; }
+          width: 100%;
+          font-size: 20px;
+          color: #999999; }
           #edit-organization-container #edit-organization form .control-group label:after, #edit-organization-container #new-organization form .control-group label:after, #new-organization-container #edit-organization form .control-group label:after, #new-organization-container #new-organization form .control-group label:after {
             content: none; }
         #edit-organization-container #edit-organization form .control-group .controls, #edit-organization-container #new-organization form .control-group .controls, #new-organization-container #edit-organization form .control-group .controls, #new-organization-container #new-organization form .control-group .controls {
           display: block;
-          margin: 0 0 10px 0; }
+          margin: 0; }
       #edit-organization-container #edit-organization form .form-actions, #edit-organization-container #new-organization form .form-actions, #new-organization-container #edit-organization form .form-actions, #new-organization-container #new-organization form .form-actions {
         text-align: center;
         padding: 50px 0 0 0;
         margin: 0;
         border: none; }
+        #edit-organization-container #edit-organization form .form-actions .btn, #edit-organization-container #new-organization form .form-actions .btn, #new-organization-container #edit-organization form .form-actions .btn, #new-organization-container #new-organization form .form-actions .btn {
+          padding: 12px; }
       #edit-organization-container #edit-organization form .slug-preview, #edit-organization-container #new-organization form .slug-preview, #new-organization-container #edit-organization form .slug-preview, #new-organization-container #new-organization form .slug-preview {
         margin: 10px 0 0 0; }
         #edit-organization-container #edit-organization form .slug-preview .btn-mini, #edit-organization-container #new-organization form .slug-preview .btn-mini, #new-organization-container #edit-organization form .slug-preview .btn-mini, #new-organization-container #new-organization form .slug-preview .btn-mini {
@@ -1853,10 +1857,16 @@ div#background-container {
         width: 25em; }
     #edit-organization-container #edit-organization #delete-modal .modal-content, #edit-organization-container #new-organization #delete-modal .modal-content, #new-organization-container #edit-organization #delete-modal .modal-content, #new-organization-container #new-organization #delete-modal .modal-content {
       box-shadow: none; }
+    #edit-organization-container #edit-organization #delete-modal .modal-body, #edit-organization-container #new-organization #delete-modal .modal-body, #new-organization-container #edit-organization #delete-modal .modal-body, #new-organization-container #new-organization #delete-modal .modal-body {
+      padding: 50px; }
+      #edit-organization-container #edit-organization #delete-modal .modal-body h1, #edit-organization-container #new-organization #delete-modal .modal-body h1, #new-organization-container #edit-organization #delete-modal .modal-body h1, #new-organization-container #new-organization #delete-modal .modal-body h1 {
+        margin-bottom: 10px; }
     #edit-organization-container #edit-organization #delete-modal form, #edit-organization-container #new-organization #delete-modal form, #new-organization-container #edit-organization #delete-modal form, #new-organization-container #new-organization #delete-modal form {
       padding: 0;
       margin: 0;
       box-shadow: none; }
+      #edit-organization-container #edit-organization #delete-modal form button, #edit-organization-container #new-organization #delete-modal form button, #new-organization-container #edit-organization #delete-modal form button, #new-organization-container #new-organization #delete-modal form button {
+        padding: 12px; }
 
 .package-container {
   height: 100%;
