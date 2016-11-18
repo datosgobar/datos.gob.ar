@@ -6,15 +6,15 @@
     <div id="home-create-buttons" class="container-fluid">
         <div class="restricted-max-width">
             <div class="col-xs-12 col-md-10 col-md-offset-1">
-                {% if organization_create %}
-                    {% link_for 'CREAR ORGANIZACIÓN', controller='organization', action='new' %}
-                {% endif %}
-                {%- if group_create -%}
-                    {% link_for 'CREAR TEMA', controller='group', action='new' %}
+                {%- if organization_create -%}
+                    {%- link_for 'CREAR ORGANIZACIÓN', controller='organization', action='new' -%}
                 {%- endif -%}
-                {% if package_create %}
-                    {% link_for 'CREAR DATASET', controller='package', action='new' %}
-                {% endif %}
+                {%- if group_create -%}
+                    {%- link_for 'CREAR TEMA', controller='group', action='new' -%}
+                {%- endif -%}
+                {%- if package_create -%}
+                    {%- link_for 'CREAR DATASET', controller='package', action='new' -%}
+                {%- endif -%}
             </div>
         </div>
     </div>

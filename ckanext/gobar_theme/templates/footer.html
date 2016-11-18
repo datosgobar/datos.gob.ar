@@ -43,7 +43,7 @@
                         </a>
                     {% endif %}
 
-                    {% if h.check_access('package_create') and (has_tw or has_github or has_fb or has_inst or has_yt) %}
+                    {% if h.check_access('package_create') and (has_tw or has_github or has_fb or has_inst or has_yt) and c.controller != 'ckanext.gobar_theme.config_controller:GobArConfigController' %}
                         <a class="edit-social-link"
                            href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_social') }}">
                             {% snippet "svg/edit.svg" %}
@@ -56,7 +56,7 @@
                     <a href="{{ url if url else 'http://datos.gob.ar/' }}" target="_blank">
                         <img src="{{ image if image else '/img/logo_ministerio.svg' }}" class="logo-ministerio">
                     </a>
-                    {% if h.check_access('package_create') %}
+                    {% if h.check_access('package_create') and c.controller != 'ckanext.gobar_theme.config_controller:GobArConfigController' %}
                         <a class="edit-logo-link"
                            href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_footer') }}">
                             {% snippet "svg/edit.svg" %}

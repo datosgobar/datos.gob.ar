@@ -39,6 +39,9 @@
       }
       .control-group {
         margin-bottom: 30px;
+        &:nth-child(3) {
+          margin: 0;
+        }
       }
       .form-actions {
         margin: 0;

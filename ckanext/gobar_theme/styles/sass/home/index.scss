@@ -10,8 +10,15 @@
 }
 
 #greetings-modal {
+  width: 680px;
+  left: 50%;
+  margin-left: -340px !important;
+  .modal-content {
+    @include box-shadow(none);
+  }
   .modal-body {
     position: relative;
+    padding: 50px;
   }
   .icon-remove {
     position: absolute;

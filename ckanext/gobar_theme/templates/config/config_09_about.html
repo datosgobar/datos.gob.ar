@@ -4,16 +4,16 @@
     <h1>Acerca (opcional)</h1>
 
     <form method="post" action="" data-module="basic-form">
-        <label>
+        <label class="with-bottom-margin checkbox-label">
             <input type="checkbox" name="show-about" {{ 'checked="checked"' if h.get_theme_config('about.show-about') else '' }}>
             ¿Querés que esta sección se vea en tu portal?
         </label>
 
-        <p>Título</p>
+        <h2>Título</h2>
         {% set title = h.get_theme_config('about.title') %}
         <input name="about-title" type="text" title="Título" value="{{ title if title else '' }}">
 
-        <p>Descripción</p>
+        <h2>Descripción</h2>
         {% set description = h.get_theme_config('about.description') %}
         <textarea title="Descripción del acerca" name="about-description"
         >{{- description if description else '' -}}</textarea>

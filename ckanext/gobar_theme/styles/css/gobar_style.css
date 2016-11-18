@@ -1150,6 +1150,7 @@ div#background-container {
         #title #stats .stats-legend.datasets {
           margin-bottom: 40px; } }
   #title .title-links {
+    font-size: 16px;
     padding-top: 20px;
     background-color: rgba(0, 0, 0, 0.5);
     text-align: right; }
@@ -1292,6 +1293,7 @@ div#background-container {
     color: white;
     border: none;
     padding: 12px;
+    margin-left: 10px;
     -o-border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
@@ -1377,14 +1379,24 @@ div#background-container {
   height: 100%;
   display: table-row; }
 
-#greetings-modal .modal-body {
-  position: relative; }
-#greetings-modal .icon-remove {
-  position: absolute;
-  font-size: 20px;
-  cursor: pointer;
-  top: 10px;
-  left: 10px; }
+#greetings-modal {
+  width: 680px;
+  left: 50%;
+  margin-left: -340px !important; }
+  #greetings-modal .modal-content {
+    -o-box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  #greetings-modal .modal-body {
+    position: relative;
+    padding: 50px; }
+  #greetings-modal .icon-remove {
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    top: 10px;
+    left: 10px; }
 
 #login-container {
   height: 100%;
@@ -1513,6 +1525,8 @@ div#background-container {
           margin-top: -10px; }
       #login-container #login form .control-group {
         margin-bottom: 30px; }
+        #login-container #login form .control-group:nth-child(3) {
+          margin: 0; }
       #login-container #login form .form-actions {
         margin: 0;
         padding: 50px 0 0 0;
@@ -1907,7 +1921,8 @@ div#background-container {
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
       border-radius: 4px;
-      background-color: #0695d6; }
+      background-color: #0695d6;
+      margin-left: 10px; }
       #search-results .add-dataset a:hover {
         background-color: #17b2f8; }
   #search-results .search-and-order {
@@ -3282,13 +3297,17 @@ ul.activity {
       font-weight: 400;
       margin: 50px 0 30px 0;
       font-size: 40px; }
+      #template-config-container #template-config h1.small-margin {
+        margin-bottom: 10px; }
     #template-config-container #template-config h2 {
       font-weight: 400;
       margin: 0 0 10px 0;
-      font-size: 22px; }
+      font-size: 20px;
+      color: #999999; }
       #template-config-container #template-config h2.blue {
-        color: #0695d6;
-        margin-bottom: 30px; }
+        color: #0695d6; }
+    #template-config-container #template-config .with-bottom-margin {
+      margin-bottom: 30px; }
     #template-config-container #template-config p, #template-config-container #template-config label {
       margin: 0 0 10px 0;
       font-weight: 400;
@@ -3308,6 +3327,8 @@ ul.activity {
           #template-config-container #template-config .radio-container .radio-box.selected .radio-description, #template-config-container #template-config .radio-container .radio-box:hover .radio-description {
             background-color: #0695d6;
             color: white; }
+            #template-config-container #template-config .radio-container .radio-box.selected .radio-description h2, #template-config-container #template-config .radio-container .radio-box:hover .radio-description h2 {
+              color: white; }
         #template-config-container #template-config .radio-container .radio-box.not-selected {
           opacity: 0.75; }
           #template-config-container #template-config .radio-container .radio-box.not-selected:hover {
@@ -3321,18 +3342,30 @@ ul.activity {
           left: -9999px;
           top: -9999px; }
         #template-config-container #template-config .radio-container label.img-radio .radio-description {
-          padding: 10px; }
+          padding: 20px; }
+          #template-config-container #template-config .radio-container label.img-radio .radio-description h2 {
+            color: #767676; }
     #template-config-container #template-config input[type="text"] {
       width: 100%;
       margin-bottom: 30px;
       padding: 10px;
-      height: auto; }
+      height: auto;
+      font-size: 16px;
+      color: #767676; }
+    #template-config-container #template-config .checkbox-label {
+      font-size: 20px;
+      color: #999999; }
     #template-config-container #template-config input[type="checkbox"] {
       margin: 0 5px 0 0;
       position: static; }
     #template-config-container #template-config .file-upload-container {
       position: relative;
       margin: 0 0 30px 0; }
+      #template-config-container #template-config .file-upload-container label[for="background-image"],
+      #template-config-container #template-config .file-upload-container label[for="image"] {
+        margin: 0;
+        position: relative;
+        top: -2px; }
       #template-config-container #template-config .file-upload-container p {
         margin: 0; }
       #template-config-container #template-config .file-upload-container input[type="file"] {
@@ -3345,14 +3378,15 @@ ul.activity {
         left: -9999px; }
       #template-config-container #template-config .file-upload-container .filename-input {
         display: inline-block;
-        margin: 0 10px 0 0;
-        width: 300px;
+        margin: 0 10px 10px 0;
+        width: 400px;
         background-color: white;
         padding-right: 3em; }
       #template-config-container #template-config .file-upload-container .upload-file-button {
+        display: inline-block;
         height: 42px;
         color: white;
-        background: #767676;
+        background: #999999;
         border: none;
         padding: 12px;
         -o-border-radius: 4px;
@@ -3362,16 +3396,19 @@ ul.activity {
         #template-config-container #template-config .file-upload-container .upload-file-button:hover {
           background-color: #999999; }
       #template-config-container #template-config .file-upload-container .icon-remove-sign {
+        color: #cccccc;
         position: absolute;
-        top: 5px;
-        font-size: 2em;
-        left: 267px;
+        top: 8px;
+        font-size: 24px;
+        left: 367px;
         cursor: pointer;
         display: none; }
       #template-config-container #template-config .file-upload-container.with-image .icon-remove-sign {
         display: inline-block; }
     #template-config-container #template-config textarea {
+      color: #767676;
       width: 100%;
+      font-size: 16px;
       margin-bottom: 30px;
       padding: 10px;
       height: 100px; }
@@ -3388,6 +3425,8 @@ ul.activity {
         -webkit-border-radius: 4px;
         border-radius: 4px;
         padding: 12px; }
+        #template-config-container #template-config .submit-container .submit-button:hover {
+          background-color: #17b2f8; }
 
 #template-config #navbar {
   background: #f5f5f5;
@@ -3413,10 +3452,16 @@ ul.activity {
         background: #e5e5e5;
         color: #0695d6; }
     #template-config #navbar .links-section.guide-link {
-      padding: 20px 20px 10px 20px;
+      padding: 60px 20px 10px 20px;
       color: #999999; }
       #template-config #navbar .links-section.guide-link i {
         color: #0695d6;
         font-size: 18px; }
+      #template-config #navbar .links-section.guide-link .blue {
+        color: #0695d6; }
+      #template-config #navbar .links-section.guide-link a {
+        color: inherit; }
+        #template-config #navbar .links-section.guide-link a:hover i, #template-config #navbar .links-section.guide-link a:hover .blue {
+          color: #17b2f8; }
 
 /*# sourceMappingURL=gobar_style.css.map */

@@ -3,15 +3,15 @@
     <h2>Página de inicio</h2>
     <div class="links-section">
         <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_title') }}"
-            class="section-link {{ 'active' if c.action == 'edit_title' else '' }}">
+           class="section-link {{ 'active' if c.action == 'edit_title' else '' }}">
             Título, descripción e imagen del portal
         </a>
         <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_home') }}"
-            class="section-link {{ 'active' if c.action == 'edit_home' else '' }}">
+           class="section-link {{ 'active' if c.action == 'edit_home' else '' }}">
             Formato de la portada
         </a>
         <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_groups') }}"
-            class="section-link {{ 'active' if c.action == 'edit_groups' else '' }}">
+           class="section-link {{ 'active' if c.action == 'edit_groups' else '' }}">
             Formato de los temas
         </a>
         <a href="{{ h.url_for(controller='ckanext.gobar_theme.config_controller:GobArConfigController', action='edit_header') }}"
@@ -57,7 +57,11 @@
     </div>
 
     <div class="links-section guide-link">
-        <i class="icon-question-sign" aria-hidden="true"></i>
-        ¿Dudas? Tené a mano la <a class="inline" href="https://github.com/datosgobar/distribuible.datos.gob.ar/blob/master/docs/guia_uso_abrear.md" target="_blank">guía de uso</a>.
+        <a class="inline"
+           href="https://github.com/datosgobar/distribuible.datos.gob.ar/blob/master/docs/guia_uso_abrear.md"
+           target="_blank">
+            <i class="icon-question-sign" aria-hidden="true"></i>
+            ¿Dudas? Tené a mano la <span class="blue">guía de uso</span>.
+        </a>
     </div>
 </div>

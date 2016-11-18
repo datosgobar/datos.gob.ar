@@ -1,7 +1,7 @@
 {% extends "config/config_base.html" %}
 
 {% block config %}
-    <h1>Metadatos</h1>
+    <h1 class="small-margin">Metadatos</h1>
 
     <form method="post" action="" data-module="basic-form" accept-charset="utf-8" enctype="multipart/form-data">
         <p>Esta información te permite definir <strong>el título, la descripción y la imagen que se muestran en FB y Twitter
@@ -10,17 +10,17 @@
 
         <h1>Google y Facebook</h1>
 
-        <p>Titulo de tu portal</p>
+        <h2>Titulo de tu portal</h2>
         <p>Escribí como máximo 67 caracteres para que no se vea cortado.</p>
         {% set title = h.get_theme_config('fb-metadata.title') %}
         <input name="metadata-title" type="text" title="Título" placeholder="Título" value="{{ title if title else '' }}">
 
-        <p>Descripción de tu portal</p>
+        <h2>Descripción de tu portal</h2>
         <p>Escribí como máximo 155 caracteres para que no se vea cortado.</p>
         {% set description = h.get_theme_config('fb-metadata.description') %}
         <input name="metadata-description" type="text" title="Descripción" placeholder="Descripción" value="{{ description if description else '' }}">
 
-        <p>Imagen de tu portal</p>
+        <h2>Imagen de tu portal</h2>
         <p>Podés poner, por ejemplo, una captura de pantalla del nombre de tu portal.</p>
         {% set image = h.get_theme_config('fb-metadata.image') %}
         <div class="file-upload-container {{ 'with-image' if image else '' }}">
