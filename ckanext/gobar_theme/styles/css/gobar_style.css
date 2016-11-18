@@ -1567,12 +1567,12 @@ div#background-container {
         box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
     #user-datasets-container #user-datasets .back-btn {
       color: #0695d6;
-      margin: 10px 0; }
+      margin: 20px 0; }
     #user-datasets-container #user-datasets h1 {
       color: #0695d6;
       font-size: 40px;
       font-weight: 400;
-      margin: 0 0 20px 0; }
+      margin: 0 0 30px 0; }
 
 .organization-container {
   display: table-row;
@@ -2723,6 +2723,8 @@ div#background-container {
       #edit-package-container #edit-package form .control-group, #edit-package-container #new-package form .control-group, #new-package-container #edit-package form .control-group, #new-package-container #new-package form .control-group {
         margin: 0 0 30px 0; }
         #edit-package-container #edit-package form .control-group label, #edit-package-container #new-package form .control-group label, #new-package-container #edit-package form .control-group label, #new-package-container #new-package form .control-group label {
+          font-size: 20px;
+          color: #999999;
           padding: 0;
           display: block;
           float: none;
@@ -2730,6 +2732,19 @@ div#background-container {
           width: auto; }
           #edit-package-container #edit-package form .control-group label:after, #edit-package-container #new-package form .control-group label:after, #new-package-container #edit-package form .control-group label:after, #new-package-container #new-package form .control-group label:after {
             content: none; }
+          #edit-package-container #edit-package form .control-group label.package-group-label, #edit-package-container #new-package form .control-group label.package-group-label, #new-package-container #edit-package form .control-group label.package-group-label, #new-package-container #new-package form .control-group label.package-group-label {
+            color: #767676;
+            font-size: 16px;
+            padding: 3px 0; }
+          #edit-package-container #edit-package form .control-group label.detail-hour, #edit-package-container #new-package form .control-group label.detail-hour, #new-package-container #edit-package form .control-group label.detail-hour, #new-package-container #new-package form .control-group label.detail-hour {
+            font-size: 16px;
+            color: #767676;
+            margin-bottom: 30px; }
+          #edit-package-container #edit-package form .control-group label.picker-date-from, #edit-package-container #edit-package form .control-group label.picker-date-to, #edit-package-container #new-package form .control-group label.picker-date-from, #edit-package-container #new-package form .control-group label.picker-date-to, #new-package-container #edit-package form .control-group label.picker-date-from, #new-package-container #edit-package form .control-group label.picker-date-to, #new-package-container #new-package form .control-group label.picker-date-from, #new-package-container #new-package form .control-group label.picker-date-to {
+            font-size: 16px;
+            color: #767676; }
+          #edit-package-container #edit-package form .control-group label.no-margin, #edit-package-container #new-package form .control-group label.no-margin, #new-package-container #edit-package form .control-group label.no-margin, #new-package-container #new-package form .control-group label.no-margin {
+            margin: 0; }
         #edit-package-container #edit-package form .control-group select, #edit-package-container #new-package form .control-group select, #new-package-container #edit-package form .control-group select, #new-package-container #new-package form .control-group select {
           width: 24em;
           max-width: 100%; }
@@ -2745,6 +2760,8 @@ div#background-container {
             display: none; }
           #edit-package-container #edit-package form .control-group .controls .select2-container .select2-choices, #edit-package-container #new-package form .control-group .controls .select2-container .select2-choices, #new-package-container #edit-package form .control-group .controls .select2-container .select2-choices, #new-package-container #new-package form .control-group .controls .select2-container .select2-choices {
             background: transparent; }
+        #edit-package-container #edit-package form .control-group .control-required, #edit-package-container #new-package form .control-group .control-required, #new-package-container #edit-package form .control-group .control-required, #new-package-container #new-package form .control-group .control-required {
+          color: inherit; }
         #edit-package-container #edit-package form .control-group .slug-preview, #edit-package-container #new-package form .control-group .slug-preview, #new-package-container #edit-package form .control-group .slug-preview, #new-package-container #new-package form .control-group .slug-preview {
           margin: 10px 0 0 0; }
           #edit-package-container #edit-package form .control-group .slug-preview .btn-mini, #edit-package-container #new-package form .control-group .slug-preview .btn-mini, #new-package-container #edit-package form .control-group .slug-preview .btn-mini, #new-package-container #new-package form .control-group .slug-preview .btn-mini {
@@ -2765,31 +2782,32 @@ div#background-container {
           width: auto;
           position: static; }
         #edit-package-container #edit-package form .control-group .date-picker, #edit-package-container #new-package form .control-group .date-picker, #new-package-container #edit-package form .control-group .date-picker, #new-package-container #new-package form .control-group .date-picker {
-          max-width: 100%;
-          width: 30em; }
+          max-width: 100%; }
           #edit-package-container #edit-package form .control-group .date-picker label, #edit-package-container #new-package form .control-group .date-picker label, #new-package-container #edit-package form .control-group .date-picker label, #new-package-container #new-package form .control-group .date-picker label {
-            display: inline-block; }
+            display: inline-block;
+            margin-right: 10px; }
           #edit-package-container #edit-package form .control-group .date-picker input, #edit-package-container #new-package form .control-group .date-picker input, #new-package-container #edit-package form .control-group .date-picker input, #new-package-container #new-package form .control-group .date-picker input {
             width: 10em; }
-          #edit-package-container #edit-package form .control-group .date-picker .hour-picker-from,
-          #edit-package-container #edit-package form .control-group .date-picker .hour-picker-to, #edit-package-container #new-package form .control-group .date-picker .hour-picker-from,
-          #edit-package-container #new-package form .control-group .date-picker .hour-picker-to, #new-package-container #edit-package form .control-group .date-picker .hour-picker-from,
-          #new-package-container #edit-package form .control-group .date-picker .hour-picker-to, #new-package-container #new-package form .control-group .date-picker .hour-picker-from,
-          #new-package-container #new-package form .control-group .date-picker .hour-picker-to {
-            text-align: center; }
-            #edit-package-container #edit-package form .control-group .date-picker .hour-picker-from select,
-            #edit-package-container #edit-package form .control-group .date-picker .hour-picker-to select, #edit-package-container #new-package form .control-group .date-picker .hour-picker-from select,
-            #edit-package-container #new-package form .control-group .date-picker .hour-picker-to select, #new-package-container #edit-package form .control-group .date-picker .hour-picker-from select,
-            #new-package-container #edit-package form .control-group .date-picker .hour-picker-to select, #new-package-container #new-package form .control-group .date-picker .hour-picker-from select,
-            #new-package-container #new-package form .control-group .date-picker .hour-picker-to select {
-              width: 4em; }
+          #edit-package-container #edit-package form .control-group .date-picker .hour-picker-from .invisible-label,
+          #edit-package-container #edit-package form .control-group .date-picker .hour-picker-to .invisible-label, #edit-package-container #new-package form .control-group .date-picker .hour-picker-from .invisible-label,
+          #edit-package-container #new-package form .control-group .date-picker .hour-picker-to .invisible-label, #new-package-container #edit-package form .control-group .date-picker .hour-picker-from .invisible-label,
+          #new-package-container #edit-package form .control-group .date-picker .hour-picker-to .invisible-label, #new-package-container #new-package form .control-group .date-picker .hour-picker-from .invisible-label,
+          #new-package-container #new-package form .control-group .date-picker .hour-picker-to .invisible-label {
+            visibility: hidden; }
+          #edit-package-container #edit-package form .control-group .date-picker .hour-picker-from select,
+          #edit-package-container #edit-package form .control-group .date-picker .hour-picker-to select, #edit-package-container #new-package form .control-group .date-picker .hour-picker-from select,
+          #edit-package-container #new-package form .control-group .date-picker .hour-picker-to select, #new-package-container #edit-package form .control-group .date-picker .hour-picker-from select,
+          #new-package-container #edit-package form .control-group .date-picker .hour-picker-to select, #new-package-container #new-package form .control-group .date-picker .hour-picker-from select,
+          #new-package-container #new-package form .control-group .date-picker .hour-picker-to select {
+            width: 4em; }
       #edit-package-container #edit-package form ol.stages, #edit-package-container #new-package form ol.stages, #new-package-container #edit-package form ol.stages, #new-package-container #new-package form ol.stages {
         margin: 0 0 50px 0;
         background: #cccccc; }
         #edit-package-container #edit-package form ol.stages li, #edit-package-container #new-package form ol.stages li, #new-package-container #edit-package form ol.stages li, #new-package-container #new-package form ol.stages li {
           background: transparent;
           color: white;
-          font-weight: 400; }
+          font-weight: 400;
+          font-size: 18px; }
           #edit-package-container #edit-package form ol.stages li:after, #edit-package-container #new-package form ol.stages li:after, #new-package-container #edit-package form ol.stages li:after, #new-package-container #new-package form ol.stages li:after {
             border-color: #cccccc transparent; }
           #edit-package-container #edit-package form ol.stages li:before, #edit-package-container #new-package form ol.stages li:before, #new-package-container #edit-package form ol.stages li:before, #new-package-container #new-package form ol.stages li:before {
@@ -2811,7 +2829,8 @@ div#background-container {
         text-align: center;
         text-transform: uppercase; }
         #edit-package-container #edit-package form .form-actions .btn, #edit-package-container #new-package form .form-actions .btn, #new-package-container #edit-package form .form-actions .btn, #new-package-container #new-package form .form-actions .btn {
-          float: none !important; }
+          float: none !important;
+          padding: 12px; }
     #edit-package-container #edit-package #delete-modal form, #edit-package-container #new-package #delete-modal form, #new-package-container #edit-package #delete-modal form, #new-package-container #new-package #delete-modal form {
       padding: 0;
       margin: 0;

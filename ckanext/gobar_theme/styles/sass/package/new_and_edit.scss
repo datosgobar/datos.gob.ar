@@ -40,6 +40,8 @@
       .control-group {
         margin: 0 0 30px 0;
         label {
+          font-size: 20px;
+          color: $grey-300;
           padding: 0;
           display: block;
           float: none;
@@ -47,6 +49,24 @@
           width: auto;
           &:after {
             content: none;
+          }
+          &.package-group-label {
+            color: $grey-400;
+            font-size: 16px;
+            padding: 3px 0;
+          }
+          &.detail-hour {
+            font-size: 16px;
+            color: $grey-400;
+            margin-bottom: 30px;
+          }
+          &.picker-date-from,
+          &.picker-date-to {
+            font-size: 16px;
+            color: $grey-400;
+          }
+          &.no-margin {
+            margin: 0;
           }
         }
 
@@ -73,6 +93,9 @@
           }
         }
 
+        .control-required {
+          color: inherit;
+        }
         .slug-preview {
           margin: 10px 0 0 0;
           .btn-mini {
@@ -101,16 +124,18 @@
 
         .date-picker {
           max-width: 100%;
-          width: 30em;
           label {
             display: inline-block;
+            margin-right: 10px;
           }
           input {
             width: 10em;
           }
           .hour-picker-from,
           .hour-picker-to {
-            text-align: center;
+            .invisible-label {
+              visibility: hidden;
+            }
             select {
               width: 4em;
             }
@@ -125,6 +150,7 @@
           background: transparent;
           color: white;
           font-weight: 400;
+          font-size: 18px;
           &:after {
             border-color: $grey-200 transparent;
           }
@@ -157,6 +183,7 @@
         text-transform: uppercase;
         .btn {
           float: none !important;
+          padding: 12px;
         }
       }
     }
