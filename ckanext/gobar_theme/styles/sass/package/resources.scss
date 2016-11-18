@@ -35,6 +35,9 @@
       margin: 10px 0 0 0;
       border-top: solid 1px $grey-200;
       text-align: center;
+      .btn {
+        padding: 12px;
+      }
     }
 
     .form-actions {
@@ -45,6 +48,7 @@
       border-top: solid 1px $grey-200;
 
       .btn {
+        padding: 12px;
         float: none !important;
         &.save {
           background: $blue-300;
@@ -62,10 +66,11 @@
 
     .action-buttons {
       margin: 0 0 10px 0;
-      padding: 0 0 50px 0;
+      padding: 0 0 20px 0;
       border-bottom: solid 1px $grey-200;
       text-align: right;
       .btn {
+        padding: 12px;
         text-transform: uppercase;
         background: $blue-300;
         &:hover {

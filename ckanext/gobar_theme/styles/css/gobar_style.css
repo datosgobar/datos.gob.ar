@@ -1009,9 +1009,9 @@ div#background-container {
     .btn.btn-red:hover, .btn.btn-red:active, .btn.btn-red:focus {
       background: #ff7366; }
   .btn.btn-green {
-    background: #00D57A; }
+    background: #33B561; }
     .btn.btn-green:hover, .btn.btn-green:active, .btn.btn-green:focus {
-      background: #16de84; }
+      background: #4ecd7a; }
   .btn.btn-transparent {
     background: transparent;
     color: #0695d6;
@@ -2568,6 +2568,8 @@ div#background-container {
       margin: 10px 0 0 0;
       border-top: solid 1px #cccccc;
       text-align: center; }
+      #edit-resources-container #edit-resources .resource-actions .btn {
+        padding: 12px; }
     #edit-resources-container #edit-resources .form-actions {
       padding: 50px 0 0 0;
       margin: 10px 0 0 0;
@@ -2575,6 +2577,7 @@ div#background-container {
       text-transform: uppercase;
       border-top: solid 1px #cccccc; }
       #edit-resources-container #edit-resources .form-actions .btn {
+        padding: 12px;
         float: none !important; }
         #edit-resources-container #edit-resources .form-actions .btn.save {
           background: #0695d6; }
@@ -2585,10 +2588,11 @@ div#background-container {
         display: none !important; }
     #edit-resources-container #edit-resources .action-buttons {
       margin: 0 0 10px 0;
-      padding: 0 0 50px 0;
+      padding: 0 0 20px 0;
       border-bottom: solid 1px #cccccc;
       text-align: right; }
       #edit-resources-container #edit-resources .action-buttons .btn {
+        padding: 12px;
         text-transform: uppercase;
         background: #0695d6; }
         #edit-resources-container #edit-resources .action-buttons .btn:hover {
@@ -2842,6 +2846,13 @@ div#background-container {
 #resource-edit a.btn {
   text-transform: uppercase;
   margin-left: 0; }
+#resource-edit a.btn.hover {
+  color: white;
+  background-color: #767676;
+  cursor: pointer; }
+#resource-edit a.btn-remove-url {
+  top: 8px;
+  right: 8px; }
 #resource-edit .icon-cloud-upload,
 #resource-edit .icon-globe {
   display: none; }
@@ -2852,6 +2863,27 @@ div#background-container {
     text-align: right;
     padding: 30px 0;
     border-top: solid 1px #cccccc; }
+  #resource-edit #resource-attributes-form .resource-attributes-group {
+    padding-top: 30px;
+    border-top: solid 1px #cccccc; }
+  #resource-edit #resource-attributes-form .control-full + .resource-attributes-group {
+    padding-top: 0;
+    border-top: none; }
+#resource-edit h2.blue {
+  color: #0695d6;
+  margin: 0 0 10px 0; }
+
+#edit-package #delete-modal .modal-content {
+  -o-box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+#edit-package #delete-modal .modal-body {
+  padding: 50px; }
+  #edit-package #delete-modal .modal-body h1 {
+    margin: 0; }
+  #edit-package #delete-modal .modal-body button {
+    padding: 12px; }
 
 .resource-container {
   padding-right: 0;
