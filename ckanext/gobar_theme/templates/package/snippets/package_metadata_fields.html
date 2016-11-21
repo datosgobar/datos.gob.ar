@@ -4,7 +4,7 @@
     {% set frequencies = h.update_frequencies().items() %}
     {% set selected_freq = h.get_pkg_extra(data, 'updateFrequency') %}
     <div class="control-group hidden-extra-select">
-        <label for="update-freq" class="control-label">*Frecuencia de actualización</label>
+        <label for="update-freq" class="control-label">* Frecuencia de actualización</label>
         <div class="controls">
             <select id="update-freq" name="updateFrequency" type="select">
                 <option {{ 'selected=true' if not selected_freq or selected_freq|length == 0 }} disabled="disabled"></option>
@@ -15,7 +15,7 @@
         </div>
     </div>
 
-    {{ form.input('author', label='*Responsable', id='field-author', value=data.author, error=errors.author, classes=['control-medium']) }}
+    {{ form.input('author', label='* Responsable', id='field-author', value=data.author, error=errors.author, classes=['control-medium']) }}
 
     {{ form.input('author_email', label='E-mail del responsable', id='field-author-email', value=data.author_email, error=errors.author_email, classes=['control-medium']) }}
 

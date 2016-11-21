@@ -146,6 +146,10 @@
         .after-desc {
           margin: 10px 0 0 0;
         }
+        .missing-field {
+          margin-top: 5px;
+          color: $red-300;
+        }
       }
       ol.stages {
         margin: 0 0 50px 0;

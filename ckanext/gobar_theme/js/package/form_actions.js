@@ -101,16 +101,59 @@ $(function () {
         $form.append(hiddenSave);
     }
 
+    function formIsValid() {
+        $('.missing-field').remove();
+        var isValid = true;
+        var errorTemplate = '<div class="missing-field">Completá este dato</div>';
+
+        var title = $('#field-title');
+        if (!title.val().length > 0) {
+            isValid = false;
+            title.after(errorTemplate)
+        }
+
+        var description = $('#field-notes');
+        if (!description.val().length > 0) {
+            isValid = false;
+            description.after(errorTemplate)
+        }
+
+        if (!$('.package-global-group-checkbox:checked').length > 0) {
+            isValid = false;
+            $('.super-groups').append(errorTemplate);
+        }
+
+        var author = $('#field-author');
+        if (!author.val().length > 0) {
+            isValid = false;
+            author.after(errorTemplate);
+        }
+
+        var updateFreq = $('#update-freq');
+        if (!updateFreq.val()) {
+            isValid = false;
+            updateFreq.after(errorTemplate);
+        }
+
+        if (!isValid) {
+            window.scrollTo(0, 0);
+        }
+        return isValid;
+    }
+
     $('form#dataset-edit').submit(function (e) {
         $form = $(this);
-        addGroupValues();
-        addGlobalGroupValues();
-        addHiddenExtras();
-        addDates();
-        return true
+        if (formIsValid()) {
+            addGroupValues();
+            addGlobalGroupValues();
+            addHiddenExtras();
+            addDates();
+            return true
+        }
+        return false
     });
 
-    $('#save-draft').on('click', function() {
+    $('#save-draft').on('click', function () {
         $('#visibility').val('False');
         $form = $('form#dataset-edit');
         addSaveHidden();
@@ -161,4 +204,12 @@ $(function () {
             $('#date-to-minute').val(minutesTo);
         }
     }
+
+    var interval = setInterval(function() {
+        var urlPreview = $('.slug-preview');
+        if (urlPreview.length > 0) {
+            clearInterval(interval);
+            urlPreview.before('<div class="after-desc">Por favor, no superes los 100 caracteres.</div>');
+        }
+    }, 100);
 });

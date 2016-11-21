@@ -1,6 +1,6 @@
 {% import 'macros/form.html' as form %}
 
-{{ form.input_custom('title', id='field-title', label='* Titulo del dataset', placeholder='Ej: Sistema de Contrataciones ELectrónicas (Argentina Compra)', value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target'}, after_desc='Por favor, no superes los 100 caracteres.'              ) }}
+{{ form.input('title', id='field-title', label='* Titulo del dataset', placeholder='Ej: Sistema de Contrataciones ELectrónicas (Argentina Compra)', value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target'}) }}
 
 {% set prefix = h.url_for(controller='package', action='read', id='') %}
 {% set domain = h.url_for(controller='package', action='read', id='', qualified=true) %}
@@ -22,7 +22,7 @@
 {% if show_organizations_selector %}
     {% set existing_org = data.owner_org or data.group_id %}
     <div class="control-group">
-        <label for="field-organizations" class="control-label">*Organización</label>
+        <label for="field-organizations" class="control-label">* Organización</label>
         <div class="controls">
             <select id="field-organizations" name="owner_org" data-module="autocomplete">
                 {% if h.check_config_permission('create_unowned_dataset') %}

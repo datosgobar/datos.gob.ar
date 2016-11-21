@@ -17,10 +17,10 @@
 {% set selected_global_groups = h.json_loads(h.get_pkg_extra(data, 'globalGroups') or '[]') %}
 
 <div class="control-group control-full">
-    <label class="control-label" for="field-groups">*Temas globales</label>
+    <label class="control-label" for="field-groups">* Temas globales</label>
     <p>Estos temas <strong>no se verán en tu portal</strong>. Al elegirlos, <strong>ayudás a que el portal nacional
         datos.gob.ar pueda republicar el dataset con facilidad</strong>.</p>
-    <div class="controls package-groups">
+    <div class="controls package-groups super-groups">
         {% for group in global_groups %}
             <label class="package-group-label" for="{{ group.id }}">
                 <input type="checkbox" class="package-global-group-checkbox"
