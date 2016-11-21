@@ -1,6 +1,6 @@
 {% import 'macros/form.html' as form %}
 {% set tag_attrs = {'data-module': 'autocomplete', 'data-module-tags': '', 'data-module-source': '/api/2/util/tag/autocomplete?incomplete=?'} %}
-{{ form.input('tag_string', id='field-tags', label=_('Tags'), placeholder='Ej: Compras, Gastos, Presupuesto.', value=data.tag_string, error=errors.tags, classes=['control-full'], attrs=tag_attrs) }}
+{{ form.input('tag_string', id='field-tags', label=_('Tags'), placeholder='Ej: Compras, Gastos, Presupuesto.', value=data.tag_string, error=errors.tags, classes=['control-full'], attrs=tag_attrs, after_desc='Son las palabras que ayudan a los usuarios a encontrar los datasets. Usá palabras generales.') }}
 
 <div class="control-group">
     {% set error = errors.license_id %}

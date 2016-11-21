@@ -21,11 +21,11 @@
 
     {% block basic_fields %}
         {% block basic_fields_name %}
-            {{ form.input('name', id='field-name', label='Título del recurso', placeholder='Ej: Solicitudes de Acceso a la Información Pública de 2015.', value=data.name, error=errors.name, classes=['control-full']) }}
+            {{ form.input_custom('name', id='field-name', label='Título del recurso', placeholder='Ej: Solicitudes de Acceso a la Información Pública de 2015.', value=data.name, error=errors.name, classes=['control-full'], after_desc='Por favor, no superes los 150 caracteres.') }}
         {% endblock %}
 
         {% block basic_fields_description %}
-            {{ form.markdown('description', id='field-description', label='Descripción del recurso', placeholder='Ej: Detalle de los pedidos de información hechos al Estado en 2015.', value=data.description, error=errors.description) }}
+            {{ form.markdown_custom('description', id='field-description', label='Descripción del recurso', placeholder='Ej: Detalle de los pedidos de información hechos al Estado en 2015.', value=data.description, error=errors.description, after_desc='Por favor, no superes los 200 caracteres.') }}
         {% endblock %}
 
         {% block basic_fields_url %}

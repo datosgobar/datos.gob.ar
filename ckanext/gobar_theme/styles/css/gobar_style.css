@@ -2767,7 +2767,7 @@ div#background-container {
         #edit-package-container #edit-package form .control-group .control-required, #edit-package-container #new-package form .control-group .control-required, #new-package-container #edit-package form .control-group .control-required, #new-package-container #new-package form .control-group .control-required {
           color: inherit; }
         #edit-package-container #edit-package form .control-group .slug-preview, #edit-package-container #new-package form .control-group .slug-preview, #new-package-container #edit-package form .control-group .slug-preview, #new-package-container #new-package form .control-group .slug-preview {
-          margin: 10px 0 0 0; }
+          margin: 30px 0 0 0; }
           #edit-package-container #edit-package form .control-group .slug-preview .btn-mini, #edit-package-container #new-package form .control-group .slug-preview .btn-mini, #new-package-container #edit-package form .control-group .slug-preview .btn-mini, #new-package-container #new-package form .control-group .slug-preview .btn-mini {
             background: none;
             display: inline;
@@ -2804,6 +2804,8 @@ div#background-container {
           #new-package-container #edit-package form .control-group .date-picker .hour-picker-to select, #new-package-container #new-package form .control-group .date-picker .hour-picker-from select,
           #new-package-container #new-package form .control-group .date-picker .hour-picker-to select {
             width: 4em; }
+        #edit-package-container #edit-package form .control-group .after-desc, #edit-package-container #new-package form .control-group .after-desc, #new-package-container #edit-package form .control-group .after-desc, #new-package-container #new-package form .control-group .after-desc {
+          margin: 10px 0 0 0; }
       #edit-package-container #edit-package form ol.stages, #edit-package-container #new-package form ol.stages, #new-package-container #edit-package form ol.stages, #new-package-container #new-package form ol.stages {
         margin: 0 0 50px 0;
         background: #cccccc; }

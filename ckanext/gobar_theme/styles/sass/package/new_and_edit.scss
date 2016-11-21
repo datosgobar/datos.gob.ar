@@ -97,7 +97,7 @@
           color: inherit;
         }
         .slug-preview {
-          margin: 10px 0 0 0;
+          margin: 30px 0 0 0;
           .btn-mini {
             background: none;
             display: inline;
@@ -141,6 +141,10 @@
             }
           }
 
+        }
+
+        .after-desc {
+          margin: 10px 0 0 0;
         }
       }
       ol.stages {

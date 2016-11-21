@@ -1,6 +1,6 @@
 {% import 'macros/form.html' as form %}
 
-{{ form.input('title', id='field-title', label='* Titulo del dataset', placeholder='Ej: Sistema de Contrataciones ELectrónicas (Argentina Compra)', value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target'}) }}
+{{ form.input_custom('title', id='field-title', label='* Titulo del dataset', placeholder='Ej: Sistema de Contrataciones ELectrónicas (Argentina Compra)', value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target'}, after_desc='Por favor, no superes los 100 caracteres.'              ) }}
 
 {% set prefix = h.url_for(controller='package', action='read', id='') %}
 {% set domain = h.url_for(controller='package', action='read', id='', qualified=true) %}
@@ -9,7 +9,7 @@
 
 {{ form.prepend('name', id='field-name', label=_('URL'), prepend=prefix, placeholder=_('eg. my-dataset'), value=data.name, error=errors.name, attrs=attrs, is_required=true) }}
 
-{{ form.markdown('notes', id='field-notes', label='* Descripción del dataset', placeholder='Ej: Datos correspondientes al Sistema de Contrataciones Electrónicas (Argentina Compra), incluyendo las contrataciones de bienes y servicios, el Sistema de Información de Proveedores (SIPRO) y el Catálogo de Bienes y Servicios (SIByS).', value=data.notes, error=errors.notes) }}
+{{ form.markdown_custom('notes', id='field-notes', label='* Descripción del dataset', placeholder='Ej: Datos correspondientes al Sistema de Contrataciones Electrónicas (Argentina Compra), incluyendo las contrataciones de bienes y servicios, el Sistema de Información de Proveedores (SIPRO) y el Catálogo de Bienes y Servicios (SIByS).', value=data.notes, error=errors.notes, after_desc='Por favor, no superes los 500 caracteres.') }}
 
 {# if we have a default group then this wants remembering #}
 {% if data.group_id %}
