@@ -29,7 +29,7 @@ La instalación del paquete completo se encuentra disponible como un contenedor 
 Para una instalacion de CKAN con Servidor WA separado del server de DB bajo RHEL7/CentOS6.3, seguir [este doc](./docs/install_ckan_rhel_centos.md).
 * Para instalar ésta extensión y sus dependencias, seguir [este doc](./docs/03_instalacion_tema_visual.md)
 
-# Uso de la extensión
+# Uso del theme
 
 ## Guía de uso
 
