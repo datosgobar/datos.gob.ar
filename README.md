@@ -1,6 +1,6 @@
 # distribuible.datos.gob.ar
 
-Repositorio de la extensión de [CKAN](http://ckan.org/) para el del Portal de Datos Distribuible de la República Argentina.
+Repositorio de la extensión de [CKAN](http://ckan.org/) para el del Portal Andino de la República Argentina.
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -21,13 +21,13 @@ Repositorio de la extensión de [CKAN](http://ckan.org/) para el del Portal de D
 
 ## Opción 1: instalación bajo DOCKER del Portal Andino
 
-La instalación del paquete completo se encuentra disponible como un contenedor de docker. Seguir las instrucciones del repositorio del [Portal Andino](https://github.com/datosgobar/portal-andino) para levantar la instancia con docker.
+La instalación del paquete completo está disponible como un contenedor de Docker. Seguir las instrucciones del repositorio del [Portal Andino](https://github.com/datosgobar/portal-andino) para levantar la instancia con Docker.
 
 ## Opción 2: instalación bajo una instancia local de CKAN
 
-* Para una instalación tradicional de una instancia local de CKAN bajo debian/ubuntu, seguir [este doc](./docs/01_instalacion_dev.md).
+* Para una instalación tradicional de una instancia local de CKAN bajo Debian/Ubuntu, seguir [este doc](./docs/01_instalacion_dev.md).
 Para una instalacion de CKAN con Servidor WA separado del server de DB bajo RHEL7/CentOS6.3, seguir [este doc](./docs/install_ckan_rhel_centos.md).
-* Para instalar ésta extensión y sus dependencias, seguir [este doc](./docs/03_instalacion_tema_visual.md)
+* Para instalar esta extensión y sus dependencias, seguir [este doc](./docs/03_instalacion_tema_visual.md)
 
 # Uso del theme
 
@@ -35,7 +35,7 @@ Para una instalacion de CKAN con Servidor WA separado del server de DB bajo RHEL
 
 Está disponible una [guía de uso](./docs/guia_uso_abrear.md) dentro de la documentación de este repositorio.
 
-# Creditos
+# Créditos
 
 Este repositorio es un fork de la extensión de CKAN de [datos.gob.ar](https://github.com/datosgobar/datos.gob.ar)
 
