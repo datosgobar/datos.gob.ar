@@ -42,6 +42,6 @@ Este repositorio es un fork de la extensión de CKAN de [datos.gob.ar](https://g
 ## Contacto
 
 <!-- TEXTO FIJO - NO MODIFICAR -->
-Te invitamos a [crearnos un issue](https://github.com/datosgobar/MODIFICAR POR NOMBRE DEL REPO/issues/new?title=Encontre un bug en nombre-del-repo) en caso de que encuentres algún bug o tengas feedback de alguna parte de `nombre-del-repo`.
+Te invitamos a [crearnos un issue](https://github.com/datosgobar/MODIFICAR POR NOMBRE DEL REPO/issues/new?title=Encontre un bug en nombre-del-repo) en caso de que encuentres algún bug o tengas feedback de alguna parte de `portal-andino-theme`.
 
 Para todo lo demás, podés mandarnos tu comentario o consulta a [datos@modernizacion.gob.ar](mailto:datos@modernizacion.gob.ar).
