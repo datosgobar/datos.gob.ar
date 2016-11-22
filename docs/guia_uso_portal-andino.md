@@ -1,5 +1,5 @@
 ![alt text](assets/header-readme-01.png "Header")
-# Guía de uso AbreAr
+# Guía de uso Portal Andino
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -45,7 +45,7 @@ Para poder entrar y salir de tu portal, **es necesario que tu administrador haya
 
 **¿Y si olvidé mi contraseña?**
 
-Por el momento, tanto la creación del usuario y la contraseña, como la recuperación de esta última sólo podrá hacerla quien se haya encargado de instalarte AbreAr. 
+Por el momento, tanto la creación del usuario y la contraseña, como la recuperación de esta última sólo podrá hacerla quien se haya encargado de instalarte Andino. 
 
 ***
 
