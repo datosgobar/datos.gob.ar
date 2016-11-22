@@ -12,35 +12,36 @@ Repositorio de la extensión de [CKAN](http://ckan.org/) para el del Portal Andi
   - [Opción 2: instalación bajo una instancia local de CKAN](#opci%C3%B3n-2-instalaci%C3%B3n-bajo-una-instancia-local-de-ckan)
 - [Uso de la extensión](#uso-de-la-extensi%C3%B3n)
   - [Guía de uso](#gu%C3%ADa-de-uso)
-- [Creditos](#creditos)
+- [Créditos](#créditos)
 - [Contacto](#contacto)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Instalación
+## Instalación
 
-## Opción 1: instalación bajo DOCKER del Portal Andino
+### Opción 1: instalación del Portal Andino bajo Docker
 
 La instalación del paquete completo está disponible como un contenedor de Docker. Seguir las instrucciones del repositorio del [Portal Andino](https://github.com/datosgobar/portal-andino) para levantar la instancia con Docker.
 
-## Opción 2: instalación bajo una instancia local de CKAN
+### Opción 2: instalación bajo una instancia local de CKAN
 
 * Para una instalación tradicional de una instancia local de CKAN bajo Debian/Ubuntu, seguir [este doc](./docs/01_instalacion_dev.md).
 Para una instalacion de CKAN con Servidor WA separado del server de DB bajo RHEL7/CentOS6.3, seguir [este doc](./docs/install_ckan_rhel_centos.md).
 * Para instalar esta extensión y sus dependencias, seguir [este doc](./docs/03_instalacion_tema_visual.md)
 
-# Uso del theme
+## Uso del theme
 
-## Guía de uso
+### Guía de uso
 
 Está disponible una [guía de uso](./docs/guia_uso_abrear.md) dentro de la documentación de este repositorio.
 
-# Créditos
+## Créditos
 
 Este repositorio es un fork de la extensión de CKAN de [datos.gob.ar](https://github.com/datosgobar/datos.gob.ar)
 
-# Contacto
+## Contacto
 
-Cualquier tipo de comentarios o feedback es bienvenido como issue dentro de este repositorio.
+<!-- TEXTO FIJO - NO MODIFICAR -->
+Te invitamos a [crearnos un issue](https://github.com/datosgobar/MODIFICAR POR NOMBRE DEL REPO/issues/new?title=Encontre un bug en nombre-del-repo) en caso de que encuentres algún bug o tengas feedback de alguna parte de `nombre-del-repo`.
 
-Si queres ponerte en contacto con nosotros de forma privada, podés mandar tu mensaje a [datos@modernizacion.gob.ar](mailto:datos@modernizacion.gob.ar)
+Para todo lo demás, podés mandarnos tu comentario o consulta a [datos@modernizacion.gob.ar](mailto:datos@modernizacion.gob.ar).
