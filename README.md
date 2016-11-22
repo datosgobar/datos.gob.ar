@@ -1,4 +1,4 @@
-# distribuible.datos.gob.ar
+# portal-andino-theme
 
 Repositorio de la extensión de [CKAN](http://ckan.org/) para el del Portal Andino de la República Argentina.
 
