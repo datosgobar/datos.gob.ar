@@ -95,6 +95,9 @@ Es importante que tengas bien en claro qué organizaciones dependenden de otras,
 ##### ¿Cómo las creo?
 
 Como la sección Organizaciones con datos es opcional, podés elegir que se vea en tu portal. Para eso, **andá a Configuraciones > Organizaciones con datos** y tildá la habilitación. 
+
+//Imagenx1-Config/exp//
+
 ***
 ### Temas
 
@@ -147,7 +150,7 @@ Todos los datasets que subas al portal se verán **en la sección Datasets**. Ad
 
 Ingresá a tu cuenta y andá a **Página principal > Crear dataset**.
 
-//Imagen de la home. Remarcado botón crear dataset//
+![alt text](assets/portal-andino-crear-dataset.png "crear-dat")
 
 **Siempre podrás editar los dataset** que hayas creado. Para eso, ingresá a tu cuenta > Página principal > Datasets > **Editar dataset**. 
 ***
@@ -170,7 +173,7 @@ Seguí los mismos criterios de escritura que con los datasets.
 
 Ingresá a tu cuenta y andá a Página principal > Crear dataset. Una vez que completes el dataset, podrás agregar recursos. 
 
-//Imagen del botón para ir a crear recurso. Imagen de la vista crear recurso//
+![alt text](assets/portal-andino-asig-recurso.png "crear-recurso")
 
 Al igual que con los datasets, siempre podrás editar los recursos que hayas creado. Para eso, ingresá a tu cuenta > Página principal > Datasets > Editar dataset > Editar recursos. 
 ***
@@ -182,7 +185,7 @@ Son las palabras que ayudan a los usuarios a filtrar y encontrar los datasets. C
 
 En cada dataset específico. 
 
-//Imagen de donde están en la vista de un dataset específico//
+![alt text](assets/portal-andino-asig-tags.png "crear-etiquetas")
 
 ##### Buenas prácticas al crear etiquetas
 
