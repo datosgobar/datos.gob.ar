@@ -37,11 +37,11 @@ Esta guía te ayudará a:
 
 Para poder entrar y salir de tu portal, **es necesario que tu administrador haya creado un usuario y contraseña**. Con esa información, cada vez que quieras entrar al portal, **podrás hacerlo desde http://*tu-url.com*/ingresar**.
 
-![alt text](assets/portal-andino-loginout.png "login-logout")
+![alt text](assets/portal-andino-login.png "login")
 
 **Para salir**, sólo tenés que **hacer clic en el botón en el margen superior derecho**.
 
-[IMAGEN]
+![alt text](assets/portal-andino-logout.png "logout")
 
 **¿Y si olvidé mi contraseña?**
 
