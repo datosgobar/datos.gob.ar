@@ -33,7 +33,7 @@ La instalación del paquete completo está disponible como un contenedor de Dock
 
 ### Guía de uso
 
-Está disponible una [guía de uso](./docs/guia_uso_abrear.md) dentro de la documentación de este repositorio.
+Está disponible una [guía de uso](./docs/guia_uso_portal_andino.md) dentro de la documentación de este repositorio.
 
 ## Créditos
 
