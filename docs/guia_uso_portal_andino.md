@@ -1,4 +1,4 @@
-![alt text](assets/header-readme-01.png "Header")
+![alt text](assets/portal-andino-header.png "Header")
 # Guía de uso Portal Andino
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -37,7 +37,7 @@ Esta guía te ayudará a:
 
 Para poder entrar y salir de tu portal, **es necesario que tu administrador haya creado un usuario y contraseña**. Con esa información, cada vez que quieras entrar al portal, **podrás hacerlo desde http://*tu-url.com*/ingresar**.
 
-[IMAGEN]
+![alt text](assets/portal-andino-loginout.png "login-logout")
 
 **Para salir**, sólo tenés que **hacer clic en el botón en el margen superior derecho**.
 
