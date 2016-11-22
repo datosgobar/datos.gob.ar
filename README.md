@@ -5,7 +5,7 @@ Repositorio de la extensión de [CKAN](http://ckan.org/) para el del Portal Andi
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+**Índice**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [Instalación](#instalaci%C3%B3n)
   - [Opción 1: instalación bajo DOCKER del Portal Andino](#opci%C3%B3n-1-instalaci%C3%B3n-bajo-docker-del-portal-andino)
@@ -25,9 +25,9 @@ La instalación del paquete completo está disponible como un contenedor de Dock
 
 ### Opción 2: instalación bajo una instancia local de CKAN
 
-* Para una instalación tradicional de una instancia local de CKAN bajo Debian/Ubuntu, seguir [este doc](./docs/01_instalacion_dev.md).
-Para una instalacion de CKAN con Servidor WA separado del server de DB bajo RHEL7/CentOS6.3, seguir [este doc](./docs/install_ckan_rhel_centos.md).
-* Para instalar esta extensión y sus dependencias, seguir [este doc](./docs/03_instalacion_tema_visual.md)
+* Podés ver [cómo hacer una instalación tradicional](./docs/01_instalacion_dev.md) de una instancia local de CKAN bajo Debian/Ubuntu.
+* También podés hacer una [instalacion de CKAN con Servidor WA separado del server de DB bajo RHEL7/CentOS6.3] (./docs/install_ckan_rhel_centos.md).
+* Mirá [cómo instalar esta extensión y sus dependencias](./docs/03_instalacion_tema_visual.md).
 
 ## Uso del theme
 
