@@ -182,7 +182,7 @@ Son las palabras que ayudan a los usuarios a filtrar y encontrar los datasets. C
 
 En cada dataset específico. 
 
-![alt text](assets/portal-andino-dat-tags "dat-tags")
+![alt text](assets/portal-andino-dat-tags.png "dat-tags")
 
 ##### Buenas prácticas al crear etiquetas
 
