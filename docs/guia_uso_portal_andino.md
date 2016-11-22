@@ -185,7 +185,7 @@ Son las palabras que ayudan a los usuarios a filtrar y encontrar los datasets. C
 
 En cada dataset específico. 
 
-![alt text](assets/portal-andino-asig-tags.png "crear-etiquetas")
+//Imagen dataset cargado//
 
 ##### Buenas prácticas al crear etiquetas
 
@@ -208,7 +208,7 @@ Estas son algunas preguntas útiles a la hora de pensar las etiquetas:
 
 Al igual que con los Temas, cada vez que generes un nuevo dataset, el formulario te pedirá que asignes un etiqueta. Recordá siempre reutilizar las que ya hayas creado y no repetirlas.  
 
-//Imagen del form con zoom en la parte de etiquetas//
+![alt text](assets/portal-andino-asig-tags.png "crear-etiquetas")
 
 //Imagen tipo portacda. Ver con quien lo implemente tamaños y formatos//
 ***
