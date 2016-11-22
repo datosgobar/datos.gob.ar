@@ -96,7 +96,7 @@ Es importante que tengas bien en claro qué organizaciones dependenden de otras,
 
 Como la sección Organizaciones con datos es opcional, podés elegir que se vea en tu portal. Para eso, **andá a Configuraciones > Organizaciones con datos** y tildá la habilitación. 
 
-//Imagenx1-Config/exp//
+![alt text](assets/portal-andino-sec-org-02.png "sec-op-org")
 
 ***
 ### Temas
