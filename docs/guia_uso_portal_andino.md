@@ -63,7 +63,7 @@ Son los organismos que abren o mantienen cada dataset. **Es muy importante que c
 * Como número agregado, en la Página principal de tu portal, en caso de que hayas elegido la vista que muestra el número de Organizaciones con datos.
 
 
-//Imagen de los 3 casos donde se ve la info//
+//Imagenx3-Agregar//
 
 ##### Buenas prácticas al crear Organizaciones con datos
 
@@ -73,11 +73,12 @@ Tené en cuenta que **siempre que borres una organización, todos los conjuntos 
 
 Andá a **Página principal > Crear Organizaciones**.
 
-//Imagen de la home. Remarcado botón crear organizacioón//
+![alt text](assets/portal-andino-crear-org.png "crear-org")
 
 En caso de que hayas elegido que tu portal tenga una sección de Organizaciones con datos, también se mostrarán allí. 
 
-//Imagen de la sección//
+![alt text](assets/portal-andino-sec-org.png "sec-org")
+
 ***
 ### Sección Organizaciones con datos
 
