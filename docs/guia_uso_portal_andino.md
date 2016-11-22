@@ -125,7 +125,7 @@ Son las categorías en las que se pueden clasificar todos los datasets de tu por
 
 **Cada vez que generes un nuevo dataset**, el formulario te pedirá que asignes temas. Recordá siempre reutilizar los que ya hayas creado y no repetirlos.  
 
-![alt text](assets/portal-andino-form-temas "form-temas")
+![alt text](assets/portal-andino-form-temas.png "form-temas")
 ***
 ### Datasets
 
@@ -135,7 +135,7 @@ También los llamamos “conjuntos de datos”. Son la pieza principal de tu por
 
 Todos los datasets que subas al portal se verán **en la sección Datasets**. Además, **podrás destacar** los que creas más importantes en la Página principal.
 
-![alt text](assets/portal-andino-sec-temas-02 "sec-temas-2")
+![alt text](assets/portal-andino-sec-temas-02.ong "sec-temas-2")
 
 ##### Buenas prácticas al crear datasets
 
