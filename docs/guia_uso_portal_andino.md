@@ -62,8 +62,7 @@ Son los organismos que abren o mantienen cada dataset. **Es muy importante que c
 
 * Como número agregado, en la Página principal de tu portal, en caso de que hayas elegido la vista que muestra el número de Organizaciones con datos.
 
-
-//Imagenx3-Agregar//
+![alt text](assets/portal-andino-comoveo-org.png "comoveo-org")
 
 ##### Buenas prácticas al crear Organizaciones con datos
 
@@ -112,11 +111,9 @@ Son las categorías en las que se pueden clasificar todos los datasets de tu por
 
 * En la Página principal de tu catálogo de datos. 
 
-//Imagen de la home con temas ya cargados//
-
 * También como detalle de cada dataset específico.
 
-//Imagen de la sec dataset y en un dataset en particular//
+![alt text](assets/portal-andino-sec-temas.png "sec-temas")
 
 ##### Buenas prácticas al crear Temas específicos
 
@@ -128,7 +125,7 @@ Son las categorías en las que se pueden clasificar todos los datasets de tu por
 
 **Cada vez que generes un nuevo dataset**, el formulario te pedirá que asignes temas. Recordá siempre reutilizar los que ya hayas creado y no repetirlos.  
 
-//Imagen del form con zoom en la parte de temas//
+![alt text](assets/portal-andino-form-temas.png "form-temas")
 ***
 ### Datasets
 
@@ -138,7 +135,7 @@ También los llamamos “conjuntos de datos”. Son la pieza principal de tu por
 
 Todos los datasets que subas al portal se verán **en la sección Datasets**. Además, **podrás destacar** los que creas más importantes en la Página principal.
 
-//Imagen de la home. Remarcada sección dataset + recorte/zoom de cómo se verán los datasets destacados//
+![alt text](assets/portal-andino-sec-temas-02.png "sec-temas-2")
 
 ##### Buenas prácticas al crear datasets
 
@@ -185,7 +182,7 @@ Son las palabras que ayudan a los usuarios a filtrar y encontrar los datasets. C
 
 En cada dataset específico. 
 
-//Imagen dataset cargado//
+![alt text](assets/portal-andino-dat-tags.png "dat-tags")
 
 ##### Buenas prácticas al crear etiquetas
 
@@ -210,7 +207,7 @@ Al igual que con los Temas, cada vez que generes un nuevo dataset, el formulario
 
 ![alt text](assets/portal-andino-asig-tags.png "crear-etiquetas")
 
-//Imagen tipo portacda. Ver con quien lo implemente tamaños y formatos//
+//Imagen tipo portada. Ver con quien lo implemente tamaños y formatos//
 ***
 ### Personalizar el portal
 
