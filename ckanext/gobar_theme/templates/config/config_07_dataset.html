@@ -1,0 +1,18 @@
+{% extends "config/config_base.html" %}
+
+{% block config %}
+    <h1>Datasets</h1>
+
+    <form method="post" action="" data-module="basic-form">
+        <h2>Descripción</h2>
+
+        {% set description = h.get_theme_config('dataset.description') %}
+        <textarea id="dataset-description" name="dataset-description" title="Descripción de los datasets"
+                  placeholder="Contá que son los datasets de tu portal. Aprovechá y contá qué son los datos abiertos, e invitar a tus usuarios a que los usen, los modifiquen y los compartan. Por favor, hacelo en no mas de tres líneas."
+        >{{- description if description else '' -}}</textarea>
+
+        <div class="submit-container">
+            <button class="submit-button" type="submit" name="save">GUARDAR</button>
+        </div>
+    </form>
+{% endblock %}

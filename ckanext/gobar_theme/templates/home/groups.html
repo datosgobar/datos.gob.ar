@@ -1,8 +1,9 @@
 <div class="featured-groups container-fluid">
     <div class="restricted-max-width">
         <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <!-- TODO: cuando no se muestran imagenes: mostrar igual que un boton y en disable con opacity en 0.65 -->
             {% set dataset_url = h.url_for(controller='package', action='search') %}
-
+            {% set group_imgs = h.get_theme_config('groups.imgs') %}
             {%- for group in c.groups -%}
                 {%- set can_update = h.check_access('group_update', {'id': c.group_dict.id}) -%}
                 <div class="group-container col-xs-12 col-sm-4 col-md-3 invisible {{ 'with-edit-button' if can_update else '' }}">
@@ -17,9 +18,11 @@
                     {% if group.package_count > 0 %}
                         <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
                     {% endif %}
-                    <div class="group {{ group_class }}">
+                    <div class="group {{ group_class }} {{ group_imgs if group_imgs else '' }}">
                         <div class="group-text">
-                            <img src="{{ group.image_display_url }}" data-replace="svg">
+                            {% if group_imgs == 'show-icons' and group.image_display_url|length > 0 %}
+                                <img src="{{ group.image_display_url }}" data-replace="svg">
+                            {% endif %}
 
                             <div class="group-table">
                                 <div class="group-cell">

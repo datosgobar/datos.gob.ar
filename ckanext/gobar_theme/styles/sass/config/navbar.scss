@@ -1,0 +1,52 @@
+#template-config #navbar {
+  background: $grey-100;
+  height: 100%;
+  padding: 50px 0;
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+
+  h2 {
+    font-size: 18px;
+    color: $blue-300;
+    margin: 0 0 10px 0;
+    font-weight: 400;
+    padding: 0 20px;
+  }
+
+  .links-section {
+    border-bottom: solid 1px $grey-200;
+    margin-bottom: 10px;
+
+    a.section-link {
+      display: block;
+      padding: 10px 20px;
+      color: $grey-300;
+
+      &:hover, &.active {
+        cursor: pointer;
+        background: $grey-150;
+        color: $blue-300;
+      }
+    }
+
+    &.guide-link {
+      padding: 60px 20px 10px 20px;
+      color: $grey-300;
+      i {
+        color: $blue-300;
+        font-size: 18px;
+      }
+      .blue {
+        color: $blue-300;
+      }
+      a {
+        color: inherit;
+        &:hover {
+          i, .blue {
+            color: $blue-200;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,9 @@
 /* Extiende ../home/title */
 
 #title.organization-title {
-  padding-bottom: 40px;
+  .background-overlay {
+    padding-bottom: 40px;
+  }
 
   #title-container {
     h1 {
@@ -12,6 +14,14 @@
     }
     .description {
       margin: 0;
+      .edit-description-link svg.edit-svg {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        path {
+          fill: white;
+        }
+      }
     }
   }
   #stats {

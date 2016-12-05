@@ -63,6 +63,15 @@
               font-weight: 500;
               margin: 0 0 5px 5px;
               @include labelsFormatColors();
+              overflow: hidden;
+              text-overflow: ellipsis;
+
+              &.group {
+                width: auto;
+                max-width: 100%;
+                background: $grey-300;
+                font-weight: 400;
+              }
             }
           }
         }

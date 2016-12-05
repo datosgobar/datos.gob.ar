@@ -31,6 +31,18 @@
   .add-dataset {
     text-align: right;
     margin-top: 20px;
+    a {
+      display: inline-block;
+      color: white;
+      border: none;
+      padding: 12px;
+      @include border-radius(4px);
+      background-color: $blue-300;
+      margin-left: 10px;
+      &:hover {
+        background-color: $blue-200;
+      }
+    }
   }
 
   .search-and-order {

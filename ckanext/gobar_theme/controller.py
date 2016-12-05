@@ -1,5 +1,7 @@
 from ckan.controllers.home import HomeController
 from ckan.controllers.api import ApiController
+from ckan.controllers.user import UserController
+import ckan.lib.helpers as h
 from ckan.common import c
 import ckan.logic as logic
 import ckan.model as model
@@ -38,7 +40,7 @@ class GobArHomeController(HomeController):
             featured_packages = []
             for result in results:
                 for extra_pair in result['extras']:
-                    if extra_pair['key'] == 'home_featured':
+                    if extra_pair['key'] == 'home_featured' and extra_pair['value'] == 'true':
                         featured_packages.append(result)
 
             segmented_packages = [featured_packages[n:n + 2] for n in range(len(featured_packages))[::2]]
@@ -84,3 +86,11 @@ class GobArApiController(ApiController):
         if logic_function == 'datastore_search':
             default_response = self._remove_extra_id_field(default_response)
         return default_response
+
+
+class GobArUserController(UserController):
+
+    def read(self, id=None):
+        if id and id == c.user:
+            return super(GobArUserController, self).read(id)
+        return h.redirect_to('home')

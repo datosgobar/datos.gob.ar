@@ -1,0 +1,62 @@
+{% extends "config/config_base.html" %}
+
+{% block config %}
+
+    <h1>Formato de la portada</h1>
+
+    <form method="post" action="" data-module="basic-form">
+        <h2 class="blue">¿Cómo te gustaría que se vea tu portada?</h2>
+        <p class="with-bottom-margin">Podés elegir la alineación del título y la descripción, y mostrar (o no) la cantidad de datasets u organizaciones con datos.</p>
+
+        {% set selected_option = h.get_theme_config('home.title-template') %}
+        {% set something_selected = selected_option and selected_option|length > 0 %}
+
+        <div class="container-fluid radio-container">
+            <label class="img-radio col-xs-12 col-md-6">
+                <div class="radio-box {{ (selected_option == 'portada1' and 'selected') or (something_selected and 'not-selected') or '' }}">
+                    <img src="/img/config/portada1.svg" class="logo-ministerio">
+                    <div class="radio-description">
+                        Mostrar cantidad de datasets y alinear a la izquierda
+                    </div>
+                    <input value="portada1" type="radio" name="title-template" {{ 'checked="checked"' if selected_option == 'portada1' }}>
+                </div>
+            </label>
+
+            <label class="img-radio col-xs-12 col-md-6">
+                <div class="radio-box {{ (selected_option == 'portada3' and 'selected') or (something_selected and 'not-selected') or '' }}">
+                    <img src="/img/config/portada3.svg" class="logo-ministerio">
+                    <div class="radio-description">
+                        Mostrar cantidad de datasets y organizaciones con datos. Y alinear a la izquierda.
+                    </div>
+                    <input value="portada3" type="radio" name="title-template" {{ 'checked="checked"' if selected_option == 'portada3' }}>
+                </div>
+            </label>
+
+            <label class="img-radio col-xs-12 col-md-6">
+                <div class="radio-box {{ (selected_option == 'portada2' and 'selected') or (something_selected and 'not-selected') or '' }}">
+                    <img src="/img/config/portada2.svg" class="logo-ministerio">
+                    <div class="radio-description">
+                        Sólo centrar título y descripción del portal.
+                    </div>
+                    <input value="portada2" type="radio" name="title-template" {{ 'checked="checked"' if selected_option == 'portada2' }}>
+                </div>
+            </label>
+
+            <label class="img-radio col-xs-12 col-md-6">
+                <div class="radio-box {{ (selected_option == 'portada4' and 'selected') or (something_selected and 'not-selected') or '' }}">
+                    <img src="/img/config/portada4.svg" class="logo-ministerio">
+                    <div class="radio-description">
+                        Mostrar cantidad de datasets, organizaciones con datos y temas. Y centrar
+                    </div>
+                    <input value="portada4" type="radio" name="title-template" {{ 'checked="checked"' if selected_option == 'portada4' }}>
+                </div>
+            </label>
+        </div>
+
+
+        <div class="submit-container">
+            <button class="submit-button" type="submit" name="save">GUARDAR</button>
+        </div>
+    </form>
+
+{% endblock %}

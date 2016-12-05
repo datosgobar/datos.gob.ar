@@ -1,0 +1,99 @@
+{% import 'macros/form.html' as form %}
+
+{% set data = data or {} %}
+{% set errors = errors or {} %}
+{% set action = form_action or h.url_for(controller='package', action='new_resource', id=pkg_name) %}
+
+<form id="resource-edit" class="dataset-form dataset-resource-form form-horizontal" method="post" action="{{ action }}"
+      data-module="basic-form resource-form" enctype="multipart/form-data">
+    {% block stages %}
+        {# An empty stages variable will not show the stages #}
+        {% if stage %}
+            {{ h.snippet('package/snippets/stages.html', stages=stage, pkg_name=pkg_name) }}
+        {% endif %}
+    {% endblock %}
+
+    {% snippet'package/snippets/resource_nav.html', current='edit' %}
+
+    {% block errors %}{{ form.errors(error_summary) }}{% endblock %}
+
+    <input name="id" value="{{ data.id }}" type="hidden"/>
+
+    {% block basic_fields %}
+        {% block basic_fields_name %}
+            {{ form.input_custom('name', id='field-name', label='Título del recurso', placeholder='Ej: Solicitudes de Acceso a la Información Pública de 2015.', value=data.name, error=errors.name, classes=['control-full'], after_desc='Por favor, no superes los 150 caracteres.') }}
+        {% endblock %}
+
+        {% block basic_fields_description %}
+            {{ form.markdown_custom('description', id='field-description', label='Descripción del recurso', placeholder='Ej: Detalle de los pedidos de información hechos al Estado en 2015.', value=data.description, error=errors.description, after_desc='Por favor, no superes los 200 caracteres.') }}
+        {% endblock %}
+
+        {% block basic_fields_url %}
+            {% set is_upload = (data.url_type == 'upload') %}
+            {{ form.image_upload(data, errors, field_url='url', field_upload='upload', field_clear='clear_upload',
+         is_upload_enabled=h.uploads_enabled(), is_url=data.url and not is_upload, is_upload=is_upload,
+         upload_label=_('File'), url_label=_('URL')) }}
+        {% endblock %}
+
+        {% block basic_fields_format %}
+            {% set format_attrs = {'data-module': 'autocomplete', 'data-module-source': '/api/2/util/resource/format_autocomplete?incomplete=?'} %}
+            {{ form.input('format', id='field-format', label=_('Format'), placeholder='Ej.: CSV, XML o JSON.', value=data.format, error=errors.format, classes=['control-medium'], attrs=format_attrs) }}
+        {% endblock %}
+    {% endblock basic_fields %}
+
+    {% snippet 'package/snippets/resource_form_license.html', data=data %}
+
+    {% snippet 'package/snippets/resource_form_attributes.html', data=data %}
+
+    <div class="form-actions">
+        {% block see_all_resources_button %}{% endblock %}
+        {% block delete_button %}
+            {% if data.id %}
+                {% if h.check_access('resource_delete', {'id': data.id}) %}
+                    <button type="button" class="btn btn-red" id="confirm-delete">
+                        BORRAR RECURSO
+                    </button>
+                {% endif %}
+            {% endif %}
+        {% endblock %}
+        {% if stage %}
+            {% block previous_button %}
+            {% endblock %}
+            {% block again_button %}
+                <button class="btn btn-blue" name="save" value="again" type="submit">SEGUIR Y AGREGAR RECURSOS</button>
+            {% endblock %}
+            {% block save_button %}
+                <button class="btn btn-green" name="save" value="go-metadata" type="submit">
+                    {% block save_button_text %}PUBLICAR{% endblock %}</button>
+            {% endblock %}
+        {% else %}
+            {% block add_button %}
+                <button class="btn btn-green" name="save" value="go-dataset-complete" type="submit">
+                    GUARDAR NUEVO RECURSO
+                </button>
+            {% endblock %}
+        {% endif %}
+    </div>
+</form>
+
+<div id="delete-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h1>¿Estás seguro de que querés borrar este recurso?</h1>
+                <div class="modal-actions">
+                    <form id="resource-confirm-delete-form"
+                          action="{% url_for controller='package', action='resource_delete', resource_id=data.id, id=pkg_name %}"
+                          method="post">
+                        <button class="btn btn-blue" type="submit" name="delete">SI, BORRAR RECURSO</button>
+                        <button id="dismiss-greetings" type="button" class="btn btn-blue" data-dismiss="modal">
+                            NO, NO BORRAR
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% resource 'gobar_js/forms/confirm_delete.js' %}

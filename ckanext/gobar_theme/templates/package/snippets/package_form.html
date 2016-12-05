@@ -1,0 +1,71 @@
+{% import 'macros/form.html' as form %}
+{% set action = c.form_action or '' %}
+
+<form id="dataset-edit" class="dataset-form form-horizontal" method="post" action="{{ action }}"
+      data-module="basic-form">
+    {% block stages %}
+        {{ h.snippet('package/snippets/stages.html', stages=stage) }}
+    {% endblock %}
+
+    <input type="hidden" name="_ckan_phase" value="dataset_new_1"/>
+    {# pkg_name used in 3 stage edit #}
+    <input type="hidden" name="pkg_name" value="{{ data.id }}"/>
+    {% block errors %}{{ form.errors(error_summary) }}{% endblock %}
+
+    {% snippet 'package/snippets/package_basic_fields.html', data=data, errors=errors, licenses=c.licenses, groups_available=c.groups_available %}
+
+    {% snippet "package/snippets/package_edit_global_groups.html", data=data, remaining_groups=groups_available %}
+
+    {% snippet "package/snippets/package_edit_groups.html", selected_groups=data.groups, remaining_groups=groups_available %}
+
+    {% snippet 'package/snippets/package_secondary_fields.html', data=data, errors=errors, licenses=c.licenses, groups_available=c.groups_available %}
+
+    {% snippet 'package/snippets/package_metadata_fields.html', data=data, errors=errors %}
+
+    <div class="form-actions">
+        {% block delete_button %}
+            {% if h.check_access('package_delete', {'id': data.id}) and not data.state == 'deleted' %}
+                <button type="button" class="btn btn-red" id="confirm-delete">
+                    BORRAR DATASET
+                </button>
+            {% endif %}
+        {% endblock %}
+        {% block save_draft %}
+            <button class="btn btn-transparent" type="submit" name="save" value="save-draft">
+                GUARDAR BORRADOR
+            </button>
+        {% endblock %}
+        {% block save_button %}
+            <button class="btn btn-blue" type="submit" name="save">
+                {% block save_button_text -%}
+                    CONTINUAR Y AGREGAR RECURSOS
+                {%- endblock %}
+            </button>
+        {% endblock %}
+        {% block see_resources %}{% endblock %}
+    </div>
+</form>
+
+<div id="delete-modal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h1>¿Estás seguro de que querés borrar el dataset?</h1>
+                <div class="modal-actions">
+                    <form id="package-confirm-delete-form" method="post"
+                          action="{% url_for controller='package', action='delete', id=data.id %}">
+                        <button class="btn btn-blue" type="submit" name="delete">
+                            SI, BORRAR DATASET
+                        </button>
+                        <button id="dismiss-greetings" type="button" class="btn btn-blue" data-dismiss="modal">
+                            NO, NO BORRAR
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% resource 'gobar_js/package/form_actions.js' %}
+{% resource 'gobar_js/forms/confirm_delete.js' %}

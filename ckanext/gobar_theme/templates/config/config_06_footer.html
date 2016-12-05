@@ -1,0 +1,29 @@
+{% extends "config/config_base.html" %}
+
+{% block config %}
+
+    <h1>Logo en el pie de página</h1>
+
+    <form id="title-config" method="post" action="" data-module="basic-form" accept-charset="utf-8" enctype="multipart/form-data">
+        {% set image = h.get_theme_config('footer.image') %}
+        <div class="file-upload-container {{ 'with-image' if image else '' }}">
+            <i class="icon-remove-sign" aria-hidden="true"></i>
+            <input type="text" disabled placeholder="Subí tu archivo" id="filename" class="filename-input" value="{{ image if image else '' }}">
+            <input type="file" id="background-image" name="background-image">
+            <input type="hidden" name="image-logic" id="image-logic" value="">
+            <label for="background-image">
+                <span class="upload-file-button">ELEGIR</span>
+            </label>
+            <p>*Por favor, elegí formato .SVG o .PNG</p>
+        </div>
+
+        <h2>URL</h2>
+        {% set url = h.get_theme_config('footer.url') %}
+        <input name="url" type="text" title="URL" id="url" value="{{ url if url else '' }}">
+
+        <div class="submit-container">
+            <button class="submit-button" type="submit" name="save">GUARDAR</button>
+        </div>
+    </form>
+
+{% endblock %}

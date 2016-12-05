@@ -1,0 +1,45 @@
+{% extends "config/config_base.html" %}
+
+{% block config %}
+    <h1 class="small-margin">Metadatos</h1>
+
+    <form method="post" action="" data-module="basic-form" accept-charset="utf-8" enctype="multipart/form-data">
+        <p>Esta información te permite definir <strong>el título, la descripción y la imagen que se muestran en FB y Twitter
+            cuando compartís un link de tu portal.</strong> Además, es muy útil porque también es la manera en la que Google
+            muestra tu sitio en sus resultados. Por favor, completalo.</p>
+
+        <h1>Twitter</h1>
+
+        <h2>Tu usuario de Twitter</h2>
+        {% set user = h.get_theme_config('tw-metadata.user') %}
+        <input name="metadata-user" type="text" title="Usuario de Twitter" placeholder="Usuario de Twitter" value="{{ user if user else '' }}">
+
+        <h2>Titulo de tu portal</h2>
+        <p>Escribí como máximo 67 caracteres para que no se vea cortado.</p>
+        {% set title = h.get_theme_config('tw-metadata.title') %}
+        <input name="metadata-title" type="text" title="Título" placeholder="Título" value="{{ title if title else '' }}">
+
+        <h2>Descripción de tu portal</h2>
+        <p>Escribí como máximo 155 caracteres para que no se vea cortado.</p>
+        {% set description = h.get_theme_config('tw-metadata.description') %}
+        <input name="metadata-description" type="text" title="Descripción" placeholder="Descripción" value="{{ description if description else '' }}">
+
+        <h2>Imagen de tu portal</h2>
+        <p>Podés poner, por ejemplo, una captura de pantalla del nombre de tu portal.</p>
+        {% set image = h.get_theme_config('tw-metadata.image') %}
+        <div class="file-upload-container {{ 'with-image' if image else '' }}">
+            <i class="icon-remove-sign" aria-hidden="true"></i>
+            <input type="text" disabled placeholder="Subí tu archivo" id="filename" class="filename-input" value="{{ image if image else '' }}">
+            <input type="file" id="image" name="image">
+            <input type="hidden" name="image-logic" id="image-logic" value="">
+            <label for="image">
+                <span class="upload-file-button">ELEGIR</span>
+            </label>
+            <p>*Por favor, elegí formato .JPG, .SVG o .PNG</p>
+        </div>
+
+        <div class="submit-container">
+            <button class="submit-button" type="submit" name="save">GUARDAR</button>
+        </div>
+    </form>
+{% endblock %}

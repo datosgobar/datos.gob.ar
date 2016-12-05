@@ -1,0 +1,27 @@
+.gobar-static-container {
+  display: table-row;
+  height: 100%;
+  @include base-container();
+  .gobar-static {
+    height: 100%;
+    @include base-content();
+    padding: 20px;
+    @include breakpoint-md {
+      padding-top: 30px;
+      padding-bottom: 50px;
+    }
+
+    h2 {
+      color: $blue-300;
+      font-weight: 400;
+      font-size: 50px;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+  }
+
+}

@@ -1,0 +1,18 @@
+{% set stage = stage or 1 %}
+{% set include_metadata = include_metadata or false %}
+
+{% extends resource_form_snippet %}
+
+{% block stages %}{% endblock %}
+
+{% block previous_button %}{% endblock %}
+
+{% block again_button %}{% endblock %}
+
+{% block save_button_text %}GUARDAR CAMBIOS{% endblock %}
+
+
+{% block see_all_resources_button %}
+    {% set pkg = c.pkg_dict or pkg_dict %}
+    {% link_for 'VER TODOS LOS RECURSOS', controller='package', action='resources', id=pkg.name, class_='btn btn-blue' %}
+{% endblock %}

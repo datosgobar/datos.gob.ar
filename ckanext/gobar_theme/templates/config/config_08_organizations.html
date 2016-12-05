@@ -1,0 +1,24 @@
+{% extends "config/config_base.html" %}
+
+{% block config %}
+    <h1>Organizaciones con datos (opcional)</h1>
+
+    <form method="post" action="" data-module="basic-form">
+        <label class="with-bottom-margin checkbox-label">
+            <input type="checkbox"
+                   name="show-organizations" {{ 'checked="checked"' if h.get_theme_config('organization.show-organizations') else '' }}>
+            ¿Querés que esta sección se vea en tu portal?
+        </label>
+
+        <h2>Descripción</h2>
+        {% set description = h.get_theme_config('organization.description') %}
+        <textarea id="organization-description" title="Descripción de las organizaciones"
+                  name="organization-description"
+                  placeholder="Mencioná una breve descripción de las organizaciones responsables de los datasets. Por favor, hacelo en no más de tres líneas."
+        >{{- description if description else '' -}}</textarea>
+
+        <div class="submit-container">
+            <button class="submit-button" type="submit" name="save">GUARDAR</button>
+        </div>
+    </form>
+{% endblock %}

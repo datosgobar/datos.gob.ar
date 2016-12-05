@@ -24,7 +24,8 @@ html, body {
 body {
   background: #fff;
   font-family: 'Roboto', sans-serif !important;
-  font-weight: 400; }
+  font-weight: 400;
+  color: #767676; }
 
 a {
   color: #0695d6;
@@ -50,6 +51,11 @@ div.svg-tooltip {
   max-width: 1440px;
   margin: auto;
   height: 100%; }
+  .restricted-max-width:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both; }
 
 .container, .container-fluid,
 .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5,
@@ -58,8 +64,8 @@ div.svg-tooltip {
 .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5,
 .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12,
 .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
-  padding-left: 20px;
-  padding-right: 20px; }
+  padding-left: 15px;
+  padding-right: 15px; }
 
 /*!
  * animate.css -http://daneden.me/animate
@@ -2275,6 +2281,443 @@ div.svg-tooltip {
   -webkit-animation-name: slideOutUp;
   animation-name: slideOutUp; }
 
+/*!
+ * Datepicker for Bootstrap v1.6.1 (https://github.com/eternicode/bootstrap-datepicker)
+ *
+ * Copyright 2012 Stefan Petre
+ * Improvements by Andrew Rowls
+ * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+ */
+.datepicker {
+  border-radius: 4px;
+  direction: ltr; }
+
+.datepicker-inline {
+  width: 220px; }
+
+.datepicker.datepicker-rtl {
+  direction: rtl; }
+
+.datepicker.datepicker-rtl table tr td span {
+  float: right; }
+
+.datepicker-dropdown {
+  top: 0;
+  left: 0;
+  padding: 4px; }
+
+.datepicker-dropdown:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid rgba(0, 0, 0, 0.15);
+  border-top: 0;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute; }
+
+.datepicker-dropdown:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff;
+  border-top: 0;
+  position: absolute; }
+
+.datepicker-dropdown.datepicker-orient-left:before {
+  left: 6px; }
+
+.datepicker-dropdown.datepicker-orient-left:after {
+  left: 7px; }
+
+.datepicker-dropdown.datepicker-orient-right:before {
+  right: 6px; }
+
+.datepicker-dropdown.datepicker-orient-right:after {
+  right: 7px; }
+
+.datepicker-dropdown.datepicker-orient-bottom:before {
+  top: -7px; }
+
+.datepicker-dropdown.datepicker-orient-bottom:after {
+  top: -6px; }
+
+.datepicker-dropdown.datepicker-orient-top:before {
+  bottom: -7px;
+  border-bottom: 0;
+  border-top: 7px solid rgba(0, 0, 0, 0.15); }
+
+.datepicker-dropdown.datepicker-orient-top:after {
+  bottom: -6px;
+  border-bottom: 0;
+  border-top: 6px solid #fff; }
+
+.datepicker > div {
+  display: none; }
+
+.datepicker table {
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.datepicker table tr td, .datepicker table tr th {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: none; }
+
+.table-striped .datepicker table tr td, .table-striped .datepicker table tr th {
+  background-color: transparent; }
+
+.datepicker table tr td.new, .datepicker table tr td.old {
+  color: #777; }
+
+.datepicker table tr td.day:hover, .datepicker table tr td.focused {
+  background: #eee;
+  cursor: pointer; }
+
+.datepicker table tr td.disabled, .datepicker table tr td.disabled:hover {
+  background: 0 0;
+  color: #777;
+  cursor: default; }
+
+.datepicker table tr td.highlighted {
+  color: #000;
+  background-color: #d9edf7;
+  border-color: #85c5e5;
+  border-radius: 0; }
+
+.datepicker table tr td.highlighted.focus, .datepicker table tr td.highlighted:focus {
+  color: #000;
+  background-color: #afd9ee;
+  border-color: #298fc2; }
+
+.datepicker table tr td.highlighted:hover {
+  color: #000;
+  background-color: #afd9ee;
+  border-color: #52addb; }
+
+.datepicker table tr td.highlighted.active, .datepicker table tr td.highlighted:active {
+  color: #000;
+  background-color: #afd9ee;
+  border-color: #52addb; }
+
+.datepicker table tr td.highlighted.active.focus, .datepicker table tr td.highlighted.active:focus, .datepicker table tr td.highlighted.active:hover, .datepicker table tr td.highlighted:active.focus, .datepicker table tr td.highlighted:active:focus, .datepicker table tr td.highlighted:active:hover {
+  color: #000;
+  background-color: #91cbe8;
+  border-color: #298fc2; }
+
+.datepicker table tr td.highlighted.disabled.focus, .datepicker table tr td.highlighted.disabled:focus, .datepicker table tr td.highlighted.disabled:hover, .datepicker table tr td.highlighted[disabled].focus, .datepicker table tr td.highlighted[disabled]:focus, .datepicker table tr td.highlighted[disabled]:hover, fieldset[disabled] .datepicker table tr td.highlighted.focus, fieldset[disabled] .datepicker table tr td.highlighted:focus, fieldset[disabled] .datepicker table tr td.highlighted:hover {
+  background-color: #d9edf7;
+  border-color: #85c5e5; }
+
+.datepicker table tr td.highlighted.focused {
+  background: #afd9ee; }
+
+.datepicker table tr td.highlighted.disabled, .datepicker table tr td.highlighted.disabled:active {
+  background: #d9edf7;
+  color: #777; }
+
+.datepicker table tr td.today {
+  color: #000;
+  background-color: #ffdb99;
+  border-color: #ffb733; }
+
+.datepicker table tr td.today.focus, .datepicker table tr td.today:focus {
+  color: #000;
+  background-color: #ffc966;
+  border-color: #b37400; }
+
+.datepicker table tr td.today:hover {
+  color: #000;
+  background-color: #ffc966;
+  border-color: #f59e00; }
+
+.datepicker table tr td.today.active, .datepicker table tr td.today:active {
+  color: #000;
+  background-color: #ffc966;
+  border-color: #f59e00; }
+
+.datepicker table tr td.today.active.focus, .datepicker table tr td.today.active:focus, .datepicker table tr td.today.active:hover, .datepicker table tr td.today:active.focus, .datepicker table tr td.today:active:focus, .datepicker table tr td.today:active:hover {
+  color: #000;
+  background-color: #ffbc42;
+  border-color: #b37400; }
+
+.datepicker table tr td.today.disabled.focus, .datepicker table tr td.today.disabled:focus, .datepicker table tr td.today.disabled:hover, .datepicker table tr td.today[disabled].focus, .datepicker table tr td.today[disabled]:focus, .datepicker table tr td.today[disabled]:hover, fieldset[disabled] .datepicker table tr td.today.focus, fieldset[disabled] .datepicker table tr td.today:focus, fieldset[disabled] .datepicker table tr td.today:hover {
+  background-color: #ffdb99;
+  border-color: #ffb733; }
+
+.datepicker table tr td.today.focused {
+  background: #ffc966; }
+
+.datepicker table tr td.today.disabled, .datepicker table tr td.today.disabled:active {
+  background: #ffdb99;
+  color: #777; }
+
+.datepicker table tr td.range {
+  color: #000;
+  background-color: #eee;
+  border-color: #bbb;
+  border-radius: 0; }
+
+.datepicker table tr td.range.focus, .datepicker table tr td.range:focus {
+  color: #000;
+  background-color: #d5d5d5;
+  border-color: #7c7c7c; }
+
+.datepicker table tr td.range:hover {
+  color: #000;
+  background-color: #d5d5d5;
+  border-color: #9d9d9d; }
+
+.datepicker table tr td.range.active, .datepicker table tr td.range:active {
+  color: #000;
+  background-color: #d5d5d5;
+  border-color: #9d9d9d; }
+
+.datepicker table tr td.range.active.focus, .datepicker table tr td.range.active:focus, .datepicker table tr td.range.active:hover, .datepicker table tr td.range:active.focus, .datepicker table tr td.range:active:focus, .datepicker table tr td.range:active:hover {
+  color: #000;
+  background-color: #c3c3c3;
+  border-color: #7c7c7c; }
+
+.datepicker table tr td.range.disabled.focus, .datepicker table tr td.range.disabled:focus, .datepicker table tr td.range.disabled:hover, .datepicker table tr td.range[disabled].focus, .datepicker table tr td.range[disabled]:focus, .datepicker table tr td.range[disabled]:hover, fieldset[disabled] .datepicker table tr td.range.focus, fieldset[disabled] .datepicker table tr td.range:focus, fieldset[disabled] .datepicker table tr td.range:hover {
+  background-color: #eee;
+  border-color: #bbb; }
+
+.datepicker table tr td.range.focused {
+  background: #d5d5d5; }
+
+.datepicker table tr td.range.disabled, .datepicker table tr td.range.disabled:active {
+  background: #eee;
+  color: #777; }
+
+.datepicker table tr td.range.highlighted {
+  color: #000;
+  background-color: #e4eef3;
+  border-color: #9dc1d3; }
+
+.datepicker table tr td.range.highlighted.focus, .datepicker table tr td.range.highlighted:focus {
+  color: #000;
+  background-color: #c1d7e3;
+  border-color: #4b88a6; }
+
+.datepicker table tr td.range.highlighted:hover {
+  color: #000;
+  background-color: #c1d7e3;
+  border-color: #73a6c0; }
+
+.datepicker table tr td.range.highlighted.active, .datepicker table tr td.range.highlighted:active {
+  color: #000;
+  background-color: #c1d7e3;
+  border-color: #73a6c0; }
+
+.datepicker table tr td.range.highlighted.active.focus, .datepicker table tr td.range.highlighted.active:focus, .datepicker table tr td.range.highlighted.active:hover, .datepicker table tr td.range.highlighted:active.focus, .datepicker table tr td.range.highlighted:active:focus, .datepicker table tr td.range.highlighted:active:hover {
+  color: #000;
+  background-color: #a8c8d8;
+  border-color: #4b88a6; }
+
+.datepicker table tr td.range.highlighted.disabled.focus, .datepicker table tr td.range.highlighted.disabled:focus, .datepicker table tr td.range.highlighted.disabled:hover, .datepicker table tr td.range.highlighted[disabled].focus, .datepicker table tr td.range.highlighted[disabled]:focus, .datepicker table tr td.range.highlighted[disabled]:hover, fieldset[disabled] .datepicker table tr td.range.highlighted.focus, fieldset[disabled] .datepicker table tr td.range.highlighted:focus, fieldset[disabled] .datepicker table tr td.range.highlighted:hover {
+  background-color: #e4eef3;
+  border-color: #9dc1d3; }
+
+.datepicker table tr td.range.highlighted.focused {
+  background: #c1d7e3; }
+
+.datepicker table tr td.range.highlighted.disabled, .datepicker table tr td.range.highlighted.disabled:active {
+  background: #e4eef3;
+  color: #777; }
+
+.datepicker table tr td.range.today {
+  color: #000;
+  background-color: #f7ca77;
+  border-color: #f1a417; }
+
+.datepicker table tr td.range.today.focus, .datepicker table tr td.range.today:focus {
+  color: #000;
+  background-color: #f4b747;
+  border-color: #815608; }
+
+.datepicker table tr td.range.today:hover {
+  color: #000;
+  background-color: #f4b747;
+  border-color: #bf800c; }
+
+.datepicker table tr td.range.today.active, .datepicker table tr td.range.today:active {
+  color: #000;
+  background-color: #f4b747;
+  border-color: #bf800c; }
+
+.datepicker table tr td.range.today.active.focus, .datepicker table tr td.range.today.active:focus, .datepicker table tr td.range.today.active:hover, .datepicker table tr td.range.today:active.focus, .datepicker table tr td.range.today:active:focus, .datepicker table tr td.range.today:active:hover {
+  color: #000;
+  background-color: #f2aa25;
+  border-color: #815608; }
+
+.datepicker table tr td.range.today.disabled.focus, .datepicker table tr td.range.today.disabled:focus, .datepicker table tr td.range.today.disabled:hover, .datepicker table tr td.range.today[disabled].focus, .datepicker table tr td.range.today[disabled]:focus, .datepicker table tr td.range.today[disabled]:hover, fieldset[disabled] .datepicker table tr td.range.today.focus, fieldset[disabled] .datepicker table tr td.range.today:focus, fieldset[disabled] .datepicker table tr td.range.today:hover {
+  background-color: #f7ca77;
+  border-color: #f1a417; }
+
+.datepicker table tr td.range.today.disabled, .datepicker table tr td.range.today.disabled:active {
+  background: #f7ca77;
+  color: #777; }
+
+.datepicker table tr td.selected, .datepicker table tr td.selected.highlighted {
+  color: #fff;
+  background-color: #777;
+  border-color: #555;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+.datepicker table tr td.selected.focus, .datepicker table tr td.selected.highlighted.focus, .datepicker table tr td.selected.highlighted:focus, .datepicker table tr td.selected:focus {
+  color: #fff;
+  background-color: #5e5e5e;
+  border-color: #161616; }
+
+.datepicker table tr td.selected.highlighted:hover, .datepicker table tr td.selected:hover {
+  color: #fff;
+  background-color: #5e5e5e;
+  border-color: #373737; }
+
+.datepicker table tr td.selected.active, .datepicker table tr td.selected.highlighted.active, .datepicker table tr td.selected.highlighted:active, .datepicker table tr td.selected:active {
+  color: #fff;
+  background-color: #5e5e5e;
+  border-color: #373737; }
+
+.datepicker table tr td.selected.active.focus, .datepicker table tr td.selected.active:focus, .datepicker table tr td.selected.active:hover, .datepicker table tr td.selected.highlighted.active.focus, .datepicker table tr td.selected.highlighted.active:focus, .datepicker table tr td.selected.highlighted.active:hover, .datepicker table tr td.selected.highlighted:active.focus, .datepicker table tr td.selected.highlighted:active:focus, .datepicker table tr td.selected.highlighted:active:hover, .datepicker table tr td.selected:active.focus, .datepicker table tr td.selected:active:focus, .datepicker table tr td.selected:active:hover {
+  color: #fff;
+  background-color: #4c4c4c;
+  border-color: #161616; }
+
+.datepicker table tr td.selected.disabled.focus, .datepicker table tr td.selected.disabled:focus, .datepicker table tr td.selected.disabled:hover, .datepicker table tr td.selected.highlighted.disabled.focus, .datepicker table tr td.selected.highlighted.disabled:focus, .datepicker table tr td.selected.highlighted.disabled:hover, .datepicker table tr td.selected.highlighted[disabled].focus, .datepicker table tr td.selected.highlighted[disabled]:focus, .datepicker table tr td.selected.highlighted[disabled]:hover, .datepicker table tr td.selected[disabled].focus, .datepicker table tr td.selected[disabled]:focus, .datepicker table tr td.selected[disabled]:hover, fieldset[disabled] .datepicker table tr td.selected.focus, fieldset[disabled] .datepicker table tr td.selected.highlighted.focus, fieldset[disabled] .datepicker table tr td.selected.highlighted:focus, fieldset[disabled] .datepicker table tr td.selected.highlighted:hover, fieldset[disabled] .datepicker table tr td.selected:focus, fieldset[disabled] .datepicker table tr td.selected:hover {
+  background-color: #777;
+  border-color: #555; }
+
+.datepicker table tr td.active, .datepicker table tr td.active.highlighted {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+.datepicker table tr td.active.focus, .datepicker table tr td.active.highlighted.focus, .datepicker table tr td.active.highlighted:focus, .datepicker table tr td.active:focus {
+  color: #fff;
+  background-color: #286090;
+  border-color: #122b40; }
+
+.datepicker table tr td.active.highlighted:hover, .datepicker table tr td.active:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74; }
+
+.datepicker table tr td.active.active, .datepicker table tr td.active.highlighted.active, .datepicker table tr td.active.highlighted:active, .datepicker table tr td.active:active {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74; }
+
+.datepicker table tr td.active.active.focus, .datepicker table tr td.active.active:focus, .datepicker table tr td.active.active:hover, .datepicker table tr td.active.highlighted.active.focus, .datepicker table tr td.active.highlighted.active:focus, .datepicker table tr td.active.highlighted.active:hover, .datepicker table tr td.active.highlighted:active.focus, .datepicker table tr td.active.highlighted:active:focus, .datepicker table tr td.active.highlighted:active:hover, .datepicker table tr td.active:active.focus, .datepicker table tr td.active:active:focus, .datepicker table tr td.active:active:hover {
+  color: #fff;
+  background-color: #204d74;
+  border-color: #122b40; }
+
+.datepicker table tr td.active.disabled.focus, .datepicker table tr td.active.disabled:focus, .datepicker table tr td.active.disabled:hover, .datepicker table tr td.active.highlighted.disabled.focus, .datepicker table tr td.active.highlighted.disabled:focus, .datepicker table tr td.active.highlighted.disabled:hover, .datepicker table tr td.active.highlighted[disabled].focus, .datepicker table tr td.active.highlighted[disabled]:focus, .datepicker table tr td.active.highlighted[disabled]:hover, .datepicker table tr td.active[disabled].focus, .datepicker table tr td.active[disabled]:focus, .datepicker table tr td.active[disabled]:hover, fieldset[disabled] .datepicker table tr td.active.focus, fieldset[disabled] .datepicker table tr td.active.highlighted.focus, fieldset[disabled] .datepicker table tr td.active.highlighted:focus, fieldset[disabled] .datepicker table tr td.active.highlighted:hover, fieldset[disabled] .datepicker table tr td.active:focus, fieldset[disabled] .datepicker table tr td.active:hover {
+  background-color: #337ab7;
+  border-color: #2e6da4; }
+
+.datepicker table tr td span {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 4px; }
+
+.datepicker table tr td span.focused, .datepicker table tr td span:hover {
+  background: #eee; }
+
+.datepicker table tr td span.disabled, .datepicker table tr td span.disabled:hover {
+  background: 0 0;
+  color: #777;
+  cursor: default; }
+
+.datepicker table tr td span.active, .datepicker table tr td span.active.disabled, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active:hover {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); }
+
+.datepicker table tr td span.active.disabled.focus, .datepicker table tr td span.active.disabled:focus, .datepicker table tr td span.active.disabled:hover.focus, .datepicker table tr td span.active.disabled:hover:focus, .datepicker table tr td span.active.focus, .datepicker table tr td span.active:focus, .datepicker table tr td span.active:hover.focus, .datepicker table tr td span.active:hover:focus {
+  color: #fff;
+  background-color: #286090;
+  border-color: #122b40; }
+
+.datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active.disabled:hover:hover, .datepicker table tr td span.active:hover, .datepicker table tr td span.active:hover:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74; }
+
+.datepicker table tr td span.active.active, .datepicker table tr td span.active.disabled.active, .datepicker table tr td span.active.disabled:active, .datepicker table tr td span.active.disabled:hover.active, .datepicker table tr td span.active.disabled:hover:active, .datepicker table tr td span.active:active, .datepicker table tr td span.active:hover.active, .datepicker table tr td span.active:hover:active {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74; }
+
+.datepicker table tr td span.active.active.focus, .datepicker table tr td span.active.active:focus, .datepicker table tr td span.active.active:hover, .datepicker table tr td span.active.disabled.active.focus, .datepicker table tr td span.active.disabled.active:focus, .datepicker table tr td span.active.disabled.active:hover, .datepicker table tr td span.active.disabled:active.focus, .datepicker table tr td span.active.disabled:active:focus, .datepicker table tr td span.active.disabled:active:hover, .datepicker table tr td span.active.disabled:hover.active.focus, .datepicker table tr td span.active.disabled:hover.active:focus, .datepicker table tr td span.active.disabled:hover.active:hover, .datepicker table tr td span.active.disabled:hover:active.focus, .datepicker table tr td span.active.disabled:hover:active:focus, .datepicker table tr td span.active.disabled:hover:active:hover, .datepicker table tr td span.active:active.focus, .datepicker table tr td span.active:active:focus, .datepicker table tr td span.active:active:hover, .datepicker table tr td span.active:hover.active.focus, .datepicker table tr td span.active:hover.active:focus, .datepicker table tr td span.active:hover.active:hover, .datepicker table tr td span.active:hover:active.focus, .datepicker table tr td span.active:hover:active:focus, .datepicker table tr td span.active:hover:active:hover {
+  color: #fff;
+  background-color: #204d74;
+  border-color: #122b40; }
+
+.datepicker table tr td span.active.disabled.disabled.focus, .datepicker table tr td span.active.disabled.disabled:focus, .datepicker table tr td span.active.disabled.disabled:hover, .datepicker table tr td span.active.disabled.focus, .datepicker table tr td span.active.disabled:focus, .datepicker table tr td span.active.disabled:hover, .datepicker table tr td span.active.disabled:hover.disabled.focus, .datepicker table tr td span.active.disabled:hover.disabled:focus, .datepicker table tr td span.active.disabled:hover.disabled:hover, .datepicker table tr td span.active.disabled:hover[disabled].focus, .datepicker table tr td span.active.disabled:hover[disabled]:focus, .datepicker table tr td span.active.disabled:hover[disabled]:hover, .datepicker table tr td span.active.disabled[disabled].focus, .datepicker table tr td span.active.disabled[disabled]:focus, .datepicker table tr td span.active.disabled[disabled]:hover, .datepicker table tr td span.active:hover.disabled.focus, .datepicker table tr td span.active:hover.disabled:focus, .datepicker table tr td span.active:hover.disabled:hover, .datepicker table tr td span.active:hover[disabled].focus, .datepicker table tr td span.active:hover[disabled]:focus, .datepicker table tr td span.active:hover[disabled]:hover, .datepicker table tr td span.active[disabled].focus, .datepicker table tr td span.active[disabled]:focus, .datepicker table tr td span.active[disabled]:hover, fieldset[disabled] .datepicker table tr td span.active.disabled.focus, fieldset[disabled] .datepicker table tr td span.active.disabled:focus, fieldset[disabled] .datepicker table tr td span.active.disabled:hover, fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus, fieldset[disabled] .datepicker table tr td span.active.disabled:hover:focus, fieldset[disabled] .datepicker table tr td span.active.disabled:hover:hover, fieldset[disabled] .datepicker table tr td span.active.focus, fieldset[disabled] .datepicker table tr td span.active:focus, fieldset[disabled] .datepicker table tr td span.active:hover, fieldset[disabled] .datepicker table tr td span.active:hover.focus, fieldset[disabled] .datepicker table tr td span.active:hover:focus, fieldset[disabled] .datepicker table tr td span.active:hover:hover {
+  background-color: #337ab7;
+  border-color: #2e6da4; }
+
+.datepicker table tr td span.new, .datepicker table tr td span.old {
+  color: #777; }
+
+.datepicker .datepicker-switch {
+  width: 145px; }
+
+.datepicker .datepicker-switch, .datepicker .next, .datepicker .prev, .datepicker tfoot tr th {
+  cursor: pointer; }
+
+.datepicker .datepicker-switch:hover, .datepicker .next:hover, .datepicker .prev:hover, .datepicker tfoot tr th:hover {
+  background: #eee; }
+
+.datepicker .cw {
+  font-size: 10px;
+  width: 12px;
+  padding: 0 2px 0 5px;
+  vertical-align: middle; }
+
+.input-group.date .input-group-addon {
+  cursor: pointer; }
+
+.input-daterange {
+  width: 100%; }
+
+.input-daterange input {
+  text-align: center; }
+
+.input-daterange input:first-child {
+  border-radius: 3px 0 0 3px; }
+
+.input-daterange input:last-child {
+  border-radius: 0 3px 3px 0; }
+
+.input-daterange .input-group-addon {
+  width: auto;
+  min-width: 16px;
+  padding: 4px 5px;
+  line-height: 1.42857143;
+  text-shadow: 0 1px 0 #fff;
+  border-width: 1px 0;
+  margin-left: -5px;
+  margin-right: -5px; }
+
+/*# sourceMappingURL=bootstrap-datepicker3.min.css.map */
 .blue-gradient {
   background-color: #00b9f1;
   background-image: -webkit-linear-gradient(left, #00b9f1, #0072bc);
@@ -2314,6 +2757,8 @@ strong {
       height: 72px;
       font-size: 18px;
       line-height: 4; }
+      #header #header-spacing .logo-header svg.edit-svg path, #header #header-spacing .header-links svg.edit-svg path {
+        fill: #999999; }
     #header #header-spacing .header-links {
       display: none;
       text-align: right; }
@@ -2992,6 +3437,76 @@ div#background-container {
   margin: 0 !important;
   padding: 0 !important; }
 
+.modal-backdrop.in {
+  background: white;
+  opacity: 0.8; }
+
+.modal {
+  border: none;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px; }
+  .modal .modal-dialog {
+    width: 100%;
+    margin: 0; }
+  .modal .modal-content {
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px; }
+  .modal .modal-body {
+    padding: 30px; }
+    .modal .modal-body h1 {
+      margin: 0 0 10px 0;
+      text-align: center;
+      color: #0695d6;
+      font-weight: 400; }
+    .modal .modal-body p {
+      font-size: 18px;
+      text-align: center;
+      margin: 0 0 10px 0; }
+    .modal .modal-body .modal-actions {
+      text-align: center;
+      margin: 30px 0 0 0; }
+
+.btn {
+  color: white;
+  border: none;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  text-shadow: none;
+  font-weight: 400;
+  margin-left: 10px;
+  background: #999999; }
+  .btn:focus {
+    color: white; }
+  .btn:hover, .btn:active, .btn:focus {
+    background: #767676;
+    color: white; }
+  .btn.btn-blue {
+    background: #0695d6; }
+    .btn.btn-blue:hover, .btn.btn-blue:active, .btn.btn-blue:focus {
+      background: #17b2f8;
+      color: white; }
+  .btn.btn-red {
+    background: #ef4d3d; }
+    .btn.btn-red:hover, .btn.btn-red:active, .btn.btn-red:focus {
+      background: #ff7366; }
+  .btn.btn-green {
+    background: #33B561; }
+    .btn.btn-green:hover, .btn.btn-green:active, .btn.btn-green:focus {
+      background: #4ecd7a; }
+  .btn.btn-transparent {
+    background: transparent;
+    color: #0695d6;
+    border: none;
+    box-shadow: none; }
+    .btn.btn-transparent:hover {
+      color: #17b2f8; }
+
 #title {
   padding: 20px 0;
   color: white;
@@ -3094,6 +3609,13 @@ div#background-container {
       @media (min-width: 992px) {
         #title #stats .stats-legend.datasets {
           margin-bottom: 40px; } }
+  #title .title-links {
+    font-size: 16px;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: right; }
+    #title .title-links a {
+      color: white; }
 
 .featured-groups {
   padding: 20px 0;
@@ -3163,16 +3685,19 @@ div#background-container {
           .featured-groups .group-container .group .group-text svg path, .featured-groups .group-container .group .group-text img path {
             fill: #0695d6; }
         .featured-groups .group-container .group .group-text .group-table {
-          padding-left: 45px;
+          width: 100%;
           overflow: hidden;
           display: table;
-          text-align: left;
+          text-align: center;
           font-size: 15px;
           line-height: 1.2;
           height: 54px; }
           .featured-groups .group-container .group .group-text .group-table .group-cell {
             display: table-cell;
             vertical-align: middle; }
+      .featured-groups .group-container .group.show-icons .group-text .group-table {
+        padding-left: 45px;
+        text-align: left; }
       .featured-groups .group-container .group.inactive {
         color: #cccccc; }
         .featured-groups .group-container .group.inactive .group-text svg path {
@@ -3182,6 +3707,9 @@ div#background-container {
         color: white; }
         .featured-groups .group-container .group.active:hover svg path {
           fill: white !important; }
+      .featured-groups .group-container .group.hide-icons {
+        text-transform: uppercase;
+        font-weight: 500; }
     .featured-groups .group-container .edit-container {
       position: absolute;
       z-index: 1;
@@ -3220,8 +3748,19 @@ div#background-container {
   @media (min-width: 768px) {
     #home-create-buttons {
       text-align: right; } }
-  #home-create-buttons .btn {
-    margin-top: 10px; }
+  #home-create-buttons a {
+    display: inline-block;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-left: 10px;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #0695d6; }
+    #home-create-buttons a:hover {
+      background-color: #17b2f8; }
 
 #featured-content-container {
   background-color: #f5f5f5;
@@ -3310,6 +3849,7 @@ div#background-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #login-container #login {
+    display: table;
     height: 100%;
     color: #424242;
     font-size: 16px; }
@@ -3324,7 +3864,7 @@ div#background-container {
       font-weight: 400;
       font-size: 40px; }
     #login-container #login form {
-      padding: 20px 50px;
+      padding: 50px;
       -o-border-radius: 4px;
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
@@ -3344,14 +3884,8 @@ div#background-container {
         width: 100%;
         font-size: 16px;
         line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #login-container #login form input[type="checkbox"] {
-        -webkit-transform: scale(1.3);
-        -moz-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        -o-transform: scale(1.3);
-        transform: scale(1.3); }
+        padding: 10px;
+        height: 39.2px; }
       #login-container #login form .control-custom .input-prepend {
         width: 100%;
         white-space: normal;
@@ -3362,8 +3896,8 @@ div#background-container {
           width: 20%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
         #login-container #login form .control-custom .input-prepend label.icon-remove {
           position: absolute;
           top: 50%;
@@ -3373,8 +3907,8 @@ div#background-container {
           margin: -1em 0 0 0;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
           #login-container #login form .control-custom .input-prepend label.icon-remove:before, #login-container #login form .control-custom .input-prepend label.icon-remove:after {
             content: initial; }
           #login-container #login form .control-custom .input-prepend label.icon-remove span {
@@ -3385,55 +3919,99 @@ div#background-container {
           width: 65%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
       #login-container #login form .package-groups input[type="checkbox"].package-group-checkbox {
-        width: 1px;
-        height: 1px;
-        position: fixed;
-        left: -10px;
-        top: -10px; }
+        display: inline-block;
+        width: auto;
+        margin: 0;
+        position: static;
+        vertical-align: baseline; }
       #login-container #login form .package-groups label.package-group-label {
-        color: #cccccc;
+        color: #999999;
         margin: 0;
         padding: 2px 0; }
         #login-container #login form .package-groups label.package-group-label:after {
-          content: initial; }
-        #login-container #login form .package-groups label.package-group-label:hover {
-          color: #0695d6; }
-      #login-container #login form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0695d6; }
+          content: none; }
       #login-container #login form .control-group {
         position: relative; }
         #login-container #login form .control-group.error .input-prepend .add-on {
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
-    #login-container #login form label {
-      width: 50%;
-      padding: 5px 20px 5px 0;
-      font-size: 16px;
-      line-height: 1.2; }
-    #login-container #login form .controls {
-      margin-left: 50%; }
+          padding: 10px;
+          height: 39.2px; }
+    #login-container #login #login-vertical-wrapper {
+      display: table-cell;
+      vertical-align: middle; }
+    #login-container #login form {
+      width: 100%;
+      margin: 0 auto; }
+      @media (min-width: 768px) {
+        #login-container #login form {
+          width: 600px; } }
+      #login-container #login form label {
+        padding: 0;
+        display: block;
+        width: auto;
+        margin-bottom: 10px; }
+      #login-container #login form .controls {
+        display: block;
+        margin: 0; }
+      #login-container #login form .checkbox {
+        text-align: right;
+        margin: 0; }
+        #login-container #login form .checkbox input {
+          top: 50%;
+          margin-top: -10px; }
+      #login-container #login form .control-group {
+        margin-bottom: 30px; }
+        #login-container #login form .control-group:nth-child(3) {
+          margin: 0; }
+      #login-container #login form .form-actions {
+        margin: 0;
+        padding: 50px 0 0 0;
+        border: none;
+        text-align: center; }
+      #login-container #login form button {
+        background: #0695d6;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-bottom: 5px;
+        font-weight: 300;
+        padding: 12px;
+        display: inline-block; }
+        #login-container #login form button:hover {
+          background-color: #17b2f8; }
 
 #user-datasets-container {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  height: 100%; }
   @media (min-width: 992px) {
     #user-datasets-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #user-datasets-container #user-datasets {
     color: #424242;
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 0;
+    height: 100%; }
     @media (min-width: 992px) {
       #user-datasets-container #user-datasets {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    #user-datasets-container #user-datasets .back-btn {
+      color: #0695d6;
+      margin: 20px 0; }
+    #user-datasets-container #user-datasets h1 {
+      color: #0695d6;
+      font-size: 40px;
+      font-weight: 400;
+      margin: 0 0 30px 0; }
 
 .organization-container {
   display: table-row;
@@ -3458,6 +4036,18 @@ div#background-container {
     .organization-container .organization .add-organization {
       text-align: right;
       margin-bottom: 20px; }
+      .organization-container .organization .add-organization a {
+        display: inline-block;
+        color: white;
+        border: none;
+        padding: 12px;
+        -o-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        background-color: #0695d6; }
+        .organization-container .organization .add-organization a:hover {
+          background-color: #17b2f8; }
     .organization-container .organization .organization-list {
       padding: 0;
       margin: 0;
@@ -3532,28 +4122,37 @@ div#background-container {
         padding-right: 2em; }
 
 /* Extiende ../home/title */
-#title.organization-title {
+#title.organization-title .background-overlay {
   padding-bottom: 40px; }
-  #title.organization-title #title-container h1 {
-    font-size: 35px; }
-    @media (min-width: 768px) {
-      #title.organization-title #title-container h1 {
-        font-size: 50px; } }
-  #title.organization-title #title-container .description {
-    margin: 0; }
-  #title.organization-title #stats .stats-legend {
-    margin: 0; }
+#title.organization-title #title-container h1 {
+  font-size: 35px; }
+  @media (min-width: 768px) {
+    #title.organization-title #title-container h1 {
+      font-size: 50px; } }
+#title.organization-title #title-container .description {
+  margin: 0; }
+  #title.organization-title #title-container .description .edit-description-link svg.edit-svg {
+    display: inline-block;
+    width: 1em;
+    height: 1em; }
+    #title.organization-title #title-container .description .edit-description-link svg.edit-svg path {
+      fill: white; }
+#title.organization-title #stats .stats-legend {
+  margin: 0; }
 
 #edit-organization-container, #new-organization-container {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  height: 100%; }
   @media (min-width: 992px) {
     #edit-organization-container, #new-organization-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
     color: #424242;
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 0;
+    height: 100%; }
     @media (min-width: 992px) {
       #edit-organization-container #edit-organization, #edit-organization-container #new-organization, #new-organization-container #edit-organization, #new-organization-container #new-organization {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
@@ -3565,7 +4164,7 @@ div#background-container {
       font-weight: 400;
       font-size: 40px; }
     #edit-organization-container #edit-organization form, #edit-organization-container #new-organization form, #new-organization-container #edit-organization form, #new-organization-container #new-organization form {
-      padding: 20px 50px;
+      padding: 50px;
       -o-border-radius: 4px;
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
@@ -3585,14 +4184,8 @@ div#background-container {
         width: 100%;
         font-size: 16px;
         line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #edit-organization-container #edit-organization form input[type="checkbox"], #edit-organization-container #new-organization form input[type="checkbox"], #new-organization-container #edit-organization form input[type="checkbox"], #new-organization-container #new-organization form input[type="checkbox"] {
-        -webkit-transform: scale(1.3);
-        -moz-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        -o-transform: scale(1.3);
-        transform: scale(1.3); }
+        padding: 10px;
+        height: 39.2px; }
       #edit-organization-container #edit-organization form .control-custom .input-prepend, #edit-organization-container #new-organization form .control-custom .input-prepend, #new-organization-container #edit-organization form .control-custom .input-prepend, #new-organization-container #new-organization form .control-custom .input-prepend {
         width: 100%;
         white-space: normal;
@@ -3603,8 +4196,8 @@ div#background-container {
           width: 20%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
         #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove {
           position: absolute;
           top: 50%;
@@ -3614,8 +4207,8 @@ div#background-container {
           margin: -1em 0 0 0;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
           #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:before, #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:after, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:before, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:after, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:before, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove:after, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:before, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove:after {
             content: initial; }
           #edit-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove span, #edit-organization-container #new-organization form .control-custom .input-prepend label.icon-remove span, #new-organization-container #edit-organization form .control-custom .input-prepend label.icon-remove span, #new-organization-container #new-organization form .control-custom .input-prepend label.icon-remove span {
@@ -3626,33 +4219,91 @@ div#background-container {
           width: 65%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
       #edit-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox, #edit-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox, #new-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox, #new-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox {
-        width: 1px;
-        height: 1px;
-        position: fixed;
-        left: -10px;
-        top: -10px; }
+        display: inline-block;
+        width: auto;
+        margin: 0;
+        position: static;
+        vertical-align: baseline; }
       #edit-organization-container #edit-organization form .package-groups label.package-group-label, #edit-organization-container #new-organization form .package-groups label.package-group-label, #new-organization-container #edit-organization form .package-groups label.package-group-label, #new-organization-container #new-organization form .package-groups label.package-group-label {
-        color: #cccccc;
+        color: #999999;
         margin: 0;
         padding: 2px 0; }
         #edit-organization-container #edit-organization form .package-groups label.package-group-label:after, #edit-organization-container #new-organization form .package-groups label.package-group-label:after, #new-organization-container #edit-organization form .package-groups label.package-group-label:after, #new-organization-container #new-organization form .package-groups label.package-group-label:after {
-          content: initial; }
-        #edit-organization-container #edit-organization form .package-groups label.package-group-label:hover, #edit-organization-container #new-organization form .package-groups label.package-group-label:hover, #new-organization-container #edit-organization form .package-groups label.package-group-label:hover, #new-organization-container #new-organization form .package-groups label.package-group-label:hover {
-          color: #0695d6; }
-      #edit-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-organization-container #edit-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-organization-container #new-organization form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0695d6; }
+          content: none; }
       #edit-organization-container #edit-organization form .control-group, #edit-organization-container #new-organization form .control-group, #new-organization-container #edit-organization form .control-group, #new-organization-container #new-organization form .control-group {
         position: relative; }
         #edit-organization-container #edit-organization form .control-group.error .input-prepend .add-on, #edit-organization-container #new-organization form .control-group.error .input-prepend .add-on, #new-organization-container #edit-organization form .control-group.error .input-prepend .add-on, #new-organization-container #new-organization form .control-group.error .input-prepend .add-on {
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
-    #edit-organization-container #edit-organization form .image-upload, #edit-organization-container #new-organization form .image-upload, #new-organization-container #edit-organization form .image-upload, #new-organization-container #new-organization form .image-upload {
-      display: none; }
+          padding: 10px;
+          height: 39.2px; }
+    #edit-organization-container #edit-organization .back-btn, #edit-organization-container #new-organization .back-btn, #new-organization-container #edit-organization .back-btn, #new-organization-container #new-organization .back-btn {
+      padding: 20px 0; }
+    #edit-organization-container #edit-organization h1, #edit-organization-container #new-organization h1, #new-organization-container #edit-organization h1, #new-organization-container #new-organization h1 {
+      color: #0695d6;
+      font-weight: 400;
+      font-size: 40px;
+      margin: 0 0 20px 0; }
+    #edit-organization-container #edit-organization form, #edit-organization-container #new-organization form, #new-organization-container #edit-organization form, #new-organization-container #new-organization form {
+      padding: 50px;
+      margin: 0 0 50px 0; }
+      #edit-organization-container #edit-organization form .image-upload, #edit-organization-container #new-organization form .image-upload, #new-organization-container #edit-organization form .image-upload, #new-organization-container #new-organization form .image-upload {
+        display: none; }
+      #edit-organization-container #edit-organization form .control-group, #edit-organization-container #new-organization form .control-group, #new-organization-container #edit-organization form .control-group, #new-organization-container #new-organization form .control-group {
+        margin: 0 0 30px 0;
+        padding: 0; }
+        #edit-organization-container #edit-organization form .control-group label, #edit-organization-container #new-organization form .control-group label, #new-organization-container #edit-organization form .control-group label, #new-organization-container #new-organization form .control-group label {
+          display: block;
+          float: none;
+          margin: 0 0 10px 0;
+          padding: 0;
+          width: 100%;
+          font-size: 20px;
+          color: #999999; }
+          #edit-organization-container #edit-organization form .control-group label:after, #edit-organization-container #new-organization form .control-group label:after, #new-organization-container #edit-organization form .control-group label:after, #new-organization-container #new-organization form .control-group label:after {
+            content: none; }
+        #edit-organization-container #edit-organization form .control-group .controls, #edit-organization-container #new-organization form .control-group .controls, #new-organization-container #edit-organization form .control-group .controls, #new-organization-container #new-organization form .control-group .controls {
+          display: block;
+          margin: 0; }
+      #edit-organization-container #edit-organization form .form-actions, #edit-organization-container #new-organization form .form-actions, #new-organization-container #edit-organization form .form-actions, #new-organization-container #new-organization form .form-actions {
+        text-align: center;
+        padding: 50px 0 0 0;
+        margin: 0;
+        border: none; }
+        #edit-organization-container #edit-organization form .form-actions .btn, #edit-organization-container #new-organization form .form-actions .btn, #new-organization-container #edit-organization form .form-actions .btn, #new-organization-container #new-organization form .form-actions .btn {
+          padding: 12px; }
+      #edit-organization-container #edit-organization form .slug-preview, #edit-organization-container #new-organization form .slug-preview, #new-organization-container #edit-organization form .slug-preview, #new-organization-container #new-organization form .slug-preview {
+        margin: 10px 0 0 0; }
+        #edit-organization-container #edit-organization form .slug-preview .btn-mini, #edit-organization-container #new-organization form .slug-preview .btn-mini, #new-organization-container #edit-organization form .slug-preview .btn-mini, #new-organization-container #new-organization form .slug-preview .btn-mini {
+          background: none;
+          display: inline;
+          padding: 0;
+          color: #0695d6;
+          border: none;
+          box-shadow: none; }
+      #edit-organization-container #edit-organization form .add-on, #edit-organization-container #new-organization form .add-on, #new-organization-container #edit-organization form .add-on, #new-organization-container #new-organization form .add-on {
+        height: 40px;
+        line-height: 2; }
+      #edit-organization-container #edit-organization form #field-url, #edit-organization-container #new-organization form #field-url, #new-organization-container #edit-organization form #field-url, #new-organization-container #new-organization form #field-url {
+        height: 40px; }
+      #edit-organization-container #edit-organization form select, #edit-organization-container #new-organization form select, #new-organization-container #edit-organization form select, #new-organization-container #new-organization form select {
+        max-width: 100%;
+        width: 25em; }
+    #edit-organization-container #edit-organization #delete-modal .modal-content, #edit-organization-container #new-organization #delete-modal .modal-content, #new-organization-container #edit-organization #delete-modal .modal-content, #new-organization-container #new-organization #delete-modal .modal-content {
+      box-shadow: none; }
+    #edit-organization-container #edit-organization #delete-modal .modal-body, #edit-organization-container #new-organization #delete-modal .modal-body, #new-organization-container #edit-organization #delete-modal .modal-body, #new-organization-container #new-organization #delete-modal .modal-body {
+      padding: 50px; }
+      #edit-organization-container #edit-organization #delete-modal .modal-body h1, #edit-organization-container #new-organization #delete-modal .modal-body h1, #new-organization-container #edit-organization #delete-modal .modal-body h1, #new-organization-container #new-organization #delete-modal .modal-body h1 {
+        margin-bottom: 10px; }
+    #edit-organization-container #edit-organization #delete-modal form, #edit-organization-container #new-organization #delete-modal form, #new-organization-container #edit-organization #delete-modal form, #new-organization-container #new-organization #delete-modal form {
+      padding: 0;
+      margin: 0;
+      box-shadow: none; }
+      #edit-organization-container #edit-organization #delete-modal form button, #edit-organization-container #new-organization #delete-modal form button, #new-organization-container #edit-organization #delete-modal form button, #new-organization-container #new-organization #delete-modal form button {
+        padding: 12px; }
 
 .package-container {
   height: 100%;
@@ -3707,6 +4358,19 @@ div#background-container {
   #search-results .add-dataset {
     text-align: right;
     margin-top: 20px; }
+    #search-results .add-dataset a {
+      display: inline-block;
+      color: white;
+      border: none;
+      padding: 12px;
+      -o-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      background-color: #0695d6;
+      margin-left: 10px; }
+      #search-results .add-dataset a:hover {
+        background-color: #17b2f8; }
   #search-results .search-and-order {
     padding: 0;
     border: none;
@@ -4015,7 +4679,9 @@ div#background-container {
         width: 3.5em;
         font-weight: 500;
         margin: 0 0 5px 5px;
-        background-color: #0695d6; }
+        background-color: #0695d6;
+        overflow: hidden;
+        text-overflow: ellipsis; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=html], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=html] {
           background-color: #8E24AA; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=json], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=json] {
@@ -4044,6 +4710,11 @@ div#background-container {
           background-color: #00ACC1; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=shp], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=shp] {
           background-color: #039BE5; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label.group {
+          width: auto;
+          max-width: 100%;
+          background: #999999;
+          font-weight: 400; }
 .dataset-list .dataset-item:hover {
   color: inherit; }
   .dataset-list .dataset-item:hover .dataset-border {
@@ -4051,14 +4722,20 @@ div#background-container {
     .dataset-list .dataset-item:hover .dataset-border .dataset-content .dataset-title {
       color: #0695d6; }
 
-#title.package-title {
+#title.package-title .background-overlay {
   padding-bottom: 40px; }
-  #title.package-title #title-container .description {
+#title.package-title #title-container .description {
+  margin: 0; }
+  #title.package-title #title-container .description .edit-description-link svg.edit-svg {
+    display: inline-block;
+    width: 1em;
+    height: 1em; }
+    #title.package-title #title-container .description .edit-description-link svg.edit-svg path {
+      fill: white; }
+#title.package-title #stats > div {
+  padding: 0; }
+  #title.package-title #stats > div .stats-legend {
     margin: 0; }
-  #title.package-title #stats > div {
-    padding: 0; }
-    #title.package-title #stats > div .stats-legend {
-      margin: 0; }
 
 .package-container {
   height: 100%;
@@ -4146,6 +4823,16 @@ div#background-container {
       margin-bottom: 10px; }
       #pkg-secondary-info #info-container .row.group-row {
         overflow: visible; }
+        #pkg-secondary-info #info-container .row.group-row .label {
+          display: inline-block;
+          margin-bottom: 5px;
+          font-weight: 400;
+          background: #999999;
+          max-width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis; }
+          #pkg-secondary-info #info-container .row.group-row .label:hover {
+            background: #767676; }
       #pkg-secondary-info #info-container .row .title {
         margin-bottom: 10px;
         padding: 0;
@@ -4164,7 +4851,8 @@ div#background-container {
             fill: #0695d6; }
         #pkg-secondary-info #info-container .row .value .group-img-container {
           display: inline-block;
-          position: relative; }
+          position: relative;
+          max-width: 100%; }
           #pkg-secondary-info #info-container .row .value .group-img-container svg.group-image, #pkg-secondary-info #info-container .row .value .group-img-container img.group-image {
             width: 30px;
             height: 30px;
@@ -4271,37 +4959,96 @@ div#background-container {
 
 #edit-resources-container {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  height: 100%; }
   @media (min-width: 992px) {
     #edit-resources-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #edit-resources-container #edit-resources {
     color: #424242;
-    font-size: 16px; }
+    font-size: 16px;
+    height: 100%;
+    padding: 0; }
     @media (min-width: 992px) {
       #edit-resources-container #edit-resources {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
         box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
-    #edit-resources-container #edit-resources .action-buttons {
+    #edit-resources-container #edit-resources .back-btn {
       margin: 20px 0; }
-      #edit-resources-container #edit-resources .action-buttons .edit-dataset-button, #edit-resources-container #edit-resources .action-buttons .add-resource {
-        margin: 0 10px 0 0; }
+    #edit-resources-container #edit-resources h1 {
+      color: #0695d6;
+      margin: 20px 0; }
+    #edit-resources-container #edit-resources .form-like {
+      padding: 50px;
+      margin: 0 0 50px 0;
+      -o-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -moz-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      -webkit-box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5);
+      box-shadow: 0 0 4px 0 rgba(150, 150, 150, 0.5); }
+      #edit-resources-container #edit-resources .form-like h1 {
+        display: none !important; }
+      #edit-resources-container #edit-resources .form-like .spacer {
+        height: 83px;
+        margin: 0 0 10px 0;
+        border-bottom: solid 1px #cccccc;
+        display: none; }
+    #edit-resources-container #edit-resources .resource-actions {
+      padding: 50px 0 0 0;
+      margin: 10px 0 0 0;
+      border-top: solid 1px #cccccc;
+      text-align: center; }
+      #edit-resources-container #edit-resources .resource-actions .btn {
+        border-color: #cccccc;
+        padding: 12px; }
+    #edit-resources-container #edit-resources .form-actions {
+      padding: 50px 0 0 0;
+      margin: 10px 0 0 0;
+      text-align: center;
+      text-transform: uppercase;
+      border-top: solid 1px #cccccc; }
+      #edit-resources-container #edit-resources .form-actions .btn {
+        padding: 12px;
+        float: none !important; }
+        #edit-resources-container #edit-resources .form-actions .btn.save {
+          background: #0695d6; }
+          #edit-resources-container #edit-resources .form-actions .btn.save:hover {
+            background: #17b2f8;
+            color: white; }
+      #edit-resources-container #edit-resources .form-actions .saving {
+        display: none !important; }
+    #edit-resources-container #edit-resources .action-buttons {
+      margin: 0 0 10px 0;
+      padding: 0 0 20px 0;
+      border-bottom: solid 1px #cccccc;
+      text-align: right; }
       #edit-resources-container #edit-resources .action-buttons .btn {
-        border-color: #cccccc; }
+        padding: 12px;
+        text-transform: uppercase;
+        background: #0695d6; }
+        #edit-resources-container #edit-resources .action-buttons .btn:hover {
+          background: #17b2f8;
+          color: white; }
+        #edit-resources-container #edit-resources .action-buttons .btn i {
+          display: none; }
+    #edit-resources-container #edit-resources ul {
+      margin: 0; }
 
 #edit-package-container, #new-package-container {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  height: 100%; }
   @media (min-width: 992px) {
     #edit-package-container, #new-package-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
     color: #424242;
-    font-size: 16px; }
+    font-size: 16px;
+    height: 100%;
+    padding: 0; }
     @media (min-width: 992px) {
       #edit-package-container #edit-package, #edit-package-container #new-package, #new-package-container #edit-package, #new-package-container #new-package {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
@@ -4313,7 +5060,7 @@ div#background-container {
       font-weight: 400;
       font-size: 40px; }
     #edit-package-container #edit-package form, #edit-package-container #new-package form, #new-package-container #edit-package form, #new-package-container #new-package form {
-      padding: 20px 50px;
+      padding: 50px;
       -o-border-radius: 4px;
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
@@ -4333,14 +5080,8 @@ div#background-container {
         width: 100%;
         font-size: 16px;
         line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #edit-package-container #edit-package form input[type="checkbox"], #edit-package-container #new-package form input[type="checkbox"], #new-package-container #edit-package form input[type="checkbox"], #new-package-container #new-package form input[type="checkbox"] {
-        -webkit-transform: scale(1.3);
-        -moz-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        -o-transform: scale(1.3);
-        transform: scale(1.3); }
+        padding: 10px;
+        height: 39.2px; }
       #edit-package-container #edit-package form .control-custom .input-prepend, #edit-package-container #new-package form .control-custom .input-prepend, #new-package-container #edit-package form .control-custom .input-prepend, #new-package-container #new-package form .control-custom .input-prepend {
         width: 100%;
         white-space: normal;
@@ -4351,8 +5092,8 @@ div#background-container {
           width: 20%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
         #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove {
           position: absolute;
           top: 50%;
@@ -4362,8 +5103,8 @@ div#background-container {
           margin: -1em 0 0 0;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
           #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove:before, #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove:after, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove:before, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove:after, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove:before, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove:after, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove:before, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove:after {
             content: initial; }
           #edit-package-container #edit-package form .control-custom .input-prepend label.icon-remove span, #edit-package-container #new-package form .control-custom .input-prepend label.icon-remove span, #new-package-container #edit-package form .control-custom .input-prepend label.icon-remove span, #new-package-container #new-package form .control-custom .input-prepend label.icon-remove span {
@@ -4374,36 +5115,212 @@ div#background-container {
           width: 65%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
       #edit-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox, #edit-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox, #new-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox, #new-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox {
-        width: 1px;
-        height: 1px;
-        position: fixed;
-        left: -10px;
-        top: -10px; }
+        display: inline-block;
+        width: auto;
+        margin: 0;
+        position: static;
+        vertical-align: baseline; }
       #edit-package-container #edit-package form .package-groups label.package-group-label, #edit-package-container #new-package form .package-groups label.package-group-label, #new-package-container #edit-package form .package-groups label.package-group-label, #new-package-container #new-package form .package-groups label.package-group-label {
-        color: #cccccc;
+        color: #999999;
         margin: 0;
         padding: 2px 0; }
         #edit-package-container #edit-package form .package-groups label.package-group-label:after, #edit-package-container #new-package form .package-groups label.package-group-label:after, #new-package-container #edit-package form .package-groups label.package-group-label:after, #new-package-container #new-package form .package-groups label.package-group-label:after {
-          content: initial; }
-        #edit-package-container #edit-package form .package-groups label.package-group-label:hover, #edit-package-container #new-package form .package-groups label.package-group-label:hover, #new-package-container #edit-package form .package-groups label.package-group-label:hover, #new-package-container #new-package form .package-groups label.package-group-label:hover {
-          color: #0695d6; }
-      #edit-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-package-container #edit-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-package-container #new-package form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0695d6; }
+          content: none; }
       #edit-package-container #edit-package form .control-group, #edit-package-container #new-package form .control-group, #new-package-container #edit-package form .control-group, #new-package-container #new-package form .control-group {
         position: relative; }
         #edit-package-container #edit-package form .control-group.error .input-prepend .add-on, #edit-package-container #new-package form .control-group.error .input-prepend .add-on, #new-package-container #edit-package form .control-group.error .input-prepend .add-on, #new-package-container #new-package form .control-group.error .input-prepend .add-on {
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
-    #edit-package-container #edit-package form ol, #edit-package-container #new-package form ol, #new-package-container #edit-package form ol, #new-package-container #new-package form ol {
-      margin: 0 0 10px 0; }
+          padding: 10px;
+          height: 39.2px; }
+    #edit-package-container #edit-package .back-btn, #edit-package-container #new-package .back-btn, #new-package-container #edit-package .back-btn, #new-package-container #new-package .back-btn {
+      margin: 20px 0; }
+    #edit-package-container #edit-package h1, #edit-package-container #new-package h1, #new-package-container #edit-package h1, #new-package-container #new-package h1 {
+      color: #0695d6;
+      margin: 20px 0; }
+    #edit-package-container #edit-package form, #edit-package-container #new-package form, #new-package-container #edit-package form, #new-package-container #new-package form {
+      padding: 50px;
+      margin: 0 0 50px 0; }
+      #edit-package-container #edit-package form .resource-nav, #edit-package-container #new-package form .resource-nav, #new-package-container #edit-package form .resource-nav, #new-package-container #new-package form .resource-nav {
+        margin: 0 0 50px 0;
+        padding: 0;
+        color: white;
+        background: #cccccc;
+        text-align: center; }
+        #edit-package-container #edit-package form .resource-nav a, #edit-package-container #edit-package form .resource-nav a:hover, #edit-package-container #new-package form .resource-nav a, #edit-package-container #new-package form .resource-nav a:hover, #new-package-container #edit-package form .resource-nav a, #new-package-container #edit-package form .resource-nav a:hover, #new-package-container #new-package form .resource-nav a, #new-package-container #new-package form .resource-nav a:hover {
+          color: white; }
+          #edit-package-container #edit-package form .resource-nav a div, #edit-package-container #edit-package form .resource-nav a:hover div, #edit-package-container #new-package form .resource-nav a div, #edit-package-container #new-package form .resource-nav a:hover div, #new-package-container #edit-package form .resource-nav a div, #new-package-container #edit-package form .resource-nav a:hover div, #new-package-container #new-package form .resource-nav a div, #new-package-container #new-package form .resource-nav a:hover div {
+            padding: 10px 0; }
+            #edit-package-container #edit-package form .resource-nav a div.active, #edit-package-container #edit-package form .resource-nav a:hover div.active, #edit-package-container #new-package form .resource-nav a div.active, #edit-package-container #new-package form .resource-nav a:hover div.active, #new-package-container #edit-package form .resource-nav a div.active, #new-package-container #edit-package form .resource-nav a:hover div.active, #new-package-container #new-package form .resource-nav a div.active, #new-package-container #new-package form .resource-nav a:hover div.active {
+              background: #0695d6; }
+      #edit-package-container #edit-package form .control-group, #edit-package-container #new-package form .control-group, #new-package-container #edit-package form .control-group, #new-package-container #new-package form .control-group {
+        margin: 0 0 30px 0; }
+        #edit-package-container #edit-package form .control-group label, #edit-package-container #new-package form .control-group label, #new-package-container #edit-package form .control-group label, #new-package-container #new-package form .control-group label {
+          font-size: 20px;
+          color: #999999;
+          padding: 0;
+          display: block;
+          float: none;
+          margin: 0 0 10px 0;
+          width: auto; }
+          #edit-package-container #edit-package form .control-group label:after, #edit-package-container #new-package form .control-group label:after, #new-package-container #edit-package form .control-group label:after, #new-package-container #new-package form .control-group label:after {
+            content: none; }
+          #edit-package-container #edit-package form .control-group label.package-group-label, #edit-package-container #new-package form .control-group label.package-group-label, #new-package-container #edit-package form .control-group label.package-group-label, #new-package-container #new-package form .control-group label.package-group-label {
+            color: #767676;
+            font-size: 16px;
+            padding: 3px 0; }
+          #edit-package-container #edit-package form .control-group label.detail-hour, #edit-package-container #new-package form .control-group label.detail-hour, #new-package-container #edit-package form .control-group label.detail-hour, #new-package-container #new-package form .control-group label.detail-hour {
+            font-size: 16px;
+            color: #767676;
+            margin-bottom: 30px; }
+          #edit-package-container #edit-package form .control-group label.picker-date-from, #edit-package-container #edit-package form .control-group label.picker-date-to, #edit-package-container #new-package form .control-group label.picker-date-from, #edit-package-container #new-package form .control-group label.picker-date-to, #new-package-container #edit-package form .control-group label.picker-date-from, #new-package-container #edit-package form .control-group label.picker-date-to, #new-package-container #new-package form .control-group label.picker-date-from, #new-package-container #new-package form .control-group label.picker-date-to {
+            font-size: 16px;
+            color: #767676; }
+          #edit-package-container #edit-package form .control-group label.no-margin, #edit-package-container #new-package form .control-group label.no-margin, #new-package-container #edit-package form .control-group label.no-margin, #new-package-container #new-package form .control-group label.no-margin {
+            margin: 0; }
+        #edit-package-container #edit-package form .control-group select, #edit-package-container #new-package form .control-group select, #new-package-container #edit-package form .control-group select, #new-package-container #new-package form .control-group select {
+          width: 24em;
+          max-width: 100%; }
+        #edit-package-container #edit-package form .control-group .controls, #edit-package-container #new-package form .control-group .controls, #new-package-container #edit-package form .control-group .controls, #new-package-container #new-package form .control-group .controls {
+          margin: 0; }
+          #edit-package-container #edit-package form .control-group .controls.editor textarea, #edit-package-container #new-package form .control-group .controls.editor textarea, #new-package-container #edit-package form .control-group .controls.editor textarea, #new-package-container #new-package form .control-group .controls.editor textarea {
+            -o-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            border: solid 1px #cccccc; }
+          #edit-package-container #edit-package form .control-group .controls.editor .editor-info-block, #edit-package-container #new-package form .control-group .controls.editor .editor-info-block, #new-package-container #edit-package form .control-group .controls.editor .editor-info-block, #new-package-container #new-package form .control-group .controls.editor .editor-info-block {
+            display: none; }
+          #edit-package-container #edit-package form .control-group .controls .select2-container .select2-choices, #edit-package-container #new-package form .control-group .controls .select2-container .select2-choices, #new-package-container #edit-package form .control-group .controls .select2-container .select2-choices, #new-package-container #new-package form .control-group .controls .select2-container .select2-choices {
+            background: transparent; }
+        #edit-package-container #edit-package form .control-group .control-required, #edit-package-container #new-package form .control-group .control-required, #new-package-container #edit-package form .control-group .control-required, #new-package-container #new-package form .control-group .control-required {
+          color: inherit; }
+        #edit-package-container #edit-package form .control-group .slug-preview, #edit-package-container #new-package form .control-group .slug-preview, #new-package-container #edit-package form .control-group .slug-preview, #new-package-container #new-package form .control-group .slug-preview {
+          margin: 30px 0 0 0; }
+          #edit-package-container #edit-package form .control-group .slug-preview .btn-mini, #edit-package-container #new-package form .control-group .slug-preview .btn-mini, #new-package-container #edit-package form .control-group .slug-preview .btn-mini, #new-package-container #new-package form .control-group .slug-preview .btn-mini {
+            background: none;
+            display: inline;
+            padding: 0;
+            color: #0695d6;
+            border: none;
+            box-shadow: none; }
+        #edit-package-container #edit-package form .control-group .add-on, #edit-package-container #new-package form .control-group .add-on, #new-package-container #edit-package form .control-group .add-on, #new-package-container #new-package form .control-group .add-on {
+          height: 40px;
+          line-height: 2; }
+        #edit-package-container #edit-package form .control-group .add-on + input, #edit-package-container #new-package form .control-group .add-on + input, #new-package-container #edit-package form .control-group .add-on + input, #new-package-container #new-package form .control-group .add-on + input {
+          height: 40px; }
+        #edit-package-container #edit-package form .control-group input[type="checkbox"], #edit-package-container #new-package form .control-group input[type="checkbox"], #new-package-container #edit-package form .control-group input[type="checkbox"], #new-package-container #new-package form .control-group input[type="checkbox"] {
+          margin: 0;
+          display: inline-block;
+          width: auto;
+          position: static; }
+        #edit-package-container #edit-package form .control-group .date-picker, #edit-package-container #new-package form .control-group .date-picker, #new-package-container #edit-package form .control-group .date-picker, #new-package-container #new-package form .control-group .date-picker {
+          max-width: 100%; }
+          #edit-package-container #edit-package form .control-group .date-picker label, #edit-package-container #new-package form .control-group .date-picker label, #new-package-container #edit-package form .control-group .date-picker label, #new-package-container #new-package form .control-group .date-picker label {
+            display: inline-block;
+            margin-right: 10px; }
+          #edit-package-container #edit-package form .control-group .date-picker input, #edit-package-container #new-package form .control-group .date-picker input, #new-package-container #edit-package form .control-group .date-picker input, #new-package-container #new-package form .control-group .date-picker input {
+            width: 10em; }
+          #edit-package-container #edit-package form .control-group .date-picker .hour-picker-from .invisible-label,
+          #edit-package-container #edit-package form .control-group .date-picker .hour-picker-to .invisible-label, #edit-package-container #new-package form .control-group .date-picker .hour-picker-from .invisible-label,
+          #edit-package-container #new-package form .control-group .date-picker .hour-picker-to .invisible-label, #new-package-container #edit-package form .control-group .date-picker .hour-picker-from .invisible-label,
+          #new-package-container #edit-package form .control-group .date-picker .hour-picker-to .invisible-label, #new-package-container #new-package form .control-group .date-picker .hour-picker-from .invisible-label,
+          #new-package-container #new-package form .control-group .date-picker .hour-picker-to .invisible-label {
+            visibility: hidden; }
+          #edit-package-container #edit-package form .control-group .date-picker .hour-picker-from select,
+          #edit-package-container #edit-package form .control-group .date-picker .hour-picker-to select, #edit-package-container #new-package form .control-group .date-picker .hour-picker-from select,
+          #edit-package-container #new-package form .control-group .date-picker .hour-picker-to select, #new-package-container #edit-package form .control-group .date-picker .hour-picker-from select,
+          #new-package-container #edit-package form .control-group .date-picker .hour-picker-to select, #new-package-container #new-package form .control-group .date-picker .hour-picker-from select,
+          #new-package-container #new-package form .control-group .date-picker .hour-picker-to select {
+            width: 4em; }
+        #edit-package-container #edit-package form .control-group .after-desc, #edit-package-container #new-package form .control-group .after-desc, #new-package-container #edit-package form .control-group .after-desc, #new-package-container #new-package form .control-group .after-desc {
+          margin: 10px 0 0 0; }
+        #edit-package-container #edit-package form .control-group .missing-field, #edit-package-container #new-package form .control-group .missing-field, #new-package-container #edit-package form .control-group .missing-field, #new-package-container #new-package form .control-group .missing-field {
+          margin-top: 5px;
+          color: #ef4d3d; }
+      #edit-package-container #edit-package form ol.stages, #edit-package-container #new-package form ol.stages, #new-package-container #edit-package form ol.stages, #new-package-container #new-package form ol.stages {
+        margin: 0 0 50px 0;
+        background: #cccccc; }
+        #edit-package-container #edit-package form ol.stages li, #edit-package-container #new-package form ol.stages li, #new-package-container #edit-package form ol.stages li, #new-package-container #new-package form ol.stages li {
+          background: transparent;
+          color: white;
+          font-weight: 400;
+          font-size: 18px; }
+          #edit-package-container #edit-package form ol.stages li:after, #edit-package-container #new-package form ol.stages li:after, #new-package-container #edit-package form ol.stages li:after, #new-package-container #new-package form ol.stages li:after {
+            border-color: #cccccc transparent; }
+          #edit-package-container #edit-package form ol.stages li:before, #edit-package-container #new-package form ol.stages li:before, #new-package-container #edit-package form ol.stages li:before, #new-package-container #new-package form ol.stages li:before {
+            color: white;
+            background: transparent;
+            border: solid 2px white;
+            font-weight: 400;
+            line-height: 23px; }
+          #edit-package-container #edit-package form ol.stages li.active .highlight, #edit-package-container #new-package form ol.stages li.active .highlight, #new-package-container #edit-package form ol.stages li.active .highlight, #new-package-container #new-package form ol.stages li.active .highlight {
+            color: white;
+            background: #0695d6; }
+          #edit-package-container #edit-package form ol.stages li.complete .highlight, #edit-package-container #new-package form ol.stages li.complete .highlight, #new-package-container #edit-package form ol.stages li.complete .highlight, #new-package-container #new-package form ol.stages li.complete .highlight {
+            color: white;
+            background: #cccccc; }
+      #edit-package-container #edit-package form .form-actions, #edit-package-container #new-package form .form-actions, #new-package-container #edit-package form .form-actions, #new-package-container #new-package form .form-actions {
+        border: none;
+        padding: 50px 0 0 0;
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase; }
+        #edit-package-container #edit-package form .form-actions .btn, #edit-package-container #new-package form .form-actions .btn, #new-package-container #edit-package form .form-actions .btn, #new-package-container #new-package form .form-actions .btn {
+          float: none !important;
+          padding: 12px; }
+    #edit-package-container #edit-package #delete-modal form, #edit-package-container #new-package #delete-modal form, #new-package-container #edit-package #delete-modal form, #new-package-container #new-package #delete-modal form {
+      padding: 0;
+      margin: 0;
+      box-shadow: none; }
     #edit-package-container #edit-package .edit-resources-button, #edit-package-container #new-package .edit-resources-button, #new-package-container #edit-package .edit-resources-button, #new-package-container #new-package .edit-resources-button {
       float: right;
       margin: 20px 0; }
+
+#resource-edit a.btn {
+  text-transform: uppercase;
+  margin-left: 0; }
+#resource-edit a.btn.hover {
+  color: white;
+  background-color: #767676;
+  cursor: pointer; }
+#resource-edit a.btn-remove-url {
+  top: 8px;
+  right: 8px; }
+#resource-edit .icon-cloud-upload,
+#resource-edit .icon-globe {
+  display: none; }
+#resource-edit #resource-attributes-form {
+  padding-top: 30px;
+  border-top: solid 1px #cccccc; }
+  #resource-edit #resource-attributes-form .resource-attributes-actions {
+    text-align: right;
+    padding: 30px 0;
+    border-top: solid 1px #cccccc; }
+  #resource-edit #resource-attributes-form .resource-attributes-group {
+    padding-top: 30px;
+    border-top: solid 1px #cccccc; }
+  #resource-edit #resource-attributes-form .control-full + .resource-attributes-group {
+    padding-top: 0;
+    border-top: none; }
+#resource-edit h2.blue {
+  color: #0695d6;
+  margin: 0 0 10px 0; }
+
+#edit-package #delete-modal .modal-content {
+  -o-box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+#edit-package #delete-modal .modal-body {
+  padding: 50px; }
+  #edit-package #delete-modal .modal-body h1 {
+    margin: 0; }
+  #edit-package #delete-modal .modal-body button {
+    padding: 12px; }
 
 .resource-container {
   padding-right: 0;
@@ -4625,14 +5542,17 @@ div#background-container {
 
 #edit-group-container, #new-group-container {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  height: 100%; }
   @media (min-width: 992px) {
     #edit-group-container, #new-group-container {
       padding-right: 15px;
       padding-left: 15px; } }
   #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
     color: #424242;
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 0;
+    height: 100%; }
     @media (min-width: 992px) {
       #edit-group-container #edit-group, #edit-group-container #new-group, #new-group-container #edit-group, #new-group-container #new-group {
         -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
@@ -4644,7 +5564,7 @@ div#background-container {
       font-weight: 400;
       font-size: 40px; }
     #edit-group-container #edit-group form, #edit-group-container #new-group form, #new-group-container #edit-group form, #new-group-container #new-group form {
-      padding: 20px 50px;
+      padding: 50px;
       -o-border-radius: 4px;
       -moz-border-radius: 4px;
       -webkit-border-radius: 4px;
@@ -4664,14 +5584,8 @@ div#background-container {
         width: 100%;
         font-size: 16px;
         line-height: 1.2;
-        padding: 5px;
-        height: 29.2px; }
-      #edit-group-container #edit-group form input[type="checkbox"], #edit-group-container #new-group form input[type="checkbox"], #new-group-container #edit-group form input[type="checkbox"], #new-group-container #new-group form input[type="checkbox"] {
-        -webkit-transform: scale(1.3);
-        -moz-transform: scale(1.3);
-        -ms-transform: scale(1.3);
-        -o-transform: scale(1.3);
-        transform: scale(1.3); }
+        padding: 10px;
+        height: 39.2px; }
       #edit-group-container #edit-group form .control-custom .input-prepend, #edit-group-container #new-group form .control-custom .input-prepend, #new-group-container #edit-group form .control-custom .input-prepend, #new-group-container #new-group form .control-custom .input-prepend {
         width: 100%;
         white-space: normal;
@@ -4682,8 +5596,8 @@ div#background-container {
           width: 20%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
         #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove {
           position: absolute;
           top: 50%;
@@ -4693,8 +5607,8 @@ div#background-container {
           margin: -1em 0 0 0;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
           #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove:before, #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove:after, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove:before, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove:after, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove:before, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove:after, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove:before, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove:after {
             content: initial; }
           #edit-group-container #edit-group form .control-custom .input-prepend label.icon-remove span, #edit-group-container #new-group form .control-custom .input-prepend label.icon-remove span, #new-group-container #edit-group form .control-custom .input-prepend label.icon-remove span, #new-group-container #new-group form .control-custom .input-prepend label.icon-remove span {
@@ -4705,33 +5619,155 @@ div#background-container {
           width: 65%;
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
+          padding: 10px;
+          height: 39.2px; }
       #edit-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox, #edit-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox, #new-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox, #new-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox {
-        width: 1px;
-        height: 1px;
-        position: fixed;
-        left: -10px;
-        top: -10px; }
+        display: inline-block;
+        width: auto;
+        margin: 0;
+        position: static;
+        vertical-align: baseline; }
       #edit-group-container #edit-group form .package-groups label.package-group-label, #edit-group-container #new-group form .package-groups label.package-group-label, #new-group-container #edit-group form .package-groups label.package-group-label, #new-group-container #new-group form .package-groups label.package-group-label {
-        color: #cccccc;
+        color: #999999;
         margin: 0;
         padding: 2px 0; }
         #edit-group-container #edit-group form .package-groups label.package-group-label:after, #edit-group-container #new-group form .package-groups label.package-group-label:after, #new-group-container #edit-group form .package-groups label.package-group-label:after, #new-group-container #new-group form .package-groups label.package-group-label:after {
-          content: initial; }
-        #edit-group-container #edit-group form .package-groups label.package-group-label:hover, #edit-group-container #new-group form .package-groups label.package-group-label:hover, #new-group-container #edit-group form .package-groups label.package-group-label:hover, #new-group-container #new-group form .package-groups label.package-group-label:hover {
-          color: #0695d6; }
-      #edit-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #edit-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-group-container #edit-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label, #new-group-container #new-group form .package-groups input[type="checkbox"].package-group-checkbox:checked + label.package-group-label {
-        color: #0695d6; }
+          content: none; }
       #edit-group-container #edit-group form .control-group, #edit-group-container #new-group form .control-group, #new-group-container #edit-group form .control-group, #new-group-container #new-group form .control-group {
         position: relative; }
         #edit-group-container #edit-group form .control-group.error .input-prepend .add-on, #edit-group-container #new-group form .control-group.error .input-prepend .add-on, #new-group-container #edit-group form .control-group.error .input-prepend .add-on, #new-group-container #new-group form .control-group.error .input-prepend .add-on {
           font-size: 16px;
           line-height: 1.2;
-          padding: 5px;
-          height: 29.2px; }
-    #edit-group-container #edit-group .group-warning span, #edit-group-container #new-group .group-warning span, #new-group-container #edit-group .group-warning span, #new-group-container #new-group .group-warning span {
-      color: #870000; }
+          padding: 10px;
+          height: 39.2px; }
+    #edit-group-container #edit-group .back-btn, #edit-group-container #new-group .back-btn, #new-group-container #edit-group .back-btn, #new-group-container #new-group .back-btn {
+      padding: 20px 0; }
+    #edit-group-container #edit-group h1, #edit-group-container #new-group h1, #new-group-container #edit-group h1, #new-group-container #new-group h1 {
+      color: #0695d6;
+      font-weight: 400;
+      font-size: 40px;
+      margin: 0 0 20px 0; }
+    #edit-group-container #edit-group form, #edit-group-container #new-group form, #new-group-container #edit-group form, #new-group-container #new-group form {
+      padding: 50px;
+      margin: 0 0 50px 0; }
+      #edit-group-container #edit-group form .control-group, #edit-group-container #new-group form .control-group, #new-group-container #edit-group form .control-group, #new-group-container #new-group form .control-group {
+        margin: 0 0 30px 0;
+        padding: 0; }
+        #edit-group-container #edit-group form .control-group label, #edit-group-container #new-group form .control-group label, #new-group-container #edit-group form .control-group label, #new-group-container #new-group form .control-group label {
+          display: block;
+          float: none;
+          margin: 0 0 10px 0;
+          padding: 0;
+          width: 100%;
+          font-size: 20px;
+          color: #999999; }
+          #edit-group-container #edit-group form .control-group label:after, #edit-group-container #new-group form .control-group label:after, #new-group-container #edit-group form .control-group label:after, #new-group-container #new-group form .control-group label:after {
+            content: none; }
+        #edit-group-container #edit-group form .control-group .controls, #edit-group-container #new-group form .control-group .controls, #new-group-container #edit-group form .control-group .controls, #new-group-container #new-group form .control-group .controls {
+          display: block;
+          margin: 0; }
+          #edit-group-container #edit-group form .control-group .controls.editor textarea, #edit-group-container #new-group form .control-group .controls.editor textarea, #new-group-container #edit-group form .control-group .controls.editor textarea, #new-group-container #new-group form .control-group .controls.editor textarea {
+            -o-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            border: solid 1px #cccccc; }
+          #edit-group-container #edit-group form .control-group .controls.editor .editor-info-block, #edit-group-container #new-group form .control-group .controls.editor .editor-info-block, #new-group-container #edit-group form .control-group .controls.editor .editor-info-block, #new-group-container #new-group form .control-group .controls.editor .editor-info-block {
+            display: none; }
+      #edit-group-container #edit-group form .form-actions, #edit-group-container #new-group form .form-actions, #new-group-container #edit-group form .form-actions, #new-group-container #new-group form .form-actions {
+        text-align: center;
+        padding: 50px 0 0 0;
+        margin: 0;
+        border: none; }
+      #edit-group-container #edit-group form .slug-preview, #edit-group-container #new-group form .slug-preview, #new-group-container #edit-group form .slug-preview, #new-group-container #new-group form .slug-preview {
+        margin: 10px 0 0 0; }
+        #edit-group-container #edit-group form .slug-preview .btn-mini, #edit-group-container #new-group form .slug-preview .btn-mini, #new-group-container #edit-group form .slug-preview .btn-mini, #new-group-container #new-group form .slug-preview .btn-mini {
+          background: none;
+          display: inline;
+          padding: 0;
+          color: #0695d6;
+          border: none;
+          box-shadow: none; }
+      #edit-group-container #edit-group form .add-on, #edit-group-container #new-group form .add-on, #new-group-container #edit-group form .add-on, #new-group-container #new-group form .add-on {
+        height: 40px;
+        line-height: 2; }
+      #edit-group-container #edit-group form #field-url, #edit-group-container #new-group form #field-url, #new-group-container #edit-group form #field-url, #new-group-container #new-group form #field-url {
+        height: 40px; }
+      #edit-group-container #edit-group form .btn-remove-url, #edit-group-container #new-group form .btn-remove-url, #new-group-container #edit-group form .btn-remove-url, #new-group-container #new-group form .btn-remove-url {
+        top: 9px; }
+      #edit-group-container #edit-group form .img-title, #edit-group-container #new-group form .img-title, #new-group-container #edit-group form .img-title, #new-group-container #new-group form .img-title {
+        font-size: 20px;
+        color: #999999; }
+      #edit-group-container #edit-group form .img-description, #edit-group-container #new-group form .img-description, #new-group-container #edit-group form .img-description, #new-group-container #new-group form .img-description {
+        margin: 0; }
+      #edit-group-container #edit-group form .image-upload .icon-cloud-upload, #edit-group-container #edit-group form .image-upload .icon-globe, #edit-group-container #new-group form .image-upload .icon-cloud-upload, #edit-group-container #new-group form .image-upload .icon-globe, #new-group-container #edit-group form .image-upload .icon-cloud-upload, #new-group-container #edit-group form .image-upload .icon-globe, #new-group-container #new-group form .image-upload .icon-cloud-upload, #new-group-container #new-group form .image-upload .icon-globe {
+        display: none; }
+      #edit-group-container #edit-group form .image-upload a.btn, #edit-group-container #new-group form .image-upload a.btn, #new-group-container #edit-group form .image-upload a.btn, #new-group-container #new-group form .image-upload a.btn {
+        margin-left: 0;
+        text-transform: uppercase;
+        padding: 12px; }
+      #edit-group-container #edit-group form .image-upload a.btn-remove-url, #edit-group-container #new-group form .image-upload a.btn-remove-url, #new-group-container #edit-group form .image-upload a.btn-remove-url, #new-group-container #new-group form .image-upload a.btn-remove-url {
+        padding: 0 4px; }
+      #edit-group-container #edit-group form .image-upload a.hover, #edit-group-container #new-group form .image-upload a.hover, #new-group-container #edit-group form .image-upload a.hover, #new-group-container #new-group form .image-upload a.hover {
+        color: white;
+        cursor: pointer; }
+      #edit-group-container #edit-group form button, #edit-group-container #new-group form button, #new-group-container #edit-group form button, #new-group-container #new-group form button {
+        padding: 12px; }
+    #edit-group-container #edit-group #delete-modal .modal-content, #edit-group-container #new-group #delete-modal .modal-content, #new-group-container #edit-group #delete-modal .modal-content, #new-group-container #new-group #delete-modal .modal-content {
+      -o-box-shadow: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none; }
+    #edit-group-container #edit-group #delete-modal .modal-body, #edit-group-container #new-group #delete-modal .modal-body, #new-group-container #edit-group #delete-modal .modal-body, #new-group-container #new-group #delete-modal .modal-body {
+      padding: 50px; }
+    #edit-group-container #edit-group #delete-modal form, #edit-group-container #new-group #delete-modal form, #new-group-container #edit-group #delete-modal form, #new-group-container #new-group #delete-modal form {
+      padding: 0;
+      margin: 0;
+      box-shadow: none; }
+
+#group-imgs-modal.modal .modal-content {
+  -o-box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+#group-imgs-modal.modal .modal-body {
+  max-height: inherit;
+  padding: 50px; }
+  #group-imgs-modal.modal .modal-body label:after {
+    content: none; }
+  #group-imgs-modal.modal .modal-body p {
+    margin-bottom: 30px; }
+  #group-imgs-modal.modal .modal-body .radio-container {
+    margin-bottom: 30px; }
+    #group-imgs-modal.modal .modal-body .radio-container .radio-box {
+      -o-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      border-radius: 4px;
+      border: solid 2px #f5f5f5; }
+      #group-imgs-modal.modal .modal-body .radio-container .radio-box h2 {
+        font-size: 22px; }
+      #group-imgs-modal.modal .modal-body .radio-container .radio-box.selected, #group-imgs-modal.modal .modal-body .radio-container .radio-box:hover {
+        border-color: #0695d6; }
+        #group-imgs-modal.modal .modal-body .radio-container .radio-box.selected .radio-description, #group-imgs-modal.modal .modal-body .radio-container .radio-box:hover .radio-description {
+          background-color: #0695d6;
+          color: white; }
+      #group-imgs-modal.modal .modal-body .radio-container .radio-box.not-selected {
+        opacity: 0.75; }
+        #group-imgs-modal.modal .modal-body .radio-container .radio-box.not-selected:hover {
+          opacity: 1; }
+    #group-imgs-modal.modal .modal-body .radio-container label.img-radio {
+      text-align: center;
+      font-weight: 400;
+      margin: 0 0 10px 0; }
+      #group-imgs-modal.modal .modal-body .radio-container label.img-radio input {
+        position: absolute;
+        left: -9999px;
+        top: -9999px; }
+      #group-imgs-modal.modal .modal-body .radio-container label.img-radio .radio-description {
+        padding: 10px; }
+  #group-imgs-modal.modal .modal-body button {
+    padding: 12px; }
 
 ul.activity {
   background: none;
@@ -4745,5 +5781,205 @@ ul.activity {
       margin: 5px; }
   ul.activity li.load-more {
     display: none !important; }
+
+#template-config-container {
+  padding-right: 0;
+  padding-left: 0;
+  height: 100%;
+  display: table-row; }
+  @media (min-width: 992px) {
+    #template-config-container {
+      padding-right: 15px;
+      padding-left: 15px; } }
+  #template-config-container #template-config {
+    overflow: hidden;
+    color: #424242;
+    font-size: 16px;
+    height: 100%;
+    padding: 0;
+    color: #767676; }
+    @media (min-width: 992px) {
+      #template-config-container #template-config {
+        -o-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -moz-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        -webkit-box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5);
+        box-shadow: 0 -2px 4px 0 rgba(150, 150, 150, 0.5); } }
+    #template-config-container #template-config .main-config-container {
+      padding-left: 20px;
+      padding-right: 20px; }
+    #template-config-container #template-config form {
+      margin: 0;
+      padding: 0; }
+    #template-config-container #template-config h1 {
+      color: #0695d6;
+      font-weight: 400;
+      margin: 50px 0 30px 0;
+      font-size: 40px; }
+      #template-config-container #template-config h1.small-margin {
+        margin-bottom: 10px; }
+    #template-config-container #template-config h2 {
+      font-weight: 400;
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      color: #999999; }
+      #template-config-container #template-config h2.blue {
+        color: #0695d6; }
+    #template-config-container #template-config .with-bottom-margin {
+      margin-bottom: 30px; }
+    #template-config-container #template-config p, #template-config-container #template-config label {
+      margin: 0 0 10px 0;
+      font-weight: 400;
+      font-size: 16px; }
+      #template-config-container #template-config p:after, #template-config-container #template-config label:after {
+        content: none; }
+    #template-config-container #template-config .radio-container {
+      margin-bottom: 30px; }
+      #template-config-container #template-config .radio-container .radio-box {
+        -o-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        border: solid 2px #f5f5f5; }
+        #template-config-container #template-config .radio-container .radio-box.selected, #template-config-container #template-config .radio-container .radio-box:hover {
+          border-color: #0695d6; }
+          #template-config-container #template-config .radio-container .radio-box.selected .radio-description, #template-config-container #template-config .radio-container .radio-box:hover .radio-description {
+            background-color: #0695d6;
+            color: white; }
+            #template-config-container #template-config .radio-container .radio-box.selected .radio-description h2, #template-config-container #template-config .radio-container .radio-box:hover .radio-description h2 {
+              color: white; }
+        #template-config-container #template-config .radio-container .radio-box.not-selected {
+          opacity: 0.75; }
+          #template-config-container #template-config .radio-container .radio-box.not-selected:hover {
+            opacity: 1; }
+      #template-config-container #template-config .radio-container label.img-radio {
+        text-align: center;
+        font-weight: 400;
+        margin: 0 0 10px 0; }
+        #template-config-container #template-config .radio-container label.img-radio input {
+          position: absolute;
+          left: -9999px;
+          top: -9999px; }
+        #template-config-container #template-config .radio-container label.img-radio .radio-description {
+          padding: 20px; }
+          #template-config-container #template-config .radio-container label.img-radio .radio-description h2 {
+            color: #767676; }
+    #template-config-container #template-config input[type="text"] {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 10px;
+      height: auto;
+      font-size: 16px;
+      color: #767676; }
+    #template-config-container #template-config .checkbox-label {
+      font-size: 20px;
+      color: #999999; }
+    #template-config-container #template-config input[type="checkbox"] {
+      margin: 0 5px 0 0;
+      position: static; }
+    #template-config-container #template-config .file-upload-container {
+      position: relative;
+      margin: 0 0 30px 0; }
+      #template-config-container #template-config .file-upload-container label[for="background-image"],
+      #template-config-container #template-config .file-upload-container label[for="image"] {
+        margin: 0;
+        position: relative;
+        top: -2px; }
+      #template-config-container #template-config .file-upload-container p {
+        margin: 0; }
+      #template-config-container #template-config .file-upload-container input[type="file"] {
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        visibility: hidden;
+        position: absolute;
+        top: -9999px;
+        left: -9999px; }
+      #template-config-container #template-config .file-upload-container .filename-input {
+        display: inline-block;
+        margin: 0 10px 10px 0;
+        width: 400px;
+        background-color: white;
+        padding-right: 3em; }
+      #template-config-container #template-config .file-upload-container .upload-file-button {
+        display: inline-block;
+        height: 42px;
+        color: white;
+        background: #999999;
+        border: none;
+        padding: 12px;
+        -o-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px; }
+        #template-config-container #template-config .file-upload-container .upload-file-button:hover {
+          background-color: #999999; }
+      #template-config-container #template-config .file-upload-container .icon-remove-sign {
+        color: #cccccc;
+        position: absolute;
+        top: 8px;
+        font-size: 24px;
+        left: 367px;
+        cursor: pointer;
+        display: none; }
+      #template-config-container #template-config .file-upload-container.with-image .icon-remove-sign {
+        display: inline-block; }
+    #template-config-container #template-config textarea {
+      color: #767676;
+      width: 100%;
+      font-size: 16px;
+      margin-bottom: 30px;
+      padding: 10px;
+      height: 100px; }
+    #template-config-container #template-config .submit-container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-align: center; }
+      #template-config-container #template-config .submit-container .submit-button {
+        background-color: #0695d6;
+        color: white;
+        border: none;
+        -o-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        padding: 12px; }
+        #template-config-container #template-config .submit-container .submit-button:hover {
+          background-color: #17b2f8; }
+
+#template-config #navbar {
+  background: #f5f5f5;
+  height: 100%;
+  padding: 50px 0;
+  margin-bottom: -99999px;
+  padding-bottom: 99999px; }
+  #template-config #navbar h2 {
+    font-size: 18px;
+    color: #0695d6;
+    margin: 0 0 10px 0;
+    font-weight: 400;
+    padding: 0 20px; }
+  #template-config #navbar .links-section {
+    border-bottom: solid 1px #cccccc;
+    margin-bottom: 10px; }
+    #template-config #navbar .links-section a.section-link {
+      display: block;
+      padding: 10px 20px;
+      color: #999999; }
+      #template-config #navbar .links-section a.section-link:hover, #template-config #navbar .links-section a.section-link.active {
+        cursor: pointer;
+        background: #e5e5e5;
+        color: #0695d6; }
+    #template-config #navbar .links-section.guide-link {
+      padding: 60px 20px 10px 20px;
+      color: #999999; }
+      #template-config #navbar .links-section.guide-link i {
+        color: #0695d6;
+        font-size: 18px; }
+      #template-config #navbar .links-section.guide-link .blue {
+        color: #0695d6; }
+      #template-config #navbar .links-section.guide-link a {
+        color: inherit; }
+        #template-config #navbar .links-section.guide-link a:hover i, #template-config #navbar .links-section.guide-link a:hover .blue {
+          color: #17b2f8; }
 
 /*# sourceMappingURL=gobar_style.css.map */

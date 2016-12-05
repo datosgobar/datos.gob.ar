@@ -43,4 +43,5 @@ docs/_build/
 .sass-cache
 .idea
 mockups
+
 ckanext/gobar_theme/public/user_images

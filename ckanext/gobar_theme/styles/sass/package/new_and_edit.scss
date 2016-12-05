@@ -1,11 +1,206 @@
 #edit-package-container, #new-package-container {
   @include base-container();
-  #edit-package, #new-package{
+  height: 100%;
+  #edit-package, #new-package {
     @include base-content();
     @include base-form();
+    height: 100%;
+    padding: 0;
+
+    .back-btn {
+      margin: 20px 0;
+    }
+
+    h1 {
+      color: $blue-300;
+      margin: 20px 0;
+    }
+
     form {
-      ol {
-        margin: 0 0 10px 0;
+      padding: 50px;
+      margin: 0 0 50px 0;
+
+      .resource-nav {
+        margin: 0 0 50px 0;
+        padding: 0;
+        color: white;
+        background: $grey-200;
+        text-align: center;
+        a, a:hover {
+          color: white;
+          div {
+            padding: 10px 0;
+            &.active {
+              background: $blue-300;
+            }
+          }
+        }
+      }
+
+      .control-group {
+        margin: 0 0 30px 0;
+        label {
+          font-size: 20px;
+          color: $grey-300;
+          padding: 0;
+          display: block;
+          float: none;
+          margin: 0 0 10px 0;
+          width: auto;
+          &:after {
+            content: none;
+          }
+          &.package-group-label {
+            color: $grey-400;
+            font-size: 16px;
+            padding: 3px 0;
+          }
+          &.detail-hour {
+            font-size: 16px;
+            color: $grey-400;
+            margin-bottom: 30px;
+          }
+          &.picker-date-from,
+          &.picker-date-to {
+            font-size: 16px;
+            color: $grey-400;
+          }
+          &.no-margin {
+            margin: 0;
+          }
+        }
+
+        select {
+          width: 24em;
+          max-width: 100%;
+        }
+
+        .controls {
+          margin: 0;
+          &.editor {
+            textarea {
+              @include border-radius(4px);
+              border: solid 1px $grey-200;
+            }
+            .editor-info-block {
+              display: none;
+            }
+          }
+          .select2-container {
+            .select2-choices {
+              background: transparent;
+            }
+          }
+        }
+
+        .control-required {
+          color: inherit;
+        }
+        .slug-preview {
+          margin: 30px 0 0 0;
+          .btn-mini {
+            background: none;
+            display: inline;
+            padding: 0;
+            color: $blue-300;
+            border: none;
+            box-shadow: none;
+          }
+        }
+        .add-on {
+          height: 40px;
+          line-height: 2;
+        }
+        .add-on + input {
+          height: 40px;
+        }
+
+        input[type="checkbox"] {
+          margin: 0;
+          display: inline-block;
+          width: auto;
+          position: static;
+        }
+
+        .date-picker {
+          max-width: 100%;
+          label {
+            display: inline-block;
+            margin-right: 10px;
+          }
+          input {
+            width: 10em;
+          }
+          .hour-picker-from,
+          .hour-picker-to {
+            .invisible-label {
+              visibility: hidden;
+            }
+            select {
+              width: 4em;
+            }
+          }
+
+        }
+
+        .after-desc {
+          margin: 10px 0 0 0;
+        }
+        .missing-field {
+          margin-top: 5px;
+          color: $red-300;
+        }
+      }
+      ol.stages {
+        margin: 0 0 50px 0;
+        background: $grey-200;
+        li {
+          background: transparent;
+          color: white;
+          font-weight: 400;
+          font-size: 18px;
+          &:after {
+            border-color: $grey-200 transparent;
+          }
+          &:before {
+            color: white;
+            background: transparent;
+            border: solid 2px white;
+            font-weight: 400;
+            line-height: 23px;
+          }
+          &.active {
+            .highlight {
+              color: white;
+              background: $blue-300;
+            }
+          }
+          &.complete {
+            .highlight {
+              color: white;
+              background: $grey-200;
+            }
+          }
+        }
+      }
+      .form-actions {
+        border: none;
+        padding: 50px 0 0 0;
+        margin: 0;
+        text-align: center;
+        text-transform: uppercase;
+        .btn {
+          float: none !important;
+          padding: 12px;
+        }
+      }
+    }
+
+    #delete-modal {
+      form {
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
       }
     }
     .edit-resources-button {
@@ -14,3 +209,5 @@
     }
   }
 }
+
+@import 'snippets/resource_form';

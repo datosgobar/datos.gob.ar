@@ -1,8 +1,12 @@
+# coding=utf-8
 import ckan.logic as logic
 import ckan.lib.helpers as ckan_helpers
 from urlparse import urlparse
 from ckan.common import request, c, g, _
 import ckan.lib.formatters as formatters
+import json
+from urlparse import urljoin
+from config_controller import GobArConfigController
 
 
 def _get_organizations_objs(organizations_branch, depth=0):
@@ -11,7 +15,7 @@ def _get_organizations_objs(organizations_branch, depth=0):
         organization = ckan_helpers.get_organization(org=tree_obj['name'])
         organization['depth'] = depth
         if 'children' in tree_obj and len(tree_obj['children']) > 0:
-            organization['children'] = _get_organizations_objs(tree_obj['children'], depth=depth+1)
+            organization['children'] = _get_organizations_objs(tree_obj['children'], depth=depth + 1)
         organizations.append(organization)
     return organizations
 
@@ -87,12 +91,12 @@ def organizations_with_packages():
     organizations = logic.get_action('organization_list')({}, {'all_fields': True})
     organizations_with_at_least_one_package = [
         organization for organization in organizations if organization['package_count'] > 0
-    ]
+        ]
     return len(organizations_with_at_least_one_package)
 
 
 def get_pkg_extra(pkg, keyname):
-    if pkg['extras']:
+    if 'extras' in pkg and pkg['extras']:
         for extra in pkg['extras']:
             if extra['key'] == keyname:
                 return extra['value']
@@ -128,7 +132,8 @@ def organization_filters():
     if ckan_helpers.get_request_param('organization') in top_organizations:
         top_organizations[ckan_helpers.get_request_param('organization')]['active'] = True
 
-    top_organizations_with_results = [organization for organization in top_organizations.values() if organization['count'] > 0]
+    top_organizations_with_results = [organization for organization in top_organizations.values() if
+                                      organization['count'] > 0]
     sorted_organizations = sorted(top_organizations_with_results, key=lambda item: item['count'], reverse=True)
 
     limit = int(request.params.get('_organization_limit', g.facets_default_number))
@@ -157,3 +162,58 @@ def render_ar_datetime(datetime_):
         'timezone': datetime_.tzinfo.zone,
     }
     return _('{day} de {month} de {year}').format(**details)
+
+
+def get_theme_config(path=None, default=None):
+    return GobArConfigController.get_theme_config(path, default)
+
+
+def url_join(*args):
+    return urljoin(*args)
+
+
+def json_loads(json_string):
+    return json.loads(json_string)
+
+
+def update_frequencies():
+    return {
+        "R/P10Y": "Cada diez años",
+        "R/P4Y": "Cada cuatro años",
+        "R/P3Y": "Cada tres años",
+        "R/P2Y": "Cada dos años",
+        "R/P1Y": "Anualmente",
+        "R/P6M": "Cada medio año",
+        "R/P4M": "Cuatrimestralmente",
+        "R/P3M": "Trimestralmente",
+        "R/P2M": "Bimestralmente",
+        "R/P1M": "Mensualmente",
+        "R/P0.5M": "Cada 15 días",
+        "R/P0.33M": "Tres veces por mes",
+        "R/P1W": "Semanalmente",
+        "R/P3.5D": "Cada media semana",
+        "R/P0.5W": "Dos veces a la semana",
+        "R/P0.33W": "Tres veces a la semana",
+        "R/P1D": "Diariamente",
+        "R/PT1H": "Cada hora",
+        "R/PT1S": "Continuamente actualizado",
+        'eventual': 'Eventual'
+    }
+
+
+def field_types():
+    return {
+        "string": "Texto (string)",
+        "integer": "Número entero (integer)",
+        "number": "Número decimal (number)",
+        "boolean": "Verdadero/falso (boolean)",
+        "time": "Tiempo ISO-8601 (time)",
+        "date": "Fecha ISO-8601 (date)",
+        "date-time": "Fecha y hora ISO-8601 (date-time)",
+        "object": "JSON (object)",
+        "geojson": "GeoJSON (geojson)",
+        "geo_point": "GeoPoint (geo_point)",
+        "array": "Lista de valores en formato JSON (array)",
+        "binary": "Valor binario en base64 (binary)",
+        "any": "Otro (any)"
+    }

@@ -1,7 +1,7 @@
-{% set truncate_maintainer = 150 %}
-{% set truncate_description = 250 %}
-{% set title = package.title or package.name %}
-{% set notes = h.markdown_extract(package.notes, extract_length=truncate) %}
+{%- set truncate_maintainer = 150 -%}
+{%- set truncate_description = 250 -%}
+{%- set title = package.title or package.name -%}
+{%- set notes = h.markdown_extract(package.notes, extract_length=truncate) -%}
 
 <a href="{{ h.url_for(controller='package', action='read', id=package.name) }}" class="dataset-item">
     <div class="dataset-container">
@@ -14,15 +14,24 @@
                     <div class="dataset-notes">{{ h.cut_text(notes, 190)|urlize }}</div>
                 </div>
                 <div class="dataset-groups-and-resources col-xs-3">
-                    <div class="dataset-groups">
-                        {% for group in package.groups %}
-                            <img src="{{ h.cut_img_path(group.image_display_url) }}" title="{{ group.title }}" class="group-image">
-                        {% endfor %}
-                    </div>
+                    {%- if show_group_imgs -%}
+                        <div class="dataset-groups">
+                            {%- for group in package.groups -%}
+                                {%- if group.image_display_url and group.image_display_url|length > 0 -%}
+                                    <img src="{{ h.cut_img_path(group.image_display_url) }}" title="{{ group.title }}" class="group-image">
+                                {%- endif -%}
+                            {%- endfor -%}
+                        </div>
+                    {%- endif -%}
                     <div class="dataset-resources">
-                        {% for resource in h.dict_list_reduce(package.resources, 'format') %}
+                        {%- if not show_group_imgs -%}
+                            {%- for group in package.groups -%}
+                                <span class="label group">{{ group.title }}</span>
+                            {%- endfor %}
+                        {%- endif -%}
+                        {%- for resource in h.dict_list_reduce(package.resources, 'format') -%}
                             <span class="label" data-format="{{ resource.lower() }}">{{ resource.lower() }}</span>
-                        {% endfor %}
+                        {%- endfor -%}
                     </div>
                 </div>
             </div>

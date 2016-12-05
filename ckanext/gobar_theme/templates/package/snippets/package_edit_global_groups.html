@@ -1,0 +1,32 @@
+{% set global_groups = [
+  {"id": "AGRI", "label": "Agricultura, pesca, silvicultura y alimentación"},
+  {"id": "ECON", "label": "Economía y finanzas"},
+  {"id": "EDUC", "label": "Educación, cultura y deportes"},
+  {"id": "ENER", "label": "Energía"},
+  {"id": "ENVI", "label": "Medio ambiente"},
+  {"id": "GOVE", "label": "Gobierno y sector público"},
+  {"id": "HEAL", "label": "Salud"},
+  {"id": "INTR", "label": "Asuntos internacionales"},
+  {"id": "JUST", "label": "Justicia, sistema judicial y seguridad pública"},
+  {"id": "REGI", "label": "Regiones y ciudades"},
+  {"id": "SOCI", "label": "Población y sociedad"},
+  {"id": "TECH", "label": "Ciencia y tecnología"},
+  {"id": "TRAN", "label": "Transporte"}
+] %}
+
+{% set selected_global_groups = h.json_loads(h.get_pkg_extra(data, 'globalGroups') or '[]') %}
+
+<div class="control-group control-full">
+    <label class="control-label" for="field-groups">* Temas globales</label>
+    <p>Estos temas <strong>no se verán en tu portal</strong>. Al elegirlos, <strong>ayudás a que el portal nacional
+        datos.gob.ar pueda republicar el dataset con facilidad</strong>.</p>
+    <div class="controls package-groups super-groups">
+        {% for group in global_groups %}
+            <label class="package-group-label" for="{{ group.id }}">
+                <input type="checkbox" class="package-global-group-checkbox"
+                       id="{{ group.id }}" {{ 'checked' if group.id in selected_global_groups else '' }}>
+                {{ group.label }}
+            </label>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,185 @@
+#template-config-container {
+  @include base-container();
+  height: 100%;
+  display: table-row;
+  #template-config {
+    overflow: hidden;
+    @include base-content();
+    height: 100%;
+    padding: 0;
+    color: $grey-400;
+
+    .main-config-container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    form {
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: $blue-300;
+      font-weight: 400;
+      margin: 50px 0 30px 0;
+      font-size: 40px;
+      &.small-margin {
+        margin-bottom: 10px;
+      }
+    }
+    h2 {
+      font-weight: 400;
+      margin: 0 0 10px 0;
+      font-size: 20px;
+      color: $grey-300;
+      &.blue {
+        color: $blue-300;
+      }
+    }
+    .with-bottom-margin {
+      margin-bottom: 30px;
+    }
+    p, label {
+      margin: 0 0 10px 0;
+      font-weight: 400;
+      font-size: 16px;
+      &:after {
+        content: none;
+      }
+    }
+    .radio-container {
+      margin-bottom: 30px;
+
+      .radio-box {
+        @include border-radius(4px);
+        border: solid 2px $grey-100;
+        &.selected, &:hover {
+          border-color: $blue-300;
+          .radio-description {
+            background-color: $blue-300;
+            color: white;
+            h2 {
+              color: white;
+            }
+          }
+        }
+        &.not-selected {
+          opacity: 0.75;
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+      label.img-radio {
+        text-align: center;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        input {
+          position: absolute;
+          left: -9999px;
+          top: -9999px;
+        }
+        .radio-description {
+          padding: 20px;
+          h2 {
+            color: $grey-400;
+          }
+        }
+      }
+    }
+    input[type="text"] {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 10px;
+      height: auto;
+      font-size: 16px;
+      color: $grey-400;
+    }
+    .checkbox-label {
+      font-size: 20px;
+      color: $grey-300;
+    }
+    input[type="checkbox"] {
+      margin: 0 5px 0 0;
+      position: static;
+    }
+    .file-upload-container {
+      position: relative;
+      margin: 0 0 30px 0;
+      label[for="background-image"],
+      label[for="image"]{
+        margin: 0;
+        position: relative;
+        top: -2px;
+      }
+      p {
+        margin: 0;
+      }
+      input[type="file"] {
+        display: inline-block;
+        width: 1px;
+        height: 1px;
+        visibility: hidden;
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      .filename-input {
+        display: inline-block;
+        margin: 0 10px 10px 0;
+        width: 400px;
+        background-color: white;
+        padding-right: 3em;
+      }
+      .upload-file-button {
+        display: inline-block;
+        height: 42px;
+        color: white;
+        background: $grey-300;
+        border: none;
+        padding: 12px;
+        @include border-radius(4px);
+        &:hover {
+          background-color: $grey-300;
+        }
+      }
+      .icon-remove-sign {
+        color: $grey-200;
+        position: absolute;
+        top: 8px;
+        font-size: 24px;
+        left: 367px;
+        cursor: pointer;
+        display: none;
+      }
+      &.with-image .icon-remove-sign {
+        display: inline-block;
+      }
+    }
+    textarea {
+      color: $grey-400;
+      width: 100%;
+      font-size: 16px;
+      margin-bottom: 30px;
+      padding: 10px;
+      height: 100px;
+    }
+    .submit-container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      text-align: center;
+      .submit-button {
+        background-color: $blue-300;
+        color: white;
+        border: none;
+        @include border-radius(4px);
+        padding: 12px;
+        &:hover {
+          background-color: $blue-200;
+        }
+      }
+    }
+
+  }
+}

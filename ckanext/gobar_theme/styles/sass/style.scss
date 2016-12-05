@@ -15,6 +15,7 @@ body {
   background: #fff;
   font-family: 'Roboto', sans-serif !important;
   font-weight: 400;
+  color: $grey-400;
 }
 
 a {
@@ -46,6 +47,12 @@ div.svg-tooltip {
   max-width: 1440px;
   margin: auto;
   height: 100%;
+  &:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+  }
 }
 
 .container, .container-fluid,
@@ -55,14 +62,15 @@ div.svg-tooltip {
 .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5,
 .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12,
 .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @import 'utils/selective_bourbon';
 @import 'utils/animate';
 @import 'utils/mixins';
 @import 'utils/media_queries';
+@import 'utils/bootstrap-datepicker3';
 
 .blue-gradient {
   @include linear-gradient(to right, $blue-350, $blue-400);
@@ -87,6 +95,7 @@ strong {
 @import 'static/about_pages';
 @import 'error';
 @import 'modals';
+@import 'buttons';
 @import 'home/index';
 @import 'user/login';
 @import 'user/read';
@@ -102,3 +111,5 @@ strong {
 @import 'package/snippets/resource_item';
 @import 'group/new_and_edit';
 @import 'activity_streams/activity_streams_items';
+@import 'config/config_base';
+@import 'config/navbar';

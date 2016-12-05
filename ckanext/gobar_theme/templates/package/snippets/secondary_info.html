@@ -3,24 +3,6 @@
 
     <div id="info-container">
 
-        {% if pkg.maintainer|length > 0 %}
-            <div class="row">
-                <div class="col-xs-5 title">
-                    Responsable
-                </div>
-                <div class="col-xs-7 value">
-                    <p class="pkg-maintainer">
-                        {{ pkg.maintainer }}
-                        {% if pkg.maintainer_email %}
-                            <a href="mailto:{{ pkg.maintainer_email }}">
-                                {% snippet "svg/mail.svg" %}
-                            </a>
-                        {% endif %}
-                    </p>
-                </div>
-            </div>
-        {% endif %}
-
         {% set dataset_url = h.url_for(controller='package', action='search') %}
 
         {% if pkg.groups|length > 0 %}
@@ -29,14 +11,22 @@
                     Temas
                 </div>
                 <div class="col-xs-7 value">
-                    {% for group in pkg.groups %}
+                    {%- set show_group_imgs = h.get_theme_config('groups.imgs') != 'hide-icons' -%}
+                    {%- for group in pkg.groups %}
                         <div class="group-img-container">
                             <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
-                                <img src="{{ h.cut_img_path(group.image_display_url) }}" data-title="{{ group.title }}"
-                                     class="group-image" data-replace="svg">
+                                {%- if show_group_imgs -%}
+                                    {%- if group.image_display_url|length > 0 -%}
+                                        <img src="{{ h.cut_img_path(group.image_display_url) }}"
+                                             data-title="{{ group.title }}"
+                                             class="group-image" data-replace="svg">
+                                    {%- endif -%}
+                                {%- else -%}
+                                    <span class="label group">{{ group.title }}</span>
+                                {%- endif -%}
                             </a>
                         </div>
-                    {% endfor %}
+                    {%- endfor %}
                 </div>
             </div>
         {% endif %}
@@ -60,6 +50,59 @@
 
         <div class="row">
             <div class="col-xs-5 title">
+                Licencia
+            </div>
+            <div class="col-xs-7 value">
+                {{ pkg.license_title }}
+            </div>
+        </div>
+
+        {% if pkg.extras %}
+            {% for extra in pkg.extras %}
+                {% if extra.key == 'updateFrequency' and extra.value|length > 0 %}
+                    <div class="row">
+                        <div class="col-xs-5 title">
+                            Frecuencia de actualización
+                        </div>
+                        <div class="col-xs-7 value">
+                            <p>{{ h.update_frequencies()[extra.value].decode('utf-8') }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        {% if pkg.maintainer|length > 0 %}
+            <div class="row">
+                <div class="col-xs-5 title">
+                    Responsable
+                </div>
+                <div class="col-xs-7 value">
+                    <p class="pkg-maintainer">
+                        {{ pkg.maintainer }}
+                        {% if pkg.maintainer_email %}
+                            <a href="mailto:{{ pkg.maintainer_email }}">
+                                {% snippet "svg/mail.svg" %}
+                            </a>
+                        {% endif %}
+                    </p>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if pkg.url %}
+            <div class="row">
+                <div class="col-xs-5 title">
+                    Fuente
+                </div>
+                <div class="col-xs-7 value">
+                    {{ pkg.url|urlize }}
+                </div>
+            </div>
+        {% endif %}
+
+        <div class="row">
+            <div class="col-xs-5 title">
                 Fecha de publicación
             </div>
             <div class="col-xs-7 value">
@@ -75,42 +118,6 @@
                 {{ h.render_ar_datetime(pkg.metadata_modified) }}
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-xs-5 title">
-                Licencia
-            </div>
-            <div class="col-xs-7 value">
-                {{ pkg.license_title }}
-            </div>
-        </div>
-
-        {% if pkg.url %}
-            <div class="row">
-                <div class="col-xs-5 title">
-                    Fuente
-                </div>
-                <div class="col-xs-7 value">
-                    {{ pkg.url|urlize }}
-                </div>
-            </div>
-        {% endif %}
-
-        {% if pkg.extras %}
-            {% for extra in pkg.extras %}
-                {% if extra.key != 'home_featured' and extra.key != 'Responsable' %}
-                    <div class="row">
-                        <div class="col-xs-5 title">
-                            {{ extra.key }}
-                        </div>
-                        <div class="col-xs-7 value">
-                            <p>{{ extra.value|urlize }}</p>
-                        </div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        {% endif %}
-
     </div>
 
     <div id="pkg-recent-activity">

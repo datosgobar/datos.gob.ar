@@ -10,6 +10,7 @@ class GobArRouter:
         self.home_routes = SubMapper(self.route_map, controller=self.home_controller)
         self.api_controller = 'ckanext.gobar_theme.controller:GobArApiController'
         self.package_controller = 'ckanext.gobar_theme.package_controller:GobArPackageController'
+        self.config_controller = 'ckanext.gobar_theme.config_controller:GobArConfigController'
 
     def redirect(self, *routes):
         for url_from, url_to in routes:
@@ -26,6 +27,7 @@ class GobArRouter:
         self.remove_tags()
         self.remove_revision()
         self.connect_api()
+        self.connect_template_config()
 
     def connect_home(self):
         self.home_routes.connect('/', action='index')
@@ -43,6 +45,7 @@ class GobArRouter:
     def connect_datasets(self):
         with SubMapper(self.route_map, controller=self.package_controller) as m:
             m.connect('search', '/dataset', action='search', highlight_actions='index search')
+            m.connect('add dataset', '/dataset/new', action='new')
         self.route_map.connect('/dataset/{id}/archivo/{resource_id}', action='resource_read', controller='package')
         self.redirect(
             ('/dataset/history/{id:.*?}', '/dataset/{id}'),
@@ -99,6 +102,8 @@ class GobArRouter:
     def connect_users(self):
         self.route_map.connect('login', '/635511788', action='login', controller='user')
         self.route_map.connect('/logout', action='logout', controller='user')
+        self.route_map.connect('user_datasets', '/user/{id:.*}', action='read',
+                               controller='ckanext.gobar_theme.controller:GobArUserController')
         self.redirect(
             ('/user/login', '/'),
             ('/user/generate_key/{id}', '/'),
@@ -136,3 +141,23 @@ class GobArRouter:
     def connect_api(self):
         with SubMapper(self.route_map, controller=self.api_controller, path_prefix='/api{ver:/3|}', ver='/3') as m:
             m.connect('/action/{logic_function}', action='action', conditions=dict(method=['GET', 'POST']))
+
+    def connect_template_config(self):
+        with SubMapper(self.route_map, controller=self.config_controller) as m:
+            m.connect('/configurar/titulo', action='edit_title')
+            m.connect('/configurar/portada', action='edit_home')
+            m.connect('/configurar/encabezado', action='edit_header')
+            m.connect('/configurar/temas', action='edit_groups')
+            m.connect('/configurar/redes', action='edit_social')
+            m.connect('/configurar/pie-de-pagina', action='edit_footer')
+            m.connect('/configurar/datasets', action='edit_datasets')
+            m.connect('/configurar/organizaciones', action='edit_organizations')
+            m.connect('/configurar/acerca', action='edit_about')
+            m.connect('/configurar/metadata/google_fb', action='edit_metadata_google_fb')
+            m.connect('/configurar/metadata/tw', action='edit_metadata_tw')
+            m.connect('/configurar/mensaje_de_bienvenida', action='edit_greetings')
+
+        self.redirect(
+            ('/configurar', '/configurar/titulo'),
+            ('/configurar', '/configurar/metadata')
+        )

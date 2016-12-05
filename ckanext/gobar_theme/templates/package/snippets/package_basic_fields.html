@@ -1,14 +1,60 @@
-{% ckan_extends %}
+{% import 'macros/form.html' as form %}
 
-{% block package_basic_fields_org %}
-    {{ super() }}
+{{ form.input('title', id='field-title', label='* Titulo del dataset', placeholder='Ej: Sistema de Contrataciones ELectrónicas (Argentina Compra)', value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target'}) }}
 
-    {% snippet "package/snippets/package_edit_groups.html", selected_groups=data.groups, remaining_groups=groups_available %}
+{% set prefix = h.url_for(controller='package', action='read', id='') %}
+{% set domain = h.url_for(controller='package', action='read', id='', qualified=true) %}
+{% set domain = domain|replace("http://", "")|replace("https://", "") %}
+{% set attrs = {'data-module': 'slug-preview-slug', 'data-module-prefix': domain, 'data-module-placeholder': '<dataset>'} %}
 
-    {{ form.input('home_featured', label='Mostrar tarjeta en la home', type='checkbox') }}
+{{ form.prepend('name', id='field-name', label=_('URL'), prepend=prefix, placeholder=_('eg. my-dataset'), value=data.name, error=errors.name, attrs=attrs, is_required=true) }}
 
-    {{ form.input('Responsable', label='Autor (nombre corto para tarjeta en la home)', type='text') }}
+{{ form.markdown_custom('notes', id='field-notes', label='* Descripción del dataset', placeholder='Ej: Datos correspondientes al Sistema de Contrataciones Electrónicas (Argentina Compra), incluyendo las contrataciones de bienes y servicios, el Sistema de Información de Proveedores (SIPRO) y el Catálogo de Bienes y Servicios (SIByS).', value=data.notes, error=errors.notes, after_desc='Por favor, no superes los 500 caracteres.') }}
 
-    {% resource 'gobar_js/package/form_actions.js' %}
+{# if we have a default group then this wants remembering #}
+{% if data.group_id %}
+    <input type="hidden" name="groups__0__id" value="{{ data.group_id }}"/>
+{% endif %}
 
-{% endblock %}
+{% set organizations_available = h.organizations_available('create_dataset') %}
+{% set show_organizations_selector = organizations_available %}
+
+{% if show_organizations_selector %}
+    {% set existing_org = data.owner_org or data.group_id %}
+    <div class="control-group">
+        <label for="field-organizations" class="control-label">* Organización</label>
+        <div class="controls">
+            <select id="field-organizations" name="owner_org" data-module="autocomplete">
+                {% if h.check_config_permission('create_unowned_dataset') %}
+                    <option value="" {% if not selected_org and data.id %}
+                            selected="selected" {% endif %}>{{ _('No organization') }}</option>
+                {% endif %}
+                {% for organization in organizations_available %}
+                    {# get out first org from users list only if there is not an existing org #}
+                    {% set selected_org = (existing_org and existing_org == organization.id) or (not existing_org and not data.id and organization.id == organizations_available[0].id) %}
+                    <option value="{{ organization.id }}" {% if selected_org %}
+                            selected="selected" {% endif %}>{{ organization.display_name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+{% endif %}
+
+{% set form_style = c.form_style or c.action %}
+
+
+{% if form_style == 'edit' %}
+    <div class="control-group">
+        <label for="field-private" class="control-label">{{ _('Visibility') }}</label>
+        <div class="controls">
+            <select id="field-private" name="private">
+                {% for option in [('True', _('Private')), ('False', _('Public'))] %}
+                    <option value="{{ option[0] }}"
+                            {% if option[0] == data.private|trim %}selected="selected"{% endif %}>{{ option[1] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+{% else %}
+    <input type="hidden" name="private" value="False" id="visibility">
+{% endif %}
