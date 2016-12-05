@@ -16,7 +16,6 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
         toolkit.add_resource('styles/css', 'gobar_css')
         toolkit.add_resource('js', 'gobar_js')
         toolkit.add_resource('recline', 'gobar_data_preview')
-        gobar_helpers.get_theme_config()  # TODO: revisar usos de la configuracion
 
     def before_map(self, routing_map):
         gobar_router = gobar_routes.GobArRouter(routing_map)
@@ -34,7 +33,6 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
             'get_pkg_extra': gobar_helpers.get_pkg_extra,
             'get_facet_items_dict': gobar_helpers.get_facet_items_dict,
             'render_ar_datetime': gobar_helpers.render_ar_datetime,
-            'get_theme_config': gobar_helpers.get_theme_config,
             'url_join': gobar_helpers.url_join,
             'json_loads': gobar_helpers.json_loads,
             'update_frequencies': gobar_helpers.update_frequencies,

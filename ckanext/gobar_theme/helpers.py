@@ -6,7 +6,6 @@ from ckan.common import request, c, g, _
 import ckan.lib.formatters as formatters
 import json
 from urlparse import urljoin
-from config_controller import GobArConfigController
 
 
 def _get_organizations_objs(organizations_branch, depth=0):
@@ -162,10 +161,6 @@ def render_ar_datetime(datetime_):
         'timezone': datetime_.tzinfo.zone,
     }
     return _('{day} de {month} de {year}').format(**details)
-
-
-def get_theme_config(path=None, default=None):
-    return GobArConfigController.get_theme_config(path, default)
 
 
 def url_join(*args):

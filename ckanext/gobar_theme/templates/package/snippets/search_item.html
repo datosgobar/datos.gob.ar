@@ -14,21 +14,14 @@
                     <div class="dataset-notes">{{ h.cut_text(notes, 190)|urlize }}</div>
                 </div>
                 <div class="dataset-groups-and-resources col-xs-3">
-                    {%- if show_group_imgs -%}
-                        <div class="dataset-groups">
-                            {%- for group in package.groups -%}
-                                {%- if group.image_display_url and group.image_display_url|length > 0 -%}
-                                    <img src="{{ h.cut_img_path(group.image_display_url) }}" title="{{ group.title }}" class="group-image">
-                                {%- endif -%}
-                            {%- endfor -%}
-                        </div>
-                    {%- endif -%}
+                    <div class="dataset-groups">
+                        {%- for group in package.groups -%}
+                            {%- if group.image_display_url and group.image_display_url|length > 0 -%}
+                                <img src="{{ h.cut_img_path(group.image_display_url) }}" title="{{ group.title }}" class="group-image">
+                            {%- endif -%}
+                        {%- endfor -%}
+                    </div>
                     <div class="dataset-resources">
-                        {%- if not show_group_imgs -%}
-                            {%- for group in package.groups -%}
-                                <span class="label group">{{ group.title }}</span>
-                            {%- endfor %}
-                        {%- endif -%}
                         {%- for resource in h.dict_list_reduce(package.resources, 'format') -%}
                             <span class="label" data-format="{{ resource.lower() }}">{{ resource.lower() }}</span>
                         {%- endfor -%}

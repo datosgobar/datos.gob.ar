@@ -11,18 +11,13 @@
                     Temas
                 </div>
                 <div class="col-xs-7 value">
-                    {%- set show_group_imgs = h.get_theme_config('groups.imgs') != 'hide-icons' -%}
                     {%- for group in pkg.groups %}
                         <div class="group-img-container">
                             <a href="{{ h.add_url_param(new_params={'groups': group.name}, alternative_url=dataset_url) }}">
-                                {%- if show_group_imgs -%}
-                                    {%- if group.image_display_url|length > 0 -%}
-                                        <img src="{{ h.cut_img_path(group.image_display_url) }}"
-                                             data-title="{{ group.title }}"
-                                             class="group-image" data-replace="svg">
-                                    {%- endif -%}
-                                {%- else -%}
-                                    <span class="label group">{{ group.title }}</span>
+                                {%- if group.image_display_url|length > 0 -%}
+                                    <img src="{{ h.cut_img_path(group.image_display_url) }}"
+                                         data-title="{{ group.title }}"
+                                         class="group-image" data-replace="svg">
                                 {%- endif -%}
                             </a>
                         </div>

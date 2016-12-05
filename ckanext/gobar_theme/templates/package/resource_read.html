@@ -6,10 +6,13 @@
 {% set res = c.resource %}
 
 {% block twitter_title -%}
-    <meta name="twitter:title" content="{{ h.get_theme_config('tw-metadata.title') }} | {{ res.name }}">
+    <meta name="twitter:title" content="Datos Argentina | {{ res.name }}">
+{%- endblock %}
+{% block twitter_img -%}
+    <meta name="twitter:description" content="{{ res.description }}">
 {%- endblock %}
 {% block twitter_description -%}
-    <meta name="twitter:description" content="{{ res.description }}">
+    <meta name="twitter:image:src" content="http://datos.gob.ar/img/twitter_card_data.png">
 {%- endblock %}
 
 
@@ -18,8 +21,7 @@
         <div class="restricted-max-width">
             <div class="resource col-xs-12 col-md-10 col-md-offset-1">
                 <div class="col-xs-12 back-to-pkg">
-                    {% set title = h.get_theme_config('title.site-title') %}
-                    <a href="{{ h.url_for(controller='package', action='search') }}">{{ title if title else '' }}</a> / <a href="{{ h.url_for(controller='package', action='read', id=pkg.name) }}">Dataset</a> / Recurso
+                    <a href="{{ h.url_for(controller='package', action='search') }}">Datos Argentina</a> / <a href="{{ h.url_for(controller='package', action='read', id=pkg.name) }}">Dataset</a> / Recurso
 
                     {% set can_edit = h.check_access('package_update', {'id':pkg.id }) %}
 
