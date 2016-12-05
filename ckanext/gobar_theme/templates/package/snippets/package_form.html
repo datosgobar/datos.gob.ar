@@ -14,8 +14,6 @@
 
     {% snippet 'package/snippets/package_basic_fields.html', data=data, errors=errors, licenses=c.licenses, groups_available=c.groups_available %}
 
-    {% snippet "package/snippets/package_edit_global_groups.html", data=data, remaining_groups=groups_available %}
-
     {% snippet "package/snippets/package_edit_groups.html", selected_groups=data.groups, remaining_groups=groups_available %}
 
     {% snippet 'package/snippets/package_secondary_fields.html', data=data, errors=errors, licenses=c.licenses, groups_available=c.groups_available %}

@@ -118,11 +118,6 @@ $(function () {
             description.after(errorTemplate)
         }
 
-        if (!$('.package-global-group-checkbox:checked').length > 0) {
-            isValid = false;
-            $('.super-groups').append(errorTemplate);
-        }
-
         var author = $('#field-author');
         if (!author.val().length > 0) {
             isValid = false;
