@@ -1,6 +1,6 @@
 {% import 'macros/form.html' as form %}
 
-{{ form.input('title', id='field-title', label='* Titulo del dataset', placeholder='Ej: Sistema de Contrataciones ELectrónicas (Argentina Compra)', value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target'}) }}
+{{ form.input('title', id='field-title', label='* Título del dataset', placeholder='Ej: Sistema de Contrataciones ELectrónicas (Argentina Compra)', value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target'}) }}
 
 {% set prefix = h.url_for(controller='package', action='read', id='') %}
 {% set domain = h.url_for(controller='package', action='read', id='', qualified=true) %}
