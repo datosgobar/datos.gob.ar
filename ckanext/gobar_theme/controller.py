@@ -64,9 +64,24 @@ class GobArHomeController(HomeController):
     def about_glossary(self):
         return base.render('static/about_glossary.html')
 
+    def theme_taxonomy(self):
+        data_dict_page_results = {
+            'all_fields': True,
+            'type': 'group',
+            'limit': None,
+            'offset': 0,
+        }
+        groups = logic.get_action('group_list')({}, data_dict_page_results)
+        taxonomy = [{
+            'id': group['name'],
+            'label': group['display_name'],
+            'description': group['description']
+        } for group in groups]
+
+        return json.dumps(taxonomy)
+
 
 class GobArApiController(ApiController):
-
     def _remove_extra_id_field(self, json_string):
         json_dict = json.loads(json_string)
         has_extra_id = False
@@ -89,7 +104,6 @@ class GobArApiController(ApiController):
 
 
 class GobArUserController(UserController):
-
     def read(self, id=None):
         if id and id == c.user:
             return super(GobArUserController, self).read(id)

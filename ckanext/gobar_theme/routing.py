@@ -26,6 +26,7 @@ class GobArRouter:
         self.remove_tags()
         self.remove_revision()
         self.connect_api()
+        self.connectThemeTaxonomy()
 
     def connect_home(self):
         self.home_routes.connect('/', action='index')
@@ -139,3 +140,6 @@ class GobArRouter:
     def connect_api(self):
         with SubMapper(self.route_map, controller=self.api_controller, path_prefix='/api{ver:/3|}', ver='/3') as m:
             m.connect('/action/{logic_function}', action='action', conditions=dict(method=['GET', 'POST']))
+
+    def connectThemeTaxonomy(self):
+        self.home_routes.connect('/superThemeTaxonomy.json', action='theme_taxonomy')
