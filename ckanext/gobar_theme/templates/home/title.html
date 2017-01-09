@@ -16,7 +16,7 @@
                 <form class="module-content search-form" method="get"
                       action="{% url_for controller='package', action='search' %}">
                     <input type="text" class="search" name="q" value="" autocomplete="off"
-                           placeholder="¿Qué dataset buscás?"/>
+                           placeholder="¿Qué dataset buscás?" maxlength="200"/>
                     <button type="submit">
                         <img src="/img/search.svg" class="search-icon">
                     </button>
