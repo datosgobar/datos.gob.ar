@@ -49,6 +49,7 @@ class GobArHomeController(HomeController):
 
     def index(self):
         c.groups = self._list_groups()
+        c.sorted_groups = sorted(c.groups, key=lambda x: x['display_name'].lower())
         c.featured_packages = self._featured_packages()
         return super(GobArHomeController, self).index()
 
