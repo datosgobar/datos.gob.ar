@@ -9326,9 +9326,9 @@ div#background-container {
         padding-left: 45px;
         text-align: left; }
       .featured-groups .group-container .group.inactive {
-        color: #cccccc; }
+        color: #cccccc !important; }
         .featured-groups .group-container .group.inactive .group-text svg path {
-          fill: #cccccc; }
+          fill: #cccccc !important; }
       .featured-groups .group-container .group.active:hover {
         background: #0695d6;
         color: white; }
@@ -10484,6 +10484,8 @@ div#background-container {
             width: 30px;
             height: 30px;
             margin: 0 0 5px 5px; }
+            #pkg-secondary-info #info-container .row .value .group-img-container svg.group-image path, #pkg-secondary-info #info-container .row .value .group-img-container img.group-image path {
+              fill: #999999; }
             #pkg-secondary-info #info-container .row .value .group-img-container svg.group-image:hover path, #pkg-secondary-info #info-container .row .value .group-img-container img.group-image:hover path {
               fill: #0695d6; }
           #pkg-secondary-info #info-container .row .value .group-img-container .svg-tooltip {

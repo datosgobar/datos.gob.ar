@@ -96,10 +96,10 @@
       }
 
       &.inactive {
-        color: $grey-200;
+        color: $grey-200 !important;
         .group-text {
           svg path {
-            fill: $grey-200;
+            fill: $grey-200 !important;
           }
         }
       }
