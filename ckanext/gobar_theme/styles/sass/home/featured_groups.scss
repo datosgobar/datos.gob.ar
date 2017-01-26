@@ -108,7 +108,7 @@
         background: $blue-300;
         color: white;
         svg {
-          path {
+          path, circle, polygon {
             fill: white !important;
           }
         }
