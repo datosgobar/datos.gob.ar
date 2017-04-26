@@ -10922,6 +10922,8 @@ div#background-container {
 #resource-edit .icon-cloud-upload,
 #resource-edit .icon-globe {
   display: none; }
+#resource-edit input[type="file"] {
+  height: 100%; }
 #resource-edit #resource-attributes-form {
   padding-top: 30px;
   border-top: solid 1px #cccccc; }
@@ -11331,10 +11333,14 @@ div#background-container {
         margin: 0; }
       #edit-group-container #edit-group form .image-upload .icon-cloud-upload, #edit-group-container #edit-group form .image-upload .icon-globe, #edit-group-container #new-group form .image-upload .icon-cloud-upload, #edit-group-container #new-group form .image-upload .icon-globe, #new-group-container #edit-group form .image-upload .icon-cloud-upload, #new-group-container #edit-group form .image-upload .icon-globe, #new-group-container #new-group form .image-upload .icon-cloud-upload, #new-group-container #new-group form .image-upload .icon-globe {
         display: none; }
+      #edit-group-container #edit-group form .image-upload input[type="file"], #edit-group-container #new-group form .image-upload input[type="file"], #new-group-container #edit-group form .image-upload input[type="file"], #new-group-container #new-group form .image-upload input[type="file"] {
+        height: 100%;
+        cursor: pointer; }
       #edit-group-container #edit-group form .image-upload a.btn, #edit-group-container #new-group form .image-upload a.btn, #new-group-container #edit-group form .image-upload a.btn, #new-group-container #new-group form .image-upload a.btn {
         margin-left: 0;
         text-transform: uppercase;
-        padding: 12px; }
+        padding: 12px;
+        cursor: pointer; }
       #edit-group-container #edit-group form .image-upload a.btn-remove-url, #edit-group-container #new-group form .image-upload a.btn-remove-url, #new-group-container #edit-group form .image-upload a.btn-remove-url, #new-group-container #new-group form .image-upload a.btn-remove-url {
         padding: 0 4px; }
       #edit-group-container #edit-group form .image-upload a.hover, #edit-group-container #new-group form .image-upload a.hover, #new-group-container #edit-group form .image-upload a.hover, #new-group-container #new-group form .image-upload a.hover {
