@@ -8,7 +8,7 @@
             <div id="edit-package" class="col-xs-12 col-md-10 col-md-offset-1">
                 <div class="col-xs-12 col-md-10 col-md-offset-1">
                     <div class="back-btn">
-                        <a href="{{ h.url('home') }}">
+                        <a href="{{ h.url_for(controller='package', action='read', id=c.pkg_dict.name) }}">
                             <i class="icon-chevron-left"></i>
                             VOLVER
                         </a>

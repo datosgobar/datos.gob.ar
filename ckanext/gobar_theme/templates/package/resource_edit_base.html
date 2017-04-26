@@ -10,7 +10,7 @@
             <div id="edit-package" class="col-xs-12 col-md-10 col-md-offset-1">
                 <div class="col-xs-12 col-md-10 col-md-offset-1">
                     <div class="back-btn">
-                        <a href="{{ h.url_for(controller='package', action='resources', id=pkg.name) }}">
+                        <a href="{{ request.headers.Referer }}">
                             <i class="icon-chevron-left"></i>
                             VOLVER
                         </a>
