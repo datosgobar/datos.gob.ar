@@ -2,6 +2,8 @@
 
 {% block subtitle %} - Crear dataset{% endblock %}
 
+{% set stage = form_vars.stage %}
+
 {% block content %}
     <div id="new-package-container" class="container-fluid">
         <div class="restricted-max-width">
@@ -13,7 +15,11 @@
                             VOLVER
                         </a>
                     </div>
-                    <h1>Crear dataset y agregar recursos</h1>
+                    {% if 'active' in stage and 'complete' in stage %}
+                        <h1>Editar dataset</h1>
+                    {% else %}
+                        <h1>Crear dataset y agregar recursos</h1>
+                    {% endif %}
                     {{- h.snippet(form_snippet, c=c, **form_vars) -}}
                 </div>
             </div>
