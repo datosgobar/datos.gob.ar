@@ -1,0 +1,29 @@
+.pagination{
+  font-size: 18px;
+  font-weight: 500;
+  margin: 60px 0;
+  ul {
+    box-shadow: none;
+    li {
+      a {
+        background-color: #fff;
+        border: none;
+        border-radius: 2px !important;
+        color: $blue-300;
+        margin: 0 2px;
+        padding: 6px 11px;
+        &:hover, &:focus {
+          background-color: $grey-150;
+        }
+      }
+
+      &.active {
+        a, a:hover, a:focus {
+          background-color: $grey-400;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+}
