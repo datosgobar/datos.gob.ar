@@ -98,10 +98,15 @@
         .icon-cloud-upload, .icon-globe {
           display: none;
         }
+        input[type="file"] {
+          height: 100%;
+          cursor: pointer
+        }
         a.btn {
           margin-left: 0;
           text-transform: uppercase;
           padding: 12px;
+          cursor: pointer;
         }
         a.btn-remove-url {
           padding: 0 4px;
