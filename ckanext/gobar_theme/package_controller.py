@@ -1,5 +1,5 @@
 from ckan.controllers.package \
-    import PackageController, _encode_params, search_url, render, NotAuthorized, check_access, abort, get_action, log
+import PackageController, _encode_params, search_url, render, NotAuthorized, check_access, abort, get_action, log
 from urllib import urlencode
 from pylons import config
 from paste.deploy.converters import asbool
@@ -13,6 +13,7 @@ import ckan.logic as logic
 from ckan.lib.search import SearchError
 import ckan.lib.navl.dictization_functions as dict_fns
 import ckan.lib.base as base
+import cgi
 
 CACHE_PARAMETERS = ['__cache', '__no_cache__']
 NotFound = logic.NotFound
@@ -209,6 +210,130 @@ class GobArPackageController(PackageController):
         self._setup_template_variables(context, {}, package_type=package_type)
 
         return render(self._search_template(package_type), extra_vars={'dataset_type': package_type})
+
+    def new_resource(self, id, data=None, errors=None, error_summary=None):
+            if request.method == 'POST' and not data:
+                save_action = request.params.get('save')
+                data = data or \
+                       clean_dict(dict_fns.unflatten(tuplize_dict(parse_params(
+                           request.POST))))
+                # we don't want to include save as it is part of the form
+                del data['save']
+                resource_id = data['id']
+                del data['id']
+
+                context = {'model': model, 'session': model.Session,
+                           'user': c.user, 'auth_user_obj': c.userobj}
+
+                if save_action == 'go-dataset':
+                    # go to first step
+                    h.redirect_to(controller='package', action='edit', id=id)
+
+                # see if we have any data that we are trying to save
+                data_provided = False
+
+                def boolean_value(value):
+                    return value and value != u'[]'
+
+                for key, value in data.iteritems():
+                    if ((boolean_value(value) or isinstance(value, cgi.FieldStorage))
+                        and key != 'resource_type' and key != 'license_id'):
+                        data_provided = True
+                        break
+
+                if not data_provided and save_action != "go-dataset-complete":
+
+                    # see if we have added any resources
+                    try:
+                        data_dict = get_action('package_show')(context, {'id': id})
+                    except NotAuthorized:
+                        abort(403, _('Unauthorized to update dataset'))
+                    except NotFound:
+                        abort(404, _('The dataset {id} could not be found.'
+                                     ).format(id=id))
+                    if not len(data_dict['resources']):
+                        # no data so keep on page
+                        msg = _('You must add at least one data resource')
+                        # On new templates do not use flash message
+
+                        if asbool(config.get('ckan.legacy_templates')):
+                            h.flash_error(msg)
+                            h.redirect_to(controller='package',
+                                          action='new_resource', id=id)
+                        else:
+                            errors = {}
+                            error_summary = {_('Error'): msg}
+                            return self.new_resource(id, data, errors,
+                                                     error_summary)
+                    # XXX race condition if another user edits/deletes
+                    data_dict = get_action('package_show')(context, {'id': id})
+                    get_action('package_update')(
+                        dict(context, allow_state_change=True),
+                        dict(data_dict, state='active'))
+                    h.redirect_to(controller='package', action='read', id=id)
+
+                data['package_id'] = id
+                try:
+                    if resource_id:
+                        data['id'] = resource_id
+                        get_action('resource_update')(context, data)
+                    else:
+                        get_action('resource_create')(context, data)
+                except ValidationError, e:
+                    errors = e.error_dict
+                    error_summary = e.error_summary
+                    return self.new_resource(id, data, errors, error_summary)
+                except NotAuthorized:
+                    abort(403, _('Unauthorized to create a resource'))
+                except NotFound:
+                    abort(404, _('The dataset {id} could not be found.'
+                                 ).format(id=id))
+
+                if save_action == 'go-metadata':
+                    # XXX race condition if another user edits/deletes
+                    data_dict = get_action('package_show')(context, {'id': id})
+                    get_action('package_update')(
+                        dict(context, allow_state_change=True),
+                        dict(data_dict, state='active'))
+                    h.redirect_to(controller='package', action='read', id=id)
+                elif save_action == 'go-dataset-complete':
+                    # go to first stage of add dataset
+                    h.redirect_to(controller='package', action='read', id=id)
+                else:
+                    # add more resources
+                    h.redirect_to(controller='package', action='new_resource',
+                                  id=id)
+
+            # get resources for sidebar
+            context = {'model': model, 'session': model.Session,
+                       'user': c.user, 'auth_user_obj': c.userobj}
+            try:
+                pkg_dict = get_action('package_show')(context, {'id': id})
+            except NotFound:
+                abort(404, _('The dataset {id} could not be found.').format(id=id))
+            try:
+                check_access(
+                    'resource_create', context, {"package_id": pkg_dict["id"]})
+            except NotAuthorized:
+                abort(403, _('Unauthorized to create a resource for this package'))
+
+            package_type = pkg_dict['type'] or 'dataset'
+
+            errors = errors or {}
+            error_summary = error_summary or {}
+            vars = {'data': data, 'errors': errors,
+                    'error_summary': error_summary, 'action': 'new',
+                    'resource_form_snippet': self._resource_form(package_type),
+                    'dataset_type': package_type}
+            vars['pkg_name'] = id
+            # required for nav menu
+            vars['pkg_dict'] = pkg_dict
+            template = 'package/new_resource_not_draft.html'
+            if pkg_dict['state'].startswith('draft'):
+                vars['stage'] = ['complete', 'active']
+                template = 'package/new_resource.html'
+
+            return render(template, extra_vars=vars)
 
     def new(self, data=None, errors=None, error_summary=None):
         if data and 'type' in data:

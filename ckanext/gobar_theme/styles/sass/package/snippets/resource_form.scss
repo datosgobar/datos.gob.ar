@@ -16,6 +16,9 @@
   .icon-globe {
     display: none;
   }
+  input[type="file"] {
+    height: 100%;
+  }
   #resource-attributes-form {
     padding-top: 30px;
     border-top: solid 1px $grey-200;

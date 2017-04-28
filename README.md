@@ -31,6 +31,6 @@ Este proyecto está basado en [CKAN](https://github.com/ckan/ckan) y en la [guia
 
 ## Contacto
 
-Te invitamos a [creanos un issue](https://github.com/datosgobar/datos.gob.ar/issues/new?title=Encontre un bug en datos.gob.ar) en caso de que encuentres algún bug o tengas feedback de alguna parte de `datos.gob.ar`.
+Te invitamos a [creanos un issue](https://github.com/datosgobar/datos.gob.ar/issues/new?title=Encontre%20un%20bug%20en%20datos.gob.ar) en caso de que encuentres algún bug o tengas feedback de alguna parte de `datos.gob.ar`.
 
 Para todo lo demás, podés mandarnos tu comentario o consulta a [datos@modernizacion.gob.ar](mailto:datos@modernizacion.gob.ar).
