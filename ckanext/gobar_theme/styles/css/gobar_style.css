@@ -9914,6 +9914,9 @@ div#background-container {
         #edit-organization-container #edit-organization form .control-group .controls, #edit-organization-container #new-organization form .control-group .controls, #new-organization-container #edit-organization form .control-group .controls, #new-organization-container #new-organization form .control-group .controls {
           display: block;
           margin: 0; }
+        #edit-organization-container #edit-organization form .control-group .missing-field, #edit-organization-container #new-organization form .control-group .missing-field, #new-organization-container #edit-organization form .control-group .missing-field, #new-organization-container #new-organization form .control-group .missing-field {
+          margin-top: 5px;
+          color: #ef4d3d; }
       #edit-organization-container #edit-organization form .form-actions, #edit-organization-container #new-organization form .form-actions, #new-organization-container #edit-organization form .form-actions, #new-organization-container #new-organization form .form-actions {
         text-align: center;
         padding: 50px 0 0 0;
@@ -11324,6 +11327,9 @@ div#background-container {
             border: solid 1px #cccccc; }
           #edit-group-container #edit-group form .control-group .controls.editor .editor-info-block, #edit-group-container #new-group form .control-group .controls.editor .editor-info-block, #new-group-container #edit-group form .control-group .controls.editor .editor-info-block, #new-group-container #new-group form .control-group .controls.editor .editor-info-block {
             display: none; }
+        #edit-group-container #edit-group form .control-group .missing-field, #edit-group-container #new-group form .control-group .missing-field, #new-group-container #edit-group form .control-group .missing-field, #new-group-container #new-group form .control-group .missing-field {
+          margin-top: 5px;
+          color: #ef4d3d; }
       #edit-group-container #edit-group form .form-actions, #edit-group-container #new-group form .form-actions, #new-group-container #edit-group form .form-actions, #new-group-container #new-group form .form-actions {
         text-align: center;
         padding: 50px 0 0 0;

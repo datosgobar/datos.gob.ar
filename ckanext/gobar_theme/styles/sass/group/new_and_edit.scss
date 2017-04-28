@@ -51,6 +51,10 @@
             }
           }
         }
+        .missing-field {
+          margin-top: 5px;
+          color: $red-300;
+        }
       }
 
       .form-actions {

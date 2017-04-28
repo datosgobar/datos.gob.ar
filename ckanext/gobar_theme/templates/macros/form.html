@@ -19,6 +19,7 @@ Examples:
 
 #}
 {% macro input(name, id='', label='', value='', placeholder='', type='text', error="", classes=[], attrs={}, is_required=false, after_desc=false, for_label=true) %}
+    {% do classes.append('error') if error %}
     {%- set extra_html = caller() if caller -%}
 
     {% if for_label %}
