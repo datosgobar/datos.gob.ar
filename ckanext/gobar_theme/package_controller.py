@@ -296,8 +296,13 @@ class GobArPackageController(PackageController):
                         dict(context, allow_state_change=True),
                         dict(data_dict, state='active'))
                     h.redirect_to(controller='package', action='read', id=id)
+                elif save_action == 'go-dataset':
+                    # go to first stage of add dataset
+                    h.redirect_to(controller='package', action='edit', id=id)
                 elif save_action == 'go-dataset-complete':
                     # go to first stage of add dataset
+                    h.redirect_to(controller='package', action='read', id=id)
+                elif save_action == 'save-draft':
                     h.redirect_to(controller='package', action='read', id=id)
                 else:
                     # add more resources
