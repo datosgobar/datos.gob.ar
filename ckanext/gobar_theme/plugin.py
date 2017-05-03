@@ -3,12 +3,17 @@ import ckan.plugins.toolkit as toolkit
 from ckan.plugins import implements, IRoutes
 import ckanext.gobar_theme.helpers as gobar_helpers
 import ckanext.gobar_theme.routing as gobar_routes
+import ckanext.gobar_theme.actions as gobar_actions
 
 
 class Gobar_ThemePlugin(plugins.SingletonPlugin):
     implements(plugins.IConfigurer)
     implements(IRoutes, inherit=True)
     implements(plugins.ITemplateHelpers)
+    implements(plugins.IActions)
+
+    def get_actions(self):
+        return {'package_activity_list_html': gobar_actions.package_activity_list_html}
 
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
