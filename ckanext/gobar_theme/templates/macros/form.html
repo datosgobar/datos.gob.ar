@@ -477,7 +477,7 @@ Example
     {% set upload_label = upload_label or _('Image') %}
 
     {% if is_upload_enabled %}
-        <div class="image-upload" data-module="image-upload" data-module-is_url="{{ 'true' if is_url else 'false' }}"
+        <div class="image-upload" data-module="gobar-image-upload" data-module-is_url="{{ 'true' if is_url else 'false' }}"
              data-module-is_upload="{{ 'true' if is_upload else 'false' }}"
              data-module-field_url="{{ field_url }}" data-module-field_upload="{{ field_upload }}"
              data-module-field_clear="{{ field_clear }}" data-module-upload_label="{{ upload_label }}">
@@ -490,6 +490,7 @@ Example
     {% if is_upload %}
         {{ checkbox(field_clear, label=_('Clear Upload'), id='field-clear-upload', value='true', error='', classes=['control-full']) }}
     {% endif %}
+    {% resource 'gobar_js/forms/upload_input_fix.js' %}
 {% endif %}
 
 {% if is_upload_enabled %}</div>{% endif %}
