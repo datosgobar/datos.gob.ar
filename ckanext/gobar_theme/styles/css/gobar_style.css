@@ -11642,23 +11642,28 @@ ul.activity {
         #template-config #navbar .links-section.guide-link a:hover i, #template-config #navbar .links-section.guide-link a:hover .blue {
           color: #17b2f8; }
 
+#new-group-container #new-group form .control-group #field-image-upload,
 #edit-group-container #edit-group form .control-group #field-image-upload,
 #new-package-container #new-package form .control-group #field-image-upload,
 #edit-package-container #edit-package form .control-group #field-image-upload {
   left: -99999px; }
+#new-group-container #new-group form .control-group .file-upload-label,
 #edit-group-container #edit-group form .control-group .file-upload-label,
 #new-package-container #new-package form .control-group .file-upload-label,
 #edit-package-container #edit-package form .control-group .file-upload-label {
   display: inline-block;
   width: auto;
   margin-right: 10px; }
-#edit-group-container #edit-group form .control-group .url-btn, #edit-group-container #edit-group form .control-group .upload-btn,
+#new-group-container #new-group form .control-group .url-btn, #new-group-container #new-group form .control-group .upload-btn,
+#edit-group-container #edit-group form .control-group .url-btn,
+#edit-group-container #edit-group form .control-group .upload-btn,
 #new-package-container #new-package form .control-group .url-btn,
 #new-package-container #new-package form .control-group .upload-btn,
 #edit-package-container #edit-package form .control-group .url-btn,
 #edit-package-container #edit-package form .control-group .upload-btn {
   margin-left: 0;
   text-transform: uppercase; }
+#new-group-container #new-group form .control-group .upload-btn,
 #edit-group-container #edit-group form .control-group .upload-btn,
 #new-package-container #new-package form .control-group .upload-btn,
 #edit-package-container #edit-package form .control-group .upload-btn {
