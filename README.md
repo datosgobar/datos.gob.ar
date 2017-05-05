@@ -15,9 +15,7 @@ Repositorio del Portal de Datos de la República Argentina
 
 ## Instalación
 
-Para tener una instancia corriendo se necesita
-* Instalar una instancia local de CKAN. Seguir [este doc](./docs/01_instalacion_dev.md) (solo para instalacion bajo debian/ubuntu)
-* Instalar el tema visual y sus dependencias, siguiendo [este doc](./docs/03_instalacion_tema_visual.md)
+Para tener una instancia del portal seguir las [instrucciones de instalación](https://github.com/datosgobar/portal_datos.gob.ar) de su contenedor de docker
 
 ## Desarrollo
 
