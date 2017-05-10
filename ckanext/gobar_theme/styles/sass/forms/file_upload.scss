@@ -1,0 +1,24 @@
+#new-group-container #new-group,
+#edit-group-container #edit-group,
+#new-package-container #new-package,
+#edit-package-container #edit-package {
+  form {
+    .control-group {
+      #field-image-upload {
+        left: -99999px;
+      }
+      .file-upload-label {
+        display: inline-block;
+        width: auto;
+        margin-right: 10px;
+      }
+      .url-btn, .upload-btn {
+        margin-left: 0;
+        text-transform: uppercase;
+      }
+      .upload-btn {
+        margin: 0;
+      }
+    }
+  }
+}
