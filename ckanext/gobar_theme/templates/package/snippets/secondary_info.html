@@ -113,6 +113,17 @@
                 {{ h.render_ar_datetime(pkg.metadata_modified) }}
             </div>
         </div>
+        {% set documentation_url = h.get_pkg_extra(pkg, 'Documentación').strip() %}
+        {% if documentation_url %}
+            <div class="row">
+            <div class="col-xs-5 title">
+                Documentación
+            </div>
+            <div class="col-xs-7 value">
+                {{ documentation_url|urlize }}
+            </div>
+        </div>
+        {% endif %}
     </div>
 
     <div id="pkg-recent-activity">
