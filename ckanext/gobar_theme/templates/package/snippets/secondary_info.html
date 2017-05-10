@@ -113,14 +113,14 @@
                 {{ h.render_ar_datetime(pkg.metadata_modified) }}
             </div>
         </div>
-        {% set documentation_url = h.get_pkg_extra(pkg, 'Documentación').strip() %}
-        {% if documentation_url %}
+        {% set documentation_url = h.get_pkg_extra(pkg, 'Documentación') %}
+        {% if documentation_url and documentation_url.strip()|length > 0 %}
             <div class="row">
             <div class="col-xs-5 title">
                 Documentación
             </div>
             <div class="col-xs-7 value">
-                {{ documentation_url|urlize }}
+                {{ documentation_url.strip()|urlize }}
             </div>
         </div>
         {% endif %}
