@@ -25,7 +25,7 @@ class GobArRouter:
         self.remove_dashboard()
         self.remove_tags()
         self.remove_revision()
-        self.remove_admin()
+        #self.remove_admin()
         self.connect_api()
         self.connectThemeTaxonomy()
 
