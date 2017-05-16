@@ -25,6 +25,7 @@ class GobArRouter:
         self.remove_dashboard()
         self.remove_tags()
         self.remove_revision()
+        #self.remove_admin()
         self.connect_api()
         self.connectThemeTaxonomy()
 
@@ -136,6 +137,14 @@ class GobArRouter:
             ('/revision/edit/{id}', '/revision'),
             ('/revision/diff/{id}', '/revision'),
             ('/revision/{id}', '/revision')
+        )
+
+    def remove_admin(self):
+        self.redirect(
+            ('/ckan-admin', '/'),
+            ('/ckan-admin/config', '/'),
+            ('/ckan-admin/trash', '/'),
+            ('/ckan-admin/{action}', '/')
         )
 
     def connect_api(self):
