@@ -1,2 +1,1 @@
-include README.rst
 recursive-include ckanext/gobar_theme *.html *.json *.js *.less *.css
