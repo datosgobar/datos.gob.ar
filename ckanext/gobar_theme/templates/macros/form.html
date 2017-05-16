@@ -355,7 +355,7 @@ Example:
             <p>{{ _('The form contains invalid entries:') }}</p>
             <ul>
                 {% for key, error in errors.items() %}
-                    <li data-field-label="{{ key }}">{% if key %}{{ key }}: {% endif %}{{ error }}</li>
+                    <li data-field-label="{{ key }}">{% if key %}{{ key }}: {% endif %}{{ _(error) }}</li>
                 {% endfor %}
             </ul>
         </div>

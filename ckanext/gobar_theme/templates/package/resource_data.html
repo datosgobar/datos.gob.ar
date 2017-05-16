@@ -19,15 +19,15 @@
         {% if status.error and status.error.message %}
             {% set show_table = false %}
             <div class="alert alert-error">
-                <strong>{{ _('Upload error:') }}</strong> {{ status.error.message }}
+                <strong>{{ _('Upload error:') }}</strong> {{ _(status.error.message) }}
             </div>
         {% elif status.task_info and status.task_info.error %}
             <div class="alert alert-error">
                 {% if status.task_info.error is string %}
                     {# DataPusher < 0.0.3 #}
-                    <strong>{{ _('Error:') }}</strong> {{ status.task_info.error }}
+                    <strong>{{ _('Error:') }}</strong> {{ _(status.task_info.error) }}
                 {% elif status.task_info.error is mapping %}
-                    <strong>{{ _('Error:') }}</strong> {{ status.task_info.error.message }}
+                    <strong>{{ _('Error:') }}</strong> {{ _(status.task_info.error.message) }}
                     {% for error_key, error_value in status.task_info.error.iteritems() %}
                         {% if error_key != "message" and error_value %}
                             <br>
