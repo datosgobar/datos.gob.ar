@@ -9011,6 +9011,58 @@ div#background-container {
         #our-site-container .team-section .background-pattern .restricted-max-width p {
           font-size: 18px; }
 
+#server-overload-container,
+#upgrading-server-container,
+#technical-problems-container {
+  background: #f5f5f5; }
+  #server-overload-container .gobar-static,
+  #upgrading-server-container .gobar-static,
+  #technical-problems-container .gobar-static {
+    -o-box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+    #server-overload-container .gobar-static table,
+    #upgrading-server-container .gobar-static table,
+    #technical-problems-container .gobar-static table {
+      width: 100%;
+      height: 100%; }
+      #server-overload-container .gobar-static table th,
+      #upgrading-server-container .gobar-static table th,
+      #technical-problems-container .gobar-static table th {
+        vertical-align: middle; }
+  #server-overload-container .img-mantenimiento,
+  #upgrading-server-container .img-mantenimiento,
+  #technical-problems-container .img-mantenimiento {
+    width: 300px;
+    display: block;
+    margin: 0 auto; }
+  #server-overload-container .img-visitas,
+  #upgrading-server-container .img-visitas,
+  #technical-problems-container .img-visitas {
+    width: 700px;
+    display: block;
+    margin: 0 auto; }
+  #server-overload-container h1,
+  #upgrading-server-container h1,
+  #technical-problems-container h1 {
+    text-align: center;
+    font-weight: 500;
+    color: #0695d6;
+    margin: 20px 0; }
+  #server-overload-container h3,
+  #upgrading-server-container h3,
+  #technical-problems-container h3 {
+    text-align: center;
+    color: #424242;
+    margin: 20px 0 50px 0;
+    font-weight: normal; }
+  #server-overload-container button,
+  #upgrading-server-container button,
+  #technical-problems-container button {
+    display: block;
+    margin: 0 auto; }
+
 #error {
   padding-right: 0;
   padding-left: 0;
