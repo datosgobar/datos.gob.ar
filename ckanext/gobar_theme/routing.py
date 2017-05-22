@@ -28,7 +28,7 @@ class GobArRouter:
         #self.remove_admin()
         self.connect_api()
         self.connectThemeTaxonomy()
-        #self.connect_error_pages()
+        self.connect_error_pages()
 
     def connect_home(self):
         self.home_routes.connect('/', action='index')
