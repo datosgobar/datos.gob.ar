@@ -22,8 +22,13 @@
                         {%- endfor -%}
                     </div>
                     <div class="dataset-resources">
-                        {%- for resource in h.dict_list_reduce(package.resources, 'format') -%}
-                            <span class="label" data-format="{{ resource.lower() }}">{{ resource.lower() }}</span>
+                        {%- for original_format in h.dict_list_reduce(package.resources, 'format') -%}
+                            {% if original_format == "" or original_format|lower not in h.accepted_mime_types() %}
+                                {% set display_format = "otro" %}
+                            {% else %}
+                                {% set display_format = original_format %}
+                            {% endif %}
+                            <span class="label" data-format="{{ display_format.lower() }}">{{ display_format.lower() }}</span>
                         {%- endfor -%}
                     </div>
                 </div>
