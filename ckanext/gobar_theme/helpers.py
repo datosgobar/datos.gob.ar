@@ -212,3 +212,7 @@ def field_types():
         "binary": "Valor binario en base64 (binary)",
         "any": "Otro (any)"
     }
+
+
+def valid_length(data, max_length):
+    return len(data) <= max_length
