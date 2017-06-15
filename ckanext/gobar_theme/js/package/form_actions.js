@@ -154,7 +154,7 @@ $(function () {
             updateFreq.after(errorTemplate);
         }
 
-        isFormValid = isValid/* && validTitle() && validDesc()*/
+        isFormValid = isValid && validTitle() && validDesc()
 
         if (!isFormValid) {
              window.scrollTo(0, 0);
