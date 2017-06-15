@@ -10411,6 +10411,8 @@ div#background-container {
           background-color: #00ACC1; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=shp], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=shp] {
           background-color: #039BE5; }
+        .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format=otro], .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label[data-format*=otro] {
+          background-color: #039BE5; }
         .dataset-list .dataset-item .dataset-container .dataset-border .dataset-groups-and-resources .dataset-resources .label.group {
           width: auto;
           max-width: 100%;
@@ -11159,6 +11161,8 @@ div#background-container {
               background-color: #00ACC1; }
             .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=shp], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=shp] {
               background-color: #039BE5; }
+            .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format=otro], .resource-container .resource .resource-additional-info .resource-additional .value span.label[data-format*=otro] {
+              background-color: #039BE5; }
 
 .pkg-container {
   position: relative;
@@ -11199,6 +11203,8 @@ div#background-container {
     .pkg-container .pkg-file-img[data-format=turtle] svg path, .pkg-container .pkg-file-img[data-format*=turtle] svg path {
       fill: #00ACC1; }
     .pkg-container .pkg-file-img[data-format=shp] svg path, .pkg-container .pkg-file-img[data-format*=shp] svg path {
+      fill: #039BE5; }
+    .pkg-container .pkg-file-img[data-format=otro] svg path, .pkg-container .pkg-file-img[data-format*=otro] svg path {
       fill: #039BE5; }
     .pkg-container .pkg-file-img p {
       position: absolute;
