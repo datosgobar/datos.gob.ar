@@ -18,7 +18,7 @@ Examples:
   {{ form.input('title', label=_('Title'), value=data.title, error=errors.title) }}
 
 #}
-{% macro input(name, id='', label='', value='', placeholder='', type='text', error="", classes=[], attrs={}, is_required=false, after_desc=false, for_label=true) %}
+{% macro input(name, id='', label='', value='', placeholder='', type='text', error="", classes=[], attrs={}, is_required=false, after_desc=false, for_label=true, max_length="") %}
     {% do classes.append('error') if error %}
     {%- set extra_html = caller() if caller -%}
 
@@ -29,10 +29,10 @@ Examples:
     {% endif %}
 
     {% call input_block(for, label or name, error, classes, extra_html=extra_html, is_required=is_required) %}
-        <input id="{{ id or name }}" type="{{ type }}" name="{{ name }}" value="{{ value | empty_and_escape }}"
+        <input id="{{ id or name }}" type="{{ type }}" name="{{ name }}" value="{{ value | empty_and_escape }}" maxlength="{{ max_length }}
                placeholder="{{ placeholder }}" {{ attributes(attrs) }} />
         {% if after_desc %}
-            <div class="after-desc">
+            <div class="after-desc" id="{{ id or name }}">
                 {{ after_desc }}
             </div>
         {% endif %}
@@ -58,15 +58,15 @@ Example:
 
 #}
 
-{% macro input_custom(name, id='', label='', value='', placeholder='', type='text', error="", classes=[], attrs={}, is_required=false, after_desc=false) %}
+{% macro input_custom(name, id='', label='', value='', placeholder='', type='text', error="", classes=[], attrs={}, is_required=false, after_desc=false, max_length="") %}
     {%- set extra_html = caller() if caller -%}
 
     {% call input_block(id or name, label or name, error, classes, extra_html=extra_html, is_required=is_required) %}
         <div {{ attributes(attrs) }}>
-            <input id="{{ id or name }}" type="{{ type }}" name="{{ name }}" value="{{ value | empty_and_escape }}"
-                   placeholder="{{ placeholder }}"/>
+             <input id="{{ id or name }}" type="{{ type }}" name="{{ name }}" value="{{ value | empty_and_escape }}" maxlength="{{ max_length }}"
+                   placeholder="{{ placeholder }}" {{ attributes(attrs) }}/>
             {% if after_desc %}
-                <div class="after-desc">
+                <div class="after-desc" id="{{ id or name }}">
                     {{ after_desc }}
                 </div>
             {% endif %}
@@ -164,7 +164,7 @@ Examples:
     {% endcall %}
 {% endmacro %}
 
-{% macro markdown_custom(name, id='', label='', value='', placeholder='', error="", classes=[], attrs={}, is_required=false, after_desc=false) %}
+{% macro markdown_custom(name, id='', label='', value='', placeholder='', error="", classes=[], attrs={}, is_required=false, after_desc=false, max_length="") %}
     {% set classes = (classes|list) %}
     {% do classes.append('control-full') %}
     {% set markdown_tooltip = "<pre><p>__Bold text__ or _italic text_</p><p># title<br>## secondary title<br>### etc</p><p>* list<br>* of<br>* items</p><p>http://auto.link.ed/</p></pre><p><b><a href='http://daringfireball.net/projects/markdown/syntax' target='_blank'>Full markdown syntax</a></b></p><p class='muted'><b>Please note:</b> HTML tags are stripped out for security reasons</p>" %}
@@ -172,9 +172,9 @@ Examples:
     {%- set extra_html = caller() if caller -%}
     {% call input_block(id or name, label or name, error, classes, control_classes=["editor"], extra_html=extra_html, is_required=is_required) %}
         <textarea id="{{ id or name }}" name="{{ name }}" cols="20" rows="5"
-                  placeholder="{{ placeholder }}" {{ attributes(attrs) }}>{{ value | empty_and_escape }}</textarea>
+                  placeholder="{{ placeholder }}" maxlength="{{ max_length }}" {{ attributes(attrs) }}>{{ value | empty_and_escape }}</textarea>
         {% if after_desc %}
-            <div class="after-desc">
+            <div class="after-desc" id="{{ id or name }}">
                 {{ after_desc }}
             </div>
         {% endif %}
