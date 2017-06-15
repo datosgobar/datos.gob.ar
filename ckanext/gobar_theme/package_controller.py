@@ -222,6 +222,8 @@ class GobArPackageController(PackageController):
                 resource_id = data['id']
                 del data['id']
 
+                self._validate_resource(data)
+
                 context = {'model': model, 'session': model.Session,
                            'user': c.user, 'auth_user_obj': c.userobj}
 
@@ -415,6 +417,9 @@ class GobArPackageController(PackageController):
                 # sort the tags
                 if 'tag_string' in data_dict:
                     data_dict['tags'] = self._tag_string_to_list(data_dict['tag_string'])
+
+                self._validate_dataset(data_dict)
+
                 if data_dict.get('pkg_name'):
                     is_an_update = True
                     # This is actually an update not a save
@@ -475,3 +480,124 @@ class GobArPackageController(PackageController):
                                  errors, error_summary)
             data_dict['state'] = 'none'
             return self.new(data_dict, errors, error_summary)
+
+    def edit(self, id, data=None, errors=None, error_summary=None):
+        package_type = self._get_package_type(id)
+        context = {'model': model, 'session': model.Session,
+                   'user': c.user, 'auth_user_obj': c.userobj,
+                   'save': 'save' in request.params}
+
+        if context['save'] and not data:
+            return self._save_edit(id, context, package_type=package_type)
+        try:
+            c.pkg_dict = get_action('package_show')(dict(context,
+                                                         for_view=True),
+                                                    {'id': id})
+            context['for_edit'] = True
+            old_data = get_action('package_show')(context, {'id': id})
+            # old data is from the database and data is passed from the
+            # user if there is a validation error. Use users data if there.
+            if data:
+                old_data.update(data)
+            data = old_data
+        except (NotFound, NotAuthorized):
+            abort(404, _('Dataset not found'))
+        # are we doing a multiphase add?
+        if data.get('state', '').startswith('draft'):
+            c.form_action = h.url_for(controller='package', action='new')
+            c.form_style = 'new'
+            return self.new(data=data, errors=errors,
+                            error_summary=error_summary)
+
+        c.pkg = context.get("package")
+        c.resources_json = h.json.dumps(data.get('resources', []))
+
+        try:
+            check_access('package_update', context)
+        except NotAuthorized:
+            abort(403, _('User %r not authorized to edit %s') % (c.user, id))
+        # convert tags if not supplied in data
+        if data and not data.get('tag_string'):
+            data['tag_string'] = ', '.join(h.dict_list_reduce(
+                c.pkg_dict.get('tags', {}), 'name'))
+        errors = errors or {}
+        form_snippet = self._package_form(package_type=package_type)
+        form_vars = {'data': data, 'errors': errors,
+                     'error_summary': error_summary, 'action': 'edit',
+                     'dataset_type': package_type,
+                     }
+        c.errors_json = h.json.dumps(errors)
+
+        self._setup_template_variables(context, {'id': id},
+                                       package_type=package_type)
+
+        # we have already completed stage 1
+        form_vars['stage'] = ['active']
+        if data.get('state', '').startswith('draft'):
+            form_vars['stage'] = ['active', 'complete']
+
+        edit_template = self._edit_template(package_type)
+        return render(edit_template,
+                      extra_vars={'form_vars': form_vars,
+                                  'form_snippet': form_snippet,
+                                  'dataset_type': package_type})
+
+    def _save_edit(self, name_or_id, context, package_type=None):
+        from ckan.lib.search import SearchIndexError
+        log.debug('Package save request name: %s POST: %r',
+                  name_or_id, request.POST)
+        try:
+            data_dict = clean_dict(dict_fns.unflatten(
+                tuplize_dict(parse_params(request.POST))))
+
+            self._validate_dataset(data_dict)
+
+            if '_ckan_phase' in data_dict:
+                # we allow partial updates to not destroy existing resources
+                context['allow_partial_update'] = True
+                if 'tag_string' in data_dict:
+                    data_dict['tags'] = self._tag_string_to_list(
+                        data_dict['tag_string'])
+                del data_dict['_ckan_phase']
+                del data_dict['save']
+            context['message'] = data_dict.get('log_message', '')
+            data_dict['id'] = name_or_id
+            pkg = get_action('package_update')(context, data_dict)
+            c.pkg = context['package']
+            c.pkg_dict = pkg
+
+            self._form_save_redirect(pkg['name'], 'edit',
+                                     package_type=package_type)
+        except NotAuthorized:
+            abort(403, _('Unauthorized to read package %s') % id)
+        except NotFound, e:
+            abort(404, _('Dataset not found'))
+        except dict_fns.DataError:
+            abort(400, _(u'Integrity Error'))
+        except SearchIndexError, e:
+            try:
+                exc_str = unicode(repr(e.args))
+            except Exception:  # We don't like bare excepts
+                exc_str = unicode(str(e))
+            abort(500, _(u'Unable to update search index.') + exc_str)
+        except ValidationError, e:
+            errors = e.error_dict
+            error_summary = e.error_summary
+
+        return self.edit(name_or_id, data_dict, errors, error_summary)
+
+    def _validate_length(self, data, attribute, max_length):
+        if len(data[attribute]) > max_length:
+            raise ValidationError("%s must not have more than %s characters." % (attribute, max_length))
+
+    def _validate_resource(self, data_dict):
+        max_name_characters = 150
+        max_desc_characters = 200
+        self._validate_length(data_dict, 'name', max_name_characters)
+        self._validate_length(data_dict, 'description', max_desc_characters)
+
+    def _validate_dataset(self, data_dict):
+        max_title_characters = 100
+        max_desc_characters = 500
+        self._validate_length(data_dict, 'title', max_title_characters)
+        self._validate_length(data_dict, 'notes', max_desc_characters)
