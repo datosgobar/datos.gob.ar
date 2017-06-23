@@ -1,30 +1,13 @@
-{% extends "gobar_page.html" %}
-
-{% block subtitle %} - {{ pkg.title }}{% endblock %}
-
-{% set pkg = c.pkg_dict or pkg_dict %}
+{% extends "package/read_base.html" %}
 
 {% block twitter_title -%}
     <meta name="twitter:title" content="Datos Argentina | {{ pkg.title }}">
 {%- endblock %}
+
 {% block twitter_img -%}
     <meta name="twitter:description" content="{{ pkg.notes }}">
 {%- endblock %}
+
 {% block twitter_description -%}
     <meta name="twitter:image:src" content="http://datos.gob.ar/img/twitter_card_data.png">
 {%- endblock %}
-
-{% block content %}
-    <div class="package-container container-fluid">
-        <div class="restricted-max-width">
-            <div class="package col-xs-12 col-md-10 col-md-offset-1">
-                <div class="row">
-                    {% snippet "package/snippets/main_info.html", pkg=pkg %}
-                    {% snippet "package/snippets/secondary_info.html", pkg=pkg %}
-                </div>
-            </div>
-        </div>
-    </div>
-
-    {% resource 'gobar_js/package/groups.js' %}
-{% endblock %}

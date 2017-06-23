@@ -1,39 +1,11 @@
-{%- set truncate_maintainer = 150 -%}
-{%- set truncate_description = 250 -%}
-{%- set title = package.title or package.name -%}
-{%- set notes = h.markdown_extract(package.notes, extract_length=truncate) -%}
+{% extends "package/snippets/search_item_base.html" %}
 
-<a href="{{ h.url_for(controller='package', action='read', id=package.name) }}" class="dataset-item">
-    <div class="dataset-container">
-        <div class="dataset-border container-fluid">
-            <div class="restricted-max-width">
-                <div class="dataset-content col-xs-9">
-                    <h3 class="dataset-title">{{ title }}</h3>
-
-                    <div class="dataset-author">{{ h.cut_text(package.author, 150) }}</div>
-                    <div class="dataset-notes">{{ h.cut_text(notes, 190)|urlize }}</div>
-                </div>
-                <div class="dataset-groups-and-resources col-xs-3">
-                    <div class="dataset-groups">
-                        {%- for group in package.groups -%}
-                            {%- if group.image_display_url and group.image_display_url|length > 0 -%}
-                                <img src="{{ h.cut_img_path(group.image_display_url) }}" title="{{ group.title }}" class="group-image">
-                            {%- endif -%}
-                        {%- endfor -%}
-                    </div>
-                    <div class="dataset-resources">
-                        {%- for original_format in h.dict_list_reduce(package.resources, 'format') -%}
-                            {% if original_format == "" or original_format|lower not in h.accepted_mime_types() %}
-                                {% set display_format = "otro" %}
-                            {% else %}
-                                {% set display_format = original_format %}
-                            {% endif %}
-                            <span class="label" data-format="{{ display_format.lower() }}">{{ display_format.lower() }}</span>
-                        {%- endfor -%}
-                    </div>
-                </div>
-            </div>
-        </div>
-
+{% block groups %}
+    <div class="dataset-groups">
+        {%- for group in package.groups -%}
+            {%- if group.image_display_url and group.image_display_url|length > 0 -%}
+                <img src="{{ h.cut_img_path(group.image_display_url) }}" title="{{ group.title }}" class="group-image">
+            {%- endif -%}
+        {%- endfor -%}
     </div>
-</a>
+{% endblock %}

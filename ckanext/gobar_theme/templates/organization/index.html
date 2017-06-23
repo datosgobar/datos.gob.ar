@@ -1,7 +1,5 @@
 {% extends "gobar_page.html" %}
 
-{% block subtitle %} - Organizaciones{% endblock %}
-
 {% block twitter_title -%}
     <meta name="twitter:title" content="Datos Argentina | Organizaciones">
 {%- endblock %}
@@ -9,82 +7,3 @@
     <meta name="twitter:description"
           content="Mirá los Ministerios, Secretarías y Organizaciones dependientes del Poder Ejecutivo Nacional que ya abrieron sus datos. ">
 {%- endblock %}
-
-{% block content %}
-
-    {% snippet "organization/title.html" %}
-
-    <div class="organization-container container-fluid">
-        <div class="restricted-max-width">
-            <div class="organization col-xs-12 col-md-10 col-md-offset-1">
-                {% if h.check_access('organization_create') %}
-                    <div class="add-organization">
-                        {% link_for 'CREAR ORGANIZACIÓN', controller='organization', action='new', class_='' %}
-                    </div>
-                {% endif %}
-
-                <div class="organization-list">
-                    <div class="organization-list-title">
-                        <span>Organización</span>
-                        <span class="count-title">Datasets totales</span>
-                    </div>
-
-                    {% set organizations_tree = h.organization_tree() %}
-                    {% set dataset_url = h.url_for(controller='package', action='search') %}
-
-                    {% for organization in organizations_tree recursive %}
-
-                        {% set top_organization = organization.depth == 0 %}
-
-                        {% if top_organization and organization.display_count > 0 %}
-                            <a href="{{ h.add_url_param(new_params={'organization': organization.name}, alternative_url=dataset_url) }}">
-                        {% endif %}
-
-                        <div class="organization-branch">
-
-
-                            <div class="organization-name {{ 'top-organization' if top_organization else '' }}">
-                                {%- if top_organization -%}
-                                    {%- snippet "svg/chevron_right.svg" -%}
-                                {%- endif -%}
-
-                                {%- if organization.package_count > 0 -%}
-                                        {{ organization.display_name }} ({{ organization.package_count }})
-                                {%- else -%}
-                                    {{ organization.display_name }}
-                                {%- endif -%}
-
-                                {%- if h.check_access('organization_update', {'id': organization.name}) -%}
-                                    <a href="{{ h.url_for(controller='organization', action='edit', id=organization.name) }}">
-                                        <span class="edit-organization">
-                                            {% snippet "svg/edit.svg" %}
-                                        </span>
-                                    </a>
-                                {%- endif -%}
-
-                                {%- if top_organization -%}
-                                    <span class="organization-count">
-                                        {{ organization.display_count }}
-                                    </span>
-                                {%- endif -%}
-
-                            </div>
-
-                            {% if organization.children %}
-                                {{ loop(organization.children) }}
-                            {% endif %}
-                        </div>
-
-                        {% if top_organization and organization.display_count > 0 %}
-                            </a>
-                        {% endif %}
-
-                        {% if top_organization %}
-                            <hr>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-{% endblock %}
