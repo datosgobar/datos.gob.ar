@@ -130,10 +130,14 @@ $(function () {
             updateFreq.after(errorTemplate);
         }
 
-        if (!isValid) {
-            window.scrollTo(0, 0);
-        }
-        return isValid;
+        isFormValid = isValid && validTitle() && validDesc()
+
+        if (!isFormValid) {
+             window.scrollTo(0, 0);
+         }
+
+
+        return isFormValid;
     }
 
     $('form#dataset-edit').submit(function (e) {
