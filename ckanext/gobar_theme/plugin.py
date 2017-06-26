@@ -17,13 +17,21 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
         gobar_router.set_routes()
         return routing_map
 
-    def add_base_templates(self, config):
+    def get_base_dir(self, subdir):
         base_theme_dir = os.path.dirname(gobar_theme_base.__file__)
         rootdir = os.path.dirname(os.path.dirname(base_theme_dir))
-        template_dir = os.path.join(rootdir, 'ckanext', 'gobar_theme_base', 'templates')
+        return os.path.join(rootdir, 'ckanext', 'gobar_theme_base', subdir)
+
+    def add_base_templates(self, config):
+        template_dir = self.get_base_dir('templates')
         config['extra_template_paths'] = ','.join([
             template_dir, config.get('extra_template_paths', '')
         ])
+
+    def add_base_js(self):
+        js_dir = self.get_base_dir('js')
+        import ckan.lib.fanstatic_resources
+        ckan.lib.fanstatic_resources.create_library('gobar_js', js_dir)
 
     def update_config(self, config_):
         toolkit.add_template_directory(config_, 'templates')
@@ -31,6 +39,7 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('styles/css', 'gobar_css')
         toolkit.add_resource('js', 'gobar_js')
+        self.add_base_js()
         toolkit.add_resource('recline', 'gobar_data_preview')
 
     def get_helpers(self):
