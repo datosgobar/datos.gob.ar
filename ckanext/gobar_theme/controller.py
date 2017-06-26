@@ -18,7 +18,6 @@ class GobArHomeController(HomeController):
         return base.render('static/about_glossary.html')
 
     def theme_taxonomy(self):
-        print "HOLA"
         data_dict_page_results = {
             'all_fields': True,
             'type': 'group',
