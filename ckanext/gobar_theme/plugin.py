@@ -38,7 +38,7 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
         self.add_base_templates(config_)
         toolkit.add_public_directory(config_, 'public')
         toolkit.add_resource('styles/css', 'gobar_css')
-        toolkit.add_resource('js', 'gobar_js')
+        toolkit.add_resource('js', 'datos_gobar_js')
         self.add_base_js()
         toolkit.add_resource('recline', 'gobar_data_preview')
 
