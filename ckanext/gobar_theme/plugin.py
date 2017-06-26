@@ -22,11 +22,18 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
         rootdir = os.path.dirname(os.path.dirname(base_theme_dir))
         return os.path.join(rootdir, 'ckanext', 'gobar_theme_base', subdir)
 
+    def add_in_config_file(self, key, config , dir):
+        config[key] = ','.join([
+            dir, config.get(key, '')
+        ])
+
     def add_base_templates(self, config):
         template_dir = self.get_base_dir('templates')
-        config['extra_template_paths'] = ','.join([
-            template_dir, config.get('extra_template_paths', '')
-        ])
+        self.add_in_config_file('extra_template_paths', config, template_dir)
+
+    def add_base_public(self, config):
+        public_dir = self.get_base_dir('public')
+        self.add_in_config_file('extra_public_paths', config, public_dir)
 
     def add_base_js(self):
         js_dir = self.get_base_dir('js')
@@ -37,6 +44,7 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
         toolkit.add_template_directory(config_, 'templates')
         self.add_base_templates(config_)
         toolkit.add_public_directory(config_, 'public')
+        self.add_base_public(config_)
         toolkit.add_resource('styles/css', 'gobar_css')
         toolkit.add_resource('js', 'datos_gobar_js')
         self.add_base_js()
