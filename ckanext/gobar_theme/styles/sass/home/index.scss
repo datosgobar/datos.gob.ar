@@ -1,7 +1,7 @@
 @import 'title';
-@import 'featured_groups';
-@import 'create_buttons';
-@import 'featured_content';
+@import 'home/featured_groups';
+@import 'home/create_buttons';
+@import 'home/featured_content';
 
 .home {
   background: $grey-100;

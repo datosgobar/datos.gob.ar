@@ -2,6 +2,9 @@
 // sass style.scss:../css/gobar_style.css
 // Para compilar y quedar escuchando cambios a los archivos (para desarrollo) correr:
 // sass --watch style.scss:../css/gobar_style.css
+// Para compilar y quedar escuchando cambios a los archivos incluyendo los del base (para desarrollo) correr:
+// sass -I /usr/lib/ckan/defaultrc/ckanext-gobar-theme-base/ckanext/gobar_theme_base/styles/sass --watch style.scss:../css/gobar_style.css
+
 @import 'utils/bootstrap_style';
 @import 'fonts';
 @import 'utils/colors';
