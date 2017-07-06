@@ -81,6 +81,15 @@ class GobArHomeController(HomeController):
 
         return json.dumps(taxonomy)
 
+    def technical_problems(self):
+        return base.render('static/technical_problems.html')
+
+    def server_overload(self):
+        return base.render('static/server_overload.html')
+
+    def upgrading_server(self):
+        return base.render('static/upgrading_server.html')
+
 
 class GobArApiController(ApiController):
     def _remove_extra_id_field(self, json_string):

@@ -28,6 +28,7 @@ class GobArRouter:
         #self.remove_admin()
         self.connect_api()
         self.connectThemeTaxonomy()
+        self.connect_error_pages()
 
     def connect_home(self):
         self.home_routes.connect('/', action='index')
@@ -153,3 +154,8 @@ class GobArRouter:
 
     def connectThemeTaxonomy(self):
         self.home_routes.connect('/superThemeTaxonomy.json', action='theme_taxonomy')
+
+    def connect_error_pages(self):
+        self.home_routes.connect('technical_problems', '/problemas-tecnicos', action='technical_problems')
+        self.home_routes.connect('server_overload', '/muchas-visitas', action='server_overload')
+        self.home_routes.connect('upgrading_server', '/mejorando-el-sitio', action='upgrading_server')

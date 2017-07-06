@@ -212,3 +212,22 @@ def field_types():
         "binary": "Valor binario en base64 (binary)",
         "any": "Otro (any)"
     }
+
+
+def accepted_mime_types():
+    return [
+        'html',
+        'json',
+        'xml',
+        'text',
+        'csv',
+        'xls',
+        'api',
+        'pdf',
+        'zip',
+        'rdf',
+        'nquad',
+        'ntriples',
+        'turtle',
+        'shp'
+]

@@ -1,0 +1,28 @@
+{% extends "gobar_page.html" %}
+
+{% block content %}
+
+    <div id="upgrading-server-container" class="container-fluid gobar-static-container">
+        <div class="restricted-max-width">
+            <div id="upgrading-server" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
+                <table>
+                    <tr>
+                        <th>
+                            <img src="/img/mantenimiento.svg" class="img-mantenimiento">
+                            <h1>
+                                Estamos mejorando Datos Argentina
+                            </h1>
+
+                            <h3>
+                                Por favor, esperá un rato y probá otra vez.
+                            </h3>
+
+                            <button class="btn btn-blue" onClick="window.location.reload()">VOLVER A INTENTAR</button>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,28 @@
+{% extends "gobar_page.html" %}
+
+{% block content %}
+
+    <div id="server-overload-container" class="container-fluid gobar-static-container">
+        <div class="restricted-max-width">
+            <div id="server-overload" class="col-xs-12 col-md-10 col-md-offset-1 gobar-static">
+                <table>
+                    <tr>
+                        <th>
+                            <img src="/img/muchas_visitas.svg" class="img-visitas">
+                            <h1>
+                                Tenemos demasiadas visitas ahora
+                            </h1>
+
+                            <h3>
+                                ¡Lo sentimos! Por favor, esperá un rato y probá otra vez.
+                            </h3>
+
+                            <button class="btn btn-blue" onClick="window.location.reload()">VOLVER A INTENTAR</button>
+                        </th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
