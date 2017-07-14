@@ -37,7 +37,7 @@
                 </a>
             {% endif %}
         {% else %}
-            <p class="filter-empty">{{ _('There are no {facet_type} that match this search').format(facet_type=title) }}</p>
+            <p class="filter-empty">{{ _('There are no {facet_type} that match this search').format(facet_type=title)|capitalize }}</p>
         {% endif %}
         <hr>
     </div>
