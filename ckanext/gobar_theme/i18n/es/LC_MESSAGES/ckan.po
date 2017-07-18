@@ -1,0 +1,25 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: CKAN\n"
+"Report-Msgid-Bugs-To: https://github.com/datosgobar/datos.gob.ar/\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.4.0\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "File upload too large"
+msgstr "Archivo demasiado grande"
+
+msgid "Could not connect to DataPusher."
+msgstr "No se pudo conectar al DataPusher."
+
+msgid "cannot connect to datapusher"
+msgstr "No se pudo conectar al DataPusher."
+
+msgid "Process completed but unable to post to result_url"
+msgstr "Proceso completo pero no se pudo enviar a result_url."
+

@@ -7,6 +7,9 @@
 {% set max_length_title = 150 %}
 {% set max_length_description = 200 %}
 
+{% set show_save_button = false %}
+{% set show_save_draft_button = false %}
+
 <form novalidate="novalidate" id="resource-edit" class="dataset-form dataset-resource-form form-horizontal" method="post" action="{{ action }}"
       data-module="basic-form resource-form" enctype="multipart/form-data">
     {% block stages %}
@@ -75,12 +78,38 @@
             {% block previous_button %}
             {% endblock %}
             {% block again_button %}
-                <button class="btn btn-blue" name="save" value="again" type="submit">SEGUIR Y AGREGAR RECURSOS</button>
+                <button class="btn btn-blue" name="save" value="again" type="submit">
+                    SEGUIR Y AGREGAR RECURSOS
+                </button>
             {% endblock %}
-            {% block save_button %}
-                <button class="btn btn-green" name="save" value="go-metadata" type="submit">
-                    {% block save_button_text %}PUBLICAR{% endblock %}</button>
-            {% endblock %}
+
+            {% if data.state %}
+                {% if data.state == 'active' %}
+                   {% set show_save_button = true %}
+                {% else %}
+                    {% set show_save_draft_button = true %}
+                {% endif %}
+            {% else %}
+                {% set show_save_button = true %}
+                {% set show_save_draft_button = true %}
+            {% endif %}
+
+            {% if show_save_draft_button %}
+                {% block save_draft %}
+                    <button class="btn btn-transparent" name="save" value="save-draft" type="submit">
+                        SUBIR Y DEJAR EN BORRADOR
+                    </button>
+                {% endblock %}
+            {% endif %}
+
+            {% if show_save_button %}
+                {% block save_button %}
+                    <button class="btn btn-green" name="save" value="go-metadata" type="submit">
+                    {% block save_button_text %}PUBLICAR{% endblock %}
+                    </button>
+                {% endblock %}
+            {% endif %}
+
         {% else %}
             {% block add_button %}
                 <button class="btn btn-green" name="save" value="go-dataset-complete" type="submit">

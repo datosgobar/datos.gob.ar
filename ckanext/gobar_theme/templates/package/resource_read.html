@@ -87,7 +87,7 @@
 
                 {% if has_more_resources %}
                     <div class="resource-alternative-packages col-xs-12 col-md-8">
-                        <h2>Otros recursos de este dataset</h2>
+                        <h2>Otros recursos de este conjunto de datos</h2>
                         {% for resource in pkg.resources %}
                             {% if resource.id != res.id %}
                                 {% if resource.format == "" or resource.format|lower not in h.accepted_mime_types() %}

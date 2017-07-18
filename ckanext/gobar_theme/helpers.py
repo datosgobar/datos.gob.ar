@@ -235,3 +235,13 @@ def accepted_mime_types():
         'turtle',
         'shp'
 ]
+
+
+def get_suborganizations():
+    organizations = organization_tree()
+    suborganizations = []
+    for organization in organizations:
+        if 'children' in organization:
+            for child in organization['children']:
+                suborganizations.append(child['name'])
+    return suborganizations
