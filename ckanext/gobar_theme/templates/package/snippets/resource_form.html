@@ -4,10 +4,13 @@
 {% set errors = errors or {} %}
 {% set action = form_action or h.url_for(controller='package', action='new_resource', id=pkg_name) %}
 
+{% set max_length_title = 150 %}
+{% set max_length_description = 200 %}
+
 {% set show_save_button = false %}
 {% set show_save_draft_button = false %}
 
-<form id="resource-edit" class="dataset-form dataset-resource-form form-horizontal" method="post" action="{{ action }}"
+<form novalidate="novalidate" id="resource-edit" class="dataset-form dataset-resource-form form-horizontal" method="post" action="{{ action }}"
       data-module="basic-form resource-form" enctype="multipart/form-data">
     {% block stages %}
         {# An empty stages variable will not show the stages #}
@@ -24,11 +27,23 @@
 
     {% block basic_fields %}
         {% block basic_fields_name %}
-            {{ form.input_custom('name', id='field-name', label='Título del recurso', placeholder='Ej: Solicitudes de Acceso a la Información Pública de 2015.', value=data.name, error=errors.name, classes=['control-full'], after_desc='Por favor, no superes los 150 caracteres.') }}
+            {% set valid_title = h.valid_length(data.name, max_length_title) %}
+            {% if valid_title %}
+                {% set after_desc_title = ["Por favor, no superes los ", max_length_title, " caracteres."] %}
+            {% else %}
+                {% set after_desc_title = ["Por favor, para que el título del recurso sea más claro, <b>no superes los ", max_length_title, " caracteres.</b>"] %}
+            {% endif %}
+            {{ form.input_custom('name', id='field-name', label='Título del recurso', placeholder='Ej: Solicitudes de Acceso a la Información Pública de 2015.', value=data.name, error=errors.name, classes=['control-full'], attrs={'data-valid-title-length': max_length_title}, after_desc=after_desc_title|join|safe, max_length=max_length_title) }}
         {% endblock %}
 
         {% block basic_fields_description %}
-            {{ form.markdown_custom('description', id='field-description', label='Descripción del recurso', placeholder='Ej: Detalle de los pedidos de información hechos al Estado en 2015.', value=data.description, error=errors.description, after_desc='Por favor, no superes los 200 caracteres.') }}
+            {% set valid_desc = h.valid_length(data.description, max_length_description) %}
+            {% if valid_desc %}
+                {% set after_desc_description = ["Por favor, no superes los ", max_length_description, " caracteres."] %}
+            {% else %}
+                {% set after_desc_description = ["Por favor, para que la descripción sea más clara, <b>no superes los ", max_length_description, " caracteres.</b>"] %}
+            {% endif %}
+            {{ form.markdown_custom('description', id='field-description', label='Descripción del recurso', placeholder='Ej: Detalle de los pedidos de información hechos al Estado en 2015.', value=data.description, error=errors.description, attrs={'data-valid-desc-length': max_length_description}, after_desc=after_desc_description|join|safe, max_length=max_length_description) }}
         {% endblock %}
 
         {% block basic_fields_url %}

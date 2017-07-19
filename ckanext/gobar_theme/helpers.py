@@ -214,6 +214,10 @@ def field_types():
     }
 
 
+def valid_length(data, max_length):
+    return len(data) <= max_length
+
+
 def accepted_mime_types():
     return [
         'html',

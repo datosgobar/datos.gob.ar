@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,iBAAkB;EAChB,UAAU,EAAE,MAAM;EAClB,KAAK,EAAE,IAAI;EACX,kCAAiB;IACf,KAAK,EAAE,IAAI;IACX,OAAO,EAAE,YAAY",
-"sources": ["../sass/recline.scss"],
-"names": [],
-"file": "gobar_recline.css"
-}

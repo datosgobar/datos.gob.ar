@@ -1,6 +1,14 @@
 {% import 'macros/form.html' as form %}
 
-{{ form.input('title', id='field-title', label='* Título del dataset', placeholder='Ej: Sistema de Contrataciones ELectrónicas (Argentina Compra)', value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target'}) }}
+{% set max_length_title = 100 %}
+{% set valid_title = h.valid_length(data.title, max_length_title) %}
+{% if valid_title %}
+    {% set after_desc_title = ["Por favor, no superes los ", max_length_title, " caracteres."] %}
+{% else %}
+    {% set after_desc_title = ["Por favor, para que el título del dataset sea más claro, <b>no superes los ", max_length_title, " caracteres.</b>"] %}
+{% endif %}
+
+{{ form.input('title', id='field-title', label='* Título del dataset', placeholder='Ej: Sistema de Contrataciones Electrónicas (Argentina Compra)', value=data.title, error=errors.title, classes=['control-full', 'control-large'], attrs={'data-module': 'slug-preview-target', 'data-valid-title-length': max_length_title}, after_desc=after_desc_title|join|safe, max_length=max_length_title) }}
 
 {% set prefix = h.url_for(controller='package', action='read', id='') %}
 {% set domain = h.url_for(controller='package', action='read', id='', qualified=true) %}
@@ -9,7 +17,15 @@
 
 {{ form.prepend('name', id='field-name', label=_('URL'), prepend=prefix, placeholder=_('eg. my-dataset'), value=data.name, error=errors.name, attrs=attrs, is_required=true) }}
 
-{{ form.markdown_custom('notes', id='field-notes', label='* Descripción del dataset', placeholder='Ej: Datos correspondientes al Sistema de Contrataciones Electrónicas (Argentina Compra), incluyendo las contrataciones de bienes y servicios, el Sistema de Información de Proveedores (SIPRO) y el Catálogo de Bienes y Servicios (SIByS).', value=data.notes, error=errors.notes, after_desc='Por favor, no superes los 500 caracteres.') }}
+{% set max_length_description = 500 %}
+{% set valid_desc = h.valid_length(data.notes, max_length_description) %}
+{% if valid_desc %}
+    {% set after_desc_description = ["Por favor, no superes los ", max_length_description, " caracteres."] %}
+{% else %}
+    {% set after_desc_description = ["Por favor, para que la descripción sea más clara, <b>no superes los ", max_length_description, " caracteres.</b>"] %}
+{% endif %}
+
+{{ form.markdown_custom('notes', id='field-notes', label='* Descripción del dataset', placeholder='Ej: Datos correspondientes al Sistema de Contrataciones Electrónicas (Argentina Compra), incluyendo las contrataciones de bienes y servicios, el Sistema de Información de Proveedores (SIPRO) y el Catálogo de Bienes y Servicios (SIByS).', value=data.notes, error=errors.notes, attrs={'data-valid-desc-length': max_length_description}, after_desc=after_desc_description|join|safe, max_length=max_length_description) }}
 
 {# if we have a default group then this wants remembering #}
 {% if data.group_id %}

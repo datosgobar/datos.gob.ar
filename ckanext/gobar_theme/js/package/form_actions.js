@@ -1,3 +1,27 @@
+function validLength(length, maxLength) {
+    return maxLength >= length;
+}
+
+function validTitle(){
+    var titleLength = $('input[data-valid-title-length]').val().length;
+    var validTitleLength = $('input[data-valid-title-length]').data('valid-title-length');
+    return validLength(titleLength, validTitleLength);
+}
+
+function validDesc(){
+    var descLength = $('textarea[data-valid-desc-length]').val().length
+    var validDescLength = $('textarea[data-valid-desc-length]').data('valid-desc-length')
+    return validLength(descLength, validDescLength);
+}
+
+function validateTitle() {
+    $('input#field-title').parent('div').children('div#field-title').toggleClass('long-field', !validTitle());
+}
+
+function validateDesc() {
+    $('div#field-notes.after-desc').toggleClass('long-field', !validDesc());
+}
+
 $(function () {
     var $form;
 
@@ -130,10 +154,15 @@ $(function () {
             updateFreq.after(errorTemplate);
         }
 
-        if (!isValid) {
-            window.scrollTo(0, 0);
-        }
-        return isValid;
+        isFormValid = isValid && validTitle() && validDesc()
+
+        if (!isFormValid) {
+             window.scrollTo(0, 0);
+             window.scrollTo(0, 0);
+         }
+
+
+        return isFormValid;
     }
 
     $('form#dataset-edit').submit(function (e) {
@@ -200,11 +229,25 @@ $(function () {
         }
     }
 
+    $(document).ajaxComplete(function(){
+        $('.slug-preview').each(function() {
+            $(this).insertAfter($('div#field-title'));
+        });
+    });
+
+    $(document).ready(function(){
+        $('input[data-valid-title-length]').on('change input keyup', validateTitle)
+        validateTitle()
+
+
+        $('textarea[data-valid-desc-length]').on('change input keyup', validateDesc)
+        validateDesc()
+     });
+
     var interval = setInterval(function() {
         var urlPreview = $('.slug-preview');
         if (urlPreview.length > 0) {
             clearInterval(interval);
-            urlPreview.before('<div class="after-desc">Por favor, no superes los 100 caracteres.</div>');
         }
     }, 100);
 });

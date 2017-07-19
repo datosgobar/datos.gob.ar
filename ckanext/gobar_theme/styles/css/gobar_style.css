@@ -10948,6 +10948,9 @@ div#background-container {
         #edit-package-container #edit-package form .control-group .missing-field, #edit-package-container #new-package form .control-group .missing-field, #new-package-container #edit-package form .control-group .missing-field, #new-package-container #new-package form .control-group .missing-field {
           margin-top: 5px;
           color: #ef4d3d; }
+        #edit-package-container #edit-package form .control-group .long-field, #edit-package-container #new-package form .control-group .long-field, #new-package-container #edit-package form .control-group .long-field, #new-package-container #new-package form .control-group .long-field {
+          margin-top: 5px;
+          color: #ef4d3d; }
       #edit-package-container #edit-package form ol.stages, #edit-package-container #new-package form ol.stages, #new-package-container #edit-package form ol.stages, #new-package-container #new-package form ol.stages {
         margin: 0 0 50px 0;
         background: #cccccc; }

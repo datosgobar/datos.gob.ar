@@ -47,6 +47,7 @@ class GobArRouter:
         with SubMapper(self.route_map, controller=self.package_controller) as m:
             m.connect('search', '/dataset', action='search', highlight_actions='index search')
             m.connect('add dataset', '/dataset/new', action='new')
+            m.connect('edit dataset', '/dataset/edit/{id}', action='edit')
             m.connect('new resource', '/dataset/new_resource/{id}', action='new_resource')
         self.route_map.connect('/dataset/{id}/archivo/{resource_id}', action='resource_read', controller='package')
         self.redirect(

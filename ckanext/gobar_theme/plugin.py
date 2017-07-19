@@ -48,5 +48,6 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
             'json_loads': gobar_helpers.json_loads,
             'update_frequencies': gobar_helpers.update_frequencies,
             'field_types': gobar_helpers.field_types,
+            'valid_length': gobar_helpers.valid_length,
             'accepted_mime_types': gobar_helpers.accepted_mime_types
         }
