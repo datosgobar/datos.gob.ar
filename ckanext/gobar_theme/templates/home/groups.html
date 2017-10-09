@@ -3,7 +3,7 @@
         <div class="col-xs-12 col-md-10 col-md-offset-1">
             {% set dataset_url = h.url_for(controller='package', action='search') %}
             {%- for group in c.sorted_groups -%}
-                {%- set can_update = h.check_access('group_update', {'id': c.group_dict.id}) -%}
+                {%- set can_update = h.check_access('group_update', {'id': group.id}) -%}
                 <div class="group-container col-xs-12 col-sm-4 col-md-3 invisible {{ 'with-edit-button' if can_update else '' }}">
                     {% if can_update %}
                         <a href="{{ h.url_for(controller='group', action='edit', id=group.name) }}">
