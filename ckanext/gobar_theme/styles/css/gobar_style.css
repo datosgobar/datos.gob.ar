@@ -10539,7 +10539,9 @@ div#background-container {
       #pkg-secondary-info #info-container .row .title {
         margin-bottom: 10px;
         padding: 0;
-        font-size: 18px; }
+        font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis; }
       #pkg-secondary-info #info-container .row .value {
         margin-bottom: 10px;
         padding: 0 0 0 5px;
@@ -11248,11 +11250,15 @@ div#background-container {
       color: #767676;
       margin: 0 0 6px 0;
       font-weight: 400;
-      font-size: 18px; }
+      font-size: 18px;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     .pkg-container .package-info p {
       color: #424242;
       font-size: 16px;
-      margin: 0; }
+      margin: 0;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     .pkg-container .package-info:hover h3 {
       color: #0695d6; }
 

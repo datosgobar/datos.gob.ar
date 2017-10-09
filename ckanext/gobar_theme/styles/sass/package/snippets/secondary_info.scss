@@ -37,6 +37,8 @@
         margin-bottom: 10px;
         padding: 0;
         font-size: 18px;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
       .value {
         margin-bottom: 10px;
