@@ -11016,15 +11016,27 @@ div#background-container {
   padding-top: 30px;
   border-top: solid 1px #cccccc; }
   #resource-edit #resource-attributes-form .resource-attributes-actions {
-    text-align: right;
     padding: 30px 0;
     border-top: solid 1px #cccccc; }
   #resource-edit #resource-attributes-form .resource-attributes-group {
     padding-top: 30px;
     border-top: solid 1px #cccccc; }
-  #resource-edit #resource-attributes-form .control-full + .resource-attributes-group {
-    padding-top: 0;
-    border-top: none; }
+    #resource-edit #resource-attributes-form .resource-attributes-group .icon-remove {
+      font-size: 20px;
+      position: absolute;
+      right: 0;
+      top: -20px;
+      cursor: pointer;
+      color: #999999; }
+    #resource-edit #resource-attributes-form .resource-attributes-group .resource-attributes-title-container {
+      padding: 0 15px 0 0; }
+    #resource-edit #resource-attributes-form .resource-attributes-group .other-resource-attributes-container {
+      padding: 0 0 0 15px; }
+      #resource-edit #resource-attributes-form .resource-attributes-group .other-resource-attributes-container .resource-col-type {
+        height: 40px;
+        margin-bottom: 20px; }
+      #resource-edit #resource-attributes-form .resource-attributes-group .other-resource-attributes-container .resource-col-unit {
+        margin-bottom: 20px; }
 #resource-edit h2.blue {
   color: #0695d6;
   margin: 0 0 10px 0; }

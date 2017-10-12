@@ -24,7 +24,6 @@
     border-top: solid 1px $grey-200;
 
     .resource-attributes-actions {
-      text-align: right;
       padding: 30px 0;
       border-top: solid 1px $grey-200;
     }
@@ -32,10 +31,32 @@
     .resource-attributes-group {
       padding-top: 30px;
       border-top: solid 1px $grey-200;
-    }
-    .control-full + .resource-attributes-group {
-      padding-top: 0;
-      border-top: none;
+
+      .icon-remove {
+          font-size: 20px;
+          position: absolute;
+          right: 0;
+          top: -20px;
+          cursor: pointer;
+          color: $grey-300;
+      }
+
+      .resource-attributes-title-container {
+          padding: 0 15px 0 0;
+      }
+      .other-resource-attributes-container {
+          padding: 0 0 0 15px;
+
+          .resource-col-type {
+              height: 40px;
+              margin-bottom: 20px;
+          }
+
+          .resource-col-unit {
+              margin-bottom: 20px;
+          }
+      }
+
     }
   }
   h2.blue {
@@ -60,4 +81,3 @@
     }
   }
 }
-

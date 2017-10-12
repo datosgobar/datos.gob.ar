@@ -49,5 +49,6 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
             'update_frequencies': gobar_helpers.update_frequencies,
             'field_types': gobar_helpers.field_types,
             'valid_length': gobar_helpers.valid_length,
-            'accepted_mime_types': gobar_helpers.accepted_mime_types
+            'accepted_mime_types': gobar_helpers.accepted_mime_types,
+            'type_is_numeric': gobar_helpers.type_is_numeric
         }

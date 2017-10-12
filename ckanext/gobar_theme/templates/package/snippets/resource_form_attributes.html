@@ -13,41 +13,51 @@
     {% for attribute_group in attributes %}
         <div class="resource-attributes-group">
             <div class="control-group control-full">
-                <label class="control-label">Título de la columna</label>
-                <div class="controls">
-                    <input class="resource-col-name" type="text" title="Título de la columna"
-                           placeholder="Ej: audiencia_fecha" value="{{ attribute_group['title'] }}">
-                </div>
-            </div>
 
-            <div class="control-group control-full">
-                <label class="control-label">Tipo de dato</label>
-                <div class="controls">
-                    <select class="resource-col-type">
-                        {% set selected_type = attribute_group['type'] %}
-                        <option {{ 'selected=true' if not selected_type or selected_type|length == 0 }}
-                                disabled="disabled">Ej.: date
-                        </option>
-                        {% for field_type in h.field_types().items() %}
-                            <option value="{{ field_type[0] }}" {{ 'selected=true' if field_type[0] == selected_type }}
-                            >{{ field_type[1].decode('utf-8') }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-            </div>
+                <i class="icon-remove remove-col"></i>
 
-            <div class="control-group control-full">
-                <label class="control-label">Descripción de la columna</label>
-                <textarea title="Descripción de la columna" class="resource-col-descrition"
-                          placeholder="Ej: Fecha en la que se hizo una audiencia pública."
-                >{{ attribute_group.description }}</textarea>
+                <div class="col-xs-6 resource-attributes-title-container">
+                    <label class="control-label">Título de la columna</label>
+                    <div class="controls">
+                        <input class="resource-col-name" type="text" title="Título de la columna"
+                               placeholder="Ej: audiencia_fecha" value="{{ attribute_group['title'] }}">
+                    </div>
+                </div>
+
+                <div class="col-xs-6 other-resource-attributes-container">
+                    <label class="control-label">Tipo de dato</label>
+                    <div class="controls">
+                        <select class="resource-col-type">
+                            {% set selected_type = attribute_group['type'] %}
+                            <option {{ 'selected=true' if not selected_type or selected_type|length == 0 }}
+                                    disabled="disabled">Ej.: date
+                            </option>
+                            {% for field_type in h.field_types() %}
+                                <option value="{{ field_type[0] }}" {{ 'selected=true' if field_type[0] == selected_type }}
+                                >{{ field_type[1].decode('utf-8') }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="resource-attributes-unit-container {{ 'hidden' if not h.type_is_numeric(selected_type) }}">
+                        <label class="control-label">Unidad</label>
+                        <div class="controls">
+                            <input class="resource-col-unit" type="text" title="Unidad"
+                                   placeholder="" value="{{ attribute_group['unit'] }}">
+                        </div>
+                    </div>
+
+                    <label class="control-label">Descripción de la columna</label>
+                    <textarea title="Descripción de la columna" class="resource-col-descrition"
+                              placeholder="Ej: Fecha en la que se hizo una audiencia pública."
+                    rows="5">{{ attribute_group.description }}</textarea>
+                </div>
             </div>
         </div>
     {% endfor %}
 
     <div class="resource-attributes-actions">
-        <span id="add-col" class="btn">AGREGAR OTRA COLUMNA</span>
-        <span id="remove-col" class="btn {{ 'hidden' if attributes|length < 2 }}">BORRAR COLUMNA</span>
+        <span id="add-col" class="btn btn-blue">AGREGAR OTRA COLUMNA</span>
     </div>
 
     <input id="attributes-description" type="hidden"
