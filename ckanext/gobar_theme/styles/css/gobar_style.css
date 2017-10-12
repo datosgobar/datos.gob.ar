@@ -11079,7 +11079,9 @@ div#background-container {
       .resource-container .resource .title h1 {
         color: #0695d6;
         margin: 20px 0 0 0;
-        font-size: 26px; }
+        font-size: 26px;
+        overflow: hidden;
+        text-overflow: ellipsis; }
       .resource-container .resource .title p {
         font-size: 18px; }
       .resource-container .resource .title button {
