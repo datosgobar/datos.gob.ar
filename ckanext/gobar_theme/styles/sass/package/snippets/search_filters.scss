@@ -131,6 +131,13 @@
               height: 20px;
             }
           }
+
+          span {
+              display: inline-block;
+              width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+          }
         }
       }
     }
