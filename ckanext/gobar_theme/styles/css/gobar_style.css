@@ -11129,6 +11129,9 @@ div#background-container {
         font-weight: 400; }
     .resource-container .resource .resource-attributes {
       margin-top: 20px; }
+      .resource-container .resource .resource-attributes h2 {
+        color: #0695d6;
+        margin: 0 0 20px 0; }
       .resource-container .resource .resource-attributes table {
         table-layout: fixed;
         border-collapse: collapse;

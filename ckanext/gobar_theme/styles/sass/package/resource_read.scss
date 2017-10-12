@@ -75,6 +75,10 @@
 
     .resource-attributes {
         margin-top: 20px;
+        h2 {
+            color: $blue-300;
+            margin: 0 0 20px 0;
+        }
         table {
             table-layout: fixed;
             border-collapse: collapse;
