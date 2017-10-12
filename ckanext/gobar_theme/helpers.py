@@ -249,3 +249,10 @@ def get_suborganizations():
             for child in organization['children']:
                 suborganizations.append(child['name'])
     return suborganizations
+
+
+def attributes_has_at_least_one(attr, resource_attributes):
+    for attributes in resource_attributes:
+        if len(attributes.get(attr, '')) > 0:
+            return True
+    return False

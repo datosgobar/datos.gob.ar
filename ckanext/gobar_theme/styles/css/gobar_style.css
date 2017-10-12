@@ -11032,7 +11032,8 @@ div#background-container {
       padding: 0 15px 0 0; }
     #resource-edit #resource-attributes-form .resource-attributes-group .other-resource-attributes-container {
       padding: 0 0 0 15px; }
-      #resource-edit #resource-attributes-form .resource-attributes-group .other-resource-attributes-container .resource-col-type {
+      #resource-edit #resource-attributes-form .resource-attributes-group .other-resource-attributes-container .resource-col-type,
+      #resource-edit #resource-attributes-form .resource-attributes-group .other-resource-attributes-container .resource-col-id {
         height: 40px;
         margin-bottom: 20px; }
       #resource-edit #resource-attributes-form .resource-attributes-group .other-resource-attributes-container .resource-col-unit {
@@ -11133,7 +11134,7 @@ div#background-container {
         border-collapse: collapse;
         width: 100%; }
         .resource-container .resource .resource-attributes table colgroup .col-attribute {
-          width: 200px; }
+          width: 120px; }
         .resource-container .resource .resource-attributes table thead tr {
           background: #0695d6;
           color: white; }

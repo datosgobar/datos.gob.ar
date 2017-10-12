@@ -42,10 +42,14 @@ $(function () {
             var attributeGroup = {
                 title: attributeGroupEl.find('.resource-col-name').val(),
                 description: attributeGroupEl.find('.resource-col-descrition').val(),
-                type: (attributeGroupEl.find('.resource-col-type').val() || '')
+                type: (attributeGroupEl.find('.resource-col-type').val() || ''),
             };
             if (typeIsNumeric(attributeGroup.type)) {
                 attributeGroup.unit = attributeGroupEl.find('.resource-col-unit').val()
+            }
+            var fieldId = attributeGroupEl.find('.resource-col-id').val();
+            if (fieldId) {
+                attributeGroup.id = fieldId;
             }
             if (attributeGroup.title.length > 0 || attributeGroup.type.length > 0 || attributeGroup.description.length > 0) {
                 attributes.push(attributeGroup);

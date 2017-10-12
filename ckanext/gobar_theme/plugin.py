@@ -50,5 +50,6 @@ class Gobar_ThemePlugin(plugins.SingletonPlugin):
             'field_types': gobar_helpers.field_types,
             'valid_length': gobar_helpers.valid_length,
             'accepted_mime_types': gobar_helpers.accepted_mime_types,
-            'type_is_numeric': gobar_helpers.type_is_numeric
+            'type_is_numeric': gobar_helpers.type_is_numeric,
+            'attributes_has_at_least_one': gobar_helpers.attributes_has_at_least_one
         }

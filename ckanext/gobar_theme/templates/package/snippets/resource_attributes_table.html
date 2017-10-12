@@ -1,4 +1,6 @@
 {% set attributes = h.json_loads(res['attributesDescription'] or '[]') %}
+{% set hasAtLeastOneUnit = h.attributes_has_at_least_one('unit', attributes) %}
+{% set hasAtLeastOneId = h.attributes_has_at_least_one('id', attributes) %}
 
 {% if attributes|length > 0 %}
 <div class="resource-attributes col-xs-12 no-padding">
@@ -6,14 +8,24 @@
         <colgroup>
             <col class="col-attribute">
             <col class="col-attribute">
-            <col class="col-attribute">
+            {% if hasAtLeastOneUnit %}
+                <col class="col-attribute">
+            {% endif %}
+            {% if hasAtLeastOneId %}
+                <col class="col-attribute">
+            {% endif %}
             <col class="col-description">
         </colgroup>
         <thead>
             <tr>
                 <th>Nombre</th>
                 <th>Tipo</th>
-                <th>Unidad</th>
+                {% if hasAtLeastOneUnit %}
+                    <th>Unidad</th>
+                {% endif %}
+                {% if hasAtLeastOneId %}
+                    <th>Identificador</th>
+                {% endif %}
                 <th>Descripción</th>
             </tr>
         </thead>
@@ -22,7 +34,12 @@
             <tr>
                 <td>{{ attribute_group.get('title', '') }}</td>
                 <td>{{ attribute_group.get('type', '') }}</td>
-                <td>{{ attribute_group.get('unit', '') }}</td>
+                {% if hasAtLeastOneUnit %}
+                    <td>{{ attribute_group.get('unit', '') }}</td>
+                {% endif %}
+                {% if hasAtLeastOneId %}
+                    <td>{{ attribute_group.get('id', '') }}</td>
+                {% endif %}
                 <td>{{ attribute_group.get('description', '') }}</td>
             </tr>
         {% endfor %}
