@@ -83,6 +83,8 @@
                     {% endif %}
                 </div>
 
+                {% snippet "package/snippets/resource_attributes_table.html", res=res %}
+
                 {% set has_more_resources = pkg.resources and pkg.resources|length > 1 %}
 
                 {% if has_more_resources %}

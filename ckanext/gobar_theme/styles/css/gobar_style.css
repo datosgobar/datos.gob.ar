@@ -11126,6 +11126,40 @@ div#background-container {
         border-bottom: solid 1px #999999;
         font-size: 20px;
         font-weight: 400; }
+    .resource-container .resource .resource-attributes {
+      margin-top: 20px; }
+      .resource-container .resource .resource-attributes table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        width: 100%; }
+        .resource-container .resource .resource-attributes table colgroup .col-attribute {
+          width: 200px; }
+        .resource-container .resource .resource-attributes table thead tr {
+          background: #0695d6;
+          color: white; }
+          .resource-container .resource .resource-attributes table thead tr th {
+            font-weight: 500;
+            padding: 10px;
+            text-align: left;
+            border-left: solid 1px white;
+            border-right: solid 1px white; }
+            .resource-container .resource .resource-attributes table thead tr th:last-child, .resource-container .resource .resource-attributes table thead tr th:first-child {
+              border: none; }
+        .resource-container .resource .resource-attributes table tbody {
+          color: #767676; }
+          .resource-container .resource .resource-attributes table tbody tr {
+            border-bottom: 1px solid #cccccc;
+            border-top: 1px solid #cccccc; }
+            .resource-container .resource .resource-attributes table tbody tr:last-child {
+              border-bottom: solid 5px #0695d6; }
+            .resource-container .resource .resource-attributes table tbody tr td {
+              padding: 10px;
+              text-align: left;
+              font-weight: 400;
+              border-right: 1px solid #cccccc;
+              border-left: 1px solid #cccccc; }
+              .resource-container .resource .resource-attributes table tbody tr td:first-child, .resource-container .resource .resource-attributes table tbody tr td:last-child {
+                border: none; }
     .resource-container .resource .resource-additional-info {
       padding-left: 0;
       padding-right: 0; }

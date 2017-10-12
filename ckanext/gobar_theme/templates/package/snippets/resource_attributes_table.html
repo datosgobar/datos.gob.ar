@@ -1,0 +1,33 @@
+{% set attributes = h.json_loads(res['attributesDescription'] or '[]') %}
+
+{% if attributes|length > 0 %}
+<div class="resource-attributes col-xs-12 no-padding">
+    <table>
+        <colgroup>
+            <col class="col-attribute">
+            <col class="col-attribute">
+            <col class="col-attribute">
+            <col class="col-description">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Tipo</th>
+                <th>Unidad</th>
+                <th>Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for attribute_group in attributes %}
+            <tr>
+                <td>{{ attribute_group.get('title', '') }}</td>
+                <td>{{ attribute_group.get('type', '') }}</td>
+                <td>{{ attribute_group.get('unit', '') }}</td>
+                <td>{{ attribute_group.get('description', '') }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+
+    </table>
+</div>
+{% endif %}
