@@ -1,0 +1,98 @@
+{#{% extends "gobar_page.html" %}#}
+{##}
+
+
+{% extends "gobar_page.html" %}
+
+{% block content %}
+
+    <div id="title" class="package-title container-fluid blue-gradient">
+        <div class="restricted-max-width">
+            {% snippet "title_background.html" %}
+            <div class="col-xs-12 col-md-10 col-md-offset-1">
+                <div id="title-container" class="col-xs-12 col-md-7">
+                    <h1>APIs</h1>
+                    <p class="description">
+                        Estos son servicios web de datos públicos disponibilizados por organismos de gobierno de la
+                        República Argentina.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row" style="margin-top:50px;">
+            <div class="dataset-list">
+                <!-- Snippet package/snippets/search_item.html start -->
+                <a href="http://series-tiempo-ar-api.readthedocs.io/" class="dataset-item">
+                    <div class="col-xs-12 col-md-4">
+                        <div class="dataset-container">
+                            <div class="dataset-border">
+                                <div class="restricted-max-width">
+                                    <img src="img/iconos-01.svg" class="api-icon-img">
+                                    <div class="dataset-content col-xs-9">
+                                        <h3 class="dataset-title">Series de tiempo</h3>
+                                        <div class="dataset-notes">Consultá indicadores con evolución en el tiempo, de
+                                            forma personalizada y actualizada.
+                                        </div>
+                                    </div>
+                                    <div class="dataset-groups-and-resources col-xs-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="https://github.com/datosgobar/georef-api#georef-api" class="dataset-item">
+                    <div class="col-xs-12 col-md-4 hidden">
+                        <div class="dataset-container">
+                            <div class="dataset-border">
+                                <div class="restricted-max-width">
+                                    <img src="img/iconos-02.svg" class="api-icon-img">
+                                    <div class="dataset-content col-xs-9">
+                                        <h3 class="dataset-title">Georef</h3>
+                                        <div class="dataset-notes">Normalizá nombres de provincias, departamentos y
+                                            otras entidades geográficas del país.
+                                        </div>
+                                    </div>
+                                    <div class="dataset-groups-and-resources col-xs-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="http://datos.gob.ar/acerca/desarrolladores" class="dataset-item">
+                    <div class=" col-xs-12 col-md-4">
+                        <div class="dataset-container">
+                            <div class="dataset-border">
+                                <div class="restricted-max-width">
+                                    <img src="/svg/iconos-03.svg" class="api-icon-img" style="max-width: 70px">
+                                    <div class="dataset-content col-xs-9">
+                                        <h3 class="dataset-title">CKAN</h3>
+                                        <div class="dataset-notes">Consultá los metadatos de los datasets y
+                                            distribuciones del Portal a través de la API de CKAN.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div style="display: flex; justify-content: space-around; align-items: center; margin: 50px 0 150px 0;">
+                <p class="text-center no-margin button-container gobar-static-container">
+                    <a href="https://github.com/datosgobar" target="_blank">
+                        <button>IR A NUESTRO GITHUB</button>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
