@@ -60,7 +60,7 @@ class GobArHomeController(HomeController):
         return base.render('static/about_legal.html')
 
     def about_developers(self):
-        return base.render('apis/apis.html')
+        return base.render('apis/about_developers.html')
 
     def about_glossary(self):
         return base.render('static/about_glossary.html')
