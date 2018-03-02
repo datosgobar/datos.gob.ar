@@ -65,6 +65,9 @@ class GobArHomeController(HomeController):
     def about_glossary(self):
         return base.render('static/about_glossary.html')
 
+    def apis(self):
+        return base.render('apis/apis.html')
+
     def theme_taxonomy(self):
         data_dict_page_results = {
             'all_fields': True,

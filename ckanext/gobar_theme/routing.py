@@ -21,6 +21,7 @@ class GobArRouter:
         self.connect_datasets()
         self.connect_organizations()
         self.connect_groups()
+        self.connect_apis()
         self.connect_users()
         self.remove_dashboard()
         self.remove_tags()
@@ -41,6 +42,12 @@ class GobArRouter:
         self.redirect(
             ('/acerca', '/acerca/nuestro-portal'),
             ('/about', '/acerca/nuestro-portal')
+        )
+
+    def connect_apis(self):
+        self.home_routes.connect('gobar_apis', '/apis', action='apis')
+        self.redirect(
+            ('/apis', '/apis'),
         )
 
     def connect_datasets(self):

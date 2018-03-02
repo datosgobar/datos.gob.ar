@@ -8,7 +8,7 @@
                         <img src="/img/logo_ministerio.svg" class="logo-ministerio">
                     </a>
                 </div>
-                <div class="xs-navbar hidden">
+                <div class="xs-navbar hidden"> {# todo: este div para qué está? #}
                     <div class="navbar-link">
                         <a href="{{ h.url_for(controller='package', action='search') }}">
                             DATOS
@@ -16,7 +16,7 @@
                     </div>
                     <div class="navbar-link">
                         <a href="{{ h.url_for(controller='organization', action='index') }}">
-                            ORGANIZACIONES CON DATOS
+                            ORGANIZACIONES
                         </a>
                     </div>
                     <div class="navbar-link dropdown-navbar-link">
@@ -51,28 +51,27 @@
             </div>
             <div class="col-xs-12 col-sm-7 no-padding header-links">
                 <a class="header-link" href="{{ h.url_for(controller='package', action='search') }}">
-                    DATOS
+                    Datasets
                 </a>
                 <a class="header-link" href="{{ h.url_for(controller='organization', action='index') }}">
-                    ORGANIZACIONES CON DATOS
+                    Organizaciones
+                </a>
+                <a class="header-link" href="{{ h.url('gobar_apis') }}">
+                    APIs
                 </a>
                 <span class="header-link dropdown">
-                    ACERCA <span class="caret"></span>
+                    Acerca <span class="caret"></span>
                     <ul>
                         <a href="{{ h.url('gobar_our_site') }}">
-                            <li>NUESTRO PORTAL</li>
+                            <li>Nuestro Portal</li>
                         </a>
 
                         <a href="{{ h.url('gobar_legal') }}">
-                            <li>MARCO LEGAL</li>
-                        </a>
-
-                        <a href="{{ h.url('gobar_devs') }}">
-                            <li>DESARROLLADORES</li>
+                            <li>Marco Legal</li>
                         </a>
 
                         <a href="{{ h.url('gobar_glossary') }}">
-                            <li>GLOSARIO</li>
+                            <li>Glosario</li>
                         </a>
                     </ul>
                 </span>
