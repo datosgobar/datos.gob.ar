@@ -37,7 +37,7 @@ class GobArRouter:
     def connect_static(self):
         self.home_routes.connect('gobar_our_site', '/acerca/nuestro-portal', action='about_our_site')
         self.home_routes.connect('gobar_legal', '/acerca/marco-legal', action='about_legal')
-        self.home_routes.connect('gobar_devs', '/acerca/desarrolladores', action='about_developers')
+        self.home_routes.connect('gobar_devs', '/acerca/ckan', action='about_ckan')
         self.home_routes.connect('gobar_glossary', '/acerca/glosario', action='about_glossary')
         self.redirect(
             ('/acerca', '/acerca/nuestro-portal'),
