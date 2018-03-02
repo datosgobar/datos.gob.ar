@@ -59,8 +59,8 @@ class GobArHomeController(HomeController):
     def about_legal(self):
         return base.render('static/about_legal.html')
 
-    def about_developers(self):
-        return base.render('static/about_developers.html')
+    def about_ckan(self):
+        return base.render('static/about_ckan.html')
 
     def about_glossary(self):
         return base.render('static/about_glossary.html')
